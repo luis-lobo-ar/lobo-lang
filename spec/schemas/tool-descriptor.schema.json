@@ -1,0 +1,79 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://lobo-lang.invalid/spec/ltp/0.1/tool-descriptor.schema.json",
+  "title": "Lobo Tool Protocol tool descriptor",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "name",
+    "version",
+    "safety_tier",
+    "summary",
+    "effects",
+    "required_capabilities",
+    "idempotency",
+    "cancellable",
+    "default_timeout_ms",
+    "request_schema",
+    "response_schema"
+  ],
+  "properties": {
+    "name": {
+      "type": "string",
+      "pattern": "^[a-z][a-z0-9_]*(\\.[a-z][a-z0-9_]*)+$",
+      "maxLength": 128
+    },
+    "version": {
+      "type": "string",
+      "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+(?:-[0-9A-Za-z.-]+)?$"
+    },
+    "safety_tier": {
+      "enum": ["read_only", "local_reversible", "shared_mutation", "external_write", "high_impact"]
+    },
+    "summary": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 1024
+    },
+    "effects": {
+      "type": "array",
+      "maxItems": 64,
+      "items": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 256
+      }
+    },
+    "required_capabilities": {
+      "type": "array",
+      "maxItems": 64,
+      "items": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 256
+      }
+    },
+    "idempotency": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 1024
+    },
+    "cancellable": {
+      "type": "boolean"
+    },
+    "default_timeout_ms": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 3600000
+    },
+    "request_schema": {
+      "type": "string",
+      "format": "uri"
+    },
+    "response_schema": {
+      "type": "string",
+      "format": "uri"
+    }
+  }
+}
+

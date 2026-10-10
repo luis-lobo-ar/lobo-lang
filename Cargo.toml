@@ -1,0 +1,28 @@
+[package]
+name = "lobo-lang"
+version = "0.1.1"
+edition = "2021"
+description = "Lobo Core native compiler and reference evaluator"
+publish = false
+
+[lib]
+name = "lobo_core"
+path = "src/lib.rs"
+
+[[bin]]
+name = "lobo"
+path = "src/main.rs"
+
+[dependencies]
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+
+[profile.release]
+opt-level = "z"
+lto = "fat"
+codegen-units = 1
+strip = "symbols"
+debug = false
+panic = "abort"
+overflow-checks = true
+

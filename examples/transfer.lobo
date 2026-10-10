@@ -1,0 +1,77 @@
+// Illustrative source projection. This is not yet accepted by a compiler.
+
+module finance.transfers @id("finance.transfers.v1")
+
+enum TransferStatus @id("finance.transfer_status") {
+  Pending
+  Authorized
+  Settled
+  Cancelled
+}
+
+record Transfer @id("finance.transfer") {
+  id: TransferId
+  from: AccountId
+  to: AccountId
+  amount: Money where amount > 0
+  status: TransferStatus
+}
+
+machine TransferLifecycle for Transfer @id("finance.transfer_lifecycle") {
+  Pending --authorize--> Authorized
+  Pending --cancel--> Cancelled
+  Authorized --settle--> Settled
+
+  invariant terminal_is_immutable {
+    state in {Cancelled, Settled} => no outgoing_transition
+  }
+}
+
+component TransferFunds @id("finance.transfer_funds.v1") {
+  input {
+    request_id: RequestId
+    from: AccountId
+    to: AccountId
+    amount: Money where amount > 0
+  }
+
+  output Result<TransferReceipt, InsufficientFunds | AccountMissing>
+
+  requires {
+    from != to
+    ledger.balance(from) >= amount
+  }
+
+  ensures(result) when result is Ok {
+    ledger.balance(from)' == ledger.balance(from) - amount
+    ledger.balance(to)' == ledger.balance(to) + amount
+    ledger.total()' == ledger.total()
+    result.value.amount == amount
+  }
+
+  effects {
+    read ledger.accounts(from, to)
+    write ledger.accounts(from, to)
+    emit TransferCompleted
+  }
+
+  limits {
+    wall_time <= 50.ms
+    ledger.writes == 2
+  }
+
+  property idempotent_by_request_id {
+    forall request: input {
+      run(request); run(request) => ledger.writes == 2
+    }
+  }
+
+  run with capability Ledger.Transfer {
+    atomic ledger keyed_by request_id {
+      ledger.debit(from, amount)
+      ledger.credit(to, amount)
+      return TransferReceipt(request_id, from, to, amount)
+    }
+  }
+}
+
