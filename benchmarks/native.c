@@ -25,8 +25,9 @@ int main(int argc, char **argv) {
         checksum += (uint64_t)output;
     }
     clock_gettime(CLOCK_MONOTONIC, &finish);
-    double nanos = (double)(finish.tv_sec - start.tv_sec) * 1e9 + (double)(finish.tv_nsec - start.tv_nsec);
-    printf("{\"ns_per_call\":%.6f,\"checksum\":\"%" PRIu64 "\",\"iterations\":%" PRIu64 "}\n",
-           nanos / iterations, checksum, iterations);
+    int64_t nanos = (int64_t)(finish.tv_sec - start.tv_sec) * INT64_C(1000000000)
+                  + (int64_t)(finish.tv_nsec - start.tv_nsec);
+    printf("{\"ns_per_call\":%.6f,\"elapsed_ns\":\"%" PRId64 "\",\"checksum\":\"%" PRIu64 "\",\"iterations\":%" PRIu64 "}\n",
+           (double)nanos / iterations, nanos, checksum, iterations);
     return 0;
 }

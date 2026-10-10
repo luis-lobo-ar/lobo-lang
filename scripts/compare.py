@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Build and measure all three execution modes from the same checkout."""
+"""Build and measure five execution modes from the same checkout."""
 
 import argparse
 import json
@@ -7,6 +7,7 @@ import os
 from pathlib import Path
 import statistics
 import subprocess
+import sys
 import time
 
 
@@ -26,14 +27,23 @@ def main():
     parser.add_argument("--warmup", type=int, default=2)
     parser.add_argument("--native-iterations", type=int, default=10_000_000)
     parser.add_argument("--interpreted-iterations", type=int, default=100_000)
+    parser.add_argument("--dynamic-iterations", type=int, default=100_000)
+    parser.add_argument("--dynamic-warmup", type=int, default=10_000)
+    parser.add_argument("--suite", action="store_true", help="include 1-call and 100-call batches")
+    parser.add_argument("--summary", action="store_true", help="print medians instead of raw samples")
     parser.add_argument("--cpu", type=int)
     options = parser.parse_args()
     if options.samples < 1 or options.warmup < 0 or not all(
-        1 <= n <= 1_000_000_000 for n in (options.native_iterations, options.interpreted_iterations)
-    ):
+        1 <= n <= 1_000_000_000 for n in (
+            options.native_iterations, options.interpreted_iterations, options.dynamic_iterations
+        )
+    ) or not 0 <= options.dynamic_warmup <= 1_000_000_000:
         parser.error("invalid sample counts or iteration budget")
 
     root = Path(__file__).resolve().parent.parent
+    for runtime, program in ((sys.executable, "python.py"), ("node", "node.js")):
+        subprocess.run([runtime, str(root / "benchmarks" / program), "--self-test"],
+                       cwd=root, check=True, stdout=sys.stderr)
     # Pin this runner and its children only; do not change the invoking shell's affinity.
     cpu = None
     if hasattr(os, "sched_getaffinity"):
@@ -67,55 +77,88 @@ def main():
         str(root / "benchmarks" / "native.c"), "-o", str(native)
     ], cwd=root, check=True)
 
-    modes = ("native", "rust", "interpreted")
+    modes = ("native", "rust", "interpreted", "python", "node")
     report = {
-        "format": "lobo-execution-comparison/0.1",
+        "format": "lobo-execution-comparison/0.2",
         "source_revision": revision,
         "source_dirty": dirty,
         "cpu_affinity": cpu,
         "cpu_frequency_locked": False,
         "rustc": output(["rustc", "--version"], root),
         "clang": output(["clang", "--version"], root).splitlines()[0],
+        "python": output([sys.executable, "--version"], root),
+        "node": output(["node", "--version"], root),
+        "platform": output(["uname", "-sm"], root),
         "samples": options.samples,
         "warmup_samples": options.warmup,
         "scope": "in-process iterations, including loop and checksum; excluding build, startup, parsing, and output",
         "interpreted_scope": "Artifact.run includes per-call semantic revalidation, argument allocation, and evaluation",
-        "workloads": {},
+        "dynamic_scope": "Python int and Node BigInt, checked I64 math and contracts; input conversion and unsigned checksum included",
+        "process_policy": "fresh process for each sample; discarded warmup samples do not warm later processes' JIT",
+        "small_batch_policy": "no in-process warmup for 1/100 calls; timing/dispatch overhead can dominate",
+        "regimes": {},
     }
-    for workload in ("increment", "absolute"):
-        samples = {mode: [] for mode in modes}
-        counts = {
-            "native": options.native_iterations,
-            "rust": options.native_iterations,
-            "interpreted": options.interpreted_iterations,
-        }
-        for repetition in range(options.warmup + options.samples):
-            offset = repetition % len(modes)
-            for mode in modes[offset:] + modes[:offset]:
-                command = [str(native), workload, str(counts[mode])] if mode == "native" else [
-                    benchmark, mode, workload, str(counts[mode])
-                ]
-                result = json.loads(output(command, root))
-                if result["iterations"] != counts[mode] or result["checksum"] != expected_checksum(workload, counts[mode]):
-                    raise RuntimeError(f"incorrect output for {mode}/{workload}")
-                if repetition >= options.warmup:
-                    samples[mode].append(result["ns_per_call"])
-        report["workloads"][workload] = {
-            mode: {
-                "iterations_per_sample": counts[mode],
-                "median_ns": statistics.median(samples[mode]),
-                "min_ns": min(samples[mode]),
-                "max_ns": max(samples[mode]),
-                "samples_ns": samples[mode],
-                "checksum": expected_checksum(workload, counts[mode]),
-            } for mode in modes
-        }
+    regimes = ("single", "hundred", "sustained") if options.suite else ("sustained",)
+    for regime in regimes:
+        report["regimes"][regime] = {}
+        for workload in ("increment", "absolute"):
+            samples = {mode: [] for mode in modes}
+            counts = {
+                "native": options.native_iterations,
+                "rust": options.native_iterations,
+                "interpreted": options.interpreted_iterations,
+                "python": options.dynamic_iterations,
+                "node": options.dynamic_iterations,
+            } if regime == "sustained" else dict.fromkeys(modes, 1 if regime == "single" else 100)
+            dynamic_warmup = options.dynamic_warmup if regime == "sustained" else 0
+            for repetition in range(options.warmup + options.samples):
+                offset = repetition % len(modes)
+                for mode in modes[offset:] + modes[:offset]:
+                    if mode == "native":
+                        command = [str(native), workload, str(counts[mode])]
+                    elif mode in ("rust", "interpreted"):
+                        command = [benchmark, mode, workload, str(counts[mode])]
+                    else:
+                        runtime, program = (sys.executable, "python.py") if mode == "python" else ("node", "node.js")
+                        command = [runtime, str(root / "benchmarks" / program), workload,
+                                   str(counts[mode]), str(dynamic_warmup)]
+                    result = json.loads(output(command, root))
+                    if result["iterations"] != counts[mode] or result["checksum"] != expected_checksum(workload, counts[mode]):
+                        raise RuntimeError(f"incorrect output for {mode}/{workload}")
+                    elapsed = int(result["elapsed_ns"])
+                    if elapsed <= 0 or abs(result["ns_per_call"] - elapsed / counts[mode]) > 0.000001:
+                        raise RuntimeError(f"invalid timing for {mode}/{workload}")
+                    if repetition >= options.warmup:
+                        samples[mode].append(elapsed)
+                measured = repetition + 1 - options.warmup
+                if measured > 0 and (measured % 10 == 0 or measured == options.samples):
+                    print(f"{regime}/{workload}: {measured}/{options.samples} samples per mode", file=sys.stderr)
+            report["regimes"][regime][workload] = {
+                mode: {
+                    "iterations_per_sample": counts[mode],
+                    "in_process_warmup_iterations": dynamic_warmup if mode in ("python", "node") else 0,
+                    "median_batch_ns": statistics.median(samples[mode]),
+                    "median_ns": statistics.median(samples[mode]) / counts[mode],
+                    "min_ns": min(samples[mode]) / counts[mode],
+                    "max_ns": max(samples[mode]) / counts[mode],
+                    "samples_batch_ns": samples[mode],
+                    "checksum": expected_checksum(workload, counts[mode]),
+                } for mode in modes
+            }
     destination = directory / "report.json"
     with destination.open("x") as handle:
         json.dump(report, handle, indent=2)
         handle.write("\n")
     report["report_path"] = str(destination)
-    print(json.dumps(report, indent=2))
+    if options.summary:
+        print(json.dumps({"report_path": str(destination), "source_dirty": dirty,
+                          "medians": {regime: {workload: {
+                              mode: {key: data[key] for key in ("median_batch_ns", "median_ns", "iterations_per_sample")}
+                              for mode, data in workloads.items()}
+                              for workload, workloads in results.items()}
+                              for regime, results in report["regimes"].items()}}, indent=2))
+    else:
+        print(json.dumps(report, indent=2))
 
 
 if __name__ == "__main__":

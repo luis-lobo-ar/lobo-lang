@@ -34,8 +34,12 @@ git log --oneline --decorate
 ```
 
 Worktrees are checkouts, not separate performance implementations. Native and interpreted execution already
-coexist in each revision, so the three-way comparison runs from one revision to avoid accidental source drift.
+coexist in each revision, so each comparison runs from one revision to avoid accidental source drift.
 Use separate worktrees for alternative compiler implementations, flags, or optimizations.
+
+The five-way extension lives on `compare/python-node` in `.worktrees/python-node`. It adds Python and Node.js
+without moving the older three-way baseline. From that checkout, use
+`python3 scripts/compare.py --suite --samples 100 --summary` for single-call, 100-call, and sustained batches.
 
 Worktree removal is optional cleanup after preserving work and reports; do not force removal of dirty checkouts.
 No remote or external publication is configured by this setup.
