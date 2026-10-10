@@ -89,6 +89,8 @@ execution, and evidence. All clients use the same protocol; the CLI is an adapte
 - [Checked artifact format](spec/checked-artifact-v0.1.md) — initial compiler output and stable call references.
 - [Native backend](spec/native-v0.1.md) — machine-code generation, executable CLI, semantics, and limits.
 - [Initial native measurements](docs/native-performance.md) — executable sizes and scoped Rust comparison.
+- [Repeatable comparisons](benchmarks/README.md) — native, interpreted, and Rust measurements.
+- [Worktree workflow](docs/worktree-comparisons.md) — baseline/candidate checkouts and source attribution.
 - [Compiler and backends](docs/compiler-and-backends.md) — Rust implementation, checked IR, WASM, and LLVM.
 - [Compiler development](docs/compiler-development-workflow.md) — specification and implementation loop.
 - [Testing and TDD](docs/testing-and-tdd.md) — conformance, differential testing, fuzzing, and release evidence.
