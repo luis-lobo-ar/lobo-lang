@@ -31,3 +31,7 @@ They are generated under `target/comparisons/`, which is ignored by Git. Change 
 `--warmup`, `--native-iterations`, and `--interpreted-iterations`; use `--cpu` to choose an allowed CPU.
 
 See the [worktree workflow](../docs/worktree-comparisons.md) for comparing changes in isolated checkouts.
+
+The first clean, pinned three-way run is saved in
+[the baseline report](results/2026-10-10-execution-baseline.json). See
+[the interpretation of those measurements](../docs/native-performance.md) for scope and limitations.

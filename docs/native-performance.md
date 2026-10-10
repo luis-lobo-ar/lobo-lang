@@ -42,3 +42,30 @@ The scratch harnesses for this run are at `/tmp/lobo-native-bench.hRt5aE` (`core
 `measure.py`). That temporary path is execution evidence, not a permanent benchmark suite. Native/reference
 correctness remains covered by the repository tests.
 
+## Committed three-way baseline
+
+The repeatable [comparison harness](../benchmarks/README.md) was measured from clean commit
+`5a9651b6a83796f99b8214f1eae50356d933e904` in worktree `.worktrees/execution-baseline`. The baseline includes
+both native generation and reference evaluation; it is tagged `baseline/execution-comparison`.
+The [raw report](../benchmarks/results/2026-10-10-execution-baseline.json) records tool versions, nine raw samples
+per mode/workload, iteration counts, checksum evidence, and source identity.
+
+| Workload | Native Lobo median ns/iteration | Interpreted Lobo median ns/iteration | Rust median ns/iteration |
+| --- | --- | --- | --- |
+| Increment | 4.09 | 1217.83 | 0.94 |
+| Absolute value | 4.00 | 1213.03 | 0.98 |
+
+The interpreter remains available through `lobo eval` and `Artifact.run`. Its timed path uses a program compiled
+before timing, but includes the public API's per-call semantic revalidation, argument/context allocation,
+contracts, and tree evaluation. This is not a tree-walking-only measurement.
+
+Native and Rust samples each use 10 million invocations; interpreted samples use 100,000, all normalized per
+iteration with independently verified checksums. Two warm-up samples precede nine measured samples. The runner
+rotates implementation order and is pinned to CPU 0; CPU frequency remains unlocked. Build, startup, source
+parsing, and output are excluded, while loop/checksum overhead is included. Native Lobo includes fuel/context
+bookkeeping; the Rust baseline does not. The native profile is Clang `-O3`; Rust and the interpreter use Cargo's
+speed-optimized bench profile at level 3.
+
+Native Lobo is about 297–303 times faster than the current interpreted API in these two workloads, and takes
+about 4.1–4.3 times as long as Rust. The numbers differ from the earlier unpinned scratch run; compare revisions
+with the committed harness and matching settings rather than mixing results from the two procedures.
