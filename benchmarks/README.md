@@ -58,3 +58,7 @@ See the [worktree workflow](../docs/worktree-comparisons.md) for comparing chang
 The first clean, pinned three-way run is saved in
 [the baseline report](results/2026-10-10-execution-baseline.json). See
 [the interpretation of those measurements](../docs/native-performance.md) for scope and limitations.
+
+The five-way, 100-sample suite is saved in
+[the raw report](results/2026-10-10-five-way-100-samples.json), with
+[small-batch and sustained results](../docs/five-way-performance.md).
