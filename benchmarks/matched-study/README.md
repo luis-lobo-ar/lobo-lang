@@ -86,3 +86,19 @@ under ignored `benchmarks/private-evidence/matched-study-20261123`; public repor
 normalized observations, hashes and limitations. Raw prompts/tool transcripts stay private. Frozen older
 research fixtures and paper pins are unchanged. The source archive and compiler hashes live in the
 freeze manifest; registry hashes and public summaries allow checking correspondence.
+
+## Amendment 1: transient sandbox mountpoints
+
+The first cohort was interrupted after assignments 0–4 completed and assignment 5 began. All five
+completed attempts passed final grading, but assignment 4 received false visible scope errors for
+empty `.codex`, `.agents`, `.aws` and `.git` directories created transiently by the CLI sandbox.
+Those checks never compiled the candidate. Assignment 5 was interrupted by the controller; terminal
+usage is unknown unless a retained terminal event proves otherwise. Assignments 6–53 were not attempted.
+This cohort is retained separately and excluded from the matched primary comparison.
+
+Amend the infrastructure audit to ignore only those four **empty, regular directories**. Nonempty
+entries and symlinks remain violations. Add a regression proving both cases; extend excluded mailbox
+canaries to run that audit while inside a live sandboxed check. Keep task contracts, guides, oracles,
+budgets and schedule byte-for-byte unchanged. Register a new harness hash and rerun the full 54-assignment
+schedule as a distinct amended cohort. This is an infrastructure restart, not a language-driven task or
+budget adjustment. Original trials, the interrupted attempt and missing usage remain in total accounting.

@@ -44,4 +44,12 @@ class MatchedTests(unittest.TestCase):
    self.assertEqual(m.integrity(directory,files,'python'),[])
    (directory/'model.py').write_text('broken')
    self.assertIn('modified:model.py',m.integrity(directory,files,'python'))
+ def test_transient_empty_sandbox_mountpoints_are_not_agent_edits(self):
+  import tempfile
+  with tempfile.TemporaryDirectory() as tmp:
+   folder=Path(tmp);files=m.sources('ledger','python');m.save_sources(folder,files)
+   for name in ['.codex','.agents','.aws','.git']:(folder/name).mkdir()
+   self.assertEqual(m.integrity(folder,files,'python'),[])
+   (folder/'.git'/'unexpected').write_text('not a mountpoint')
+   self.assertIn('unexpected:.git',m.integrity(folder,files,'python'))
 if __name__=='__main__':unittest.main()

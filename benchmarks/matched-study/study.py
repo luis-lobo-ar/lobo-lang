@@ -590,13 +590,14 @@ def integrity(folder,fixed,language):
         elif not path.is_file():failures.append('missing:'+name)
         elif name not in editable(language) and path.read_text()!=text:failures.append('modified:'+name)
         elif path.stat().st_size>65536:failures.append('oversize:'+name)
-    if language=='lobo':
+    if language=='lobo' and 'logic.lobo.ids.json' in fixed:
         try:
             initial=json.loads(fixed['logic.lobo.ids.json'])['identities'];current=json.loads((folder/'logic.lobo.ids.json').read_text())['identities']
             failures += ['changed_identity:'+key for key,value in initial.items() if current.get(key)!=value]
         except (ValueError,KeyError,OSError,TypeError):failures.append('invalid_identity_file')
     allowed=set(fixed)|{'TASK.txt','GUIDE.txt','check.py','.check-io','AGENTS.md'}
-    failures += ['unexpected:'+p.name for p in folder.iterdir() if p.name not in allowed]
+    protected={'.codex','.agents','.aws','.git'}
+    failures += ['unexpected:'+p.name for p in folder.iterdir() if p.name not in allowed and not (p.name in protected and p.is_dir() and not p.is_symlink() and not any(p.iterdir()))]
     return failures
 
 
@@ -758,11 +759,16 @@ def run_trial(row,base):
     except Exception as exc:result.update(status='infrastructure_error',infrastructure_error=repr(exc))
     finally:
         result['agent_wall_s']=time.monotonic()-start;stop.set();thread.join(timeout=45)
-        result.update(usage=usage(events),command_tool_items=len(tools),checks=checks,load_after=os.getloadavg())
+        items={}
+        for event in events:
+            item=event.get('item',{})
+            if item.get('id'):items[item['id']]=item
+        tools={key:item for key,item in items.items() if item.get('type')=='command_execution'}
+        result.update(usage=usage(events),command_tool_items=len(tools),check_requests=len(serviced),checks=checks,item_types=[item.get('type') for item in items.values()],load_after=os.getloadavg())
         last=(out/'last-message.txt').read_text() if (out/'last-message.txt').exists() else ''
         if row['phase']=='comprehension':result['grading']=grade_comprehension(row['family'],parse_answer(last))
         else:result['grading']=assess(folder,files,row,out/'heldout',hidden=True)
-        result['accepted']=result['status']=='completed' and result['grading']['accepted'] and len(checks)<=CHECK_LIMIT and len(tools)<=TOOL_LIMIT
+        result['accepted']=result['status']=='completed' and result['grading']['accepted'] and len(serviced)<=CHECK_LIMIT and len(tools)<=TOOL_LIMIT and (row['phase']!='comprehension' or all(item.get('type') in {'agent_message','reasoning'} for item in items.values()))
         result['workspace']=str(folder);write_json(out/'result.json',result)
     return result
 
@@ -791,8 +797,8 @@ def register(out):
     return manifest
 
 
-def run_all(base):
-    registration=json.loads((PRIVATE/'registration/manifest.json').read_text())
+def run_all(base,registration_path=None):
+    registration=json.loads((registration_path or PRIVATE/'registration-amendment-1/manifest.json').read_text())
     if registration['harness_sha256']!=digest(Path(__file__).read_bytes()):raise ValueError('harness changed after registration')
     base.mkdir(parents=True,exist_ok=False);results=[];infrastructure_streak=0
     for row in registration['schedule']:
@@ -813,7 +819,10 @@ def transport_canaries(out):
             while not stop.is_set():
                 for path in box.glob('*.request.json'):
                     response=path.with_name(path.name.replace('.request.json','.response.json'))
-                    if not response.exists():seen.append(path.name);write_json(response,{'status':'pass','nonce':'mailbox-731'})
+                    if not response.exists():
+                        issues=integrity(folder,{'check.py':CHECK_CLIENT,'AGENTS.md':(folder/'AGENTS.md').read_text()},language)
+                        seen.append({'request':path.name,'integrity_issues':issues,'protected_dirs':{name: list(x.name for x in (folder/name).iterdir()) for name in ['.codex','.agents','.aws','.git'] if (folder/name).is_dir()}})
+                        write_json(response,{'status':'pass' if not issues else 'scope_error','nonce':'mailbox-731','issues':issues})
                 stop.wait(.05)
         thread=threading.Thread(target=service,daemon=True);thread.start()
         row={'phase':'construction','language':language};args=command(folder,row,trial/'last-message.txt');write_json(trial/'command.json',args)
@@ -826,7 +835,7 @@ def transport_canaries(out):
                 try:events.append(json.loads(line))
                 except ValueError:pass
             last=(trial/'last-message.txt').read_text() if (trial/'last-message.txt').exists() else ''
-            row.update(exit_code=p.returncode,wall_s=time.monotonic()-started,usage=usage(events),mailbox_requests=len(seen),accepted=p.returncode==0 and len(seen)==1 and 'mailbox-731' in last)
+            row.update(exit_code=p.returncode,wall_s=time.monotonic()-started,usage=usage(events),mailbox_requests=len(seen),accepted=p.returncode==0 and len(seen)==1 and not seen[0]['integrity_issues'] and 'mailbox-731' in last,mailbox_observations=seen)
         finally:stop.set();thread.join(timeout=2)
         records.append(row);write_json(out/'results.json',records)
         if not row['accepted']:raise ValueError(row)

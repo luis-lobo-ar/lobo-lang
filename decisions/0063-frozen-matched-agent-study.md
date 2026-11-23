@@ -37,3 +37,12 @@ success-conditioned cohort. Use optimized native builds, output validation, inte
 full-process single-operation and 100-operation measurements. Preserve timing errors and limits.
 Keep timing, agent cost and software correctness separate. See the protocol in
 `benchmarks/matched-study/README.md`. Append all results to the research ledger and paper index.
+
+## Infrastructure amendment 1
+
+The original cohort was interrupted after five completed attempts and one partial attempt. Empty,
+transient CLI-protected mountpoints caused false scope errors in the Lobo construction attempt's visible
+checks. Its final candidate passed, but its feedback opportunity was impaired. Preserve the original
+cohort, mark its remaining assignments not attempted, and use a separately registered 54-assignment
+cohort for the matched comparison. Only the empty-mountpoint audit changes; no tasks, guides, oracles,
+model settings, budgets or schedule changes. Excluded live transport canaries now exercise this audit.
