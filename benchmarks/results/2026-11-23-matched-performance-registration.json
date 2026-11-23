@@ -1,0 +1,482 @@
+{
+  "date": "2026-11-23",
+  "harness_sha256": "0e0c516a3b6db15c30c66ca1200c7f92d697696f78b2d72ee5511639dafe8c8d",
+  "workloads": {
+    "ledger0": {
+      "initial": 20,
+      "events": [
+        [
+          0,
+          7
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          3,
+          0
+        ],
+        [
+          1,
+          8
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          7
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          3,
+          0
+        ],
+        [
+          1,
+          8
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          7
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          3,
+          0
+        ],
+        [
+          1,
+          8
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          7
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          3,
+          0
+        ],
+        [
+          1,
+          8
+        ],
+        [
+          0,
+          0
+        ]
+      ]
+    },
+    "ledger1": {
+      "initial": 20,
+      "events": [
+        [
+          0,
+          7
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          3,
+          0
+        ],
+        [
+          1,
+          8
+        ],
+        [
+          4,
+          0
+        ],
+        [
+          0,
+          7
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          3,
+          0
+        ],
+        [
+          1,
+          8
+        ],
+        [
+          4,
+          0
+        ],
+        [
+          0,
+          7
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          3,
+          0
+        ],
+        [
+          1,
+          8
+        ],
+        [
+          4,
+          0
+        ],
+        [
+          0,
+          7
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          3,
+          0
+        ],
+        [
+          1,
+          8
+        ],
+        [
+          4,
+          0
+        ]
+      ]
+    },
+    "scheduler0": {
+      "jobs": [
+        {
+          "id": 0,
+          "cost": 0,
+          "deps": []
+        },
+        {
+          "id": 2,
+          "cost": 2,
+          "deps": [
+            1
+          ]
+        },
+        {
+          "id": 4,
+          "cost": 0,
+          "deps": [
+            3
+          ]
+        },
+        {
+          "id": 6,
+          "cost": 2,
+          "deps": []
+        },
+        {
+          "id": 8,
+          "cost": 0,
+          "deps": [
+            7
+          ]
+        },
+        {
+          "id": 10,
+          "cost": 2,
+          "deps": [
+            9
+          ]
+        },
+        {
+          "id": 1,
+          "cost": 1,
+          "deps": [
+            0
+          ]
+        },
+        {
+          "id": 3,
+          "cost": 3,
+          "deps": []
+        },
+        {
+          "id": 5,
+          "cost": 1,
+          "deps": [
+            4
+          ]
+        },
+        {
+          "id": 7,
+          "cost": 3,
+          "deps": [
+            6
+          ]
+        },
+        {
+          "id": 9,
+          "cost": 1,
+          "deps": []
+        },
+        {
+          "id": 11,
+          "cost": 3,
+          "deps": [
+            10
+          ]
+        }
+      ],
+      "budget": 16
+    },
+    "scheduler1": {
+      "jobs": [
+        {
+          "id": 0,
+          "cost": 0,
+          "deps": [],
+          "priority": -4
+        },
+        {
+          "id": 2,
+          "cost": 2,
+          "deps": [
+            1
+          ],
+          "priority": 1
+        },
+        {
+          "id": 4,
+          "cost": 0,
+          "deps": [
+            3
+          ],
+          "priority": -3
+        },
+        {
+          "id": 6,
+          "cost": 2,
+          "deps": [],
+          "priority": 2
+        },
+        {
+          "id": 8,
+          "cost": 0,
+          "deps": [
+            7
+          ],
+          "priority": -2
+        },
+        {
+          "id": 10,
+          "cost": 2,
+          "deps": [
+            9
+          ],
+          "priority": 3
+        },
+        {
+          "id": 1,
+          "cost": 1,
+          "deps": [
+            0
+          ],
+          "priority": 3
+        },
+        {
+          "id": 3,
+          "cost": 3,
+          "deps": [],
+          "priority": -1
+        },
+        {
+          "id": 5,
+          "cost": 1,
+          "deps": [
+            4
+          ],
+          "priority": 4
+        },
+        {
+          "id": 7,
+          "cost": 3,
+          "deps": [
+            6
+          ],
+          "priority": 0
+        },
+        {
+          "id": 9,
+          "cost": 1,
+          "deps": [],
+          "priority": -4
+        },
+        {
+          "id": 11,
+          "cost": 3,
+          "deps": [
+            10
+          ],
+          "priority": 1
+        }
+      ],
+      "budget": 16
+    },
+    "frames0": {
+      "data": "010000020d0e1b031a1b1c51042728292aa20534353637380e0641424344454695074e4f505152535437085b5c5d5e5f606162f4016868027576eb0382838489048f90919242059c9d9e9fa01606a9aaabacadae0507b6b7b8b9babbbc0f08c3c4c5c6c7c8c9ca3401d0d002dddebb03eaebecc104f7f8f9fae20504050607081e0611121314151675071e1f2021222324e7082b2c2d2e2f303132740138380245468b03525354f9045f60616282056c6d6e6f702606797a7b7c7d7ee507868788898a8b8cbf08939495969798999ab4",
+      "limit": 8
+    },
+    "frames1": {
+      "data": "fffe01000000020d0e1b031a1b1c51042728292aa2fffe050034353637380e0641424344454695074e4f505152535437085b5c5d5e5f606162f4fffe01006868027576eb0382838489048f90919242fffe05009c9d9e9fa01606a9aaabacadae0507b6b7b8b9babbbc0f08c3c4c5c6c7c8c9ca34fffe0100d0d002dddebb03eaebecc104f7f8f9fae2fffe050004050607081e0611121314151675071e1f2021222324e7082b2c2d2e2f30313274fffe010038380245468b03525354f9045f60616282fffe05006c6d6e6f702606797a7b7c7d7ee507868788898a8b8cbf08939495969798999ab4",
+      "limit": 8
+    }
+  },
+  "canonical_programs": 18,
+  "accepted_agent_programs": "all accepted construction/change attempts in amended cohort; separate success-conditioned cohort",
+  "compile_repeats": 5,
+  "runtime_repeats": 7,
+  "modes": {
+    "single": null,
+    "empty_batch": 0,
+    "batch100": 100
+  },
+  "warmups_per_mode": 1,
+  "timing": "process launch through exit; grading and profiles outside timing",
+  "order": "five seed-shuffled compile rounds, seven rotating/reversing language runtime rounds",
+  "frozen_compiler": "1.11.2 native C -O3",
+  "rust_flags": [
+    "--edition=2021",
+    "-C opt-level=3",
+    "-C overflow-checks=yes",
+    "-C panic=abort",
+    "-C strip=symbols"
+  ],
+  "python": "stdlib; warm bytecode caches",
+  "independent_validation_observations": 54,
+  "limits": {
+    "fuel": 100000000,
+    "heap_cells": 4000000,
+    "runtime_timeout_s": 15
+  },
+  "failures": "retain and count; no successful-only timing claim without failure counts"
+}
