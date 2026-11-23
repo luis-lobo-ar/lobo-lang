@@ -1,0 +1,54 @@
+# Native tools and test evidence
+
+Use the compiler path supplied by the project. In this repository build both native tools with:
+
+```sh
+cargo build --locked --release --bin lobo --bin lobo-test
+```
+
+For an ordinary program:
+
+```sh
+lobo check program.lobo --source helpers.lobo
+lobo run program.lobo --source helpers.lobo --entry app.entry --arg I64:7
+lobo compile program.lobo --source helpers.lobo -o fresh-output
+./fresh-output --entry app.entry --arg I64:7
+```
+
+`compile` refuses to overwrite an existing output path. `run` compiles natively through trusted
+Clang; generated executables run independently. `eval` selects the reference evaluator explicitly
+for correctness comparisons. It is not the application execution path. Do not install a compiler
+or Clang without task authorization. No interpreter, daemon, package resolver or FFI is implied.
+
+Arguments are typed atoms: `I64:7`, `Bool:true`, `Text:<UTF-8 hex>`, `Bytes:<hex>` and
+`List:Count:3,I64:1,I64:2,I64:3`. Record fields follow declaration order:
+`Record:app.pair:I64:1,I64:2`. A variant payload starts with its nominal ID and case,
+for example `Variant:app.answer:Case:Found,I64:7`. Results are typed JSON; I64 values are decimal
+strings. Sources and budgets must accompany a reproducible result.
+
+The no-IO checker accepts a complete source envelope through `lobo check --bundle-stdin`:
+
+```json
+{"format":"lobo-source/0.1","root":"main","sources":[{"name":"main","text":"module m @id(\"m\"); function f @id(\"f\")() -> I64 { 7 }"}]}
+```
+
+Labels are diagnostic identities, not filesystem paths. It validates the entire supplied source
+set. It does not compile native code, execute the program or resolve imports from disk.
+
+When a host supplies `check.py` or another project test client, use that contract instead of
+inventing a runner. If it supports `--list`, `--detail TEST_ID` or `--replay TEST_ID`, use those
+to retrieve missing input/observation information. Do not assume every project exposes these flags.
+
+The raw `lobo-test --session --clang /absolute/path/to/clang` protocol is `lobo-test/0.1` JSONL.
+Open fixes requirements, tests, expected outcomes and budgets; verification submits complete
+candidate sources with an explicit base snapshot. `all` forces execution; `affected` may reuse
+eligible prior passes under the same host-asserted environment. It does not prove environment
+isolation or selector soundness. Eight snapshots include open; limit exhaustion does not evict.
+Compiler errors create no accepted snapshot. Failed/pending checks do not authorize acceptance.
+Explain/replay identify retained source/check observations; replay can reproduce a failure.
+Exit 0 means clean transport. Inspect `checks_satisfied`, counts, pending/uncovered requirements
+and any required `full_execution` gate. EOF/close ends the foreground session and owns cleanup.
+
+Canonical contracts: [native tools](../../../../spec/native-v0.1.md),
+[source bundles](../../../../spec/core-v0.9.md),
+[agent testing](../../../../spec/agent-testing-v0.1.md).

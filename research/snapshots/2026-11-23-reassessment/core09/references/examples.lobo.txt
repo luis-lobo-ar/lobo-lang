@@ -1,0 +1,22 @@
+module skill_examples @id("skill.examples");
+
+record Pair @id("skill.examples.pair") { left: I64, right: I64 }
+variant Maybe @id("skill.examples.maybe") { PairValue(Pair), Empty }
+
+function exchange @id("skill.examples.exchange")(pair: Pair) -> Pair {
+  Pair { left: pair.right, right: pair.left }
+}
+
+function first @id("skill.examples.first")(value: Maybe) -> I64 {
+  match (value) { PairValue(pair) { pair.left }, Empty { 0 } }
+}
+
+function bounded_counter @id("skill.examples.counter")(limit: I64) -> I64
+requires { limit >= 0 && limit <= 100 }
+{
+  while (n: I64 = 0; n < limit) { n + 1 }
+}
+
+function framed @id("skill.examples.framed")(text: Text) -> Text {
+  Text::concat("<", Text::concat(text, ">"))
+}

@@ -1,0 +1,64 @@
+{
+  "date": "2026-11-23",
+  "method": "Exact same four knowledge files; .txt suffix freezes bytes without making historical guides current skills.",
+  "historical_report": "benchmarks/results/2026-11-03-skill-evaluation.json",
+  "current_source_commit": "e489dca976ce45ae1628416093fb489cfb234f1f",
+  "files": [
+    {
+      "version": "core09",
+      "original_name": "SKILL.md",
+      "snapshot": "research/snapshots/2026-11-23-reassessment/core09/SKILL.md.txt",
+      "bytes": 2347,
+      "sha256": "4f665d956fee8482caf8aa0278d698daa1a7059d5256c27b67dfd3c92a614705"
+    },
+    {
+      "version": "core111",
+      "original_name": "SKILL.md",
+      "snapshot": "research/snapshots/2026-11-23-reassessment/core111/SKILL.md.txt",
+      "bytes": 14047,
+      "sha256": "1d3bf0b38c4ab36acb054b3fabb16e0ded8ab491509f0cf85171400f98c9cc86"
+    },
+    {
+      "version": "core09",
+      "original_name": "references/examples.lobo",
+      "snapshot": "research/snapshots/2026-11-23-reassessment/core09/references/examples.lobo.txt",
+      "bytes": 708,
+      "sha256": "e4c591e5a464fed0b14f0ad35d53e75443864102a8869335ebdb37240965c496"
+    },
+    {
+      "version": "core111",
+      "original_name": "references/examples.lobo",
+      "snapshot": "research/snapshots/2026-11-23-reassessment/core111/references/examples.lobo.txt",
+      "bytes": 2028,
+      "sha256": "cf65d2cdc47a1bb15e154f94fe2e70d92e58eb15d405c8a2fb68261c294a1b3c"
+    },
+    {
+      "version": "core09",
+      "original_name": "references/language.md",
+      "snapshot": "research/snapshots/2026-11-23-reassessment/core09/references/language.md.txt",
+      "bytes": 3921,
+      "sha256": "c4306f6a19705ceee768054d7f952c0fc50057c4bec5e31bc6126314b36403a5"
+    },
+    {
+      "version": "core111",
+      "original_name": "references/language.md",
+      "snapshot": "research/snapshots/2026-11-23-reassessment/core111/references/language.md.txt",
+      "bytes": 12554,
+      "sha256": "f007469320ec5054db07dac9302f8b6ac9a9dc976099ffd566c1ea963ab36562"
+    },
+    {
+      "version": "core09",
+      "original_name": "references/tools.md",
+      "snapshot": "research/snapshots/2026-11-23-reassessment/core09/references/tools.md.txt",
+      "bytes": 3019,
+      "sha256": "3b54302079e7dc90fa3ba1e662cc3cb3f96588835096e23a818e9edf4f5163f0"
+    },
+    {
+      "version": "core111",
+      "original_name": "references/tools.md",
+      "snapshot": "research/snapshots/2026-11-23-reassessment/core111/references/tools.md.txt",
+      "bytes": 8694,
+      "sha256": "1913a1fceffba4c09f72625d9bc1e8d8104e35025ad674988a73405ba8eb8429"
+    }
+  ]
+}

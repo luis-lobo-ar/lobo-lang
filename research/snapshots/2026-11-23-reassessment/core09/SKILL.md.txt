@@ -1,0 +1,34 @@
+---
+name: lobo-programming
+description: Write, repair and test .lobo programs using Lobo Core 0.9, explicit source bundles and native tools. Use for Lobo application code; compiler implementation in Rust has a separate repository workflow.
+---
+
+# Develop Lobo programs
+
+This skill targets experimental Core 0.9 and compiler 0.9.0. Read the project's requirements
+and tool contract first. Treat the compiler and current [specification index](../../../spec/README.md)
+as the language authority. A newer or older compiler requires checking its matching specification.
+
+Use [language details](references/language.md) when syntax, types, iteration or buffer semantics
+are unfamiliar. Use [tool details](references/tools.md) for native invocation, typed arguments,
+source bundles or verification-session handling. [Small executable examples](references/examples.lobo)
+demonstrate syntax without implementing an application algorithm.
+
+Lobo returns the final expression of a block. Bindings and collections are immutable. Use
+`fold` or `while` with carried state instead of assignment. Do not invent a `return` statement,
+mutable arrays, exception catching, package imports or host IO. Make resource interactions
+explicit; an action label does not grant authority or implement a host call.
+
+Keep requirements and expected outcomes independent of candidate output. Reproduce a failure,
+make a focused change, then run the relevant checks. Inspect compiler diagnostics before adding
+workarounds for a syntax/type error. Use a bounded counterexample or retained observation when
+the summary omits the input; avoid repeatedly loading the entire project for a single failure.
+
+If the project supplies a test client, use its declared commands and fixed criteria. Otherwise
+use the native compiler/CLI as documented. A transport exit code is not test acceptance. Pending,
+resource exhaustion and missing tools do not pass. Preserve explicit snapshot bases and budgets;
+replay confirms an observation, not a repair. Finish with fresh full verification when the task
+requires an acceptance gate, and record results, failures and remaining limits with source identity.
+
+Do not relax a frozen test plan or silently restart a full session. Skill instructions supply
+language knowledge, not permission to read other projects, install dependencies or access services.

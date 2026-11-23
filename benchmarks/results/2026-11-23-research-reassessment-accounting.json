@@ -1,0 +1,46 @@
+{
+  "head": "e489dca976ce45ae1628416093fb489cfb234f1f",
+  "knowledge_bytes": {
+    "core09": 9995,
+    "core111": 37323
+  },
+  "knowledge_current_snapshot_commit": "e489dca976ce45ae1628416093fb489cfb234f1f",
+  "mvc": {
+    "legacy_source_bytes": 1037,
+    "current_source_bytes": 503,
+    "current_metadata_bytes": 465,
+    "current_combined_bytes": 968,
+    "source_reduction_percent": 51.494696239151395,
+    "combined_reduction_percent": 6.653809064609451,
+    "billed_token_effect": null
+  },
+  "historical_agent_studies": {
+    "2026-11-03-agent-repair-pilot.json": {
+      "scheduled": 10,
+      "accepted": 10,
+      "usage_known": 10,
+      "usage_unknown": 0
+    },
+    "2026-11-03-library-repair-study.json": {
+      "scheduled": 30,
+      "accepted": 29,
+      "usage_known": 29,
+      "usage_unknown": 1
+    },
+    "2026-11-03-skill-evaluation.json": {
+      "scheduled": 20,
+      "accepted": 20,
+      "usage_known": 20,
+      "usage_unknown": 0
+    }
+  },
+  "paper_entries_verified": 36,
+  "new_model_calls": 0,
+  "agent_construction_effect": null,
+  "agent_comprehension_effect": null,
+  "limits": [
+    "Bytes are not tokenizer counts or billed usage.",
+    "Knowledge coverage expanded between versions; this is not an equal-information trial.",
+    "Historical repeats are not independent task families."
+  ]
+}

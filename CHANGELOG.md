@@ -1,5 +1,16 @@
 # Lobo change ledger
 
+## 2026-11-23 — Reassess the research across language iterations
+
+Reviewed the original construction/comprehension/cost hypotheses against compiler 1.11.2. Fresh local
+checks pass 750 calibration observations, reproduce fifteen mutation-probe outcomes and six affected/full scenarios, and validate twenty
+MVC controller invocations, 31 benchmark-harness tests, four accounting tests, three native/SQLite witness
+and correspondence tests, and 182 editor tests. Repeated C/LLVM and five-way arithmetic observations
+remain scoped runtime results. Source/metadata accounting and hash-matched knowledge snapshots expose
+tradeoffs; no new agent-language advantage, token-saving estimate or comprehension score is claimed.
+Original reports, failures, unknown usage and frozen fixtures are preserved. See
+[the review](research/reassessment-2026-11-23.md) and [data](benchmarks/results/2026-11-23-research-reassessment.json).
+
 ## 2026-11-23 — Publish current language and corrected history
 
 Published all pending source/docs in commit 37a6f1ba598a and atomically updated all

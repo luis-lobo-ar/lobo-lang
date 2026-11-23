@@ -1,0 +1,399 @@
+{
+  "format": "lobo-research-reassessment/0.1",
+  "date": "2026-11-23",
+  "status": "completed_local_reassessment",
+  "compiler": "1.11.2",
+  "language": "core/1.11",
+  "extension": "1.11.2",
+  "source_commit": "e489dca976ce45ae1628416093fb489cfb234f1f",
+  "scope": [
+    "H1 checked representations",
+    "H2 abstractions",
+    "H3 context and feedback",
+    "construction and change correctness",
+    "agent and human comprehension separately",
+    "skill/onboarding and adherence",
+    "whole-trajectory tokens, cost and time",
+    "state, identity and evidence",
+    "native execution, compile cost and binary size",
+    "safety, formal-model and maturity limits",
+    "syntax, scaffolding and total metadata burden"
+  ],
+  "fresh_verification": {
+    "benchmark_harness_tests": 31,
+    "new_accounting_tests": 4,
+    "editor_tests": 182,
+    "native_counterexample_and_sqlite_source_tests": 3,
+    "calibration_behavior_observations": 750,
+    "calibration_mutations": 15,
+    "comprehension_reference_grade": {
+      "accepted": true,
+      "passed": 11,
+      "total": 11,
+      "checks": {
+        "output_0": true,
+        "output_1": true,
+        "output_2": true,
+        "output_3": true,
+        "output_4": true,
+        "output_5": true,
+        "witness": true,
+        "direct_calls": true,
+        "impacted": true,
+        "fault_location": true,
+        "counterexample": true
+      }
+    },
+    "mvc_invocations": 20,
+    "maintained_source_audit": {
+      "sources": 46,
+      "rewrites": 0
+    },
+    "test_selection": {
+      "scenarios": 6,
+      "all_case_outcomes_equal": true,
+      "affected_executed": 128,
+      "affected_reused": 256,
+      "forced_full_executed": 384
+    },
+    "c_llvm_comparison": {
+      "compile_samples_per_side_case": 5,
+      "runtime_samples_per_side_case": 7,
+      "cases": 4,
+      "failed_observations": 0
+    },
+    "fiveway": {
+      "series": 30,
+      "samples_per_series": 100,
+      "measured_batches": 3000,
+      "checksum_validation": "every timed sample and warmup checked by frozen harness",
+      "native_iterations_sustained": 1000000,
+      "other_iterations_sustained": 10000,
+      "dynamic_untimed_warmup": 10000,
+      "process_startup_timed": false
+    },
+    "full_312_rust_suite": "not rerun; previous exact-product evidence retained",
+    "full_tlc": "not rerun; no covered source changed",
+    "real_editor_host": "previous identical-product evidence retained",
+    "actual_windows_execution": null
+  },
+  "hypotheses": {
+    "H1": {
+      "mechanism": "verified on selected fixtures, same observed pattern as Rust enums",
+      "current_agent_effect": null
+    },
+    "H2": {
+      "mechanism": "generic reuse, named callbacks, inference and shared HTTP helpers implemented",
+      "current_agent_effect": null
+    },
+    "H3": {
+      "mechanism": "scripted affected verification replay agrees with full checking",
+      "current_agent_effect": null
+    },
+    "comprehension": {
+      "grader": "validated",
+      "current_agent_effect": null,
+      "human_effect": null
+    }
+  },
+  "historical_agent_evidence": [
+    {
+      "report": "2026-11-03-agent-repair-pilot.json",
+      "scheduled": 10,
+      "accepted": 10,
+      "usage_known": 10,
+      "model": "gpt-6.1-sol",
+      "language_intervention": false,
+      "new_trials_in_this_reassessment": 0
+    },
+    {
+      "report": "2026-11-03-library-repair-study.json",
+      "scheduled": 30,
+      "accepted": 29,
+      "usage_known": 29,
+      "model": "gpt-6.1-sol",
+      "language_intervention": false,
+      "new_trials_in_this_reassessment": 0
+    },
+    {
+      "report": "2026-11-03-skill-evaluation.json",
+      "scheduled": 20,
+      "accepted": 20,
+      "usage_known": 20,
+      "model": "gpt-6.1-sol",
+      "language_intervention": false,
+      "new_trials_in_this_reassessment": 0
+    }
+  ],
+  "historical_totals": {
+    "scheduled": 60,
+    "accepted": 59,
+    "interrupted": 1,
+    "language_held_fixed": "Lobo",
+    "new_model_trials": 0
+  },
+  "representation": {
+    "old_source": 1037,
+    "current_source": 503,
+    "current_metadata": 465,
+    "current_combined": 968,
+    "source_reduction_percent": 51.494696239151395,
+    "combined_reduction_percent": 6.653809064609451,
+    "tokenizer": null,
+    "billed_token_measurement": null,
+    "limits": [
+      "Complete source representations with comments/formatting included; not isolated syntax ablation.",
+      "Common HTTP/JSON dependencies and all context/tool interactions are outside these file counts.",
+      "Metadata belongs in total representation size. No agent benefit is inferred."
+    ]
+  },
+  "knowledge": {
+    "same_files_old_bytes": 9995,
+    "same_files_current_bytes": 37323,
+    "current_all_package_bytes": 40857,
+    "historical_hashes_verified": true,
+    "agent_onboarding_effect": null,
+    "tokenizer_counts": null
+  },
+  "dx_inventory": {
+    "core1_9_before": {
+      "files": 43,
+      "functions": 214,
+      "forwarded_field_candidates": 45,
+      "unused_binding_candidates": 29,
+      "cleanup_outcome_functions": 13,
+      "ok_err_mapping_functions": 17,
+      "functions_with_actions": 66,
+      "max_actions": 12
+    },
+    "core1_11_current": {
+      "files": 46,
+      "functions": 249,
+      "forwarded_field_candidates": 37,
+      "unused_binding_candidates": 4,
+      "cleanup_outcome_functions": 0,
+      "ok_err_mapping_functions": 19,
+      "functions_with_actions": 80,
+      "max_actions": 12
+    },
+    "limits": "Lexical candidates on an expanded corpus, not measured defects, AST complexity or paired agent outcomes."
+  },
+  "research_conclusion": "The comparison platform is materially more capable. Agent construction/comprehension superiority and whole-trajectory cost reduction remain unestablished.",
+  "new_measurements": {
+    "calibration": "benchmarks/results/2026-11-23-research-reassessment-calibration.json",
+    "selection": "benchmarks/results/2026-11-23-research-reassessment-selection.json",
+    "llvm": "benchmarks/results/2026-11-23-research-reassessment-llvm.json",
+    "fiveway": "benchmarks/results/2026-11-23-research-reassessment-fiveway.json",
+    "accounting": "benchmarks/results/2026-11-23-research-reassessment-accounting.json"
+  },
+  "retained_development_failures": [
+    "New accounting tests first fail because the collector is absent.",
+    "Intermediate collector has a generator-unpacking syntax error, corrected before use.",
+    "A regression test rejects counting an empty usage object as known usage; the collector is corrected.",
+    "The initial MVC probe assumes every response body is JSON. The documented not-found helper returns plain text; independent expectations are corrected and all 20 requests pass.",
+    "Exploratory probe-summary code assumes a dictionary where the frozen harness returns a list; no research observation changes.",
+    "perf task-clock profiling is denied (exit 255); hardware/CPU-counter measurements remain unavailable."
+  ],
+  "performance_limits": {
+    "perf_task_clock_available": false,
+    "hardware_counter_values": null,
+    "general_language_ranking": "not established",
+    "historical_regression_estimate": null
+  },
+  "raw_evidence": "target/research-reassessment",
+  "private_evidence": "benchmarks/private-evidence/research-reassessment-20261123",
+  "new_literature_search": false,
+  "language_or_provider_changes": false,
+  "recommendation": "Freeze the current implemented product for a new difficulty pilot and preregister matched construction, comprehension and requirement-evolution trials. No additional feature is selected.",
+  "iteration_evidence": [
+    {
+      "checkpoint": "0.1.1",
+      "focus": "Initial execution platform",
+      "reports": [
+        "benchmarks/results/2026-10-10-execution-baseline.json"
+      ],
+      "agent_language_advantage": null,
+      "comprehension_effect": null
+    },
+    {
+      "checkpoint": "0.9",
+      "focus": "Within-Lobo repair/onboarding and state calibration",
+      "reports": [
+        "benchmarks/results/2026-11-03-agent-repair-pilot.json",
+        "benchmarks/results/2026-11-03-library-repair-study.json",
+        "benchmarks/results/2026-11-03-skill-evaluation.json",
+        "benchmarks/results/2026-11-03-language-comparison-fixtures.json"
+      ],
+      "agent_language_advantage": null,
+      "comprehension_effect": null
+    },
+    {
+      "checkpoint": "0.10",
+      "focus": "List-guarded recursive data",
+      "reports": [
+        "benchmarks/results/2026-11-04-core010-verification.json",
+        "benchmarks/results/2026-11-04-recursive-ast-native.json"
+      ],
+      "agent_language_advantage": null,
+      "comprehension_effect": null
+    },
+    {
+      "checkpoint": "0.11",
+      "focus": "Explicit generic functions",
+      "reports": [
+        "benchmarks/results/2026-11-04-core011-verification.json",
+        "benchmarks/results/2026-11-04-generic-reuse-native.json"
+      ],
+      "agent_language_advantage": null,
+      "comprehension_effect": null
+    },
+    {
+      "checkpoint": "0.11.1",
+      "focus": "Direct LLVM backend with Core 0.11",
+      "reports": [
+        "benchmarks/results/2026-11-04-llvm-backend-comparison.json"
+      ],
+      "agent_language_advantage": null,
+      "comprehension_effect": null
+    },
+    {
+      "checkpoint": "1.0",
+      "focus": "Bounded general-purpose language milestone",
+      "reports": [
+        "benchmarks/results/2026-11-04-language-v1-release.json"
+      ],
+      "agent_language_advantage": null,
+      "comprehension_effect": null
+    },
+    {
+      "checkpoint": "1.1",
+      "focus": "Typed operator bindings",
+      "reports": [
+        "benchmarks/results/2026-11-08-operators.json"
+      ],
+      "agent_language_advantage": null,
+      "comprehension_effect": null
+    },
+    {
+      "checkpoint": "1.2",
+      "focus": "Native compact syntax and migration",
+      "reports": [
+        "benchmarks/results/2026-11-14-native-syntax.json",
+        "benchmarks/results/2026-11-14-source-migration.json"
+      ],
+      "agent_language_advantage": null,
+      "comprehension_effect": null
+    },
+    {
+      "checkpoint": "1.3",
+      "focus": "Managed persistent identities",
+      "reports": [
+        "benchmarks/results/2026-11-22-managed-identities.json"
+      ],
+      "agent_language_advantage": null,
+      "comprehension_effect": null
+    },
+    {
+      "checkpoint": "1.4",
+      "focus": "Generic call and callback inference",
+      "reports": [
+        "benchmarks/results/2026-11-22-call-inference.json"
+      ],
+      "agent_language_advantage": null,
+      "comprehension_effect": null
+    },
+    {
+      "checkpoint": "1.5",
+      "focus": "Constructor inference",
+      "reports": [
+        "benchmarks/results/2026-11-22-constructor-inference.json"
+      ],
+      "agent_language_advantage": null,
+      "comprehension_effect": null
+    },
+    {
+      "checkpoint": "1.6",
+      "focus": "Automatic JSON helpers",
+      "reports": [
+        "benchmarks/results/2026-11-22-json-auto-helpers.json"
+      ],
+      "agent_language_advantage": null,
+      "comprehension_effect": null
+    },
+    {
+      "checkpoint": "1.7",
+      "focus": "Native OS boundary and finite formal verification",
+      "reports": [
+        "benchmarks/results/2026-11-22-native-boundary.json",
+        "benchmarks/results/2026-11-22-native-formal-verification.json",
+        "benchmarks/results/2026-11-22-native-rest.json",
+        "benchmarks/results/2026-11-22-windows-snapshot.json",
+        "benchmarks/results/2026-11-22-windows10-user-run.json"
+      ],
+      "agent_language_advantage": null,
+      "comprehension_effect": null
+    },
+    {
+      "checkpoint": "1.8",
+      "focus": "Try and source modernization",
+      "reports": [
+        "benchmarks/results/2026-11-22-try-propagation.json",
+        "benchmarks/results/2026-11-22-modernize-source.json"
+      ],
+      "agent_language_advantage": null,
+      "comprehension_effect": null
+    },
+    {
+      "checkpoint": "1.9",
+      "focus": "SQLite and row helpers",
+      "reports": [
+        "benchmarks/results/2026-11-23-sqlite-driver.json",
+        "benchmarks/results/2026-11-23-dx-review.json"
+      ],
+      "agent_language_advantage": null,
+      "comprehension_effect": null
+    },
+    {
+      "checkpoint": "1.10",
+      "focus": "Record updates and standalone try",
+      "reports": [
+        "benchmarks/results/2026-11-23-source-conveniences.json"
+      ],
+      "agent_language_advantage": null,
+      "comprehension_effect": null
+    },
+    {
+      "checkpoint": "1.11",
+      "focus": "Action-bound callbacks",
+      "reports": [
+        "benchmarks/results/2026-11-23-action-callbacks.json"
+      ],
+      "agent_language_advantage": null,
+      "comprehension_effect": null
+    },
+    {
+      "checkpoint": "1.11.1",
+      "focus": "Complete maintained HTTP refactor",
+      "reports": [
+        "benchmarks/results/2026-11-23-maintained-http-refactor.json"
+      ],
+      "agent_language_advantage": null,
+      "comprehension_effect": null
+    },
+    {
+      "checkpoint": "1.11.2",
+      "focus": "Typed permission libraries",
+      "reports": [
+        "benchmarks/results/2026-11-23-typed-permissions.json"
+      ],
+      "agent_language_advantage": null,
+      "comprehension_effect": null
+    }
+  ],
+  "formal_scope": {
+    "native_authority_and_io": "implemented finite models and concrete C witnesses; original pending-descriptor defect retained",
+    "sqlite_lifecycle": "implemented bounded lifecycle model and source correspondence",
+    "verification_session_protocol_tla_model": "proposed, not implemented",
+    "fresh_full_tlc_campaign": false
+  }
+}

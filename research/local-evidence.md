@@ -1,5 +1,14 @@
 # Local evidence for the Lobo paper
 
+## Cross-iteration research reassessment
+
+[The review](reassessment-2026-11-23.md) and [receipt](../benchmarks/results/2026-11-23-research-reassessment.json),
+paper entry local-037, revisit the original construction/comprehension/cost dimensions at compiler 1.11.2.
+Fresh local calibration, verification-reuse, runtime, editor and input-accounting checks are distinct from
+the historical agent trials. The platform is more capable; agent advantages remain unmeasured. Source-only
+compression and growing onboarding inputs expose tradeoffs for the next controlled experiment.
+
+
 ## Typed permission migration
 
 The [report](../benchmarks/results/2026-11-23-typed-permissions.md),

@@ -1084,6 +1084,58 @@
         "A new native sandbox, formal refinement proof, language construct or performance improvement",
         "Actual Windows hardware behavior for this patch"
       ]
+    },
+    {
+      "id": "local-037",
+      "date": "2026-11-23",
+      "title": "Research reassessment across Lobo iterations",
+      "evidence_kind": "historical evidence audit, current local replication and representation accounting",
+      "status": "completed local reassessment; comparative agent effects remain unknown",
+      "files": [
+        {
+          "path": "research/reassessment-2026-11-23.md",
+          "sha256": "de917f726a65f08e4ed18ad672e1e58b424d7237540aa5d0005db4f3713d36e3"
+        },
+        {
+          "path": "benchmarks/results/2026-11-23-research-reassessment.json",
+          "sha256": "1bdda6d5f34dfdb3687902148a303f644ae3405d4ccf6230ea6f1ec8e27e31fa"
+        },
+        {
+          "path": "benchmarks/results/2026-11-23-research-reassessment-calibration.json",
+          "sha256": "472f9197a12ec872320bd9c692353fbeeda57d33dafe681e81bd4f6119cbe80b"
+        },
+        {
+          "path": "benchmarks/results/2026-11-23-research-reassessment-selection.json",
+          "sha256": "9e025325e82c52dc71432a551592b6c605d447c2b6f6c348421bade316d2fe49"
+        },
+        {
+          "path": "benchmarks/results/2026-11-23-research-reassessment-llvm.json",
+          "sha256": "bbdc9fe875f27c7fc944ad88564a088e39e2a730297290e10c8d4f4474643e84"
+        },
+        {
+          "path": "benchmarks/results/2026-11-23-research-reassessment-fiveway.json",
+          "sha256": "f7f6644adc4f24ae4f2afd2a8625e8bcf8c8f360f38f0ee0de2edb47dc2fc86f"
+        },
+        {
+          "path": "benchmarks/results/2026-11-23-research-reassessment-accounting.json",
+          "sha256": "b6973d74fb6b33f9aea365ebbdf4dff4e0b782067423273709204aab106fe682"
+        },
+        {
+          "path": "research/snapshots/2026-11-23-reassessment/knowledge.json",
+          "sha256": "3f4985d639d50327c0898c7de0fe859a9bb5527596cd7119063de8fe84f136d1"
+        }
+      ],
+      "supports": [
+        "Current reproduction of the selected state-checking and affected-verification mechanisms",
+        "Scoped native/backend observations under recorded inputs, repetitions and limits",
+        "Measured source/metadata and hash-matched onboarding-input size tradeoffs",
+        "A versioned assessment of implemented mechanisms and remaining agent-evaluation gaps"
+      ],
+      "does_not_establish": [
+        "A current Lobo advantage in agent construction, comprehension or billed-token cost",
+        "A controlled longitudinal speed regression or general language runtime ranking",
+        "New model-backed trials, human comprehension measurements or universal safety proofs"
+      ]
     }
   ],
   "backend_recommendation": {

@@ -6,6 +6,7 @@ Design decisions and unimplemented proposals belong in [decisions](../../decisio
 
 | Date | Investigation | Recorded outcome | Evidence |
 | --- | --- | --- | --- |
+| 2026-11-23 | Cross-iteration research reassessment | Replayed calibration, test reuse, editor/model-source checks and native benchmarks; measured source/metadata and onboarding growth. H1/H2/H3 and comprehension advantages remain unestablished; no new model trials. | [Review](../../research/reassessment-2026-11-23.md), [data](2026-11-23-research-reassessment.json) |
 | 2026-11-23 | Publish current Lobo and corrected history | Source 37a6f1ba598a and all branches/tags pushed atomically with leases; public refs and GitHub author/committer attribution verified. | [Publication receipt](2026-11-23-git-publication.json) |
 | 2026-11-23 | Git identity, history rewrite and CLI examples | Restored directory routing, verified owner credentials, preserved six commit trees and three worktrees, checked all 20 Lobo README commands. Publication is recorded separately. | [Checks](2026-11-23-git-identity.json), [history map](2026-11-23-git-history-map.json) |
 | 2026-11-23 | GitHub repository visibility | Changed private to public; owner and anonymous API verification pass. No local commits or pushes. | [Receipt](2026-11-23-repository-public.json) |
