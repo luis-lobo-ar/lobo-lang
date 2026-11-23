@@ -1,0 +1,38 @@
+{
+  "date": "2026-11-23",
+  "status": "source_published_and_verified",
+  "repository": "https://github.com/luis-lobo-ar/lobo-lang",
+  "source_publication_commit": "37a6f1ba598a3c181f96dfc08e84b3d0c04b5847",
+  "public": true,
+  "published_refs": {
+    "refs/heads/compare/execution-baseline": "afd2456b263f8897b3ce97ab8a7c9fa07e7d871b",
+    "refs/heads/compare/python-node": "033a600c45912e99b2d78293d800f373e4a88861",
+    "refs/heads/main": "37a6f1ba598a3c181f96dfc08e84b3d0c04b5847",
+    "refs/tags/baseline/core-0.1.1": "37a58e2446c7c1ac0dff31f1ae40db1c7bd0ebd4",
+    "refs/tags/baseline/execution-comparison": "afd2456b263f8897b3ce97ab8a7c9fa07e7d871b"
+  },
+  "force_update_authorized_by_user": true,
+  "atomic_push": true,
+  "explicit_per_ref_leases": true,
+  "remote_ref_values_verified": true,
+  "github_source_history_verification": {
+    "reachable_commits_verified": 7,
+    "all_authors_and_committers": "luis-lobo-ar"
+  },
+  "source_commit_files": 121,
+  "readme_lobo_commands_checked": 20,
+  "remaining_readme_cargo_commands": 2,
+  "prior_product_verification": {
+    "rust_tests": 312,
+    "editor_tests": 182,
+    "real_editor_host": "pass",
+    "C_LLVM_sanitizers_Wine": "pass",
+    "product_files_byte_identical_to_verified_inputs": 236
+  },
+  "changelog_and_frozen_paper_evidence_preserved": true,
+  "ignored_private_evidence_and_generated_binaries_pushed": false,
+  "backup": "benchmarks/private-evidence/git-identity-20261123/before-history.bundle",
+  "old_id_mapping": "benchmarks/results/2026-11-23-git-history-map.json",
+  "raw_receipts": "target/git-identity",
+  "scope_note": "This receipt describes the source publication commit. A following documentation commit records this receipt."
+}

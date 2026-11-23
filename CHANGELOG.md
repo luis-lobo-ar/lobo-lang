@@ -1,5 +1,13 @@
 # Lobo change ledger
 
+## 2026-11-23 — Publish current language and corrected history
+
+Published all pending source/docs in commit 37a6f1ba598a and atomically updated all
+three branches and both baseline tags with explicit remote leases. GitHub confirms that every source-history
+author and committer belongs to luis-lobo-ar, and the repository is public. The changelog, original checkpoint
+evidence and three worktrees are preserved. Private evidence and generated binary caches stay local.
+See [the publication receipt](benchmarks/results/2026-11-23-git-publication.json).
+
 ## 2026-11-23 — Correct Git identity and simplify example commands
 
 Restored the missing per-directory lobo-ar Git config and verified a fresh repository uses the personal

@@ -1,6 +1,6 @@
 {
   "date": "2026-11-23",
-  "status": "locally_verified_ready_for_publication",
+  "status": "published_and_verified",
   "requests": [
     "Use luis-lobo-ar for commits and authentication",
     "Push all pending Lobo work",
@@ -42,5 +42,6 @@
   ],
   "raw_evidence": "target/git-identity",
   "private_evidence": "benchmarks/private-evidence/git-identity-20261123",
-  "publication_receipt": "benchmarks/results/2026-11-23-git-publication.json"
+  "publication_receipt": "benchmarks/results/2026-11-23-git-publication.json",
+  "source_publication_commit": "37a6f1ba598a3c181f96dfc08e84b3d0c04b5847"
 }
