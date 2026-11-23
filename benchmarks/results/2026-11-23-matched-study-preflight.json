@@ -1,0 +1,485 @@
+{
+  "date": "2026-11-23",
+  "source_commit": "75a551fc0aec1fbc94f1fddb2a0f6a59ddb3f122",
+  "tag": "research/lobo-1.11.2",
+  "freeze": {
+    "date": "2026-11-23",
+    "source_commit": "75a551fc0aec1fbc94f1fddb2a0f6a59ddb3f122",
+    "tag": "research/lobo-1.11.2",
+    "compiler": "1.11.2",
+    "language": "core/1.11",
+    "files": {
+      "lobo": {
+        "bytes": 11265728,
+        "sha256": "8d9f84530b8d34a6a72597d25befc249a604430a6569656b4184721e1e444d9d"
+      },
+      "lobo-test": {
+        "bytes": 11012600,
+        "sha256": "a96c2998ab5a1f682e275a4f9cca5df37cbfafd682356bc32ec46116afebc6fa"
+      },
+      "source.tar": {
+        "bytes": 18104320,
+        "sha256": "b032c5d6c703f1fe0e791c2431f80a64cb32e04b3dde54e71a233fdbd96bf08c"
+      }
+    },
+    "status": "frozen"
+  },
+  "references": [
+    {
+      "family": "ledger",
+      "language": "lobo",
+      "changed": false,
+      "compiled": true,
+      "passed": 94,
+      "total": 94
+    },
+    {
+      "family": "ledger",
+      "language": "lobo",
+      "changed": true,
+      "compiled": true,
+      "passed": 95,
+      "total": 95
+    },
+    {
+      "family": "ledger",
+      "language": "rust",
+      "changed": false,
+      "compiled": true,
+      "passed": 94,
+      "total": 94
+    },
+    {
+      "family": "ledger",
+      "language": "rust",
+      "changed": true,
+      "compiled": true,
+      "passed": 95,
+      "total": 95
+    },
+    {
+      "family": "ledger",
+      "language": "python",
+      "changed": false,
+      "compiled": true,
+      "passed": 94,
+      "total": 94
+    },
+    {
+      "family": "ledger",
+      "language": "python",
+      "changed": true,
+      "compiled": true,
+      "passed": 95,
+      "total": 95
+    },
+    {
+      "family": "scheduler",
+      "language": "lobo",
+      "changed": false,
+      "compiled": true,
+      "passed": 94,
+      "total": 94
+    },
+    {
+      "family": "scheduler",
+      "language": "lobo",
+      "changed": true,
+      "compiled": true,
+      "passed": 95,
+      "total": 95
+    },
+    {
+      "family": "scheduler",
+      "language": "rust",
+      "changed": false,
+      "compiled": true,
+      "passed": 94,
+      "total": 94
+    },
+    {
+      "family": "scheduler",
+      "language": "rust",
+      "changed": true,
+      "compiled": true,
+      "passed": 95,
+      "total": 95
+    },
+    {
+      "family": "scheduler",
+      "language": "python",
+      "changed": false,
+      "compiled": true,
+      "passed": 94,
+      "total": 94
+    },
+    {
+      "family": "scheduler",
+      "language": "python",
+      "changed": true,
+      "compiled": true,
+      "passed": 95,
+      "total": 95
+    },
+    {
+      "family": "frames",
+      "language": "lobo",
+      "changed": false,
+      "compiled": true,
+      "passed": 96,
+      "total": 96
+    },
+    {
+      "family": "frames",
+      "language": "lobo",
+      "changed": true,
+      "compiled": true,
+      "passed": 99,
+      "total": 99
+    },
+    {
+      "family": "frames",
+      "language": "rust",
+      "changed": false,
+      "compiled": true,
+      "passed": 96,
+      "total": 96
+    },
+    {
+      "family": "frames",
+      "language": "rust",
+      "changed": true,
+      "compiled": true,
+      "passed": 99,
+      "total": 99
+    },
+    {
+      "family": "frames",
+      "language": "python",
+      "changed": false,
+      "compiled": true,
+      "passed": 96,
+      "total": 96
+    },
+    {
+      "family": "frames",
+      "language": "python",
+      "changed": true,
+      "compiled": true,
+      "passed": 99,
+      "total": 99
+    }
+  ],
+  "mutants": [
+    {
+      "family": "ledger",
+      "language": "lobo",
+      "changed": false,
+      "killed_by_behavior": true
+    },
+    {
+      "family": "ledger",
+      "language": "lobo",
+      "changed": true,
+      "killed_by_behavior": true
+    },
+    {
+      "family": "ledger",
+      "language": "rust",
+      "changed": false,
+      "killed_by_behavior": true
+    },
+    {
+      "family": "ledger",
+      "language": "rust",
+      "changed": true,
+      "killed_by_behavior": true
+    },
+    {
+      "family": "ledger",
+      "language": "python",
+      "changed": false,
+      "killed_by_behavior": true
+    },
+    {
+      "family": "ledger",
+      "language": "python",
+      "changed": true,
+      "killed_by_behavior": true
+    },
+    {
+      "family": "scheduler",
+      "language": "lobo",
+      "changed": false,
+      "killed_by_behavior": true
+    },
+    {
+      "family": "scheduler",
+      "language": "lobo",
+      "changed": true,
+      "killed_by_behavior": true
+    },
+    {
+      "family": "scheduler",
+      "language": "rust",
+      "changed": false,
+      "killed_by_behavior": true
+    },
+    {
+      "family": "scheduler",
+      "language": "rust",
+      "changed": true,
+      "killed_by_behavior": true
+    },
+    {
+      "family": "scheduler",
+      "language": "python",
+      "changed": false,
+      "killed_by_behavior": true
+    },
+    {
+      "family": "scheduler",
+      "language": "python",
+      "changed": true,
+      "killed_by_behavior": true
+    },
+    {
+      "family": "frames",
+      "language": "lobo",
+      "changed": false,
+      "killed_by_behavior": true
+    },
+    {
+      "family": "frames",
+      "language": "lobo",
+      "changed": true,
+      "killed_by_behavior": true
+    },
+    {
+      "family": "frames",
+      "language": "rust",
+      "changed": false,
+      "killed_by_behavior": true
+    },
+    {
+      "family": "frames",
+      "language": "rust",
+      "changed": true,
+      "killed_by_behavior": true
+    },
+    {
+      "family": "frames",
+      "language": "python",
+      "changed": false,
+      "killed_by_behavior": true
+    },
+    {
+      "family": "frames",
+      "language": "python",
+      "changed": true,
+      "killed_by_behavior": true
+    }
+  ],
+  "excluded_transport_canaries": [
+    {
+      "phase": "construction",
+      "language": "lobo",
+      "exit_code": 0,
+      "wall_s": 5.785532153910026,
+      "usage": {
+        "input_tokens": 36012,
+        "cached_input_tokens": 29952,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 84,
+        "reasoning_output_tokens": 0
+      },
+      "mailbox_requests": 1,
+      "accepted": true
+    },
+    {
+      "phase": "construction",
+      "language": "rust",
+      "exit_code": 0,
+      "wall_s": 7.400909842923284,
+      "usage": {
+        "input_tokens": 35991,
+        "cached_input_tokens": 29952,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 83,
+        "reasoning_output_tokens": 0
+      },
+      "mailbox_requests": 1,
+      "accepted": true
+    },
+    {
+      "phase": "construction",
+      "language": "python",
+      "exit_code": 0,
+      "wall_s": 5.200503350934014,
+      "usage": {
+        "input_tokens": 35989,
+        "cached_input_tokens": 24320,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 63,
+        "reasoning_output_tokens": 0
+      },
+      "mailbox_requests": 1,
+      "accepted": true
+    }
+  ],
+  "benchmark_adapters": [
+    {
+      "family": "ledger",
+      "language": "lobo",
+      "changed": false,
+      "actual": 5892,
+      "expected": 5892,
+      "ok": true
+    },
+    {
+      "family": "ledger",
+      "language": "lobo",
+      "changed": true,
+      "actual": 5892,
+      "expected": 5892,
+      "ok": true
+    },
+    {
+      "family": "ledger",
+      "language": "rust",
+      "changed": false,
+      "actual": 5892,
+      "expected": 5892,
+      "ok": true
+    },
+    {
+      "family": "ledger",
+      "language": "rust",
+      "changed": true,
+      "actual": 5892,
+      "expected": 5892,
+      "ok": true
+    },
+    {
+      "family": "ledger",
+      "language": "python",
+      "changed": false,
+      "actual": 5892,
+      "expected": 5892,
+      "ok": true
+    },
+    {
+      "family": "ledger",
+      "language": "python",
+      "changed": true,
+      "actual": 5892,
+      "expected": 5892,
+      "ok": true
+    },
+    {
+      "family": "scheduler",
+      "language": "lobo",
+      "changed": false,
+      "actual": 700,
+      "expected": 700,
+      "ok": true
+    },
+    {
+      "family": "scheduler",
+      "language": "lobo",
+      "changed": true,
+      "actual": 700,
+      "expected": 700,
+      "ok": true
+    },
+    {
+      "family": "scheduler",
+      "language": "rust",
+      "changed": false,
+      "actual": 700,
+      "expected": 700,
+      "ok": true
+    },
+    {
+      "family": "scheduler",
+      "language": "rust",
+      "changed": true,
+      "actual": 700,
+      "expected": 700,
+      "ok": true
+    },
+    {
+      "family": "scheduler",
+      "language": "python",
+      "changed": false,
+      "actual": 700,
+      "expected": 700,
+      "ok": true
+    },
+    {
+      "family": "scheduler",
+      "language": "python",
+      "changed": true,
+      "actual": 700,
+      "expected": 700,
+      "ok": true
+    },
+    {
+      "family": "frames",
+      "language": "lobo",
+      "changed": false,
+      "actual": 800,
+      "expected": 800,
+      "ok": true
+    },
+    {
+      "family": "frames",
+      "language": "lobo",
+      "changed": true,
+      "actual": 800,
+      "expected": 800,
+      "ok": true
+    },
+    {
+      "family": "frames",
+      "language": "rust",
+      "changed": false,
+      "actual": 800,
+      "expected": 800,
+      "ok": true
+    },
+    {
+      "family": "frames",
+      "language": "rust",
+      "changed": true,
+      "actual": 800,
+      "expected": 800,
+      "ok": true
+    },
+    {
+      "family": "frames",
+      "language": "python",
+      "changed": false,
+      "actual": 800,
+      "expected": 800,
+      "ok": true
+    },
+    {
+      "family": "frames",
+      "language": "python",
+      "changed": true,
+      "actual": 800,
+      "expected": 800,
+      "ok": true
+    }
+  ],
+  "setup_failures": [
+    "reference-validation-1: list result shape guessed incorrectly",
+    "reference-validation-2: list elements key guessed incorrectly; regression added",
+    "reference-validation-3: complex match subject needs parentheses",
+    "reference-validation-4: constructor needs Pick owner/expected type",
+    "reference-validation-5: frame padding else-if must be nested; scheduler generator field corrected before use",
+    "reference-validation-6: template substitution replaced part of closing placeholder"
+  ],
+  "unit_tests": 8
+}

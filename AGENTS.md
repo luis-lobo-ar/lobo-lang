@@ -5,6 +5,10 @@ Use the GitHub account luis-lobo-ar for this repository. Commit author and commi
 active gh account may belong to another project. Keep user-facing examples on the lobo CLI. Cargo commands
 belong in compiler build/test instructions. Preserve frozen research documents and fixtures.
 
+Research scope selected in decision 0063: freeze 1.11.2 and run matched construction, comprehension and
+change experiments against Rust/Python, followed by runtime benchmarks. Do not evolve the product during
+these trials. Preserve every assignment, failure, unknown usage, original fixture and paper evidence pin.
+
 Current state: compiler/extension 1.11.2, language Core 1.11, native ABI 1, optional SQLite extension 1.
 The user selected completing the maintained HTTP refactor in decision 0060. Both native HTTP apps delegate
 listener lifetime to serve/serve_with. The library centralizes accept/retry/termination, preparation and
