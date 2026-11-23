@@ -1,0 +1,21 @@
+{
+  "date": "2026-11-04",
+  "purpose": "Preserve dirty-workspace Core 0.10 baseline before generic function implementation. Not a clean release or agent comparison.",
+  "files": [
+    {
+      "path": "benchmarks/private-evidence/core010-language-baseline-20261104/lobo",
+      "bytes": 1089496,
+      "sha256": "b0093664423c2c16525c81875a4c768b640d36b3e70308910e97898e027548d3"
+    },
+    {
+      "path": "benchmarks/private-evidence/core010-language-baseline-20261104/lobo-test",
+      "bytes": 1003896,
+      "sha256": "d9e80eb4efcdc4b2cfc93d5d9bd2e564ecd89afe53f4f8db26402779f1b3dd41"
+    },
+    {
+      "path": "benchmarks/private-evidence/core010-language-baseline-20261104/source-core010.tar.gz",
+      "bytes": 331367,
+      "sha256": "2cff443a6ec3d816423944b2910c1ac29f09bc1f248ea9522bf112e9ef5bd1e1"
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "format": "lobo-identities/0.1",
+  "identities": {
+    "module": "example.rest",
+    "http.serve": "lobo.http.transport.serve",
+    "controller.handle": "example.rest.controller.handle",
+    "main": "example.rest.main",
+    "http.Request": "lobo.http.server.Request",
+    "http.Response": "example.web.response"
+  }
+}

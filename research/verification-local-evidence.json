@@ -1,0 +1,64 @@
+{
+  "date": "2026-11-04",
+  "scope": "Paper evidence indexing and local snapshot integrity; no new experiment",
+  "index": {
+    "path": "research/local-evidence.json",
+    "sha256": "7b650508fed083c96bf65217c83c8d47aa85424292b1fa010e10ceb32ff51e16",
+    "entries": 8
+  },
+  "bundle": {
+    "path": "benchmarks/private-evidence/paper-evidence-20261104/evidence-complete.tar.gz",
+    "bytes": 8731997,
+    "sha256": "cc35e0e8d413ceb708da83050dd47d9614d961a1a0ea30a4abdbc1b94848b11b",
+    "manifest_path": "benchmarks/private-evidence/paper-evidence-20261104/manifest-complete.json",
+    "manifest_sha256": "db424119a4648aa3c62515935aa1f0c04fa2867c98b54bdf6eaf22fe99d78a68",
+    "members": 447,
+    "indexed_regular_files": 446,
+    "all_member_bytes_and_hashes_verified": true
+  },
+  "checks": {
+    "all_indexed_report_data_hashes": "passed",
+    "archive_member_count_and_manifest": "passed",
+    "all_archived_file_hashes_and_sizes": "passed",
+    "repository_json_links_whitespace": "passed: ./scripts/check.sh and git diff --check"
+  },
+  "limits": [
+    "Older private agent-attempt directories remain at locations in their original reports; not included here.",
+    "Primary-paper download caches, credentials, unrelated projects and general build caches.",
+    "The external receipt describes this archive hash and is not included recursively.",
+    "Local ignored evidence needs normal backup; no commit, publication or independent archive.",
+    "No compiler/language source changed for this request; no benchmark or model trial was rerun."
+  ],
+  "reproduction": [
+    "Compare SHA-256 of bundle and manifest against this receipt.",
+    "Read EVIDENCE-MANIFEST.json inside the archive; verify every archived file size and SHA-256.",
+    "Use the frozen source/compiler artifacts for historical claims, not newer live-workspace documentation."
+  ],
+  "earlier_bundle_preserved": {
+    "path": "benchmarks/private-evidence/paper-evidence-20261104/evidence.tar.gz",
+    "bytes": 8629330,
+    "sha256": "11b64928280deb68ecebd99dba17cdf1ac9a8261970f369b688b825ec907f975",
+    "manifest_path": "benchmarks/private-evidence/paper-evidence-20261104/manifest.json",
+    "manifest_sha256": "03dc2bc314f4e27617e16afa7f9892b672f36e63c94ef6403a68b6bd96be88ab",
+    "members": 419,
+    "indexed_regular_files": 418,
+    "all_member_bytes_and_hashes_verified": true
+  },
+  "completeness_followup": "Include historical .md.txt framing notes and explicit reproduction/editor tooling. Original 418-file bundle remains unchanged.",
+  "commands": [
+    "./scripts/check.sh",
+    "git diff --check",
+    "SHA-256 validation of every indexed primary report/data file",
+    "Tar member count/type, embedded manifest bytes and every archived file size/SHA-256 validation"
+  ],
+  "audit_logs": [
+    {
+      "path": "benchmarks/private-evidence/paper-evidence-20261104/paper-evidence-links.log",
+      "sha256": "1f11bb3bb382f1877ffa8eec4eb376db85d0ecfa2e1301289bb91fbd2cc966ae"
+    },
+    {
+      "path": "benchmarks/private-evidence/paper-evidence-20261104/paper-evidence-diff.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ]
+}

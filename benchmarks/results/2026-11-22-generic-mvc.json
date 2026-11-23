@@ -1,0 +1,276 @@
+{
+  "compiler_sha256": "fee15ce477de433b891e7ca1852f363346f16846cd75012fb5c8eaa24fb3efa8",
+  "source_sha256": "42cb220e6edd20734774297e15f9b729435c2bc5c986c78047ba010cc0d816e0",
+  "observations": [
+    {
+      "backend": "c",
+      "entry": "show_user",
+      "args": [
+        "I64:1"
+      ],
+      "observed": {
+        "status": "ok",
+        "kind": "value",
+        "value": {
+          "type": "Record",
+          "value": {
+            "id": "example.web.response",
+            "fields": {
+              "status": {
+                "type": "I64",
+                "value": "200"
+              },
+              "content_type": {
+                "type": "Text",
+                "value": "application/json"
+              },
+              "body": {
+                "type": "Text",
+                "value": "{\"name\":\"Luis\"}"
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "backend": "c",
+      "entry": "show_user",
+      "args": [
+        "I64:42"
+      ],
+      "observed": {
+        "status": "ok",
+        "kind": "value",
+        "value": {
+          "type": "Record",
+          "value": {
+            "id": "example.web.response",
+            "fields": {
+              "status": {
+                "type": "I64",
+                "value": "404"
+              },
+              "content_type": {
+                "type": "Text",
+                "value": "text/plain; charset=utf-8"
+              },
+              "body": {
+                "type": "Text",
+                "value": "Not found\n"
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "backend": "c",
+      "entry": "show_article",
+      "args": [],
+      "observed": {
+        "status": "ok",
+        "kind": "value",
+        "value": {
+          "type": "Record",
+          "value": {
+            "id": "example.web.response",
+            "fields": {
+              "status": {
+                "type": "I64",
+                "value": "200"
+              },
+              "content_type": {
+                "type": "Text",
+                "value": "application/json"
+              },
+              "body": {
+                "type": "Text",
+                "value": "{\"title\":\"Lobo\"}"
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "backend": "c",
+      "entry": "missing_without_rendering",
+      "args": [],
+      "observed": {
+        "status": "ok",
+        "kind": "value",
+        "value": {
+          "type": "Record",
+          "value": {
+            "id": "example.web.response",
+            "fields": {
+              "status": {
+                "type": "I64",
+                "value": "404"
+              },
+              "content_type": {
+                "type": "Text",
+                "value": "text/plain; charset=utf-8"
+              },
+              "body": {
+                "type": "Text",
+                "value": "Not found\n"
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "backend": "llvm",
+      "entry": "show_user",
+      "args": [
+        "I64:1"
+      ],
+      "observed": {
+        "status": "ok",
+        "kind": "value",
+        "value": {
+          "type": "Record",
+          "value": {
+            "id": "example.web.response",
+            "fields": {
+              "status": {
+                "type": "I64",
+                "value": "200"
+              },
+              "content_type": {
+                "type": "Text",
+                "value": "application/json"
+              },
+              "body": {
+                "type": "Text",
+                "value": "{\"name\":\"Luis\"}"
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "backend": "llvm",
+      "entry": "show_user",
+      "args": [
+        "I64:42"
+      ],
+      "observed": {
+        "status": "ok",
+        "kind": "value",
+        "value": {
+          "type": "Record",
+          "value": {
+            "id": "example.web.response",
+            "fields": {
+              "status": {
+                "type": "I64",
+                "value": "404"
+              },
+              "content_type": {
+                "type": "Text",
+                "value": "text/plain; charset=utf-8"
+              },
+              "body": {
+                "type": "Text",
+                "value": "Not found\n"
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "backend": "llvm",
+      "entry": "show_article",
+      "args": [],
+      "observed": {
+        "status": "ok",
+        "kind": "value",
+        "value": {
+          "type": "Record",
+          "value": {
+            "id": "example.web.response",
+            "fields": {
+              "status": {
+                "type": "I64",
+                "value": "200"
+              },
+              "content_type": {
+                "type": "Text",
+                "value": "application/json"
+              },
+              "body": {
+                "type": "Text",
+                "value": "{\"title\":\"Lobo\"}"
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "backend": "llvm",
+      "entry": "missing_without_rendering",
+      "args": [],
+      "observed": {
+        "status": "ok",
+        "kind": "value",
+        "value": {
+          "type": "Record",
+          "value": {
+            "id": "example.web.response",
+            "fields": {
+              "status": {
+                "type": "I64",
+                "value": "404"
+              },
+              "content_type": {
+                "type": "Text",
+                "value": "text/plain; charset=utf-8"
+              },
+              "body": {
+                "type": "Text",
+                "value": "Not found\n"
+              }
+            }
+          }
+        }
+      }
+    }
+  ],
+  "wrong_renderer": {
+    "diagnostic": {
+      "code": "compile.type.mismatch",
+      "message": "types must match exactly",
+      "phase": "check",
+      "range": {
+        "end": {
+          "byte": 685,
+          "character": 53,
+          "line": 18
+        },
+        "start": {
+          "byte": 670,
+          "character": 38,
+          "line": 18
+        }
+      },
+      "source": "app",
+      "subject": "probe.generic_mvc.show_user"
+    },
+    "kind": "compile_error",
+    "status": "error"
+  },
+  "status": "passed",
+  "date": "2026-11-22",
+  "preservation": "benchmarks/private-evidence/generic-mvc-20261122",
+  "command": "python3 target/generic-mvc-probe-20261122/check.py",
+  "exit_code": 0,
+  "language_changes": false,
+  "agent_outcomes": null
+}

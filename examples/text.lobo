@@ -1,0 +1,25 @@
+module text_values;
+
+variant Decoded { Ok(Text), Invalid(Bytes) }
+
+fn frame(name: Text) -> Text
+ensures { Text::length(result) == Text::length(name) + 2 }
+{
+  "[" + (name + "]")
+}
+
+fn decode(data: Bytes) -> Decoded {
+  if Text::valid(data) { Ok(Text::from_bytes(data)) } else { Invalid(data) }
+}
+
+fn greeting() -> Text {
+  frame("Hello, 🐺!\n")
+}
+
+identities {
+  module: "example.text",
+  Decoded: "example.text.decoded",
+  frame: "example.text.frame",
+  decode: "example.text.decode",
+  greeting: "example.text.greeting"
+}

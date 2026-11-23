@@ -1,0 +1,15 @@
+{
+  "format": "lobo-identities/0.1",
+  "identities": {
+    "User": "example.mvc.user",
+    "UserLookup": "example.mvc.lookup",
+    "find_user": "example.mvc.find_user",
+    "http.Response": "example.web.response",
+    "http.not_found": "lobo.http.not_found",
+    "json.Json": "lobo.json.value",
+    "json.json_response": "lobo.json.response",
+    "module": "example.mvc",
+    "render_user": "example.mvc.render_user",
+    "show_user": "example.mvc.show_user"
+  }
+}

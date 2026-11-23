@@ -1,7 +1,8 @@
 # Lobo Core v0.1
 
 Status: proposed normative specification for the first executable subset, implemented by the Rust reference.
-Version: `core/0.1-draft`.
+Version: `core/0.1-draft`. These historical rules are inherited/extended by the current language in the
+[specification index](README.md).
 
 The compiler emits [native executables](native-v0.1.md) by default. [Checked artifacts](checked-artifact-v0.1.md)
 and the reference evaluator support inspection and testing. Resource limits are implementation limits, not
@@ -17,7 +18,7 @@ Core contains named pure functions, `I64`, `Bool`, immutable local bindings, con
 preconditions and postconditions. Programs contain one module. Inputs arrive as values passed by an explicit
 host invocation; evaluation produces a value or a classified failure.
 
-Records, enums, collections, generics, host effects, persistence, state machines, concurrency, and static
+Records, enums, collections, generics, host actions, persistence, state machines, concurrency, and static
 contract proofs need additional specifications. Core alone is insufficient to implement its own compiler.
 
 ## Source and tokens
@@ -226,6 +227,6 @@ before evaluating `x + 1`. Its postcondition is checked at runtime; it has not b
 ## Conformance boundary
 
 Conformance applies to the rules above and the associated fixtures. It does not imply graph interchange,
-daemon behavior, effects, resource-limit equivalence, static verification, or self-hosting. A release declares
+daemon behavior, actions, resource-limit equivalence, static verification, or self-hosting. A release declares
 its supported language version and separate backend and protocol versions.
 

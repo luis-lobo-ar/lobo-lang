@@ -1,0 +1,227 @@
+{
+  "format": "lobo-native-formal-coverage/0.1",
+  "reviewed_head": "39ec4662869ae992a508a06cf2f3a9cf36240220",
+  "working_tree_note": "Source includes uncommitted work beyond HEAD; exact file hashes define reviewed inputs. No commit is claimed for the models. Windows snapshot milestone: Linux provider prefix reviewed byte-identical; new Windows profile is outside these Linux model claims.",
+  "files": {
+    "src/native_api.c": {
+      "sha256": "15d789a2129b16e2009c74e28987097c24ed7083a628fea9cc5cd03c43772c20",
+      "coverage": [
+        "capability/restrict",
+        "lookup/begin/insert/release",
+        "pending fd ownership",
+        "connect/wait/read/write",
+        "cleanup"
+      ]
+    },
+    "src/native_runtime.c": {
+      "sha256": "32a67f4913cddeee51fe33d6464afeb42d9740f81350ddb0ae45d88015f7564c",
+      "coverage": [
+        "lobo_fail",
+        "lobo_cleanup",
+        "lobo_tick"
+      ]
+    },
+    "src/native_buffers.c": {
+      "sha256": "9ce58d4580aba0abbfd2596a60c7326e1594a3326c46fdbca3604f167aa1a082",
+      "coverage": [
+        "lobo_spend (fuel abstraction)"
+      ]
+    },
+    "tests/native/adapter_harness.c": {
+      "sha256": "88f5215e6b5507bc9209df02dfad622db3c3c3fa5bfae4511f63f06ed676f49c",
+      "coverage": [
+        "fault injection",
+        "exit observer",
+        "pending descriptor regression"
+      ]
+    },
+    "tests/native/formal_trace_harness.c": {
+      "sha256": "b76fd1b60987a762c37215e528a3a1d22987770307435478b3c12c51c945fa7e",
+      "coverage": [
+        "concrete witness translation"
+      ]
+    },
+    "tests/native_formal.rs": {
+      "sha256": "548d412c63b877d14a5e84f39c9b2dcd59c4a2a0be8d56e6e01300607a53296d",
+      "coverage": [
+        "normal Cargo witness replay"
+      ]
+    },
+    "tests/native_adapter.rs": {
+      "sha256": "58b7a30a7976acba042d0d09e036d627f196f4f55f6826eb46d99c9ab5c61ebb",
+      "coverage": [
+        "focused pending-fd regression"
+      ]
+    },
+    "verification/native/Operations.tla": {
+      "sha256": "4ae35551cda143f54b4c906f0e5bb8f8cdf4485fcc3a2f63109244f15aa0296b",
+      "coverage": [
+        "verification input or checker"
+      ]
+    },
+    "verification/native/Authority.tla": {
+      "sha256": "f43286c3cbb75963641133f0de32a4dc7ba6a7cf28799ad3cd2a7b57f5842c89",
+      "coverage": [
+        "verification input or checker"
+      ]
+    },
+    "verification/native/configs/operations.cfg": {
+      "sha256": "3bcc881c496736e004dad65d90757daa3590b1f712c8b2866eed9094664a150c",
+      "coverage": [
+        "verification input or checker"
+      ]
+    },
+    "verification/native/configs/authority-quota.cfg": {
+      "sha256": "ca913191cedc2d6c39f88a562f03bf0625f300c992fc45c64f588a45ef1c58b2",
+      "coverage": [
+        "verification input or checker"
+      ]
+    },
+    "verification/native/configs/operations-untracked-fault.cfg": {
+      "sha256": "3a57392ef63d83ff435d7db14398fc765be4d0bb50d141c1a9f261030ee8b236",
+      "coverage": [
+        "verification input or checker"
+      ]
+    },
+    "verification/native/configs/operations-deadline.cfg": {
+      "sha256": "343d946623f469f9d59b1b4f85b65f4bff0c8fbc5a785d26656933af331c6ed6",
+      "coverage": [
+        "verification input or checker"
+      ]
+    },
+    "verification/native/configs/authority.cfg": {
+      "sha256": "52e54789b849068c2794041c174389bd8022467521702a91bd73597cd2e3dea5",
+      "coverage": [
+        "verification input or checker"
+      ]
+    },
+    "verification/native/configs/authority-wrap.cfg": {
+      "sha256": "8412b239aa0113ad5233909b49308dfa594c1f674254132232b33a9e9b949aa2",
+      "coverage": [
+        "verification input or checker"
+      ]
+    },
+    "verification/native/configs/operations-publish.cfg": {
+      "sha256": "58685243b376178eebc376f730d1a77810206fa1b3fcf1e8a3cfedbc46d23aaf",
+      "coverage": [
+        "verification input or checker"
+      ]
+    },
+    "verification/native/configs/authority-denied.cfg": {
+      "sha256": "47e7691d734ea532678d58282c719ff696f53da8a9015ed393f4399568a5bfdc",
+      "coverage": [
+        "verification input or checker"
+      ]
+    },
+    "verification/native/configs/authority-chart.cfg": {
+      "sha256": "4b57c9400e461fd91ed1c8a96a17fc34015c74c3997e4502614d682d9006317a",
+      "coverage": [
+        "verification input or checker"
+      ]
+    },
+    "verification/native/configs/authority-cleanup.cfg": {
+      "sha256": "45f46c5d9694ab8e053e2999e3ac459260838e11800bae0231a4e56e297964bb",
+      "coverage": [
+        "verification input or checker"
+      ]
+    },
+    "verification/native/configs/authority-amplify.cfg": {
+      "sha256": "5dbbe9809f3ef71c19ea430eb32f4083b67630ddf82d9dcb8cc87d54c8899117",
+      "coverage": [
+        "verification input or checker"
+      ]
+    },
+    "verification/native/configs/authority-root.cfg": {
+      "sha256": "deb83e8f25f6b1c01614bc4255f752d8d23813c9d1116343c2cac08e6fe8a246",
+      "coverage": [
+        "verification input or checker"
+      ]
+    },
+    "verification/native/configs/authority-kind.cfg": {
+      "sha256": "6355bd5ffb3bc9d3926010ed0cbd25d8be03f6db9233f014b6225eed0ec7e604",
+      "coverage": [
+        "verification input or checker"
+      ]
+    },
+    "verification/native/configs/authority-stale.cfg": {
+      "sha256": "e18db7cc52a86bb3403f7640f0cb943de3df47aa4739649be3d190a7bf0a28f0",
+      "coverage": [
+        "verification input or checker"
+      ]
+    },
+    "verification/native/mutations.json": {
+      "sha256": "fb077b7541478f6d24adefb4356cf1bdac35a266aa3c36040e8a48da07188833",
+      "coverage": [
+        "verification input or checker"
+      ]
+    },
+    "scripts/check-native-models.py": {
+      "sha256": "5778f0212a840de9b0adee88bb120bab3079bc2670ae5ed13a9179e72ebc97c1",
+      "coverage": [
+        "acceptance checks and real TLC negative checker test; reviewed for optimized Python"
+      ]
+    },
+    "verification/native/configs/operations-chart.cfg": {
+      "sha256": "77bf4f73373d43a0fb80e2a816d45446aa295577175c0fa18e500214f7f916c3",
+      "coverage": [
+        "reviewed visualization input; reduced bounds do not replace acceptance configuration"
+      ]
+    },
+    "verification/native/authority.view.mjs": {
+      "sha256": "1c9ccb488b521eedf643923e41a760db62156ac4f1d31a49207ef5d8f5dfd5e2",
+      "coverage": [
+        "reviewed visualization input; reduced bounds do not replace acceptance configuration"
+      ]
+    },
+    "verification/native/operations.view.mjs": {
+      "sha256": "c99cf2e762b867dbf88046983c9107c6a0076e04ed74cb4c612c42a0c6094869",
+      "coverage": [
+        "reviewed visualization input; reduced bounds do not replace acceptance configuration"
+      ]
+    },
+    "scripts/test-native-model-checker.py": {
+      "sha256": "3b74af6dd936c9c1c80d2d3a350d957405776a79751771b4c3e5e369a22a1dbb",
+      "coverage": [
+        "acceptance checks and real TLC negative checker test; reviewed for optimized Python"
+      ]
+    }
+  },
+  "models": {
+    "Authority": {
+      "actions": [
+        "Init",
+        "Root",
+        "Derive",
+        "Allocate",
+        "Use",
+        "Release",
+        "Exit",
+        "Finished",
+        "Done"
+      ]
+    },
+    "Operations": {
+      "actions": [
+        "Init",
+        "Acquire",
+        "Connect",
+        "Validate",
+        "RejectPeer",
+        "StartIO",
+        "BeginIO",
+        "Retry",
+        "Timeout",
+        "Fault",
+        "OsFailure",
+        "Write",
+        "Read",
+        "Shutdown",
+        "Eof",
+        "QuotaFailure",
+        "Cleanup",
+        "Done"
+      ]
+    }
+  },
+  "proof_scope": "Finite abstract models plus selected concrete C witnesses/mutations; no mechanical refinement proof or cutoff theorem."
+}

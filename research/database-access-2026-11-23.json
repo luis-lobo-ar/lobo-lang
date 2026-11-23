@@ -1,0 +1,115 @@
+{
+  "format": "lobo-database-access-review/0.1",
+  "date": "2026-11-23",
+  "status": "proposal only; no implementation or experiment",
+  "existing_state": {
+    "compiler": "1.8.1",
+    "extension": "1.8.1",
+    "language": "core/1.8",
+    "native_abi": 1,
+    "database_driver": false,
+    "file_access_catalog": false,
+    "remote_database_transport": false,
+    "general_ffi": false
+  },
+  "sources": [
+    {
+      "id": "sqlite-uses",
+      "url": "https://www.sqlite.org/whentouse.html",
+      "title": "Appropriate uses for SQLite",
+      "accessed_on": "2026-11-23",
+      "kind": "official primary documentation",
+      "observation": "SQLite targets local embedded storage; client/server systems serve different requirements."
+    },
+    {
+      "id": "sqlite-c",
+      "url": "https://www.sqlite.org/cintro.html",
+      "title": "SQLite C/C++ interface introduction",
+      "accessed_on": "2026-11-23",
+      "kind": "official primary documentation",
+      "observation": "Connections/statements, prepare/bind/step/column and finalization provide a small native binding entry point."
+    },
+    {
+      "id": "postgres-libpq",
+      "url": "https://www.postgresql.org/docs/current/libpq.html",
+      "title": "PostgreSQL libpq C library",
+      "accessed_on": "2026-11-23",
+      "kind": "official primary documentation",
+      "observation": "An existing C client is a candidate later native adapter; this review did not build or test it."
+    },
+    {
+      "id": "postgres-params",
+      "url": "https://www.postgresql.org/docs/current/libpq-exec.html",
+      "title": "PostgreSQL command execution",
+      "accessed_on": "2026-11-23",
+      "kind": "official primary documentation",
+      "observation": "PQexecParams separates parameters from SQL and uses $1-style placeholders."
+    },
+    {
+      "id": "redis-hiredis",
+      "url": "https://redis.io/docs/latest/develop/clients/hiredis/",
+      "title": "Redis hiredis C guide",
+      "accessed_on": "2026-11-23",
+      "kind": "official primary documentation",
+      "observation": "Redis provides a documented C client candidate for a separately selected key-value API."
+    },
+    {
+      "id": "sqlite-security",
+      "url": "https://www.sqlite.org/security.html",
+      "title": "SQLite security guidance",
+      "accessed_on": "2026-11-23",
+      "kind": "official primary documentation",
+      "observation": "Defensive configuration, engine limits and authorization reduce attack exposure; native library bugs remain possible."
+    },
+    {
+      "id": "sqlite-authorizer",
+      "url": "https://www.sqlite.org/c3ref/set_authorizer.html",
+      "title": "SQLite compile-time authorization callbacks",
+      "accessed_on": "2026-11-23",
+      "kind": "official primary documentation",
+      "observation": "The engine can deny operations during statement preparation; access policy must cover schema/attachment/function behavior."
+    },
+    {
+      "id": "sqlite-progress",
+      "url": "https://www.sqlite.org/c3ref/progress_handler.html",
+      "title": "SQLite query progress callbacks",
+      "accessed_on": "2026-11-23",
+      "kind": "official primary documentation",
+      "observation": "A nonzero callback result interrupts work. This alone does not establish full wall-clock or memory bounds."
+    }
+  ],
+  "recommendations_as_inference": [
+    "Start with a SQLite C adapter and a small SQL library together for the current local standalone app.",
+    "Keep key-value/document APIs separate; share applicable policy/error/observability conventions.",
+    "Use a second actual SQL driver to validate common API semantics; keep dialect differences explicit.",
+    "Define driver ownership, rollback cleanup, grants and native execution limits before implementation."
+  ],
+  "deferred": [
+    "implementation selection",
+    "SQLite version/build/provenance",
+    "exact public names and launch grants",
+    "remote TLS/authentication and credentials",
+    "SQL translation/ORM/pooling/dynamic driver SDK"
+  ],
+  "validation": {
+    "documentation_links": "recorded separately in verification-database-access-2026-11-23.json",
+    "runtime_tests": "not run; runtime unchanged",
+    "database_connections": "none",
+    "agent_outcomes": null,
+    "performance_outcomes": null,
+    "formal_models": "proposed only"
+  },
+  "negative_findings": [
+    "Current Native catalog cannot load arbitrary database libraries or provide the required file/network authority.",
+    "SQL dialects and NoSQL semantics cannot be promised interchangeable by a connection wrapper.",
+    "Current pure Fn callbacks cannot execute arbitrary database actions in a transaction helper.",
+    "Lobo expression fuel does not bound work inside a native database call.",
+    "Try can skip explicit cleanup if used without a result-owning transaction boundary."
+  ],
+  "proposal_snapshot": {
+    "original_path": "docs/database-access-proposal.md",
+    "path": "research/snapshots/2026-11-23-database-access/proposal.txt",
+    "sha256": "91ab6c4822ca951e83a29d7a6216fffb569f57a7cb96b8c639651294076e33c2",
+    "note": "Byte-identical original Markdown retained as text. Resolve its relative links against the original docs directory."
+  }
+}

@@ -1,0 +1,147 @@
+{
+  "format": "lobo-source-modernization-result/0.1",
+  "date": "2026-11-22",
+  "status": "passed",
+  "compiler": "1.8.1",
+  "extension": "1.8.1",
+  "language": "core/1.8",
+  "checked_format": "lobo-checked/1.0",
+  "native_abi": 1,
+  "source_files_reviewed": 38,
+  "source_files_changed": 20,
+  "automatic_token_rewrites": 151,
+  "automatic_layout_changes": 15,
+  "automatic_changed_files": 19,
+  "manual_try_files": [
+    "examples/native/rest/app.lobo",
+    "examples/native/loopback.lobo"
+  ],
+  "converged_audit": {
+    "status": "pass",
+    "files": 38,
+    "changed": 0,
+    "rewrites": 0,
+    "compiler_calls": 123
+  },
+  "source_identity_verification": {
+    "status": "pass",
+    "maintained_files": 38,
+    "changed_sources": [
+      ".agents/skills/lobo-programming/references/examples.lobo",
+      "examples/algorithms.lobo",
+      "examples/ast.lobo",
+      "examples/collections.lobo",
+      "examples/core.lobo",
+      "examples/generic_data.lobo",
+      "examples/generics.lobo",
+      "examples/iteration.lobo",
+      "examples/mvc.compact.lobo",
+      "examples/native/loopback.lobo",
+      "examples/native/rest/app.lobo",
+      "examples/parser.lobo",
+      "examples/text.lobo",
+      "examples/tree.lobo",
+      "examples/variants.lobo",
+      "examples/web-server/app.lobo",
+      "libraries/http-server/server.lobo",
+      "libraries/http-server/transport.lobo",
+      "libraries/http/http.lobo",
+      "libraries/json/json.lobo"
+    ],
+    "declaration_id_maps_equal": true,
+    "import_alias_changes": [
+      {
+        "path": "examples/mvc.compact.lobo.ids.json",
+        "removed": {
+          "json.field": "lobo.json.field",
+          "json.object": "lobo.json.object"
+        },
+        "added": {}
+      }
+    ]
+  },
+  "preservation": {
+    "status": "pass",
+    "preserved_input_files": 93,
+    "prior_paper_entries": 27,
+    "prior_paper_files": 64,
+    "frozen_v1_release_artifacts": 86,
+    "native_and_compiler_sources_unchanged": true,
+    "lock_changes": "root package version only",
+    "frozen_manifest_sha256": "f89af5f98e4d79e62cb3d5cfd37801b7539671d0826cca25ba63ed9fa039cf7a"
+  },
+  "test_counts": {
+    "rust": 274,
+    "editor": 166,
+    "source_tools": 12,
+    "modernizer": 8,
+    "legacy_migration_tools": 4,
+    "rest_protocol_each_linux_version": 30,
+    "rest_tcp_each_linux_version": 35,
+    "rest_tcp_windows_explicit": 35,
+    "rest_tcp_windows_default_launch": 35,
+    "windows_loopback": 16
+  },
+  "linux_rest_before_after_observable_records_equal": true,
+  "actual_windows_execution": null,
+  "windows_validation": "Wine 9.0; current REST explicit/default launches and loopback executable",
+  "native_models": "Provider and model sources unchanged; source correspondence/C regression gates run in Cargo. No new model or Windows formal claim.",
+  "failures_retained": [
+    "Four initial codemod stub tests failed before implementation.",
+    "Arm/group, layout, builtin adjacency and match lexical-boundary regressions failed before tool fixes.",
+    "The first full Rust run stopped in the historical projection test on contextual Found.",
+    "Managed identities rejected stale json.field metadata; native syntax comparison exposed generated import aliases/duplicates.",
+    "The first VS Code host run failed on a removed explicit generic spelling.",
+    "The next Rust run exposed a negative AST fixture that no longer removed the Product arm after brace simplification.",
+    "The first link check found the not-yet-written report/receipt; final check is recorded separately."
+  ],
+  "limits": [
+    "No compiler language feature or dependency change.",
+    "Explicit generic/constructor syntax remains where current inference is underconstrained.",
+    "Error conversion, retries and explicit cleanup remain explicit.",
+    "Manual try migrations do not promise identical expression-fuel accounting.",
+    "No agent construction/comprehension/token-efficiency or runtime-performance effect measured."
+  ],
+  "artifacts": [
+    {
+      "path": "target/release/lobo",
+      "bytes": 1623736,
+      "sha256": "59864cc5f1c1026739dd98f3f4dd54664a3a03dbbafd1b182f6c1c8da92f0a5f"
+    },
+    {
+      "path": "dist/lobo-syntax-1.8.1.vsix",
+      "bytes": 39985,
+      "sha256": "307bb3a9eade2718b18c877915a6e0f0d21147a5913b37a1c312dcd0e1bf7146"
+    },
+    {
+      "path": "dist/lobo-rest-1.8.1-windows/LoboRestApi.exe",
+      "bytes": 150016,
+      "sha256": "7740c0502e2e96312187a65505591cfd62d82b23b350f8b3600cdfa7e7fd8057"
+    },
+    {
+      "path": "dist/lobo-rest-1.8.1-windows/LoboRestApi-windows-x64.zip",
+      "bytes": 102317,
+      "sha256": "6cf251c63ad3ca216969172a08b25bfb1d74a241784ae5841c93fa3dcb737250"
+    }
+  ],
+  "raw_evidence": "benchmarks/private-evidence/modernize-source-20261122",
+  "verification_commands": {
+    "rust": "cargo test --locked --no-fail-fast",
+    "clippy": "cargo clippy --locked --all-targets -- -D warnings",
+    "format": "cargo fmt --all --check",
+    "source_tools": "node --test scripts/test-modernize-source.mjs scripts/test-migrate-syntax.mjs",
+    "audit": "node scripts/modernize-source.cjs --audit --out target/modernize-source/converged",
+    "checkpoint": "node scripts/migrate-syntax.cjs --verify --compiler target/release/lobo",
+    "editor_package": "npm --prefix editors/vscode run package",
+    "editor_host": "env LOBO_VSCODE_EXECUTABLE=/usr/share/code/code xvfb-run -a npm --prefix editors/vscode run test:host",
+    "native_apps": "xvfb-run -a python3 target/modernize-source/verify-apps.py",
+    "documentation": "./scripts/check.sh",
+    "skill": "python3 /home/luis/.codex/skills/.system/skill-creator/scripts/quick_validate.py .agents/skills/lobo-programming"
+  },
+  "raw_evidence_manifest": {
+    "path": "benchmarks/private-evidence/modernize-source-20261122/manifest.json",
+    "sha256": "27fcb5ad1d051ac9dc8c5e07a337358de94c6d910b6ed4523c1f529c82d688ee",
+    "files": 114
+  },
+  "memory_record": "MemPalace source_modernization topic filed; init/mine logs retained"
+}

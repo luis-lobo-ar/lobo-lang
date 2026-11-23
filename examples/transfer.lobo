@@ -49,7 +49,7 @@ component TransferFunds @id("finance.transfer_funds.v1") {
     result.value.amount == amount
   }
 
-  effects {
+  actions {
     read ledger.accounts(from, to)
     write ledger.accounts(from, to)
     emit TransferCompleted

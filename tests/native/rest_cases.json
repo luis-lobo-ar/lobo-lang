@@ -1,0 +1,206 @@
+[
+  {
+    "name": "get /health",
+    "request": "GET /health HTTP/1.1\r\nHost: localhost\r\n\r\n",
+    "status": 200,
+    "body": {
+      "status": "ok",
+      "language": "lobo"
+    }
+  },
+  {
+    "name": "get /api/users",
+    "request": "GET /api/users HTTP/1.1\r\nHost: localhost\r\n\r\n",
+    "status": 200,
+    "body": [
+      {
+        "id": "1",
+        "name": "Luis"
+      },
+      {
+        "id": "2",
+        "name": "Ada"
+      }
+    ]
+  },
+  {
+    "name": "get /api/users/1",
+    "request": "GET /api/users/1 HTTP/1.1\r\nHost: localhost\r\n\r\n",
+    "status": 200,
+    "body": {
+      "id": "1",
+      "name": "Luis"
+    }
+  },
+  {
+    "name": "get /api/users/2",
+    "request": "GET /api/users/2 HTTP/1.1\r\nHost: localhost\r\n\r\n",
+    "status": 200,
+    "body": {
+      "id": "2",
+      "name": "Ada"
+    }
+  },
+  {
+    "name": "head",
+    "request": "HEAD /health HTTP/1.1\r\nHost: localhost\r\n\r\n",
+    "status": 200,
+    "body": null
+  },
+  {
+    "name": "missing",
+    "request": "GET /api/users/999 HTTP/1.1\r\nHost: localhost\r\n\r\n",
+    "status": 404,
+    "body": null
+  },
+  {
+    "name": "method",
+    "request": "POST /api/users HTTP/1.1\r\nHost: localhost\r\nContent-Length: 0\r\n\r\n",
+    "status": 405,
+    "body": null
+  },
+  {
+    "name": "case insensitive headers",
+    "request": "GET /health HTTP/1.1\r\nhOsT:\tlocalhost \r\ncOnTeNt-LeNgTh: 0\r\n\r\n",
+    "status": 200,
+    "body": {
+      "status": "ok",
+      "language": "lobo"
+    }
+  },
+  {
+    "name": "no host",
+    "request": "GET /health HTTP/1.1\r\n\r\n",
+    "status": 400,
+    "body": null
+  },
+  {
+    "name": "duplicate host",
+    "request": "GET /health HTTP/1.1\r\nHost: a\r\nHost: b\r\n\r\n",
+    "status": 400,
+    "body": null
+  },
+  {
+    "name": "empty host",
+    "request": "GET /health HTTP/1.1\r\nHost: \r\n\r\n",
+    "status": 400,
+    "body": null
+  },
+  {
+    "name": "obs fold",
+    "request": "GET /health HTTP/1.1\r\nHost: a\r\n folded: b\r\n\r\n",
+    "status": 400,
+    "body": null
+  },
+  {
+    "name": "bad header name",
+    "request": "GET /health HTTP/1.1\r\nHost: a\r\nBad Name: x\r\n\r\n",
+    "status": 400,
+    "body": null
+  },
+  {
+    "name": "duplicate length",
+    "request": "GET /health HTTP/1.1\r\nHost: a\r\nContent-Length: 0\r\nContent-Length: 0\r\n\r\n",
+    "status": 400,
+    "body": null
+  },
+  {
+    "name": "transfer encoding",
+    "request": "GET /health HTTP/1.1\r\nHost: a\r\nTransfer-Encoding: chunked\r\n\r\n",
+    "status": 400,
+    "body": null
+  },
+  {
+    "name": "te plus length",
+    "request": "GET /health HTTP/1.1\r\nHost: a\r\nContent-Length: 0\r\nTransfer-Encoding: chunked\r\n\r\n",
+    "status": 400,
+    "body": null
+  },
+  {
+    "name": "bad length",
+    "request": "GET /health HTTP/1.1\r\nHost: a\r\nContent-Length: x\r\n\r\n",
+    "status": 400,
+    "body": null
+  },
+  {
+    "name": "negative length",
+    "request": "GET /health HTTP/1.1\r\nHost: a\r\nContent-Length: -1\r\n\r\n",
+    "status": 400,
+    "body": null
+  },
+  {
+    "name": "comma length",
+    "request": "GET /health HTTP/1.1\r\nHost: a\r\nContent-Length: 0, 0\r\n\r\n",
+    "status": 400,
+    "body": null
+  },
+  {
+    "name": "bare LF",
+    "request": "GET /health HTTP/1.1\nHost: a\n\n",
+    "status": 400,
+    "body": null
+  },
+  {
+    "name": "extra space",
+    "request": "GET  /health HTTP/1.1\r\nHost: a\r\n\r\n",
+    "status": 400,
+    "body": null
+  },
+  {
+    "name": "absolute target",
+    "request": "GET http://a/health HTTP/1.1\r\nHost: a\r\n\r\n",
+    "status": 400,
+    "body": null
+  },
+  {
+    "name": "fragment",
+    "request": "GET /health#x HTTP/1.1\r\nHost: a\r\n\r\n",
+    "status": 400,
+    "body": null
+  },
+  {
+    "name": "invalid version",
+    "request": "GET /health HTTP/1.0\r\nHost: a\r\n\r\n",
+    "status": 400,
+    "body": null
+  },
+  {
+    "name": "control",
+    "request": "GET /health HTTP/1.1\r\nHost: a\r\nX: \u0000\r\n\r\n",
+    "status": 400,
+    "body": null
+  },
+  {
+    "name": "bad method",
+    "request": "G(ET /health HTTP/1.1\r\nHost: a\r\n\r\n",
+    "status": 400,
+    "body": null
+  },
+  {
+    "name": "body unsupported",
+    "request": "POST /api/users HTTP/1.1\r\nHost: a\r\nContent-Length: 1\r\n\r\nx",
+    "status": 413,
+    "body": null
+  },
+  {
+    "name": "expect unsupported",
+    "request": "GET /health HTTP/1.1\r\nHost: a\r\nExpect: 100-continue\r\n\r\n",
+    "status": 417,
+    "body": null
+  },
+  {
+    "name": "header limit",
+    "request": "GET /health HTTP/1.1\r\nHost: a\r\nX: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx\r\n\r\n",
+    "status": 431,
+    "body": null
+  },
+  {
+    "name": "pipelined closes after first",
+    "request": "GET /health HTTP/1.1\r\nHost: a\r\n\r\nGET /api/users/1 HTTP/1.1\r\nHost: a\r\n\r\n",
+    "status": 200,
+    "body": {
+      "status": "ok",
+      "language": "lobo"
+    }
+  }
+]

@@ -1,9 +1,25 @@
 # Native backend v0.1
 
 Status: implemented on Linux x86_64 using Clang 18. Other targets are not yet advertised as supported.
-Language: `core/0.1-draft`. Compiler release: `0.1.1`.
+Historical scalar-adapter specification. Current [compound-value invocation](core-v0.7.md#interchange-and-cli)
+extends it as native adapter 0.6, language `core/0.11-draft`, compiler 0.11.1. State-driven iteration follows
+[Core v0.8](core-v0.8.md); [Core v0.9](core-v0.9.md) links explicit modules before native lowering.
+The generated executable CLI is unchanged; compiler commands accept explicit extra source files. Numeric/boolean behavior below is
+inherited, with list/buffer allocation, input/output limits, and contract resource-phase rules in later Core versions.
+List-guarded nominal recursion and structural traversal limits follow [Core v0.10](core-v0.10.md).
+Generic functions specialize to concrete checked functions before emission; [Core v0.11](core-v0.11.md)
+changes no native wire shape, allocation model or runtime adapter operation.
+
+The current compiler's temporary `run` adapter retries only unsuccessful host launches reported as
+`ExecutableFileBusy`, at most 20 times with 5 ms between retries. It never retries a program result or
+another host error. Persistent busy files still produce `invocation.native.execution_failed`. This bounds
+retry count, not wall-clock scheduling, and does not affect invocation of generated executables directly.
 
 ## Compilation
+
+The C route below remains default. Compiler 0.11.1 additionally supports explicit
+[`--backend llvm` and `--emit llvm`](native-llvm-v0.1.md), with direct application LLVM lowering and
+the shared native runtime. Both produce native machine code and use the same executable interface.
 
 ```text
 Lobo source → resolution and type checking → checked Core → C lowering → Clang/LLVM → native executable
@@ -46,6 +62,9 @@ phase, and the affected function ID where available. Diagnostic prose is not a c
 
 ## Semantics-preserving lowering
 
+Action declarations are statically checked metadata and add no executable resource operations or grants.
+Their scalar bodies lower directly as before; the runtime still has no capability/resource API.
+
 - Locals and function parameters are typed C values, with generated identifiers independent of source names.
 - Calls resolve through stable function identity at compile time.
 - Operand and argument evaluation is emitted as an ordered sequence of temporaries.
@@ -54,6 +73,9 @@ phase, and the affected function ID where available. Diagnostic prose is not a c
 - Division and remainder explicitly check zero and minimum-I64/-1 before the operation.
 - Preconditions run before the body and postconditions run after successful body evaluation.
 - Failures terminate the invocation immediately with the specified category and code.
+- Counted folds lower to sequential typed C loops, with checked count initialization and per-iteration fuel.
+  Iteration does not add recursive call frames; accumulator/body locals have fixed storage independent of count.
+- The outermost contract phase is preserved across nested calls when reporting runtime faults.
 
 The optimizer may remove checks it proves redundant, but it must preserve all specified observable failures.
 Passing tests alone never authorizes removing checks. All potentially overflowing arithmetic in contracts is
@@ -63,11 +85,12 @@ checked too. The program uses signed 64-bit integers and cannot inherit C signed
 
 The native host defaults to 100,000 fuel; `--fuel N` sets a different budget. Each entered function and evaluated
 expression consumes one fuel unit, including contract expressions. Short-circuited expressions consume no fuel.
+Each entered fold iteration additionally consumes one fuel unit before evaluating the body.
 The host caps calls at depth 32, including calls from contracts. Limits produce structured `resource_exhausted`
 outcomes. Exact resource accounting across backends is outside the Core language conformance guarantee.
 
 This runtime is sequential and uses process-local state for fuel, depth, and diagnostic context. It does not
-provide an OS sandbox, effectful host APIs, or a library ABI for concurrent callers.
+provide an OS sandbox, resource-access host APIs, or a library ABI for concurrent callers.
 
 ## Verification
 

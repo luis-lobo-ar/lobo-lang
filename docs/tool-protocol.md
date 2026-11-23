@@ -4,7 +4,15 @@ The Lobo Tool Protocol (LTP) is the agent-facing interface to `lobod`. It is tra
 implementation should support newline-delimited JSON over standard input/output, with local sockets added only
 when needed.
 
-The protocol version is independent from the language and graph-format versions.
+The protocol version is independent from the language and graph-format versions. The current proposal is
+LTP 0.2, not an implemented daemon interface. It replaces LTP 0.1's descriptor field `effects` and verification
+check name `effects` with `actions`. Regenerate old descriptors and update clients explicitly; do not silently
+accept the old field as an alias. See [decision 0012](../decisions/0012-actions-terminology.md).
+
+The separate [agent-testing v0.1 foreground CLI](../spec/agent-testing-v0.1.md) is an executable prototype
+for fixed checks, candidate verification and exact-source replay. Its session/snapshot handles are not LTP
+workspace revisions, authority grants, durable evidence or an implemented `lobod` service. The formats and
+trust boundaries must not be silently conflated.
 
 ## Design rules
 
@@ -12,7 +20,7 @@ The protocol version is independent from the language and graph-format versions.
 - Every request has an ID and an actor/session identity.
 - State-dependent requests name a revision or transaction.
 - Mutating requests include an idempotency key.
-- Tools disclose effects, required capabilities, cost limits, and retry behavior.
+- Tools disclose actions, required capabilities, cost limits, and retry behavior.
 - Responses are bounded; large artifacts are returned by content-addressed reference.
 - Diagnostics are structured, with prose as an optional presentation field.
 - Operations are cancellable when cancellation can be safe.
@@ -31,14 +39,14 @@ capabilities.current
 policies.applicable
 ```
 
-`tool.describe` returns the request and response schemas, safety tier, effects, required capability patterns,
+`tool.describe` returns the request and response schemas, safety tier, actions, required capability patterns,
 timeouts, idempotency semantics, cancellation support, and examples.
 
 ## Request envelope
 
 ```json
 {
-  "ltp": "0.1",
+  "ltp": "0.2",
   "request_id": "req-01JABC",
   "session_id": "session-01JAAA",
   "tool": "verification.run",
@@ -53,7 +61,7 @@ timeouts, idempotency semantics, cancellation support, and examples.
   },
   "arguments": {
     "scope": { "kind": "affected_closure" },
-    "checks": ["types", "effects", "contracts", "tests"]
+    "checks": ["types", "actions", "contracts", "tests"]
   }
 }
 ```
@@ -64,7 +72,7 @@ Read-only requests omit `idempotency_key`. A request must not identify state thr
 
 ```json
 {
-  "ltp": "0.1",
+  "ltp": "0.2",
   "request_id": "req-01JABC",
   "status": "rejected",
   "result": null,
@@ -110,7 +118,7 @@ Each tool publishes metadata similar to:
   "version": "0.1.0",
   "safety_tier": "shared_mutation",
   "summary": "Atomically create a revision from a verified transaction.",
-  "effects": ["workspace.revision.create", "branch.head.compare_and_set"],
+  "actions": ["workspace.revision.create", "branch.head.compare_and_set"],
   "required_capabilities": ["workspace.commit:{workspace}:{branch}"],
   "idempotency": "same key and transaction returns the original outcome",
   "cancellable": false,
@@ -121,6 +129,11 @@ Each tool publishes metadata similar to:
 ```
 
 ## Initial tool families
+
+Actions describe possible behavior, including resource reads. `required_capabilities` names the authority
+needed to perform it; `default_timeout_ms` and request budgets describe execution limits. None of these fields
+grants authority. A workspace mutation operation is a requested change; its declared actions describe what
+performing that operation may do. The terms are not interchangeable.
 
 | Family | Representative operations |
 | --- | --- |

@@ -1,0 +1,21 @@
+{
+  "date": "2026-11-04",
+  "scope": "Preserve Core 0.11.0 dirty-workspace compiler/source before user-authorized direct LLVM backend. No clean release claim.",
+  "files": [
+    {
+      "path": "benchmarks/private-evidence/core011-before-llvm-20261104/lobo",
+      "bytes": 1128584,
+      "sha256": "0dcc91f47f97357467e821daf02ea4581b959b2fe026603a4ed03d910deae7bb"
+    },
+    {
+      "path": "benchmarks/private-evidence/core011-before-llvm-20261104/lobo-test",
+      "bytes": 1040248,
+      "sha256": "3bfba3c2ba9f7a3bdf45964abc7babe46d5abb95631db0f12b2942aeb2e6ec32"
+    },
+    {
+      "path": "benchmarks/private-evidence/core011-before-llvm-20261104/source-core011.tar.gz",
+      "bytes": 344529,
+      "sha256": "1c75a9e2b0bedf05cc71990dc57072c29367ff6ca6aeb1c7028c6b65c12728e5"
+    }
+  ]
+}

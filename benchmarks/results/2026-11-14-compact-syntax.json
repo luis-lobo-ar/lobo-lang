@@ -1,0 +1,274 @@
+{
+  "format": "lobo-compact-prototype-result/0.1",
+  "date": "2026-11-14",
+  "timezone": "America/Chicago",
+  "status": "engineering-acceptance-passed",
+  "language": "core/1.1",
+  "compiler": "1.1.0",
+  "projection": "lobo-compact/0.1",
+  "extension": "1.1.1",
+  "decision": "decisions/0041-compact-mvc-authoring-prototype.md",
+  "canonical_fixture": "examples/mvc.lobo",
+  "compact_fixture": "examples/mvc.compact.lobo",
+  "checked_artifact_equality": "exact serialized equality asserted in tests/compact_syntax.rs",
+  "verification": [
+    {
+      "command": "cargo test --locked",
+      "exit_code": 0,
+      "passed": 201,
+      "log": "target/compact-syntax-rust-full.log",
+      "log_sha256": "eb5f24df3c09d6bd6ab200707d6ff3de4af2ee9018d1ef36d8922cbb7b16bdf4",
+      "preserved_log": "benchmarks/private-evidence/compact-syntax-20261114/logs/compact-syntax-rust-full.log"
+    },
+    {
+      "command": "npm --prefix editors/vscode test",
+      "exit_code": 0,
+      "passed": 138,
+      "log": "target/compact-syntax-editor-full-final.log",
+      "log_sha256": "8a5fd8e0f444e410e125ad8fdfb3966f83f3952cce38ae8e99891491dec37b14",
+      "preserved_log": "benchmarks/private-evidence/compact-syntax-20261114/logs/compact-syntax-editor-full-final.log"
+    },
+    {
+      "command": "python3 -m unittest discover -s benchmarks -p 'test_*.py'",
+      "exit_code": 0,
+      "passed": 31,
+      "log": "target/compact-syntax-python.log",
+      "log_sha256": "5da242c4730e34c379ff3d2fdeff93e62851b22b5f807f78f906bbad13a4221c",
+      "preserved_log": "benchmarks/private-evidence/compact-syntax-20261114/logs/compact-syntax-python.log"
+    },
+    {
+      "command": "cargo clippy --locked --all-targets -- -D warnings",
+      "exit_code": 0,
+      "log": "target/compact-syntax-clippy.log",
+      "log_sha256": "d20b2ea9aa8ac51ced6b1a3959f53c1613dbe9c029127a666ae06bbf3c6ad4eb",
+      "preserved_log": "benchmarks/private-evidence/compact-syntax-20261114/logs/compact-syntax-clippy.log"
+    },
+    {
+      "command": "cargo fmt --check",
+      "exit_code": 0,
+      "log": "target/compact-syntax-format-final.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "preserved_log": "benchmarks/private-evidence/compact-syntax-20261114/logs/compact-syntax-format-final.log"
+    },
+    {
+      "command": "LOBO_VSCODE_EXECUTABLE=/usr/share/code/code xvfb-run -a npm --prefix editors/vscode run test:host",
+      "exit_code": 0,
+      "log": "target/compact-syntax-host-final.log",
+      "log_sha256": "a27acb2e548f7229e5ceaa7c8ad82fde48296f6713b265ac09330abb3689a233",
+      "preserved_log": "benchmarks/private-evidence/compact-syntax-20261114/logs/compact-syntax-host-final.log"
+    },
+    {
+      "command": "npm --prefix editors/vscode run package",
+      "exit_code": 0,
+      "log": "target/compact-syntax-package-complete.log",
+      "log_sha256": "0882e6a50eb4080d2cf0d9418f260fd3c9edea4ab19d99ef051d96b8b6ec8671",
+      "preserved_log": "benchmarks/private-evidence/compact-syntax-20261114/logs/compact-syntax-package-complete.log"
+    },
+    {
+      "command": "python3 /home/luis/.codex/skills/.system/skill-creator/scripts/quick_validate.py .agents/skills/lobo-programming",
+      "exit_code": 0,
+      "log": "target/compact-syntax-skill-validation.log",
+      "log_sha256": "db349825903d66adffea3ecf1bd8e1803043e8a71cf1a051235dabc5371f5bb0",
+      "preserved_log": "benchmarks/private-evidence/compact-syntax-20261114/logs/compact-syntax-skill-validation.log"
+    },
+    {
+      "command": "./scripts/check.sh",
+      "exit_code": 0,
+      "log": "target/compact-syntax-documents.log",
+      "log_sha256": "1f11bb3bb382f1877ffa8eec4eb376db85d0ecfa2e1301289bb91fbd2cc966ae",
+      "preserved_log": "benchmarks/private-evidence/compact-syntax-20261114/logs/compact-syntax-documents.log"
+    },
+    {
+      "command": "./scripts/check.sh",
+      "exit_code": 0,
+      "log": "target/compact-syntax-documents-final.log",
+      "log_sha256": "1f11bb3bb382f1877ffa8eec4eb376db85d0ecfa2e1301289bb91fbd2cc966ae",
+      "preserved_log": "benchmarks/private-evidence/compact-syntax-20261114/logs/compact-syntax-documents-final.log"
+    },
+    {
+      "command": "git diff --check",
+      "exit_code": 0,
+      "log": "target/compact-syntax-diff-check.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "preserved_log": "benchmarks/private-evidence/compact-syntax-20261114/logs/compact-syntax-diff-check.log"
+    }
+  ],
+  "native_routes": [
+    "reference evaluator",
+    "C/Clang",
+    "direct LLVM",
+    "C ASan/UBSan",
+    "LLVM ASan/UBSan"
+  ],
+  "invocation_limits": {
+    "fuel": 10000,
+    "heap_cells": 10000
+  },
+  "cli_evidence": "target/compact-syntax-cli-evidence.json",
+  "configured_sources": 11,
+  "failures": [
+    {
+      "log": "target/compact-syntax-red.log",
+      "exit_code": 1,
+      "outcome": "new test could not load absent projector module; harness setup failure",
+      "log_sha256": "5d3ad31e13265819197312e47d71b2b759fb06f80b3514def27bd03d7230f5aa",
+      "preserved_log": "benchmarks/private-evidence/compact-syntax-20261114/logs/compact-syntax-red.log"
+    },
+    {
+      "log": "target/compact-syntax-red-behavior.log",
+      "exit_code": 1,
+      "outcome": "pass-through scaffold fails compact function lowering assertion",
+      "log_sha256": "7de6a6c2a114a14799a706abab219fbf2ec001470d814967f53b6047e9f51703",
+      "preserved_log": "benchmarks/private-evidence/compact-syntax-20261114/logs/compact-syntax-red-behavior.log"
+    },
+    {
+      "log": "target/compact-syntax-grammar-red.log",
+      "exit_code": 1,
+      "outcome": "compact declaration lacks grammar scope before implementation",
+      "log_sha256": "f35af9f8be3982ac20d529bfb643962eeab5bf74a37dc9f64cc428e11fa9677b",
+      "preserved_log": "benchmarks/private-evidence/compact-syntax-20261114/logs/compact-syntax-grammar-red.log"
+    },
+    {
+      "log": "target/compact-syntax-first-green-attempt.log",
+      "exit_code": 1,
+      "outcome": "3/4 cases pass; CRLF oracle incorrectly expected zero-based line 9 instead of 8",
+      "log_sha256": "39001b688c9423ac2b13aa8e30d6e046a6dcdaa3d423e9cdf6d93dded2ce5de9",
+      "preserved_log": "benchmarks/private-evidence/compact-syntax-20261114/logs/compact-syntax-first-green-attempt.log"
+    },
+    {
+      "log": "target/compact-syntax-native-first.log",
+      "exit_code": 101,
+      "outcome": "checked equality passes; native response assertion uses wrong record-envelope field path",
+      "reproducer": "/tmp/lobo-fixture-1114090-1794707716627660010",
+      "log_sha256": "153778bc40062fbb21c9e2667fc9492bc6615aba503a297f9a229cc6d0eb7071",
+      "preserved_log": "benchmarks/private-evidence/compact-syntax-20261114/logs/compact-syntax-native-first.log",
+      "preserved_reproducer": "benchmarks/private-evidence/compact-syntax-20261114/native-harness-failure"
+    },
+    {
+      "log": "target/compact-syntax-grammar-green.log",
+      "exit_code": 1,
+      "outcome": "test incorrectly expects import occurrences to have call scope; split assertions by context",
+      "log_sha256": "06c1acaa876a29db48e4ef4b6eac8a1ba4f0c01e72d63b767c9b3fffb1b7133a",
+      "preserved_log": "benchmarks/private-evidence/compact-syntax-20261114/logs/compact-syntax-grammar-green.log"
+    },
+    {
+      "log": "target/compact-syntax-package.log",
+      "exit_code": 1,
+      "outcome": "138 tests pass, packaging rejects out-of-package README links without a repository URL",
+      "log_sha256": "a100cb19cef96d5558861b4dda5aa758b88223c7d98ce6daaad146947729c836",
+      "preserved_log": "benchmarks/private-evidence/compact-syntax-20261114/logs/compact-syntax-package.log"
+    }
+  ],
+  "agent_outcomes": {
+    "construction": null,
+    "comprehension": null,
+    "total_tokens": null,
+    "repair_efficiency": null
+  },
+  "performance_comparison": null,
+  "limits": [
+    "Stock Rust CLI requires projected source",
+    "JSON shorthand accepts Text fields",
+    "Concrete declarations only",
+    "Identity assignment and rename refactoring are manual",
+    "No formatter",
+    "Public development fixture only"
+  ],
+  "preservation": "benchmarks/private-evidence/compact-syntax-20261114",
+  "input_verification": {
+    "status": "passed",
+    "compiler_inputs_unchanged": {
+      "Cargo.lock": "438c7c18c47fcdd91ad609674aaa8a35c7083a40550ea6a12528c14bf4963141",
+      "Cargo.toml": "f8395bfce847f4b9ab2682bae82309c656a02243e603380d17e3839ccf578d7e",
+      "src/agent_testing/mod.rs": "042827b695ce2d72f70d1c7ebf191a09a49ddd7b60e995723446e0a00886942b",
+      "src/agent_testing/process.rs": "b008879f8838f0a19ab8358588d1f26956a33c3a996c7f18565d11989fd0562f",
+      "src/bin/lobo-test.rs": "b515be623037786da54bc49b3e7880b535d1d46a672379b007617d7d2c099904",
+      "src/buffers.rs": "0ddb57c285f24319f1726ef8721baec05c01fca28f4e9b261f4b30d72cc9e149",
+      "src/floats.rs": "995acfb181f0c3e56bb9062208a2551e516cfd4d0cc9544b8f9a2396e80f0481",
+      "src/generics.rs": "83d0fa9105d86b6d152063460d9e7041223f4d7d0be543cada7f62abe8d61f6a",
+      "src/lib.rs": "3f8315e75e86d0c13ed0a3ffd67e42ec19bef036822b7f7811781e2a814ec9d8",
+      "src/lists.rs": "e070811e4d6420fe414efdafaebb86bc56f3c66d0926c0e6f67e937d9509ec7c",
+      "src/main.rs": "a27361d1938e9a43e9f991ab6680cd292a9ed6ea286478f3f1db7c091c96795d",
+      "src/modules.rs": "0232bb9b876c4e10695b050a8043d339bafa13a60482ebf3788f308fa7310f9c",
+      "src/native.rs": "04e7f470bbfc288cd7316c7168b1e8fb2ca0def89afedc461f23e57c9b25e3ff",
+      "src/native_buffers.c": "9308ae7edb1da47d0323a38ffa84e4357d6f391084bea17757e13c45ad90942c",
+      "src/native_floats.c": "220319911c79b000771df91778e78f1e8b5d6d73bd3b78ebdf24df1ca2a3858c",
+      "src/native_lists.rs": "a09186f2cc70018d3be71bdf0c640ea307a580be3f6fadd988c4ec69040b40f7",
+      "src/native_llvm.rs": "b9cd7c19ab1156b55dddafb0104b89b7dc5ed9d72ffe70a3683984de616f13b4",
+      "src/native_llvm_runtime.c": "4708bd969fc5e58cba4d913dd9e0bde8bf62ae7da74af7f562f662874a0e0ec3",
+      "src/native_runtime.c": "1cbf798375e88d69dfb1558f7ddc9ff1719378368d70d0338e8350f41329952d",
+      "src/operators.rs": "172142aeed79610dd81d18bce6e00f0bff4938f48db97f0878688819b8ea4eee",
+      "src/records.rs": "7c820e8f1c41d573582828cb8e099aa71d8bb96080fe4a0da5cdb4f8cf8d233c"
+    },
+    "frozen_release_artifacts_verified": 86,
+    "frozen_manifest_sha256": "f89af5f98e4d79e62cb3d5cfd37801b7539671d0826cca25ba63ed9fa039cf7a",
+    "vsix_shared_projector_and_documents_match": true,
+    "vsix": {
+      "path": "dist/lobo-syntax-1.1.1.vsix",
+      "bytes": 34642,
+      "sha256": "85f21b392e8659dcf9ea7595a86d5d3c735c06d787e6a482a6de5881fd9b036e"
+    }
+  },
+  "source_inputs": {
+    "path": "benchmarks/private-evidence/compact-syntax-20261114/inputs.json",
+    "count": 252,
+    "sha256": "17789850cc056eef9a43f3f205a66be8a12a347b589b187ad7cc91059523d065"
+  },
+  "source_archive": {
+    "path": "benchmarks/private-evidence/compact-syntax-20261114/source.tar.gz",
+    "bytes": 507519,
+    "sha256": "33df367af6e644480204fd1184d3f9f5078a9556efeedec04d2d86b72f5a2609"
+  },
+  "artifacts": [
+    {
+      "path": "dist/lobo-syntax-1.1.1.vsix",
+      "bytes": 34642,
+      "sha256": "85f21b392e8659dcf9ea7595a86d5d3c735c06d787e6a482a6de5881fd9b036e"
+    },
+    {
+      "path": "target/mvc-compact-20261114/controller-c",
+      "bytes": 72136,
+      "sha256": "d6f4be3527b2209811d2a67250795fa5f5c7103e7625fbfca3564cf65a87fc4f"
+    },
+    {
+      "path": "target/mvc-compact-20261114/controller-llvm",
+      "bytes": 68040,
+      "sha256": "61c002586db7df01efbc9a01783e81eb6bc6d5365c96057ff1864b131c035796"
+    }
+  ],
+  "tools": "benchmarks/private-evidence/compact-syntax-20261114/logs/compact-syntax-tools.json",
+  "intermediate_successes": [
+    {
+      "command": "npm --prefix editors/vscode test",
+      "passed": 136,
+      "log": "target/compact-syntax-editor-full-first.log",
+      "scope": "initial suite before the last two compact boundary/CLI cases",
+      "log_sha256": "734fba05c5caef3a11ac6d22d14cff75a4bd1f973325a68fd6e575c4e3b92f48",
+      "preserved_log": "benchmarks/private-evidence/compact-syntax-20261114/logs/compact-syntax-editor-full-first.log"
+    },
+    {
+      "command": "node --test editors/vscode/test/compact.test.mjs",
+      "passed": 6,
+      "log": "target/compact-syntax-focused-final.log",
+      "log_sha256": "3b8c4255c2ade5815ccb740480493debf504a49323de9d33a0a41e871c87c661",
+      "preserved_log": "benchmarks/private-evidence/compact-syntax-20261114/logs/compact-syntax-focused-final.log"
+    },
+    {
+      "command": "cargo test --locked --test compact_syntax",
+      "passed": 1,
+      "log": "target/compact-syntax-native-green.log",
+      "log_sha256": "bcebf4ff46a3b99cff203c47c8046c981774e9505b72e04508fec5d4e5bbd408",
+      "preserved_log": "benchmarks/private-evidence/compact-syntax-20261114/logs/compact-syntax-native-green.log"
+    }
+  ],
+  "final_verification": {
+    "rust_passed": 201,
+    "editor_passed": 138,
+    "python_passed": 31,
+    "real_vscode_host": "passed",
+    "cli_observations": 10,
+    "documentation_links": "passed",
+    "skill_validation": "passed",
+    "diff_whitespace": "passed"
+  }
+}

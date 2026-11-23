@@ -1,0 +1,3 @@
+export const title = 'Native authority and resource lifecycle';
+export const state = v => v.phase === 'done' ? 'Invocation cleaned up' : v.phase === 'cleanup' ? 'Cleanup running' : v.root === 0 ? 'No root capability' : Object.values(v.kind).includes('listener') ? 'Listener open' : Object.values(v.kind).includes('stream') ? 'Stream open' : Object.values(v.kind).includes('retired') ? 'Slot retired' : 'Capabilities held';
+export const step = action => ({Root:'Acquire root',Derive:'Delegate fewer permissions',Allocate:'Open resource',Use:'Check handle',Release:'Close resource',Exit:'Exit or fault',Finished:'Finish cleanup',Done:'Finish'}[action] ?? action);

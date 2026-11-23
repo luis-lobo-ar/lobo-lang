@@ -1,0 +1,21 @@
+{
+  "date": "2026-11-04",
+  "scope": "Preserve Core 0.11/compiler 0.11.1 before user-authorized language 1.0 implementation. Dirty workspace, not a clean release.",
+  "files": [
+    {
+      "path": "benchmarks/private-evidence/language-v1-baseline-20261104/lobo",
+      "bytes": 1198408,
+      "sha256": "fe74abee06002f49bc4918b2ef3bee8a32ddefb5271f13025488d1d4f4f7d264"
+    },
+    {
+      "path": "benchmarks/private-evidence/language-v1-baseline-20261104/lobo-test",
+      "bytes": 1040488,
+      "sha256": "ffacf218c37c76faee3bcaba4d88a9fc22f3c621feaeb6a765e9c33d4d82ad84"
+    },
+    {
+      "path": "benchmarks/private-evidence/language-v1-baseline-20261104/source-before-v1.tar.gz",
+      "bytes": 367529,
+      "sha256": "4e6beb7bac0381f3bb5931b750d665da8469fa2eaff26b8520776e29a7ea4fd4"
+    }
+  ]
+}

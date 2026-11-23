@@ -1,0 +1,66 @@
+module http_transport;
+use http { Request, Response, header_end, respond, wire, error_response };
+record ReceiveState { data:Bytes, status:I64, error:I64, done:Bool }
+record SendState { offset:I64, error:I64 }
+record ServeState { handled:I64, polls:I64, error:I64 }
+
+fn receive(stream:Native::Stream,cap:Native::Capability,deadline:I64)->ReceiveState actions {clock.read,net.read} {
+  while(state:ReceiveState=ReceiveState {data:Bytes::empty(),status:0,error:0,done:false};!state.done) {
+    match Native::monotonic_ms(cap) {
+      Err(code)=> ReceiveState {data:state.data,status:0,error:code,done:true},
+      Ok(now)=> if now>=deadline {ReceiveState {data:state.data,status:408,error:0,done:true}} else {
+        let remaining=4096-Bytes::length(state.data);
+        let count=if remaining<512 {remaining} else {512};
+        match Native::read(stream,count,deadline-now) {
+          Err(code)=> ReceiveState {data:state.data,status:if code==6 {408} else {0},error:if code==6 {0} else {code},done:true},
+          Ok(chunk)=> {
+            let data=Bytes::concat(state.data,chunk);
+            let complete=header_end(data)>=0;
+            let status=if Bytes::length(chunk)==0 {400} else {if !complete && Bytes::length(data)>=4096 {431} else {0}};
+            ReceiveState {data:data,status:status,error:0,done:complete || status!=0}
+          }
+        }
+      }
+    }
+  }
+}
+fn send_all(stream:Native::Stream,cap:Native::Capability,data:Bytes,deadline:I64)->I64 actions {clock.read,net.write} {
+  let final_state=while(state:SendState=SendState {offset:0,error:0};state.offset<Bytes::length(data) && state.error==0) {
+    match Native::monotonic_ms(cap) {
+      Err(code)=> SendState {offset:state.offset,error:code},
+      Ok(now)=> if now>=deadline {SendState {offset:state.offset,error:6}} else {
+        match Native::write(stream,Bytes::slice(data,state.offset,Bytes::length(data)-state.offset),deadline-now) {
+          Err(code)=> SendState {offset:state.offset,error:code},
+          Ok(count)=> SendState {offset:state.offset+count,error:if count==0 {5} else {0}}
+        }
+      }
+    }
+  };
+  final_state.error
+}
+fn serve_one(stream:Native::Stream,cap:Native::Capability,handle:Fn(Request)->Response)->I64 actions {clock.read,net.read,net.write} {
+  match Native::monotonic_ms(cap) {
+    Err(code)=> code,
+    Ok(start)=> {
+      let request=receive(stream,cap,start+2000);
+      if request.error!=0 {request.error} else {
+        let response=if request.status==0 {respond(request.data,handle)} else {wire(error_response(request.status),false)};
+        match Native::monotonic_ms(cap) {Err(code)=> code,Ok(now)=> send_all(stream,cap,response,now+2000)}
+      }
+    }
+  }
+}
+fn serve(listener:Native::Listener,cap:Native::Capability,count:I64,handle:Fn(Request)->Response)->Native::I64Result actions {net.accept,net.read,net.write,net.close,clock.read} {
+  let final_state=while(state:ServeState=ServeState {handled:0,polls:0,error:0};state.handled<count && state.polls<1024 && state.error==0) {
+    match Native::accept(listener,2000) {
+      Err(code)=> ServeState {handled:state.handled,polls:state.polls+1,error:if code==6 {0} else {code}},
+      Ok(stream)=> {
+        let outcome=serve_one(stream,cap,handle);
+        let closed=Native::close_stream(stream);
+        let error=match closed {Err(code)=> code,Ok(done)=> if outcome==11 {11} else {0}};
+        ServeState {handled:state.handled+1,polls:state.polls+1,error:error}
+      }
+    }
+  };
+  if final_state.error!=0 {Err(final_state.error)} else {Ok(final_state.handled)}
+}

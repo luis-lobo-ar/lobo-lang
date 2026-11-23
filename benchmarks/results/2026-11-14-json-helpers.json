@@ -1,0 +1,623 @@
+{
+  "format": "lobo-json-helper-verification/0.1",
+  "date": "2026-11-14",
+  "status": "passed",
+  "completed_utc": "2026-11-14T17:55:21.705787+00:00",
+  "compiler": "1.1.0",
+  "language": "core/1.1",
+  "checked_format": "lobo-checked/1.0",
+  "scope": "pure typed JSON builders, serializer and HTTP response adapter",
+  "decision": "decisions/0039-typed-json-source-helpers.md",
+  "library": "libraries/json/json.lobo",
+  "tests": {
+    "rust": 200,
+    "focused": 4,
+    "editor": 131,
+    "python": 31,
+    "routes": [
+      "evaluator",
+      "C",
+      "LLVM",
+      "C ASan/UBSan",
+      "LLVM ASan/UBSan"
+    ],
+    "editor_host": "passed",
+    "nested_array_depths": [
+      0,
+      1,
+      40,
+      1000
+    ],
+    "focused_maximum_fuel": 1000000,
+    "focused_maximum_heap_cells": 1000000,
+    "mvc_fuel": 10000,
+    "mvc_heap_cells": 10000
+  },
+  "commands": [
+    {
+      "command": "cargo test --locked --test json_helpers",
+      "exit_code": 0,
+      "log": "benchmarks/private-evidence/json-helpers-20261114/logs/json-helpers-focused-final.log",
+      "sha256": "972bf2048b4a306b1b006b18f5d6b20754d18d0f054ee56dcc65ef92348e3821"
+    },
+    {
+      "command": "cargo test --locked",
+      "exit_code": 0,
+      "log": "benchmarks/private-evidence/json-helpers-20261114/logs/json-helpers-rust-full.log",
+      "sha256": "a450a5c5f51d5e1813ad3da36760931c930930c6fe86a79c1c948d774d5478f5"
+    },
+    {
+      "command": "npm --prefix editors/vscode test",
+      "exit_code": 0,
+      "log": "benchmarks/private-evidence/json-helpers-20261114/logs/json-helpers-editor-full.log",
+      "sha256": "b8ada7dabadda6eb949311b60a86c15ebf124bb1243a931c96ea4ce230684cd0"
+    },
+    {
+      "command": "python3 -m unittest discover -s benchmarks -p 'test_*.py'",
+      "exit_code": 0,
+      "log": "benchmarks/private-evidence/json-helpers-20261114/logs/json-helpers-python.log",
+      "sha256": "58589deb5810bb83314580aa4b791ca70b20c526fd99ef2d0ba7a79d66a53e3c"
+    },
+    {
+      "command": "cargo clippy --locked --all-targets -- -D warnings",
+      "exit_code": 0,
+      "log": "benchmarks/private-evidence/json-helpers-20261114/logs/json-helpers-clippy.log",
+      "sha256": "fbc2a0bab901bc4671287749ac295e019f36022efbd87bf64ed42d68c09a2a8b"
+    },
+    {
+      "command": "cargo fmt --all -- --check",
+      "exit_code": 0,
+      "log": "benchmarks/private-evidence/json-helpers-20261114/logs/json-helpers-format.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": "LOBO_VSCODE_EXECUTABLE=/usr/share/code/code xvfb-run -a npm --prefix editors/vscode run test:host",
+      "exit_code": 0,
+      "log": "benchmarks/private-evidence/json-helpers-20261114/logs/json-helpers-editor-host.log",
+      "sha256": "dea092dd81a4aaee241bbc191b109aa85430c1327ebbc6e234822e1f39b97293"
+    },
+    {
+      "command": "python3 /home/luis/.codex/skills/.system/skill-creator/scripts/quick_validate.py .agents/skills/lobo-programming",
+      "exit_code": 0,
+      "log": "benchmarks/private-evidence/json-helpers-20261114/logs/json-helpers-skill-validation.log",
+      "sha256": "db349825903d66adffea3ecf1bd8e1803043e8a71cf1a051235dabc5371f5bb0"
+    },
+    {
+      "command": "./scripts/check.sh",
+      "exit_code": 0,
+      "log": "benchmarks/private-evidence/json-helpers-20261114/logs/json-helpers-documents.log",
+      "sha256": "1f11bb3bb382f1877ffa8eec4eb376db85d0ecfa2e1301289bb91fbd2cc966ae"
+    }
+  ],
+  "workspace_bundle": {
+    "command": [
+      "target/release/lobo",
+      "check",
+      "--bundle-stdin"
+    ],
+    "sources": [
+      "examples/sequences.lobo",
+      "examples/collections.lobo",
+      "examples/tree.lobo",
+      "examples/modules/sequences.lobo",
+      "examples/modules/reverse.lobo",
+      "examples/modules/mirror.lobo",
+      "examples/testing/checks.lobo",
+      "examples/web-server/app.lobo",
+      "libraries/http/http.lobo",
+      "examples/mvc.lobo",
+      "libraries/json/json.lobo"
+    ],
+    "exit_code": 0,
+    "stdout": "{\"actions\":{\"example.collections.reverse\":[],\"example.collections.select\":[],\"example.modules.mirrored\":[],\"example.modules.reverse\":[],\"example.modules.reversed\":[],\"example.mvc.find_user\":[],\"example.mvc.render_user\":[],\"example.mvc.show_user\":[],\"example.testing.duplicate_count\":[],\"example.testing.reverse_twice\":[],\"example.tree.build_tree\":[],\"example.tree.child\":[],\"example.tree.insert\":[],\"example.tree.reverse\":[],\"example.tree.summarize\":[],\"example.tree.traverse\":[],\"example.web.handle\":[],\"lobo.http.json_document\":[],\"lobo.http.json_string\":[],\"lobo.http.method_not_allowed\":[],\"lobo.http.not_found\":[],\"lobo.http.quote_byte\":[],\"lobo.http.read_method\":[],\"lobo.http.strip_prefix\":[],\"lobo.http.text_response\":[],\"lobo.json.append\":[],\"lobo.json.array\":[],\"lobo.json.array_tasks\":[],\"lobo.json.field\":[],\"lobo.json.flatten\":[],\"lobo.json.has_key\":[],\"lobo.json.integer_text\":[],\"lobo.json.is_number\":[],\"lobo.json.number_token\":[],\"lobo.json.object\":[],\"lobo.json.object_tasks\":[],\"lobo.json.response\":[],\"lobo.json.skip_digits\":[],\"lobo.json.stringify\":[],\"lobo.json.unique_fields\":[]},\"entries\":[\"example.collections.select\",\"example.modules.mirrored\",\"example.modules.reversed\",\"example.modules.reverse\",\"example.mvc.find_user\",\"example.mvc.render_user\",\"example.mvc.show_user\",\"example.collections.reverse\",\"example.testing.reverse_twice\",\"example.testing.duplicate_count\",\"example.tree.child\",\"example.tree.insert\",\"example.tree.build_tree\",\"example.tree.reverse\",\"example.tree.traverse\",\"example.tree.summarize\",\"example.web.handle\",\"lobo.http.text_response\",\"lobo.http.json_document\",\"lobo.http.not_found\",\"lobo.http.method_not_allowed\",\"lobo.http.read_method\",\"lobo.http.strip_prefix\",\"lobo.http.quote_byte\",\"lobo.http.json_string\",\"lobo.json.object\",\"lobo.json.field\",\"lobo.json.array\",\"lobo.json.append\",\"lobo.json.has_key\",\"lobo.json.unique_fields\",\"lobo.json.skip_digits\",\"lobo.json.is_number\",\"lobo.json.number_token\",\"lobo.json.integer_text\",\"lobo.json.array_tasks\",\"lobo.json.object_tasks\",\"lobo.json.flatten\",\"lobo.json.stringify\",\"lobo.json.response\"],\"language\":\"core/1.1\",\"status\":\"ok\"}\n",
+    "stderr": ""
+  },
+  "cli_evidence": {
+    "commands": [
+      {
+        "command": [
+          "target/release/lobo",
+          "compile",
+          "examples/mvc.lobo",
+          "--source",
+          "libraries/json/json.lobo",
+          "--source",
+          "libraries/http/http.lobo",
+          "--emit",
+          "checked",
+          "-o",
+          "target/json-helpers-native-20261114/mvc.loboc"
+        ],
+        "exit_code": 0,
+        "stdout": "{\"artifact\":\"target/json-helpers-native-20261114/mvc.loboc\",\"entries\":[\"example.mvc.find_user\",\"example.mvc.render_user\",\"example.mvc.show_user\",\"lobo.http.text_response\",\"lobo.http.json_document\",\"lobo.http.not_found\",\"lobo.http.method_not_allowed\",\"lobo.http.read_method\",\"lobo.http.strip_prefix\",\"lobo.http.quote_byte\",\"lobo.http.json_string\",\"lobo.json.object\",\"lobo.json.field\",\"lobo.json.array\",\"lobo.json.append\",\"lobo.json.has_key\",\"lobo.json.unique_fields\",\"lobo.json.skip_digits\",\"lobo.json.is_number\",\"lobo.json.number_token\",\"lobo.json.integer_text\",\"lobo.json.array_tasks\",\"lobo.json.object_tasks\",\"lobo.json.flatten\",\"lobo.json.stringify\",\"lobo.json.response\"],\"format\":\"checked\",\"status\":\"ok\"}\n",
+        "stderr": ""
+      },
+      {
+        "command": [
+          "target/release/lobo",
+          "check",
+          "target/json-helpers-native-20261114/mvc.loboc"
+        ],
+        "exit_code": 0,
+        "stdout": "{\"actions\":{\"example.mvc.find_user\":[],\"example.mvc.render_user\":[],\"example.mvc.show_user\":[],\"lobo.http.json_document\":[],\"lobo.http.json_string\":[],\"lobo.http.method_not_allowed\":[],\"lobo.http.not_found\":[],\"lobo.http.quote_byte\":[],\"lobo.http.read_method\":[],\"lobo.http.strip_prefix\":[],\"lobo.http.text_response\":[],\"lobo.json.append\":[],\"lobo.json.array\":[],\"lobo.json.array_tasks\":[],\"lobo.json.field\":[],\"lobo.json.flatten\":[],\"lobo.json.has_key\":[],\"lobo.json.integer_text\":[],\"lobo.json.is_number\":[],\"lobo.json.number_token\":[],\"lobo.json.object\":[],\"lobo.json.object_tasks\":[],\"lobo.json.response\":[],\"lobo.json.skip_digits\":[],\"lobo.json.stringify\":[],\"lobo.json.unique_fields\":[]},\"entries\":[\"example.mvc.find_user\",\"example.mvc.render_user\",\"example.mvc.show_user\",\"lobo.http.text_response\",\"lobo.http.json_document\",\"lobo.http.not_found\",\"lobo.http.method_not_allowed\",\"lobo.http.read_method\",\"lobo.http.strip_prefix\",\"lobo.http.quote_byte\",\"lobo.http.json_string\",\"lobo.json.object\",\"lobo.json.field\",\"lobo.json.array\",\"lobo.json.append\",\"lobo.json.has_key\",\"lobo.json.unique_fields\",\"lobo.json.skip_digits\",\"lobo.json.is_number\",\"lobo.json.number_token\",\"lobo.json.integer_text\",\"lobo.json.array_tasks\",\"lobo.json.object_tasks\",\"lobo.json.flatten\",\"lobo.json.stringify\",\"lobo.json.response\"],\"language\":\"core/1.1\",\"status\":\"ok\"}\n",
+        "stderr": ""
+      },
+      {
+        "command": [
+          "target/release/lobo",
+          "compile",
+          "examples/mvc.lobo",
+          "--source",
+          "libraries/json/json.lobo",
+          "--source",
+          "libraries/http/http.lobo",
+          "--backend",
+          "c",
+          "-o",
+          "target/json-helpers-native-20261114/mvc-c"
+        ],
+        "exit_code": 0,
+        "stdout": "{\"artifact\":\"target/json-helpers-native-20261114/mvc-c\",\"entries\":[\"example.mvc.find_user\",\"example.mvc.render_user\",\"example.mvc.show_user\",\"lobo.http.text_response\",\"lobo.http.json_document\",\"lobo.http.not_found\",\"lobo.http.method_not_allowed\",\"lobo.http.read_method\",\"lobo.http.strip_prefix\",\"lobo.http.quote_byte\",\"lobo.http.json_string\",\"lobo.json.object\",\"lobo.json.field\",\"lobo.json.array\",\"lobo.json.append\",\"lobo.json.has_key\",\"lobo.json.unique_fields\",\"lobo.json.skip_digits\",\"lobo.json.is_number\",\"lobo.json.number_token\",\"lobo.json.integer_text\",\"lobo.json.array_tasks\",\"lobo.json.object_tasks\",\"lobo.json.flatten\",\"lobo.json.stringify\",\"lobo.json.response\"],\"format\":\"native\",\"status\":\"ok\"}\n",
+        "stderr": ""
+      },
+      {
+        "command": [
+          "/home/luis/dev/lobo-ar/lobo-lang/target/json-helpers-native-20261114/mvc-c",
+          "--entry",
+          "example.mvc.show_user",
+          "--arg",
+          "I64:1",
+          "--fuel",
+          "10000",
+          "--heap-cells",
+          "10000"
+        ],
+        "exit_code": 0,
+        "stdout": "{\"status\":\"ok\",\"kind\":\"value\",\"value\":{\"type\":\"Record\",\"value\":{\"id\":\"example.web.response\",\"fields\":{\"status\":{\"type\":\"I64\",\"value\":\"200\"},\"content_type\":{\"type\":\"Text\",\"value\":\"application/json\"},\"body\":{\"type\":\"Text\",\"value\":\"{\\\"name\\\":\\\"Luis\\\"}\"}}}}}\n",
+        "stderr": ""
+      },
+      {
+        "command": [
+          "/home/luis/dev/lobo-ar/lobo-lang/target/json-helpers-native-20261114/mvc-c",
+          "--entry",
+          "example.mvc.show_user",
+          "--arg",
+          "I64:42",
+          "--fuel",
+          "10000",
+          "--heap-cells",
+          "10000"
+        ],
+        "exit_code": 0,
+        "stdout": "{\"status\":\"ok\",\"kind\":\"value\",\"value\":{\"type\":\"Record\",\"value\":{\"id\":\"example.web.response\",\"fields\":{\"status\":{\"type\":\"I64\",\"value\":\"404\"},\"content_type\":{\"type\":\"Text\",\"value\":\"text/plain; charset=utf-8\"},\"body\":{\"type\":\"Text\",\"value\":\"Not found\\n\"}}}}}\n",
+        "stderr": ""
+      },
+      {
+        "command": [
+          "/home/luis/dev/lobo-ar/lobo-lang/target/json-helpers-native-20261114/mvc-c",
+          "--entry",
+          "example.mvc.render_user",
+          "--arg",
+          "Record:example.mvc.user:Text:c3a9225c0a"
+        ],
+        "exit_code": 0,
+        "stdout": "{\"status\":\"ok\",\"kind\":\"value\",\"value\":{\"type\":\"Variant\",\"value\":{\"id\":\"lobo.json.value\",\"case\":\"Object\",\"payload\":{\"type\":\"Record\",\"value\":{\"id\":\"lobo.json.object_type\",\"fields\":{\"fields\":{\"type\":\"List\",\"value\":{\"element\":{\"Record\":\"lobo.json.member\"},\"elements\":[{\"type\":\"Record\",\"value\":{\"id\":\"lobo.json.member\",\"fields\":{\"name\":{\"type\":\"Text\",\"value\":\"name\"},\"value\":{\"type\":\"Variant\",\"value\":{\"id\":\"lobo.json.value\",\"case\":\"String\",\"payload\":{\"type\":\"Text\",\"value\":\"\u00e9\\\"\\\\\\n\"}}}}}}]}}}}}}}}\n",
+        "stderr": ""
+      },
+      {
+        "command": [
+          "target/release/lobo",
+          "compile",
+          "examples/mvc.lobo",
+          "--source",
+          "libraries/json/json.lobo",
+          "--source",
+          "libraries/http/http.lobo",
+          "--backend",
+          "llvm",
+          "-o",
+          "target/json-helpers-native-20261114/mvc-llvm"
+        ],
+        "exit_code": 0,
+        "stdout": "{\"artifact\":\"target/json-helpers-native-20261114/mvc-llvm\",\"entries\":[\"example.mvc.find_user\",\"example.mvc.render_user\",\"example.mvc.show_user\",\"lobo.http.text_response\",\"lobo.http.json_document\",\"lobo.http.not_found\",\"lobo.http.method_not_allowed\",\"lobo.http.read_method\",\"lobo.http.strip_prefix\",\"lobo.http.quote_byte\",\"lobo.http.json_string\",\"lobo.json.object\",\"lobo.json.field\",\"lobo.json.array\",\"lobo.json.append\",\"lobo.json.has_key\",\"lobo.json.unique_fields\",\"lobo.json.skip_digits\",\"lobo.json.is_number\",\"lobo.json.number_token\",\"lobo.json.integer_text\",\"lobo.json.array_tasks\",\"lobo.json.object_tasks\",\"lobo.json.flatten\",\"lobo.json.stringify\",\"lobo.json.response\"],\"format\":\"native\",\"status\":\"ok\"}\n",
+        "stderr": ""
+      },
+      {
+        "command": [
+          "/home/luis/dev/lobo-ar/lobo-lang/target/json-helpers-native-20261114/mvc-llvm",
+          "--entry",
+          "example.mvc.show_user",
+          "--arg",
+          "I64:1",
+          "--fuel",
+          "10000",
+          "--heap-cells",
+          "10000"
+        ],
+        "exit_code": 0,
+        "stdout": "{\"status\":\"ok\",\"kind\":\"value\",\"value\":{\"type\":\"Record\",\"value\":{\"id\":\"example.web.response\",\"fields\":{\"status\":{\"type\":\"I64\",\"value\":\"200\"},\"content_type\":{\"type\":\"Text\",\"value\":\"application/json\"},\"body\":{\"type\":\"Text\",\"value\":\"{\\\"name\\\":\\\"Luis\\\"}\"}}}}}\n",
+        "stderr": ""
+      },
+      {
+        "command": [
+          "/home/luis/dev/lobo-ar/lobo-lang/target/json-helpers-native-20261114/mvc-llvm",
+          "--entry",
+          "example.mvc.show_user",
+          "--arg",
+          "I64:42",
+          "--fuel",
+          "10000",
+          "--heap-cells",
+          "10000"
+        ],
+        "exit_code": 0,
+        "stdout": "{\"status\":\"ok\",\"kind\":\"value\",\"value\":{\"type\":\"Record\",\"value\":{\"id\":\"example.web.response\",\"fields\":{\"status\":{\"type\":\"I64\",\"value\":\"404\"},\"content_type\":{\"type\":\"Text\",\"value\":\"text/plain; charset=utf-8\"},\"body\":{\"type\":\"Text\",\"value\":\"Not found\\n\"}}}}}\n",
+        "stderr": ""
+      },
+      {
+        "command": [
+          "/home/luis/dev/lobo-ar/lobo-lang/target/json-helpers-native-20261114/mvc-llvm",
+          "--entry",
+          "example.mvc.render_user",
+          "--arg",
+          "Record:example.mvc.user:Text:c3a9225c0a"
+        ],
+        "exit_code": 0,
+        "stdout": "{\"status\":\"ok\",\"kind\":\"value\",\"value\":{\"type\":\"Variant\",\"value\":{\"id\":\"lobo.json.value\",\"case\":\"Object\",\"payload\":{\"type\":\"Record\",\"value\":{\"id\":\"lobo.json.object_type\",\"fields\":{\"fields\":{\"type\":\"List\",\"value\":{\"element\":{\"Record\":\"lobo.json.member\"},\"elements\":[{\"type\":\"Record\",\"value\":{\"id\":\"lobo.json.member\",\"fields\":{\"name\":{\"type\":\"Text\",\"value\":\"name\"},\"value\":{\"type\":\"Variant\",\"value\":{\"id\":\"lobo.json.value\",\"case\":\"String\",\"payload\":{\"type\":\"Text\",\"value\":\"\u00e9\\\"\\\\\\n\"}}}}}}]}}}}}}}}\n",
+        "stderr": ""
+      }
+    ],
+    "inputs": [
+      {
+        "path": "examples/mvc.lobo",
+        "bytes": 1037,
+        "sha256": "043608bf57cb06904d0a848ffa94eb6a678073949330a8432bf0492087e0d752"
+      },
+      {
+        "path": "libraries/json/json.lobo",
+        "bytes": 7990,
+        "sha256": "5969b28672a3cdf07c2d99a7efb743468fd354562549e54c237d3af8855f405b"
+      },
+      {
+        "path": "libraries/http/http.lobo",
+        "bytes": 2712,
+        "sha256": "0abe60f6076436752ee25ff306a713dbe0fd8b27288c30aaa4dd6795655742f1"
+      },
+      {
+        "path": "target/release/lobo",
+        "bytes": 1368360,
+        "sha256": "6e66eee2033465b8fce8624e6052bab3f5f0ce2b921a8178ee04a1dcbb410f8a"
+      },
+      {
+        "path": "target/release/lobo-test",
+        "bytes": 1183352,
+        "sha256": "5aaaf4e2f9f7202635c5b02bcae772ce18ea4549cec14058be6de94641c4ca74"
+      }
+    ],
+    "outputs": [
+      {
+        "path": "target/json-helpers-native-20261114/mvc-c",
+        "bytes": 72136,
+        "sha256": "d6f4be3527b2209811d2a67250795fa5f5c7103e7625fbfca3564cf65a87fc4f"
+      },
+      {
+        "path": "target/json-helpers-native-20261114/mvc-llvm",
+        "bytes": 68040,
+        "sha256": "61c002586db7df01efbc9a01783e81eb6bc6d5365c96057ff1864b131c035796"
+      },
+      {
+        "path": "target/json-helpers-native-20261114/mvc.loboc",
+        "bytes": 157685,
+        "sha256": "65a690efc51691ff533b4bdbf08a06a12e030b0f031ea9dea504eff2ccb8f5af"
+      }
+    ],
+    "frozen_release_artifacts_verified": 86,
+    "frozen_manifest_sha256": "f89af5f98e4d79e62cb3d5cfd37801b7539671d0826cca25ba63ed9fa039cf7a"
+  },
+  "failures": [
+    {
+      "command": "cargo test --locked --test json_helpers",
+      "exit_code": 101,
+      "log": "benchmarks/private-evidence/json-helpers-20261114/logs/json-helpers-red.log",
+      "outcome": "three tests failed against compile-valid scaffold: empty serializer output and false number validation",
+      "preserved_reproducers": [
+        "benchmarks/private-evidence/json-helpers-20261114/scaffold-failures/lobo-fixture-307135-1794678276496431453",
+        "benchmarks/private-evidence/json-helpers-20261114/scaffold-failures/lobo-fixture-307135-1794678276496611109",
+        "benchmarks/private-evidence/json-helpers-20261114/scaffold-failures/lobo-fixture-307135-1794678276496702681"
+      ]
+    },
+    {
+      "command": "final source/preservation/link integrity verification",
+      "exit_code": 1,
+      "outcome": "read final documentation log before the still-running command completed; waited for successful completion before repeating verification",
+      "evidence": "tool transcript; final-links.log retains completed validation"
+    }
+  ],
+  "corrections": [
+    "Implemented serializer, immutable builders, unique keys, integer formatting and number grammar without weakening expected results.",
+    "Tightened MVC check from 100000 fuel/heap to existing host limits of 10000 and reran the focused suite."
+  ],
+  "example_compatibility": {
+    "view": "example.mvc.render_user output changes from Text to Json",
+    "controller": "example.mvc.show_user retains tested 200/404 body/status behavior",
+    "previous_source": "benchmarks/private-evidence/json-helpers-20261114/mvc-before.lobo",
+    "previous_source_sha256": "6d2b360f40740ba3cf63de6fdb18d7e37a12532ad20fb2ff01dd4421143786ca"
+  },
+  "implementation_inputs": {
+    ".agents/skills/lobo-programming/SKILL.md": "703ba2497c8e88151411c2051272c64fab058c47f4aca85cb6832d685ba656a2",
+    ".agents/skills/lobo-programming/references/examples.lobo": "2e9b2cc1baf3dbf82ef377349fa4b788f5e063c0a7c9813a203281cae1380439",
+    ".agents/skills/lobo-programming/references/language.md": "3694c1d066bd55da4c28ad58580f8dcf794959f0ddb9e6a0bf27924609875c9b",
+    ".agents/skills/lobo-programming/references/tools.md": "09387304815c6c9a7f1a4b6d45e4e7132a0eab0b1bbd5d3a7edf12d53558ac2b",
+    "AGENTS.md": "f14a90761b42d506149aad737b50088112ae6bc8d6f968bdfec0d4815d518724",
+    "CHANGELOG.md": "a7ff22f28a536b7d9279807ede0e47b83924583b76312f4b6281b65891235e11",
+    "Cargo.lock": "438c7c18c47fcdd91ad609674aaa8a35c7083a40550ea6a12528c14bf4963141",
+    "Cargo.toml": "f8395bfce847f4b9ab2682bae82309c656a02243e603380d17e3839ccf578d7e",
+    "README.md": "8a4474779ce969ae5925e05907a0e6a3d179e8b313d4b8848b5847b4507b8a54",
+    "VISION.md": "555e3f073a6c6c2429adc83140e702245ca8aa5eacafcd2da29e844489570955",
+    "benchmarks/agent-repair-study.py": "dda6ee388bef5f493ec4fe74836c48f22aedded8a0b877d064e415a738edd32d",
+    "benchmarks/agent-repair.py": "71799382b020fc21343715006fb8baa895c4930015f0f809a05d18f8839bc742",
+    "benchmarks/agent-study-report.py": "002d692a7d8a6db719205b6fc417d16c321f75ff9f472bb353ed26996ced7ee9",
+    "benchmarks/agent-study-resume.py": "eae1a50a6bf214b0545710b7acadd151d7c0066289793a23309edc1b4b942ecd",
+    "benchmarks/agent-testing.py": "68de62b457930a5e963fb298552ea5d2e4afd6b3c8181ee5cb836cfce2d1f854",
+    "benchmarks/language-comparison/README.md": "e26da6823bae48169e86c31f41e77bd5d1d973376010d094d9feee561ebd74d0",
+    "benchmarks/language-comparison/fixtures/lobo-flags.lobo": "585cb8fca8be7c8605dd5922916208c7d5c9a1c2dbfa6ad2eccc99f4ba002a41",
+    "benchmarks/language-comparison/fixtures/lobo-variants.lobo": "9515c55db91cb3f7405afee3f9f8d0c36408b0ba6aafb7aa4ce352fcfeed039e",
+    "benchmarks/language-comparison/fixtures/python-flags.py": "681c476c6b9579cab25fafde31ef5ec69f72aa9928838dc94aec662019dc47c7",
+    "benchmarks/language-comparison/fixtures/rust-flags.rs": "a7d86a4d05cb1cc22102f928a04b02efe8b754193975720fd0ca4fb851ec624d",
+    "benchmarks/language-comparison/fixtures/rust-variants.rs": "a0574094cdde45d576cef1e9647ac4d06c62bdfee4ea1b748bdd7aebe5b3f2aa",
+    "benchmarks/language-comparison.py": "9fdd1e39213fda642b0b6ecf40cfa55c204c1ea01df394284f4d9db55e112f0b",
+    "benchmarks/llvm-backend.py": "e77626e51ceb251c0e1af5002abfb3347da446ff0c8fce9ed60f291becbd3c84",
+    "benchmarks/skill-evaluation-audit.py": "8cee4c95848980bede66134591b25551780762458791a08bd9384b675606b0ef",
+    "benchmarks/skill-evaluation.py": "7d73befde8ae9bdda7db802339febfdc4a819cacea748dc2ece834b1f72fca41",
+    "benchmarks/test_agent_repair.py": "bb832c3c2b079a7b0f5ca113a82302ca9c679128a70657f9cdfdc63a5eb78325",
+    "benchmarks/test_agent_study.py": "919a19d3df1032c7eff0f8f7eee9bab6486142470c4b52a1f5c4f95f072480ae",
+    "benchmarks/test_agent_study_report.py": "62b8025dc1a7d0ec3cea1f477c29a404597eb99878d5b4cdbb0ec08cd4316cf4",
+    "benchmarks/test_language_comparison.py": "b115b47569835f85cca32d6c8bcfb771cf71f4a9c5911ffc474cb03b146570e2",
+    "benchmarks/test_release_inputs.py": "714baf9b79020972f66c291feffac955a2b6800d8ae632b48b3b7f0dcef16d52",
+    "benchmarks/test_skill_audit.py": "0bde8f5cb3795610a7efc2b58fa19a77b559222e127ced20694b1a9ed2738c81",
+    "benchmarks/test_skill_evaluation.py": "856aef18dc3e9553859c2e11355685f309eebf036a6c5ea1db60f7c2461e1814",
+    "decisions/0001-canonical-semantic-graph.md": "b6dba614a5e227e1fcb79bc840af75ac18d9ec5f045dfa5202a4e49051faca24",
+    "decisions/0002-human-auditable-projections.md": "7268d0abc8475ca449f5903a3beaebc9a6475603e11483499b348aa26869125a",
+    "decisions/0003-existing-execution-target-first.md": "f55e746a3ebdfd48c6c0b42f11939569fb0201f9c4ae44e3be68f3cac7dd1363",
+    "decisions/0004-rust-reference-compiler-and-core-first.md": "42c12b2f73b2147939b8a154b94edafa2cdeb78b4235a6a96884d59dac6347c4",
+    "decisions/0005-checked-artifact-for-first-executable-core.md": "3318071f72d4a02f259578a50e5524f9c332554ef738d383c3ebe15258a19f07",
+    "decisions/0006-native-machine-code-is-the-default.md": "25f3c8fbb15b54800c721e19c836a00adb6c5f09aabfcc78a1e22516c379aff9",
+    "decisions/0007-native-differential-and-sanitizer-gates.md": "86b5ce0851174548ac8f48c210dc086ea90ec56f4cf0e932baebb372d7c45b40",
+    "decisions/0008-counted-folds-with-immutable-state.md": "2bb3353fe8132a48b1df1cb4f38c4b1e17348fafa22dc9e20b12f9c77198fd21",
+    "decisions/0009-declarative-vscode-syntax-highlighting.md": "7f3563dd9a230227f39a3a6cfea9cad1f5f6eb008b6816b5e049a6f0ea46cd13",
+    "decisions/0010-vscode-local-definition-navigation.md": "335719337b5c24910f2db2d921c9060f4bb5b5ec6507c543bbfccec485e26627",
+    "decisions/0011-compiler-source-locations-and-editor-diagnostics.md": "f8d6a5290afbff74ea89394834e6568307f7d2d179adb44dc65a16212ef61857",
+    "decisions/0012-actions-terminology.md": "d8b4c7630ac0115b73d96b709a529aebefe9b5de6d1affc37e3d8d8a2dabd8c0",
+    "decisions/0013-checked-action-bounds.md": "92433b5d0e70b2410d45368ebd1f9fa0ab9c79085d9217ebd5fe9021907b1e9b",
+    "decisions/0014-language-first-development.md": "200dca6298e29b7424971fc511a4a76602a2e906c556e6aa1e35ee7929191fcc",
+    "decisions/0015-immutable-record-values.md": "e9951a581a6accebabf5ed0f41e1d4372ed3e4abf09467101bd9a38b1947ab6f",
+    "decisions/0016-tagged-alternative-values.md": "2bbfe291836fb11a1d6a202db8dc0ecbb8bf2955c7d07cfdf4bf89d298750470",
+    "decisions/0017-persistent-growable-lists.md": "dd6b6a36a281a0c8b67f6d6e9e45f0cfd136db6fa68747137e6c7a484bdb91cf",
+    "decisions/0018-text-and-byte-values.md": "21db44c8af532edab6a8115148309f595c80a601fff042c30adc803fe72c8155",
+    "decisions/0019-parser-workload-in-existing-lobo.md": "747f85e218507e567eda20eabb7b013e0397426465b8c10931102595907c9526",
+    "decisions/0020-tree-workload-in-existing-lobo.md": "90ea96121533ce0747570af06d05c4c7429e7b4dd37eb41a29c80f49d5528b9d",
+    "decisions/0021-immutable-state-driven-iteration.md": "b374d2a8405a4adee93da3a888667dd7cf6217acb3c9a444096d5239e3f035b6",
+    "decisions/0022-closed-module-composition.md": "de390979867447d60ffd5a0ed4c1a5653e3656be0e4da3f42ddacc65afe97e34",
+    "decisions/0023-explicit-editor-source-snapshots.md": "fbea26a1fdcb57c33004f89e856a555ec436c5bc1c4a383eb50412a00d834704",
+    "decisions/0024-agent-first-verification-prototype.md": "c18767eedbe9d407c09477bcd2be582f158612e4d3384996a706e47808fe7924",
+    "decisions/0025-real-agent-testing-pilot.md": "5df3e3c6132c88365a23e36da4899f07fa340d052290874384344070ce4f3789",
+    "decisions/0026-repeated-library-repair-study.md": "b6660862191a9b6e3bac8a52091fca8c0fddce7286b76b661f1240638c29aa68",
+    "decisions/0027-agent-language-knowledge-package.md": "dc5c80c950513dd984d31edc00e2e38251c44a0c6ddde3b0c6d4ba6f10fd916e",
+    "decisions/0028-lobo-skill-onboarding-comparison.md": "d8d0eb1dd7666aabebd064ec853bc8b1d07722e5b9247f0a57735b80da17e87b",
+    "decisions/0029-list-guarded-recursive-values.md": "b5d5092fc94d92003bb361c557e0ac5c77d110255952f1368d3e987a5ee9b167",
+    "decisions/0030-explicit-generic-function-specialization.md": "346413f0901407050ba2773c0a3b6d086b3cf3fc48a2f10ce3f55e5b37856d32",
+    "decisions/0031-direct-llvm-native-backend.md": "3f3a38ad833d6f40f28a13527ef23629f01cdc0fdcb00727ac91d80e4a50ffbf",
+    "decisions/0032-stop-feature-growth-at-the-evaluation-checkpoint.md": "9d5e74a6f1da96111368eea86f1658ecf8bdac29b1a8505f2aa80552f37c1445",
+    "decisions/0033-bounded-language-1-release.md": "35956887b2acf678d7b523eb710729a63dca9c3b2fe8a75364194b30f37fb67f",
+    "decisions/0034-binary64-values-and-execution-profile.md": "b0c39b98802a3f1736048ca3bca767e2443b41adedaf44eaeb8e0ff85d44ffd3",
+    "decisions/0035-native-web-server-sample.md": "24562300115932b0c867ae7b20c6759f3e2538ea7cfc4aa8c34d0c0e0ba14af1",
+    "decisions/0036-pure-http-helper-module.md": "ad44b8f5f4458a1dedf056a70365c742beb8020b482a1ade6ad1322c23d4157b",
+    "decisions/0037-symbolic-shortcuts-proposal.md": "888950b82eaf199d345e4bb6012334cb8af6367e2ed5110ee95aedb165692fc0",
+    "decisions/0038-explicit-typed-operator-bindings.md": "512098a13f7d01b6085109d96419180ed6f4bc897ebf58d277b2e71f6f018dfa",
+    "decisions/0039-typed-json-source-helpers.md": "902ad701889ba5f1dfb640b0850c47bbb2a33d44cc6b72bd0d1a5cbc541edc82",
+    "docs/architecture.md": "1fe255df7bb2377abdddac14013cfa72d519f8a21b608da824bb28491098c933",
+    "docs/compiler-and-backends.md": "21a6bbfb4d0d4ec79dab3a6be1ac6c8fa5055d4a6884b4b2d6bf62395ac483cb",
+    "docs/compiler-development-workflow.md": "f466eca34398786da4dbf03bf5c9e9068ed53a027f2547efb7c23c802f4e328a",
+    "docs/development-workflow.md": "6095689a39afe5259c8757db2b19246b4512e21812f5967b59c759dca944c065",
+    "docs/future-language-scope.md": "27218419cf7055dbfc8f9bc1c1bca783bbc86ad72cf40c159f628c0fd5c05151",
+    "docs/language-1.0.md": "8614510c2b60eb9cb7282af7a63af18a40b6c5eb8bb7f4b4fa3c374592f7fa80",
+    "docs/language-completeness.md": "79c4f3efaecb590b658c49919adf73eeed0256aaadc8c98d6fa3089b75ce4381",
+    "docs/language-design.md": "bb90c4b441cbe7cdd6192f165f02a5f4e380c26ecc3d698b2d5c0218b9b7038c",
+    "docs/native-development.md": "7a9e425260e9ac7168c8406a78c9e83fa02e8431b2918dae0ecd750014d218d5",
+    "docs/native-performance.md": "9d127008214ab6f70b0be2b20d2ed48fc790572b264a545f018c5f0e067c2fec",
+    "docs/next-language-milestone.md": "a1303858f3b8401599dd817fb186835dd5151b421e95828fbb38166c10a34ea5",
+    "docs/roadmap.md": "be5443abd1f790224e3c83a5bd97a18f1860d51c3810e8c6fff169f501e3e6d0",
+    "docs/self-hosting.md": "3c2746977ba5fd8ce54ee9b07ebbd4b44c850fb9e012e4fcc781e3779732e741",
+    "docs/state-and-context.md": "718528849fa9dd07b35f0b18684a1b11618e6d47f01f2a0a6363c7b1039b5b96",
+    "docs/testing-and-tdd.md": "ac9571c30e8f7c4465e7d93d0e82a9d08ae9b00e18871bb02dba430da4e3c62c",
+    "docs/tool-protocol.md": "66975c0fd40a6d23c18fbbbe0c841bb1938bc4c037e272a1e7bb1150b5d37798",
+    "docs/v1.0-target.md": "b71bd75158eb70441ac16dcb67203162ff8a5358a3d855d648e55992a4eb0944",
+    "docs/worktree-comparisons.md": "2417368b85237d0dfdcc6c2db1df04485b9d67db82e25ec558d95ad83b5b394a",
+    "editors/vscode/README.md": "009c5aeb34787132ae7b313b1142f35bc9425bff3ac890c96e0c34fa85d68910",
+    "editors/vscode/language-configuration.json": "b8330a423ec3cd976e1a4f56f0760bdc28790911a3c06c5fdb639dc3895f5e9f",
+    "editors/vscode/package-lock.json": "887077251b54b97091de25fa34b78bf2e9cc7cc59645ca75ac02c76d866a3ec2",
+    "editors/vscode/package.json": "d52a7ebb9dfb6e21092ce88484e5d0c62b05cdaca45a3239c7dd53f912b71072",
+    "editors/vscode/src/compiler.cjs": "5a2d77ccc3f73a85153ef3767443c37b51d8a6d0ae59d600a00703165d596c3a",
+    "editors/vscode/src/diagnostics.cjs": "c902637b51dc2d493e56b5095c0baf65a8c600a039a4f69ea564582ad6aabc62",
+    "editors/vscode/src/extension.cjs": "fc7c2b1a520122f8206e4856a8d8d74a87531fffeb43470b8ab4879cc296c75e",
+    "editors/vscode/src/navigation.cjs": "c1e87aaeb360884350d6761cd0096f1cd7ca81892094cb6d4a85ebb870b4245d",
+    "editors/vscode/src/project.cjs": "fbbecb2fa3e375a314c9cc32ce81e15b231ea96bbaa21ca6a6c33952f496e683",
+    "editors/vscode/syntaxes/lobo.tmLanguage.json": "928b5a517e63f10a6b408eac23884a3ede7924fb291a326ead98cd26a2ddd239",
+    "editors/vscode/test/bundle-compiler.test.mjs": "f9f531db66a4ec23d53bedbf9bab44d1ad4027de97b334dab31e7bf0cfe9dd1c",
+    "editors/vscode/test/bundle-navigation.test.mjs": "f04a60bfe506ff04702867b6fc57b1383ad56ccb6c9b8d621367e591025bfb70",
+    "editors/vscode/test/compiler.test.mjs": "3eff46971638c1ec006b15f91ae13aead03da60f5e8cc3df0e0bac313655d0df",
+    "editors/vscode/test/diagnostics.test.mjs": "7302ff0fb3db78b214790d16284586200b6b10e8ac2cffc6e1a6794907888287",
+    "editors/vscode/test/grammar.test.mjs": "7bef5a87acfb63649bd4cdf562c2b94b83bed8e8eb9113759c245c8e9a428a51",
+    "editors/vscode/test/host-tests.cjs": "805c789ec4170b58f1671b6bce20addba7a1c9565c0096b2d0bce952175bae00",
+    "editors/vscode/test/navigation.test.mjs": "e7b265328c3166ba2142982e8210c2dc26529fdaf8b27523a6039dd91cb924ec",
+    "editors/vscode/test/operators.test.mjs": "557a19a1fb99a7bd728a66bf235c05807f1e70485ff304b1c3e23d0a57b5d317",
+    "editors/vscode/test/project-sources.test.mjs": "c865b9e487b5ca139b3cc949e88b0d1da8a9881fa60fdf6ed89bd79a76565aea",
+    "editors/vscode/test/provider.test.mjs": "608c942f8ad450ec3c4e7f70136fa272b61c89495bc497ab92a6eca0308103c9",
+    "editors/vscode/test/run-host-tests.mjs": "ae164dc5f1919953a4e0e6503aeae855ea3cb76ef0d8ffb5c18eb7d51589c8a5",
+    "examples/actions.lobo": "21b5ca015de2773d1444e8c4d05b392d394f93dcb188227cabb97afe63f429b6",
+    "examples/agent-session.jsonl": "c18170539f9afb05bd9715fd625255431985b3a22342afca7b2a2c37afac9594",
+    "examples/algorithms.lobo": "e33036cb366ef473fc310b7075fbc2282e275df70d7324d05bcb4c4106d461e3",
+    "examples/ast.lobo": "f2e57a59fdf82e0dfed0263c6d6b196a36a5d0ac90399eab20277594d0ae2d5e",
+    "examples/collections.lobo": "ec09d1a67ff2ec5ff49625186f66009022b61b521e7454af0de3213afc3f5425",
+    "examples/core.lobo": "4321f5ae582d55e0ef973f37f317d71b579834f4d9efe5b1959dbc4dd66f3b57",
+    "examples/generic_data.lobo": "9f934d88d835d26266456dff9cb46ee362252880f5ec1429550db17cd419a1a7",
+    "examples/generics.lobo": "486f02c8f314d37ba9b5720474772b2782095ac656aa24eac418529f8ae3e28f",
+    "examples/iteration.lobo": "607c4f77a46b94833eb7c8438647a5a6baf157f523b2cc791d2c2068bfbc67b0",
+    "examples/modules/mirror.lobo": "0ead2d707083b30c4d4218759be38e2ab44010daacc0e3e81ec3537ce1fb0a49",
+    "examples/modules/reverse.lobo": "d42fd9670de9a6133452a020b9294e99e5df68f65103e3b4dacedd9bcad32e0f",
+    "examples/modules/sequences.lobo": "4d4b08d31f0dee8f65ee0025f5bd342425c62b1e8b2091f7ea31ba7cebe9e0ff",
+    "examples/mvc.lobo": "043608bf57cb06904d0a848ffa94eb6a678073949330a8432bf0492087e0d752",
+    "examples/operators.lobo": "a9e183449c31163674ab16c3e1e7fcb48799e290324a3e165dbc6569bffb6948",
+    "examples/parser.lobo": "a4e4fd24d51eb9cf610b1f0581158962202f048c4c5387873dcce5548adf4ea8",
+    "examples/records.lobo": "f9c61078b287890ae7764182f6a9146341ea4471f8c3717ce4922a50c8092d4e",
+    "examples/sequences.lobo": "dea6546640035a1a13831851309b7f0ab10c7a36151b76578eb16f7bf0c15384",
+    "examples/state_iteration.lobo": "5deb87b4edead36b4c594e430a5cc3e4c10adc4ac906302afc2769003a22abed",
+    "examples/testing/agent-session.jsonl": "fdf3ded18088196b36164c78b5d1d58aec41262961bf2a8c99369103f3b9919f",
+    "examples/testing/checks.lobo": "eb27de19d105fcce9cd30682fe133b78cff1169f255fad8086c7c2d49a1bf112",
+    "examples/text.lobo": "7d6c561755d3447d2b54c8e1c481f6dd8ab33dc957c4057f59b4dfb7c4b4d94c",
+    "examples/transfer.lobo": "1e6937cfabc588cf2bf9dc955bdcad018459f2331e34a0b1880400d22cddce08",
+    "examples/tree.lobo": "5b18b333ed29c500d68fd318ca30b422ab12d82c27afddc004343a2e692f4601",
+    "examples/v1/README.md": "d3acbb3a9d4d647e1ea63c497e177ca4f51564426e08aece568617c1026b557e",
+    "examples/v1/collections.lobo": "cb38bc6295210b77c2f1ce9919f88ca9aca7669719d10847282a74f4856cd6c5",
+    "examples/v1/collections_changed.lobo": "9d2e97e2a8f6cbec78c2d09df63c4f0c2088de1c7f8427bcdf60cb9bd4e2ad78",
+    "examples/v1/document.lobo": "173761c45e420ffdf5c2501903d3763c57ccb19619a8c172f2d63ff959b7d181",
+    "examples/v1/document_transform.lobo": "b017fd09025a6848f13bf2694c829867be8f81943a8ff6b58fd2aa505d6b3cd5",
+    "examples/v1/document_transform_changed.lobo": "2fa521d6e063f434397f4ea43c1dc7f8e8c229dee388e028449ed174e76dcff6",
+    "examples/v1/document_types.lobo": "1cc8bb29ddc1d68d215c275b756d77f44fdba8b1874a0512a4be04f5d898d4a5",
+    "examples/v1/document_types_changed.lobo": "3402e1b4628ac79ddb359a8661a75aa72a82dac3e94480292c4a344b5e27d71c",
+    "examples/v1/document_validate.lobo": "8f5c34a97d945324feb17ec5cd55608f0577d75a78ee9930e57d64b718a1c88e",
+    "examples/v1/document_validate_changed.lobo": "79d942172011cc503aaed31d9d211efcce92f918feda3c615b915f24fa8f4ad8",
+    "examples/v1/numerical.lobo": "49098ee7252d01c9fa377f55b0a973be9ade74ea2907ae976ca70cc46b354035",
+    "examples/v1/numerical_changed.lobo": "fc9f1d9b72822f30262f8595ea79d06fb0c239a44f9e247fc73b6585961af1ce",
+    "examples/v1/sequences.lobo": "64e56ed89f583f71953708ff3781fd0515138fc53f50b0bea635d25451d5522c",
+    "examples/variants.lobo": "b7e47a5753281fe34efc9a10a91cd591d8cc50d8f7f39a9e480990dfb24b222b",
+    "examples/web-server/.gitignore": "337613937fda3acd2ba7834aa3e1b1eacfe04c9cafb336dfd6dfb7b6827d8f3e",
+    "examples/web-server/Cargo.lock": "3b3127a8d22ec5287a00ffa9761327efd56569c26e55646a2b272fd906ce4a9e",
+    "examples/web-server/Cargo.toml": "3a04ed84c14c821f9227cd0f113f3b27efb17b7831041d9e5e931af3112673ac",
+    "examples/web-server/README.md": "377b1c7e58a586d0de93f5fe229e65cb94254b40df53736568a2b74fa2254cfc",
+    "examples/web-server/app.lobo": "35bc3e7cce33585661b94d43c403637a506cd59603a8c7e3378ac3ae5e66997c",
+    "examples/web-server/build.py": "e80b4b863fa572d21fe8669a885dfd09a9ae25865504702071a48d8a857775f1",
+    "examples/web-server/host.rs": "bcc686d6db74d1f54150ccee13d2f9990dc616480441c6a121d1cf5bca60824f",
+    "examples/web-server/test_server.py": "e51d5a8db07dd0e2439132b85cbda82ae1b36d8f7415dad5613f16f19de9bf14",
+    "libraries/http/README.md": "fbf2077a802d4addc115631b8bdcf451f1dba5e72181aa0a93c47654db5d3af5",
+    "libraries/http/http.lobo": "0abe60f6076436752ee25ff306a713dbe0fd8b27288c30aaa4dd6795655742f1",
+    "libraries/json/README.md": "95383fa980e3ef2e7c6de868ffe8823e43afc738cd05752c70641c665805cfd8",
+    "libraries/json/json.lobo": "5969b28672a3cdf07c2d99a7efb743468fd354562549e54c237d3af8855f405b",
+    "scripts/check.sh": "d269d1d8eb0872e1c68452c8d79eca8c5569e2b5905518a87db497a15e68bd5c",
+    "scripts/compare.py": "ef168e41aa0ea2cf42cd0c2bf787646af6c6c31e1565ff50736685451c1e3bc1",
+    "scripts/release.py": "bac2e591e4146a517020b79720a76c9a15610945135a5c588934e5226d157cac",
+    "spec/README.md": "2005554069d2aeadc8f65dffe5e4ab505f3bdb8d7d98f7de23ef508a03ff4a48",
+    "spec/agent-testing-v0.1.md": "dc9c1fb4b7f3aca5cc70a2cb844139190ec16218ee3ddb7759653f2d0fc4ab0e",
+    "spec/checked-artifact-v0.1.md": "8e85e37b7a89812f135ccb796e083ea95771032d267e55bc9c0d18f53fa56cdf",
+    "spec/checked-artifact-v0.2.md": "b13203846b1eb62eeb73445ef422cb526f7ae33d1e6804ecdef20e33c6365ff7",
+    "spec/checked-artifact-v0.3.md": "4874fc7ba430389d8d3bf4df3c6fc34b2b5bb949ecfe646383e3f6fc04652b15",
+    "spec/conformance/core-cases.json": "076f50cc9a45b7588eed4d150bb289fcdf04b0dcc7435dd871e71ef388cf71df",
+    "spec/core-v0.1.md": "c3fe3c05e21bd22c9df8f9ff78c65f3c645f127b10350c93a888c5f133f16854",
+    "spec/core-v0.10.md": "2ca585067a2c5113ce335847f433489c79a71d63471c2443786157038b60953e",
+    "spec/core-v0.11.md": "275105a2b66f5f0f6ddb12828d3e30db47f8603933654ea92b6bb3d5597ba8f9",
+    "spec/core-v0.12.md": "f02ddafe0a6196c15671a51e08aa12105ce216df1edb1a8354f54cfccc9e15c4",
+    "spec/core-v0.2.md": "9cbdbe1ddd2a55ce69b3333d5984a12d437ed225d856668c69edfbfd2a4b1ad2",
+    "spec/core-v0.3.md": "96e39f958c14b082ad0f3a0c72dc0b3318a7c1c442812b35c338d35b00759543",
+    "spec/core-v0.4.md": "84828c9c83b0c0b70d278e2458d77e01231bfd75899a99193b80a762b78ede83",
+    "spec/core-v0.5.md": "02ad206aa3cf73c38a8c13d082cdd7d0ea61c45a4dd2ab304497df2cc7c326cc",
+    "spec/core-v0.6.md": "3d8737fe0d67ef67916ba63fc6d91386d9ff983c9148d2b2c671048a0cf35245",
+    "spec/core-v0.7.md": "0111fcfce8f7ba3ca9abfa027282113dcb6c31df7fb2d946847260f392efb221",
+    "spec/core-v0.8.md": "790cfe562577be3dafa5ca3d2028e34d8782cbb36731fe45c29560a4badc6887",
+    "spec/core-v0.9.md": "4bc8977f5151c72df856a06da8cc1ff136a9fb355681b47075bbd17d570d5379",
+    "spec/core-v1.0.md": "8dbc2ca888f49b84125a8faedf39160bb1eab27e0f25b336b1ef8f87f14f3b2b",
+    "spec/core-v1.1.md": "98c9b16d2bd72229464751f1d6c03790efde00a234bf7d2add2306f30b785361",
+    "spec/generic-reuse-workload.md": "53e5d3097494f3deb5379c77a343997dfa52f47edb6c3915006dac05082b244f",
+    "spec/language-milestone-workloads.md": "f0be02538657fc901e9241049314b75d03b0472bc776ad3748d63c5c847a2b4d",
+    "spec/language-v1-acceptance.md": "33e7c84c36db6bcf74059f57e08e3eaa550e1235955d77eae4e6ca4afbed5f33",
+    "spec/native-llvm-v0.1.md": "580611e7fc27523e4aed69b9064a7c688096c8254eecf9a53541f93994045b21",
+    "spec/native-v0.1.md": "befed14019840eea1988bf6ff982d531df105bb0d1b057e765e820ed72cdc0b6",
+    "spec/recursive-ast-workload.md": "3138f238b71d5d12001391dc3d2f8cf054a1a59622608699732bcc05441c7a3a",
+    "spec/schemas/conformance-case.schema.json": "ef3a27dd2a0caa8249c1f1439eb0abf96983350456db4efaabfdd2e2cc24c443",
+    "spec/schemas/request-envelope.schema.json": "2abad3a1e8bbbb980cfa0fbe2c9c38a789ba94215bd6481f677d15cfe7c24409",
+    "spec/schemas/response-envelope.schema.json": "a4e7d16a8bc25e06d5a571259df750f7c024319922e419bae57a8d66c64e7ca4",
+    "spec/schemas/tool-descriptor.schema.json": "2e375db03b357fee59094e46252dcd847a3adf3fc04fae39457bf98a62bc17ef",
+    "spec/source-diagnostics-v0.1.md": "d531df2c57fdd4ec2917fb029a8fc54f441f6632fbfb7c2b4cfe3b8168e6eb3b",
+    "src/agent_testing/mod.rs": "042827b695ce2d72f70d1c7ebf191a09a49ddd7b60e995723446e0a00886942b",
+    "src/agent_testing/process.rs": "b008879f8838f0a19ab8358588d1f26956a33c3a996c7f18565d11989fd0562f",
+    "src/bin/lobo-test.rs": "b515be623037786da54bc49b3e7880b535d1d46a672379b007617d7d2c099904",
+    "src/buffers.rs": "0ddb57c285f24319f1726ef8721baec05c01fca28f4e9b261f4b30d72cc9e149",
+    "src/floats.rs": "995acfb181f0c3e56bb9062208a2551e516cfd4d0cc9544b8f9a2396e80f0481",
+    "src/generics.rs": "83d0fa9105d86b6d152063460d9e7041223f4d7d0be543cada7f62abe8d61f6a",
+    "src/lib.rs": "3f8315e75e86d0c13ed0a3ffd67e42ec19bef036822b7f7811781e2a814ec9d8",
+    "src/lists.rs": "e070811e4d6420fe414efdafaebb86bc56f3c66d0926c0e6f67e937d9509ec7c",
+    "src/main.rs": "a27361d1938e9a43e9f991ab6680cd292a9ed6ea286478f3f1db7c091c96795d",
+    "src/modules.rs": "0232bb9b876c4e10695b050a8043d339bafa13a60482ebf3788f308fa7310f9c",
+    "src/native.rs": "04e7f470bbfc288cd7316c7168b1e8fb2ca0def89afedc461f23e57c9b25e3ff",
+    "src/native_buffers.c": "9308ae7edb1da47d0323a38ffa84e4357d6f391084bea17757e13c45ad90942c",
+    "src/native_floats.c": "220319911c79b000771df91778e78f1e8b5d6d73bd3b78ebdf24df1ca2a3858c",
+    "src/native_lists.rs": "a09186f2cc70018d3be71bdf0c640ea307a580be3f6fadd988c4ec69040b40f7",
+    "src/native_llvm.rs": "b9cd7c19ab1156b55dddafb0104b89b7dc5ed9d72ffe70a3683984de616f13b4",
+    "src/native_llvm_runtime.c": "4708bd969fc5e58cba4d913dd9e0bde8bf62ae7da74af7f562f662874a0e0ec3",
+    "src/native_runtime.c": "1cbf798375e88d69dfb1558f7ddc9ff1719378368d70d0338e8350f41329952d",
+    "src/operators.rs": "172142aeed79610dd81d18bce6e00f0bff4938f48db97f0878688819b8ea4eee",
+    "src/records.rs": "7c820e8f1c41d573582828cb8e099aa71d8bb96080fe4a0da5cdb4f8cf8d233c",
+    "tests/actions.rs": "debe4f5de86669ab7c916d6689b89d27da23095359cf007bb0da95db089ddffa",
+    "tests/agent_testing.rs": "83d50e1a560c1d8ccda150a0dd8134be94c26e34ec3ee6b1de390945661c2021",
+    "tests/cli.rs": "736a926b863997badad5fd71cf2a932c1b6717a50df2484733b393771b10b78e",
+    "tests/conformance.rs": "7acb8d726a6e16d6182fea130d6bcd8ecfcd5301760581553f8d99774796143e",
+    "tests/floats.rs": "2be72082648b818abac116d5c0bffa0db52667de4b5c36ba7c60bce155537e59",
+    "tests/fold.rs": "eb7bd8579abaa2e242362a85287c613b5417df3a3de375fcb0ae53fc03327758",
+    "tests/function_values.rs": "d4196786e2b5bbee3ee5057afac23d14b53f967620c40e0c9c951620bf17ee4f",
+    "tests/generic_data.rs": "f1d3a6ce525272d6d51dc72b34403b444c918e0fcdcf024c76f9d0d232396e88",
+    "tests/generic_definitions.rs": "7ec339e71a3bd4a6b85610fa9d67781991fe919ba08190a8f36e1b2178fdd282",
+    "tests/generics.rs": "b82d6421cbdca68e34c617bbccfaa62a509889703a3a5ac5989a3fc64ed68fb4",
+    "tests/http_helpers.rs": "b9be11f0700ff70ed381c5643043a395738395ff970e64c3e2dbfd1422939eef",
+    "tests/json_helpers.rs": "0f1c799f59de235fd72f544df9db2643c131d3b21ce44309e05b95e3496a8c16",
+    "tests/lists.rs": "85e25183b85be99b4cc9e4cba9e562002fb250817c730a0ba8ba93141202d5b9",
+    "tests/llvm.rs": "24ad8e3db49e109b26394455b2ce84621f3017367e149672bab5a3f624f90fc8",
+    "tests/modules.rs": "eba3058fdfd1e81538aac68bec063d938ae0e6abab275f27dc77e97c4e6b28e8",
+    "tests/native.rs": "cc0b43d7def800ec20208250695567ea37400056df85c4fc61693cc8fd03e176",
+    "tests/native_generated.rs": "635b44ae522b03d00c505bdfb435e9f9d33a5202239d82d0aaa05bcd76e038b2",
+    "tests/operators.rs": "abf3fd4f23fb022f4b6fb6cfaed7ff7056b37678d3ed517efc1b80f1b35831e6",
+    "tests/protocol_actions.rs": "03b40b1873e5b27b598cf070572fa0b552105364991337e8992a99317cd47315",
+    "tests/records.rs": "0b4185415df6e84b7c6030b43f942f3ebba9e3072bd6e4413492a27c88ad7366",
+    "tests/recursive_values.rs": "dabcf0a739e46420b2b0fa9a8eb7ca3113ff351a893dc56097b030eeaf2f2e6a",
+    "tests/source_locations.rs": "bbe8bfa6479acf373d4b8811bde36900c7dfbc160f979522e25645c5ce7f4091",
+    "tests/support/mod.rs": "4e2c2e83760d3bcff06688c7d778a0c2e190ea2b52d5035509549b266b870013",
+    "tests/text.rs": "77a1fa12a174c7e111a3ab9251cb7db6bd2dde1af6c54fa4354f4b047c673c7e",
+    "tests/tree.rs": "4847943a3f80c95612584a5ee21633712e853785958befa7af8e28db24a28e9e",
+    "tests/v1_acceptance.rs": "a6bf6d2ea77006361ea541a4f53b27272eb609fbf9af8cea2121d289b6b9e1a7",
+    "tests/variants.rs": "bd22c21508e31485804f356725d3112f44138ed54e08ca3f9fec2959daa9aef6",
+    "tests/while.rs": "a9694d8bfa391a74f71fa3c3954013a37eb651f84129b1c2b90d7ef2ad11e8e9",
+    "tests/workloads.rs": "bcd847d1fdcf069250ad5f535836eb47dbf7b655dbe8643bfaae705d81dd8ab2",
+    ".vscode/settings.json": "0928075d47756737d58f6f17fac827f913e63bb753ea77b4349696bfcb3d6673"
+  },
+  "source_archive": {
+    "path": "benchmarks/private-evidence/json-helpers-20261114/source.tar.gz",
+    "bytes": 490714,
+    "sha256": "80bbc8d3b61f91e411213297f257b6806e7544b0135a387346061732517120b6"
+  },
+  "preservation": {
+    "directory": "benchmarks/private-evidence/json-helpers-20261114",
+    "tools": "benchmarks/private-evidence/json-helpers-20261114/tools.json",
+    "logs": 15,
+    "scope": "local workspace"
+  },
+  "limits": {
+    "parsing_external_json": "future work",
+    "f64_decimal_conversion": "future work",
+    "decimal_numbers": "validated lexical text, without numeric range conversion",
+    "duplicate_object_names": "rejected",
+    "object_duplicate_comparison_cost": "can be quadratic in field count",
+    "resource_bounds": "ordinary language fuel/heap/text/output admission; HTTP host has separate body policy",
+    "agent_construction_quality": null,
+    "agent_comprehension": null,
+    "agent_token_usage": null,
+    "runtime_speed": null
+  },
+  "standard_sources": [
+    {
+      "title": "RFC 8259",
+      "url": "https://www.rfc-editor.org/rfc/rfc8259.html",
+      "used_for": [
+        "number grammar",
+        "duplicate-name policy context"
+      ]
+    }
+  ]
+}

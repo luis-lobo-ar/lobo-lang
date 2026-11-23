@@ -1,0 +1,26 @@
+module comparison @id("comparison");
+variant State @id("comparison.state") { Draft(I64), Approved(I64), Paid(I64), Invalid }
+function valid @id("comparison.valid")(amount: I64) -> Bool {
+  amount >= 0 && amount <= 100
+}
+function decode @id("comparison.decode")(kind: I64, amount: I64) -> State {
+  if kind == 0 { State::Draft(amount) } else {
+    if kind == 1 { State::Approved(amount) } else {
+      if kind == 2 { State::Paid(amount) } else { State::Invalid }
+    }
+  }
+}
+function step @id("comparison.step")(state: State, action: I64) -> State {
+  match (state) {
+    Draft(n) { if action == 0 { State::Approved(n) } else { State::Invalid } },
+    Approved(n) { if action == 1 { State::Paid(n) } else { State::Invalid } },
+    Paid(n) { if action == 2 { State::Draft(n) } else { State::Invalid } },
+    Invalid { State::Invalid }
+  }
+}
+function code @id("comparison.code")(state: State) -> I64 {
+  match (state) { Draft(n) { n }, Approved(n) { 1000 + n }, Paid(n) { 2000 + n }, Invalid { -900 } }
+}
+function run @id("comparison.run")(kind: I64, amount: I64, action: I64) -> I64 {
+  if !valid(amount) { -100 } else { code(step(decode(kind, amount), action)) }
+}

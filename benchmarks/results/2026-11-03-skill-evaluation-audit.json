@@ -1,0 +1,274 @@
+{
+  "format": "lobo-skill-evaluation-audit/0.1",
+  "report_sha256": "902bcda39c495d3e27b83a850e4150907ef3cc211fe2dba262286d8197170236",
+  "auditor_sha256": "8cee4c95848980bede66134591b25551780762458791a08bd9384b675606b0ef",
+  "limitations": "Heuristic path/parent probes plus command review, not a shell parser or containment proof. No trial excluded or primary acceptance changed.",
+  "trials": [
+    {
+      "parent_scope_probes": [],
+      "outside_file_changes": [],
+      "lobo_reference_commands": [],
+      "mcp_calls": 0,
+      "index": 0,
+      "task": "rle",
+      "arm": "guide",
+      "client_workflow_verified": true,
+      "raw_events_sha256": "8b7ffab15b4eaa35f966c5b8aa9f11f436219e9a168f55548d8a3b0cc11d734e",
+      "workflow_adherent": true
+    },
+    {
+      "parent_scope_probes": [],
+      "outside_file_changes": [],
+      "lobo_reference_commands": [
+        "/usr/bin/zsh -lc 'cat check.py spec/README.md .agents/skills/lobo-programming/references/tools.md .agents/skills/lobo-programming/references/language.md'"
+      ],
+      "mcp_calls": 0,
+      "index": 1,
+      "task": "rle",
+      "arm": "skill",
+      "client_workflow_verified": true,
+      "raw_events_sha256": "0daf691720952d62214d70631497bbfa0e0a55117240f69bf9e69be0a283b161",
+      "workflow_adherent": true
+    },
+    {
+      "parent_scope_probes": [],
+      "outside_file_changes": [],
+      "lobo_reference_commands": [
+        "/usr/bin/zsh -lc 'cat .agents/skills/lobo-programming/references/tools.md .agents/skills/lobo-programming/references/language.md && cat spec/README.md'"
+      ],
+      "mcp_calls": 0,
+      "index": 2,
+      "task": "clip",
+      "arm": "skill",
+      "client_workflow_verified": true,
+      "raw_events_sha256": "5191f6a6354372ad0573c3cb76ad4bca27f8cc5c40657dcdcf398559bfdedf72",
+      "workflow_adherent": true
+    },
+    {
+      "parent_scope_probes": [],
+      "outside_file_changes": [],
+      "lobo_reference_commands": [],
+      "mcp_calls": 0,
+      "index": 3,
+      "task": "clip",
+      "arm": "guide",
+      "client_workflow_verified": true,
+      "raw_events_sha256": "b60f7d5bc4e701c45ce6a24d66c1eeb4e0cdb3114ddb259e3a8746e2c1dd1248",
+      "workflow_adherent": true
+    },
+    {
+      "parent_scope_probes": [
+        "/usr/bin/zsh -lc 'for p in /tmp/AGENTS.md /AGENTS.md; do if [ -f \"$p\" ]; then cat \"$p\"; fi; done; rg --files -g '\"'AGENTS.md' -g '\"'!spec/**'\"' -g '\"'!.git/**'\"' -g '\"'!.agents/**'\"'\""
+      ],
+      "outside_file_changes": [],
+      "lobo_reference_commands": [
+        "/usr/bin/zsh -lc 'cat .agents/skills/lobo-programming/references/language.md; cat .agents/skills/lobo-programming/references/tools.md; cat spec/README.md'"
+      ],
+      "mcp_calls": 0,
+      "index": 4,
+      "task": "rle",
+      "arm": "skill",
+      "client_workflow_verified": true,
+      "raw_events_sha256": "3f9a7d88c95757e1cbcba74d177dae7f0af524b13434e2f4831db8ee4376c914",
+      "workflow_adherent": false
+    },
+    {
+      "parent_scope_probes": [],
+      "outside_file_changes": [],
+      "lobo_reference_commands": [],
+      "mcp_calls": 0,
+      "index": 5,
+      "task": "rle",
+      "arm": "guide",
+      "client_workflow_verified": true,
+      "raw_events_sha256": "db1ca180e7463e5f5c72b744603b2a4eea3aa12f13210cff378402a169a8f4ae",
+      "workflow_adherent": true
+    },
+    {
+      "parent_scope_probes": [],
+      "outside_file_changes": [],
+      "lobo_reference_commands": [],
+      "mcp_calls": 0,
+      "index": 6,
+      "task": "clip",
+      "arm": "guide",
+      "client_workflow_verified": true,
+      "raw_events_sha256": "19b110b3a7d788e0c77912196b2d7438ceed05d47bd195e23e7fab551a64b9db",
+      "workflow_adherent": true
+    },
+    {
+      "parent_scope_probes": [
+        "/usr/bin/zsh -lc \"cat .agents/skills/lobo-programming/references/language.md .agents/skills/lobo-programming/references/tools.md; cat spec/README.md; rg --files -g AGENTS.md -g '\"'!spec/**'\"' -g '\"'!**/.git/**'\"' . ..\""
+      ],
+      "outside_file_changes": [],
+      "lobo_reference_commands": [
+        "/usr/bin/zsh -lc \"cat .agents/skills/lobo-programming/references/language.md .agents/skills/lobo-programming/references/tools.md; cat spec/README.md; rg --files -g AGENTS.md -g '\"'!spec/**'\"' -g '\"'!**/.git/**'\"' . ..\""
+      ],
+      "mcp_calls": 0,
+      "index": 7,
+      "task": "clip",
+      "arm": "skill",
+      "client_workflow_verified": true,
+      "raw_events_sha256": "8251bf75c4e48c6f4b2fe4d01334d342c9c383c474afb174a5d15debf57a9209",
+      "workflow_adherent": false
+    },
+    {
+      "parent_scope_probes": [],
+      "outside_file_changes": [],
+      "lobo_reference_commands": [],
+      "mcp_calls": 0,
+      "index": 8,
+      "task": "rle",
+      "arm": "guide",
+      "client_workflow_verified": true,
+      "raw_events_sha256": "b794ee5021bd8603efe68303868fa483fb77f0cf0a492971d17be31bacddfae4",
+      "workflow_adherent": true
+    },
+    {
+      "parent_scope_probes": [
+        "/usr/bin/zsh -lc 'for f in /tmp/AGENTS.md /AGENTS.md; do if [ -f \"$f\" ]; then cat \"$f\"; fi; done'"
+      ],
+      "outside_file_changes": [],
+      "lobo_reference_commands": [
+        "/usr/bin/zsh -lc 'cat .agents/skills/lobo-programming/references/tools.md && cat .agents/skills/lobo-programming/references/language.md && cat spec/README.md'"
+      ],
+      "mcp_calls": 0,
+      "index": 9,
+      "task": "rle",
+      "arm": "skill",
+      "client_workflow_verified": true,
+      "raw_events_sha256": "efddcd6ea10d78e477aed0ac8a0719a7feed39031beb3ed23df17acd2a3da217",
+      "workflow_adherent": false
+    },
+    {
+      "parent_scope_probes": [],
+      "outside_file_changes": [],
+      "lobo_reference_commands": [
+        "/usr/bin/zsh -lc 'cat program.lobo helpers.lobo; cat check.py; cat .agents/skills/lobo-programming/references/language.md; cat .agents/skills/lobo-programming/references/tools.md; cat spec/README.md'"
+      ],
+      "mcp_calls": 0,
+      "index": 10,
+      "task": "clip",
+      "arm": "skill",
+      "client_workflow_verified": true,
+      "raw_events_sha256": "8a93bc5db8be6d5a09af8bee457ca1f67cd1a85d89e70caca8ac78e860d7a4fa",
+      "workflow_adherent": true
+    },
+    {
+      "parent_scope_probes": [],
+      "outside_file_changes": [],
+      "lobo_reference_commands": [],
+      "mcp_calls": 0,
+      "index": 11,
+      "task": "clip",
+      "arm": "guide",
+      "client_workflow_verified": true,
+      "raw_events_sha256": "4e4cd4e51f49ef723828fa5f13512b8f7fee8ae19ec3e1aa879997b3d1afa922",
+      "workflow_adherent": true
+    },
+    {
+      "parent_scope_probes": [],
+      "outside_file_changes": [],
+      "lobo_reference_commands": [
+        "/usr/bin/zsh -lc 'cat .agents/skills/lobo-programming/references/language.md .agents/skills/lobo-programming/references/tools.md; cat spec/README.md'"
+      ],
+      "mcp_calls": 0,
+      "index": 12,
+      "task": "rle",
+      "arm": "skill",
+      "client_workflow_verified": true,
+      "raw_events_sha256": "8470b57d9860c9e3c9aca240f34a04fb324e469f5392b5b1e11fea0efd602f1d",
+      "workflow_adherent": true
+    },
+    {
+      "parent_scope_probes": [],
+      "outside_file_changes": [],
+      "lobo_reference_commands": [],
+      "mcp_calls": 0,
+      "index": 13,
+      "task": "rle",
+      "arm": "guide",
+      "client_workflow_verified": true,
+      "raw_events_sha256": "0679b03f6cdd5c1409ecc48d9f2d3f825885ee1d6b55ddb96b92e9b986c7cab1",
+      "workflow_adherent": true
+    },
+    {
+      "parent_scope_probes": [],
+      "outside_file_changes": [],
+      "lobo_reference_commands": [],
+      "mcp_calls": 0,
+      "index": 14,
+      "task": "clip",
+      "arm": "guide",
+      "client_workflow_verified": true,
+      "raw_events_sha256": "0bedbdb6a2671e57d8db6ada2fab9553bf7d3b648009bfc4ef84827bf5f4862c",
+      "workflow_adherent": true
+    },
+    {
+      "parent_scope_probes": [],
+      "outside_file_changes": [],
+      "lobo_reference_commands": [
+        "/usr/bin/zsh -lc 'cat .agents/skills/lobo-programming/references/language.md .agents/skills/lobo-programming/references/tools.md; cat spec/README.md'"
+      ],
+      "mcp_calls": 0,
+      "index": 15,
+      "task": "clip",
+      "arm": "skill",
+      "client_workflow_verified": true,
+      "raw_events_sha256": "8379cc02b058f84f7a2bf4a4aeef5ead83eb013c133bc63dc5511c590362f516",
+      "workflow_adherent": true
+    },
+    {
+      "parent_scope_probes": [],
+      "outside_file_changes": [],
+      "lobo_reference_commands": [],
+      "mcp_calls": 0,
+      "index": 16,
+      "task": "rle",
+      "arm": "guide",
+      "client_workflow_verified": true,
+      "raw_events_sha256": "a38cc2a833765c811d0f2b54c7eff36e0b352f390feb08c96b24915447a2b654",
+      "workflow_adherent": true
+    },
+    {
+      "parent_scope_probes": [],
+      "outside_file_changes": [],
+      "lobo_reference_commands": [
+        "/usr/bin/zsh -lc 'cat .agents/skills/lobo-programming/references/language.md && cat .agents/skills/lobo-programming/references/tools.md'"
+      ],
+      "mcp_calls": 0,
+      "index": 17,
+      "task": "rle",
+      "arm": "skill",
+      "client_workflow_verified": true,
+      "raw_events_sha256": "9188a9d89f178aaa659d7bd9ca469f93a8fc42ad06d14123d731f8d68bcfefa2",
+      "workflow_adherent": true
+    },
+    {
+      "parent_scope_probes": [],
+      "outside_file_changes": [],
+      "lobo_reference_commands": [
+        "/usr/bin/zsh -lc 'cat .agents/skills/lobo-programming/references/language.md .agents/skills/lobo-programming/references/tools.md spec/README.md'"
+      ],
+      "mcp_calls": 0,
+      "index": 18,
+      "task": "clip",
+      "arm": "skill",
+      "client_workflow_verified": true,
+      "raw_events_sha256": "d91d507ab76e9ea2f42d8b13bc5c55b94d1fd0b1ed5e6cd6532e92e1531a8f7b",
+      "workflow_adherent": true
+    },
+    {
+      "parent_scope_probes": [],
+      "outside_file_changes": [],
+      "lobo_reference_commands": [],
+      "mcp_calls": 0,
+      "index": 19,
+      "task": "clip",
+      "arm": "guide",
+      "client_workflow_verified": true,
+      "raw_events_sha256": "b930cc5e8374b3866c873262e270ee38eb4f3bf23d0b941f96ebe640eec26343",
+      "workflow_adherent": true
+    }
+  ]
+}

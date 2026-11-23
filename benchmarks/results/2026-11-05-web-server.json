@@ -1,0 +1,231 @@
+{
+  "status": "passed",
+  "recorded_at": "2026-11-05T21:41:34.093638-06:00",
+  "scope": "user-selected sample; native Lobo routing plus native Rust transport; language 1.0 unchanged",
+  "decision": "decisions/0035-native-web-server-sample.md",
+  "live_address": "127.0.0.1:8080",
+  "binaries": [
+    {
+      "path": "dist/web-server/server",
+      "bytes": 504600,
+      "sha256": "1a16efb4a65020233c0ed0b42632a56eb54f706892f3abe077acd89abac8db0b"
+    },
+    {
+      "path": "dist/web-server/handler",
+      "bytes": 22896,
+      "sha256": "c274603bbc32fdd728569767f0c7fe78edcdc5be4319becbbc371ebb94fe8d48"
+    }
+  ],
+  "source_files": [
+    {
+      "path": "decisions/0035-native-web-server-sample.md",
+      "bytes": 2441,
+      "sha256": "24562300115932b0c867ae7b20c6759f3e2538ea7cfc4aa8c34d0c0e0ba14af1"
+    },
+    {
+      "path": "examples/web-server/.gitignore",
+      "bytes": 23,
+      "sha256": "337613937fda3acd2ba7834aa3e1b1eacfe04c9cafb336dfd6dfb7b6827d8f3e"
+    },
+    {
+      "path": "examples/web-server/Cargo.lock",
+      "bytes": 3057,
+      "sha256": "3b3127a8d22ec5287a00ffa9761327efd56569c26e55646a2b272fd906ce4a9e"
+    },
+    {
+      "path": "examples/web-server/Cargo.toml",
+      "bytes": 270,
+      "sha256": "3a04ed84c14c821f9227cd0f113f3b27efb17b7831041d9e5e931af3112673ac"
+    },
+    {
+      "path": "examples/web-server/README.md",
+      "bytes": 3834,
+      "sha256": "19639e470583563e0d96558d307993da06c38ae792da10064221884648a07806"
+    },
+    {
+      "path": "examples/web-server/app.lobo",
+      "bytes": 1180,
+      "sha256": "d5e83625ad5fdfbc809f69cd82d239c169375f2b69dfafcd9bc5abfa1187f248"
+    },
+    {
+      "path": "examples/web-server/build.py",
+      "bytes": 2188,
+      "sha256": "b577355d69e85a0c43074868355b3937caf9a20366f0b9ae0d86ed9a39df57c9"
+    },
+    {
+      "path": "examples/web-server/host.rs",
+      "bytes": 11435,
+      "sha256": "bcc686d6db74d1f54150ccee13d2f9990dc616480441c6a121d1cf5bca60824f"
+    },
+    {
+      "path": "examples/web-server/test_server.py",
+      "bytes": 7348,
+      "sha256": "589f7a01fed0fbdbb39aa9e05833692dc95dc03f0850a94de1fb8f89224b2ce0"
+    }
+  ],
+  "checks": {
+    "host_unit_tests": 3,
+    "python_acceptance_tests": 6,
+    "native_route_backends": [
+      "C",
+      "LLVM"
+    ],
+    "route_cases_per_backend": 7,
+    "core_rust_tests": 185,
+    "clippy_warnings_denied": "passed",
+    "format": "passed",
+    "documentation": "passed",
+    "skill_validation": "passed",
+    "frozen_release_artifact_hashes_verified": 86,
+    "compiler_and_editor_sources_unchanged": true
+  },
+  "live_requests": [
+    {
+      "url": "http://127.0.0.1:8080/health",
+      "status": 200,
+      "headers": {
+        "Date": "Fri, 06 Nov 2026 03:40:47 GMT",
+        "Content-Type": "application/json",
+        "Content-Length": "34",
+        "Connection": "close"
+      },
+      "body": "{\"status\":\"ok\",\"language\":\"lobo\"}\n"
+    },
+    {
+      "url": "http://127.0.0.1:8080/greet/Luis",
+      "status": 200,
+      "headers": {
+        "Date": "Fri, 06 Nov 2026 03:40:47 GMT",
+        "Content-Type": "text/plain; charset=utf-8",
+        "Content-Length": "13",
+        "Connection": "close"
+      },
+      "body": "Hello, Luis!\n"
+    }
+  ],
+  "budgets": {
+    "header_bytes": 8192,
+    "header_fields": 32,
+    "target_bytes": 2048,
+    "header_deadline_seconds": 3,
+    "write_timeout_seconds": 3,
+    "handler_fuel": 10000,
+    "handler_heap_cells": 10000,
+    "response_body_bytes": 4096
+  },
+  "preserved_evidence": [
+    {
+      "path": "benchmarks/private-evidence/web-server-20261105/binaries/handler",
+      "bytes": 22896,
+      "sha256": "c274603bbc32fdd728569767f0c7fe78edcdc5be4319becbbc371ebb94fe8d48"
+    },
+    {
+      "path": "benchmarks/private-evidence/web-server-20261105/binaries/server",
+      "bytes": 504600,
+      "sha256": "1a16efb4a65020233c0ed0b42632a56eb54f706892f3abe077acd89abac8db0b"
+    },
+    {
+      "path": "benchmarks/private-evidence/web-server-20261105/logs/web-server-build-byte-prefix.log",
+      "bytes": 444,
+      "sha256": "1d894443506da2188984516ad56ff7bf34fe7c4a44b7ceb3def6c3b61b2c1066"
+    },
+    {
+      "path": "benchmarks/private-evidence/web-server-20261105/logs/web-server-build-final.log",
+      "bytes": 536,
+      "sha256": "409fd5a5fbc064fed7ca7b745ac8cdb2aee673b412aa8b95a2caf41d98ac8fea"
+    },
+    {
+      "path": "benchmarks/private-evidence/web-server-20261105/logs/web-server-build-length-fix.log",
+      "bytes": 444,
+      "sha256": "639c2be503a0d61009911264695e5e9a62e669f7ff88850c9262a2603b235a27"
+    },
+    {
+      "path": "benchmarks/private-evidence/web-server-20261105/logs/web-server-build.log",
+      "bytes": 741,
+      "sha256": "90c0307402517844c51e9c86a43315f5ebf0af1a8ef459051fe84ed4494036d6"
+    },
+    {
+      "path": "benchmarks/private-evidence/web-server-20261105/logs/web-server-clippy.log",
+      "bytes": 368,
+      "sha256": "3e575e8fa58f76d98d22f23b93a1da3edd38f095aeab8c974edb53d1e042e3f2"
+    },
+    {
+      "path": "benchmarks/private-evidence/web-server-20261105/logs/web-server-core-regression.log",
+      "bytes": 20106,
+      "sha256": "47b8fe44f38569964650b627029605890c2cb9c29faa69f53152071bfdb68101"
+    },
+    {
+      "path": "benchmarks/private-evidence/web-server-20261105/logs/web-server-doc-check.log",
+      "bytes": 55,
+      "sha256": "1f11bb3bb382f1877ffa8eec4eb376db85d0ecfa2e1301289bb91fbd2cc966ae"
+    },
+    {
+      "path": "benchmarks/private-evidence/web-server-20261105/logs/web-server-handler-green.log",
+      "bytes": 98,
+      "sha256": "6e161f24114f24250c85a35a47095db85a560287522f27a5578a3d16d1a776b3"
+    },
+    {
+      "path": "benchmarks/private-evidence/web-server-20261105/logs/web-server-handler-red.log",
+      "bytes": 2643,
+      "sha256": "29e9c1dd6d5f6c357166b2e3f67a148c5fc10e2c5217a03e18c4a59e6a9d7ae1"
+    },
+    {
+      "path": "benchmarks/private-evidence/web-server-20261105/logs/web-server-host-final.log",
+      "bytes": 608,
+      "sha256": "25e70537324574fc023436582c47d54a64968b7e43fc01ad576c9c532032212d"
+    },
+    {
+      "path": "benchmarks/private-evidence/web-server-20261105/logs/web-server-host-green.log",
+      "bytes": 608,
+      "sha256": "c92248830a308ef645d71b6c9beb6ad93c5e734b7c49da149f4be9a3ae72ba42"
+    },
+    {
+      "path": "benchmarks/private-evidence/web-server-20261105/logs/web-server-host-red.log",
+      "bytes": 2020,
+      "sha256": "452a783acf0bebcd5b402ea453c274c5bdea791e2c550f8ec6e65fd0a609b1cf"
+    },
+    {
+      "path": "benchmarks/private-evidence/web-server-20261105/logs/web-server-http-boundaries.log",
+      "bytes": 645,
+      "sha256": "a83741d07a8ca6a0336093ca6a35a29a516215fb25d2bb8230da7a3278cc89a5"
+    },
+    {
+      "path": "benchmarks/private-evidence/web-server-20261105/logs/web-server-http-final.log",
+      "bytes": 104,
+      "sha256": "04946a6f188821f37167b9e3e5c14c5a9128d1bcdbab58f90f7f0841a01910d9"
+    },
+    {
+      "path": "benchmarks/private-evidence/web-server-20261105/logs/web-server-http-first.log",
+      "bytes": 5254,
+      "sha256": "5400a0788c85723e7a6d761af67180b03e341dd2c17a615d8771bfedca09f8da"
+    },
+    {
+      "path": "benchmarks/private-evidence/web-server-20261105/logs/web-server-http-length-fix.log",
+      "bytes": 645,
+      "sha256": "8ffe0678925325c939f5bb231615ff467580989be99d256404068a7562df6e49"
+    },
+    {
+      "path": "benchmarks/private-evidence/web-server-20261105/logs/web-server-http-second.log",
+      "bytes": 102,
+      "sha256": "39684bb05196680d0d457482644aa46d4443d4c446d79e1c71eb5c8fd01b976e"
+    },
+    {
+      "path": "benchmarks/private-evidence/web-server-20261105/logs/web-server-live-check.json",
+      "bytes": 790,
+      "sha256": "3489dd48dc58fbdc2ac81abcdfe9bce3640be16e87459e6e27a3264489fac114"
+    },
+    {
+      "path": "benchmarks/private-evidence/web-server-20261105/source.tar.gz",
+      "bytes": 10957,
+      "sha256": "cfd6fc2820f4b64b13627a48baaf43b549407f6fd5c13a265b284b9b46611fe0"
+    }
+  ],
+  "limits": [
+    "loopback only",
+    "sequential one request per connection",
+    "trusted native handler executable",
+    "no OS sandbox or Lobo networking API",
+    "no request body/TLS/keep-alive/persistence",
+    "no throughput or agent-outcome measurement"
+  ]
+}

@@ -1,0 +1,165 @@
+{
+  "format": "lobo-native-interop-review/0.1",
+  "reviewed_on": "2026-11-22",
+  "timezone": "America/Chicago",
+  "kind": "primary-documentation scoping review and unimplemented proposal",
+  "ranking": {
+    "provider": "TIOBE",
+    "month": "2026-11",
+    "languages": [
+      "Python",
+      "C",
+      "Java",
+      "C++",
+      "C#",
+      "JavaScript",
+      "R",
+      "SQL",
+      "Visual Basic",
+      "Go"
+    ],
+    "meaning": "Popularity indicator, not implementation quality or native-interface performance"
+  },
+  "queries": [
+    "TIOBE index November 2026 top 10 programming languages",
+    "site.github.blog octoverse 2025 top 10 programming languages TypeScript Python JavaScript"
+  ],
+  "selection": "Literal current TIOBE ten, official technical docs for mechanisms; Rust added separately because it implements Lobo compiler. GitHub ranking considered, not used.",
+  "sources": [
+    {
+      "id": "ranking",
+      "url": "https://www.tiobe.com/tiobe-index/",
+      "selected_claim": "November 2026 literal top ten; popularity only",
+      "access": "read public primary documentation; revision not frozen"
+    },
+    {
+      "id": "python-ctypes",
+      "url": "https://docs.python.org/3/library/ctypes.html",
+      "selected_claim": "C-compatible types and calls to shared libraries",
+      "access": "read public primary documentation; revision not frozen"
+    },
+    {
+      "id": "python-extensions",
+      "url": "https://docs.python.org/3/extending/index.html",
+      "selected_claim": "CPython native extension modules and runtime interface",
+      "access": "read public primary documentation; revision not frozen"
+    },
+    {
+      "id": "c-linux-sockets",
+      "url": "https://man7.org/linux/man-pages/man2/socket.2.html",
+      "selected_claim": "Linux socket interface exposed through libc",
+      "access": "read public primary documentation; revision not frozen"
+    },
+    {
+      "id": "java-ffm",
+      "url": "https://docs.oracle.com/en/java/javase/25/core/foreign-function-and-memory-api.html",
+      "selected_claim": "Native function and memory interface; JNI alternative",
+      "access": "read public primary documentation; revision not frozen"
+    },
+    {
+      "id": "cpp-linkage",
+      "url": "https://learn.microsoft.com/en-us/cpp/cpp/extern-cpp?view=msvc-170",
+      "selected_claim": "C linkage for native functions",
+      "access": "read public primary documentation; revision not frozen"
+    },
+    {
+      "id": "csharp-pinvoke",
+      "url": "https://learn.microsoft.com/en-us/dotnet/standard/native-interop/pinvoke",
+      "selected_claim": "Managed to unmanaged call declarations",
+      "access": "read public primary documentation; revision not frozen"
+    },
+    {
+      "id": "javascript-node-api",
+      "url": "https://nodejs.org/api/n-api.html",
+      "selected_claim": "ABI-stable C interface for native addons",
+      "access": "read public primary documentation; revision not frozen"
+    },
+    {
+      "id": "node-libuv",
+      "url": "https://docs.libuv.org/en/v1.x/design.html",
+      "selected_claim": "Cross-platform event-driven I/O library",
+      "access": "read public primary documentation; revision not frozen"
+    },
+    {
+      "id": "node-v8",
+      "url": "https://nodejs.org/learn/getting-started/the-v8-javascript-engine",
+      "selected_claim": "JavaScript execution engine written in C++",
+      "access": "read public primary documentation; revision not frozen"
+    },
+    {
+      "id": "r-extensions",
+      "url": "https://cran.r-project.org/doc/manuals/r-release/R-exts.html",
+      "selected_claim": "Registered native routines and foreign-call interfaces",
+      "access": "read public primary documentation; revision not frozen"
+    },
+    {
+      "id": "sql-postgresql",
+      "url": "https://www.postgresql.org/docs/current/xfunc-c.html",
+      "selected_claim": "Provider-specific dynamically loaded C-compatible functions",
+      "access": "read public primary documentation; revision not frozen"
+    },
+    {
+      "id": "visual-basic",
+      "url": "https://learn.microsoft.com/en-us/dotnet/visual-basic/language-reference/statements/declare-statement",
+      "selected_claim": "VB.NET external declarations",
+      "access": "read public primary documentation; revision not frozen"
+    },
+    {
+      "id": "go-cgo",
+      "url": "https://pkg.go.dev/cmd/cgo",
+      "selected_claim": "Go packages calling C",
+      "access": "read public primary documentation; revision not frozen"
+    },
+    {
+      "id": "go-runtime",
+      "url": "https://go.dev/doc/faq#runtime",
+      "selected_claim": "Native-compiled programs with runtime support; no VM required",
+      "access": "read public primary documentation; revision not frozen"
+    },
+    {
+      "id": "rust-ffi",
+      "url": "https://doc.rust-lang.org/nomicon/ffi.html",
+      "selected_claim": "C-compatible foreign interface and wrappers",
+      "access": "read public primary documentation; revision not frozen"
+    },
+    {
+      "id": "python-tls",
+      "url": "https://docs.python.org/3/library/ssl.html",
+      "selected_claim": "OpenSSL-backed TLS API",
+      "access": "read public primary documentation; revision not frozen"
+    },
+    {
+      "id": "node-tls",
+      "url": "https://nodejs.org/api/tls.html",
+      "selected_claim": "Node TLS API",
+      "access": "read public primary documentation; revision not frozen"
+    }
+  ],
+  "lobo_status": {
+    "language": "core/1.6",
+    "native_compilation": "implemented",
+    "general_native_binding": "not implemented",
+    "os_capability_enforcement": "not implemented",
+    "google_auth_app": "not implemented; architecture discussion paused original host approach",
+    "angular_sample": "not implemented"
+  },
+  "proposal": "Typed allowlisted C-compatible native adapter, opaque resources and actual runtime authority checks, Lobo higher-level libraries, one linked application executable",
+  "not_selected": [
+    "Full general-purpose arbitrary symbol/pointer FFI as first slice",
+    "New interpreter or separate host process as required application deployment",
+    "Reimplementation of TLS/cryptography primitives"
+  ],
+  "comparison_programs_executed": false,
+  "agent_outcomes": {
+    "construction_quality": null,
+    "comprehension": null,
+    "tokens": null
+  },
+  "runtime_performance": null,
+  "limits": [
+    "Review is not a systematic survey or accepted implementation decision.",
+    "Versionless source URLs can move; whole external pages were not archived.",
+    "SQL mechanism is a PostgreSQL example; VB example is VB.NET.",
+    "Native code shares process authority; typed wrappers alone are not a sandbox."
+  ]
+}

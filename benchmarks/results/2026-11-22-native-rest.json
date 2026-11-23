@@ -1,0 +1,2437 @@
+{
+  "format": "lobo-native-rest-result/0.1",
+  "date": "2026-11-22",
+  "status": "passed",
+  "compiler": "1.7.3",
+  "extension": "1.7.3",
+  "language": "core/1.7",
+  "abi": 1,
+  "application_language": "Lobo",
+  "native_runtime_language": "C",
+  "compiler_host_language": "Rust",
+  "rust_http_host": false,
+  "target": "Windows 10/11 x64",
+  "windows_profile": "LOBO_WINDOWS_TCP",
+  "artifacts": {
+    "LoboRestApi.exe": {
+      "path": "dist/lobo-rest-api-1.7.3-windows-x64/LoboRestApi.exe",
+      "bytes": 151040,
+      "sha256": "6e37a3ef61e72e87880cda40c02ee0dedf6f25dc4afdd02d63d4f0ad1a63e815"
+    },
+    "LoboRestApi-windows-x64.zip": {
+      "path": "dist/lobo-rest-api-1.7.3-windows-x64/LoboRestApi-windows-x64.zip",
+      "bytes": 102930,
+      "sha256": "5dea042ef2e6acf64f86d32930b789ceebce2c40fff7c7d4bfe962997cd45bbe"
+    }
+  },
+  "build": {
+    "format": "lobo-native-rest-build/0.1",
+    "target": "Windows 10/11 x64",
+    "executable": {
+      "path": "LoboRestApi.exe",
+      "bytes": 151040,
+      "sha256": "6e37a3ef61e72e87880cda40c02ee0dedf6f25dc4afdd02d63d4f0ad1a63e815"
+    },
+    "sources": {
+      "examples/native/rest/app.lobo": "bc97cd11b11dde749430a6a2165cceb4d6bb74db374b66245fc59c6995332938",
+      "examples/native/rest/controller.lobo": "cd7237c76f3480d55a728ab1afeaa55501f8c4be6e3b92156df40a9bdd06c0a4",
+      "libraries/http-server/transport.lobo": "3aebdc88a7c31ccd9d3bb1d23aeb745639a40f4e65be0aa694c950b2c6632f6f",
+      "libraries/http-server/server.lobo": "0b2fbeb3be843ec58c6261a07974ab7820bca3c13150e499e3c05199508fe62e",
+      "libraries/http/http.lobo": "6d01307c09903bb7585b6a4bd06365aef5d460fd1f891f57c794f5df61b0d11a",
+      "libraries/json/json.lobo": "25f3469bb3fe9418e6a2b2898f0bb1c734c2d02c6dfb1de11c350d30c910e42b",
+      "examples/native/rest/app.lobo.ids.json": "d83fa66433609e6e346be3dd426a60cf680d225596fcdcd3bb5b5dc2d04f2b9f",
+      "examples/native/rest/controller.lobo.ids.json": "91473f409492cbf07efcd136bb5aa5c6d74b396e4292912856ea4c124a5f9681",
+      "libraries/http-server/transport.lobo.ids.json": "a4cbce362a3dd774b290b858f446700d682da6ef5e0f88f12fa4f2cb30b92921",
+      "libraries/http-server/server.lobo.ids.json": "c6b7555ce33502d5a628e7e8758555feb18fa00c9ca64265a1b3fb44b8c3f49a",
+      "src/native_windows_tcp.c": "2018bf578e13d83e18b2e69831e87f0e493c2aedc70f0c5aacff495c19876833",
+      "src/native_api.c": "15d789a2129b16e2009c74e28987097c24ed7083a628fea9cc5cd03c43772c20",
+      "src/native_windows_snapshot.c": "2ad986d6ac7cd809a49eb5198566178a06eb63863a0edc994c5e8dcc20b7f48a",
+      "examples/native/rest/launcher.c": "6ce965731afa5e2124e6b97e416042a16c5abdbc120630c3100362e7aecb1cdf",
+      "scripts/build-native-rest.py": "764fd3e6aae7e45a3ffe1e71a2b4f5c987cf7a2fb6ae914081f3eaa5561f60f6"
+    },
+    "compiler_sha256": "bbfa75889b6893a86de0ee20a4a15e9e90306a24f28bb1f17730d9bb4ec5b9b3",
+    "profile": "LOBO_WINDOWS_TCP",
+    "dll_imports": [
+      "WS2_32.dll",
+      "api-ms-win-crt-stdio-l1-1-0.dll",
+      "api-ms-win-crt-runtime-l1-1-0.dll",
+      "api-ms-win-crt-locale-l1-1-0.dll",
+      "api-ms-win-crt-heap-l1-1-0.dll",
+      "api-ms-win-crt-private-l1-1-0.dll",
+      "api-ms-win-crt-string-l1-1-0.dll",
+      "api-ms-win-crt-convert-l1-1-0.dll",
+      "KERNEL32.dll",
+      "api-ms-win-crt-filesystem-l1-1-0.dll",
+      "api-ms-win-crt-math-l1-1-0.dll",
+      "api-ms-win-crt-environment-l1-1-0.dll"
+    ],
+    "commands": [
+      {
+        "command": [
+          "/home/luis/dev/lobo-ar/lobo-lang/target/release/lobo",
+          "compile",
+          "/home/luis/dev/lobo-ar/lobo-lang/examples/native/rest/app.lobo",
+          "--source",
+          "/home/luis/dev/lobo-ar/lobo-lang/examples/native/rest/controller.lobo",
+          "--source",
+          "/home/luis/dev/lobo-ar/lobo-lang/libraries/http-server/transport.lobo",
+          "--source",
+          "/home/luis/dev/lobo-ar/lobo-lang/libraries/http-server/server.lobo",
+          "--source",
+          "/home/luis/dev/lobo-ar/lobo-lang/libraries/http/http.lobo",
+          "--source",
+          "/home/luis/dev/lobo-ar/lobo-lang/libraries/json/json.lobo",
+          "--emit",
+          "c",
+          "-o",
+          "/home/luis/dev/lobo-ar/lobo-lang/dist/lobo-rest-api-1.7.3-windows-x64/rest.generated.c"
+        ],
+        "exit_code": 0,
+        "stdout": "{\"artifact\":\"/home/luis/dev/lobo-ar/lobo-lang/dist/lobo-rest-api-1.7.3-windows-x64/rest.generated.c\",\"entries\":[\"example.rest.main\",\"example.rest.controller.users\",\"example.rest.controller.handle\",\"example.rest.controller.respond\",\"lobo.http.text_response\",\"lobo.http.json_document\",\"lobo.http.not_found\",\"lobo.http.method_not_allowed\",\"lobo.http.read_method\",\"lobo.http.strip_prefix\",\"lobo.http.quote_byte\",\"lobo.http.json_string\",\"lobo.http.server.line_end\",\"lobo.http.server.header_end\",\"lobo.http.server.find_byte\",\"lobo.http.server.token\",\"lobo.http.server.token_range\",\"lobo.http.server.lower\",\"lobo.http.server.header_name\",\"lobo.http.server.whitespace\",\"lobo.http.server.trim_start\",\"lobo.http.server.trim_end\",\"lobo.http.server.visible_value\",\"lobo.http.server.host_value\",\"lobo.http.server.length_value\",\"lobo.http.server.next_header\",\"lobo.http.server.parse\",\"lobo.http.server.reason\",\"lobo.http.server.json_response\",\"lobo.http.server.error_response\",\"lobo.http.server.wire\",\"lobo.http.server.respond\",\"lobo.http.transport.receive\",\"lobo.http.transport.send_all\",\"lobo.http.transport.serve_one\",\"lobo.http.transport.serve\",\"lobo.json.object\",\"lobo.json.field\",\"lobo.json.array\",\"lobo.json.append\",\"lobo.json.has_key\",\"lobo.json.unique_fields\",\"lobo.json.skip_digits\",\"lobo.json.is_number\",\"lobo.json.number_token\",\"lobo.json.integer_text\",\"lobo.json.array_tasks\",\"lobo.json.object_tasks\",\"lobo.json.flatten\",\"lobo.json.stringify\",\"lobo.json.response\"],\"format\":\"c\",\"status\":\"ok\"}\n",
+        "stderr": ""
+      },
+      {
+        "command": [
+          "/home/luis/dev/lobo-ar/lobo-lang/target/windows-snapshot/llvm-mingw-20261117-ucrt-ubuntu-22.04-x86_64/bin/x86_64-w64-mingw32-clang",
+          "-std=c11",
+          "-O3",
+          "-g0",
+          "-DLOBO_WINDOWS_TCP",
+          "-ffunction-sections",
+          "-fdata-sections",
+          "-Dmain=lobo_generated_main",
+          "-c",
+          "/home/luis/dev/lobo-ar/lobo-lang/dist/lobo-rest-api-1.7.3-windows-x64/rest.generated.c",
+          "-o",
+          "/home/luis/dev/lobo-ar/lobo-lang/dist/lobo-rest-api-1.7.3-windows-x64/rest.o"
+        ],
+        "exit_code": 0,
+        "stdout": "",
+        "stderr": ""
+      },
+      {
+        "command": [
+          "/home/luis/dev/lobo-ar/lobo-lang/target/windows-snapshot/llvm-mingw-20261117-ucrt-ubuntu-22.04-x86_64/bin/x86_64-w64-mingw32-clang",
+          "-std=c11",
+          "-O3",
+          "-g0",
+          "-DLOBO_WINDOWS_TCP",
+          "-ffunction-sections",
+          "-fdata-sections",
+          "/home/luis/dev/lobo-ar/lobo-lang/examples/native/rest/launcher.c",
+          "/home/luis/dev/lobo-ar/lobo-lang/dist/lobo-rest-api-1.7.3-windows-x64/rest.o",
+          "-static",
+          "-lbcrypt",
+          "-lws2_32",
+          "-Wl,--gc-sections",
+          "-Wl,-s",
+          "-o",
+          "/home/luis/dev/lobo-ar/lobo-lang/dist/lobo-rest-api-1.7.3-windows-x64/LoboRestApi.exe"
+        ],
+        "exit_code": 0,
+        "stdout": "",
+        "stderr": ""
+      },
+      {
+        "command": [
+          "/home/luis/dev/lobo-ar/lobo-lang/target/windows-snapshot/llvm-mingw-20261117-ucrt-ubuntu-22.04-x86_64/bin/llvm-readobj",
+          "--coff-imports",
+          "/home/luis/dev/lobo-ar/lobo-lang/dist/lobo-rest-api-1.7.3-windows-x64/LoboRestApi.exe"
+        ],
+        "exit_code": 0,
+        "stdout": "\nFile: /home/luis/dev/lobo-ar/lobo-lang/dist/lobo-rest-api-1.7.3-windows-x64/LoboRestApi.exe\nFormat: COFF-x86-64\nArch: x86_64\nAddressSize: 64bit\nImport {\n  Name: WS2_32.dll\n  ImportLookupTableRVA: 0x23BC0\n  ImportAddressTableRVA: 0x23EA8\n  Symbol: WSACleanup (0)\n  Symbol: WSAGetLastError (0)\n  Symbol: WSAPoll (0)\n  Symbol: WSASocketW (0)\n  Symbol: WSAStartup (0)\n  Symbol: accept (0)\n  Symbol: bind (0)\n  Symbol: closesocket (0)\n  Symbol: getsockname (0)\n  Symbol: htonl (0)\n  Symbol: htons (0)\n  Symbol: ioctlsocket (0)\n  Symbol: listen (0)\n  Symbol: ntohs (0)\n  Symbol: recv (0)\n  Symbol: send (0)\n  Symbol: setsockopt (0)\n}\nImport {\n  Name: api-ms-win-crt-stdio-l1-1-0.dll\n  ImportLookupTableRVA: 0x23C50\n  ImportAddressTableRVA: 0x23F38\n  Symbol: __acrt_iob_func (0)\n  Symbol: __p__commode (0)\n  Symbol: __p__fmode (0)\n  Symbol: __stdio_common_vfprintf (0)\n  Symbol: fflush (0)\n  Symbol: fputc (0)\n  Symbol: fputs (0)\n  Symbol: fwrite (0)\n  Symbol: getchar (0)\n  Symbol: puts (0)\n  Symbol: setvbuf (0)\n}\nImport {\n  Name: api-ms-win-crt-runtime-l1-1-0.dll\n  ImportLookupTableRVA: 0x23CB0\n  ImportAddressTableRVA: 0x23F98\n  Symbol: __p___argc (0)\n  Symbol: __p___argv (0)\n  Symbol: _cexit (0)\n  Symbol: _configure_narrow_argv (0)\n  Symbol: _crt_atexit (0)\n  Symbol: _errno (0)\n  Symbol: _exit (0)\n  Symbol: _fpreset (0)\n  Symbol: _initialize_narrow_environment (0)\n  Symbol: _initterm (0)\n  Symbol: _initterm_e (0)\n  Symbol: _seh_filter_exe (0)\n  Symbol: _set_app_type (0)\n  Symbol: _set_invalid_parameter_handler (0)\n  Symbol: abort (0)\n  Symbol: exit (0)\n  Symbol: strerror (0)\n}\nImport {\n  Name: api-ms-win-crt-locale-l1-1-0.dll\n  ImportLookupTableRVA: 0x23D40\n  ImportAddressTableRVA: 0x24028\n  Symbol: _configthreadlocale (0)\n  Symbol: localeconv (0)\n}\nImport {\n  Name: api-ms-win-crt-heap-l1-1-0.dll\n  ImportLookupTableRVA: 0x23D58\n  ImportAddressTableRVA: 0x24040\n  Symbol: _set_new_mode (0)\n  Symbol: calloc (0)\n  Symbol: free (0)\n  Symbol: malloc (0)\n}\nImport {\n  Name: api-ms-win-crt-private-l1-1-0.dll\n  ImportLookupTableRVA: 0x23D80\n  ImportAddressTableRVA: 0x24068\n  Symbol: memcmp (0)\n  Symbol: memcpy (0)\n  Symbol: strchr (0)\n}\nImport {\n  Name: api-ms-win-crt-string-l1-1-0.dll\n  ImportLookupTableRVA: 0x23DA0\n  ImportAddressTableRVA: 0x24088\n  Symbol: strcmp (0)\n  Symbol: strlen (0)\n  Symbol: strncmp (0)\n  Symbol: strnlen (0)\n  Symbol: wcslen (0)\n  Symbol: wcsnlen (0)\n}\nImport {\n  Name: api-ms-win-crt-convert-l1-1-0.dll\n  ImportLookupTableRVA: 0x23DD8\n  ImportAddressTableRVA: 0x240C0\n  Symbol: mbrtowc (0)\n  Symbol: strtoll (0)\n  Symbol: strtoull (0)\n  Symbol: wcrtomb (0)\n}\nImport {\n  Name: KERNEL32.dll\n  ImportLookupTableRVA: 0x23E00\n  ImportAddressTableRVA: 0x240E8\n  Symbol: DeleteCriticalSection (0)\n  Symbol: EnterCriticalSection (0)\n  Symbol: GetConsoleMode (0)\n  Symbol: GetLastError (0)\n  Symbol: GetStdHandle (0)\n  Symbol: GetTickCount64 (0)\n  Symbol: InitializeCriticalSection (0)\n  Symbol: LeaveCriticalSection (0)\n  Symbol: SetHandleInformation (0)\n  Symbol: SetUnhandledExceptionFilter (0)\n  Symbol: Sleep (0)\n  Symbol: VirtualProtect (0)\n  Symbol: VirtualQuery (0)\n}\nImport {\n  Name: api-ms-win-crt-filesystem-l1-1-0.dll\n  ImportLookupTableRVA: 0x23E70\n  ImportAddressTableRVA: 0x24158\n  Symbol: _lock_file (0)\n  Symbol: _unlock_file (0)\n}\nImport {\n  Name: api-ms-win-crt-math-l1-1-0.dll\n  ImportLookupTableRVA: 0x23E88\n  ImportAddressTableRVA: 0x24170\n  Symbol: __setusermatherr (0)\n}\nImport {\n  Name: api-ms-win-crt-environment-l1-1-0.dll\n  ImportLookupTableRVA: 0x23E98\n  ImportAddressTableRVA: 0x24180\n  Symbol: __p__environ (0)\n}\n",
+        "stderr": ""
+      }
+    ],
+    "actual_windows_execution": null
+  },
+  "tests": {
+    "protocol_cases": 30,
+    "protocol_modes": [
+      "eval",
+      "native",
+      "llvm",
+      "sanitized",
+      "llvm-sanitized"
+    ],
+    "rust_full": 263,
+    "editor": 161,
+    "editor_host": "passed",
+    "clippy": "passed",
+    "skills": "passed",
+    "platform_results": {
+      "linux": {
+        "status": "pass",
+        "mode": "linux",
+        "cases": 35,
+        "connections": 38,
+        "server_stdout": "{\"status\":\"ok\",\"kind\":\"value\",\"value\":{\"type\":\"Variant\",\"value\":{\"id\":\"lobo.native.result.I64Result\",\"case\":\"Ok\",\"payload\":{\"type\":\"I64\",\"value\":\"38\"}}}}\n",
+        "server_stderr": "",
+        "command": [
+          "/home/luis/dev/lobo-ar/lobo-lang/target/native-rest/rest-linux-final",
+          "--entry",
+          "example.rest.main",
+          "--arg",
+          "I64:51491",
+          "--arg",
+          "I64:38",
+          "--native-clock",
+          "true",
+          "--native-listen",
+          "127.0.0.1:51491",
+          "--native-calls",
+          "65536",
+          "--native-bytes",
+          "1048576",
+          "--fuel",
+          "100000000",
+          "--heap-cells",
+          "16000000"
+        ],
+        "records": [
+          {
+            "name": "get /health",
+            "wire_hex": "485454502f312e3120323030204f4b0d0a436f6e74656e742d547970653a206170706c69636174696f6e2f6a736f6e0d0a436f6e74656e742d4c656e6774683a2033330d0a436f6e6e656374696f6e3a20636c6f73650d0a0d0a7b22737461747573223a226f6b222c226c616e6775616765223a226c6f626f227d"
+          },
+          {
+            "name": "get /api/users",
+            "wire_hex": "485454502f312e3120323030204f4b0d0a436f6e74656e742d547970653a206170706c69636174696f6e2f6a736f6e0d0a436f6e74656e742d4c656e6774683a2035300d0a436f6e6e656374696f6e3a20636c6f73650d0a0d0a5b7b226964223a2231222c226e616d65223a224c756973227d2c7b226964223a2232222c226e616d65223a22416461227d5d"
+          },
+          {
+            "name": "get /api/users/1",
+            "wire_hex": "485454502f312e3120323030204f4b0d0a436f6e74656e742d547970653a206170706c69636174696f6e2f6a736f6e0d0a436f6e74656e742d4c656e6774683a2032340d0a436f6e6e656374696f6e3a20636c6f73650d0a0d0a7b226964223a2231222c226e616d65223a224c756973227d"
+          },
+          {
+            "name": "get /api/users/2",
+            "wire_hex": "485454502f312e3120323030204f4b0d0a436f6e74656e742d547970653a206170706c69636174696f6e2f6a736f6e0d0a436f6e74656e742d4c656e6774683a2032330d0a436f6e6e656374696f6e3a20636c6f73650d0a0d0a7b226964223a2232222c226e616d65223a22416461227d"
+          },
+          {
+            "name": "head",
+            "wire_hex": "485454502f312e3120323030204f4b0d0a436f6e74656e742d547970653a206170706c69636174696f6e2f6a736f6e0d0a436f6e74656e742d4c656e6774683a2033330d0a436f6e6e656374696f6e3a20636c6f73650d0a0d0a"
+          },
+          {
+            "name": "missing",
+            "wire_hex": "485454502f312e3120343034204e6f7420466f756e640d0a436f6e74656e742d547970653a206170706c69636174696f6e2f6a736f6e0d0a436f6e74656e742d4c656e6774683a2032310d0a436f6e6e656374696f6e3a20636c6f73650d0a0d0a7b226572726f72223a224e6f7420466f756e64227d"
+          },
+          {
+            "name": "method",
+            "wire_hex": "485454502f312e3120343035204d6574686f64204e6f7420416c6c6f7765640d0a436f6e74656e742d547970653a206170706c69636174696f6e2f6a736f6e0d0a436f6e74656e742d4c656e6774683a2033300d0a436f6e6e656374696f6e3a20636c6f73650d0a416c6c6f773a204745542c20484541440d0a0d0a7b226572726f72223a224d6574686f64204e6f7420416c6c6f776564227d"
+          },
+          {
+            "name": "case insensitive headers",
+            "wire_hex": "485454502f312e3120323030204f4b0d0a436f6e74656e742d547970653a206170706c69636174696f6e2f6a736f6e0d0a436f6e74656e742d4c656e6774683a2033330d0a436f6e6e656374696f6e3a20636c6f73650d0a0d0a7b22737461747573223a226f6b222c226c616e6775616765223a226c6f626f227d"
+          },
+          {
+            "name": "no host",
+            "wire_hex": "485454502f312e31203430302042616420526571756573740d0a436f6e74656e742d547970653a206170706c69636174696f6e2f6a736f6e0d0a436f6e74656e742d4c656e6774683a2032330d0a436f6e6e656374696f6e3a20636c6f73650d0a0d0a7b226572726f72223a224261642052657175657374227d"
+          },
+          {
+            "name": "duplicate host",
+            "wire_hex": "485454502f312e31203430302042616420526571756573740d0a436f6e74656e742d547970653a206170706c69636174696f6e2f6a736f6e0d0a436f6e74656e742d4c656e6774683a2032330d0a436f6e6e656374696f6e3a20636c6f73650d0a0d0a7b226572726f72223a224261642052657175657374227d"
+          },
+          {
+            "name": "empty host",
+            "wire_hex": "485454502f312e31203430302042616420526571756573740d0a436f6e74656e742d547970653a206170706c69636174696f6e2f6a736f6e0d0a436f6e74656e742d4c656e6774683a2032330d0a436f6e6e656374696f6e3a20636c6f73650d0a0d0a7b226572726f72223a224261642052657175657374227d"
+          },
+          {
+            "name": "obs fold",
+            "wire_hex": "485454502f312e31203430302042616420526571756573740d0a436f6e74656e742d547970653a206170706c69636174696f6e2f6a736f6e0d0a436f6e74656e742d4c656e6774683a2032330d0a436f6e6e656374696f6e3a20636c6f73650d0a0d0a7b226572726f72223a224261642052657175657374227d"
+          },
+          {
+            "name": "bad header name",
+            "wire_hex": "485454502f312e31203430302042616420526571756573740d0a436f6e74656e742d547970653a206170706c69636174696f6e2f6a736f6e0d0a436f6e74656e742d4c656e6774683a2032330d0a436f6e6e656374696f6e3a20636c6f73650d0a0d0a7b226572726f72223a224261642052657175657374227d"
+          },
+          {
+            "name": "duplicate length",
+            "wire_hex": "485454502f312e31203430302042616420526571756573740d0a436f6e74656e742d547970653a206170706c69636174696f6e2f6a736f6e0d0a436f6e74656e742d4c656e6774683a2032330d0a436f6e6e656374696f6e3a20636c6f73650d0a0d0a7b226572726f72223a224261642052657175657374227d"
+          },
+          {
+            "name": "transfer encoding",
+            "wire_hex": "485454502f312e31203430302042616420526571756573740d0a436f6e74656e742d547970653a206170706c69636174696f6e2f6a736f6e0d0a436f6e74656e742d4c656e6774683a2032330d0a436f6e6e656374696f6e3a20636c6f73650d0a0d0a7b226572726f72223a224261642052657175657374227d"
+          },
+          {
+            "name": "te plus length",
+            "wire_hex": "485454502f312e31203430302042616420526571756573740d0a436f6e74656e742d547970653a206170706c69636174696f6e2f6a736f6e0d0a436f6e74656e742d4c656e6774683a2032330d0a436f6e6e656374696f6e3a20636c6f73650d0a0d0a7b226572726f72223a224261642052657175657374227d"
+          },
+          {
+            "name": "bad length",
+            "wire_hex": "485454502f312e31203430302042616420526571756573740d0a436f6e74656e742d547970653a206170706c69636174696f6e2f6a736f6e0d0a436f6e74656e742d4c656e6774683a2032330d0a436f6e6e656374696f6e3a20636c6f73650d0a0d0a7b226572726f72223a224261642052657175657374227d"
+          },
+          {
+            "name": "negative length",
+            "wire_hex": "485454502f312e31203430302042616420526571756573740d0a436f6e74656e742d547970653a206170706c69636174696f6e2f6a736f6e0d0a436f6e74656e742d4c656e6774683a2032330d0a436f6e6e656374696f6e3a20636c6f73650d0a0d0a7b226572726f72223a224261642052657175657374227d"
+          },
+          {
+            "name": "comma length",
+            "wire_hex": "485454502f312e31203430302042616420526571756573740d0a436f6e74656e742d547970653a206170706c69636174696f6e2f6a736f6e0d0a436f6e74656e742d4c656e6774683a2032330d0a436f6e6e656374696f6e3a20636c6f73650d0a0d0a7b226572726f72223a224261642052657175657374227d"
+          },
+          {
+            "name": "bare LF",
+            "wire_hex": "485454502f312e31203430302042616420526571756573740d0a436f6e74656e742d547970653a206170706c69636174696f6e2f6a736f6e0d0a436f6e74656e742d4c656e6774683a2032330d0a436f6e6e656374696f6e3a20636c6f73650d0a0d0a7b226572726f72223a224261642052657175657374227d"
+          },
+          {
+            "name": "extra space",
+            "wire_hex": "485454502f312e31203430302042616420526571756573740d0a436f6e74656e742d547970653a206170706c69636174696f6e2f6a736f6e0d0a436f6e74656e742d4c656e6774683a2032330d0a436f6e6e656374696f6e3a20636c6f73650d0a0d0a7b226572726f72223a224261642052657175657374227d"
+          },
+          {
+            "name": "absolute target",
+            "wire_hex": "485454502f312e31203430302042616420526571756573740d0a436f6e74656e742d547970653a206170706c69636174696f6e2f6a736f6e0d0a436f6e74656e742d4c656e6774683a2032330d0a436f6e6e656374696f6e3a20636c6f73650d0a0d0a7b226572726f72223a224261642052657175657374227d"
+          },
+          {
+            "name": "fragment",
+            "wire_hex": "485454502f312e31203430302042616420526571756573740d0a436f6e74656e742d547970653a206170706c69636174696f6e2f6a736f6e0d0a436f6e74656e742d4c656e6774683a2032330d0a436f6e6e656374696f6e3a20636c6f73650d0a0d0a7b226572726f72223a224261642052657175657374227d"
+          },
+          {
+            "name": "invalid version",
+            "wire_hex": "485454502f312e31203430302042616420526571756573740d0a436f6e74656e742d547970653a206170706c69636174696f6e2f6a736f6e0d0a436f6e74656e742d4c656e6774683a2032330d0a436f6e6e656374696f6e3a20636c6f73650d0a0d0a7b226572726f72223a224261642052657175657374227d"
+          },
+          {
+            "name": "control",
+            "wire_hex": "485454502f312e31203430302042616420526571756573740d0a436f6e74656e742d547970653a206170706c69636174696f6e2f6a736f6e0d0a436f6e74656e742d4c656e6774683a2032330d0a436f6e6e656374696f6e3a20636c6f73650d0a0d0a7b226572726f72223a224261642052657175657374227d"
+          },
+          {
+            "name": "bad method",
+            "wire_hex": "485454502f312e31203430302042616420526571756573740d0a436f6e74656e742d547970653a206170706c69636174696f6e2f6a736f6e0d0a436f6e74656e742d4c656e6774683a2032330d0a436f6e6e656374696f6e3a20636c6f73650d0a0d0a7b226572726f72223a224261642052657175657374227d"
+          },
+          {
+            "name": "body unsupported",
+            "wire_hex": "485454502f312e312034313320436f6e74656e7420546f6f204c617267650d0a436f6e74656e742d547970653a206170706c69636174696f6e2f6a736f6e0d0a436f6e74656e742d4c656e6774683a2032390d0a436f6e6e656374696f6e3a20636c6f73650d0a0d0a7b226572726f72223a22436f6e74656e7420546f6f204c61726765227d"
+          },
+          {
+            "name": "expect unsupported",
+            "wire_hex": "485454502f312e3120343137204578706563746174696f6e204661696c65640d0a436f6e74656e742d547970653a206170706c69636174696f6e2f6a736f6e0d0a436f6e74656e742d4c656e6774683a2033300d0a436f6e6e656374696f6e3a20636c6f73650d0a0d0a7b226572726f72223a224578706563746174696f6e204661696c6564227d"
+          },
+          {
+            "name": "header limit",
+            "wire_hex": "485454502f312e3120343331205265717565737420486561646572204669656c647320546f6f204c617267650d0a436f6e74656e742d547970653a206170706c69636174696f6e2f6a736f6e0d0a436f6e74656e742d4c656e6774683a2034330d0a436f6e6e656374696f6e3a20636c6f73650d0a0d0a7b226572726f72223a225265717565737420486561646572204669656c647320546f6f204c61726765227d"
+          },
+          {
+            "name": "pipelined closes after first",
+            "wire_hex": "485454502f312e3120323030204f4b0d0a436f6e74656e742d547970653a206170706c69636174696f6e2f6a736f6e0d0a436f6e74656e742d4c656e6774683a2033330d0a436f6e6e656374696f6e3a20636c6f73650d0a0d0a7b22737461747573223a226f6b222c226c616e6775616765223a226c6f626f227d"
+          },
+          {
+            "name": "fragmented",
+            "wire_hex": "485454502f312e3120323030204f4b0d0a436f6e74656e742d547970653a206170706c69636174696f6e2f6a736f6e0d0a436f6e74656e742d4c656e6774683a2033330d0a436f6e6e656374696f6e3a20636c6f73650d0a0d0a7b22737461747573223a226f6b222c226c616e6775616765223a226c6f626f227d"
+          },
+          {
+            "name": "request timeout",
+            "wire_hex": "485454502f312e312034303820526571756573742054696d656f75740d0a436f6e74656e742d547970653a206170706c69636174696f6e2f6a736f6e0d0a436f6e74656e742d4c656e6774683a2032370d0a436f6e6e656374696f6e3a20636c6f73650d0a0d0a7b226572726f72223a22526571756573742054696d656f7574227d"
+          },
+          {
+            "name": "truncated EOF",
+            "wire_hex": "485454502f312e31203430302042616420526571756573740d0a436f6e74656e742d547970653a206170706c69636174696f6e2f6a736f6e0d0a436f6e74656e742d4c656e6774683a2032330d0a436f6e6e656374696f6e3a20636c6f73650d0a0d0a7b226572726f72223a224261642052657175657374227d"
+          },
+          {
+            "name": "occupied port",
+            "stdout": "{\"status\":\"ok\",\"kind\":\"value\",\"value\":{\"type\":\"Variant\",\"value\":{\"id\":\"lobo.native.result.I64Result\",\"case\":\"Err\",\"payload\":{\"type\":\"I64\",\"value\":\"9\"}}}}\n"
+          },
+          {
+            "name": "default deny",
+            "stdout": "{\"status\":\"ok\",\"kind\":\"value\",\"value\":{\"type\":\"Variant\",\"value\":{\"id\":\"lobo.native.result.I64Result\",\"case\":\"Err\",\"payload\":{\"type\":\"I64\",\"value\":\"1\"}}}}\n"
+          }
+        ],
+        "actual_windows_execution": null
+      },
+      "wine_explicit": {
+        "status": "pass",
+        "mode": "wine",
+        "cases": 35,
+        "connections": 38,
+        "server_stdout": "{\"status\":\"ok\",\"kind\":\"value\",\"value\":{\"type\":\"Variant\",\"value\":{\"id\":\"lobo.native.result.I64Result\",\"case\":\"Ok\",\"payload\":{\"type\":\"I64\",\"value\":\"38\"}}}}\r\n",
+        "server_stderr": "",
+        "command": [
+          "wine",
+          "/home/luis/dev/lobo-ar/lobo-lang/dist/native-rest-1.7.3-windows-x64/LoboRestApi.exe",
+          "--entry",
+          "example.rest.main",
+          "--arg",
+          "I64:42119",
+          "--arg",
+          "I64:38",
+          "--native-clock",
+          "true",
+          "--native-listen",
+          "127.0.0.1:42119",
+          "--native-calls",
+          "65536",
+          "--native-bytes",
+          "1048576",
+          "--fuel",
+          "100000000",
+          "--heap-cells",
+          "16000000"
+        ],
+        "records": [
+          {
+            "name": "get /health",
+            "wire_hex": "485454502f312e3120323030204f4b0d0a436f6e74656e742d547970653a206170706c69636174696f6e2f6a736f6e0d0a436f6e74656e742d4c656e6774683a2033330d0a436f6e6e656374696f6e3a20636c6f73650d0a0d0a7b22737461747573223a226f6b222c226c616e6775616765223a226c6f626f227d"
+          },
+          {
+            "name": "get /api/users",
+            "wire_hex": "485454502f312e3120323030204f4b0d0a436f6e74656e742d547970653a206170706c69636174696f6e2f6a736f6e0d0a436f6e74656e742d4c656e6774683a2035300d0a436f6e6e656374696f6e3a20636c6f73650d0a0d0a5b7b226964223a2231222c226e616d65223a224c756973227d2c7b226964223a2232222c226e616d65223a22416461227d5d"
+          },
+          {
+            "name": "get /api/users/1",
+            "wire_hex": "485454502f312e3120323030204f4b0d0a436f6e74656e742d547970653a206170706c69636174696f6e2f6a736f6e0d0a436f6e74656e742d4c656e6774683a2032340d0a436f6e6e656374696f6e3a20636c6f73650d0a0d0a7b226964223a2231222c226e616d65223a224c756973227d"
+          },
+          {
+            "name": "get /api/users/2",
+            "wire_hex": "485454502f312e3120323030204f4b0d0a436f6e74656e742d547970653a206170706c69636174696f6e2f6a736f6e0d0a436f6e74656e742d4c656e6774683a2032330d0a436f6e6e656374696f6e3a20636c6f73650d0a0d0a7b226964223a2232222c226e616d65223a22416461227d"
+          },
+          {
+            "name": "head",
+            "wire_hex": "485454502f312e3120323030204f4b0d0a436f6e74656e742d547970653a206170706c69636174696f6e2f6a736f6e0d0a436f6e74656e742d4c656e6774683a2033330d0a436f6e6e656374696f6e3a20636c6f73650d0a0d0a"
+          },
+          {
+            "name": "missing",
+            "wire_hex": "485454502f312e3120343034204e6f7420466f756e640d0a436f6e74656e742d547970653a206170706c69636174696f6e2f6a736f6e0d0a436f6e74656e742d4c656e6774683a2032310d0a436f6e6e656374696f6e3a20636c6f73650d0a0d0a7b226572726f72223a224e6f7420466f756e64227d"
+          },
+          {
+            "name": "method",
+            "wire_hex": "485454502f312e3120343035204d6574686f64204e6f7420416c6c6f7765640d0a436f6e74656e742d547970653a206170706c69636174696f6e2f6a736f6e0d0a436f6e74656e742d4c656e6774683a2033300d0a436f6e6e656374696f6e3a20636c6f73650d0a416c6c6f773a204745542c20484541440d0a0d0a7b226572726f72223a224d6574686f64204e6f7420416c6c6f776564227d"
+          },
+          {
+            "name": "case insensitive headers",
+            "wire_hex": "485454502f312e3120323030204f4b0d0a436f6e74656e742d547970653a206170706c69636174696f6e2f6a736f6e0d0a436f6e74656e742d4c656e6774683a2033330d0a436f6e6e656374696f6e3a20636c6f73650d0a0d0a7b22737461747573223a226f6b222c226c616e6775616765223a226c6f626f227d"
+          },
+          {
+            "name": "no host",
+            "wire_hex": "485454502f312e31203430302042616420526571756573740d0a436f6e74656e742d547970653a206170706c69636174696f6e2f6a736f6e0d0a436f6e74656e742d4c656e6774683a2032330d0a436f6e6e656374696f6e3a20636c6f73650d0a0d0a7b226572726f72223a224261642052657175657374227d"
+          },
+          {
+            "name": "duplicate host",
+            "wire_hex": "485454502f312e31203430302042616420526571756573740d0a436f6e74656e742d547970653a206170706c69636174696f6e2f6a736f6e0d0a436f6e74656e742d4c656e6774683a2032330d0a436f6e6e656374696f6e3a20636c6f73650d0a0d0a7b226572726f72223a224261642052657175657374227d"
+          },
+          {
+            "name": "empty host",
+            "wire_hex": "485454502f312e31203430302042616420526571756573740d0a436f6e74656e742d547970653a206170706c69636174696f6e2f6a736f6e0d0a436f6e74656e742d4c656e6774683a2032330d0a436f6e6e656374696f6e3a20636c6f73650d0a0d0a7b226572726f72223a224261642052657175657374227d"
+          },
+          {
+            "name": "obs fold",
+            "wire_hex": "485454502f312e31203430302042616420526571756573740d0a436f6e74656e742d547970653a206170706c69636174696f6e2f6a736f6e0d0a436f6e74656e742d4c656e6774683a2032330d0a436f6e6e656374696f6e3a20636c6f73650d0a0d0a7b226572726f72223a224261642052657175657374227d"
+          },
+          {
+            "name": "bad header name",
+            "wire_hex": "485454502f312e31203430302042616420526571756573740d0a436f6e74656e742d547970653a206170706c69636174696f6e2f6a736f6e0d0a436f6e74656e742d4c656e6774683a2032330d0a436f6e6e656374696f6e3a20636c6f73650d0a0d0a7b226572726f72223a224261642052657175657374227d"
+          },
+          {
+            "name": "duplicate length",
+            "wire_hex": "485454502f312e31203430302042616420526571756573740d0a436f6e74656e742d547970653a206170706c69636174696f6e2f6a736f6e0d0a436f6e74656e742d4c656e6774683a2032330d0a436f6e6e656374696f6e3a20636c6f73650d0a0d0a7b226572726f72223a224261642052657175657374227d"
+          },
+          {
+            "name": "transfer encoding",
+            "wire_hex": "485454502f312e31203430302042616420526571756573740d0a436f6e74656e742d547970653a206170706c69636174696f6e2f6a736f6e0d0a436f6e74656e742d4c656e6774683a2032330d0a436f6e6e656374696f6e3a20636c6f73650d0a0d0a7b226572726f72223a224261642052657175657374227d"
+          },
+          {
+            "name": "te plus length",
+            "wire_hex": "485454502f312e31203430302042616420526571756573740d0a436f6e74656e742d547970653a206170706c69636174696f6e2f6a736f6e0d0a436f6e74656e742d4c656e6774683a2032330d0a436f6e6e656374696f6e3a20636c6f73650d0a0d0a7b226572726f72223a224261642052657175657374227d"
+          },
+          {
+            "name": "bad length",
+            "wire_hex": "485454502f312e31203430302042616420526571756573740d0a436f6e74656e742d547970653a206170706c69636174696f6e2f6a736f6e0d0a436f6e74656e742d4c656e6774683a2032330d0a436f6e6e656374696f6e3a20636c6f73650d0a0d0a7b226572726f72223a224261642052657175657374227d"
+          },
+          {
+            "name": "negative length",
+            "wire_hex": "485454502f312e31203430302042616420526571756573740d0a436f6e74656e742d547970653a206170706c69636174696f6e2f6a736f6e0d0a436f6e74656e742d4c656e6774683a2032330d0a436f6e6e656374696f6e3a20636c6f73650d0a0d0a7b226572726f72223a224261642052657175657374227d"
+          },
+          {
+            "name": "comma length",
+            "wire_hex": "485454502f312e31203430302042616420526571756573740d0a436f6e74656e742d547970653a206170706c69636174696f6e2f6a736f6e0d0a436f6e74656e742d4c656e6774683a2032330d0a436f6e6e656374696f6e3a20636c6f73650d0a0d0a7b226572726f72223a224261642052657175657374227d"
+          },
+          {
+            "name": "bare LF",
+            "wire_hex": "485454502f312e31203430302042616420526571756573740d0a436f6e74656e742d547970653a206170706c69636174696f6e2f6a736f6e0d0a436f6e74656e742d4c656e6774683a2032330d0a436f6e6e656374696f6e3a20636c6f73650d0a0d0a7b226572726f72223a224261642052657175657374227d"
+          },
+          {
+            "name": "extra space",
+            "wire_hex": "485454502f312e31203430302042616420526571756573740d0a436f6e74656e742d547970653a206170706c69636174696f6e2f6a736f6e0d0a436f6e74656e742d4c656e6774683a2032330d0a436f6e6e656374696f6e3a20636c6f73650d0a0d0a7b226572726f72223a224261642052657175657374227d"
+          },
+          {
+            "name": "absolute target",
+            "wire_hex": "485454502f312e31203430302042616420526571756573740d0a436f6e74656e742d547970653a206170706c69636174696f6e2f6a736f6e0d0a436f6e74656e742d4c656e6774683a2032330d0a436f6e6e656374696f6e3a20636c6f73650d0a0d0a7b226572726f72223a224261642052657175657374227d"
+          },
+          {
+            "name": "fragment",
+            "wire_hex": "485454502f312e31203430302042616420526571756573740d0a436f6e74656e742d547970653a206170706c69636174696f6e2f6a736f6e0d0a436f6e74656e742d4c656e6774683a2032330d0a436f6e6e656374696f6e3a20636c6f73650d0a0d0a7b226572726f72223a224261642052657175657374227d"
+          },
+          {
+            "name": "invalid version",
+            "wire_hex": "485454502f312e31203430302042616420526571756573740d0a436f6e74656e742d547970653a206170706c69636174696f6e2f6a736f6e0d0a436f6e74656e742d4c656e6774683a2032330d0a436f6e6e656374696f6e3a20636c6f73650d0a0d0a7b226572726f72223a224261642052657175657374227d"
+          },
+          {
+            "name": "control",
+            "wire_hex": "485454502f312e31203430302042616420526571756573740d0a436f6e74656e742d547970653a206170706c69636174696f6e2f6a736f6e0d0a436f6e74656e742d4c656e6774683a2032330d0a436f6e6e656374696f6e3a20636c6f73650d0a0d0a7b226572726f72223a224261642052657175657374227d"
+          },
+          {
+            "name": "bad method",
+            "wire_hex": "485454502f312e31203430302042616420526571756573740d0a436f6e74656e742d547970653a206170706c69636174696f6e2f6a736f6e0d0a436f6e74656e742d4c656e6774683a2032330d0a436f6e6e656374696f6e3a20636c6f73650d0a0d0a7b226572726f72223a224261642052657175657374227d"
+          },
+          {
+            "name": "body unsupported",
+            "wire_hex": "485454502f312e312034313320436f6e74656e7420546f6f204c617267650d0a436f6e74656e742d547970653a206170706c69636174696f6e2f6a736f6e0d0a436f6e74656e742d4c656e6774683a2032390d0a436f6e6e656374696f6e3a20636c6f73650d0a0d0a7b226572726f72223a22436f6e74656e7420546f6f204c61726765227d"
+          },
+          {
+            "name": "expect unsupported",
+            "wire_hex": "485454502f312e3120343137204578706563746174696f6e204661696c65640d0a436f6e74656e742d547970653a206170706c69636174696f6e2f6a736f6e0d0a436f6e74656e742d4c656e6774683a2033300d0a436f6e6e656374696f6e3a20636c6f73650d0a0d0a7b226572726f72223a224578706563746174696f6e204661696c6564227d"
+          },
+          {
+            "name": "header limit",
+            "wire_hex": "485454502f312e3120343331205265717565737420486561646572204669656c647320546f6f204c617267650d0a436f6e74656e742d547970653a206170706c69636174696f6e2f6a736f6e0d0a436f6e74656e742d4c656e6774683a2034330d0a436f6e6e656374696f6e3a20636c6f73650d0a0d0a7b226572726f72223a225265717565737420486561646572204669656c647320546f6f204c61726765227d"
+          },
+          {
+            "name": "pipelined closes after first",
+            "wire_hex": "485454502f312e3120323030204f4b0d0a436f6e74656e742d547970653a206170706c69636174696f6e2f6a736f6e0d0a436f6e74656e742d4c656e6774683a2033330d0a436f6e6e656374696f6e3a20636c6f73650d0a0d0a7b22737461747573223a226f6b222c226c616e6775616765223a226c6f626f227d"
+          },
+          {
+            "name": "fragmented",
+            "wire_hex": "485454502f312e3120323030204f4b0d0a436f6e74656e742d547970653a206170706c69636174696f6e2f6a736f6e0d0a436f6e74656e742d4c656e6774683a2033330d0a436f6e6e656374696f6e3a20636c6f73650d0a0d0a7b22737461747573223a226f6b222c226c616e6775616765223a226c6f626f227d"
+          },
+          {
+            "name": "request timeout",
+            "wire_hex": "485454502f312e312034303820526571756573742054696d656f75740d0a436f6e74656e742d547970653a206170706c69636174696f6e2f6a736f6e0d0a436f6e74656e742d4c656e6774683a2032370d0a436f6e6e656374696f6e3a20636c6f73650d0a0d0a7b226572726f72223a22526571756573742054696d656f7574227d"
+          },
+          {
+            "name": "truncated EOF",
+            "wire_hex": "485454502f312e31203430302042616420526571756573740d0a436f6e74656e742d547970653a206170706c69636174696f6e2f6a736f6e0d0a436f6e74656e742d4c656e6774683a2032330d0a436f6e6e656374696f6e3a20636c6f73650d0a0d0a7b226572726f72223a224261642052657175657374227d"
+          },
+          {
+            "name": "occupied port",
+            "stdout": "{\"status\":\"ok\",\"kind\":\"value\",\"value\":{\"type\":\"Variant\",\"value\":{\"id\":\"lobo.native.result.I64Result\",\"case\":\"Err\",\"payload\":{\"type\":\"I64\",\"value\":\"9\"}}}}\n"
+          },
+          {
+            "name": "default deny",
+            "stdout": "{\"status\":\"ok\",\"kind\":\"value\",\"value\":{\"type\":\"Variant\",\"value\":{\"id\":\"lobo.native.result.I64Result\",\"case\":\"Err\",\"payload\":{\"type\":\"I64\",\"value\":\"1\"}}}}\n"
+          }
+        ],
+        "actual_windows_execution": null
+      },
+      "wine_delivered_default": {
+        "status": "pass",
+        "mode": "wine",
+        "cases": 35,
+        "connections": 128,
+        "server_stdout": "Starting Lobo REST API at http://127.0.0.1:8080/health\r\nTry /api/users and /api/users/1. Press Ctrl+C to stop.\r\n{\"status\":\"ok\",\"kind\":\"value\",\"value\":{\"type\":\"Variant\",\"value\":{\"id\":\"lobo.native.result.I64Result\",\"case\":\"Ok\",\"payload\":{\"type\":\"I64\",\"value\":\"128\"}}}}\r\n",
+        "server_stderr": "",
+        "command": [
+          "wine",
+          "/home/luis/dev/lobo-ar/lobo-lang/dist/lobo-rest-api-1.7.3-windows-x64/LoboRestApi.exe"
+        ],
+        "records": [
+          {
+            "name": "get /health",
+            "wire_hex": "485454502f312e3120323030204f4b0d0a436f6e74656e742d547970653a206170706c69636174696f6e2f6a736f6e0d0a436f6e74656e742d4c656e6774683a2033330d0a436f6e6e656374696f6e3a20636c6f73650d0a0d0a7b22737461747573223a226f6b222c226c616e6775616765223a226c6f626f227d"
+          },
+          {
+            "name": "get /api/users",
+            "wire_hex": "485454502f312e3120323030204f4b0d0a436f6e74656e742d547970653a206170706c69636174696f6e2f6a736f6e0d0a436f6e74656e742d4c656e6774683a2035300d0a436f6e6e656374696f6e3a20636c6f73650d0a0d0a5b7b226964223a2231222c226e616d65223a224c756973227d2c7b226964223a2232222c226e616d65223a22416461227d5d"
+          },
+          {
+            "name": "get /api/users/1",
+            "wire_hex": "485454502f312e3120323030204f4b0d0a436f6e74656e742d547970653a206170706c69636174696f6e2f6a736f6e0d0a436f6e74656e742d4c656e6774683a2032340d0a436f6e6e656374696f6e3a20636c6f73650d0a0d0a7b226964223a2231222c226e616d65223a224c756973227d"
+          },
+          {
+            "name": "get /api/users/2",
+            "wire_hex": "485454502f312e3120323030204f4b0d0a436f6e74656e742d547970653a206170706c69636174696f6e2f6a736f6e0d0a436f6e74656e742d4c656e6774683a2032330d0a436f6e6e656374696f6e3a20636c6f73650d0a0d0a7b226964223a2232222c226e616d65223a22416461227d"
+          },
+          {
+            "name": "head",
+            "wire_hex": "485454502f312e3120323030204f4b0d0a436f6e74656e742d547970653a206170706c69636174696f6e2f6a736f6e0d0a436f6e74656e742d4c656e6774683a2033330d0a436f6e6e656374696f6e3a20636c6f73650d0a0d0a"
+          },
+          {
+            "name": "missing",
+            "wire_hex": "485454502f312e3120343034204e6f7420466f756e640d0a436f6e74656e742d547970653a206170706c69636174696f6e2f6a736f6e0d0a436f6e74656e742d4c656e6774683a2032310d0a436f6e6e656374696f6e3a20636c6f73650d0a0d0a7b226572726f72223a224e6f7420466f756e64227d"
+          },
+          {
+            "name": "method",
+            "wire_hex": "485454502f312e3120343035204d6574686f64204e6f7420416c6c6f7765640d0a436f6e74656e742d547970653a206170706c69636174696f6e2f6a736f6e0d0a436f6e74656e742d4c656e6774683a2033300d0a436f6e6e656374696f6e3a20636c6f73650d0a416c6c6f773a204745542c20484541440d0a0d0a7b226572726f72223a224d6574686f64204e6f7420416c6c6f776564227d"
+          },
+          {
+            "name": "case insensitive headers",
+            "wire_hex": "485454502f312e3120323030204f4b0d0a436f6e74656e742d547970653a206170706c69636174696f6e2f6a736f6e0d0a436f6e74656e742d4c656e6774683a2033330d0a436f6e6e656374696f6e3a20636c6f73650d0a0d0a7b22737461747573223a226f6b222c226c616e6775616765223a226c6f626f227d"
+          },
+          {
+            "name": "no host",
+            "wire_hex": "485454502f312e31203430302042616420526571756573740d0a436f6e74656e742d547970653a206170706c69636174696f6e2f6a736f6e0d0a436f6e74656e742d4c656e6774683a2032330d0a436f6e6e656374696f6e3a20636c6f73650d0a0d0a7b226572726f72223a224261642052657175657374227d"
+          },
+          {
+            "name": "duplicate host",
+            "wire_hex": "485454502f312e31203430302042616420526571756573740d0a436f6e74656e742d547970653a206170706c69636174696f6e2f6a736f6e0d0a436f6e74656e742d4c656e6774683a2032330d0a436f6e6e656374696f6e3a20636c6f73650d0a0d0a7b226572726f72223a224261642052657175657374227d"
+          },
+          {
+            "name": "empty host",
+            "wire_hex": "485454502f312e31203430302042616420526571756573740d0a436f6e74656e742d547970653a206170706c69636174696f6e2f6a736f6e0d0a436f6e74656e742d4c656e6774683a2032330d0a436f6e6e656374696f6e3a20636c6f73650d0a0d0a7b226572726f72223a224261642052657175657374227d"
+          },
+          {
+            "name": "obs fold",
+            "wire_hex": "485454502f312e31203430302042616420526571756573740d0a436f6e74656e742d547970653a206170706c69636174696f6e2f6a736f6e0d0a436f6e74656e742d4c656e6774683a2032330d0a436f6e6e656374696f6e3a20636c6f73650d0a0d0a7b226572726f72223a224261642052657175657374227d"
+          },
+          {
+            "name": "bad header name",
+            "wire_hex": "485454502f312e31203430302042616420526571756573740d0a436f6e74656e742d547970653a206170706c69636174696f6e2f6a736f6e0d0a436f6e74656e742d4c656e6774683a2032330d0a436f6e6e656374696f6e3a20636c6f73650d0a0d0a7b226572726f72223a224261642052657175657374227d"
+          },
+          {
+            "name": "duplicate length",
+            "wire_hex": "485454502f312e31203430302042616420526571756573740d0a436f6e74656e742d547970653a206170706c69636174696f6e2f6a736f6e0d0a436f6e74656e742d4c656e6774683a2032330d0a436f6e6e656374696f6e3a20636c6f73650d0a0d0a7b226572726f72223a224261642052657175657374227d"
+          },
+          {
+            "name": "transfer encoding",
+            "wire_hex": "485454502f312e31203430302042616420526571756573740d0a436f6e74656e742d547970653a206170706c69636174696f6e2f6a736f6e0d0a436f6e74656e742d4c656e6774683a2032330d0a436f6e6e656374696f6e3a20636c6f73650d0a0d0a7b226572726f72223a224261642052657175657374227d"
+          },
+          {
+            "name": "te plus length",
+            "wire_hex": "485454502f312e31203430302042616420526571756573740d0a436f6e74656e742d547970653a206170706c69636174696f6e2f6a736f6e0d0a436f6e74656e742d4c656e6774683a2032330d0a436f6e6e656374696f6e3a20636c6f73650d0a0d0a7b226572726f72223a224261642052657175657374227d"
+          },
+          {
+            "name": "bad length",
+            "wire_hex": "485454502f312e31203430302042616420526571756573740d0a436f6e74656e742d547970653a206170706c69636174696f6e2f6a736f6e0d0a436f6e74656e742d4c656e6774683a2032330d0a436f6e6e656374696f6e3a20636c6f73650d0a0d0a7b226572726f72223a224261642052657175657374227d"
+          },
+          {
+            "name": "negative length",
+            "wire_hex": "485454502f312e31203430302042616420526571756573740d0a436f6e74656e742d547970653a206170706c69636174696f6e2f6a736f6e0d0a436f6e74656e742d4c656e6774683a2032330d0a436f6e6e656374696f6e3a20636c6f73650d0a0d0a7b226572726f72223a224261642052657175657374227d"
+          },
+          {
+            "name": "comma length",
+            "wire_hex": "485454502f312e31203430302042616420526571756573740d0a436f6e74656e742d547970653a206170706c69636174696f6e2f6a736f6e0d0a436f6e74656e742d4c656e6774683a2032330d0a436f6e6e656374696f6e3a20636c6f73650d0a0d0a7b226572726f72223a224261642052657175657374227d"
+          },
+          {
+            "name": "bare LF",
+            "wire_hex": "485454502f312e31203430302042616420526571756573740d0a436f6e74656e742d547970653a206170706c69636174696f6e2f6a736f6e0d0a436f6e74656e742d4c656e6774683a2032330d0a436f6e6e656374696f6e3a20636c6f73650d0a0d0a7b226572726f72223a224261642052657175657374227d"
+          },
+          {
+            "name": "extra space",
+            "wire_hex": "485454502f312e31203430302042616420526571756573740d0a436f6e74656e742d547970653a206170706c69636174696f6e2f6a736f6e0d0a436f6e74656e742d4c656e6774683a2032330d0a436f6e6e656374696f6e3a20636c6f73650d0a0d0a7b226572726f72223a224261642052657175657374227d"
+          },
+          {
+            "name": "absolute target",
+            "wire_hex": "485454502f312e31203430302042616420526571756573740d0a436f6e74656e742d547970653a206170706c69636174696f6e2f6a736f6e0d0a436f6e74656e742d4c656e6774683a2032330d0a436f6e6e656374696f6e3a20636c6f73650d0a0d0a7b226572726f72223a224261642052657175657374227d"
+          },
+          {
+            "name": "fragment",
+            "wire_hex": "485454502f312e31203430302042616420526571756573740d0a436f6e74656e742d547970653a206170706c69636174696f6e2f6a736f6e0d0a436f6e74656e742d4c656e6774683a2032330d0a436f6e6e656374696f6e3a20636c6f73650d0a0d0a7b226572726f72223a224261642052657175657374227d"
+          },
+          {
+            "name": "invalid version",
+            "wire_hex": "485454502f312e31203430302042616420526571756573740d0a436f6e74656e742d547970653a206170706c69636174696f6e2f6a736f6e0d0a436f6e74656e742d4c656e6774683a2032330d0a436f6e6e656374696f6e3a20636c6f73650d0a0d0a7b226572726f72223a224261642052657175657374227d"
+          },
+          {
+            "name": "control",
+            "wire_hex": "485454502f312e31203430302042616420526571756573740d0a436f6e74656e742d547970653a206170706c69636174696f6e2f6a736f6e0d0a436f6e74656e742d4c656e6774683a2032330d0a436f6e6e656374696f6e3a20636c6f73650d0a0d0a7b226572726f72223a224261642052657175657374227d"
+          },
+          {
+            "name": "bad method",
+            "wire_hex": "485454502f312e31203430302042616420526571756573740d0a436f6e74656e742d547970653a206170706c69636174696f6e2f6a736f6e0d0a436f6e74656e742d4c656e6774683a2032330d0a436f6e6e656374696f6e3a20636c6f73650d0a0d0a7b226572726f72223a224261642052657175657374227d"
+          },
+          {
+            "name": "body unsupported",
+            "wire_hex": "485454502f312e312034313320436f6e74656e7420546f6f204c617267650d0a436f6e74656e742d547970653a206170706c69636174696f6e2f6a736f6e0d0a436f6e74656e742d4c656e6774683a2032390d0a436f6e6e656374696f6e3a20636c6f73650d0a0d0a7b226572726f72223a22436f6e74656e7420546f6f204c61726765227d"
+          },
+          {
+            "name": "expect unsupported",
+            "wire_hex": "485454502f312e3120343137204578706563746174696f6e204661696c65640d0a436f6e74656e742d547970653a206170706c69636174696f6e2f6a736f6e0d0a436f6e74656e742d4c656e6774683a2033300d0a436f6e6e656374696f6e3a20636c6f73650d0a0d0a7b226572726f72223a224578706563746174696f6e204661696c6564227d"
+          },
+          {
+            "name": "header limit",
+            "wire_hex": "485454502f312e3120343331205265717565737420486561646572204669656c647320546f6f204c617267650d0a436f6e74656e742d547970653a206170706c69636174696f6e2f6a736f6e0d0a436f6e74656e742d4c656e6774683a2034330d0a436f6e6e656374696f6e3a20636c6f73650d0a0d0a7b226572726f72223a225265717565737420486561646572204669656c647320546f6f204c61726765227d"
+          },
+          {
+            "name": "pipelined closes after first",
+            "wire_hex": "485454502f312e3120323030204f4b0d0a436f6e74656e742d547970653a206170706c69636174696f6e2f6a736f6e0d0a436f6e74656e742d4c656e6774683a2033330d0a436f6e6e656374696f6e3a20636c6f73650d0a0d0a7b22737461747573223a226f6b222c226c616e6775616765223a226c6f626f227d"
+          },
+          {
+            "name": "fragmented",
+            "wire_hex": "485454502f312e3120323030204f4b0d0a436f6e74656e742d547970653a206170706c69636174696f6e2f6a736f6e0d0a436f6e74656e742d4c656e6774683a2033330d0a436f6e6e656374696f6e3a20636c6f73650d0a0d0a7b22737461747573223a226f6b222c226c616e6775616765223a226c6f626f227d"
+          },
+          {
+            "name": "request timeout",
+            "wire_hex": "485454502f312e312034303820526571756573742054696d656f75740d0a436f6e74656e742d547970653a206170706c69636174696f6e2f6a736f6e0d0a436f6e74656e742d4c656e6774683a2032370d0a436f6e6e656374696f6e3a20636c6f73650d0a0d0a7b226572726f72223a22526571756573742054696d656f7574227d"
+          },
+          {
+            "name": "truncated EOF",
+            "wire_hex": "485454502f312e31203430302042616420526571756573740d0a436f6e74656e742d547970653a206170706c69636174696f6e2f6a736f6e0d0a436f6e74656e742d4c656e6774683a2032330d0a436f6e6e656374696f6e3a20636c6f73650d0a0d0a7b226572726f72223a224261642052657175657374227d"
+          },
+          {
+            "name": "occupied port",
+            "stdout": "Starting Lobo REST API at http://127.0.0.1:8080/health\nTry /api/users and /api/users/1. Press Ctrl+C to stop.\n{\"status\":\"ok\",\"kind\":\"value\",\"value\":{\"type\":\"Variant\",\"value\":{\"id\":\"lobo.native.result.I64Result\",\"case\":\"Err\",\"payload\":{\"type\":\"I64\",\"value\":\"9\"}}}}\n"
+          },
+          {
+            "name": "default deny",
+            "stdout": "{\"status\":\"ok\",\"kind\":\"value\",\"value\":{\"type\":\"Variant\",\"value\":{\"id\":\"lobo.native.result.I64Result\",\"case\":\"Err\",\"payload\":{\"type\":\"I64\",\"value\":\"1\"}}}}\n"
+          }
+        ],
+        "actual_windows_execution": null
+      },
+      "wine_delivered_short_io": {
+        "status": "pass",
+        "mode": "wine",
+        "cases": 35,
+        "connections": 38,
+        "server_stdout": "{\"status\":\"ok\",\"kind\":\"value\",\"value\":{\"type\":\"Variant\",\"value\":{\"id\":\"lobo.native.result.I64Result\",\"case\":\"Ok\",\"payload\":{\"type\":\"I64\",\"value\":\"38\"}}}}\r\n",
+        "server_stderr": "",
+        "command": [
+          "wine",
+          "/home/luis/dev/lobo-ar/lobo-lang/target/native-rest/delivered-short-io.exe",
+          "--entry",
+          "example.rest.main",
+          "--arg",
+          "I64:40659",
+          "--arg",
+          "I64:38",
+          "--native-clock",
+          "true",
+          "--native-listen",
+          "127.0.0.1:40659",
+          "--native-calls",
+          "65536",
+          "--native-bytes",
+          "1048576",
+          "--fuel",
+          "100000000",
+          "--heap-cells",
+          "16000000"
+        ],
+        "records": [
+          {
+            "name": "get /health",
+            "wire_hex": "485454502f312e3120323030204f4b0d0a436f6e74656e742d547970653a206170706c69636174696f6e2f6a736f6e0d0a436f6e74656e742d4c656e6774683a2033330d0a436f6e6e656374696f6e3a20636c6f73650d0a0d0a7b22737461747573223a226f6b222c226c616e6775616765223a226c6f626f227d"
+          },
+          {
+            "name": "get /api/users",
+            "wire_hex": "485454502f312e3120323030204f4b0d0a436f6e74656e742d547970653a206170706c69636174696f6e2f6a736f6e0d0a436f6e74656e742d4c656e6774683a2035300d0a436f6e6e656374696f6e3a20636c6f73650d0a0d0a5b7b226964223a2231222c226e616d65223a224c756973227d2c7b226964223a2232222c226e616d65223a22416461227d5d"
+          },
+          {
+            "name": "get /api/users/1",
+            "wire_hex": "485454502f312e3120323030204f4b0d0a436f6e74656e742d547970653a206170706c69636174696f6e2f6a736f6e0d0a436f6e74656e742d4c656e6774683a2032340d0a436f6e6e656374696f6e3a20636c6f73650d0a0d0a7b226964223a2231222c226e616d65223a224c756973227d"
+          },
+          {
+            "name": "get /api/users/2",
+            "wire_hex": "485454502f312e3120323030204f4b0d0a436f6e74656e742d547970653a206170706c69636174696f6e2f6a736f6e0d0a436f6e74656e742d4c656e6774683a2032330d0a436f6e6e656374696f6e3a20636c6f73650d0a0d0a7b226964223a2232222c226e616d65223a22416461227d"
+          },
+          {
+            "name": "head",
+            "wire_hex": "485454502f312e3120323030204f4b0d0a436f6e74656e742d547970653a206170706c69636174696f6e2f6a736f6e0d0a436f6e74656e742d4c656e6774683a2033330d0a436f6e6e656374696f6e3a20636c6f73650d0a0d0a"
+          },
+          {
+            "name": "missing",
+            "wire_hex": "485454502f312e3120343034204e6f7420466f756e640d0a436f6e74656e742d547970653a206170706c69636174696f6e2f6a736f6e0d0a436f6e74656e742d4c656e6774683a2032310d0a436f6e6e656374696f6e3a20636c6f73650d0a0d0a7b226572726f72223a224e6f7420466f756e64227d"
+          },
+          {
+            "name": "method",
+            "wire_hex": "485454502f312e3120343035204d6574686f64204e6f7420416c6c6f7765640d0a436f6e74656e742d547970653a206170706c69636174696f6e2f6a736f6e0d0a436f6e74656e742d4c656e6774683a2033300d0a436f6e6e656374696f6e3a20636c6f73650d0a416c6c6f773a204745542c20484541440d0a0d0a7b226572726f72223a224d6574686f64204e6f7420416c6c6f776564227d"
+          },
+          {
+            "name": "case insensitive headers",
+            "wire_hex": "485454502f312e3120323030204f4b0d0a436f6e74656e742d547970653a206170706c69636174696f6e2f6a736f6e0d0a436f6e74656e742d4c656e6774683a2033330d0a436f6e6e656374696f6e3a20636c6f73650d0a0d0a7b22737461747573223a226f6b222c226c616e6775616765223a226c6f626f227d"
+          },
+          {
+            "name": "no host",
+            "wire_hex": "485454502f312e31203430302042616420526571756573740d0a436f6e74656e742d547970653a206170706c69636174696f6e2f6a736f6e0d0a436f6e74656e742d4c656e6774683a2032330d0a436f6e6e656374696f6e3a20636c6f73650d0a0d0a7b226572726f72223a224261642052657175657374227d"
+          },
+          {
+            "name": "duplicate host",
+            "wire_hex": "485454502f312e31203430302042616420526571756573740d0a436f6e74656e742d547970653a206170706c69636174696f6e2f6a736f6e0d0a436f6e74656e742d4c656e6774683a2032330d0a436f6e6e656374696f6e3a20636c6f73650d0a0d0a7b226572726f72223a224261642052657175657374227d"
+          },
+          {
+            "name": "empty host",
+            "wire_hex": "485454502f312e31203430302042616420526571756573740d0a436f6e74656e742d547970653a206170706c69636174696f6e2f6a736f6e0d0a436f6e74656e742d4c656e6774683a2032330d0a436f6e6e656374696f6e3a20636c6f73650d0a0d0a7b226572726f72223a224261642052657175657374227d"
+          },
+          {
+            "name": "obs fold",
+            "wire_hex": "485454502f312e31203430302042616420526571756573740d0a436f6e74656e742d547970653a206170706c69636174696f6e2f6a736f6e0d0a436f6e74656e742d4c656e6774683a2032330d0a436f6e6e656374696f6e3a20636c6f73650d0a0d0a7b226572726f72223a224261642052657175657374227d"
+          },
+          {
+            "name": "bad header name",
+            "wire_hex": "485454502f312e31203430302042616420526571756573740d0a436f6e74656e742d547970653a206170706c69636174696f6e2f6a736f6e0d0a436f6e74656e742d4c656e6774683a2032330d0a436f6e6e656374696f6e3a20636c6f73650d0a0d0a7b226572726f72223a224261642052657175657374227d"
+          },
+          {
+            "name": "duplicate length",
+            "wire_hex": "485454502f312e31203430302042616420526571756573740d0a436f6e74656e742d547970653a206170706c69636174696f6e2f6a736f6e0d0a436f6e74656e742d4c656e6774683a2032330d0a436f6e6e656374696f6e3a20636c6f73650d0a0d0a7b226572726f72223a224261642052657175657374227d"
+          },
+          {
+            "name": "transfer encoding",
+            "wire_hex": "485454502f312e31203430302042616420526571756573740d0a436f6e74656e742d547970653a206170706c69636174696f6e2f6a736f6e0d0a436f6e74656e742d4c656e6774683a2032330d0a436f6e6e656374696f6e3a20636c6f73650d0a0d0a7b226572726f72223a224261642052657175657374227d"
+          },
+          {
+            "name": "te plus length",
+            "wire_hex": "485454502f312e31203430302042616420526571756573740d0a436f6e74656e742d547970653a206170706c69636174696f6e2f6a736f6e0d0a436f6e74656e742d4c656e6774683a2032330d0a436f6e6e656374696f6e3a20636c6f73650d0a0d0a7b226572726f72223a224261642052657175657374227d"
+          },
+          {
+            "name": "bad length",
+            "wire_hex": "485454502f312e31203430302042616420526571756573740d0a436f6e74656e742d547970653a206170706c69636174696f6e2f6a736f6e0d0a436f6e74656e742d4c656e6774683a2032330d0a436f6e6e656374696f6e3a20636c6f73650d0a0d0a7b226572726f72223a224261642052657175657374227d"
+          },
+          {
+            "name": "negative length",
+            "wire_hex": "485454502f312e31203430302042616420526571756573740d0a436f6e74656e742d547970653a206170706c69636174696f6e2f6a736f6e0d0a436f6e74656e742d4c656e6774683a2032330d0a436f6e6e656374696f6e3a20636c6f73650d0a0d0a7b226572726f72223a224261642052657175657374227d"
+          },
+          {
+            "name": "comma length",
+            "wire_hex": "485454502f312e31203430302042616420526571756573740d0a436f6e74656e742d547970653a206170706c69636174696f6e2f6a736f6e0d0a436f6e74656e742d4c656e6774683a2032330d0a436f6e6e656374696f6e3a20636c6f73650d0a0d0a7b226572726f72223a224261642052657175657374227d"
+          },
+          {
+            "name": "bare LF",
+            "wire_hex": "485454502f312e31203430302042616420526571756573740d0a436f6e74656e742d547970653a206170706c69636174696f6e2f6a736f6e0d0a436f6e74656e742d4c656e6774683a2032330d0a436f6e6e656374696f6e3a20636c6f73650d0a0d0a7b226572726f72223a224261642052657175657374227d"
+          },
+          {
+            "name": "extra space",
+            "wire_hex": "485454502f312e31203430302042616420526571756573740d0a436f6e74656e742d547970653a206170706c69636174696f6e2f6a736f6e0d0a436f6e74656e742d4c656e6774683a2032330d0a436f6e6e656374696f6e3a20636c6f73650d0a0d0a7b226572726f72223a224261642052657175657374227d"
+          },
+          {
+            "name": "absolute target",
+            "wire_hex": "485454502f312e31203430302042616420526571756573740d0a436f6e74656e742d547970653a206170706c69636174696f6e2f6a736f6e0d0a436f6e74656e742d4c656e6774683a2032330d0a436f6e6e656374696f6e3a20636c6f73650d0a0d0a7b226572726f72223a224261642052657175657374227d"
+          },
+          {
+            "name": "fragment",
+            "wire_hex": "485454502f312e31203430302042616420526571756573740d0a436f6e74656e742d547970653a206170706c69636174696f6e2f6a736f6e0d0a436f6e74656e742d4c656e6774683a2032330d0a436f6e6e656374696f6e3a20636c6f73650d0a0d0a7b226572726f72223a224261642052657175657374227d"
+          },
+          {
+            "name": "invalid version",
+            "wire_hex": "485454502f312e31203430302042616420526571756573740d0a436f6e74656e742d547970653a206170706c69636174696f6e2f6a736f6e0d0a436f6e74656e742d4c656e6774683a2032330d0a436f6e6e656374696f6e3a20636c6f73650d0a0d0a7b226572726f72223a224261642052657175657374227d"
+          },
+          {
+            "name": "control",
+            "wire_hex": "485454502f312e31203430302042616420526571756573740d0a436f6e74656e742d547970653a206170706c69636174696f6e2f6a736f6e0d0a436f6e74656e742d4c656e6774683a2032330d0a436f6e6e656374696f6e3a20636c6f73650d0a0d0a7b226572726f72223a224261642052657175657374227d"
+          },
+          {
+            "name": "bad method",
+            "wire_hex": "485454502f312e31203430302042616420526571756573740d0a436f6e74656e742d547970653a206170706c69636174696f6e2f6a736f6e0d0a436f6e74656e742d4c656e6774683a2032330d0a436f6e6e656374696f6e3a20636c6f73650d0a0d0a7b226572726f72223a224261642052657175657374227d"
+          },
+          {
+            "name": "body unsupported",
+            "wire_hex": "485454502f312e312034313320436f6e74656e7420546f6f204c617267650d0a436f6e74656e742d547970653a206170706c69636174696f6e2f6a736f6e0d0a436f6e74656e742d4c656e6774683a2032390d0a436f6e6e656374696f6e3a20636c6f73650d0a0d0a7b226572726f72223a22436f6e74656e7420546f6f204c61726765227d"
+          },
+          {
+            "name": "expect unsupported",
+            "wire_hex": "485454502f312e3120343137204578706563746174696f6e204661696c65640d0a436f6e74656e742d547970653a206170706c69636174696f6e2f6a736f6e0d0a436f6e74656e742d4c656e6774683a2033300d0a436f6e6e656374696f6e3a20636c6f73650d0a0d0a7b226572726f72223a224578706563746174696f6e204661696c6564227d"
+          },
+          {
+            "name": "header limit",
+            "wire_hex": "485454502f312e3120343331205265717565737420486561646572204669656c647320546f6f204c617267650d0a436f6e74656e742d547970653a206170706c69636174696f6e2f6a736f6e0d0a436f6e74656e742d4c656e6774683a2034330d0a436f6e6e656374696f6e3a20636c6f73650d0a0d0a7b226572726f72223a225265717565737420486561646572204669656c647320546f6f204c61726765227d"
+          },
+          {
+            "name": "pipelined closes after first",
+            "wire_hex": "485454502f312e3120323030204f4b0d0a436f6e74656e742d547970653a206170706c69636174696f6e2f6a736f6e0d0a436f6e74656e742d4c656e6774683a2033330d0a436f6e6e656374696f6e3a20636c6f73650d0a0d0a7b22737461747573223a226f6b222c226c616e6775616765223a226c6f626f227d"
+          },
+          {
+            "name": "fragmented",
+            "wire_hex": "485454502f312e3120323030204f4b0d0a436f6e74656e742d547970653a206170706c69636174696f6e2f6a736f6e0d0a436f6e74656e742d4c656e6774683a2033330d0a436f6e6e656374696f6e3a20636c6f73650d0a0d0a7b22737461747573223a226f6b222c226c616e6775616765223a226c6f626f227d"
+          },
+          {
+            "name": "request timeout",
+            "wire_hex": "485454502f312e312034303820526571756573742054696d656f75740d0a436f6e74656e742d547970653a206170706c69636174696f6e2f6a736f6e0d0a436f6e74656e742d4c656e6774683a2032370d0a436f6e6e656374696f6e3a20636c6f73650d0a0d0a7b226572726f72223a22526571756573742054696d656f7574227d"
+          },
+          {
+            "name": "truncated EOF",
+            "wire_hex": "485454502f312e31203430302042616420526571756573740d0a436f6e74656e742d547970653a206170706c69636174696f6e2f6a736f6e0d0a436f6e74656e742d4c656e6774683a2032330d0a436f6e6e656374696f6e3a20636c6f73650d0a0d0a7b226572726f72223a224261642052657175657374227d"
+          },
+          {
+            "name": "occupied port",
+            "stdout": "{\"status\":\"ok\",\"kind\":\"value\",\"value\":{\"type\":\"Variant\",\"value\":{\"id\":\"lobo.native.result.I64Result\",\"case\":\"Err\",\"payload\":{\"type\":\"I64\",\"value\":\"9\"}}}}\n"
+          },
+          {
+            "name": "default deny",
+            "stdout": "{\"status\":\"ok\",\"kind\":\"value\",\"value\":{\"type\":\"Variant\",\"value\":{\"id\":\"lobo.native.result.I64Result\",\"case\":\"Err\",\"payload\":{\"type\":\"I64\",\"value\":\"1\"}}}}\n"
+          }
+        ],
+        "actual_windows_execution": null
+      },
+      "windows_provider": {
+        "status": "pass",
+        "cases": 11,
+        "authority_mask_pairs": 256,
+        "actual_windows_execution": null,
+        "commands": [
+          {
+            "command": [
+              "/home/luis/dev/lobo-ar/lobo-lang/target/windows-snapshot/llvm-mingw-20261117-ucrt-ubuntu-22.04-x86_64/bin/x86_64-w64-mingw32-clang",
+              "-std=c11",
+              "-O3",
+              "-Isrc",
+              "/home/luis/dev/lobo-ar/lobo-lang/tests/native/windows_tcp_harness.c",
+              "-static",
+              "-lws2_32",
+              "-lbcrypt",
+              "-o",
+              "/home/luis/dev/lobo-ar/lobo-lang/target/native-rest/windows-tcp-fixed/provider.exe"
+            ],
+            "exit_code": 0,
+            "stdout": "",
+            "stderr": ""
+          },
+          {
+            "command": [
+              "wine",
+              "/home/luis/dev/lobo-ar/lobo-lang/target/native-rest/windows-tcp-fixed/provider.exe",
+              "options"
+            ],
+            "exit_code": 0,
+            "stdout": "windows-tcp-case-passed\n",
+            "stderr": ""
+          },
+          {
+            "command": [
+              "wine",
+              "/home/luis/dev/lobo-ar/lobo-lang/target/native-rest/windows-tcp-fixed/provider.exe",
+              "deny"
+            ],
+            "exit_code": 0,
+            "stdout": "windows-tcp-case-passed\n",
+            "stderr": ""
+          },
+          {
+            "command": [
+              "wine",
+              "/home/luis/dev/lobo-ar/lobo-lang/target/native-rest/windows-tcp-fixed/provider.exe",
+              "authority"
+            ],
+            "exit_code": 0,
+            "stdout": "windows-tcp-case-passed\n",
+            "stderr": ""
+          },
+          {
+            "command": [
+              "wine",
+              "/home/luis/dev/lobo-ar/lobo-lang/target/native-rest/windows-tcp-fixed/provider.exe",
+              "bounds"
+            ],
+            "exit_code": 0,
+            "stdout": "windows-tcp-case-passed\n",
+            "stderr": ""
+          },
+          {
+            "command": [
+              "wine",
+              "/home/luis/dev/lobo-ar/lobo-lang/target/native-rest/windows-tcp-fixed/provider.exe",
+              "quota"
+            ],
+            "exit_code": 0,
+            "stdout": "windows-tcp-case-passed\n",
+            "stderr": ""
+          },
+          {
+            "command": [
+              "wine",
+              "/home/luis/dev/lobo-ar/lobo-lang/target/native-rest/windows-tcp-fixed/provider.exe",
+              "stale"
+            ],
+            "exit_code": 0,
+            "stdout": "windows-tcp-case-passed\n",
+            "stderr": ""
+          },
+          {
+            "command": [
+              "wine",
+              "/home/luis/dev/lobo-ar/lobo-lang/target/native-rest/windows-tcp-fixed/provider.exe",
+              "close-failure"
+            ],
+            "exit_code": 0,
+            "stdout": "windows-tcp-case-passed\n",
+            "stderr": ""
+          },
+          {
+            "command": [
+              "wine",
+              "/home/luis/dev/lobo-ar/lobo-lang/target/native-rest/windows-tcp-fixed/provider.exe",
+              "cleanup"
+            ],
+            "exit_code": 0,
+            "stdout": "windows-tcp-case-passed\n",
+            "stderr": ""
+          },
+          {
+            "command": [
+              "wine",
+              "/home/luis/dev/lobo-ar/lobo-lang/target/native-rest/windows-tcp-fixed/provider.exe",
+              "generation"
+            ],
+            "exit_code": 0,
+            "stdout": "windows-tcp-case-passed\n",
+            "stderr": ""
+          },
+          {
+            "command": [
+              "wine",
+              "/home/luis/dev/lobo-ar/lobo-lang/target/native-rest/windows-tcp-fixed/provider.exe",
+              "roundtrip"
+            ],
+            "exit_code": 0,
+            "stdout": "windows-tcp-case-passed\n",
+            "stderr": ""
+          },
+          {
+            "command": [
+              "wine",
+              "/home/luis/dev/lobo-ar/lobo-lang/target/native-rest/windows-tcp-fixed/provider.exe",
+              "fuel-cleanup"
+            ],
+            "exit_code": 1,
+            "stdout": "{\"status\":\"error\",\"kind\":\"resource_exhausted\",\"diagnostic\":{\"code\":\"resource.fuel.exhausted\",\"phase\":\"invoke\"}}\n",
+            "stderr": ""
+          }
+        ]
+      },
+      "snapshot_regression": {
+        "status": "pass",
+        "platform": "Wine Windows API compatibility layer, not actual Windows hardware",
+        "application_cases": 14,
+        "provider_cases": 10,
+        "permission_pairs": 64,
+        "actual_windows_execution": null,
+        "commands": [
+          {
+            "command": [
+              "wine",
+              "/home/luis/dev/lobo-ar/lobo-lang/target/native-rest/snapshot-regression-build/LoboSnapshot.exe"
+            ],
+            "exit_code": 0,
+            "stdout": "{\"status\":\"ok\",\"kind\":\"value\",\"value\":{\"type\":\"Variant\",\"value\":{\"id\":\"lobo.generic.type.c09c71e43c56183b079d77143d13711d\",\"case\":\"Ok\",\"payload\":{\"type\":\"Record\",\"value\":{\"id\":\"native.snapshot.value\",\"fields\":{\"monotonic_ms\":{\"type\":\"I64\",\"value\":\"1197636555\"},\"random_bytes\":{\"type\":\"Bytes\",\"value\":\"638f3ea7086fc6262cd52b405b2c356a\"}}}}}}}\n",
+            "stderr": ""
+          },
+          {
+            "command": [
+              "wine",
+              "/home/luis/dev/lobo-ar/lobo-lang/target/native-rest/snapshot-regression-build/LoboSnapshot.exe",
+              "--no-pause"
+            ],
+            "exit_code": 0,
+            "stdout": "{\"status\":\"ok\",\"kind\":\"value\",\"value\":{\"type\":\"Variant\",\"value\":{\"id\":\"lobo.generic.type.c09c71e43c56183b079d77143d13711d\",\"case\":\"Ok\",\"payload\":{\"type\":\"Record\",\"value\":{\"id\":\"native.snapshot.value\",\"fields\":{\"monotonic_ms\":{\"type\":\"I64\",\"value\":\"1197636806\"},\"random_bytes\":{\"type\":\"Bytes\",\"value\":\"f6d4d700de1c489ffc7cc2444f860906\"}}}}}}}\n",
+            "stderr": ""
+          },
+          {
+            "command": [
+              "wine",
+              "/home/luis/dev/lobo-ar/lobo-lang/target/native-rest/snapshot-regression-build/LoboSnapshot.exe",
+              "--entry",
+              "native.snapshot.main"
+            ],
+            "exit_code": 0,
+            "stdout": "{\"status\":\"ok\",\"kind\":\"value\",\"value\":{\"type\":\"Variant\",\"value\":{\"id\":\"lobo.generic.type.c09c71e43c56183b079d77143d13711d\",\"case\":\"Err\",\"payload\":{\"type\":\"Variant\",\"value\":{\"id\":\"lobo.os.error\",\"case\":\"Denied\",\"payload\":null}}}}}\n",
+            "stderr": ""
+          },
+          {
+            "command": [
+              "wine",
+              "/home/luis/dev/lobo-ar/lobo-lang/target/native-rest/snapshot-regression-build/LoboSnapshot.exe",
+              "--entry",
+              "native.snapshot.main",
+              "--native-clock",
+              "true"
+            ],
+            "exit_code": 0,
+            "stdout": "{\"status\":\"ok\",\"kind\":\"value\",\"value\":{\"type\":\"Variant\",\"value\":{\"id\":\"lobo.generic.type.c09c71e43c56183b079d77143d13711d\",\"case\":\"Err\",\"payload\":{\"type\":\"Variant\",\"value\":{\"id\":\"lobo.os.error\",\"case\":\"Denied\",\"payload\":null}}}}}\n",
+            "stderr": ""
+          },
+          {
+            "command": [
+              "wine",
+              "/home/luis/dev/lobo-ar/lobo-lang/target/native-rest/snapshot-regression-build/LoboSnapshot.exe",
+              "--entry",
+              "native.snapshot.main",
+              "--native-random",
+              "true"
+            ],
+            "exit_code": 0,
+            "stdout": "{\"status\":\"ok\",\"kind\":\"value\",\"value\":{\"type\":\"Variant\",\"value\":{\"id\":\"lobo.generic.type.c09c71e43c56183b079d77143d13711d\",\"case\":\"Err\",\"payload\":{\"type\":\"Variant\",\"value\":{\"id\":\"lobo.os.error\",\"case\":\"Denied\",\"payload\":null}}}}}\n",
+            "stderr": ""
+          },
+          {
+            "command": [
+              "wine",
+              "/home/luis/dev/lobo-ar/lobo-lang/target/native-rest/snapshot-regression-build/LoboSnapshot.exe",
+              "--entry",
+              "native.snapshot.main",
+              "--native-clock",
+              "true",
+              "--native-random",
+              "true"
+            ],
+            "exit_code": 0,
+            "stdout": "{\"status\":\"ok\",\"kind\":\"value\",\"value\":{\"type\":\"Variant\",\"value\":{\"id\":\"lobo.generic.type.c09c71e43c56183b079d77143d13711d\",\"case\":\"Ok\",\"payload\":{\"type\":\"Record\",\"value\":{\"id\":\"native.snapshot.value\",\"fields\":{\"monotonic_ms\":{\"type\":\"I64\",\"value\":\"1197637869\"},\"random_bytes\":{\"type\":\"Bytes\",\"value\":\"8b26438fb63f60f82f730b26a2a1d2a6\"}}}}}}}\n",
+            "stderr": ""
+          },
+          {
+            "command": [
+              "wine",
+              "/home/luis/dev/lobo-ar/lobo-lang/target/native-rest/snapshot-regression-build/LoboSnapshot.exe",
+              "--entry",
+              "native.snapshot.main",
+              "--native-clock",
+              "true",
+              "--native-random",
+              "true",
+              "--native-bytes",
+              "0"
+            ],
+            "exit_code": 0,
+            "stdout": "{\"status\":\"ok\",\"kind\":\"value\",\"value\":{\"type\":\"Variant\",\"value\":{\"id\":\"lobo.generic.type.c09c71e43c56183b079d77143d13711d\",\"case\":\"Err\",\"payload\":{\"type\":\"Variant\",\"value\":{\"id\":\"lobo.os.error\",\"case\":\"LimitExceeded\",\"payload\":null}}}}}\n",
+            "stderr": ""
+          },
+          {
+            "command": [
+              "wine",
+              "/home/luis/dev/lobo-ar/lobo-lang/target/native-rest/snapshot-regression-build/LoboSnapshot.exe",
+              "--entry",
+              "native.snapshot.main",
+              "--native-clock",
+              "true",
+              "--native-random",
+              "true",
+              "--native-handles",
+              "1"
+            ],
+            "exit_code": 0,
+            "stdout": "{\"status\":\"ok\",\"kind\":\"value\",\"value\":{\"type\":\"Variant\",\"value\":{\"id\":\"lobo.generic.type.c09c71e43c56183b079d77143d13711d\",\"case\":\"Err\",\"payload\":{\"type\":\"Variant\",\"value\":{\"id\":\"lobo.os.error\",\"case\":\"LimitExceeded\",\"payload\":null}}}}}\n",
+            "stderr": ""
+          },
+          {
+            "command": [
+              "wine",
+              "/home/luis/dev/lobo-ar/lobo-lang/target/native-rest/snapshot-regression-build/LoboSnapshot.exe",
+              "--entry",
+              "native.snapshot.main",
+              "--native-clock",
+              "true",
+              "--native-random",
+              "true",
+              "--native-calls",
+              "1"
+            ],
+            "exit_code": 0,
+            "stdout": "{\"status\":\"ok\",\"kind\":\"value\",\"value\":{\"type\":\"Variant\",\"value\":{\"id\":\"lobo.generic.type.c09c71e43c56183b079d77143d13711d\",\"case\":\"Err\",\"payload\":{\"type\":\"Variant\",\"value\":{\"id\":\"lobo.os.error\",\"case\":\"LimitExceeded\",\"payload\":null}}}}}\n",
+            "stderr": ""
+          },
+          {
+            "command": [
+              "wine",
+              "/home/luis/dev/lobo-ar/lobo-lang/target/native-rest/snapshot-regression-build/LoboSnapshot.exe",
+              "--entry",
+              "native.snapshot.main",
+              "--native-clock",
+              "false"
+            ],
+            "exit_code": 1,
+            "stdout": "{\"status\":\"error\",\"kind\":\"invocation_error\",\"diagnostic\":{\"code\":\"invocation.cli.invalid\",\"phase\":\"invoke\"}}\n",
+            "stderr": ""
+          },
+          {
+            "command": [
+              "wine",
+              "/home/luis/dev/lobo-ar/lobo-lang/target/native-rest/snapshot-regression-build/LoboSnapshot.exe",
+              "--entry",
+              "native.snapshot.main",
+              "--native-calls",
+              "0"
+            ],
+            "exit_code": 1,
+            "stdout": "{\"status\":\"error\",\"kind\":\"invocation_error\",\"diagnostic\":{\"code\":\"invocation.cli.invalid\",\"phase\":\"invoke\"}}\n",
+            "stderr": ""
+          },
+          {
+            "command": [
+              "wine",
+              "/home/luis/dev/lobo-ar/lobo-lang/target/native-rest/snapshot-regression-build/LoboSnapshot.exe",
+              "--entry",
+              "native.snapshot.main",
+              "--native-clock",
+              "true",
+              "--native-clock",
+              "true"
+            ],
+            "exit_code": 1,
+            "stdout": "{\"status\":\"error\",\"kind\":\"invocation_error\",\"diagnostic\":{\"code\":\"invocation.cli.invalid\",\"phase\":\"invoke\"}}\n",
+            "stderr": ""
+          },
+          {
+            "command": [
+              "wine",
+              "/home/luis/dev/lobo-ar/lobo-lang/target/native-rest/snapshot-regression-build/LoboSnapshot.exe",
+              "--entry",
+              "native.snapshot.main",
+              "--native-listen",
+              "127.0.0.1:0"
+            ],
+            "exit_code": 1,
+            "stdout": "{\"status\":\"error\",\"kind\":\"invocation_error\",\"diagnostic\":{\"code\":\"invocation.cli.invalid\",\"phase\":\"invoke\"}}\n",
+            "stderr": ""
+          },
+          {
+            "command": [
+              "wine",
+              "/home/luis/dev/lobo-ar/lobo-lang/target/native-rest/snapshot-regression-build/LoboSnapshot.exe",
+              "--entry",
+              "native.snapshot.main",
+              "--native-handles",
+              "01"
+            ],
+            "exit_code": 1,
+            "stdout": "{\"status\":\"error\",\"kind\":\"invocation_error\",\"diagnostic\":{\"code\":\"invocation.cli.invalid\",\"phase\":\"invoke\"}}\n",
+            "stderr": ""
+          },
+          {
+            "command": [
+              "/home/luis/dev/lobo-ar/lobo-lang/target/windows-snapshot/llvm-mingw-20261117-ucrt-ubuntu-22.04-x86_64/bin/x86_64-w64-mingw32-clang",
+              "-std=c11",
+              "-O2",
+              "-I",
+              "/home/luis/dev/lobo-ar/lobo-lang/src",
+              "/home/luis/dev/lobo-ar/lobo-lang/tests/native/windows_snapshot_harness.c",
+              "-static",
+              "-lbcrypt",
+              "-o",
+              "/home/luis/dev/lobo-ar/lobo-lang/target/native-rest/snapshot-regression-tests/provider-tests.exe"
+            ],
+            "exit_code": 0,
+            "stdout": "",
+            "stderr": ""
+          },
+          {
+            "command": [
+              "wine",
+              "/home/luis/dev/lobo-ar/lobo-lang/target/native-rest/snapshot-regression-tests/provider-tests.exe",
+              "matrix"
+            ],
+            "exit_code": 0,
+            "stdout": "windows-provider-case-passed\n",
+            "stderr": ""
+          },
+          {
+            "command": [
+              "wine",
+              "/home/luis/dev/lobo-ar/lobo-lang/target/native-rest/snapshot-regression-tests/provider-tests.exe",
+              "deny"
+            ],
+            "exit_code": 0,
+            "stdout": "windows-provider-case-passed\n",
+            "stderr": ""
+          },
+          {
+            "command": [
+              "wine",
+              "/home/luis/dev/lobo-ar/lobo-lang/target/native-rest/snapshot-regression-tests/provider-tests.exe",
+              "bounds"
+            ],
+            "exit_code": 0,
+            "stdout": "windows-provider-case-passed\n",
+            "stderr": ""
+          },
+          {
+            "command": [
+              "wine",
+              "/home/luis/dev/lobo-ar/lobo-lang/target/native-rest/snapshot-regression-tests/provider-tests.exe",
+              "quotas"
+            ],
+            "exit_code": 0,
+            "stdout": "windows-provider-case-passed\n",
+            "stderr": ""
+          },
+          {
+            "command": [
+              "wine",
+              "/home/luis/dev/lobo-ar/lobo-lang/target/native-rest/snapshot-regression-tests/provider-tests.exe",
+              "rng-failure"
+            ],
+            "exit_code": 0,
+            "stdout": "windows-provider-case-passed\n",
+            "stderr": ""
+          },
+          {
+            "command": [
+              "wine",
+              "/home/luis/dev/lobo-ar/lobo-lang/target/native-rest/snapshot-regression-tests/provider-tests.exe",
+              "clock-overflow"
+            ],
+            "exit_code": 0,
+            "stdout": "windows-provider-case-passed\n",
+            "stderr": ""
+          },
+          {
+            "command": [
+              "wine",
+              "/home/luis/dev/lobo-ar/lobo-lang/target/native-rest/snapshot-regression-tests/provider-tests.exe",
+              "root-depth"
+            ],
+            "exit_code": 1,
+            "stdout": "{\"status\":\"error\",\"kind\":\"invocation_error\",\"diagnostic\":{\"code\":\"invocation.native.authority\",\"phase\":\"invoke\"}}\n",
+            "stderr": ""
+          },
+          {
+            "command": [
+              "wine",
+              "/home/luis/dev/lobo-ar/lobo-lang/target/native-rest/snapshot-regression-tests/provider-tests.exe",
+              "unsupported"
+            ],
+            "exit_code": 1,
+            "stdout": "{\"status\":\"error\",\"kind\":\"invocation_error\",\"diagnostic\":{\"code\":\"invocation.native.operation_unsupported\",\"phase\":\"invoke\"}}\n",
+            "stderr": ""
+          },
+          {
+            "command": [
+              "wine",
+              "/home/luis/dev/lobo-ar/lobo-lang/target/native-rest/snapshot-regression-tests/provider-tests.exe",
+              "fuel"
+            ],
+            "exit_code": 1,
+            "stdout": "{\"status\":\"error\",\"kind\":\"resource_exhausted\",\"diagnostic\":{\"code\":\"resource.fuel.exhausted\",\"phase\":\"invoke\"}}\n",
+            "stderr": ""
+          },
+          {
+            "command": [
+              "wine",
+              "/home/luis/dev/lobo-ar/lobo-lang/target/native-rest/snapshot-regression-tests/provider-tests.exe",
+              "heap"
+            ],
+            "exit_code": 1,
+            "stdout": "{\"status\":\"error\",\"kind\":\"resource_exhausted\",\"diagnostic\":{\"code\":\"resource.memory.exhausted\",\"phase\":\"invoke\"}}\n",
+            "stderr": ""
+          }
+        ]
+      },
+      "linux_models": {
+        "format": "lobo-native-model-check/0.1",
+        "status": "pass",
+        "tlc_jar_sha256": "936a262061c914694dfd669a543be24573c45d5aa0ff20a8b96b23d01e050e88",
+        "model_results": [
+          {
+            "name": "authority",
+            "status": "pass",
+            "expected_invariant": null,
+            "generated": 31141,
+            "distinct": 11991,
+            "queued": 0,
+            "trace_states": null,
+            "action_counts": {
+              "Init": {
+                "new_states": 1,
+                "successors": 1
+              },
+              "Root": {
+                "new_states": 1,
+                "successors": 4121
+              },
+              "Derive": {
+                "new_states": 2202,
+                "successors": 6320
+              },
+              "Allocate": {
+                "new_states": 230,
+                "successors": 884
+              },
+              "Use": {
+                "new_states": 1511,
+                "successors": 7400
+              },
+              "Release": {
+                "new_states": 294,
+                "successors": 1032
+              },
+              "Exit": {
+                "new_states": 4121,
+                "successors": 4121
+              },
+              "Finished": {
+                "new_states": 3631,
+                "successors": 3631
+              },
+              "Done": {
+                "new_states": 0,
+                "successors": 3631
+              }
+            }
+          },
+          {
+            "name": "operations",
+            "status": "pass",
+            "expected_invariant": null,
+            "generated": 3061,
+            "distinct": 1815,
+            "queued": 0,
+            "trace_states": null,
+            "action_counts": {
+              "Init": {
+                "new_states": 1,
+                "successors": 1
+              },
+              "Acquire": {
+                "new_states": 1,
+                "successors": 1
+              },
+              "Connect": {
+                "new_states": 18,
+                "successors": 18
+              },
+              "Validate": {
+                "new_states": 9,
+                "successors": 9
+              },
+              "RejectPeer": {
+                "new_states": 9,
+                "successors": 9
+              },
+              "StartIO": {
+                "new_states": 9,
+                "successors": 9
+              },
+              "BeginIO": {
+                "new_states": 273,
+                "successors": 534
+              },
+              "Retry": {
+                "new_states": 174,
+                "successors": 316
+              },
+              "Timeout": {
+                "new_states": 21,
+                "successors": 33
+              },
+              "Fault": {
+                "new_states": 202,
+                "successors": 284
+              },
+              "OsFailure": {
+                "new_states": 322,
+                "successors": 466
+              },
+              "Write": {
+                "new_states": 110,
+                "successors": 126
+              },
+              "Read": {
+                "new_states": 40,
+                "successors": 64
+              },
+              "Shutdown": {
+                "new_states": 50,
+                "successors": 50
+              },
+              "Eof": {
+                "new_states": 2,
+                "successors": 2
+              },
+              "QuotaFailure": {
+                "new_states": 9,
+                "successors": 9
+              },
+              "Cleanup": {
+                "new_states": 565,
+                "successors": 565
+              },
+              "Done": {
+                "new_states": 0,
+                "successors": 565
+              }
+            }
+          },
+          {
+            "name": "authority-root",
+            "status": "expected-counterexample",
+            "expected_invariant": "EntryAuthority",
+            "generated": 4,
+            "distinct": 3,
+            "queued": 1,
+            "trace_states": 2,
+            "action_counts": {
+              "Init": {
+                "new_states": 1,
+                "successors": 1
+              },
+              "Root": {
+                "new_states": 2,
+                "successors": 6
+              },
+              "Derive": {
+                "new_states": 0,
+                "successors": 0
+              },
+              "Allocate": {
+                "new_states": 0,
+                "successors": 0
+              },
+              "Use": {
+                "new_states": 0,
+                "successors": 0
+              },
+              "Release": {
+                "new_states": 0,
+                "successors": 0
+              },
+              "Exit": {
+                "new_states": 0,
+                "successors": 0
+              },
+              "Finished": {
+                "new_states": 0,
+                "successors": 0
+              },
+              "Done": {
+                "new_states": 0,
+                "successors": 0
+              }
+            }
+          },
+          {
+            "name": "authority-amplify",
+            "status": "expected-counterexample",
+            "expected_invariant": "NoAmplification",
+            "generated": 83,
+            "distinct": 46,
+            "queued": 41,
+            "trace_states": 4,
+            "action_counts": {
+              "Init": {
+                "new_states": 2,
+                "successors": 2
+              },
+              "Root": {
+                "new_states": 1,
+                "successors": 6
+              },
+              "Derive": {
+                "new_states": 36,
+                "successors": 80
+              },
+              "Allocate": {
+                "new_states": 4,
+                "successors": 4
+              },
+              "Use": {
+                "new_states": 1,
+                "successors": 1
+              },
+              "Release": {
+                "new_states": 0,
+                "successors": 0
+              },
+              "Exit": {
+                "new_states": 2,
+                "successors": 2
+              },
+              "Finished": {
+                "new_states": 1,
+                "successors": 1
+              },
+              "Done": {
+                "new_states": 0,
+                "successors": 0
+              }
+            }
+          },
+          {
+            "name": "authority-stale",
+            "status": "expected-counterexample",
+            "expected_invariant": "ValidGeneration",
+            "generated": 12362,
+            "distinct": 3942,
+            "queued": 2329,
+            "trace_states": 6,
+            "action_counts": {
+              "Init": {
+                "new_states": 2,
+                "successors": 2
+              },
+              "Root": {
+                "new_states": 1,
+                "successors": 1059
+              },
+              "Derive": {
+                "new_states": 1157,
+                "successors": 3163
+              },
+              "Allocate": {
+                "new_states": 148,
+                "successors": 439
+              },
+              "Use": {
+                "new_states": 1015,
+                "successors": 6018
+              },
+              "Release": {
+                "new_states": 114,
+                "successors": 226
+              },
+              "Exit": {
+                "new_states": 1053,
+                "successors": 1053
+              },
+              "Finished": {
+                "new_states": 453,
+                "successors": 453
+              },
+              "Done": {
+                "new_states": 0,
+                "successors": 34
+              }
+            }
+          },
+          {
+            "name": "authority-kind",
+            "status": "expected-counterexample",
+            "expected_invariant": "ValidKind",
+            "generated": 43,
+            "distinct": 41,
+            "queued": 38,
+            "trace_states": 3,
+            "action_counts": {
+              "Init": {
+                "new_states": 2,
+                "successors": 2
+              },
+              "Root": {
+                "new_states": 1,
+                "successors": 4
+              },
+              "Derive": {
+                "new_states": 32,
+                "successors": 64
+              },
+              "Allocate": {
+                "new_states": 4,
+                "successors": 8
+              },
+              "Use": {
+                "new_states": 2,
+                "successors": 6
+              },
+              "Release": {
+                "new_states": 0,
+                "successors": 0
+              },
+              "Exit": {
+                "new_states": 1,
+                "successors": 1
+              },
+              "Finished": {
+                "new_states": 0,
+                "successors": 0
+              },
+              "Done": {
+                "new_states": 0,
+                "successors": 0
+              }
+            }
+          },
+          {
+            "name": "authority-denied",
+            "status": "expected-counterexample",
+            "expected_invariant": "NoDeniedSyscall",
+            "generated": 68,
+            "distinct": 61,
+            "queued": 56,
+            "trace_states": 4,
+            "action_counts": {
+              "Init": {
+                "new_states": 2,
+                "successors": 2
+              },
+              "Root": {
+                "new_states": 1,
+                "successors": 6
+              },
+              "Derive": {
+                "new_states": 49,
+                "successors": 67
+              },
+              "Allocate": {
+                "new_states": 6,
+                "successors": 14
+              },
+              "Use": {
+                "new_states": 1,
+                "successors": 1
+              },
+              "Release": {
+                "new_states": 0,
+                "successors": 0
+              },
+              "Exit": {
+                "new_states": 2,
+                "successors": 2
+              },
+              "Finished": {
+                "new_states": 1,
+                "successors": 1
+              },
+              "Done": {
+                "new_states": 0,
+                "successors": 0
+              }
+            }
+          },
+          {
+            "name": "authority-quota",
+            "status": "expected-counterexample",
+            "expected_invariant": "WithinQuota",
+            "generated": 6,
+            "distinct": 4,
+            "queued": 1,
+            "trace_states": 3,
+            "action_counts": {
+              "Init": {
+                "new_states": 2,
+                "successors": 2
+              },
+              "Root": {
+                "new_states": 1,
+                "successors": 6
+              },
+              "Derive": {
+                "new_states": 1,
+                "successors": 2
+              },
+              "Allocate": {
+                "new_states": 0,
+                "successors": 0
+              },
+              "Use": {
+                "new_states": 0,
+                "successors": 0
+              },
+              "Release": {
+                "new_states": 0,
+                "successors": 0
+              },
+              "Exit": {
+                "new_states": 1,
+                "successors": 1
+              },
+              "Finished": {
+                "new_states": 0,
+                "successors": 0
+              },
+              "Done": {
+                "new_states": 0,
+                "successors": 0
+              }
+            }
+          },
+          {
+            "name": "authority-wrap",
+            "status": "expected-counterexample",
+            "expected_invariant": "NoGenerationWrap",
+            "generated": 9806,
+            "distinct": 4022,
+            "queued": 2393,
+            "trace_states": 6,
+            "action_counts": {
+              "Init": {
+                "new_states": 2,
+                "successors": 2
+              },
+              "Root": {
+                "new_states": 1,
+                "successors": 1075
+              },
+              "Derive": {
+                "new_states": 1221,
+                "successors": 3529
+              },
+              "Allocate": {
+                "new_states": 148,
+                "successors": 488
+              },
+              "Use": {
+                "new_states": 1014,
+                "successors": 3042
+              },
+              "Release": {
+                "new_states": 115,
+                "successors": 228
+              },
+              "Exit": {
+                "new_states": 1069,
+                "successors": 1069
+              },
+              "Finished": {
+                "new_states": 453,
+                "successors": 453
+              },
+              "Done": {
+                "new_states": 0,
+                "successors": 34
+              }
+            }
+          },
+          {
+            "name": "authority-cleanup",
+            "status": "expected-counterexample",
+            "expected_invariant": "ExitCloses",
+            "generated": 4430,
+            "distinct": 1632,
+            "queued": 1070,
+            "trace_states": 5,
+            "action_counts": {
+              "Init": {
+                "new_states": 2,
+                "successors": 2
+              },
+              "Root": {
+                "new_states": 1,
+                "successors": 528
+              },
+              "Derive": {
+                "new_states": 434,
+                "successors": 1572
+              },
+              "Allocate": {
+                "new_states": 74,
+                "successors": 217
+              },
+              "Use": {
+                "new_states": 523,
+                "successors": 1499
+              },
+              "Release": {
+                "new_states": 39,
+                "successors": 76
+              },
+              "Exit": {
+                "new_states": 525,
+                "successors": 526
+              },
+              "Finished": {
+                "new_states": 35,
+                "successors": 70
+              },
+              "Done": {
+                "new_states": 0,
+                "successors": 1
+              }
+            }
+          },
+          {
+            "name": "operations-untracked-fault",
+            "status": "expected-counterexample",
+            "expected_invariant": "ExitCloses",
+            "generated": 5,
+            "distinct": 5,
+            "queued": 1,
+            "trace_states": 4,
+            "action_counts": {
+              "Init": {
+                "new_states": 2,
+                "successors": 2
+              },
+              "Acquire": {
+                "new_states": 1,
+                "successors": 2
+              },
+              "Connect": {
+                "new_states": 0,
+                "successors": 0
+              },
+              "Validate": {
+                "new_states": 0,
+                "successors": 0
+              },
+              "RejectPeer": {
+                "new_states": 0,
+                "successors": 0
+              },
+              "StartIO": {
+                "new_states": 0,
+                "successors": 0
+              },
+              "BeginIO": {
+                "new_states": 0,
+                "successors": 0
+              },
+              "Retry": {
+                "new_states": 0,
+                "successors": 0
+              },
+              "Timeout": {
+                "new_states": 0,
+                "successors": 0
+              },
+              "Fault": {
+                "new_states": 1,
+                "successors": 2
+              },
+              "OsFailure": {
+                "new_states": 1,
+                "successors": 1
+              },
+              "Write": {
+                "new_states": 0,
+                "successors": 0
+              },
+              "Read": {
+                "new_states": 0,
+                "successors": 0
+              },
+              "Shutdown": {
+                "new_states": 0,
+                "successors": 0
+              },
+              "Eof": {
+                "new_states": 0,
+                "successors": 0
+              },
+              "QuotaFailure": {
+                "new_states": 0,
+                "successors": 0
+              },
+              "Cleanup": {
+                "new_states": 1,
+                "successors": 2
+              },
+              "Done": {
+                "new_states": 0,
+                "successors": 0
+              }
+            }
+          },
+          {
+            "name": "operations-publish",
+            "status": "expected-counterexample",
+            "expected_invariant": "ValidatedPublication",
+            "generated": 8,
+            "distinct": 8,
+            "queued": 4,
+            "trace_states": 4,
+            "action_counts": {
+              "Init": {
+                "new_states": 2,
+                "successors": 2
+              },
+              "Acquire": {
+                "new_states": 1,
+                "successors": 2
+              },
+              "Connect": {
+                "new_states": 2,
+                "successors": 3
+              },
+              "Validate": {
+                "new_states": 1,
+                "successors": 2
+              },
+              "RejectPeer": {
+                "new_states": 0,
+                "successors": 0
+              },
+              "StartIO": {
+                "new_states": 0,
+                "successors": 0
+              },
+              "BeginIO": {
+                "new_states": 0,
+                "successors": 0
+              },
+              "Retry": {
+                "new_states": 2,
+                "successors": 2
+              },
+              "Timeout": {
+                "new_states": 0,
+                "successors": 0
+              },
+              "Fault": {
+                "new_states": 0,
+                "successors": 0
+              },
+              "OsFailure": {
+                "new_states": 1,
+                "successors": 1
+              },
+              "Write": {
+                "new_states": 0,
+                "successors": 0
+              },
+              "Read": {
+                "new_states": 0,
+                "successors": 0
+              },
+              "Shutdown": {
+                "new_states": 0,
+                "successors": 0
+              },
+              "Eof": {
+                "new_states": 0,
+                "successors": 0
+              },
+              "QuotaFailure": {
+                "new_states": 0,
+                "successors": 0
+              },
+              "Cleanup": {
+                "new_states": 0,
+                "successors": 0
+              },
+              "Done": {
+                "new_states": 0,
+                "successors": 0
+              }
+            }
+          },
+          {
+            "name": "operations-deadline",
+            "status": "expected-counterexample",
+            "expected_invariant": "FixedDeadline",
+            "generated": 6,
+            "distinct": 6,
+            "queued": 3,
+            "trace_states": 3,
+            "action_counts": {
+              "Init": {
+                "new_states": 2,
+                "successors": 2
+              },
+              "Acquire": {
+                "new_states": 1,
+                "successors": 2
+              },
+              "Connect": {
+                "new_states": 2,
+                "successors": 4
+              },
+              "Validate": {
+                "new_states": 0,
+                "successors": 0
+              },
+              "RejectPeer": {
+                "new_states": 0,
+                "successors": 0
+              },
+              "StartIO": {
+                "new_states": 0,
+                "successors": 0
+              },
+              "BeginIO": {
+                "new_states": 0,
+                "successors": 0
+              },
+              "Retry": {
+                "new_states": 2,
+                "successors": 4
+              },
+              "Timeout": {
+                "new_states": 0,
+                "successors": 0
+              },
+              "Fault": {
+                "new_states": 0,
+                "successors": 0
+              },
+              "OsFailure": {
+                "new_states": 0,
+                "successors": 0
+              },
+              "Write": {
+                "new_states": 0,
+                "successors": 0
+              },
+              "Read": {
+                "new_states": 0,
+                "successors": 0
+              },
+              "Shutdown": {
+                "new_states": 0,
+                "successors": 0
+              },
+              "Eof": {
+                "new_states": 0,
+                "successors": 0
+              },
+              "QuotaFailure": {
+                "new_states": 0,
+                "successors": 0
+              },
+              "Cleanup": {
+                "new_states": 0,
+                "successors": 0
+              },
+              "Done": {
+                "new_states": 0,
+                "successors": 0
+              }
+            }
+          }
+        ],
+        "c_replays": [
+          {
+            "case": "root",
+            "mode": "optimized",
+            "status": "pass",
+            "exit_code": 1,
+            "model_invariant": "EntryAuthority"
+          },
+          {
+            "case": "root",
+            "mode": "sanitized",
+            "status": "pass",
+            "exit_code": 1,
+            "model_invariant": "EntryAuthority"
+          },
+          {
+            "case": "amplify",
+            "mode": "optimized",
+            "status": "pass",
+            "exit_code": 0,
+            "model_invariant": "NoAmplification"
+          },
+          {
+            "case": "amplify",
+            "mode": "sanitized",
+            "status": "pass",
+            "exit_code": 0,
+            "model_invariant": "NoAmplification"
+          },
+          {
+            "case": "stale",
+            "mode": "optimized",
+            "status": "pass",
+            "exit_code": 0,
+            "model_invariant": "ValidGeneration"
+          },
+          {
+            "case": "stale",
+            "mode": "sanitized",
+            "status": "pass",
+            "exit_code": 0,
+            "model_invariant": "ValidGeneration"
+          },
+          {
+            "case": "kind",
+            "mode": "optimized",
+            "status": "pass",
+            "exit_code": 0,
+            "model_invariant": "ValidKind"
+          },
+          {
+            "case": "kind",
+            "mode": "sanitized",
+            "status": "pass",
+            "exit_code": 0,
+            "model_invariant": "ValidKind"
+          },
+          {
+            "case": "denied",
+            "mode": "optimized",
+            "status": "pass",
+            "exit_code": 0,
+            "model_invariant": "NoDeniedSyscall"
+          },
+          {
+            "case": "denied",
+            "mode": "sanitized",
+            "status": "pass",
+            "exit_code": 0,
+            "model_invariant": "NoDeniedSyscall"
+          },
+          {
+            "case": "quota",
+            "mode": "optimized",
+            "status": "pass",
+            "exit_code": 0,
+            "model_invariant": "WithinQuota"
+          },
+          {
+            "case": "quota",
+            "mode": "sanitized",
+            "status": "pass",
+            "exit_code": 0,
+            "model_invariant": "WithinQuota"
+          },
+          {
+            "case": "wrap",
+            "mode": "optimized",
+            "status": "pass",
+            "exit_code": 0,
+            "model_invariant": "NoGenerationWrap"
+          },
+          {
+            "case": "wrap",
+            "mode": "sanitized",
+            "status": "pass",
+            "exit_code": 0,
+            "model_invariant": "NoGenerationWrap"
+          },
+          {
+            "case": "cleanup",
+            "mode": "optimized",
+            "status": "pass",
+            "exit_code": 0,
+            "model_invariant": "ExitCloses"
+          },
+          {
+            "case": "cleanup",
+            "mode": "sanitized",
+            "status": "pass",
+            "exit_code": 0,
+            "model_invariant": "ExitCloses"
+          },
+          {
+            "case": "untracked-fault",
+            "mode": "optimized",
+            "status": "pass",
+            "exit_code": 1,
+            "model_invariant": "ExitCloses"
+          },
+          {
+            "case": "untracked-fault",
+            "mode": "sanitized",
+            "status": "pass",
+            "exit_code": 1,
+            "model_invariant": "ExitCloses"
+          },
+          {
+            "case": "publish",
+            "mode": "optimized",
+            "status": "pass",
+            "exit_code": 0,
+            "model_invariant": "ValidatedPublication"
+          },
+          {
+            "case": "publish",
+            "mode": "sanitized",
+            "status": "pass",
+            "exit_code": 0,
+            "model_invariant": "ValidatedPublication"
+          },
+          {
+            "case": "deadline",
+            "mode": "optimized",
+            "status": "pass",
+            "exit_code": 0,
+            "model_invariant": "FixedDeadline"
+          },
+          {
+            "case": "deadline",
+            "mode": "sanitized",
+            "status": "pass",
+            "exit_code": 0,
+            "model_invariant": "FixedDeadline"
+          }
+        ],
+        "c_mutations": [
+          {
+            "case": "root",
+            "mode": "optimized",
+            "status": "expected-rejection",
+            "exit_code": 3,
+            "model_invariant": "EntryAuthority"
+          },
+          {
+            "case": "root",
+            "mode": "sanitized",
+            "status": "expected-rejection",
+            "exit_code": 3,
+            "model_invariant": "EntryAuthority"
+          },
+          {
+            "case": "amplify",
+            "mode": "optimized",
+            "status": "expected-rejection",
+            "exit_code": 1,
+            "model_invariant": "NoAmplification"
+          },
+          {
+            "case": "amplify",
+            "mode": "sanitized",
+            "status": "expected-rejection",
+            "exit_code": 1,
+            "model_invariant": "NoAmplification"
+          },
+          {
+            "case": "stale",
+            "mode": "optimized",
+            "status": "expected-rejection",
+            "exit_code": 1,
+            "model_invariant": "ValidGeneration"
+          },
+          {
+            "case": "stale",
+            "mode": "sanitized",
+            "status": "expected-rejection",
+            "exit_code": 1,
+            "model_invariant": "ValidGeneration"
+          },
+          {
+            "case": "kind",
+            "mode": "optimized",
+            "status": "expected-rejection",
+            "exit_code": 1,
+            "model_invariant": "ValidKind"
+          },
+          {
+            "case": "kind",
+            "mode": "sanitized",
+            "status": "expected-rejection",
+            "exit_code": 1,
+            "model_invariant": "ValidKind"
+          },
+          {
+            "case": "denied",
+            "mode": "optimized",
+            "status": "expected-rejection",
+            "exit_code": 1,
+            "model_invariant": "NoDeniedSyscall"
+          },
+          {
+            "case": "denied",
+            "mode": "sanitized",
+            "status": "expected-rejection",
+            "exit_code": 1,
+            "model_invariant": "NoDeniedSyscall"
+          },
+          {
+            "case": "quota",
+            "mode": "optimized",
+            "status": "expected-rejection",
+            "exit_code": 1,
+            "model_invariant": "WithinQuota"
+          },
+          {
+            "case": "quota",
+            "mode": "sanitized",
+            "status": "expected-rejection",
+            "exit_code": 1,
+            "model_invariant": "WithinQuota"
+          },
+          {
+            "case": "wrap",
+            "mode": "optimized",
+            "status": "expected-rejection",
+            "exit_code": 1,
+            "model_invariant": "NoGenerationWrap"
+          },
+          {
+            "case": "wrap",
+            "mode": "sanitized",
+            "status": "expected-rejection",
+            "exit_code": 1,
+            "model_invariant": "NoGenerationWrap"
+          },
+          {
+            "case": "cleanup",
+            "mode": "optimized",
+            "status": "expected-rejection",
+            "exit_code": 1,
+            "model_invariant": "ExitCloses"
+          },
+          {
+            "case": "cleanup",
+            "mode": "sanitized",
+            "status": "expected-rejection",
+            "exit_code": 1,
+            "model_invariant": "ExitCloses"
+          },
+          {
+            "case": "untracked-fault",
+            "mode": "optimized",
+            "status": "expected-rejection",
+            "exit_code": 2,
+            "model_invariant": "ExitCloses"
+          },
+          {
+            "case": "untracked-fault",
+            "mode": "sanitized",
+            "status": "expected-rejection",
+            "exit_code": 2,
+            "model_invariant": "ExitCloses"
+          },
+          {
+            "case": "publish",
+            "mode": "optimized",
+            "status": "expected-rejection",
+            "exit_code": 1,
+            "model_invariant": "ValidatedPublication"
+          },
+          {
+            "case": "publish",
+            "mode": "sanitized",
+            "status": "expected-rejection",
+            "exit_code": 1,
+            "model_invariant": "ValidatedPublication"
+          },
+          {
+            "case": "deadline",
+            "mode": "optimized",
+            "status": "expected-rejection",
+            "exit_code": 1,
+            "model_invariant": "FixedDeadline"
+          },
+          {
+            "case": "deadline",
+            "mode": "sanitized",
+            "status": "expected-rejection",
+            "exit_code": 1,
+            "model_invariant": "FixedDeadline"
+          }
+        ],
+        "source_hashes": {
+          "src/native_api.c": "15d789a2129b16e2009c74e28987097c24ed7083a628fea9cc5cd03c43772c20",
+          "src/native_runtime.c": "32a67f4913cddeee51fe33d6464afeb42d9740f81350ddb0ae45d88015f7564c",
+          "tests/native/formal_trace_harness.c": "b76fd1b60987a762c37215e528a3a1d22987770307435478b3c12c51c945fa7e",
+          "tests/native/adapter_harness.c": "88f5215e6b5507bc9209df02dfad622db3c3c3fa5bfae4511f63f06ed676f49c",
+          "verification/native/Operations.tla": "4ae35551cda143f54b4c906f0e5bb8f8cdf4485fcc3a2f63109244f15aa0296b",
+          "verification/native/Authority.tla": "f43286c3cbb75963641133f0de32a4dc7ba6a7cf28799ad3cd2a7b57f5842c89"
+        },
+        "mode": "full",
+        "coverage_head": "39ec4662869ae992a508a06cf2f3a9cf36240220",
+        "coverage_note": "Source includes uncommitted work beyond HEAD; exact file hashes define reviewed inputs. No commit is claimed for the models. Windows snapshot milestone: Linux provider prefix reviewed byte-identical; new Windows profile is outside these Linux model claims.",
+        "checker_self_test": {
+          "status": "pass",
+          "counterexample_excludes_statistics": true,
+          "known_broken_baseline": "authority-root",
+          "python_optimization": true,
+          "broken_model_process_exit": 1,
+          "output": "/home/luis/dev/lobo-ar/lobo-lang/target/native-rest/linux-model-check/checker-self-test"
+        }
+      }
+    }
+  },
+  "actual_windows_execution": null,
+  "tdd": {
+    "windows_tcp_before": "task-evidence/windows-tcp-red.log",
+    "http_before": "task-evidence/protocol-red.log",
+    "close_failure_before": "task-evidence/windows-close-failure-red/commands.json",
+    "close_failure_after": "task-evidence/windows-tcp-fixed/results.json"
+  },
+  "integrity": {
+    "status": "pass",
+    "unchanged_before_inputs": 347,
+    "reviewed_changed_before_inputs": [
+      ".agents/skills/lobo-native-verification/SKILL.md",
+      ".agents/skills/lobo-programming/SKILL.md",
+      "AGENTS.md",
+      "CHANGELOG.md",
+      "Cargo.lock",
+      "Cargo.toml",
+      "README.md",
+      "docs/windows-testing.md",
+      "editors/vscode/README.md",
+      "editors/vscode/package-lock.json",
+      "editors/vscode/package.json",
+      "examples/native/README.md",
+      "libraries/http/README.md",
+      "spec/core-v1.7.md",
+      "spec/native-interface-v0.1.md",
+      "src/native.rs",
+      "src/native_windows_snapshot.c"
+    ],
+    "prior_paper_entries_unchanged": 25,
+    "frozen_1_0_artifacts": 86,
+    "snapshot_provider_only_build_guard_changed": true,
+    "linux_covered_files_unchanged": true,
+    "dependency_locks_only_root_version_changed": true
+  },
+  "preservation": {
+    "path": "benchmarks/private-evidence/native-rest-20261122",
+    "manifest_sha256": "20eb9451c43aba0d176b2d5bf4b0bd2bb2634cb2ee8b4705ada0f4715ae10eb1",
+    "source_snapshot_files": 389,
+    "local_only": true,
+    "commit": null,
+    "publication": null,
+    "off_device_backup": null
+  },
+  "limits": [
+    "Restricted read-only loopback HTTP demo, not full RFC 9112 implementation, production security or service availability.",
+    "No TLS/authentication/storage/concurrency, no Windows compiler distribution.",
+    "Actual Windows REST execution is unknown; user-reported Windows 10 result is for the snapshot program only.",
+    "Linux finite model claims do not cover Windows.",
+    "Counts overlap across modes/platforms and are not independent research samples."
+  ],
+  "agent_construction_effect": null,
+  "agent_comprehension_effect": null,
+  "agent_token_effect": null,
+  "runtime_performance_effect": null
+}

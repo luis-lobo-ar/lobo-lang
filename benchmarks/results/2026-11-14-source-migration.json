@@ -1,0 +1,270 @@
+{
+  "format": "lobo-source-migration-result/0.1",
+  "date": "2026-11-14",
+  "timezone": "America/Chicago",
+  "status": "engineering-acceptance-passed",
+  "language": "core/1.2",
+  "compiler": "1.2.0",
+  "extension": "1.2.1",
+  "compiler_inputs_unchanged": 22,
+  "maintained_lobo_files": 23,
+  "embedded_programs": 3,
+  "module_declaration_ids_preserved": 157,
+  "selected_imports_preserved": 18,
+  "checked_program_fingerprints_preserved": 26,
+  "manifest": "scripts/source-migration.json",
+  "decision": "decisions/0043-maintained-source-migration.md",
+  "verification": [
+    {
+      "command": "cargo test --locked",
+      "exit_code": 0,
+      "passed": 207,
+      "log": "target/source-migration-rust-complete.log",
+      "log_sha256": "7bbc22942037fb0eae48e6195e2472d295fb67f40a920dd3eb14226ad34d63ff",
+      "preserved_log": "benchmarks/private-evidence/source-migration-20261114/logs/source-migration-rust-complete.log"
+    },
+    {
+      "command": "npm --prefix editors/vscode run package",
+      "exit_code": 0,
+      "editor_tests_passed": 142,
+      "log": "target/source-migration-package-final.log",
+      "log_sha256": "b7d88cd7c8d4bbc49af2a3ef3ed5d5c8b59737648f273f5834a89a8f1312c4a9",
+      "preserved_log": "benchmarks/private-evidence/source-migration-20261114/logs/source-migration-package-final.log"
+    },
+    {
+      "command": "python3 -m unittest discover -s benchmarks -p 'test_*.py'",
+      "exit_code": 0,
+      "passed": 31,
+      "log": "target/source-migration-python-final.log",
+      "log_sha256": "c94f56c715d41c7ac1f04efe4261e411843e63537a72e2b872b5a4987b1e1763",
+      "preserved_log": "benchmarks/private-evidence/source-migration-20261114/logs/source-migration-python-final.log"
+    },
+    {
+      "command": "node --test scripts/test-migrate-syntax.mjs",
+      "exit_code": 0,
+      "passed": 4,
+      "log": "target/source-migration-unit-final.log",
+      "log_sha256": "edb40fbf137bb082a1a814275d9a45c7950f801db7c6181091abd1c459086357",
+      "preserved_log": "benchmarks/private-evidence/source-migration-20261114/logs/source-migration-unit-final.log"
+    },
+    {
+      "command": "node scripts/migrate-syntax.cjs --verify",
+      "exit_code": 0,
+      "log": "target/source-migration-verified-final.json",
+      "log_sha256": "25ce84b718570045e4b8316c7661be86053bc899d737adb583f142af1697d36c",
+      "preserved_log": "benchmarks/private-evidence/source-migration-20261114/logs/source-migration-verified-final.json"
+    },
+    {
+      "command": "cargo clippy --locked --all-targets -- -D warnings",
+      "exit_code": 0,
+      "log": "target/source-migration-clippy.log",
+      "log_sha256": "de8d6f2bebd1effcb938147486d3f60f9482eec553e838a84520a31a66cd0828",
+      "preserved_log": "benchmarks/private-evidence/source-migration-20261114/logs/source-migration-clippy.log"
+    },
+    {
+      "command": "cargo fmt --check",
+      "exit_code": 0,
+      "log": "target/source-migration-format.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "preserved_log": "benchmarks/private-evidence/source-migration-20261114/logs/source-migration-format.log"
+    },
+    {
+      "command": "git diff --check",
+      "exit_code": 0,
+      "log": "target/source-migration-diff.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "preserved_log": "benchmarks/private-evidence/source-migration-20261114/logs/source-migration-diff.log"
+    },
+    {
+      "command": "LOBO_VSCODE_EXECUTABLE=/usr/share/code/code xvfb-run -a npm --prefix editors/vscode run test:host",
+      "exit_code": 0,
+      "log": "target/source-migration-host-final.log",
+      "log_sha256": "c16813e013d3573e8fc68c66071d20c993df1ac0a1a990936ff6cd91a66be536",
+      "preserved_log": "benchmarks/private-evidence/source-migration-20261114/logs/source-migration-host-final.log"
+    },
+    {
+      "command": "LOBO_WEB_EXAMPLE_DIR=/home/luis/dev/lobo-ar/lobo-lang/target/source-migration-web-server python3 examples/web-server/test_server.py",
+      "exit_code": 0,
+      "passed": 6,
+      "log": "target/source-migration-web-tests.log",
+      "log_sha256": "41f7cd84a277072e3ad2dfdb518c255b4375795c436904c6ed4d5445dd3ec5bb",
+      "preserved_log": "benchmarks/private-evidence/source-migration-20261114/logs/source-migration-web-tests.log"
+    },
+    {
+      "command": "python3 examples/web-server/build.py --compiler target/release/lobo --out-dir target/source-migration-web-server",
+      "exit_code": 0,
+      "log": "target/source-migration-web-build.log",
+      "log_sha256": "0e5f58132ce70d5c3207ce03c28cbdeefa4192042a32f0c0822f2d71275b241c",
+      "preserved_log": "benchmarks/private-evidence/source-migration-20261114/logs/source-migration-web-build.log"
+    },
+    {
+      "command": "python3 examples/web-server/build.py --out-dir target/source-migration-web-default",
+      "exit_code": 0,
+      "log": "target/source-migration-web-default.log",
+      "log_sha256": "331844571c6e7994daefa1b843d964eb2930b48c8d0d4914a056eeb41fe88262",
+      "preserved_log": "benchmarks/private-evidence/source-migration-20261114/logs/source-migration-web-default.log"
+    },
+    {
+      "command": "./target/release/lobo-test --session --clang /usr/bin/clang < examples/testing/agent-session.jsonl",
+      "exit_code": 0,
+      "log": "target/source-migration-session.jsonl",
+      "expected_statuses": [
+        "ok",
+        "opened",
+        "checks_satisfied",
+        "failed",
+        "ok",
+        "failed",
+        "closed"
+      ],
+      "log_sha256": "60e03074d010cc27680bb5a616d795379627e92179a8e4581a6386f6df407b45",
+      "preserved_log": "benchmarks/private-evidence/source-migration-20261114/logs/source-migration-session.jsonl"
+    },
+    {
+      "command": "python3 /home/luis/.codex/skills/.system/skill-creator/scripts/quick_validate.py .agents/skills/lobo-programming",
+      "exit_code": 0,
+      "log": "target/source-migration-skill-validation.log",
+      "log_sha256": "db349825903d66adffea3ecf1bd8e1803043e8a71cf1a051235dabc5371f5bb0",
+      "preserved_log": "benchmarks/private-evidence/source-migration-20261114/logs/source-migration-skill-validation.log"
+    },
+    {
+      "command": "./scripts/check.sh",
+      "exit_code": 0,
+      "log": "target/source-migration-documents.log",
+      "log_sha256": "1f11bb3bb382f1877ffa8eec4eb376db85d0ecfa2e1301289bb91fbd2cc966ae",
+      "preserved_log": "benchmarks/private-evidence/source-migration-20261114/logs/source-migration-documents.log"
+    },
+    {
+      "command": "./scripts/check.sh",
+      "exit_code": 0,
+      "log": "target/source-migration-documents-final.log",
+      "log_sha256": "1f11bb3bb382f1877ffa8eec4eb376db85d0ecfa2e1301289bb91fbd2cc966ae",
+      "preserved_log": "benchmarks/private-evidence/source-migration-20261114/logs/source-migration-documents-final.log"
+    }
+  ],
+  "negative_runs": [
+    {
+      "exit_code": 1,
+      "log": "target/source-migration-unit-red.log",
+      "outcome": "three cases fail against pass-through codemod",
+      "log_sha256": "1547c7c943cca0330b8050f66776efe5d5f92682d8951339782c70766ade0ca8",
+      "preserved_log": "benchmarks/private-evidence/source-migration-20261114/logs/source-migration-unit-red.log"
+    },
+    {
+      "exit_code": 1,
+      "log": "target/source-migration-corpus-red.log",
+      "outcome": "maintained source has legacy headers before migration",
+      "log_sha256": "5d2a4ea3813563e97b3404945829488f6d8453d797a14d978f1fa34b04e6e78e",
+      "preserved_log": "benchmarks/private-evidence/source-migration-20261114/logs/source-migration-corpus-red.log"
+    },
+    {
+      "exit_code": 101,
+      "log": "target/source-migration-integration-red.log",
+      "outcome": "new Rust audit fails before migration",
+      "log_sha256": "1048876e1aea38287e51795b696c0a5d74feafecaf1aafc9eef98ca23ff58d78",
+      "preserved_log": "benchmarks/private-evidence/source-migration-20261114/logs/source-migration-integration-red.log"
+    },
+    {
+      "exit_code": 1,
+      "log": "target/source-migration-scope-red.log",
+      "outcome": "write-scope helper absent before implementation",
+      "log_sha256": "67709dda88d6773f044d273b95086a19bd95d9eb46ec8b4a9b9e9190176891de",
+      "preserved_log": "benchmarks/private-evidence/source-migration-20261114/logs/source-migration-scope-red.log"
+    },
+    {
+      "exit_code": 1,
+      "log": "target/source-migration-editor-first.log",
+      "outcome": "six file-based expected positions still search old annotation spelling",
+      "log_sha256": "a8748c5175dbc63c15fd8c8a4a704140f562898f3a16e67c871f3a7536b6603f",
+      "preserved_log": "benchmarks/private-evidence/source-migration-20261114/logs/source-migration-editor-first.log"
+    },
+    {
+      "exit_code": 101,
+      "log": "target/source-migration-rust-first.log",
+      "outcome": "AST negative-fixture replacement is a no-op after arm spelling changes; expected diagnostic preserved after correcting the literal",
+      "log_sha256": "afa2b1bc27f755578dadd9ca4d9ef15fa6fcda21cec88b2b9a4cf2a2c30608dc",
+      "preserved_log": "benchmarks/private-evidence/source-migration-20261114/logs/source-migration-rust-first.log"
+    },
+    {
+      "exit_code": 1,
+      "log": "target/source-migration-host.log",
+      "outcome": "real host finds remaining parser/tree old-spelling target anchors",
+      "log_sha256": "b9aad8e3bba528fed530bb964128a8486795b823abe6b58ee8de92743d4cd913",
+      "preserved_log": "benchmarks/private-evidence/source-migration-20261114/logs/source-migration-host.log"
+    },
+    {
+      "exit_code": 2,
+      "log": "target/source-migration-web-build-red.log",
+      "outcome": "old builder rejects compiler/output options before maintained workflow update",
+      "log_sha256": "dbb511f363753aa3afd0c01279baae4025c307837e19b2239080fdce39bc9b70",
+      "preserved_log": "benchmarks/private-evidence/source-migration-20261114/logs/source-migration-web-build-red.log"
+    },
+    {
+      "exit_code": 1,
+      "log": "target/source-migration-python.log",
+      "outcome": "three fixture-drift errors because repair-study driver reads mutable maintained examples",
+      "log_sha256": "c80854c2025675fd55d1c37f05ebed3d590eea316271e15439bc8cd6aee69a81",
+      "preserved_log": "benchmarks/private-evidence/source-migration-20261114/logs/source-migration-python.log"
+    }
+  ],
+  "frozen_integrity": {
+    "existing_historical_files_unchanged": 293,
+    "generated_cache_paths_excluded": 14,
+    "intentional_path_only_driver_change": "benchmarks/agent-repair-study.py",
+    "new_byte_identical_fixed_study_sources": 3,
+    "proof": "target/source-migration-input-verification.json",
+    "preserved_proof": "benchmarks/private-evidence/source-migration-20261114/logs/source-migration-input-verification.json"
+  },
+  "agent_outcomes": {
+    "construction": null,
+    "comprehension": null,
+    "total_tokens": null,
+    "repair_efficiency": null
+  },
+  "performance_comparison": null,
+  "preservation": "benchmarks/private-evidence/source-migration-20261114",
+  "source_inputs": {
+    "path": "benchmarks/private-evidence/source-migration-20261114/inputs.json",
+    "count": 266,
+    "sha256": "06285f3c9a31483e62b361648215a8d07074f328772427f2481207393163dd80"
+  },
+  "source_archive": {
+    "path": "benchmarks/private-evidence/source-migration-20261114/source.tar.gz",
+    "bytes": 531587,
+    "sha256": "3b0d6cf06092f4dde52e43b23c6e614bdd4a789eef80efda66aa3e01a5daeef0"
+  },
+  "originals": {
+    "directory": "benchmarks/private-evidence/source-migration-20261114/before",
+    "maintained_files": 24,
+    "original_driver": "benchmarks/agent-repair-study.py"
+  },
+  "manifest_sha256": "501ff93d0be1bb97cb8d3c716a5ddb35898145a4d8b6755252846779cdbbe8e6",
+  "tools": "benchmarks/private-evidence/source-migration-20261114/logs/source-migration-tools.json",
+  "artifacts": [
+    {
+      "path": "dist/lobo-syntax-1.2.1.vsix",
+      "bytes": 34742,
+      "sha256": "d72da20e8c65da65010503c4f2ee95539f9e167757370ca9b89c2ef53b0b694f"
+    },
+    {
+      "path": "target/release/lobo",
+      "bytes": 1390352,
+      "sha256": "8309a14ac962c6022b2a5c8630f50bdd377d3933f5bbb3c0db942ae9df17e8f8"
+    },
+    {
+      "path": "target/release/lobo-test",
+      "bytes": 1206576,
+      "sha256": "6527e5a9441a05232f21601b084ea75901e5e986f9ce6e3be91a6735aa5e0b4f"
+    },
+    {
+      "path": "target/source-migration-web-server/server",
+      "bytes": 504600,
+      "sha256": "1a16efb4a65020233c0ed0b42632a56eb54f706892f3abe077acd89abac8db0b"
+    },
+    {
+      "path": "target/source-migration-web-server/handler",
+      "bytes": 35280,
+      "sha256": "c9630695356e09aaf538bbbd6b109af8549e1a183003e33cbab599f6d8047354"
+    }
+  ]
+}

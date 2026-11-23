@@ -1,0 +1,27 @@
+module users;
+
+use http { Response, not_found };
+use json { Json, object, field, json_response };
+
+record User { name: Text }
+variant UserLookup { Missing, Found(User) }
+
+fn find_user(id: I64) -> UserLookup {
+  if id == 1 {
+    UserLookup::Found(User { name: "Luis" })
+  } else {
+    UserLookup::Missing
+  }
+}
+
+fn render_user(user: User) -> Json {
+  json { "name": user.name }
+}
+
+fn show_user(id: I64) -> Response {
+  match find_user(id) {
+    Missing => http.not_found(),
+    Found(user) => json.json_response(200, render_user(user))
+  }
+}
+

@@ -1,0 +1,30 @@
+{
+  "format": "lobo-identities/0.1",
+  "identities": {
+    "module": "example.sqlite.users",
+    "setup_data": "example.sqlite.users.setup_data",
+    "setup": "example.sqlite.users.setup",
+    "find": "example.sqlite.users.find",
+    "all": "example.sqlite.users.all",
+    "save_data": "example.sqlite.users.save_data",
+    "save": "example.sqlite.users.save",
+    "get": "example.sqlite.users.get",
+    "list": "example.sqlite.users.list",
+    "undo_data": "example.sqlite.users.undo_data",
+    "undo": "example.sqlite.users.undo",
+    "typed": "example.sqlite.users.typed",
+    "sql.Cell": "lobo.sql.Cell",
+    "sql.Row": "lobo.sql.Row",
+    "sql.SqlResult": "lobo.sql.SqlResult",
+    "sql.open": "lobo.sql.open",
+    "sql.close": "lobo.sql.close",
+    "sql.query": "lobo.sql.query",
+    "sql.execute": "lobo.sql.execute",
+    "sql.no_params": "lobo.sql.no_params",
+    "sql.params1": "lobo.sql.params1",
+    "sql.params2": "lobo.sql.params2",
+    "sql.begin": "lobo.sql.begin",
+    "sql.commit": "lobo.sql.commit",
+    "sql.rollback": "lobo.sql.rollback"
+  }
+}

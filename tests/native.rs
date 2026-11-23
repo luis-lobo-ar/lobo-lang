@@ -9,6 +9,11 @@ fn native(artifact: &Artifact, entry: &str, arguments: &[Value], fuel: u64) -> J
         options.push(match value {
             Value::I64(n) => format!("I64:{n}"),
             Value::Bool(b) => format!("Bool:{b}"),
+            Value::Function(value) => format!("Function:{}", value.id),
+            Value::F64(bits) => format!("F64:0x{bits:016x}"),
+            Value::Record(_) | Value::Variant(_) | Value::List(_) | Value::Bytes(_) | Value::Text(_) => {
+                panic!("scalar corpus does not generate compound arguments")
+            }
         });
     }
     let output = artifact.run_native(&options).unwrap();

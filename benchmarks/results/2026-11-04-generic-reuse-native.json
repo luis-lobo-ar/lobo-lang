@@ -1,0 +1,252 @@
+{
+  "date": "2026-11-04",
+  "kind": "development-native-smoke-no-performance-or-agent-comparison",
+  "compiler_sha256": "0dcc91f47f97357467e821daf02ea4581b959b2fe026603a4ed03d910deae7bb",
+  "source": "examples/generics.lobo",
+  "source_sha256": "486f02c8f314d37ba9b5720474772b2782095ac656aa24eac418529f8ae3e28f",
+  "build": {
+    "command": [
+      "./target/release/lobo",
+      "compile",
+      "examples/generics.lobo",
+      "-o",
+      "target/native-examples/generics-core011"
+    ],
+    "exit_code": 0,
+    "stdout": "{\"artifact\":\"target/native-examples/generics-core011\",\"entries\":[\"example.generics.number\",\"example.generics.text\",\"example.generics.echo\",\"example.generics.has\",\"lobo.generic.45d4779c75ecd5ff4b10c81f4bf61aee\",\"lobo.generic.2cf1a05e8b6b5121961a24d0f80ca3be\",\"lobo.generic.7e857f56b22a16214267a65f8e842eff\",\"lobo.generic.0b270dbd1ef16a403d336612bba16b1e\"],\"format\":\"native\",\"status\":\"ok\"}\n",
+    "stderr": ""
+  },
+  "binary": {
+    "path": "target/native-examples/generics-core011",
+    "bytes": 22888,
+    "sha256": "8909c511a8e1e460693265d986b2a5ff959b0024adda8d1d3bc1e7378404167e"
+  },
+  "preserved_core010": {
+    "command": [
+      "./benchmarks/private-evidence/core010-language-baseline-20261104/lobo",
+      "check",
+      "examples/generics.lobo"
+    ],
+    "exit_code": 1,
+    "response": {
+      "diagnostic": {
+        "code": "compile.syntax.invalid",
+        "message": "expected @, got Symbol(\"<\")",
+        "phase": "parse",
+        "range": {
+          "end": {
+            "byte": 60,
+            "character": 18,
+            "line": 2
+          },
+          "start": {
+            "byte": 59,
+            "character": 17,
+            "line": 2
+          }
+        },
+        "source": "examples/generics.lobo"
+      },
+      "kind": "compile_error",
+      "status": "error"
+    }
+  },
+  "runs": [
+    {
+      "case": "number",
+      "mode": "native",
+      "command": [
+        "target/native-examples/generics-core011",
+        "--entry",
+        "example.generics.number",
+        "--arg",
+        "I64:7"
+      ],
+      "exit_code": 0,
+      "response": {
+        "status": "ok",
+        "kind": "value",
+        "value": {
+          "type": "I64",
+          "value": "7"
+        }
+      }
+    },
+    {
+      "case": "number",
+      "mode": "reference",
+      "command": [
+        "./target/release/lobo",
+        "eval",
+        "examples/generics.lobo",
+        "--entry",
+        "example.generics.number",
+        "--arg",
+        "I64:7"
+      ],
+      "exit_code": 0,
+      "response": {
+        "kind": "value",
+        "status": "ok",
+        "value": {
+          "type": "I64",
+          "value": "7"
+        }
+      }
+    },
+    {
+      "case": "text",
+      "mode": "native",
+      "command": [
+        "target/native-examples/generics-core011",
+        "--entry",
+        "example.generics.text",
+        "--arg",
+        "Text:c3a9"
+      ],
+      "exit_code": 0,
+      "response": {
+        "status": "ok",
+        "kind": "value",
+        "value": {
+          "type": "Text",
+          "value": "é"
+        }
+      }
+    },
+    {
+      "case": "text",
+      "mode": "reference",
+      "command": [
+        "./target/release/lobo",
+        "eval",
+        "examples/generics.lobo",
+        "--entry",
+        "example.generics.text",
+        "--arg",
+        "Text:c3a9"
+      ],
+      "exit_code": 0,
+      "response": {
+        "kind": "value",
+        "status": "ok",
+        "value": {
+          "type": "Text",
+          "value": "é"
+        }
+      }
+    },
+    {
+      "case": "item",
+      "mode": "native",
+      "command": [
+        "target/native-examples/generics-core011",
+        "--entry",
+        "example.generics.echo",
+        "--arg",
+        "Record:example.generics.item:I64:7,Text:78"
+      ],
+      "exit_code": 0,
+      "response": {
+        "status": "ok",
+        "kind": "value",
+        "value": {
+          "type": "Record",
+          "value": {
+            "id": "example.generics.item",
+            "fields": {
+              "key": {
+                "type": "I64",
+                "value": "7"
+              },
+              "name": {
+                "type": "Text",
+                "value": "x"
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "case": "item",
+      "mode": "reference",
+      "command": [
+        "./target/release/lobo",
+        "eval",
+        "examples/generics.lobo",
+        "--entry",
+        "example.generics.echo",
+        "--arg",
+        "Record:example.generics.item:I64:7,Text:78"
+      ],
+      "exit_code": 0,
+      "response": {
+        "kind": "value",
+        "status": "ok",
+        "value": {
+          "type": "Record",
+          "value": {
+            "fields": {
+              "key": {
+                "type": "I64",
+                "value": "7"
+              },
+              "name": {
+                "type": "Text",
+                "value": "x"
+              }
+            },
+            "id": "example.generics.item"
+          }
+        }
+      }
+    },
+    {
+      "case": "has",
+      "mode": "native",
+      "command": [
+        "target/native-examples/generics-core011",
+        "--entry",
+        "example.generics.has",
+        "--arg",
+        "List:Count:1,I64:7,Text:78",
+        "--arg",
+        "Record:example.generics.item:I64:7,Text:78"
+      ],
+      "exit_code": 0,
+      "response": {
+        "status": "ok",
+        "kind": "value",
+        "value": {
+          "type": "Bool",
+          "value": true
+        }
+      }
+    },
+    {
+      "case": "has",
+      "mode": "reference",
+      "command": [
+        "./target/release/lobo",
+        "eval",
+        "examples/generics.lobo",
+        "--entry",
+        "example.generics.has",
+        "--arg",
+        "List:Count:1,I64:7,Text:78",
+        "--arg",
+        "Record:example.generics.item:I64:7,Text:78"
+      ],
+      "exit_code": 0,
+      "response": {
+        "kind": "value",
+        "status": "ok",
+        "value": {
+          "type": "Bool",
+          "value": true
+        }
+      }
+    }
+  ]
+}

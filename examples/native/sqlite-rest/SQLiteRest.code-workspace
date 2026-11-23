@@ -1,0 +1,20 @@
+{
+  "folders": [
+    {
+      "path": "../../.."
+    }
+  ],
+  "settings": {
+    "lobo.compilerPath": "${workspaceFolder}/target/debug/lobo",
+    "lobo.sourceFiles": [
+      "examples/native/sqlite-rest/app.lobo",
+      "examples/native/sqlite-rest/controller.lobo",
+      "examples/native/sqlite/users.lobo",
+      "libraries/sql/sql.lobo",
+      "libraries/http-server/transport.lobo",
+      "libraries/http-server/server.lobo",
+      "libraries/http/http.lobo",
+      "libraries/json/json.lobo"
+    ]
+  }
+}

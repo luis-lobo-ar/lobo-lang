@@ -1,0 +1,265 @@
+{
+  "date": "2026-11-04",
+  "scope": "Core/compiler 0.10 guarded-recursive native-value implementation and maintained tooling",
+  "versions": {
+    "compiler": "0.10.0",
+    "language": "core/0.10-draft",
+    "artifact": "lobo-checked/0.10",
+    "native_adapter": "0.6",
+    "extension": "0.12.0"
+  },
+  "checks": {
+    "repository_json_jsonl_and_local_links": "passed",
+    "diff_whitespace": "passed",
+    "cargo_test_locked": {
+      "passed": 151,
+      "failed": 0,
+      "ignored": 0
+    },
+    "recursive_tests": {
+      "passed": 6,
+      "modes": [
+        "reference",
+        "native",
+        "asan-ubsan-leaks"
+      ],
+      "deep_internal_nodes": 10000
+    },
+    "python_harness_tests": {
+      "passed": 30
+    },
+    "editor_tests": {
+      "passed": 108,
+      "failed": 0
+    },
+    "editor_host": {
+      "marker": "LOBO_HOST_TESTS_PASSED",
+      "exit_code": 0
+    },
+    "clippy_strict": "passed",
+    "format_check": "passed",
+    "release_build": "passed",
+    "vsix_package": "passed",
+    "skill_frontmatter_and_native_examples": "passed"
+  },
+  "commands": [
+    "cargo test --locked",
+    "cargo clippy --locked --all-targets -- -D warnings",
+    "cargo fmt --check",
+    "cargo build --locked --release --bins",
+    "python3 -m unittest discover -s benchmarks -p 'test_*.py'",
+    "npm --prefix editors/vscode run package",
+    "LOBO_VSCODE_EXECUTABLE=/usr/share/code/code xvfb-run -a npm --prefix editors/vscode run test:host",
+    "python3 /home/luis/.codex/skills/.system/skill-creator/scripts/quick_validate.py .agents/skills/lobo-programming"
+  ],
+  "baseline": "2026-11-04-core09-language-baseline.json",
+  "native_smoke": "2026-11-04-recursive-ast-native.json",
+  "foreground_tool_smoke": "2026-11-04-recursive-ast-test-session.json",
+  "source_manifest": [
+    {
+      "path": "Cargo.toml",
+      "sha256": "842215cc928fd0e4f76da1db8ddb5e1fa276a03ae0af81e22fd768706a818e7f"
+    },
+    {
+      "path": "Cargo.lock",
+      "sha256": "38c97f6af625c0829f03878c6e75c9376a52dd22d34026fdb83e69a2f4c09d2c"
+    },
+    {
+      "path": "src/lib.rs",
+      "sha256": "86f7775c617bae276fb5b1155c948b189afacc277049338e9dd762c0b739a2f6"
+    },
+    {
+      "path": "src/records.rs",
+      "sha256": "2abdfb8a702a9d03ad6d16f0cdfe58c088cef7e0810b2e55353e39aea2ff76f3"
+    },
+    {
+      "path": "src/lists.rs",
+      "sha256": "e070811e4d6420fe414efdafaebb86bc56f3c66d0926c0e6f67e937d9509ec7c"
+    },
+    {
+      "path": "src/native.rs",
+      "sha256": "1b922ba3b171a12ae9ee48d9f1fabf5cf3cfc81f92df1cdf4ece0d49b59ca094"
+    },
+    {
+      "path": "src/native_lists.rs",
+      "sha256": "0a1799b60ebb15fe1f23d4ef486581d2de31332a112901d17198cedac81d3cc5"
+    },
+    {
+      "path": "src/native_runtime.c",
+      "sha256": "b4ce031fe130708c2f70e5fbd74c8af8e07b698417a6658f6da64805da5e7f67"
+    },
+    {
+      "path": "examples/ast.lobo",
+      "sha256": "f2e57a59fdf82e0dfed0263c6d6b196a36a5d0ac90399eab20277594d0ae2d5e"
+    },
+    {
+      "path": "tests/recursive_values.rs",
+      "sha256": "dabcf0a739e46420b2b0fa9a8eb7ca3113ff351a893dc56097b030eeaf2f2e6a"
+    },
+    {
+      "path": "spec/core-v0.10.md",
+      "sha256": "2ca585067a2c5113ce335847f433489c79a71d63471c2443786157038b60953e"
+    },
+    {
+      "path": "spec/recursive-ast-workload.md",
+      "sha256": "3138f238b71d5d12001391dc3d2f8cf054a1a59622608699732bcc05441c7a3a"
+    },
+    {
+      "path": "editors/vscode/src/compiler.cjs",
+      "sha256": "8b20481d0748cef1a4bb6700c6108623e83307133609641bb32f05e4b038ee8f"
+    },
+    {
+      "path": "editors/vscode/test/navigation.test.mjs",
+      "sha256": "d0b082c8d2362fb0256789857c49397099ceb2bbbbfb5ec9e300d11adc6d4ce1"
+    },
+    {
+      "path": "editors/vscode/test/compiler.test.mjs",
+      "sha256": "6e365fb0b7ebe0a53458d128e0e426ec77cb23b8c450304628dd6ec2d09f05a9"
+    },
+    {
+      "path": "editors/vscode/test/grammar.test.mjs",
+      "sha256": "02fe4d85ec2c01d35f4d19cbd3129febbee0c6b7828f9e7d6107ab32132b2fc9"
+    },
+    {
+      "path": "editors/vscode/test/host-tests.cjs",
+      "sha256": "eca62d92d80302bef5bfa32ac78b4cd0cc7f677db56ca9cb4be9b40e43f92c02"
+    },
+    {
+      "path": ".agents/skills/lobo-programming/SKILL.md",
+      "sha256": "966af9854bf6008d651c255e85332b88dceab69daca09c261cc4e023c2a4f66e"
+    },
+    {
+      "path": ".agents/skills/lobo-programming/references/language.md",
+      "sha256": "49fd6cc0273fb5b2f6d3d8ce8f993608483a57305905e73b2969f8f40742b1d2"
+    },
+    {
+      "path": ".agents/skills/lobo-programming/references/examples.lobo",
+      "sha256": "ce0efc2d5d752a6f4699b080e22c6453f9c14ab0edba235a7514ab490e339f11"
+    }
+  ],
+  "artifacts": [
+    {
+      "path": "target/release/lobo",
+      "bytes": 1089496,
+      "sha256": "b0093664423c2c16525c81875a4c768b640d36b3e70308910e97898e027548d3"
+    },
+    {
+      "path": "target/release/lobo-test",
+      "bytes": 1003896,
+      "sha256": "d9e80eb4efcdc4b2cfc93d5d9bd2e564ecd89afe53f4f8db26402779f1b3dd41"
+    },
+    {
+      "path": "target/native-examples/ast-core010",
+      "bytes": 22888,
+      "sha256": "769efc9beea240a8f288cb9dcb34ed7adeb5ea9ddc1f8cc60ec671f9dbc27c88"
+    },
+    {
+      "path": "dist/lobo-syntax-0.12.0.vsix",
+      "bytes": 26307,
+      "sha256": "b524a6cf93662e24bdec06a181ff0166ec05c7776c51030e81b19031c2b2dca4"
+    }
+  ],
+  "retained_logs": [
+    {
+      "path": "benchmarks/private-evidence/core010-evolution-20261104/recursive-values-red.log",
+      "bytes": 997,
+      "sha256": "974c1bce10e06d673a92f054df62e31974c3be8cd3b28ed28f75a7ee97543d34"
+    },
+    {
+      "path": "benchmarks/private-evidence/core010-evolution-20261104/recursive-values-red-behavior.log",
+      "bytes": 1149,
+      "sha256": "e1deca0da7497dcfb89de59dcea7407d6144239fd989cc05ecbeb516545ab241"
+    },
+    {
+      "path": "benchmarks/private-evidence/core010-evolution-20261104/recursive-values-first.log",
+      "bytes": 643,
+      "sha256": "c9e830e4b104677b8e366b70a72332a3fe1dd7b5de8c0ac4133fc87ac9fa5766"
+    },
+    {
+      "path": "benchmarks/private-evidence/core010-evolution-20261104/recursive-values-ast.log",
+      "bytes": 2874,
+      "sha256": "30cef333569f61b03624eb2e5222c46d89a49ba6b364987eb84a4f07df42feed"
+    },
+    {
+      "path": "benchmarks/private-evidence/core010-evolution-20261104/recursive-values-ast-green.log",
+      "bytes": 811,
+      "sha256": "25783c7f49d16867720386ce10af317008b77631554095c9eb091269ff7dd16d"
+    },
+    {
+      "path": "benchmarks/private-evidence/core010-evolution-20261104/core010-cargo-tests.log",
+      "bytes": 16115,
+      "sha256": "6d72b542c8254f0a05e8fdbad355538bad2ef5fef67d617f564e824925cbfe31"
+    },
+    {
+      "path": "benchmarks/private-evidence/core010-evolution-20261104/core010-editor-tests.log",
+      "bytes": 27002,
+      "sha256": "986f5e3a79eb3a47a4658ade77a95ffedd869ba6a7469c47c82f0df106997f15"
+    },
+    {
+      "path": "benchmarks/private-evidence/core010-evolution-20261104/core010-release-build.log",
+      "bytes": 129,
+      "sha256": "449a5cf82c2e1ebd361b381cd9cc07d325d844f0a156ef3a6fc3892ede1b6d53"
+    },
+    {
+      "path": "benchmarks/private-evidence/core010-evolution-20261104/core010-editor-tests-green.log",
+      "bytes": 25018,
+      "sha256": "c661192005e68f1fcaf3bf179315eb5b560d87b3d65713167d7461625bdd44e8"
+    },
+    {
+      "path": "benchmarks/private-evidence/core010-evolution-20261104/core010-editor-host.log",
+      "bytes": 1050,
+      "sha256": "2215ca5c3f2dd3a8745d130c96dc10f1886e2e805a5d337258aeb4dc6236e715"
+    },
+    {
+      "path": "benchmarks/private-evidence/core010-evolution-20261104/core010-recursive-final.log",
+      "bytes": 1397,
+      "sha256": "4797c7fd61449fc707ffc2e7fcd94f519a85048b9b71bbc1272dcf789b1992dc"
+    },
+    {
+      "path": "benchmarks/private-evidence/core010-evolution-20261104/core010-recursive-final-green.log",
+      "bytes": 812,
+      "sha256": "3f458c629f891c4f0332a17ce112b7967e4ed2b127a099600a9752386234b08f"
+    },
+    {
+      "path": "benchmarks/private-evidence/core010-evolution-20261104/core010-editor-package.log",
+      "bytes": 25254,
+      "sha256": "2894c14c75f76ea0d9f8ef201bb30fb22af71d8f7712596b10a8f1a1db0dbe55"
+    },
+    {
+      "path": "benchmarks/private-evidence/core010-evolution-20261104/core010-clippy.log",
+      "bytes": 138,
+      "sha256": "a94c1b31736d445023ebdcee632fa44cd8a30e998f6306241ea1709f747f2246"
+    },
+    {
+      "path": "benchmarks/private-evidence/core010-evolution-20261104/core010-clippy-final.log",
+      "bytes": 138,
+      "sha256": "7cd0f2b7d8a0c0e4bd883202caf7d5a9192cd195187930c61cdfa5a5b3db21f6"
+    },
+    {
+      "path": "benchmarks/private-evidence/core010-evolution-20261104/core010-python-tests.log",
+      "bytes": 130,
+      "sha256": "0e0fccc08a1a08ad31b6780ebad0f70cb5b3c3eb9c52091b2c5c30bdf4fa3073"
+    },
+    {
+      "path": "benchmarks/private-evidence/core010-evolution-20261104/core010-cargo-final.log",
+      "bytes": 16116,
+      "sha256": "a08210c6cc687302a63e39f95b7b890402ba9fc06d65b8c15fbd0cbf8455d543"
+    }
+  ],
+  "failure_history": [
+    "Initial test used a private Rust method; fixture corrected",
+    "Intended preimplementation failure: compile.record.cycle",
+    "Cross-module fixture required owned SourceFile strings",
+    "Editor initially rejected 0.10 success because its version allowlist ended at 0.9",
+    "AST grammar fixture required a contract; cardinality postcondition added and behavior independently rechecked",
+    "Missing-case canary initially left a trailing comma; corrected to exercise compile.match.invalid"
+  ],
+  "limits": [
+    "No new model trials or human comprehension study",
+    "No speed or general quality improvement claim",
+    "Development workload, not a held-out benchmark",
+    "Private evidence is local and ignored, not a public archive",
+    "Input/output depth 8; compound equality depth 64; ordinary call-depth/fuel/heap limits remain",
+    "Direct inline recursive data, user generics and function values remain unsupported"
+  ]
+}

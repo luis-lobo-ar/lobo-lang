@@ -1,0 +1,39 @@
+module sequences @id("v1.sequences");
+
+record Cursor<T> @id("v1.cursor") { remaining: List<T>, output: List<T> }
+record MapCursor<T,U> @id("v1.map_cursor") { remaining: List<T>, output: List<U> }
+variant Option<T> @id("v1.option") { None, Some(T) }
+variant Result<T,E> @id("v1.result") { Ok(T), Err(E) }
+record FindCursor<T> @id("v1.find_cursor") { remaining: List<T>, found: Option<T> }
+
+function identity<T> @id("v1.identity")(value: T) -> T { value }
+function reverse<T> @id("v1.reverse")(values: List<T>) -> List<T> {
+  let done = while(state: Cursor<T> = Cursor::<T> { remaining: values, output: List::empty<T>() }; List::length(state.remaining) > 0) {
+    Cursor::<T> { remaining: List::tail(state.remaining), output: List::prepend(List::head(state.remaining),state.output) }
+  };
+  done.output
+}
+function map<T,U> @id("v1.map")(values: List<T>, callback: Fn(T) -> U) -> List<U> {
+  let done = while(state: MapCursor<T,U> = MapCursor::<T,U> { remaining: values, output: List::empty<U>() }; List::length(state.remaining) > 0) {
+    MapCursor::<T,U> { remaining: List::tail(state.remaining), output: List::prepend(callback(List::head(state.remaining)),state.output) }
+  };
+  reverse::<U>(done.output)
+}
+function filter<T> @id("v1.filter")(values: List<T>, predicate: Fn(T) -> Bool) -> List<T> {
+  let done = while(state: Cursor<T> = Cursor::<T> { remaining: values, output: List::empty<T>() }; List::length(state.remaining) > 0) {
+    let value = List::head(state.remaining);
+    Cursor::<T> { remaining: List::tail(state.remaining), output: if predicate(value) { List::prepend(value,state.output) } else { state.output } }
+  };
+  reverse::<T>(done.output)
+}
+function find<T> @id("v1.find")(values: List<T>, predicate: Fn(T) -> Bool) -> Option<T> {
+  let done = while(state: FindCursor<T> = FindCursor::<T> { remaining: values, found: Option::<T>::None };
+    match(state.found) { None { List::length(state.remaining) > 0 }, Some(value) { false } }) {
+    let value = List::head(state.remaining);
+    FindCursor::<T> { remaining: List::tail(state.remaining), found: if predicate(value) { Option::<T>::Some(value) } else { Option::<T>::None } }
+  };
+  done.found
+}
+function require_find<T> @id("v1.require_find")(values: List<T>, predicate: Fn(T) -> Bool) -> Result<T,Text> {
+  match(find::<T>(values,predicate)) { None { Result::<T,Text>::Err("missing") }, Some(value) { Result::<T,Text>::Ok(value) } }
+}

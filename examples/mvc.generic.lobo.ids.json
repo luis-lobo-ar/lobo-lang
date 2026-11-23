@@ -1,0 +1,16 @@
+{
+  "format": "lobo-identities/0.1",
+  "identities": {
+    "Lookup": "lobo.8d8a861198403724fcaffc97f737eae4",
+    "User": "lobo.5b59c8daa6678ede92cfe19443a4cdd0",
+    "find_user": "lobo.83e0af748bec604739f639c89b549648",
+    "http.Response": "example.web.response",
+    "http.not_found": "lobo.http.not_found",
+    "json.Json": "lobo.json.value",
+    "json.json_response": "lobo.json.response",
+    "module": "lobo.f1091ef6a4ea8e0373df6fe1090c1975",
+    "render_user": "lobo.065cf0d7b9efeb18abc7c1902c349928",
+    "respond_json": "lobo.7e1f0fa8e82f0fb81d7744abac4bbb6b",
+    "show_user": "lobo.e24485cd2c5ebab1a3bbf783f9ec7eec"
+  }
+}

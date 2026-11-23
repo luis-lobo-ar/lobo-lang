@@ -1,0 +1,59 @@
+{
+  "date": "2026-11-04",
+  "kind": "recursive-ast-native-smoke",
+  "compiler_version": "0.10.0",
+  "compiler_sha256": "b0093664423c2c16525c81875a4c768b640d36b3e70308910e97898e027548d3",
+  "source": "examples/ast.lobo",
+  "source_sha256": "f2e57a59fdf82e0dfed0263c6d6b196a36a5d0ac90399eab20277594d0ae2d5e",
+  "binary": {
+    "path": "target/native-examples/ast-core010",
+    "bytes": 22888,
+    "sha256": "769efc9beea240a8f288cb9dcb34ed7adeb5ea9ddc1f8cc60ec671f9dbc27c88"
+  },
+  "observations": [
+    {
+      "entry": "example.ast.evaluate",
+      "arguments": [
+        "Variant:example.ast.node:Case:Sum,Count:3,Case:Num,I64:2,Case:Product,Count:2,Case:Num,I64:3,Case:Num,I64:4,Case:Sum,Count:0"
+      ],
+      "exit_code": 0,
+      "stdout": {
+        "status": "ok",
+        "kind": "value",
+        "value": {
+          "type": "I64",
+          "value": "14"
+        }
+      },
+      "stderr": "",
+      "expected": 14
+    },
+    {
+      "entry": "example.ast.shifted_value",
+      "arguments": [
+        "Variant:example.ast.node:Case:Sum,Count:3,Case:Num,I64:2,Case:Product,Count:2,Case:Num,I64:3,Case:Num,I64:4,Case:Sum,Count:0",
+        "I64:1"
+      ],
+      "exit_code": 0,
+      "stdout": {
+        "status": "ok",
+        "kind": "value",
+        "value": {
+          "type": "I64",
+          "value": "23"
+        }
+      },
+      "stderr": "",
+      "expected": 23
+    }
+  ],
+  "preserved_core09_check": {
+    "exit_code": 1,
+    "stdout": "{\"diagnostic\":{\"code\":\"compile.record.cycle\",\"message\":\"recursive inline compound layout\",\"phase\":\"check\",\"range\":{\"end\":{\"byte\":52,\"character\":12,\"line\":2},\"start\":{\"byte\":48,\"character\":8,\"line\":2}},\"source\":\"/home/luis/dev/lobo-ar/lobo-lang/examples/ast.lobo\"},\"kind\":\"compile_error\",\"status\":\"error\"}\n",
+    "stderr": ""
+  },
+  "limits": [
+    "Development workload; not held-out agent construction/comprehension evidence",
+    "No speed comparison or general safety proof"
+  ]
+}

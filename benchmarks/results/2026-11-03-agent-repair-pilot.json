@@ -1,0 +1,1787 @@
+{
+  "format": "lobo-agent-repair-pilot/0.1",
+  "canary": false,
+  "model": "gpt-6.1-sol",
+  "reasoning": "high",
+  "deadline_seconds": 90,
+  "runner_sha256": "dbd7506830098211f505c394f6be3a85b57db95bd194124c0047e5e2e2f489cf",
+  "harness_sha256": "71799382b020fc21343715006fb8baa895c4930015f0f809a05d18f8839bc742",
+  "protocol_sha256": "5817cc6db00bcc9c49d64f0ad97f9421dc9a8178a5f584008b9e968f89b70fc2",
+  "codex_version": "codex-cli 0.166.0",
+  "clang_version": "Ubuntu clang version 18.1.3 (1ubuntu1)",
+  "platform": "Linux-6.8.0-142-generic-x86_64-with-glibc2.39",
+  "python_version": "3.12.3",
+  "cpus": 16,
+  "artifact_directory": "/home/luis/dev/lobo-ar/lobo-lang/target/agent-repair-20261103T195822",
+  "trials": [
+    {
+      "task": "clamp",
+      "arm": "conventional",
+      "load_before": [
+        1.1259765625,
+        1.5380859375,
+        2.1083984375
+      ],
+      "command": [
+        "codex",
+        "exec",
+        "--ignore-user-config",
+        "--ephemeral",
+        "--json",
+        "--sandbox",
+        "workspace-write",
+        "--skip-git-repo-check",
+        "--disable",
+        "multi_agent",
+        "--disable",
+        "apps",
+        "--disable",
+        "plugins",
+        "--disable",
+        "plugin_discovery_prefetch",
+        "--disable",
+        "remote_plugin",
+        "--disable",
+        "memories",
+        "-C",
+        "/tmp/lobo-pilot-r8rd2269/task",
+        "-m",
+        "gpt-6.1-sol",
+        "-c",
+        "model_reasoning_effort=\"high\"",
+        "-c",
+        "approval_policy=\"never\"",
+        "-"
+      ],
+      "initial_source_sha256": "9aac04186b4066fd41fb9d6be7c05866d40c64fa053347c955cc34cf4b94a5e7",
+      "visible_plan_sha256": "b29571dc612a64a6ff92980317c233751dea05ef712e596dccd1de5700bc7c51",
+      "acceptance_plan_sha256": "0230f5fa3f955a0c18eae99b964c3e7e66fe7f9714df367d680af164371407b2",
+      "agent_seconds": 16.28971643699333,
+      "timeout": false,
+      "exit_code": 0,
+      "usage": {
+        "input_tokens": 92277,
+        "cached_input_tokens": 84864,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 387,
+        "reasoning_output_tokens": 0
+      },
+      "tool_calls": 5,
+      "checks": [
+        {
+          "source_sha256": "9aac04186b4066fd41fb9d6be7c05866d40c64fa053347c955cc34cf4b94a5e7",
+          "result": {
+            "counts": {
+              "executed": 10,
+              "failed": 1,
+              "passed": 9,
+              "pending": 0,
+              "reused": 0
+            },
+            "elapsed_ms": 149,
+            "failures": [
+              {
+                "difference": {
+                  "actual": "0",
+                  "expected": "10",
+                  "path": "$.value"
+                },
+                "replay": {
+                  "snapshot": "s2",
+                  "test": "target.4"
+                },
+                "requirement": "repair",
+                "status": "failed",
+                "test": "target.4"
+              }
+            ],
+            "failures_omitted": 0,
+            "format": "lobo-test/0.1",
+            "full_execution": true,
+            "pending_omitted": 0,
+            "pending_tests": [],
+            "session": "817885:1793757502249996862",
+            "snapshot": "s2",
+            "status": "failed",
+            "uncovered_requirements": []
+          },
+          "elapsed_seconds": 0.15025295596569777,
+          "feedback_bytes": 254
+        },
+        {
+          "source_sha256": "e5005699e973bf652198ede38ff5c8f28cdffb5d373cf65e56c6f25121b0f761",
+          "result": {
+            "counts": {
+              "executed": 10,
+              "failed": 0,
+              "passed": 10,
+              "pending": 0,
+              "reused": 0
+            },
+            "elapsed_ms": 240,
+            "failures": [],
+            "failures_omitted": 0,
+            "format": "lobo-test/0.1",
+            "full_execution": true,
+            "pending_omitted": 0,
+            "pending_tests": [],
+            "session": "817885:1793757502249996862",
+            "snapshot": "s3",
+            "status": "checks_satisfied",
+            "uncovered_requirements": []
+          },
+          "elapsed_seconds": 0.24086771020665765,
+          "feedback_bytes": 92
+        }
+      ],
+      "check_requests": [
+        [],
+        []
+      ],
+      "interface_used": true,
+      "fixtures_intact": true,
+      "unexpected_files": [],
+      "final_source_sha256": "e5005699e973bf652198ede38ff5c8f28cdffb5d373cf65e56c6f25121b0f761",
+      "final_grade": {
+        "counts": {
+          "executed": 38,
+          "failed": 0,
+          "passed": 38,
+          "pending": 0,
+          "reused": 0
+        },
+        "elapsed_ms": 313,
+        "failures": [],
+        "failures_omitted": 0,
+        "format": "lobo-test/0.1",
+        "full_execution": true,
+        "pending_omitted": 0,
+        "pending_tests": [],
+        "session": "821378:1793757518543942566",
+        "snapshot": "s2",
+        "status": "checks_satisfied",
+        "uncovered_requirements": []
+      },
+      "accepted": true,
+      "elapsed_seconds": 16.609542049001902
+    },
+    {
+      "task": "clamp",
+      "arm": "structured",
+      "load_before": [
+        1.326171875,
+        1.56103515625,
+        2.10595703125
+      ],
+      "command": [
+        "codex",
+        "exec",
+        "--ignore-user-config",
+        "--ephemeral",
+        "--json",
+        "--sandbox",
+        "workspace-write",
+        "--skip-git-repo-check",
+        "--disable",
+        "multi_agent",
+        "--disable",
+        "apps",
+        "--disable",
+        "plugins",
+        "--disable",
+        "plugin_discovery_prefetch",
+        "--disable",
+        "remote_plugin",
+        "--disable",
+        "memories",
+        "-C",
+        "/tmp/lobo-pilot-0otzwf3n/task",
+        "-m",
+        "gpt-6.1-sol",
+        "-c",
+        "model_reasoning_effort=\"high\"",
+        "-c",
+        "approval_policy=\"never\"",
+        "-"
+      ],
+      "initial_source_sha256": "9aac04186b4066fd41fb9d6be7c05866d40c64fa053347c955cc34cf4b94a5e7",
+      "visible_plan_sha256": "b29571dc612a64a6ff92980317c233751dea05ef712e596dccd1de5700bc7c51",
+      "acceptance_plan_sha256": "0230f5fa3f955a0c18eae99b964c3e7e66fe7f9714df367d680af164371407b2",
+      "agent_seconds": 21.633152209687978,
+      "timeout": false,
+      "exit_code": 0,
+      "usage": {
+        "input_tokens": 94190,
+        "cached_input_tokens": 80512,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 547,
+        "reasoning_output_tokens": 21
+      },
+      "tool_calls": 8,
+      "checks": [
+        {
+          "source_sha256": "9aac04186b4066fd41fb9d6be7c05866d40c64fa053347c955cc34cf4b94a5e7",
+          "result": {
+            "counts": {
+              "executed": 10,
+              "failed": 1,
+              "passed": 9,
+              "pending": 0,
+              "reused": 0
+            },
+            "elapsed_ms": 202,
+            "failures": [
+              {
+                "difference": {
+                  "actual": "0",
+                  "expected": "10",
+                  "path": "$.value"
+                },
+                "replay": {
+                  "snapshot": "s2",
+                  "test": "target.4"
+                },
+                "requirement": "repair",
+                "status": "failed",
+                "test": "target.4"
+              }
+            ],
+            "failures_omitted": 0,
+            "format": "lobo-test/0.1",
+            "full_execution": false,
+            "pending_omitted": 0,
+            "pending_tests": [],
+            "session": "821554:1793757518863553356",
+            "snapshot": "s2",
+            "status": "failed",
+            "uncovered_requirements": []
+          },
+          "elapsed_seconds": 0.20312243094667792,
+          "feedback_bytes": 477
+        },
+        {
+          "source_sha256": "e5005699e973bf652198ede38ff5c8f28cdffb5d373cf65e56c6f25121b0f761",
+          "result": {
+            "counts": {
+              "executed": 6,
+              "failed": 0,
+              "passed": 10,
+              "pending": 0,
+              "reused": 4
+            },
+            "elapsed_ms": 197,
+            "failures": [],
+            "failures_omitted": 0,
+            "format": "lobo-test/0.1",
+            "full_execution": false,
+            "pending_omitted": 0,
+            "pending_tests": [],
+            "session": "821554:1793757518863553356",
+            "snapshot": "s3",
+            "status": "checks_satisfied",
+            "uncovered_requirements": []
+          },
+          "elapsed_seconds": 0.19762369012460113,
+          "feedback_bytes": 321
+        }
+      ],
+      "check_requests": [
+        [],
+        []
+      ],
+      "interface_used": true,
+      "fixtures_intact": true,
+      "unexpected_files": [],
+      "final_source_sha256": "e5005699e973bf652198ede38ff5c8f28cdffb5d373cf65e56c6f25121b0f761",
+      "final_grade": {
+        "counts": {
+          "executed": 38,
+          "failed": 0,
+          "passed": 38,
+          "pending": 0,
+          "reused": 0
+        },
+        "elapsed_ms": 289,
+        "failures": [],
+        "failures_omitted": 0,
+        "format": "lobo-test/0.1",
+        "full_execution": true,
+        "pending_omitted": 0,
+        "pending_tests": [],
+        "session": "828243:1793757540505162668",
+        "snapshot": "s2",
+        "status": "checks_satisfied",
+        "uncovered_requirements": []
+      },
+      "accepted": true,
+      "elapsed_seconds": 21.933766511734575
+    },
+    {
+      "task": "overlap",
+      "arm": "structured",
+      "load_before": [
+        3.935546875,
+        2.1279296875,
+        2.28076171875
+      ],
+      "command": [
+        "codex",
+        "exec",
+        "--ignore-user-config",
+        "--ephemeral",
+        "--json",
+        "--sandbox",
+        "workspace-write",
+        "--skip-git-repo-check",
+        "--disable",
+        "multi_agent",
+        "--disable",
+        "apps",
+        "--disable",
+        "plugins",
+        "--disable",
+        "plugin_discovery_prefetch",
+        "--disable",
+        "remote_plugin",
+        "--disable",
+        "memories",
+        "-C",
+        "/tmp/lobo-pilot-q7yfjed1/task",
+        "-m",
+        "gpt-6.1-sol",
+        "-c",
+        "model_reasoning_effort=\"high\"",
+        "-c",
+        "approval_policy=\"never\"",
+        "-"
+      ],
+      "initial_source_sha256": "22038dce94d6aa850565a0a35e6dd2e5b318fd50fa65cf7c9a56f35dee19a4a2",
+      "visible_plan_sha256": "70600ff9da0408a619790869685606159b3629833a17de4cca1fb7c68a38a396",
+      "acceptance_plan_sha256": "a8a25c0a55da39715d356ec495b2b0b74f05e600e974a00e8693d73a000e10d7",
+      "agent_seconds": 16.898576844949275,
+      "timeout": false,
+      "exit_code": 0,
+      "usage": {
+        "input_tokens": 74167,
+        "cached_input_tokens": 66944,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 388,
+        "reasoning_output_tokens": 28
+      },
+      "tool_calls": 5,
+      "checks": [
+        {
+          "source_sha256": "22038dce94d6aa850565a0a35e6dd2e5b318fd50fa65cf7c9a56f35dee19a4a2",
+          "result": {
+            "counts": {
+              "executed": 10,
+              "failed": 4,
+              "passed": 6,
+              "pending": 0,
+              "reused": 0
+            },
+            "elapsed_ms": 159,
+            "failures": [
+              {
+                "difference": {
+                  "actual": false,
+                  "expected": true,
+                  "path": "$.value"
+                },
+                "replay": {
+                  "snapshot": "s2",
+                  "test": "target.0"
+                },
+                "requirement": "repair",
+                "status": "failed",
+                "test": "target.0"
+              },
+              {
+                "difference": {
+                  "actual": false,
+                  "expected": true,
+                  "path": "$.value"
+                },
+                "replay": {
+                  "snapshot": "s2",
+                  "test": "target.3"
+                },
+                "requirement": "repair",
+                "status": "failed",
+                "test": "target.3"
+              },
+              {
+                "difference": {
+                  "actual": false,
+                  "expected": true,
+                  "path": "$.value"
+                },
+                "replay": {
+                  "snapshot": "s2",
+                  "test": "target.4"
+                },
+                "requirement": "repair",
+                "status": "failed",
+                "test": "target.4"
+              },
+              {
+                "difference": {
+                  "actual": false,
+                  "expected": true,
+                  "path": "$.value"
+                },
+                "replay": {
+                  "snapshot": "s2",
+                  "test": "target.5"
+                },
+                "requirement": "repair",
+                "status": "failed",
+                "test": "target.5"
+              }
+            ],
+            "failures_omitted": 0,
+            "format": "lobo-test/0.1",
+            "full_execution": false,
+            "pending_omitted": 0,
+            "pending_tests": [],
+            "session": "828383:1793757540802353980",
+            "snapshot": "s2",
+            "status": "failed",
+            "uncovered_requirements": []
+          },
+          "elapsed_seconds": 0.15991776483133435,
+          "feedback_bytes": 986
+        },
+        {
+          "source_sha256": "48c6d4aa9f9f994b9fa906259ac2e6066fbd62e5c389a9fdc0f2bf80250d5328",
+          "result": {
+            "counts": {
+              "executed": 6,
+              "failed": 0,
+              "passed": 10,
+              "pending": 0,
+              "reused": 4
+            },
+            "elapsed_ms": 133,
+            "failures": [],
+            "failures_omitted": 0,
+            "format": "lobo-test/0.1",
+            "full_execution": false,
+            "pending_omitted": 0,
+            "pending_tests": [],
+            "session": "828383:1793757540802353980",
+            "snapshot": "s3",
+            "status": "checks_satisfied",
+            "uncovered_requirements": []
+          },
+          "elapsed_seconds": 0.13339790189638734,
+          "feedback_bytes": 321
+        }
+      ],
+      "check_requests": [
+        [],
+        []
+      ],
+      "interface_used": true,
+      "fixtures_intact": true,
+      "unexpected_files": [],
+      "final_source_sha256": "48c6d4aa9f9f994b9fa906259ac2e6066fbd62e5c389a9fdc0f2bf80250d5328",
+      "final_grade": {
+        "counts": {
+          "executed": 59,
+          "failed": 0,
+          "passed": 59,
+          "pending": 0,
+          "reused": 0
+        },
+        "elapsed_ms": 268,
+        "failures": [],
+        "failures_omitted": 0,
+        "format": "lobo-test/0.1",
+        "full_execution": true,
+        "pending_omitted": 0,
+        "pending_tests": [],
+        "session": "831377:1793757557705578475",
+        "snapshot": "s2",
+        "status": "checks_satisfied",
+        "uncovered_requirements": []
+      },
+      "accepted": true,
+      "elapsed_seconds": 17.172665062826127
+    },
+    {
+      "task": "overlap",
+      "arm": "conventional",
+      "load_before": [
+        7.8310546875,
+        3.177734375,
+        2.625
+      ],
+      "command": [
+        "codex",
+        "exec",
+        "--ignore-user-config",
+        "--ephemeral",
+        "--json",
+        "--sandbox",
+        "workspace-write",
+        "--skip-git-repo-check",
+        "--disable",
+        "multi_agent",
+        "--disable",
+        "apps",
+        "--disable",
+        "plugins",
+        "--disable",
+        "plugin_discovery_prefetch",
+        "--disable",
+        "remote_plugin",
+        "--disable",
+        "memories",
+        "-C",
+        "/tmp/lobo-pilot-3se17p8m/task",
+        "-m",
+        "gpt-6.1-sol",
+        "-c",
+        "model_reasoning_effort=\"high\"",
+        "-c",
+        "approval_policy=\"never\"",
+        "-"
+      ],
+      "initial_source_sha256": "22038dce94d6aa850565a0a35e6dd2e5b318fd50fa65cf7c9a56f35dee19a4a2",
+      "visible_plan_sha256": "70600ff9da0408a619790869685606159b3629833a17de4cca1fb7c68a38a396",
+      "acceptance_plan_sha256": "a8a25c0a55da39715d356ec495b2b0b74f05e600e974a00e8693d73a000e10d7",
+      "agent_seconds": 19.9622132438235,
+      "timeout": false,
+      "exit_code": 0,
+      "usage": {
+        "input_tokens": 92770,
+        "cached_input_tokens": 85248,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 433,
+        "reasoning_output_tokens": 9
+      },
+      "tool_calls": 5,
+      "checks": [
+        {
+          "source_sha256": "22038dce94d6aa850565a0a35e6dd2e5b318fd50fa65cf7c9a56f35dee19a4a2",
+          "result": {
+            "counts": {
+              "executed": 10,
+              "failed": 4,
+              "passed": 6,
+              "pending": 0,
+              "reused": 0
+            },
+            "elapsed_ms": 152,
+            "failures": [
+              {
+                "difference": {
+                  "actual": false,
+                  "expected": true,
+                  "path": "$.value"
+                },
+                "replay": {
+                  "snapshot": "s2",
+                  "test": "target.0"
+                },
+                "requirement": "repair",
+                "status": "failed",
+                "test": "target.0"
+              },
+              {
+                "difference": {
+                  "actual": false,
+                  "expected": true,
+                  "path": "$.value"
+                },
+                "replay": {
+                  "snapshot": "s2",
+                  "test": "target.3"
+                },
+                "requirement": "repair",
+                "status": "failed",
+                "test": "target.3"
+              },
+              {
+                "difference": {
+                  "actual": false,
+                  "expected": true,
+                  "path": "$.value"
+                },
+                "replay": {
+                  "snapshot": "s2",
+                  "test": "target.4"
+                },
+                "requirement": "repair",
+                "status": "failed",
+                "test": "target.4"
+              },
+              {
+                "difference": {
+                  "actual": false,
+                  "expected": true,
+                  "path": "$.value"
+                },
+                "replay": {
+                  "snapshot": "s2",
+                  "test": "target.5"
+                },
+                "requirement": "repair",
+                "status": "failed",
+                "test": "target.5"
+              }
+            ],
+            "failures_omitted": 0,
+            "format": "lobo-test/0.1",
+            "full_execution": true,
+            "pending_omitted": 0,
+            "pending_tests": [],
+            "session": "831451:1793757557979307952",
+            "snapshot": "s2",
+            "status": "failed",
+            "uncovered_requirements": []
+          },
+          "elapsed_seconds": 0.15299146436154842,
+          "feedback_bytes": 781
+        },
+        {
+          "source_sha256": "48c6d4aa9f9f994b9fa906259ac2e6066fbd62e5c389a9fdc0f2bf80250d5328",
+          "result": {
+            "counts": {
+              "executed": 10,
+              "failed": 0,
+              "passed": 10,
+              "pending": 0,
+              "reused": 0
+            },
+            "elapsed_ms": 143,
+            "failures": [],
+            "failures_omitted": 0,
+            "format": "lobo-test/0.1",
+            "full_execution": true,
+            "pending_omitted": 0,
+            "pending_tests": [],
+            "session": "831451:1793757557979307952",
+            "snapshot": "s3",
+            "status": "checks_satisfied",
+            "uncovered_requirements": []
+          },
+          "elapsed_seconds": 0.1439293511211872,
+          "feedback_bytes": 92
+        }
+      ],
+      "check_requests": [
+        [],
+        []
+      ],
+      "interface_used": true,
+      "fixtures_intact": true,
+      "unexpected_files": [],
+      "final_source_sha256": "48c6d4aa9f9f994b9fa906259ac2e6066fbd62e5c389a9fdc0f2bf80250d5328",
+      "final_grade": {
+        "counts": {
+          "executed": 59,
+          "failed": 0,
+          "passed": 59,
+          "pending": 0,
+          "reused": 0
+        },
+        "elapsed_ms": 272,
+        "failures": [],
+        "failures_omitted": 0,
+        "format": "lobo-test/0.1",
+        "full_execution": true,
+        "pending_omitted": 0,
+        "pending_tests": [],
+        "session": "833296:1793757577945256701",
+        "snapshot": "s2",
+        "status": "checks_satisfied",
+        "uncovered_requirements": []
+      },
+      "accepted": true,
+      "elapsed_seconds": 20.24064132478088
+    },
+    {
+      "task": "floor_div",
+      "arm": "conventional",
+      "load_before": [
+        6.13134765625,
+        3.0859375,
+        2.6064453125
+      ],
+      "command": [
+        "codex",
+        "exec",
+        "--ignore-user-config",
+        "--ephemeral",
+        "--json",
+        "--sandbox",
+        "workspace-write",
+        "--skip-git-repo-check",
+        "--disable",
+        "multi_agent",
+        "--disable",
+        "apps",
+        "--disable",
+        "plugins",
+        "--disable",
+        "plugin_discovery_prefetch",
+        "--disable",
+        "remote_plugin",
+        "--disable",
+        "memories",
+        "-C",
+        "/tmp/lobo-pilot-wtabcqa0/task",
+        "-m",
+        "gpt-6.1-sol",
+        "-c",
+        "model_reasoning_effort=\"high\"",
+        "-c",
+        "approval_policy=\"never\"",
+        "-"
+      ],
+      "initial_source_sha256": "752358ebe24ac6d6d1f4f0e7d89e1f2ab17ccb7af696971b065d5e77dd77a9a0",
+      "visible_plan_sha256": "23f94afc9554fceda263b1e434cecd821e83625125fc33336006d82fb218d3e7",
+      "acceptance_plan_sha256": "40f88bb4dce207bae5e2e301b21c97fe32060dc35ff58c3107321e2e9b55d07a",
+      "agent_seconds": 32.97926686005667,
+      "timeout": false,
+      "exit_code": 0,
+      "usage": {
+        "input_tokens": 86747,
+        "cached_input_tokens": 75392,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 411,
+        "reasoning_output_tokens": 27
+      },
+      "tool_calls": 5,
+      "checks": [
+        {
+          "source_sha256": "752358ebe24ac6d6d1f4f0e7d89e1f2ab17ccb7af696971b065d5e77dd77a9a0",
+          "result": {
+            "counts": {
+              "executed": 10,
+              "failed": 2,
+              "passed": 8,
+              "pending": 0,
+              "reused": 0
+            },
+            "elapsed_ms": 142,
+            "failures": [
+              {
+                "difference": {
+                  "actual": "-2",
+                  "expected": "-3",
+                  "path": "$.value"
+                },
+                "replay": {
+                  "snapshot": "s2",
+                  "test": "target.0"
+                },
+                "requirement": "repair",
+                "status": "failed",
+                "test": "target.0"
+              },
+              {
+                "difference": {
+                  "actual": "-2",
+                  "expected": "-3",
+                  "path": "$.value"
+                },
+                "replay": {
+                  "snapshot": "s2",
+                  "test": "target.1"
+                },
+                "requirement": "repair",
+                "status": "failed",
+                "test": "target.1"
+              }
+            ],
+            "failures_omitted": 0,
+            "format": "lobo-test/0.1",
+            "full_execution": true,
+            "pending_omitted": 0,
+            "pending_tests": [],
+            "session": "833360:1793757578224109175",
+            "snapshot": "s2",
+            "status": "failed",
+            "uncovered_requirements": []
+          },
+          "elapsed_seconds": 0.1425390113145113,
+          "feedback_bytes": 429
+        },
+        {
+          "source_sha256": "8913024560ce4adebc1f60fcf6bc50fcdcd46424662a166c27d515ab3ce862f1",
+          "result": {
+            "counts": {
+              "executed": 10,
+              "failed": 0,
+              "passed": 10,
+              "pending": 0,
+              "reused": 0
+            },
+            "elapsed_ms": 143,
+            "failures": [],
+            "failures_omitted": 0,
+            "format": "lobo-test/0.1",
+            "full_execution": true,
+            "pending_omitted": 0,
+            "pending_tests": [],
+            "session": "833360:1793757578224109175",
+            "snapshot": "s3",
+            "status": "checks_satisfied",
+            "uncovered_requirements": []
+          },
+          "elapsed_seconds": 0.1441509649157524,
+          "feedback_bytes": 92
+        }
+      ],
+      "check_requests": [
+        [],
+        []
+      ],
+      "interface_used": true,
+      "fixtures_intact": true,
+      "unexpected_files": [],
+      "final_source_sha256": "8913024560ce4adebc1f60fcf6bc50fcdcd46424662a166c27d515ab3ce862f1",
+      "final_grade": {
+        "counts": {
+          "executed": 57,
+          "failed": 0,
+          "passed": 57,
+          "pending": 0,
+          "reused": 0
+        },
+        "elapsed_ms": 253,
+        "failures": [],
+        "failures_omitted": 0,
+        "format": "lobo-test/0.1",
+        "full_execution": true,
+        "pending_omitted": 0,
+        "pending_tests": [],
+        "session": "835367:1793757611207769549",
+        "snapshot": "s2",
+        "status": "checks_satisfied",
+        "uncovered_requirements": []
+      },
+      "accepted": true,
+      "elapsed_seconds": 33.2389903687872
+    },
+    {
+      "task": "floor_div",
+      "arm": "structured",
+      "load_before": [
+        3.83544921875,
+        2.82080078125,
+        2.5322265625
+      ],
+      "command": [
+        "codex",
+        "exec",
+        "--ignore-user-config",
+        "--ephemeral",
+        "--json",
+        "--sandbox",
+        "workspace-write",
+        "--skip-git-repo-check",
+        "--disable",
+        "multi_agent",
+        "--disable",
+        "apps",
+        "--disable",
+        "plugins",
+        "--disable",
+        "plugin_discovery_prefetch",
+        "--disable",
+        "remote_plugin",
+        "--disable",
+        "memories",
+        "-C",
+        "/tmp/lobo-pilot-tmr__g2w/task",
+        "-m",
+        "gpt-6.1-sol",
+        "-c",
+        "model_reasoning_effort=\"high\"",
+        "-c",
+        "approval_policy=\"never\"",
+        "-"
+      ],
+      "initial_source_sha256": "752358ebe24ac6d6d1f4f0e7d89e1f2ab17ccb7af696971b065d5e77dd77a9a0",
+      "visible_plan_sha256": "23f94afc9554fceda263b1e434cecd821e83625125fc33336006d82fb218d3e7",
+      "acceptance_plan_sha256": "40f88bb4dce207bae5e2e301b21c97fe32060dc35ff58c3107321e2e9b55d07a",
+      "agent_seconds": 23.92665453720838,
+      "timeout": false,
+      "exit_code": 0,
+      "usage": {
+        "input_tokens": 92816,
+        "cached_input_tokens": 85248,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 502,
+        "reasoning_output_tokens": 41
+      },
+      "tool_calls": 5,
+      "checks": [
+        {
+          "source_sha256": "752358ebe24ac6d6d1f4f0e7d89e1f2ab17ccb7af696971b065d5e77dd77a9a0",
+          "result": {
+            "counts": {
+              "executed": 10,
+              "failed": 2,
+              "passed": 8,
+              "pending": 0,
+              "reused": 0
+            },
+            "elapsed_ms": 139,
+            "failures": [
+              {
+                "difference": {
+                  "actual": "-2",
+                  "expected": "-3",
+                  "path": "$.value"
+                },
+                "replay": {
+                  "snapshot": "s2",
+                  "test": "target.0"
+                },
+                "requirement": "repair",
+                "status": "failed",
+                "test": "target.0"
+              },
+              {
+                "difference": {
+                  "actual": "-2",
+                  "expected": "-3",
+                  "path": "$.value"
+                },
+                "replay": {
+                  "snapshot": "s2",
+                  "test": "target.1"
+                },
+                "requirement": "repair",
+                "status": "failed",
+                "test": "target.1"
+              }
+            ],
+            "failures_omitted": 0,
+            "format": "lobo-test/0.1",
+            "full_execution": false,
+            "pending_omitted": 0,
+            "pending_tests": [],
+            "session": "835429:1793757611467547920",
+            "snapshot": "s2",
+            "status": "failed",
+            "uncovered_requirements": []
+          },
+          "elapsed_seconds": 0.1400221148505807,
+          "feedback_bytes": 646
+        },
+        {
+          "source_sha256": "583038bb7746905b00b0e8a4fac574c9e6c0f8394aa0905b0b8132684b53398f",
+          "result": {
+            "counts": {
+              "executed": 6,
+              "failed": 0,
+              "passed": 10,
+              "pending": 0,
+              "reused": 4
+            },
+            "elapsed_ms": 136,
+            "failures": [],
+            "failures_omitted": 0,
+            "format": "lobo-test/0.1",
+            "full_execution": false,
+            "pending_omitted": 0,
+            "pending_tests": [],
+            "session": "835429:1793757611467547920",
+            "snapshot": "s3",
+            "status": "checks_satisfied",
+            "uncovered_requirements": []
+          },
+          "elapsed_seconds": 0.1368859619833529,
+          "feedback_bytes": 321
+        }
+      ],
+      "check_requests": [
+        [],
+        []
+      ],
+      "interface_used": true,
+      "fixtures_intact": true,
+      "unexpected_files": [],
+      "final_source_sha256": "583038bb7746905b00b0e8a4fac574c9e6c0f8394aa0905b0b8132684b53398f",
+      "final_grade": {
+        "counts": {
+          "executed": 57,
+          "failed": 0,
+          "passed": 57,
+          "pending": 0,
+          "reused": 0
+        },
+        "elapsed_ms": 273,
+        "failures": [],
+        "failures_omitted": 0,
+        "format": "lobo-test/0.1",
+        "full_execution": true,
+        "pending_omitted": 0,
+        "pending_tests": [],
+        "session": "837367:1793757635398688364",
+        "snapshot": "s2",
+        "status": "checks_satisfied",
+        "uncovered_requirements": []
+      },
+      "accepted": true,
+      "elapsed_seconds": 24.205850599799305
+    },
+    {
+      "task": "ceil_div",
+      "arm": "structured",
+      "load_before": [
+        2.86767578125,
+        2.673828125,
+        2.49072265625
+      ],
+      "command": [
+        "codex",
+        "exec",
+        "--ignore-user-config",
+        "--ephemeral",
+        "--json",
+        "--sandbox",
+        "workspace-write",
+        "--skip-git-repo-check",
+        "--disable",
+        "multi_agent",
+        "--disable",
+        "apps",
+        "--disable",
+        "plugins",
+        "--disable",
+        "plugin_discovery_prefetch",
+        "--disable",
+        "remote_plugin",
+        "--disable",
+        "memories",
+        "-C",
+        "/tmp/lobo-pilot-0n91boup/task",
+        "-m",
+        "gpt-6.1-sol",
+        "-c",
+        "model_reasoning_effort=\"high\"",
+        "-c",
+        "approval_policy=\"never\"",
+        "-"
+      ],
+      "initial_source_sha256": "0aba3767aa744929de74516be20b58566d40ac432c05b05a60bc75292ff23a40",
+      "visible_plan_sha256": "835918c7fb5eda053c2653aea175bedff78e9246a60624ae921f4fd251ff2a35",
+      "acceptance_plan_sha256": "7fe880da18bc56242908ec2e10e1ff09adf1130eb6f4d3d2b90692fcafebd796",
+      "agent_seconds": 17.701668134890497,
+      "timeout": false,
+      "exit_code": 0,
+      "usage": {
+        "input_tokens": 74101,
+        "cached_input_tokens": 66944,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 434,
+        "reasoning_output_tokens": 8
+      },
+      "tool_calls": 5,
+      "checks": [
+        {
+          "source_sha256": "0aba3767aa744929de74516be20b58566d40ac432c05b05a60bc75292ff23a40",
+          "result": {
+            "counts": {
+              "executed": 10,
+              "failed": 2,
+              "passed": 8,
+              "pending": 0,
+              "reused": 0
+            },
+            "elapsed_ms": 146,
+            "failures": [
+              {
+                "detail": {
+                  "diagnostic": {
+                    "code": "runtime.integer.overflow",
+                    "phase": "execute",
+                    "subject": "target"
+                  },
+                  "kind": "runtime_fault",
+                  "status": "error"
+                },
+                "replay": {
+                  "snapshot": "s2",
+                  "test": "target.4"
+                },
+                "requirement": "repair",
+                "status": "runtime_fault",
+                "test": "target.4"
+              },
+              {
+                "detail": {
+                  "diagnostic": {
+                    "code": "runtime.integer.overflow",
+                    "phase": "execute",
+                    "subject": "target"
+                  },
+                  "kind": "runtime_fault",
+                  "status": "error"
+                },
+                "replay": {
+                  "snapshot": "s2",
+                  "test": "target.5"
+                },
+                "requirement": "repair",
+                "status": "runtime_fault",
+                "test": "target.5"
+              }
+            ],
+            "failures_omitted": 0,
+            "format": "lobo-test/0.1",
+            "full_execution": false,
+            "pending_omitted": 0,
+            "pending_tests": [],
+            "session": "837456:1793757635677898624",
+            "snapshot": "s2",
+            "status": "failed",
+            "uncovered_requirements": []
+          },
+          "elapsed_seconds": 0.14727164758369327,
+          "feedback_bytes": 810
+        },
+        {
+          "source_sha256": "704becf44b27b3a8bdb9560c7f290a9fa4729a1adf93c78fec029b7de3fbe594",
+          "result": {
+            "counts": {
+              "executed": 6,
+              "failed": 0,
+              "passed": 10,
+              "pending": 0,
+              "reused": 4
+            },
+            "elapsed_ms": 134,
+            "failures": [],
+            "failures_omitted": 0,
+            "format": "lobo-test/0.1",
+            "full_execution": false,
+            "pending_omitted": 0,
+            "pending_tests": [],
+            "session": "837456:1793757635677898624",
+            "snapshot": "s3",
+            "status": "checks_satisfied",
+            "uncovered_requirements": []
+          },
+          "elapsed_seconds": 0.13474566908553243,
+          "feedback_bytes": 321
+        }
+      ],
+      "check_requests": [
+        [],
+        []
+      ],
+      "interface_used": true,
+      "fixtures_intact": true,
+      "unexpected_files": [],
+      "final_source_sha256": "704becf44b27b3a8bdb9560c7f290a9fa4729a1adf93c78fec029b7de3fbe594",
+      "final_grade": {
+        "counts": {
+          "executed": 42,
+          "failed": 0,
+          "passed": 42,
+          "pending": 0,
+          "reused": 0
+        },
+        "elapsed_ms": 226,
+        "failures": [],
+        "failures_omitted": 0,
+        "format": "lobo-test/0.1",
+        "full_execution": true,
+        "pending_omitted": 0,
+        "pending_tests": [],
+        "session": "838735:1793757653383994136",
+        "snapshot": "s2",
+        "status": "checks_satisfied",
+        "uncovered_requirements": []
+      },
+      "accepted": true,
+      "elapsed_seconds": 17.93380245193839
+    },
+    {
+      "task": "ceil_div",
+      "arm": "conventional",
+      "load_before": [
+        2.20654296875,
+        2.53271484375,
+        2.44677734375
+      ],
+      "command": [
+        "codex",
+        "exec",
+        "--ignore-user-config",
+        "--ephemeral",
+        "--json",
+        "--sandbox",
+        "workspace-write",
+        "--skip-git-repo-check",
+        "--disable",
+        "multi_agent",
+        "--disable",
+        "apps",
+        "--disable",
+        "plugins",
+        "--disable",
+        "plugin_discovery_prefetch",
+        "--disable",
+        "remote_plugin",
+        "--disable",
+        "memories",
+        "-C",
+        "/tmp/lobo-pilot-zoulknbv/task",
+        "-m",
+        "gpt-6.1-sol",
+        "-c",
+        "model_reasoning_effort=\"high\"",
+        "-c",
+        "approval_policy=\"never\"",
+        "-"
+      ],
+      "initial_source_sha256": "0aba3767aa744929de74516be20b58566d40ac432c05b05a60bc75292ff23a40",
+      "visible_plan_sha256": "835918c7fb5eda053c2653aea175bedff78e9246a60624ae921f4fd251ff2a35",
+      "acceptance_plan_sha256": "7fe880da18bc56242908ec2e10e1ff09adf1130eb6f4d3d2b90692fcafebd796",
+      "agent_seconds": 18.05038482369855,
+      "timeout": false,
+      "exit_code": 0,
+      "usage": {
+        "input_tokens": 87037,
+        "cached_input_tokens": 75520,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 501,
+        "reasoning_output_tokens": 52
+      },
+      "tool_calls": 5,
+      "checks": [
+        {
+          "source_sha256": "0aba3767aa744929de74516be20b58566d40ac432c05b05a60bc75292ff23a40",
+          "result": {
+            "counts": {
+              "executed": 10,
+              "failed": 2,
+              "passed": 8,
+              "pending": 0,
+              "reused": 0
+            },
+            "elapsed_ms": 147,
+            "failures": [
+              {
+                "detail": {
+                  "diagnostic": {
+                    "code": "runtime.integer.overflow",
+                    "phase": "execute",
+                    "subject": "target"
+                  },
+                  "kind": "runtime_fault",
+                  "status": "error"
+                },
+                "replay": {
+                  "snapshot": "s2",
+                  "test": "target.4"
+                },
+                "requirement": "repair",
+                "status": "runtime_fault",
+                "test": "target.4"
+              },
+              {
+                "detail": {
+                  "diagnostic": {
+                    "code": "runtime.integer.overflow",
+                    "phase": "execute",
+                    "subject": "target"
+                  },
+                  "kind": "runtime_fault",
+                  "status": "error"
+                },
+                "replay": {
+                  "snapshot": "s2",
+                  "test": "target.5"
+                },
+                "requirement": "repair",
+                "status": "runtime_fault",
+                "test": "target.5"
+              }
+            ],
+            "failures_omitted": 0,
+            "format": "lobo-test/0.1",
+            "full_execution": true,
+            "pending_omitted": 0,
+            "pending_tests": [],
+            "session": "838781:1793757653616160292",
+            "snapshot": "s2",
+            "status": "failed",
+            "uncovered_requirements": []
+          },
+          "elapsed_seconds": 0.14795860182493925,
+          "feedback_bytes": 593
+        },
+        {
+          "source_sha256": "cab8ec0bb5802ecf1f72c3cd5b70515820607ddffb2b18e62f4ed5ca39b4aa2c",
+          "result": {
+            "counts": {
+              "executed": 10,
+              "failed": 0,
+              "passed": 10,
+              "pending": 0,
+              "reused": 0
+            },
+            "elapsed_ms": 148,
+            "failures": [],
+            "failures_omitted": 0,
+            "format": "lobo-test/0.1",
+            "full_execution": true,
+            "pending_omitted": 0,
+            "pending_tests": [],
+            "session": "838781:1793757653616160292",
+            "snapshot": "s3",
+            "status": "checks_satisfied",
+            "uncovered_requirements": []
+          },
+          "elapsed_seconds": 0.14840083895251155,
+          "feedback_bytes": 92
+        }
+      ],
+      "check_requests": [
+        [],
+        []
+      ],
+      "interface_used": true,
+      "fixtures_intact": true,
+      "unexpected_files": [],
+      "final_source_sha256": "cab8ec0bb5802ecf1f72c3cd5b70515820607ddffb2b18e62f4ed5ca39b4aa2c",
+      "final_grade": {
+        "counts": {
+          "executed": 42,
+          "failed": 0,
+          "passed": 42,
+          "pending": 0,
+          "reused": 0
+        },
+        "elapsed_ms": 222,
+        "failures": [],
+        "failures_omitted": 0,
+        "format": "lobo-test/0.1",
+        "full_execution": true,
+        "pending_omitted": 0,
+        "pending_tests": [],
+        "session": "840110:1793757671671045560",
+        "snapshot": "s2",
+        "status": "checks_satisfied",
+        "uncovered_requirements": []
+      },
+      "accepted": true,
+      "elapsed_seconds": 18.278458828572184
+    },
+    {
+      "task": "distance",
+      "arm": "conventional",
+      "load_before": [
+        1.8583984375,
+        2.43994140625,
+        2.41796875
+      ],
+      "command": [
+        "codex",
+        "exec",
+        "--ignore-user-config",
+        "--ephemeral",
+        "--json",
+        "--sandbox",
+        "workspace-write",
+        "--skip-git-repo-check",
+        "--disable",
+        "multi_agent",
+        "--disable",
+        "apps",
+        "--disable",
+        "plugins",
+        "--disable",
+        "plugin_discovery_prefetch",
+        "--disable",
+        "remote_plugin",
+        "--disable",
+        "memories",
+        "-C",
+        "/tmp/lobo-pilot-g_noxteq/task",
+        "-m",
+        "gpt-6.1-sol",
+        "-c",
+        "model_reasoning_effort=\"high\"",
+        "-c",
+        "approval_policy=\"never\"",
+        "-"
+      ],
+      "initial_source_sha256": "e276113773f7388e670c493d595a0b100c752984b4163c3f2d50f30d606aeba4",
+      "visible_plan_sha256": "47f693f587c68d30e18fdb8aaa35274986465a85a18ba82fafae199e62df1c52",
+      "acceptance_plan_sha256": "28721e1823cb592fec46ac93268511489fa2dd31514a47a80dd6ac79948e22ad",
+      "agent_seconds": 22.913161117583513,
+      "timeout": false,
+      "exit_code": 0,
+      "usage": {
+        "input_tokens": 92407,
+        "cached_input_tokens": 79104,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 420,
+        "reasoning_output_tokens": 8
+      },
+      "tool_calls": 5,
+      "checks": [
+        {
+          "source_sha256": "e276113773f7388e670c493d595a0b100c752984b4163c3f2d50f30d606aeba4",
+          "result": {
+            "counts": {
+              "executed": 10,
+              "failed": 2,
+              "passed": 8,
+              "pending": 0,
+              "reused": 0
+            },
+            "elapsed_ms": 146,
+            "failures": [
+              {
+                "difference": {
+                  "actual": "-3",
+                  "expected": "3",
+                  "path": "$.value"
+                },
+                "replay": {
+                  "snapshot": "s2",
+                  "test": "target.0"
+                },
+                "requirement": "repair",
+                "status": "failed",
+                "test": "target.0"
+              },
+              {
+                "difference": {
+                  "actual": "-3",
+                  "expected": "3",
+                  "path": "$.value"
+                },
+                "replay": {
+                  "snapshot": "s2",
+                  "test": "target.2"
+                },
+                "requirement": "repair",
+                "status": "failed",
+                "test": "target.2"
+              }
+            ],
+            "failures_omitted": 0,
+            "format": "lobo-test/0.1",
+            "full_execution": true,
+            "pending_omitted": 0,
+            "pending_tests": [],
+            "session": "840168:1793757671899325119",
+            "snapshot": "s2",
+            "status": "failed",
+            "uncovered_requirements": []
+          },
+          "elapsed_seconds": 0.14632736193016171,
+          "feedback_bytes": 427
+        },
+        {
+          "source_sha256": "f10eee742f6fed91de6d8c1a4c590b48dc6703a645d4332ebe214b6cb4031e83",
+          "result": {
+            "counts": {
+              "executed": 10,
+              "failed": 0,
+              "passed": 10,
+              "pending": 0,
+              "reused": 0
+            },
+            "elapsed_ms": 140,
+            "failures": [],
+            "failures_omitted": 0,
+            "format": "lobo-test/0.1",
+            "full_execution": true,
+            "pending_omitted": 0,
+            "pending_tests": [],
+            "session": "840168:1793757671899325119",
+            "snapshot": "s3",
+            "status": "checks_satisfied",
+            "uncovered_requirements": []
+          },
+          "elapsed_seconds": 0.1403636923059821,
+          "feedback_bytes": 92
+        }
+      ],
+      "check_requests": [
+        [],
+        []
+      ],
+      "interface_used": true,
+      "fixtures_intact": true,
+      "unexpected_files": [],
+      "final_source_sha256": "f10eee742f6fed91de6d8c1a4c590b48dc6703a645d4332ebe214b6cb4031e83",
+      "final_grade": {
+        "counts": {
+          "executed": 49,
+          "failed": 0,
+          "passed": 49,
+          "pending": 0,
+          "reused": 0
+        },
+        "elapsed_ms": 230,
+        "failures": [],
+        "failures_omitted": 0,
+        "format": "lobo-test/0.1",
+        "full_execution": true,
+        "pending_omitted": 0,
+        "pending_tests": [],
+        "session": "842102:1793757694816560334",
+        "snapshot": "s2",
+        "status": "checks_satisfied",
+        "uncovered_requirements": []
+      },
+      "accepted": true,
+      "elapsed_seconds": 23.148821114562452
+    },
+    {
+      "task": "distance",
+      "arm": "structured",
+      "load_before": [
+        1.46923828125,
+        2.306640625,
+        2.3740234375
+      ],
+      "command": [
+        "codex",
+        "exec",
+        "--ignore-user-config",
+        "--ephemeral",
+        "--json",
+        "--sandbox",
+        "workspace-write",
+        "--skip-git-repo-check",
+        "--disable",
+        "multi_agent",
+        "--disable",
+        "apps",
+        "--disable",
+        "plugins",
+        "--disable",
+        "plugin_discovery_prefetch",
+        "--disable",
+        "remote_plugin",
+        "--disable",
+        "memories",
+        "-C",
+        "/tmp/lobo-pilot-k8k8gpy0/task",
+        "-m",
+        "gpt-6.1-sol",
+        "-c",
+        "model_reasoning_effort=\"high\"",
+        "-c",
+        "approval_policy=\"never\"",
+        "-"
+      ],
+      "initial_source_sha256": "e276113773f7388e670c493d595a0b100c752984b4163c3f2d50f30d606aeba4",
+      "visible_plan_sha256": "47f693f587c68d30e18fdb8aaa35274986465a85a18ba82fafae199e62df1c52",
+      "acceptance_plan_sha256": "28721e1823cb592fec46ac93268511489fa2dd31514a47a80dd6ac79948e22ad",
+      "agent_seconds": 16.448234970215708,
+      "timeout": false,
+      "exit_code": 0,
+      "usage": {
+        "input_tokens": 73974,
+        "cached_input_tokens": 66816,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 406,
+        "reasoning_output_tokens": 15
+      },
+      "tool_calls": 5,
+      "checks": [
+        {
+          "source_sha256": "e276113773f7388e670c493d595a0b100c752984b4163c3f2d50f30d606aeba4",
+          "result": {
+            "counts": {
+              "executed": 10,
+              "failed": 2,
+              "passed": 8,
+              "pending": 0,
+              "reused": 0
+            },
+            "elapsed_ms": 137,
+            "failures": [
+              {
+                "difference": {
+                  "actual": "-3",
+                  "expected": "3",
+                  "path": "$.value"
+                },
+                "replay": {
+                  "snapshot": "s2",
+                  "test": "target.0"
+                },
+                "requirement": "repair",
+                "status": "failed",
+                "test": "target.0"
+              },
+              {
+                "difference": {
+                  "actual": "-3",
+                  "expected": "3",
+                  "path": "$.value"
+                },
+                "replay": {
+                  "snapshot": "s2",
+                  "test": "target.2"
+                },
+                "requirement": "repair",
+                "status": "failed",
+                "test": "target.2"
+              }
+            ],
+            "failures_omitted": 0,
+            "format": "lobo-test/0.1",
+            "full_execution": false,
+            "pending_omitted": 0,
+            "pending_tests": [],
+            "session": "842163:1793757695051778635",
+            "snapshot": "s2",
+            "status": "failed",
+            "uncovered_requirements": []
+          },
+          "elapsed_seconds": 0.1378879239782691,
+          "feedback_bytes": 644
+        },
+        {
+          "source_sha256": "f10eee742f6fed91de6d8c1a4c590b48dc6703a645d4332ebe214b6cb4031e83",
+          "result": {
+            "counts": {
+              "executed": 6,
+              "failed": 0,
+              "passed": 10,
+              "pending": 0,
+              "reused": 4
+            },
+            "elapsed_ms": 128,
+            "failures": [],
+            "failures_omitted": 0,
+            "format": "lobo-test/0.1",
+            "full_execution": false,
+            "pending_omitted": 0,
+            "pending_tests": [],
+            "session": "842163:1793757695051778635",
+            "snapshot": "s3",
+            "status": "checks_satisfied",
+            "uncovered_requirements": []
+          },
+          "elapsed_seconds": 0.1286788359284401,
+          "feedback_bytes": 321
+        }
+      ],
+      "check_requests": [
+        [],
+        []
+      ],
+      "interface_used": true,
+      "fixtures_intact": true,
+      "unexpected_files": [],
+      "final_source_sha256": "f10eee742f6fed91de6d8c1a4c590b48dc6703a645d4332ebe214b6cb4031e83",
+      "final_grade": {
+        "counts": {
+          "executed": 49,
+          "failed": 0,
+          "passed": 49,
+          "pending": 0,
+          "reused": 0
+        },
+        "elapsed_ms": 225,
+        "failures": [],
+        "failures_omitted": 0,
+        "format": "lobo-test/0.1",
+        "full_execution": true,
+        "pending_omitted": 0,
+        "pending_tests": [],
+        "session": "843394:1793757711503635888",
+        "snapshot": "s2",
+        "status": "checks_satisfied",
+        "uncovered_requirements": []
+      },
+      "accepted": true,
+      "elapsed_seconds": 16.679055158048868
+    }
+  ],
+  "limitations": "Five heterogeneous pairs, no within-task repetitions. Same native backend; feedback+selection bundle, not comparison against existing frameworks. No general productivity conclusion. Shared host and cache/latency confounding.",
+  "summary": {
+    "conventional": {
+      "trials": 5,
+      "accepted": 5,
+      "interface_used": 5,
+      "timeouts": 0,
+      "infrastructure_errors": 0,
+      "elapsed_seconds_all_trials": {
+        "median": 20.24064132478088,
+        "min": 16.609542049001902,
+        "max": 33.2389903687872
+      },
+      "input_tokens": {
+        "observed": 5,
+        "median": 92277,
+        "min": 86747,
+        "max": 92770
+      },
+      "cached_input_tokens": {
+        "observed": 5,
+        "median": 79104,
+        "min": 75392,
+        "max": 85248
+      },
+      "output_tokens": {
+        "observed": 5,
+        "median": 420,
+        "min": 387,
+        "max": 501
+      },
+      "reasoning_output_tokens": {
+        "observed": 5,
+        "median": 9,
+        "min": 0,
+        "max": 52
+      }
+    },
+    "structured": {
+      "trials": 5,
+      "accepted": 5,
+      "interface_used": 5,
+      "timeouts": 0,
+      "infrastructure_errors": 0,
+      "elapsed_seconds_all_trials": {
+        "median": 17.93380245193839,
+        "min": 16.679055158048868,
+        "max": 24.205850599799305
+      },
+      "input_tokens": {
+        "observed": 5,
+        "median": 74167,
+        "min": 73974,
+        "max": 94190
+      },
+      "cached_input_tokens": {
+        "observed": 5,
+        "median": 66944,
+        "min": 66816,
+        "max": 85248
+      },
+      "output_tokens": {
+        "observed": 5,
+        "median": 434,
+        "min": 388,
+        "max": 547
+      },
+      "reasoning_output_tokens": {
+        "observed": 5,
+        "median": 21,
+        "min": 8,
+        "max": 41
+      }
+    }
+  }
+}

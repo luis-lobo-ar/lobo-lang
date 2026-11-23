@@ -1,0 +1,59 @@
+{
+  "date": "2026-11-03",
+  "scope": "Literature review artifacts and repository regression checks; not replication of cited studies",
+  "working_directory": "lobo-lang",
+  "checks": [
+    {
+      "command": "python3 research/collect_metadata.py",
+      "result": "passed",
+      "primary_records": 26,
+      "retrieval_errors": 0,
+      "outputs": ["catalog.json", "references.bib"],
+      "limitations": "Institutional workshop record is manually curated; collector does not independently confirm every publication venue or every scientific claim."
+    },
+    {
+      "command": "python3 -m py_compile research/collect_metadata.py",
+      "result": "passed",
+      "limitations": "Syntax check only; successful live collection is recorded separately."
+    },
+    {
+      "command": "./scripts/check.sh",
+      "result": "passed",
+      "coverage": "Repository protocol JSON/JSONL and local Markdown links"
+    },
+    {
+      "command": "git diff --check",
+      "result": "passed",
+      "limitations": "Tracked-file whitespace; new research text was checked separately."
+    },
+    {
+      "command": "cargo test --locked > target/research-review-cargo-test.log 2>&1",
+      "result": "passed",
+      "exit_code": 0,
+      "test_groups_including_zero_test_groups": 21,
+      "tests_passed": 145,
+      "tests_failed": 0,
+      "tests_ignored": 0,
+      "raw_log": "target/research-review-cargo-test.log",
+      "limitations": "Ignored local build artifact; may be removed by build cleanup."
+    },
+    {
+      "method": "Offline Python consistency audit against the actual manifest, catalog, bibliography and annotation text",
+      "result": "passed",
+      "coverage": [
+        "All research JSON parses",
+        "26 unique manifest keys match catalog and BibTeX keys",
+        "All 24 arXiv records have matching explicit version pins and versioned URLs",
+        "All records have a title, authors and status; none has a retrieval_error",
+        "Every catalog key appears in the annotations",
+        "Cached primary metadata SHA-256 values match the catalog",
+        "Collector SHA-256 matches the catalog",
+        "BibTeX braces balance, ignoring escaped braces",
+        "Research text has no trailing whitespace"
+      ],
+      "limitations": "Structural checks, not independent verification of scientific claims or a full BibTeX compiler check."
+    }
+  ],
+  "new_model_experiments": false,
+  "publication_or_submission": false
+}

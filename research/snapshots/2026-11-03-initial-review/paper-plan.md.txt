@@ -1,0 +1,137 @@
+# Paper direction and evidence plan
+
+Status: **proposal, 2026-11-03**. No experiments below have been run unless explicitly linked as
+existing evidence. This plan does not change the language-first roadmap or authorize model spend.
+
+Working title: **Language, Context, and Verification Costs in Agentic Software Development:
+An Exploratory Study with Lobo**.
+
+## Defensible contribution
+
+The strongest candidate contribution is a controlled investigation of how language representation,
+retrievable semantic context and verification interfaces interact over a complete coding trajectory.
+Lobo provides an experimental native language and tooling in which to test those questions.
+
+Do not claim the first AI-oriented language, that models require no training or documentation, that
+compact syntax necessarily saves billed tokens, or that native execution makes agents faster.
+[Prior work](related-work.md) already covers compact agent-authored DSLs, code action interfaces,
+typed context and cost-aware evaluation. A distinctive contribution needs measured behavior or a
+precise new mechanism with an appropriate baseline; assembling familiar ideas is not automatically novel.
+
+## Research questions
+
+| Question | Manipulation | Main outcomes |
+| --- | --- | --- |
+| RQ1: Does language choice change agent cost at comparable correctness? | Equivalent Lobo, Rust and Python tasks with a common scaffold | Held-out success, total usage, time and cost per accepted task |
+| RQ2: Which interface changes explain any improvement? | Within-language plain/structured feedback, full/affected verification, equivalent context packages | Diagnosis/edit cycles, retrieval, tool calls, unrelated changes, usage |
+| RQ3: Can agents learn the unfamiliar language economically? | Equal factual knowledge as guide versus skill, then separately varied documentation budgets | Onboarding cost, competence, retrieval and workflow adherence |
+| RQ4: Do gains persist beyond a short correct program? | Multi-module repair, feature work, refactoring and longer sessions | Escaped defects, first/last correct candidate, regressions and total cost |
+
+RQ2 starts with mechanisms implemented in the repository. A semantic graph/transaction interface
+cannot be evaluated until implemented. Use a staged study rather than an unaffordable full factorial
+of every language, interface, model and task combination. Follow the first experiment with focused
+ablations that test its strongest alternative explanations.
+
+For a later semantic-context experiment, include lexical search and conventional language-server
+retrieval, not only a weaker file-dump baseline. Measure setup/indexing and per-query overhead.
+The [LSP-versus-grep preliminary study](https://arxiv.org/abs/2608.13568v1) shows why precision alone
+does not guarantee token savings. Type-constrained decoding is a separate possible intervention,
+requiring compiler/decoder integration; it is not implemented by our current language skill.
+
+## Existing Lobo evidence
+
+The [result register](../benchmarks/results/README.md) links all datasets and qualifications.
+
+- Execution microbenchmarks compare native/evaluator/Rust program behavior and runtime. They do not
+  measure agent development cost or establish a general language-speed ranking.
+- The scripted verification prototype checks agreement and reuse across six scenarios. It does not
+  contain real coding-agent productivity measurements.
+- The real-agent pilot, repeated library study and skill study scheduled **60 attempts** in total.
+  There were **59 accepted completed repairs and one controller interruption**, retained without
+  replacement. This is a collection of small studies, not 60 independent programming workloads.
+- All agent arms used Lobo. Feedback, test selection and knowledge packaging varied; the application
+  language did not. No agent-productivity comparison with Rust or Python has been performed.
+- All completed repair studies had easy first-candidate outcomes. The skill trial had no compile
+  diagnostics and no demonstrated accuracy or consistent time/token benefit over an equivalent guide.
+  Ceiling effects make stronger recovery and onboarding conclusions unavailable.
+- Context deviations and interrupted/missing usage remain recorded. Acceptance, adherence and
+  infrastructure reliability are separate outcomes, not reasons to discard inconvenient records.
+
+The current implementation includes native compilation, a reference evaluator, immutable data,
+closed module composition, checked action metadata, runtime contracts and a foreground JSONL test
+runner with snapshots/reuse. The wider semantic workspace, transactional daemon, capability sandbox,
+formal state-machine verification and plugin are proposed. Describe them as future work.
+
+## Minimum credible language comparison
+
+1. Freeze a protocol before running: hypotheses, tasks, exclusions, timeout/budget rules, primary
+   endpoints, stopping rule and analysis. Include an explicit record of protocol amendments.
+2. Build matched task specifications and independent tests for Lobo, Rust and Python. Include
+   implementation, repair and multi-module changes. Have independent review verify equivalent
+   behavior, integer/Unicode/error semantics and feasible idioms. Avoid forcing a syntax translation
+   that makes one language artificially awkward. Restrict the first comparison to the shared
+   supported problem domain; ecosystem-heavy applications would answer a different question.
+3. Use common agent scaffolding, initial information, tool authority and available test knowledge.
+   Freeze compiler/interpreter, dependencies, harness, model identity, tokenizer and documentation.
+   Record whether API model names are immutable versions or moving aliases. Treat language knowledge
+   and pretraining exposure as measured/limited assumptions, not known absence of training data.
+4. Use fresh isolated workspaces and conversations, randomize/interleave arm order, and repeat across
+   task families and multiple model families. Choose sample size from a separate variance/difficulty
+   pilot and a worthwhile effect size. Repeated samples of two tasks do not establish generality.
+5. Freeze held-out grading before agents run; keep it inaccessible during editing. Use independent
+   behavioral oracles, boundary cases and mutation checks. Retain the same grading for failed,
+   interrupted and successful attempts. Record cancellation and system failures separately.
+6. Persist the exact source snapshot for **every candidate before checking it**, with hashes,
+   timestamps, tool events, input identities and versioned test results. Grade intermediate snapshots
+   offline to measure first success and later regressions. Existing logs often retain intermediate
+   hashes but not all source snapshots; do not claim retrospective reconstruction from hashes alone.
+7. Analyze paired task-level outcomes and uncertainty, clustering repeated trials by task. Report
+   individual task/model results and sensitivity to workflow deviations. Do not pool all repeats as
+   independent evidence. Preserve the predeclared primary analysis alongside corrections.
+
+## Token, cost and time accounting
+
+| Quantity | Meaning and required caveat |
+| --- | --- |
+| Final-source tokens | Lexical tokens and model-tokenizer counts separately; also source bytes. This is representation size. |
+| Input usage | Entire trajectory; separate cached and uncached tokens where supplied. Repeated prefixes still matter. |
+| Output usage | Generated code, prose and reasoning usage where exposed. Record whether reasoning is included or separately reported. Never sum overlapping fields. |
+| Tool feedback | Bytes and tokenizer counts, plus actual subsequent model input usage. Avoid counting the same payload twice as billed input. |
+| Retrieval | Knowledge/context read, retrieval calls and failures; include onboarding in the primary whole-task budget. |
+| Time | End-to-end wall clock plus model, tool, compile/test and queue components where observable. Mark unknowns. |
+| Monetary cost | Provider, price date, cache discounts and complete usage. Do not infer historical billing from current prices. |
+| Runtime | Compiled/interpreted program time, memory and binary size in a separate execution experiment. |
+
+Report task success at a fixed budget and the success/cost tradeoff. Compute aggregate cost per
+accepted task as **cost of all scheduled attempts / number accepted** under the declared handling
+of infrastructure failures. Do not average only successful-attempt cost or count an unknown interrupted
+usage value as zero. If nothing is accepted, the ratio is undefined; report the failure directly.
+Report final correctness separately from whether any intermediate candidate was correct. Do not
+substitute median source length for median trajectory cost or compare equal-cost and unlimited-cost
+success numbers as if the budgets matched. These requirements follow the concerns raised by
+[Tokenmaxxing](https://arxiv.org/abs/2607.22807v2) and
+[AI Agents That Matter](https://arxiv.org/abs/2407.01502v1).
+
+## Threats and interpretation
+
+Main threats include language familiarity, documentation quality, unsupported library work,
+unequal scaffolds, biased task translation, insufficient tests, contamination, prompt leakage,
+model/provider drift, shared context, cache state, task-order effects and infrastructure interruption.
+Record interventions and retain unsuccessful outcomes. Keep hidden tests out of onboarding examples.
+
+A null result can be valuable if the comparison is fair: it may show that interface/context costs
+dominate syntax or that a novel language's onboarding offsets compactness. A positive combined-system
+result needs ablations before attributing it to the language. Claims about safety need specific
+enforcement/proof evidence; native execution and action declarations alone do not supply it.
+
+## Artifact and writing plan
+
+Keep the compiler/specification, agent skill, frozen task packages, test identities, harness, prompts,
+sanitized trajectories, raw usage accounting and analysis runnable from pinned versions. Document
+what cannot be shared, why, and what evidence remains. Private local evidence is not a public archive.
+Check task/data licenses and sanitize credentials before any release; no publication is performed here.
+
+A future paper can present: the hypothesis and related work; implemented language/tool mechanisms;
+controlled methodology; successes and negative results; ablations; limitations; and a reproducibility
+appendix. Select a venue after the actual contribution and evidence are clear. The present artifact
+is a research foundation and proposed study, not a submission-ready empirical paper.

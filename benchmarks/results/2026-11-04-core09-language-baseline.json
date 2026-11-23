@@ -1,0 +1,34 @@
+{
+  "date": "2026-11-04",
+  "kind": "preserved-core09-baseline",
+  "compiler_version": "0.9.0",
+  "private_artifacts": [
+    {
+      "name": "lobo",
+      "path": "benchmarks/private-evidence/core09-language-baseline-20261104/lobo",
+      "bytes": 1078512,
+      "sha256": "8476c9530b58ec963fb02400ecaa4d8d835c5d880a4204c7526a9002a83d41b3"
+    },
+    {
+      "name": "lobo-test",
+      "path": "benchmarks/private-evidence/core09-language-baseline-20261104/lobo-test",
+      "bytes": 993336,
+      "sha256": "dbd7506830098211f505c394f6be3a85b57db95bd194124c0047e5e2e2f489cf"
+    }
+  ],
+  "source_archive": {
+    "path": "benchmarks/private-evidence/core09-language-baseline-20261104/source-core09.tar.gz",
+    "sha256": "4f0285f9d983390e612598d2ebdde0afdb881d4800abbb65c5788b4d8c79f1b6"
+  },
+  "guarded_recursive_source": "module m @id(\"m\"); variant Node @id(\"node\") { Num(I64), Sum(List<Node>) } function size @id(\"size\")() -> I64 { 0 }",
+  "check": {
+    "command": "preserved lobo check --stdin",
+    "exit_code": 1,
+    "stdout": "{\"diagnostic\":{\"code\":\"compile.record.cycle\",\"message\":\"recursive inline compound layout\",\"phase\":\"check\",\"range\":{\"end\":{\"byte\":31,\"character\":31,\"line\":0},\"start\":{\"byte\":27,\"character\":27,\"line\":0}}},\"kind\":\"compile_error\",\"status\":\"error\"}\n",
+    "stderr": ""
+  },
+  "limits": [
+    "Local ignored snapshot requires backup; not publication",
+    "Snapshot captures the existing dirty workspace; not a clean historical release"
+  ]
+}

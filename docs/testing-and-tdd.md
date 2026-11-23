@@ -1,7 +1,31 @@
 # Testing and TDD
 
-Status: Core corpus, compiler behavior, native/reference comparison, checked-artifact round trips, and CLI tests
-run through Cargo. WASM differential testing, sustained fuzzing, and bootstrap remain planned.
+Status: Core corpus, compiler behavior, native/reference comparison, checked-artifact round trips, CLI tests,
+and a deterministic native/sanitizer corpus run through Cargo. WASM differential testing, sustained fuzzing,
+and bootstrap remain planned.
+
+An application-facing [agent-first testing prototype](../spec/agent-testing-v0.1.md) now runs through the
+separate `lobo-test` binary. It is not the compiler's Cargo suite or the future daemon verifier. It pins
+explicit requirements/tests, runs native checks, reports pending/uncovered evidence and bounded failures,
+and provides exact-source replay. In-session static-closure reuse has a separate forced-full gate and
+depends on a host-declared stable environment; it is not an external approval or an OS isolation mechanism.
+The [scripted comparison](../benchmarks/results/2026-10-18-agent-testing-prototype.json) checks selection
+against full outcomes, not LLM repair efficiency. Generative property testing/shrinking remain future work.
+The later [real-agent pilot](../benchmarks/results/2026-11-03-agent-repair-pilot.md) accepted all
+ten repairs using independent native final checks. Structured feedback reused passing evidence but
+returned more bytes; the small timing/token comparison is inconclusive. It does not establish
+superiority over existing frameworks. The [rerunnable harness](../benchmarks/agent-repair.py)
+keeps its oracle outside editable fixtures and records actual CLI usage, including missing usage.
+The [repeated library study](../benchmarks/results/2026-11-03-library-repair-study.md) separates
+text/JSON representation from affected selection across 30 scheduled attempts. Twenty-nine
+completed repairs passed; one controller interruption remains recorded without replacement.
+Reuse saves executions and agents use drill-down, but timing/token gains remain inconclusive.
+Global-context deviations and unknown interrupted latency are separate from semantic grading.
+The later [Lobo skill comparison](../benchmarks/results/2026-11-03-skill-evaluation.md) supplies
+equivalent information through a skill or flattened guide. All twenty attempts passed independent
+native grading; skill packaging showed no accuracy or consistent efficiency advantage. Its
+explicit activation and scope audit are separate from native correctness. Frozen results and
+skill examples remain part of the maintained test evidence.
 
 ## What a green result means
 
@@ -72,9 +96,26 @@ human wording and optional source-span snapshots have a separate presentation su
 
 ## Differential and generated tests
 
+The [Core v0.3 action suite](../tests/actions.rs) checks conservative declarations, every call edge,
+contract purity, source ranges, recursive bounds, malformed and oversized sets, canonical metadata,
+artifact tampering, CLI summaries, and native/reference results. Action annotations generate no host
+operations; agreement here is not evidence of capability enforcement or resource isolation.
+
+The implemented [native development suite](native-development.md) uses 24 independent boundary probes and 76
+seeded, well-typed expressions, mathematical I64 expectations, optimized native binaries, and ASan/UBSan
+instrumented binaries. It also checks the executable algorithms example. Run it with
+`cargo test --locked --test native_generated -- --nocapture`; it is part of the required full Cargo suite.
+Clang and its sanitizer runtimes are mandatory for development; the suite never silently skips them.
+
+The [Core v0.2 fold suite](../tests/fold.rs) adds ten regression tests, including scope/type rejection,
+contextual names, version validation, nested contract phases, and per-iteration fuel charging. Its
+parameterized sum fixture checks 102 input pairs against a mathematical i128 oracle through source evaluation,
+artifact reload, optimized native execution, and ASan/UBSan native execution. Huge counts use small fuel
+budgets; no test attempts to complete I64_MAX iterations.
+
 Run the same bounded, terminating program and arguments through the Rust evaluator and generated native code. Later,
-also compile it using the Lobo implementation. Compare values, classified faults, and specified effect traces
-when effects exist. Different machine code is permitted; semantic outcomes must agree.
+also compile it using the Lobo implementation. Compare values, classified faults, and specified action traces
+when resource actions exist. Different machine code is permitted; semantic outcomes must agree.
 
 Generate well-typed programs to exercise execution. Generate deliberately invalid programs to exercise rejection.
 Shrink disagreements into small fixtures and retain the seed, compiler revision, runtime version, and options.
@@ -120,3 +161,32 @@ A release is eligible when:
 Formal proof may later strengthen selected compiler transformations. It requires explicit assumptions and does
 not replace tests for parsers, build systems, tool protocols, hosts, and interfaces outside the proof's scope.
 
+
+## Native interface 1.7 verification
+
+The [native interface](../spec/native-interface-v0.1.md) has failing-first ABI/artifact/resource/TCP tests,
+C and LLVM native routes, ASan/UBSan, a fault-injected C provider harness, a fixed-seed handle model and
+exhaustive four-bit delegation masks. [Upstream attribution](../tests/upstream/native/README.md) distinguishes
+adapted cases from complete upstream suites. Run `python3 scripts/check-native-upstream.py` and the full
+Cargo suite. OS calls intentionally have no reference evaluator fallback. The two native backends share their
+C provider, so their agreement does not independently validate that provider.
+
+The [result record](../benchmarks/results/2026-11-22-native-boundary.md) retains red/green attempts, corrections,
+commands and scope limits. Editor native-type/signature/payload navigation, unsaved diagnostics and repair
+are covered by Node and the real isolated VS Code host. No IO is executed by compiler diagnostics.
+
+## Native state-model gate
+
+Compiler 1.7.1 adds source-linked finite authority/IO TLA+ models and concrete C witnesses. See
+[the model contract](../verification/native/README.md) and apply the local lobo-native-verification skill
+when changing covered code. The one-command checker requires a pinned installed TLC jar, completed baseline
+exploration, enabled-action coverage and expected rejection of isolated model/C mutations. It refuses stale
+source mappings. Ordinary Cargo runs the C witnesses without requiring TLC. The model found a real
+fuel-fault cleanup gap before connection-handle publication; its failing-before and corrected C runs are
+retained in [the result](../benchmarks/results/2026-11-22-native-formal-verification.md).
+These checks establish neither C refinement nor unbounded correctness.
+
+Core 1.8 propagation conformance is in `cargo test --locked --test try_propagation`. It covers early errors
+through expressions and loop children, caller boundaries, postconditions, runtime faults, actions, contracts,
+artifact-version admission, native single evaluation and explicit caller resource cleanup. These are public
+development cases. They do not establish an agent efficiency or performance improvement.

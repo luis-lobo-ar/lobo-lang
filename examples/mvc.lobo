@@ -1,0 +1,33 @@
+module users @id("example.mvc");
+
+import Response @id("example.web.response");
+import not_found @id("lobo.http.not_found");
+import Json @id("lobo.json.value");
+import object @id("lobo.json.object");
+import field @id("lobo.json.field");
+import json_response @id("lobo.json.response");
+
+// Model: one in-memory user.
+record User @id("example.mvc.user") { name: Text }
+variant UserLookup @id("example.mvc.lookup") { Missing, Found(User) }
+
+function find_user @id("example.mvc.find_user")(id: I64) -> UserLookup {
+  if id == 1 {
+    UserLookup::Found(User { name: "Luis" })
+  } else {
+    UserLookup::Missing
+  }
+}
+
+// View: construct a typed JSON value.
+function render_user @id("example.mvc.render_user")(user: User) -> Json {
+  Json::Object(field(object(), "name", Json::String(user.name)))
+}
+
+// Controller: load the model and select the response.
+function show_user @id("example.mvc.show_user")(id: I64) -> Response {
+  match(find_user(id)) {
+    Missing { not_found() },
+    Found(user) { json_response(200, render_user(user)) }
+  }
+}

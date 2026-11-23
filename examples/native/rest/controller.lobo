@@ -1,0 +1,18 @@
+module rest_controller;
+use http {Request,Response,json_response,error_response,respond};
+use json {Json,JsonArray,array,append};
+
+fn users()->JsonArray {append(append(array(),json {"id":"1","name":"Luis"}),json {"id":"2","name":"Ada"})}
+fn handle(request:Request)->Response {
+  if request.method!="GET" && request.method!="HEAD" {error_response(405)} else {
+    if request.path=="/health" {json_response(200,json {"status":"ok","language":"lobo"})} else {
+      if request.path=="/api/users" {json_response(200,Array(users()))} else {
+        if request.path=="/api/users/1" {json_response(200,json {"id":"1","name":"Luis"})} else {
+          if request.path=="/api/users/2" {json_response(200,json {"id":"2","name":"Ada"})} else {error_response(404)}
+        }
+      }
+    }
+  }
+}
+
+fn respond_to(request:Bytes)->Bytes {http.respond(request,handle)}

@@ -1,0 +1,186 @@
+{
+  "date": "2026-11-04",
+  "kind": "foreground-tool-smoke-no-model-agent",
+  "source_sha256": "f2e57a59fdf82e0dfed0263c6d6b196a36a5d0ac90399eab20277594d0ae2d5e",
+  "runner_sha256": "d9e80eb4efcdc4b2cfc93d5d9bd2e564ecd89afe53f4f8db26402779f1b3dd41",
+  "requests": [
+    {
+      "op": "open",
+      "root": "ast",
+      "sources": [
+        {
+          "name": "ast",
+          "text": "module syntax_tree @id(\"example.ast\");\n\nvariant Node @id(\"example.ast.node\") { Num(I64), Sum(List<Node>), Product(List<Node>) }\nrecord Reduction @id(\"example.ast.reduction\") { remaining: List<Node>, value: I64 }\nrecord Rewrite @id(\"example.ast.rewrite\") { remaining: List<Node>, reversed: List<Node> }\n\nfunction evaluate @id(\"example.ast.evaluate\")(node: Node) -> I64 {\n  match (node) {\n    Num(n) { n },\n    Sum(children) { evaluate_children(children, false) },\n    Product(children) { evaluate_children(children, true) }\n  }\n}\n\nfunction evaluate_children @id(\"example.ast.evaluate_children\")(children: List<Node>, product: Bool) -> I64 {\n  let done = fold(i in List::length(children), state: Reduction = Reduction {\n    remaining: children, value: if product { 1 } else { 0 }\n  }) {\n    let value = evaluate(List::head(state.remaining));\n    Reduction {\n      remaining: List::tail(state.remaining),\n      value: if product { state.value * value } else { state.value + value }\n    }\n  };\n  done.value\n}\n\nfunction reverse @id(\"example.ast.reverse\")(children: List<Node>) -> List<Node>\nensures { List::length(result) == List::length(children) }\n{\n  let done = fold(i in List::length(children), state: Rewrite = Rewrite {\n    remaining: children, reversed: List::empty<Node>()\n  }) {\n    Rewrite {\n      remaining: List::tail(state.remaining),\n      reversed: List::prepend(List::head(state.remaining), state.reversed)\n    }\n  };\n  done.reversed\n}\n\nfunction shift @id(\"example.ast.shift\")(node: Node, delta: I64) -> Node {\n  match (node) {\n    Num(n) { Node::Num(n + delta) },\n    Sum(children) { Node::Sum(shift_children(children, delta)) },\n    Product(children) { Node::Product(shift_children(children, delta)) }\n  }\n}\n\nfunction shift_children @id(\"example.ast.shift_children\")(children: List<Node>, delta: I64) -> List<Node> {\n  let done = fold(i in List::length(children), state: Rewrite = Rewrite {\n    remaining: children, reversed: List::empty<Node>()\n  }) {\n    Rewrite {\n      remaining: List::tail(state.remaining),\n      reversed: List::prepend(shift(List::head(state.remaining), delta), state.reversed)\n    }\n  };\n  reverse(done.reversed)\n}\n\nfunction shifted_value @id(\"example.ast.shifted_value\")(node: Node, delta: I64) -> I64 {\n  evaluate(shift(node, delta))\n}\n"
+        }
+      ],
+      "requirements": [
+        {
+          "id": "ast",
+          "description": "Evaluate and rewrite nested syntax trees"
+        }
+      ],
+      "tests": [
+        {
+          "id": "eval",
+          "requirement": "ast",
+          "entry": "example.ast.evaluate",
+          "arguments": [
+            "Variant:example.ast.node:Case:Sum,Count:3,Case:Num,I64:2,Case:Product,Count:2,Case:Num,I64:3,Case:Num,I64:4,Case:Sum,Count:0"
+          ],
+          "expect": {
+            "kind": "value",
+            "value": {
+              "type": "I64",
+              "value": "14"
+            }
+          },
+          "fuel": 10000,
+          "heap_cells": 10000
+        },
+        {
+          "id": "shift",
+          "requirement": "ast",
+          "entry": "example.ast.shifted_value",
+          "arguments": [
+            "Variant:example.ast.node:Case:Sum,Count:3,Case:Num,I64:2,Case:Product,Count:2,Case:Num,I64:3,Case:Num,I64:4,Case:Sum,Count:0",
+            "I64:1"
+          ],
+          "expect": {
+            "kind": "value",
+            "value": {
+              "type": "I64",
+              "value": "23"
+            }
+          },
+          "fuel": 10000,
+          "heap_cells": 10000
+        }
+      ]
+    },
+    {
+      "op": "verify",
+      "base": "s1",
+      "root": "ast",
+      "sources": [
+        {
+          "name": "ast",
+          "text": "module syntax_tree @id(\"example.ast\");\n\nvariant Node @id(\"example.ast.node\") { Num(I64), Sum(List<Node>), Product(List<Node>) }\nrecord Reduction @id(\"example.ast.reduction\") { remaining: List<Node>, value: I64 }\nrecord Rewrite @id(\"example.ast.rewrite\") { remaining: List<Node>, reversed: List<Node> }\n\nfunction evaluate @id(\"example.ast.evaluate\")(node: Node) -> I64 {\n  match (node) {\n    Num(n) { n },\n    Sum(children) { evaluate_children(children, false) },\n    Product(children) { evaluate_children(children, true) }\n  }\n}\n\nfunction evaluate_children @id(\"example.ast.evaluate_children\")(children: List<Node>, product: Bool) -> I64 {\n  let done = fold(i in List::length(children), state: Reduction = Reduction {\n    remaining: children, value: if product { 1 } else { 0 }\n  }) {\n    let value = evaluate(List::head(state.remaining));\n    Reduction {\n      remaining: List::tail(state.remaining),\n      value: if product { state.value * value } else { state.value + value }\n    }\n  };\n  done.value\n}\n\nfunction reverse @id(\"example.ast.reverse\")(children: List<Node>) -> List<Node>\nensures { List::length(result) == List::length(children) }\n{\n  let done = fold(i in List::length(children), state: Rewrite = Rewrite {\n    remaining: children, reversed: List::empty<Node>()\n  }) {\n    Rewrite {\n      remaining: List::tail(state.remaining),\n      reversed: List::prepend(List::head(state.remaining), state.reversed)\n    }\n  };\n  done.reversed\n}\n\nfunction shift @id(\"example.ast.shift\")(node: Node, delta: I64) -> Node {\n  match (node) {\n    Num(n) { Node::Num(n + delta) },\n    Sum(children) { Node::Sum(shift_children(children, delta)) },\n    Product(children) { Node::Product(shift_children(children, delta)) }\n  }\n}\n\nfunction shift_children @id(\"example.ast.shift_children\")(children: List<Node>, delta: I64) -> List<Node> {\n  let done = fold(i in List::length(children), state: Rewrite = Rewrite {\n    remaining: children, reversed: List::empty<Node>()\n  }) {\n    Rewrite {\n      remaining: List::tail(state.remaining),\n      reversed: List::prepend(shift(List::head(state.remaining), delta), state.reversed)\n    }\n  };\n  reverse(done.reversed)\n}\n\nfunction shifted_value @id(\"example.ast.shifted_value\")(node: Node, delta: I64) -> I64 {\n  evaluate(shift(node, delta))\n}\n"
+        }
+      ],
+      "environment": "core010-ast",
+      "scope": "all",
+      "max_cases": 256,
+      "wall_ms": 5000
+    },
+    {
+      "op": "verify",
+      "base": "s2",
+      "root": "ast",
+      "sources": [
+        {
+          "name": "ast",
+          "text": "module syntax_tree @id(\"example.ast\");\n\nvariant Node @id(\"example.ast.node\") { Num(I64), Sum(List<Node>), Product(List<Node>) }\nrecord Reduction @id(\"example.ast.reduction\") { remaining: List<Node>, value: I64 }\nrecord Rewrite @id(\"example.ast.rewrite\") { remaining: List<Node>, reversed: List<Node> }\n\nfunction evaluate @id(\"example.ast.evaluate\")(node: Node) -> I64 {\n  match (node) {\n    Num(n) { n },\n    Sum(children) { evaluate_children(children, false) },\n    Product(children) { evaluate_children(children, true) }\n  }\n}\n\nfunction evaluate_children @id(\"example.ast.evaluate_children\")(children: List<Node>, product: Bool) -> I64 {\n  let done = fold(i in List::length(children), state: Reduction = Reduction {\n    remaining: children, value: if product { 1 } else { 0 }\n  }) {\n    let value = evaluate(List::head(state.remaining));\n    Reduction {\n      remaining: List::tail(state.remaining),\n      value: if product { state.value * value } else { state.value + value }\n    }\n  };\n  done.value\n}\n\nfunction reverse @id(\"example.ast.reverse\")(children: List<Node>) -> List<Node>\nensures { List::length(result) == List::length(children) }\n{\n  let done = fold(i in List::length(children), state: Rewrite = Rewrite {\n    remaining: children, reversed: List::empty<Node>()\n  }) {\n    Rewrite {\n      remaining: List::tail(state.remaining),\n      reversed: List::prepend(List::head(state.remaining), state.reversed)\n    }\n  };\n  done.reversed\n}\n\nfunction shift @id(\"example.ast.shift\")(node: Node, delta: I64) -> Node {\n  match (node) {\n    Num(n) { Node::Num(n + delta) },\n    Sum(children) { Node::Sum(shift_children(children, delta)) },\n    Product(children) { Node::Product(shift_children(children, delta)) }\n  }\n}\n\nfunction shift_children @id(\"example.ast.shift_children\")(children: List<Node>, delta: I64) -> List<Node> {\n  let done = fold(i in List::length(children), state: Rewrite = Rewrite {\n    remaining: children, reversed: List::empty<Node>()\n  }) {\n    Rewrite {\n      remaining: List::tail(state.remaining),\n      reversed: List::prepend(shift(List::head(state.remaining), delta), state.reversed)\n    }\n  };\n  reverse(done.reversed)\n}\n\nfunction shifted_value @id(\"example.ast.shifted_value\")(node: Node, delta: I64) -> I64 {\n  evaluate(shift(node, delta))\n}\n"
+        }
+      ],
+      "environment": "core010-ast",
+      "scope": "affected",
+      "max_cases": 256,
+      "wall_ms": 5000
+    },
+    {
+      "op": "verify",
+      "base": "s3",
+      "root": "ast",
+      "sources": [
+        {
+          "name": "ast",
+          "text": "module syntax_tree @id(\"example.ast\");\n\nvariant Node @id(\"example.ast.node\") { Num(I64), Sum(List<Node>), Product(List<Node>) }\nrecord Reduction @id(\"example.ast.reduction\") { remaining: List<Node>, value: I64 }\nrecord Rewrite @id(\"example.ast.rewrite\") { remaining: List<Node>, reversed: List<Node> }\n\nfunction evaluate @id(\"example.ast.evaluate\")(node: Node) -> I64 {\n  match (node) {\n    Num(n) { n },\n    Sum(children) { evaluate_children(children, false) },\n    Product(children) { evaluate_children(children, true) }\n  }\n}\n\nfunction evaluate_children @id(\"example.ast.evaluate_children\")(children: List<Node>, product: Bool) -> I64 {\n  let done = fold(i in List::length(children), state: Reduction = Reduction {\n    remaining: children, value: if product { 1 } else { 0 }\n  }) {\n    let value = evaluate(List::head(state.remaining));\n    Reduction {\n      remaining: List::tail(state.remaining),\n      value: if product { state.value * value } else { state.value + value }\n    }\n  };\n  done.value\n}\n\nfunction reverse @id(\"example.ast.reverse\")(children: List<Node>) -> List<Node>\nensures { List::length(result) == List::length(children) }\n{\n  let done = fold(i in List::length(children), state: Rewrite = Rewrite {\n    remaining: children, reversed: List::empty<Node>()\n  }) {\n    Rewrite {\n      remaining: List::tail(state.remaining),\n      reversed: List::prepend(List::head(state.remaining), state.reversed)\n    }\n  };\n  done.reversed\n}\n\nfunction shift @id(\"example.ast.shift\")(node: Node, delta: I64) -> Node {\n  match (node) {\n    Num(n) { Node::Num(n + delta) },\n    Sum(children) { Node::Sum(shift_children(children, delta)) },\n    Product(children) { Node::Product(shift_children(children, delta)) }\n  }\n}\n\nfunction shift_children @id(\"example.ast.shift_children\")(children: List<Node>, delta: I64) -> List<Node> {\n  let done = fold(i in List::length(children), state: Rewrite = Rewrite {\n    remaining: children, reversed: List::empty<Node>()\n  }) {\n    Rewrite {\n      remaining: List::tail(state.remaining),\n      reversed: List::prepend(shift(List::head(state.remaining), delta), state.reversed)\n    }\n  };\n  reverse(done.reversed)\n}\n\nfunction shifted_value @id(\"example.ast.shifted_value\")(node: Node, delta: I64) -> I64 {\n  evaluate(shift(node, delta))\n}\n"
+        }
+      ],
+      "environment": "core010-ast",
+      "scope": "all",
+      "max_cases": 256,
+      "wall_ms": 5000
+    },
+    {
+      "op": "close"
+    }
+  ],
+  "responses": [
+    {
+      "checks": 2,
+      "criteria": "frozen for this session; not external approval",
+      "format": "lobo-test/0.1",
+      "session": "2271627:1793796922953931353",
+      "snapshot": "s1",
+      "status": "opened"
+    },
+    {
+      "counts": {
+        "executed": 2,
+        "failed": 0,
+        "passed": 2,
+        "pending": 0,
+        "reused": 0
+      },
+      "elapsed_ms": 404,
+      "failures": [],
+      "failures_omitted": 0,
+      "format": "lobo-test/0.1",
+      "full_execution": true,
+      "pending_omitted": 0,
+      "pending_tests": [],
+      "session": "2271627:1793796922953931353",
+      "snapshot": "s2",
+      "status": "checks_satisfied",
+      "uncovered_requirements": []
+    },
+    {
+      "counts": {
+        "executed": 0,
+        "failed": 0,
+        "passed": 2,
+        "pending": 0,
+        "reused": 2
+      },
+      "elapsed_ms": 1,
+      "failures": [],
+      "failures_omitted": 0,
+      "format": "lobo-test/0.1",
+      "full_execution": false,
+      "pending_omitted": 0,
+      "pending_tests": [],
+      "session": "2271627:1793796922953931353",
+      "snapshot": "s3",
+      "status": "checks_satisfied",
+      "uncovered_requirements": []
+    },
+    {
+      "counts": {
+        "executed": 2,
+        "failed": 0,
+        "passed": 2,
+        "pending": 0,
+        "reused": 0
+      },
+      "elapsed_ms": 220,
+      "failures": [],
+      "failures_omitted": 0,
+      "format": "lobo-test/0.1",
+      "full_execution": true,
+      "pending_omitted": 0,
+      "pending_tests": [],
+      "session": "2271627:1793796922953931353",
+      "snapshot": "s4",
+      "status": "checks_satisfied",
+      "uncovered_requirements": []
+    },
+    {
+      "format": "lobo-test/0.1",
+      "session": "2271627:1793796922953931353",
+      "status": "closed"
+    }
+  ],
+  "exit_code": 0,
+  "stderr": ""
+}

@@ -1,0 +1,218 @@
+{
+  "format": "lobo-upstream-native-tests/0.1",
+  "date": "2026-11-22",
+  "scope": "Pinned upstream source material for adapted tests. Upstream suites are not executed wholesale.",
+  "projects": [
+    {
+      "name": "nodejs",
+      "repository": "https://github.com/nodejs/node",
+      "release": "v22.21.0",
+      "commit": "54b94e13de20fd2387f090158c4d24dafde3dfa9",
+      "license": "MIT"
+    },
+    {
+      "name": "cpython",
+      "repository": "https://github.com/python/cpython",
+      "release": "v3.14.0",
+      "commit": "ebf955df7a89ed0c7968f79faec1de49f61ed7cb",
+      "license": "PSF-2.0 and retained historical notices"
+    },
+    {
+      "name": "libuv",
+      "repository": "https://github.com/libuv/libuv",
+      "release": "v1.51.0",
+      "commit": "5152db2cbfeb5582e9c27c5ea1dba2cd9e10759b",
+      "license": "MIT"
+    },
+    {
+      "name": "go",
+      "repository": "https://github.com/golang/go",
+      "release": "go1.25.0",
+      "commit": "6e676ab2b809d46623acb5988248d95d1eb7939c",
+      "license": "BSD-3-Clause"
+    },
+    {
+      "name": "rust",
+      "repository": "https://github.com/rust-lang/rust",
+      "release": "1.90.0",
+      "commit": "1159e78c4747b02ef996e55082b704c09b970588",
+      "license": "MIT OR Apache-2.0"
+    }
+  ],
+  "files": [
+    {
+      "project": "nodejs",
+      "upstream_path": "test/js-native-api/test_number/test.js",
+      "path": "tests/upstream/native/nodejs/test/js-native-api/test_number/test.js",
+      "url": "https://raw.githubusercontent.com/nodejs/node/54b94e13de20fd2387f090158c4d24dafde3dfa9/test/js-native-api/test_number/test.js",
+      "sha256": "3691cba5fbd5723fea57a0c4c76042876a722dc31323f32aaa211612d8f625bf"
+    },
+    {
+      "project": "nodejs",
+      "upstream_path": "test/js-native-api/test_bigint/test.js",
+      "path": "tests/upstream/native/nodejs/test/js-native-api/test_bigint/test.js",
+      "url": "https://raw.githubusercontent.com/nodejs/node/54b94e13de20fd2387f090158c4d24dafde3dfa9/test/js-native-api/test_bigint/test.js",
+      "sha256": "8cf8c21fd5c131f3c70c7c3c27c1e2d0557b5fb74d1349904710c333eaed13c7"
+    },
+    {
+      "project": "nodejs",
+      "upstream_path": "LICENSE",
+      "path": "tests/upstream/native/nodejs/LICENSE",
+      "url": "https://raw.githubusercontent.com/nodejs/node/54b94e13de20fd2387f090158c4d24dafde3dfa9/LICENSE",
+      "sha256": "e991d81497a85bb24fc6bffae0a3637a6accd6c6bc5ce1f2c5698bd555cf9d49"
+    },
+    {
+      "project": "cpython",
+      "upstream_path": "Lib/test/test_socket.py",
+      "path": "tests/upstream/native/cpython/Lib/test/test_socket.py",
+      "url": "https://raw.githubusercontent.com/python/cpython/ebf955df7a89ed0c7968f79faec1de49f61ed7cb/Lib/test/test_socket.py",
+      "sha256": "1d61a181a4c9d2ee4ad740c1cb91337e4b70012660e739586ef88ca0239f703e"
+    },
+    {
+      "project": "cpython",
+      "upstream_path": "Lib/test/test_ctypes/test_numbers.py",
+      "path": "tests/upstream/native/cpython/Lib/test/test_ctypes/test_numbers.py",
+      "url": "https://raw.githubusercontent.com/python/cpython/ebf955df7a89ed0c7968f79faec1de49f61ed7cb/Lib/test/test_ctypes/test_numbers.py",
+      "sha256": "d2ebac4469b86773869d9d6b55249bfb86fa4c167e1ba602c4cd24c8d2e45a01"
+    },
+    {
+      "project": "cpython",
+      "upstream_path": "LICENSE",
+      "path": "tests/upstream/native/cpython/LICENSE",
+      "url": "https://raw.githubusercontent.com/python/cpython/ebf955df7a89ed0c7968f79faec1de49f61ed7cb/LICENSE",
+      "sha256": "b0e25a78cffb43f4d92de8b61ccfa1f1f98ecbc22330b54b5251e7b6ba010231"
+    },
+    {
+      "project": "libuv",
+      "upstream_path": "test/test-tcp-close.c",
+      "path": "tests/upstream/native/libuv/test/test-tcp-close.c",
+      "url": "https://raw.githubusercontent.com/libuv/libuv/5152db2cbfeb5582e9c27c5ea1dba2cd9e10759b/test/test-tcp-close.c",
+      "sha256": "32fb87bf36d71d975f651313b51565cfa130d8beedb026d6e0dd252797ee114d"
+    },
+    {
+      "project": "libuv",
+      "upstream_path": "test/test-tcp-shutdown-after-write.c",
+      "path": "tests/upstream/native/libuv/test/test-tcp-shutdown-after-write.c",
+      "url": "https://raw.githubusercontent.com/libuv/libuv/5152db2cbfeb5582e9c27c5ea1dba2cd9e10759b/test/test-tcp-shutdown-after-write.c",
+      "sha256": "66932eb871dce23bd899f528eeab9ca6b0177edc183a010fc7d5e82c4327f53c"
+    },
+    {
+      "project": "libuv",
+      "upstream_path": "LICENSE",
+      "path": "tests/upstream/native/libuv/LICENSE",
+      "url": "https://raw.githubusercontent.com/libuv/libuv/5152db2cbfeb5582e9c27c5ea1dba2cd9e10759b/LICENSE",
+      "sha256": "16de0c32b265cb7d46a6d3bd614f259dd4d693a5e26b3407b04aae8d73041f0c"
+    },
+    {
+      "project": "go",
+      "upstream_path": "src/net/timeout_test.go",
+      "path": "tests/upstream/native/go/src/net/timeout_test.go",
+      "url": "https://raw.githubusercontent.com/golang/go/6e676ab2b809d46623acb5988248d95d1eb7939c/src/net/timeout_test.go",
+      "sha256": "02d81ee27db5967058381b8534e51947bad60c0f044d6403dde98184d0278b00"
+    },
+    {
+      "project": "go",
+      "upstream_path": "src/net/tcpsock_test.go",
+      "path": "tests/upstream/native/go/src/net/tcpsock_test.go",
+      "url": "https://raw.githubusercontent.com/golang/go/6e676ab2b809d46623acb5988248d95d1eb7939c/src/net/tcpsock_test.go",
+      "sha256": "8b8415c0597e089e527a2e4e4b2ed019e9ae7dff0755bdfcdd7fc34944e485b1"
+    },
+    {
+      "project": "go",
+      "upstream_path": "LICENSE",
+      "path": "tests/upstream/native/go/LICENSE",
+      "url": "https://raw.githubusercontent.com/golang/go/6e676ab2b809d46623acb5988248d95d1eb7939c/LICENSE",
+      "sha256": "911f8f5782931320f5b8d1160a76365b83aea6447ee6c04fa6d5591467db9dad"
+    },
+    {
+      "project": "rust",
+      "upstream_path": "library/std/src/net/tcp/tests.rs",
+      "path": "tests/upstream/native/rust/library/std/src/net/tcp/tests.rs",
+      "url": "https://raw.githubusercontent.com/rust-lang/rust/1159e78c4747b02ef996e55082b704c09b970588/library/std/src/net/tcp/tests.rs",
+      "sha256": "34ecb47488b43a3cbf6f5acf9c64de97146299590f8422c7d1fb4ca3b1cc2f0d"
+    },
+    {
+      "project": "rust",
+      "upstream_path": "LICENSE-MIT",
+      "path": "tests/upstream/native/rust/LICENSE-MIT",
+      "url": "https://raw.githubusercontent.com/rust-lang/rust/1159e78c4747b02ef996e55082b704c09b970588/LICENSE-MIT",
+      "sha256": "b71bd43a069ca0641a9ecfe585ca7b3c53b5cc1608f8b68321168698e28b5ea1"
+    },
+    {
+      "project": "rust",
+      "upstream_path": "LICENSE-APACHE",
+      "path": "tests/upstream/native/rust/LICENSE-APACHE",
+      "url": "https://raw.githubusercontent.com/rust-lang/rust/1159e78c4747b02ef996e55082b704c09b970588/LICENSE-APACHE",
+      "sha256": "62c7a1e35f56406896d7aa7ca52d0cc0d272ac022b5d2796e7d6905db8a3636a"
+    },
+    {
+      "project": "nodejs",
+      "upstream_path": "test/node-api/test_buffer/test.js",
+      "path": "tests/upstream/native/nodejs/test/node-api/test_buffer/test.js",
+      "url": "https://raw.githubusercontent.com/nodejs/node/54b94e13de20fd2387f090158c4d24dafde3dfa9/test/node-api/test_buffer/test.js",
+      "sha256": "890377644da4c503047bb562cbfa500730750c9f3e860185194ad647190cb2b5"
+    }
+  ],
+  "adaptation_groups": [
+    {
+      "source": "nodejs/test/js-native-api/test_bigint/test.js",
+      "tests": [
+        "tests/native_boundary.rs"
+      ],
+      "adaptation": "Exact signed I64 values from BigInt fixtures; Lobo rejects values outside I64 instead of truncating."
+    },
+    {
+      "source": "cpython/Lib/test/test_ctypes/test_numbers.py",
+      "tests": [
+        "tests/native_boundary.rs"
+      ],
+      "adaptation": "Signed-width boundaries and canonical Bool values; no implicit numeric coercions."
+    },
+    {
+      "source": "cpython/Lib/test/test_socket.py",
+      "tests": [
+        "tests/native_tcp.rs",
+        "tests/native/adapter_harness.c"
+      ],
+      "adaptation": "Unicode/CRLF payload, empty IO, shutdown, EOF and closed sockets."
+    },
+    {
+      "source": "libuv/test/test-tcp-close.c",
+      "tests": [
+        "tests/native_adapter.rs"
+      ],
+      "adaptation": "Close/reuse and pending-resource cleanup invariants; asynchronous callback ordering is not claimed."
+    },
+    {
+      "source": "libuv/test/test-tcp-shutdown-after-write.c",
+      "tests": [
+        "tests/native_tcp.rs",
+        "tests/native_adapter.rs"
+      ],
+      "adaptation": "Drain bytes written before observing write-side shutdown EOF."
+    },
+    {
+      "source": "go/src/net/timeout_test.go",
+      "tests": [
+        "tests/native_adapter.rs",
+        "tests/native_tcp.rs"
+      ],
+      "adaptation": "Absolute deadlines must survive interruption/spurious readiness. Negative or over-2000ms timeout inputs are invalid in Lobo v1."
+    },
+    {
+      "source": "rust/library/std/src/net/tcp/tests.rs",
+      "tests": [
+        "tests/native_tcp.rs",
+        "tests/native_adapter.rs"
+      ],
+      "adaptation": "IPv4 loopback connection, binary roundtrip, bind failure, shutdown and EOF. Other address families are not claimed."
+    },
+    {
+      "source": "nodejs/test/node-api/test_buffer/test.js",
+      "tests": [
+        "tests/native_adapter.rs"
+      ],
+      "adaptation": "Independent returned byte storage; explicit borrowed input and owned invocation buffer lifetimes."
+    }
+  ]
+}

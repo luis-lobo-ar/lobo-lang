@@ -1,0 +1,28 @@
+module collections @id("v1.collections");
+import reverse @id("v1.reverse"); import map @id("v1.map");
+import filter @id("v1.filter"); import find @id("v1.find");
+import require_find @id("v1.require_find"); import Option @id("v1.option");
+import Result @id("v1.result"); import identity @id("v1.identity");
+
+record Item @id("v1.collections.item") { key: I64, name: Text }
+record Report @id("v1.collections.report") { count: I64, first: I64, last: I64, sum: I64 }
+record SummaryCursor @id("v1.collections.summary_cursor") { remaining: List<I64>, count: I64, first: I64, last: I64, sum: I64 }
+function selected @id("v1.collections.selected")(value: I64) -> Bool { value % 2 == 0 }
+function double @id("v1.collections.double")(value: I64) -> I64 { value * 2 }
+function is_key @id("v1.collections.is_key")(value: Item) -> Bool { value.key == 7 }
+function reverse_ints @id("v1.collections.reverse_ints")(values: List<I64>) -> List<I64> { reverse::<I64>(values) }
+function reverse_texts @id("v1.collections.reverse_texts")(values: List<Text>) -> List<Text> { reverse::<Text>(values) }
+function reverse_items @id("v1.collections.reverse_items")(values: List<Item>) -> List<Item> { reverse::<Item>(values) }
+function find_item @id("v1.collections.find_item")(values: List<Item>) -> Result<Item,Text> { require_find::<Item>(values,&is_key) }
+function map_texts @id("v1.collections.map_texts")(values: List<Text>) -> List<Text> { map::<Text,Text>(values,&identity::<Text>) }
+function run @id("v1.collections.run")() -> Report {
+  let descending = fold(i in 10000, values: List<I64> = List::empty<I64>()) { List::prepend(i,values) };
+  let ascending = reverse::<I64>(descending);
+  let values = reverse::<I64>(map::<I64,I64>(filter::<I64>(ascending,&selected),&double));
+  let done = while(state: SummaryCursor = SummaryCursor { remaining: values, count: 0, first: 0, last: 0, sum: 0 }; List::length(state.remaining) > 0) {
+    let value = List::head(state.remaining);
+    SummaryCursor { remaining: List::tail(state.remaining), count: state.count + 1,
+      first: if state.count == 0 { value } else { state.first }, last: value, sum: state.sum + value }
+  };
+  Report { count: done.count, first: done.first, last: done.last, sum: done.sum }
+}

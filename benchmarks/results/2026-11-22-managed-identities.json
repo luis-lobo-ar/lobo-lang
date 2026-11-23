@@ -1,0 +1,347 @@
+{
+  "format": "lobo-managed-identities-result/0.1",
+  "date": "2026-11-22",
+  "timezone": "America/Chicago",
+  "status": "engineering-acceptance-passed",
+  "language": "core/1.3",
+  "compiler": "1.3.0",
+  "extension": "1.3.0",
+  "scope": "MVC and skill metadata extraction, native authoring, explicit snapshots and editor maintenance",
+  "decision": "decisions/0044-managed-persistent-identities.md",
+  "specification": "spec/core-v1.3.md",
+  "mvc_bindings_preserved": 12,
+  "skill_bindings_preserved": 2,
+  "rust_tests_passed": 212,
+  "editor_tests_passed": 145,
+  "python_benchmark_tests_passed": 31,
+  "codemod_tests_passed": 4,
+  "web_tests_passed": 6,
+  "verification": [
+    {
+      "command": "cargo test --locked",
+      "exit_code": 0,
+      "log": "target/managed-identities-rust-complete.log",
+      "log_sha256": "9129cf2c0c198a6c5d71f0e4905c5a85d5a34bce9ebcf78acd35c547896e4fd1",
+      "preserved_log": "benchmarks/private-evidence/managed-identities-20261122/logs/managed-identities-rust-complete.log"
+    },
+    {
+      "command": "npm --prefix editors/vscode run package",
+      "exit_code": 0,
+      "log": "target/managed-identities-package-final.log",
+      "log_sha256": "b67fcf7d6b032edc4471d180b0f3390800753d3891200e588816b6bcccfb4952",
+      "preserved_log": "benchmarks/private-evidence/managed-identities-20261122/logs/managed-identities-package-final.log"
+    },
+    {
+      "command": "LOBO_VSCODE_EXECUTABLE=/usr/share/code/code xvfb-run -a npm --prefix editors/vscode run test:host",
+      "exit_code": 0,
+      "log": "target/managed-identities-host-final.log",
+      "log_sha256": "b28417d025c68b136ee01426f6efaa98911ff1f7665844b3704a6eb788d17e10",
+      "preserved_log": "benchmarks/private-evidence/managed-identities-20261122/logs/managed-identities-host-final.log"
+    },
+    {
+      "command": "python3 -m unittest discover -s benchmarks -p test_*.py",
+      "exit_code": 0,
+      "log": "target/managed-identities-python.log",
+      "log_sha256": "b6465ba9cd19666bfd7ad1a618a1da307c045aa355d27bc767bb19e24e860850",
+      "preserved_log": "benchmarks/private-evidence/managed-identities-20261122/logs/managed-identities-python.log"
+    },
+    {
+      "command": "node --test scripts/test-migrate-syntax.mjs",
+      "exit_code": 0,
+      "log": "target/managed-identities-codemod.log",
+      "log_sha256": "1e68253f2db75881aabcada2572e84e4e180730a9b947d040cc9f89f5979a8c5",
+      "preserved_log": "benchmarks/private-evidence/managed-identities-20261122/logs/managed-identities-codemod.log"
+    },
+    {
+      "command": "LOBO_COMPILER=target/release/lobo LOBO_WEB_EXAMPLE_DIR=target/managed-identities-web python3 examples/web-server/test_server.py",
+      "exit_code": 0,
+      "log": "target/managed-identities-web-tests.log",
+      "log_sha256": "1248f9cab47af5d4e23585fd527426e5e0395160fbafbeb4bbfecfea2bd90fee",
+      "preserved_log": "benchmarks/private-evidence/managed-identities-20261122/logs/managed-identities-web-tests.log"
+    },
+    {
+      "command": "cargo clippy --locked --all-targets -- -D warnings",
+      "exit_code": 0,
+      "log": "target/managed-identities-clippy-final.log",
+      "log_sha256": "cdd0079fee61cb01815621dc2cb1ea79e4ee4411dfbb90197a0aff8c416bab09",
+      "preserved_log": "benchmarks/private-evidence/managed-identities-20261122/logs/managed-identities-clippy-final.log"
+    },
+    {
+      "command": "cargo fmt --check",
+      "exit_code": 0,
+      "log": "target/managed-identities-fmt-final.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "preserved_log": "benchmarks/private-evidence/managed-identities-20261122/logs/managed-identities-fmt-final.log"
+    },
+    {
+      "command": "python3 /home/luis/.codex/skills/.system/skill-creator/scripts/quick_validate.py .agents/skills/lobo-programming",
+      "exit_code": 0,
+      "log": "target/managed-identities-skill-validation.log",
+      "log_sha256": "db349825903d66adffea3ecf1bd8e1803043e8a71cf1a051235dabc5371f5bb0",
+      "preserved_log": "benchmarks/private-evidence/managed-identities-20261122/logs/managed-identities-skill-validation.log"
+    },
+    {
+      "command": "cargo test --locked --test native_syntax modern_mvc",
+      "exit_code": 0,
+      "log": "target/managed-identities-version-admission.log",
+      "log_sha256": "a51e7fdbe6b574404bb8b9f85153605b27e79f367cc80cfb1478d2bf9972d3fd",
+      "preserved_log": "benchmarks/private-evidence/managed-identities-20261122/logs/managed-identities-version-admission.log"
+    },
+    {
+      "command": "./scripts/check.sh",
+      "exit_code": 0,
+      "log": "target/managed-identities-docs-complete.log",
+      "log_sha256": "1f11bb3bb382f1877ffa8eec4eb376db85d0ecfa2e1301289bb91fbd2cc966ae",
+      "preserved_log": "benchmarks/private-evidence/managed-identities-20261122/logs/managed-identities-docs-complete.log"
+    },
+    {
+      "command": "cargo fmt --check",
+      "exit_code": 0,
+      "log": "target/managed-identities-fmt-complete.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "preserved_log": "benchmarks/private-evidence/managed-identities-20261122/logs/managed-identities-fmt-complete.log"
+    }
+  ],
+  "native_smoke": {
+    "language": "core/1.3",
+    "cases": [
+      {
+        "backend": "c",
+        "user": 1,
+        "observed": {
+          "status": "ok",
+          "kind": "value",
+          "value": {
+            "type": "Record",
+            "value": {
+              "id": "example.web.response",
+              "fields": {
+                "status": {
+                  "type": "I64",
+                  "value": "200"
+                },
+                "content_type": {
+                  "type": "Text",
+                  "value": "application/json"
+                },
+                "body": {
+                  "type": "Text",
+                  "value": "{\"name\":\"Luis\"}"
+                }
+              }
+            }
+          }
+        }
+      },
+      {
+        "backend": "c",
+        "user": 42,
+        "observed": {
+          "status": "ok",
+          "kind": "value",
+          "value": {
+            "type": "Record",
+            "value": {
+              "id": "example.web.response",
+              "fields": {
+                "status": {
+                  "type": "I64",
+                  "value": "404"
+                },
+                "content_type": {
+                  "type": "Text",
+                  "value": "text/plain; charset=utf-8"
+                },
+                "body": {
+                  "type": "Text",
+                  "value": "Not found\n"
+                }
+              }
+            }
+          }
+        }
+      },
+      {
+        "backend": "llvm",
+        "user": 1,
+        "observed": {
+          "status": "ok",
+          "kind": "value",
+          "value": {
+            "type": "Record",
+            "value": {
+              "id": "example.web.response",
+              "fields": {
+                "status": {
+                  "type": "I64",
+                  "value": "200"
+                },
+                "content_type": {
+                  "type": "Text",
+                  "value": "application/json"
+                },
+                "body": {
+                  "type": "Text",
+                  "value": "{\"name\":\"Luis\"}"
+                }
+              }
+            }
+          }
+        }
+      },
+      {
+        "backend": "llvm",
+        "user": 42,
+        "observed": {
+          "status": "ok",
+          "kind": "value",
+          "value": {
+            "type": "Record",
+            "value": {
+              "id": "example.web.response",
+              "fields": {
+                "status": {
+                  "type": "I64",
+                  "value": "404"
+                },
+                "content_type": {
+                  "type": "Text",
+                  "value": "text/plain; charset=utf-8"
+                },
+                "body": {
+                  "type": "Text",
+                  "value": "Not found\n"
+                }
+              }
+            }
+          }
+        }
+      },
+      {
+        "skill": "managed",
+        "observed": {
+          "status": "ok",
+          "kind": "value",
+          "value": {
+            "type": "I64",
+            "value": "42"
+          }
+        }
+      },
+      {
+        "skill": "boxed",
+        "observed": {
+          "status": "ok",
+          "kind": "value",
+          "value": {
+            "type": "Text",
+            "value": "\u00e9"
+          }
+        }
+      }
+    ],
+    "c": {
+      "path": "target/managed-identities-mvc-c",
+      "bytes": 72136,
+      "sha256": "d6f4be3527b2209811d2a67250795fa5f5c7103e7625fbfca3564cf65a87fc4f"
+    },
+    "llvm": {
+      "path": "target/managed-identities-mvc-llvm",
+      "bytes": 68040,
+      "sha256": "61c002586db7df01efbc9a01783e81eb6bc6d5365c96057ff1864b131c035796"
+    },
+    "source_and_metadata_unchanged": true
+  },
+  "historical_integrity": {
+    "status": "passed",
+    "protected_historical_files_unchanged": 292,
+    "excluded_current_spec_index": "spec/README.md",
+    "previously_recorded_driver_change": "benchmarks/agent-repair-study.py",
+    "old_paper_entries_verified": 16,
+    "frozen_release_files_verified": 86,
+    "frozen_release_manifest_sha256": "f89af5f98e4d79e62cb3d5cfd37801b7539671d0826cca25ba63ed9fa039cf7a"
+  },
+  "preservation": "benchmarks/private-evidence/managed-identities-20261122",
+  "negative_attempts": [
+    {
+      "log": "target/managed-identities-red.log",
+      "preserved_log": "benchmarks/private-evidence/managed-identities-20261122/logs/managed-identities-red.log",
+      "sha256": "8fb19012e0a4c68b7ff1c5b015cda2c73eb115945dedb1ae17f2a89b68beea82"
+    },
+    {
+      "log": "target/managed-identities-first-green-attempt.log",
+      "preserved_log": "benchmarks/private-evidence/managed-identities-20261122/logs/managed-identities-first-green-attempt.log",
+      "sha256": "64c7b85e61629d4a42dbd9f842406b60dfd08f9e3cb3445bfc3a6eeff84afca3"
+    },
+    {
+      "log": "target/managed-identities-editor-red.log",
+      "preserved_log": "benchmarks/private-evidence/managed-identities-20261122/logs/managed-identities-editor-red.log",
+      "sha256": "3c1d25f5b8f4110628c470234cd9e39e1bc70ce16ae0f32baf310d02cecd0427"
+    },
+    {
+      "log": "target/managed-identities-rust-first-full.log",
+      "preserved_log": "benchmarks/private-evidence/managed-identities-20261122/logs/managed-identities-rust-first-full.log",
+      "sha256": "35cedd8d74e9a275c68a4337a7c7292be761a9aa8f1f61f21c4f38d15f377cae"
+    },
+    {
+      "log": "target/managed-identities-rust-second-full.log",
+      "preserved_log": "benchmarks/private-evidence/managed-identities-20261122/logs/managed-identities-rust-second-full.log",
+      "sha256": "6232301ca5e0ce4020508c927ac030926906597e663e5a12fb87ea36cc4bd0fa"
+    },
+    {
+      "log": "target/managed-identities-host-first.log",
+      "preserved_log": "benchmarks/private-evidence/managed-identities-20261122/logs/managed-identities-host-first.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "log": "target/managed-identities-rust-third-full.log",
+      "preserved_log": "benchmarks/private-evidence/managed-identities-20261122/logs/managed-identities-rust-third-full.log",
+      "sha256": "4935fc1643de52f66d74fb01b52b6b453568f7411cf3266b4410d36f75ceb010"
+    },
+    {
+      "log": "target/managed-identities-clippy.log",
+      "preserved_log": "benchmarks/private-evidence/managed-identities-20261122/logs/managed-identities-clippy.log",
+      "sha256": "e4acef5b007bc37c27a262381a13f4835b063395a2a94dc620ceb8a0572a1477"
+    },
+    {
+      "log": "target/managed-identities-fmt.log",
+      "preserved_log": "benchmarks/private-evidence/managed-identities-20261122/logs/managed-identities-fmt.log",
+      "sha256": "ea11e197acca9b3bbc4b9ef1650fe31869fd580f7034dcebe27fffe4d9a2cc11"
+    },
+    {
+      "log": "target/managed-identities-docs-first.log",
+      "preserved_log": "benchmarks/private-evidence/managed-identities-20261122/logs/managed-identities-docs-first.log",
+      "sha256": "6350d24441f58f036f15e886df3cbec34610c70de93838e82ab9d0fd6633c019"
+    },
+    {
+      "log": "target/managed-identities-docs-final.log",
+      "preserved_log": "benchmarks/private-evidence/managed-identities-20261122/logs/managed-identities-docs-final.log",
+      "sha256": "cd614770505091a04810a7903ca187cc5a6c004356e8d88b3eeadac2107fff36"
+    }
+  ],
+  "additional_observations": [
+    {
+      "command": "cargo clean --package lobo-lang",
+      "exit_code": 0,
+      "observed": "Removed 26245 files, 11.9GiB total; rebuildable package artifacts only."
+    },
+    {
+      "command": "Initial historical integrity probe",
+      "exit_code": 1,
+      "observed": "AssertionError on spec/README.md; corrected classification distinguishes the current index from frozen fixtures."
+    }
+  ],
+  "unmeasured": {
+    "agent_construction_quality": null,
+    "agent_comprehension": null,
+    "agent_tokens": null,
+    "runtime_speed": null
+  },
+  "limits": [
+    "Explicit metadata-only rename after source edits; no F2 source refactoring or automatic move hook.",
+    "Multi-file sidecar publication is not atomic; lock/temp recovery needs review.",
+    "New allocation uses /dev/urandom and initial publication requires hard links.",
+    "Other maintained inline sources remain supported; frozen fixtures unchanged.",
+    "Local ignored preservation is not a backup, commit or publication."
+  ]
+}

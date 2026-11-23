@@ -1,0 +1,18 @@
+module document_validate @id("v1.doc.validator.module");
+import Document @id("v1.doc.document"); import Item @id("v1.doc.item");
+import DocError @id("v1.doc.error"); import Option @id("v1.option");
+record ValidationCursor @id("v1.doc.validation_cursor") { remaining: List<Item>, index: I64, problem: Option<DocError> }
+function check_item @id("v1.doc.check_item")(item: Item, index: I64) -> Option<DocError> {
+  if item.key <= 0 { Option::<DocError>::Some(DocError::BadItem(index)) } else { Option::<DocError>::None }
+}
+function validate @id("v1.doc.validate")(document: Document) -> Option<DocError> {
+  if document.id <= 0 { Option::<DocError>::Some(DocError::DocBadId) } else {
+    if Text::length(document.name) == 0 { Option::<DocError>::Some(DocError::EmptyName) } else {
+      let done = while(state: ValidationCursor = ValidationCursor { remaining: document.items, index: 0, problem: Option::<DocError>::None };
+        match(state.problem) { None { List::length(state.remaining) > 0 }, Some(error) { false } }) {
+        ValidationCursor { remaining: List::tail(state.remaining), index: state.index + 1, problem: check_item(List::head(state.remaining),state.index) }
+      };
+      done.problem
+    }
+  }
+}

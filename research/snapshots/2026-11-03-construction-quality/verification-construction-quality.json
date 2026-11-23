@@ -1,0 +1,45 @@
+{
+  "date": "2026-11-03",
+  "scope": "Construction-quality literature follow-up; no replication or new model trials",
+  "status": "passed",
+  "initial_review_correction": "The initial collector produced 26 records, comprising 24 arXiv fetches, one Zenodo fetch and one manually curated institutional record. Its earlier all-records-retrieved wording should not imply 26 independent network retrievals.",
+  "new_model_experiments": false,
+  "compiler_changes": false,
+  "rust_tests": "Not repeated for this documentation-only follow-up. The initial review's 145-test passing run is retained in verification.json.",
+  "unreplicated_external_results": true,
+  "catalog_records": 33,
+  "network_records": 29,
+  "manually_curated_records": 4,
+  "version_pinned_arxiv_records": 28,
+  "pinned_readme_artifacts": 2,
+  "findings": 8,
+  "initial_snapshot_records": 26,
+  "checks": [
+    {
+      "command": "./scripts/check.sh",
+      "exit_code": 0,
+      "output": "check: JSON, JSONL, and local Markdown links are valid",
+      "result": "passed"
+    },
+    {
+      "command": "git diff --check",
+      "exit_code": 0,
+      "output": "",
+      "result": "passed"
+    }
+  ],
+  "consistency_checks": [
+    "JSON and unique matching manifest/catalog/BibTeX keys",
+    "Every source key annotated; every finding source resolves",
+    "Manifest fields and arXiv versions agree with generated metadata",
+    "Primary cache hashes, artifact hashes and collector hash agree",
+    "Initial snapshot source/catalog/BibTeX identities agree",
+    "Bibliography braces balance; current research text has no trailing whitespace"
+  ],
+  "metadata_command": "python3 research/collect_metadata.py > research/.cache/metadata-construction-quality.log 2>&1",
+  "limitations": [
+    "Structural bibliography checks are not a full BibTeX compiler run",
+    "Primary caches are ignored local artifacts, not an independent archive",
+    "External results were not replicated"
+  ]
+}

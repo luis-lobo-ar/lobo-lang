@@ -1,0 +1,19 @@
+{
+  "format": "lobo-identities/0.1",
+  "identities": {
+    "module": "lobo.http.transport",
+    "http.Request": "lobo.http.server.Request",
+    "http.Response": "example.web.response",
+    "http.header_end": "lobo.http.server.header_end",
+    "http.respond": "lobo.http.server.respond",
+    "http.wire": "lobo.http.server.wire",
+    "http.error_response": "lobo.http.server.error_response",
+    "ReceiveState": "lobo.http.transport.ReceiveState",
+    "SendState": "lobo.http.transport.SendState",
+    "ServeState": "lobo.http.transport.ServeState",
+    "receive": "lobo.http.transport.receive",
+    "send_all": "lobo.http.transport.send_all",
+    "serve_one": "lobo.http.transport.serve_one",
+    "serve": "lobo.http.transport.serve"
+  }
+}

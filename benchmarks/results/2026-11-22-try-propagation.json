@@ -1,0 +1,1715 @@
+{
+  "format": "lobo-try-propagation-result/0.1",
+  "date": "2026-11-22",
+  "status": "passed",
+  "compiler": "1.8.0",
+  "extension": "1.8.0",
+  "language": "core/1.8",
+  "checked_format": "lobo-checked/1.0",
+  "native_abi": 1,
+  "syntax": "try operand",
+  "type_rule": "exact two-case Ok(T)/Err(E) shapes in operand and output, with identical E and no implicit conversion",
+  "scope": [
+    "one evaluation",
+    "current-function return",
+    "postconditions and frame epilogue",
+    "contracts reject direct propagation",
+    "C/LLVM/evaluator",
+    "contextual legacy calls",
+    "inferred payload visibility parity with match"
+  ],
+  "test_counts": {
+    "rust_full": 272,
+    "try_conformance_groups": 9,
+    "editor": 166,
+    "pure_execution_modes": 5,
+    "native_execution_modes": 4,
+    "windows_snapshot_application": 14,
+    "windows_provider": 10,
+    "windows_permission_pairs": 64,
+    "rest_wine_regression_scenarios": 35
+  },
+  "windows_result": {
+    "status": "pass",
+    "platform": "Wine Windows API compatibility layer, not actual Windows hardware",
+    "application_cases": 14,
+    "provider_cases": 10,
+    "permission_pairs": 64,
+    "actual_windows_execution": null,
+    "commands": [
+      {
+        "command": [
+          "wine",
+          "/home/luis/dev/lobo-ar/lobo-lang/dist/lobo-snapshot-1.8.0-windows/LoboSnapshot.exe"
+        ],
+        "exit_code": 0,
+        "stdout": "{\"status\":\"ok\",\"kind\":\"value\",\"value\":{\"type\":\"Variant\",\"value\":{\"id\":\"lobo.generic.type.c09c71e43c56183b079d77143d13711d\",\"case\":\"Ok\",\"payload\":{\"type\":\"Record\",\"value\":{\"id\":\"native.snapshot.value\",\"fields\":{\"monotonic_ms\":{\"type\":\"I64\",\"value\":\"1202173446\"},\"random_bytes\":{\"type\":\"Bytes\",\"value\":\"87c9352098ee4d605446c9b8f9ac95e3\"}}}}}}}\n",
+        "stderr": ""
+      },
+      {
+        "command": [
+          "wine",
+          "/home/luis/dev/lobo-ar/lobo-lang/dist/lobo-snapshot-1.8.0-windows/LoboSnapshot.exe",
+          "--no-pause"
+        ],
+        "exit_code": 0,
+        "stdout": "{\"status\":\"ok\",\"kind\":\"value\",\"value\":{\"type\":\"Variant\",\"value\":{\"id\":\"lobo.generic.type.c09c71e43c56183b079d77143d13711d\",\"case\":\"Ok\",\"payload\":{\"type\":\"Record\",\"value\":{\"id\":\"native.snapshot.value\",\"fields\":{\"monotonic_ms\":{\"type\":\"I64\",\"value\":\"1202175720\"},\"random_bytes\":{\"type\":\"Bytes\",\"value\":\"7a318592876fbdaa449226214479a26c\"}}}}}}}\n",
+        "stderr": ""
+      },
+      {
+        "command": [
+          "wine",
+          "/home/luis/dev/lobo-ar/lobo-lang/dist/lobo-snapshot-1.8.0-windows/LoboSnapshot.exe",
+          "--entry",
+          "native.snapshot.main"
+        ],
+        "exit_code": 0,
+        "stdout": "{\"status\":\"ok\",\"kind\":\"value\",\"value\":{\"type\":\"Variant\",\"value\":{\"id\":\"lobo.generic.type.c09c71e43c56183b079d77143d13711d\",\"case\":\"Err\",\"payload\":{\"type\":\"Variant\",\"value\":{\"id\":\"lobo.os.error\",\"case\":\"Denied\",\"payload\":null}}}}}\n",
+        "stderr": ""
+      },
+      {
+        "command": [
+          "wine",
+          "/home/luis/dev/lobo-ar/lobo-lang/dist/lobo-snapshot-1.8.0-windows/LoboSnapshot.exe",
+          "--entry",
+          "native.snapshot.main",
+          "--native-clock",
+          "true"
+        ],
+        "exit_code": 0,
+        "stdout": "{\"status\":\"ok\",\"kind\":\"value\",\"value\":{\"type\":\"Variant\",\"value\":{\"id\":\"lobo.generic.type.c09c71e43c56183b079d77143d13711d\",\"case\":\"Err\",\"payload\":{\"type\":\"Variant\",\"value\":{\"id\":\"lobo.os.error\",\"case\":\"Denied\",\"payload\":null}}}}}\n",
+        "stderr": ""
+      },
+      {
+        "command": [
+          "wine",
+          "/home/luis/dev/lobo-ar/lobo-lang/dist/lobo-snapshot-1.8.0-windows/LoboSnapshot.exe",
+          "--entry",
+          "native.snapshot.main",
+          "--native-random",
+          "true"
+        ],
+        "exit_code": 0,
+        "stdout": "{\"status\":\"ok\",\"kind\":\"value\",\"value\":{\"type\":\"Variant\",\"value\":{\"id\":\"lobo.generic.type.c09c71e43c56183b079d77143d13711d\",\"case\":\"Err\",\"payload\":{\"type\":\"Variant\",\"value\":{\"id\":\"lobo.os.error\",\"case\":\"Denied\",\"payload\":null}}}}}\n",
+        "stderr": ""
+      },
+      {
+        "command": [
+          "wine",
+          "/home/luis/dev/lobo-ar/lobo-lang/dist/lobo-snapshot-1.8.0-windows/LoboSnapshot.exe",
+          "--entry",
+          "native.snapshot.main",
+          "--native-clock",
+          "true",
+          "--native-random",
+          "true"
+        ],
+        "exit_code": 0,
+        "stdout": "{\"status\":\"ok\",\"kind\":\"value\",\"value\":{\"type\":\"Variant\",\"value\":{\"id\":\"lobo.generic.type.c09c71e43c56183b079d77143d13711d\",\"case\":\"Ok\",\"payload\":{\"type\":\"Record\",\"value\":{\"id\":\"native.snapshot.value\",\"fields\":{\"monotonic_ms\":{\"type\":\"I64\",\"value\":\"1202184606\"},\"random_bytes\":{\"type\":\"Bytes\",\"value\":\"b081160385fa50d66fc93fe20b1bf624\"}}}}}}}\n",
+        "stderr": ""
+      },
+      {
+        "command": [
+          "wine",
+          "/home/luis/dev/lobo-ar/lobo-lang/dist/lobo-snapshot-1.8.0-windows/LoboSnapshot.exe",
+          "--entry",
+          "native.snapshot.main",
+          "--native-clock",
+          "true",
+          "--native-random",
+          "true",
+          "--native-bytes",
+          "0"
+        ],
+        "exit_code": 0,
+        "stdout": "{\"status\":\"ok\",\"kind\":\"value\",\"value\":{\"type\":\"Variant\",\"value\":{\"id\":\"lobo.generic.type.c09c71e43c56183b079d77143d13711d\",\"case\":\"Err\",\"payload\":{\"type\":\"Variant\",\"value\":{\"id\":\"lobo.os.error\",\"case\":\"LimitExceeded\",\"payload\":null}}}}}\n",
+        "stderr": ""
+      },
+      {
+        "command": [
+          "wine",
+          "/home/luis/dev/lobo-ar/lobo-lang/dist/lobo-snapshot-1.8.0-windows/LoboSnapshot.exe",
+          "--entry",
+          "native.snapshot.main",
+          "--native-clock",
+          "true",
+          "--native-random",
+          "true",
+          "--native-handles",
+          "1"
+        ],
+        "exit_code": 0,
+        "stdout": "{\"status\":\"ok\",\"kind\":\"value\",\"value\":{\"type\":\"Variant\",\"value\":{\"id\":\"lobo.generic.type.c09c71e43c56183b079d77143d13711d\",\"case\":\"Err\",\"payload\":{\"type\":\"Variant\",\"value\":{\"id\":\"lobo.os.error\",\"case\":\"LimitExceeded\",\"payload\":null}}}}}\n",
+        "stderr": ""
+      },
+      {
+        "command": [
+          "wine",
+          "/home/luis/dev/lobo-ar/lobo-lang/dist/lobo-snapshot-1.8.0-windows/LoboSnapshot.exe",
+          "--entry",
+          "native.snapshot.main",
+          "--native-clock",
+          "true",
+          "--native-random",
+          "true",
+          "--native-calls",
+          "1"
+        ],
+        "exit_code": 0,
+        "stdout": "{\"status\":\"ok\",\"kind\":\"value\",\"value\":{\"type\":\"Variant\",\"value\":{\"id\":\"lobo.generic.type.c09c71e43c56183b079d77143d13711d\",\"case\":\"Err\",\"payload\":{\"type\":\"Variant\",\"value\":{\"id\":\"lobo.os.error\",\"case\":\"LimitExceeded\",\"payload\":null}}}}}\n",
+        "stderr": ""
+      },
+      {
+        "command": [
+          "wine",
+          "/home/luis/dev/lobo-ar/lobo-lang/dist/lobo-snapshot-1.8.0-windows/LoboSnapshot.exe",
+          "--entry",
+          "native.snapshot.main",
+          "--native-clock",
+          "false"
+        ],
+        "exit_code": 1,
+        "stdout": "{\"status\":\"error\",\"kind\":\"invocation_error\",\"diagnostic\":{\"code\":\"invocation.cli.invalid\",\"phase\":\"invoke\"}}\n",
+        "stderr": ""
+      },
+      {
+        "command": [
+          "wine",
+          "/home/luis/dev/lobo-ar/lobo-lang/dist/lobo-snapshot-1.8.0-windows/LoboSnapshot.exe",
+          "--entry",
+          "native.snapshot.main",
+          "--native-calls",
+          "0"
+        ],
+        "exit_code": 1,
+        "stdout": "{\"status\":\"error\",\"kind\":\"invocation_error\",\"diagnostic\":{\"code\":\"invocation.cli.invalid\",\"phase\":\"invoke\"}}\n",
+        "stderr": ""
+      },
+      {
+        "command": [
+          "wine",
+          "/home/luis/dev/lobo-ar/lobo-lang/dist/lobo-snapshot-1.8.0-windows/LoboSnapshot.exe",
+          "--entry",
+          "native.snapshot.main",
+          "--native-clock",
+          "true",
+          "--native-clock",
+          "true"
+        ],
+        "exit_code": 1,
+        "stdout": "{\"status\":\"error\",\"kind\":\"invocation_error\",\"diagnostic\":{\"code\":\"invocation.cli.invalid\",\"phase\":\"invoke\"}}\n",
+        "stderr": ""
+      },
+      {
+        "command": [
+          "wine",
+          "/home/luis/dev/lobo-ar/lobo-lang/dist/lobo-snapshot-1.8.0-windows/LoboSnapshot.exe",
+          "--entry",
+          "native.snapshot.main",
+          "--native-listen",
+          "127.0.0.1:0"
+        ],
+        "exit_code": 1,
+        "stdout": "{\"status\":\"error\",\"kind\":\"invocation_error\",\"diagnostic\":{\"code\":\"invocation.cli.invalid\",\"phase\":\"invoke\"}}\n",
+        "stderr": ""
+      },
+      {
+        "command": [
+          "wine",
+          "/home/luis/dev/lobo-ar/lobo-lang/dist/lobo-snapshot-1.8.0-windows/LoboSnapshot.exe",
+          "--entry",
+          "native.snapshot.main",
+          "--native-handles",
+          "01"
+        ],
+        "exit_code": 1,
+        "stdout": "{\"status\":\"error\",\"kind\":\"invocation_error\",\"diagnostic\":{\"code\":\"invocation.cli.invalid\",\"phase\":\"invoke\"}}\n",
+        "stderr": ""
+      },
+      {
+        "command": [
+          "/home/luis/dev/lobo-ar/lobo-lang/target/windows-snapshot/llvm-mingw-20261117-ucrt-ubuntu-22.04-x86_64/bin/x86_64-w64-mingw32-clang",
+          "-std=c11",
+          "-O2",
+          "-I",
+          "/home/luis/dev/lobo-ar/lobo-lang/src",
+          "/home/luis/dev/lobo-ar/lobo-lang/tests/native/windows_snapshot_harness.c",
+          "-static",
+          "-lbcrypt",
+          "-o",
+          "/home/luis/dev/lobo-ar/lobo-lang/target/try-propagation/windows-tests-keeper/provider-tests.exe"
+        ],
+        "exit_code": 0,
+        "stdout": "",
+        "stderr": ""
+      },
+      {
+        "command": [
+          "wine",
+          "/home/luis/dev/lobo-ar/lobo-lang/target/try-propagation/windows-tests-keeper/provider-tests.exe",
+          "matrix"
+        ],
+        "exit_code": 0,
+        "stdout": "windows-provider-case-passed\n",
+        "stderr": ""
+      },
+      {
+        "command": [
+          "wine",
+          "/home/luis/dev/lobo-ar/lobo-lang/target/try-propagation/windows-tests-keeper/provider-tests.exe",
+          "deny"
+        ],
+        "exit_code": 0,
+        "stdout": "windows-provider-case-passed\n",
+        "stderr": ""
+      },
+      {
+        "command": [
+          "wine",
+          "/home/luis/dev/lobo-ar/lobo-lang/target/try-propagation/windows-tests-keeper/provider-tests.exe",
+          "bounds"
+        ],
+        "exit_code": 0,
+        "stdout": "windows-provider-case-passed\n",
+        "stderr": ""
+      },
+      {
+        "command": [
+          "wine",
+          "/home/luis/dev/lobo-ar/lobo-lang/target/try-propagation/windows-tests-keeper/provider-tests.exe",
+          "quotas"
+        ],
+        "exit_code": 0,
+        "stdout": "windows-provider-case-passed\n",
+        "stderr": ""
+      },
+      {
+        "command": [
+          "wine",
+          "/home/luis/dev/lobo-ar/lobo-lang/target/try-propagation/windows-tests-keeper/provider-tests.exe",
+          "rng-failure"
+        ],
+        "exit_code": 0,
+        "stdout": "windows-provider-case-passed\n",
+        "stderr": ""
+      },
+      {
+        "command": [
+          "wine",
+          "/home/luis/dev/lobo-ar/lobo-lang/target/try-propagation/windows-tests-keeper/provider-tests.exe",
+          "clock-overflow"
+        ],
+        "exit_code": 0,
+        "stdout": "windows-provider-case-passed\n",
+        "stderr": ""
+      },
+      {
+        "command": [
+          "wine",
+          "/home/luis/dev/lobo-ar/lobo-lang/target/try-propagation/windows-tests-keeper/provider-tests.exe",
+          "root-depth"
+        ],
+        "exit_code": 1,
+        "stdout": "{\"status\":\"error\",\"kind\":\"invocation_error\",\"diagnostic\":{\"code\":\"invocation.native.authority\",\"phase\":\"invoke\"}}\n",
+        "stderr": ""
+      },
+      {
+        "command": [
+          "wine",
+          "/home/luis/dev/lobo-ar/lobo-lang/target/try-propagation/windows-tests-keeper/provider-tests.exe",
+          "unsupported"
+        ],
+        "exit_code": 1,
+        "stdout": "{\"status\":\"error\",\"kind\":\"invocation_error\",\"diagnostic\":{\"code\":\"invocation.native.operation_unsupported\",\"phase\":\"invoke\"}}\n",
+        "stderr": ""
+      },
+      {
+        "command": [
+          "wine",
+          "/home/luis/dev/lobo-ar/lobo-lang/target/try-propagation/windows-tests-keeper/provider-tests.exe",
+          "fuel"
+        ],
+        "exit_code": 1,
+        "stdout": "{\"status\":\"error\",\"kind\":\"resource_exhausted\",\"diagnostic\":{\"code\":\"resource.fuel.exhausted\",\"phase\":\"invoke\"}}\n",
+        "stderr": "wine client error:10c: sendmsg: Socket operation on non-socket\n"
+      },
+      {
+        "command": [
+          "wine",
+          "/home/luis/dev/lobo-ar/lobo-lang/target/try-propagation/windows-tests-keeper/provider-tests.exe",
+          "heap"
+        ],
+        "exit_code": 1,
+        "stdout": "{\"status\":\"error\",\"kind\":\"resource_exhausted\",\"diagnostic\":{\"code\":\"resource.memory.exhausted\",\"phase\":\"invoke\"}}\n",
+        "stderr": ""
+      }
+    ]
+  },
+  "rest_wine_regression": {
+    "status": "pass",
+    "mode": "wine",
+    "cases": 35,
+    "connections": 38,
+    "server_stdout": "{\"status\":\"ok\",\"kind\":\"value\",\"value\":{\"type\":\"Variant\",\"value\":{\"id\":\"lobo.native.result.I64Result\",\"case\":\"Ok\",\"payload\":{\"type\":\"I64\",\"value\":\"38\"}}}}\r\n",
+    "server_stderr": "",
+    "command": [
+      "wine",
+      "/home/luis/dev/lobo-ar/lobo-lang/target/try-propagation/rest-regression-build/LoboRestApi.exe",
+      "--entry",
+      "example.rest.main",
+      "--arg",
+      "I64:35821",
+      "--arg",
+      "I64:38",
+      "--native-clock",
+      "true",
+      "--native-listen",
+      "127.0.0.1:35821",
+      "--native-calls",
+      "65536",
+      "--native-bytes",
+      "1048576",
+      "--fuel",
+      "100000000",
+      "--heap-cells",
+      "16000000"
+    ],
+    "records": [
+      {
+        "name": "get /health",
+        "wire_hex": "485454502f312e3120323030204f4b0d0a436f6e74656e742d547970653a206170706c69636174696f6e2f6a736f6e0d0a436f6e74656e742d4c656e6774683a2033330d0a436f6e6e656374696f6e3a20636c6f73650d0a0d0a7b22737461747573223a226f6b222c226c616e6775616765223a226c6f626f227d"
+      },
+      {
+        "name": "get /api/users",
+        "wire_hex": "485454502f312e3120323030204f4b0d0a436f6e74656e742d547970653a206170706c69636174696f6e2f6a736f6e0d0a436f6e74656e742d4c656e6774683a2035300d0a436f6e6e656374696f6e3a20636c6f73650d0a0d0a5b7b226964223a2231222c226e616d65223a224c756973227d2c7b226964223a2232222c226e616d65223a22416461227d5d"
+      },
+      {
+        "name": "get /api/users/1",
+        "wire_hex": "485454502f312e3120323030204f4b0d0a436f6e74656e742d547970653a206170706c69636174696f6e2f6a736f6e0d0a436f6e74656e742d4c656e6774683a2032340d0a436f6e6e656374696f6e3a20636c6f73650d0a0d0a7b226964223a2231222c226e616d65223a224c756973227d"
+      },
+      {
+        "name": "get /api/users/2",
+        "wire_hex": "485454502f312e3120323030204f4b0d0a436f6e74656e742d547970653a206170706c69636174696f6e2f6a736f6e0d0a436f6e74656e742d4c656e6774683a2032330d0a436f6e6e656374696f6e3a20636c6f73650d0a0d0a7b226964223a2232222c226e616d65223a22416461227d"
+      },
+      {
+        "name": "head",
+        "wire_hex": "485454502f312e3120323030204f4b0d0a436f6e74656e742d547970653a206170706c69636174696f6e2f6a736f6e0d0a436f6e74656e742d4c656e6774683a2033330d0a436f6e6e656374696f6e3a20636c6f73650d0a0d0a"
+      },
+      {
+        "name": "missing",
+        "wire_hex": "485454502f312e3120343034204e6f7420466f756e640d0a436f6e74656e742d547970653a206170706c69636174696f6e2f6a736f6e0d0a436f6e74656e742d4c656e6774683a2032310d0a436f6e6e656374696f6e3a20636c6f73650d0a0d0a7b226572726f72223a224e6f7420466f756e64227d"
+      },
+      {
+        "name": "method",
+        "wire_hex": "485454502f312e3120343035204d6574686f64204e6f7420416c6c6f7765640d0a436f6e74656e742d547970653a206170706c69636174696f6e2f6a736f6e0d0a436f6e74656e742d4c656e6774683a2033300d0a436f6e6e656374696f6e3a20636c6f73650d0a416c6c6f773a204745542c20484541440d0a0d0a7b226572726f72223a224d6574686f64204e6f7420416c6c6f776564227d"
+      },
+      {
+        "name": "case insensitive headers",
+        "wire_hex": "485454502f312e3120323030204f4b0d0a436f6e74656e742d547970653a206170706c69636174696f6e2f6a736f6e0d0a436f6e74656e742d4c656e6774683a2033330d0a436f6e6e656374696f6e3a20636c6f73650d0a0d0a7b22737461747573223a226f6b222c226c616e6775616765223a226c6f626f227d"
+      },
+      {
+        "name": "no host",
+        "wire_hex": "485454502f312e31203430302042616420526571756573740d0a436f6e74656e742d547970653a206170706c69636174696f6e2f6a736f6e0d0a436f6e74656e742d4c656e6774683a2032330d0a436f6e6e656374696f6e3a20636c6f73650d0a0d0a7b226572726f72223a224261642052657175657374227d"
+      },
+      {
+        "name": "duplicate host",
+        "wire_hex": "485454502f312e31203430302042616420526571756573740d0a436f6e74656e742d547970653a206170706c69636174696f6e2f6a736f6e0d0a436f6e74656e742d4c656e6774683a2032330d0a436f6e6e656374696f6e3a20636c6f73650d0a0d0a7b226572726f72223a224261642052657175657374227d"
+      },
+      {
+        "name": "empty host",
+        "wire_hex": "485454502f312e31203430302042616420526571756573740d0a436f6e74656e742d547970653a206170706c69636174696f6e2f6a736f6e0d0a436f6e74656e742d4c656e6774683a2032330d0a436f6e6e656374696f6e3a20636c6f73650d0a0d0a7b226572726f72223a224261642052657175657374227d"
+      },
+      {
+        "name": "obs fold",
+        "wire_hex": "485454502f312e31203430302042616420526571756573740d0a436f6e74656e742d547970653a206170706c69636174696f6e2f6a736f6e0d0a436f6e74656e742d4c656e6774683a2032330d0a436f6e6e656374696f6e3a20636c6f73650d0a0d0a7b226572726f72223a224261642052657175657374227d"
+      },
+      {
+        "name": "bad header name",
+        "wire_hex": "485454502f312e31203430302042616420526571756573740d0a436f6e74656e742d547970653a206170706c69636174696f6e2f6a736f6e0d0a436f6e74656e742d4c656e6774683a2032330d0a436f6e6e656374696f6e3a20636c6f73650d0a0d0a7b226572726f72223a224261642052657175657374227d"
+      },
+      {
+        "name": "duplicate length",
+        "wire_hex": "485454502f312e31203430302042616420526571756573740d0a436f6e74656e742d547970653a206170706c69636174696f6e2f6a736f6e0d0a436f6e74656e742d4c656e6774683a2032330d0a436f6e6e656374696f6e3a20636c6f73650d0a0d0a7b226572726f72223a224261642052657175657374227d"
+      },
+      {
+        "name": "transfer encoding",
+        "wire_hex": "485454502f312e31203430302042616420526571756573740d0a436f6e74656e742d547970653a206170706c69636174696f6e2f6a736f6e0d0a436f6e74656e742d4c656e6774683a2032330d0a436f6e6e656374696f6e3a20636c6f73650d0a0d0a7b226572726f72223a224261642052657175657374227d"
+      },
+      {
+        "name": "te plus length",
+        "wire_hex": "485454502f312e31203430302042616420526571756573740d0a436f6e74656e742d547970653a206170706c69636174696f6e2f6a736f6e0d0a436f6e74656e742d4c656e6774683a2032330d0a436f6e6e656374696f6e3a20636c6f73650d0a0d0a7b226572726f72223a224261642052657175657374227d"
+      },
+      {
+        "name": "bad length",
+        "wire_hex": "485454502f312e31203430302042616420526571756573740d0a436f6e74656e742d547970653a206170706c69636174696f6e2f6a736f6e0d0a436f6e74656e742d4c656e6774683a2032330d0a436f6e6e656374696f6e3a20636c6f73650d0a0d0a7b226572726f72223a224261642052657175657374227d"
+      },
+      {
+        "name": "negative length",
+        "wire_hex": "485454502f312e31203430302042616420526571756573740d0a436f6e74656e742d547970653a206170706c69636174696f6e2f6a736f6e0d0a436f6e74656e742d4c656e6774683a2032330d0a436f6e6e656374696f6e3a20636c6f73650d0a0d0a7b226572726f72223a224261642052657175657374227d"
+      },
+      {
+        "name": "comma length",
+        "wire_hex": "485454502f312e31203430302042616420526571756573740d0a436f6e74656e742d547970653a206170706c69636174696f6e2f6a736f6e0d0a436f6e74656e742d4c656e6774683a2032330d0a436f6e6e656374696f6e3a20636c6f73650d0a0d0a7b226572726f72223a224261642052657175657374227d"
+      },
+      {
+        "name": "bare LF",
+        "wire_hex": "485454502f312e31203430302042616420526571756573740d0a436f6e74656e742d547970653a206170706c69636174696f6e2f6a736f6e0d0a436f6e74656e742d4c656e6774683a2032330d0a436f6e6e656374696f6e3a20636c6f73650d0a0d0a7b226572726f72223a224261642052657175657374227d"
+      },
+      {
+        "name": "extra space",
+        "wire_hex": "485454502f312e31203430302042616420526571756573740d0a436f6e74656e742d547970653a206170706c69636174696f6e2f6a736f6e0d0a436f6e74656e742d4c656e6774683a2032330d0a436f6e6e656374696f6e3a20636c6f73650d0a0d0a7b226572726f72223a224261642052657175657374227d"
+      },
+      {
+        "name": "absolute target",
+        "wire_hex": "485454502f312e31203430302042616420526571756573740d0a436f6e74656e742d547970653a206170706c69636174696f6e2f6a736f6e0d0a436f6e74656e742d4c656e6774683a2032330d0a436f6e6e656374696f6e3a20636c6f73650d0a0d0a7b226572726f72223a224261642052657175657374227d"
+      },
+      {
+        "name": "fragment",
+        "wire_hex": "485454502f312e31203430302042616420526571756573740d0a436f6e74656e742d547970653a206170706c69636174696f6e2f6a736f6e0d0a436f6e74656e742d4c656e6774683a2032330d0a436f6e6e656374696f6e3a20636c6f73650d0a0d0a7b226572726f72223a224261642052657175657374227d"
+      },
+      {
+        "name": "invalid version",
+        "wire_hex": "485454502f312e31203430302042616420526571756573740d0a436f6e74656e742d547970653a206170706c69636174696f6e2f6a736f6e0d0a436f6e74656e742d4c656e6774683a2032330d0a436f6e6e656374696f6e3a20636c6f73650d0a0d0a7b226572726f72223a224261642052657175657374227d"
+      },
+      {
+        "name": "control",
+        "wire_hex": "485454502f312e31203430302042616420526571756573740d0a436f6e74656e742d547970653a206170706c69636174696f6e2f6a736f6e0d0a436f6e74656e742d4c656e6774683a2032330d0a436f6e6e656374696f6e3a20636c6f73650d0a0d0a7b226572726f72223a224261642052657175657374227d"
+      },
+      {
+        "name": "bad method",
+        "wire_hex": "485454502f312e31203430302042616420526571756573740d0a436f6e74656e742d547970653a206170706c69636174696f6e2f6a736f6e0d0a436f6e74656e742d4c656e6774683a2032330d0a436f6e6e656374696f6e3a20636c6f73650d0a0d0a7b226572726f72223a224261642052657175657374227d"
+      },
+      {
+        "name": "body unsupported",
+        "wire_hex": "485454502f312e312034313320436f6e74656e7420546f6f204c617267650d0a436f6e74656e742d547970653a206170706c69636174696f6e2f6a736f6e0d0a436f6e74656e742d4c656e6774683a2032390d0a436f6e6e656374696f6e3a20636c6f73650d0a0d0a7b226572726f72223a22436f6e74656e7420546f6f204c61726765227d"
+      },
+      {
+        "name": "expect unsupported",
+        "wire_hex": "485454502f312e3120343137204578706563746174696f6e204661696c65640d0a436f6e74656e742d547970653a206170706c69636174696f6e2f6a736f6e0d0a436f6e74656e742d4c656e6774683a2033300d0a436f6e6e656374696f6e3a20636c6f73650d0a0d0a7b226572726f72223a224578706563746174696f6e204661696c6564227d"
+      },
+      {
+        "name": "header limit",
+        "wire_hex": "485454502f312e3120343331205265717565737420486561646572204669656c647320546f6f204c617267650d0a436f6e74656e742d547970653a206170706c69636174696f6e2f6a736f6e0d0a436f6e74656e742d4c656e6774683a2034330d0a436f6e6e656374696f6e3a20636c6f73650d0a0d0a7b226572726f72223a225265717565737420486561646572204669656c647320546f6f204c61726765227d"
+      },
+      {
+        "name": "pipelined closes after first",
+        "wire_hex": "485454502f312e3120323030204f4b0d0a436f6e74656e742d547970653a206170706c69636174696f6e2f6a736f6e0d0a436f6e74656e742d4c656e6774683a2033330d0a436f6e6e656374696f6e3a20636c6f73650d0a0d0a7b22737461747573223a226f6b222c226c616e6775616765223a226c6f626f227d"
+      },
+      {
+        "name": "fragmented",
+        "wire_hex": "485454502f312e3120323030204f4b0d0a436f6e74656e742d547970653a206170706c69636174696f6e2f6a736f6e0d0a436f6e74656e742d4c656e6774683a2033330d0a436f6e6e656374696f6e3a20636c6f73650d0a0d0a7b22737461747573223a226f6b222c226c616e6775616765223a226c6f626f227d"
+      },
+      {
+        "name": "request timeout",
+        "wire_hex": "485454502f312e312034303820526571756573742054696d656f75740d0a436f6e74656e742d547970653a206170706c69636174696f6e2f6a736f6e0d0a436f6e74656e742d4c656e6774683a2032370d0a436f6e6e656374696f6e3a20636c6f73650d0a0d0a7b226572726f72223a22526571756573742054696d656f7574227d"
+      },
+      {
+        "name": "truncated EOF",
+        "wire_hex": "485454502f312e31203430302042616420526571756573740d0a436f6e74656e742d547970653a206170706c69636174696f6e2f6a736f6e0d0a436f6e74656e742d4c656e6774683a2032330d0a436f6e6e656374696f6e3a20636c6f73650d0a0d0a7b226572726f72223a224261642052657175657374227d"
+      },
+      {
+        "name": "occupied port",
+        "stdout": "{\"status\":\"ok\",\"kind\":\"value\",\"value\":{\"type\":\"Variant\",\"value\":{\"id\":\"lobo.native.result.I64Result\",\"case\":\"Err\",\"payload\":{\"type\":\"I64\",\"value\":\"9\"}}}}\n"
+      },
+      {
+        "name": "default deny",
+        "stdout": "{\"status\":\"ok\",\"kind\":\"value\",\"value\":{\"type\":\"Variant\",\"value\":{\"id\":\"lobo.native.result.I64Result\",\"case\":\"Err\",\"payload\":{\"type\":\"I64\",\"value\":\"1\"}}}}\n"
+      }
+    ],
+    "actual_windows_execution": null
+  },
+  "linux_model_result": {
+    "format": "lobo-native-model-check/0.1",
+    "status": "pass",
+    "tlc_jar_sha256": "936a262061c914694dfd669a543be24573c45d5aa0ff20a8b96b23d01e050e88",
+    "model_results": [
+      {
+        "name": "authority",
+        "status": "pass",
+        "expected_invariant": null,
+        "generated": 31141,
+        "distinct": 11991,
+        "queued": 0,
+        "trace_states": null,
+        "action_counts": {
+          "Init": {
+            "new_states": 1,
+            "successors": 1
+          },
+          "Root": {
+            "new_states": 1,
+            "successors": 4121
+          },
+          "Derive": {
+            "new_states": 2202,
+            "successors": 6320
+          },
+          "Allocate": {
+            "new_states": 230,
+            "successors": 884
+          },
+          "Use": {
+            "new_states": 1511,
+            "successors": 7400
+          },
+          "Release": {
+            "new_states": 294,
+            "successors": 1032
+          },
+          "Exit": {
+            "new_states": 4121,
+            "successors": 4121
+          },
+          "Finished": {
+            "new_states": 3631,
+            "successors": 3631
+          },
+          "Done": {
+            "new_states": 0,
+            "successors": 3631
+          }
+        }
+      },
+      {
+        "name": "operations",
+        "status": "pass",
+        "expected_invariant": null,
+        "generated": 3061,
+        "distinct": 1815,
+        "queued": 0,
+        "trace_states": null,
+        "action_counts": {
+          "Init": {
+            "new_states": 1,
+            "successors": 1
+          },
+          "Acquire": {
+            "new_states": 1,
+            "successors": 1
+          },
+          "Connect": {
+            "new_states": 18,
+            "successors": 18
+          },
+          "Validate": {
+            "new_states": 9,
+            "successors": 9
+          },
+          "RejectPeer": {
+            "new_states": 9,
+            "successors": 9
+          },
+          "StartIO": {
+            "new_states": 9,
+            "successors": 9
+          },
+          "BeginIO": {
+            "new_states": 273,
+            "successors": 534
+          },
+          "Retry": {
+            "new_states": 174,
+            "successors": 316
+          },
+          "Timeout": {
+            "new_states": 21,
+            "successors": 33
+          },
+          "Fault": {
+            "new_states": 202,
+            "successors": 284
+          },
+          "OsFailure": {
+            "new_states": 322,
+            "successors": 466
+          },
+          "Write": {
+            "new_states": 110,
+            "successors": 126
+          },
+          "Read": {
+            "new_states": 40,
+            "successors": 64
+          },
+          "Shutdown": {
+            "new_states": 50,
+            "successors": 50
+          },
+          "Eof": {
+            "new_states": 2,
+            "successors": 2
+          },
+          "QuotaFailure": {
+            "new_states": 9,
+            "successors": 9
+          },
+          "Cleanup": {
+            "new_states": 565,
+            "successors": 565
+          },
+          "Done": {
+            "new_states": 0,
+            "successors": 565
+          }
+        }
+      },
+      {
+        "name": "authority-root",
+        "status": "expected-counterexample",
+        "expected_invariant": "EntryAuthority",
+        "generated": 4,
+        "distinct": 3,
+        "queued": 1,
+        "trace_states": 2,
+        "action_counts": {
+          "Init": {
+            "new_states": 1,
+            "successors": 1
+          },
+          "Root": {
+            "new_states": 2,
+            "successors": 6
+          },
+          "Derive": {
+            "new_states": 0,
+            "successors": 0
+          },
+          "Allocate": {
+            "new_states": 0,
+            "successors": 0
+          },
+          "Use": {
+            "new_states": 0,
+            "successors": 0
+          },
+          "Release": {
+            "new_states": 0,
+            "successors": 0
+          },
+          "Exit": {
+            "new_states": 0,
+            "successors": 0
+          },
+          "Finished": {
+            "new_states": 0,
+            "successors": 0
+          },
+          "Done": {
+            "new_states": 0,
+            "successors": 0
+          }
+        }
+      },
+      {
+        "name": "authority-amplify",
+        "status": "expected-counterexample",
+        "expected_invariant": "NoAmplification",
+        "generated": 83,
+        "distinct": 46,
+        "queued": 41,
+        "trace_states": 4,
+        "action_counts": {
+          "Init": {
+            "new_states": 2,
+            "successors": 2
+          },
+          "Root": {
+            "new_states": 1,
+            "successors": 6
+          },
+          "Derive": {
+            "new_states": 36,
+            "successors": 80
+          },
+          "Allocate": {
+            "new_states": 4,
+            "successors": 4
+          },
+          "Use": {
+            "new_states": 1,
+            "successors": 1
+          },
+          "Release": {
+            "new_states": 0,
+            "successors": 0
+          },
+          "Exit": {
+            "new_states": 2,
+            "successors": 2
+          },
+          "Finished": {
+            "new_states": 1,
+            "successors": 1
+          },
+          "Done": {
+            "new_states": 0,
+            "successors": 0
+          }
+        }
+      },
+      {
+        "name": "authority-stale",
+        "status": "expected-counterexample",
+        "expected_invariant": "ValidGeneration",
+        "generated": 12362,
+        "distinct": 3942,
+        "queued": 2329,
+        "trace_states": 6,
+        "action_counts": {
+          "Init": {
+            "new_states": 2,
+            "successors": 2
+          },
+          "Root": {
+            "new_states": 1,
+            "successors": 1059
+          },
+          "Derive": {
+            "new_states": 1157,
+            "successors": 3163
+          },
+          "Allocate": {
+            "new_states": 148,
+            "successors": 439
+          },
+          "Use": {
+            "new_states": 1015,
+            "successors": 6018
+          },
+          "Release": {
+            "new_states": 114,
+            "successors": 226
+          },
+          "Exit": {
+            "new_states": 1053,
+            "successors": 1053
+          },
+          "Finished": {
+            "new_states": 453,
+            "successors": 453
+          },
+          "Done": {
+            "new_states": 0,
+            "successors": 34
+          }
+        }
+      },
+      {
+        "name": "authority-kind",
+        "status": "expected-counterexample",
+        "expected_invariant": "ValidKind",
+        "generated": 43,
+        "distinct": 41,
+        "queued": 38,
+        "trace_states": 3,
+        "action_counts": {
+          "Init": {
+            "new_states": 2,
+            "successors": 2
+          },
+          "Root": {
+            "new_states": 1,
+            "successors": 4
+          },
+          "Derive": {
+            "new_states": 32,
+            "successors": 64
+          },
+          "Allocate": {
+            "new_states": 4,
+            "successors": 8
+          },
+          "Use": {
+            "new_states": 2,
+            "successors": 6
+          },
+          "Release": {
+            "new_states": 0,
+            "successors": 0
+          },
+          "Exit": {
+            "new_states": 1,
+            "successors": 1
+          },
+          "Finished": {
+            "new_states": 0,
+            "successors": 0
+          },
+          "Done": {
+            "new_states": 0,
+            "successors": 0
+          }
+        }
+      },
+      {
+        "name": "authority-denied",
+        "status": "expected-counterexample",
+        "expected_invariant": "NoDeniedSyscall",
+        "generated": 68,
+        "distinct": 61,
+        "queued": 56,
+        "trace_states": 4,
+        "action_counts": {
+          "Init": {
+            "new_states": 2,
+            "successors": 2
+          },
+          "Root": {
+            "new_states": 1,
+            "successors": 6
+          },
+          "Derive": {
+            "new_states": 49,
+            "successors": 67
+          },
+          "Allocate": {
+            "new_states": 6,
+            "successors": 14
+          },
+          "Use": {
+            "new_states": 1,
+            "successors": 1
+          },
+          "Release": {
+            "new_states": 0,
+            "successors": 0
+          },
+          "Exit": {
+            "new_states": 2,
+            "successors": 2
+          },
+          "Finished": {
+            "new_states": 1,
+            "successors": 1
+          },
+          "Done": {
+            "new_states": 0,
+            "successors": 0
+          }
+        }
+      },
+      {
+        "name": "authority-quota",
+        "status": "expected-counterexample",
+        "expected_invariant": "WithinQuota",
+        "generated": 6,
+        "distinct": 4,
+        "queued": 1,
+        "trace_states": 3,
+        "action_counts": {
+          "Init": {
+            "new_states": 2,
+            "successors": 2
+          },
+          "Root": {
+            "new_states": 1,
+            "successors": 6
+          },
+          "Derive": {
+            "new_states": 1,
+            "successors": 2
+          },
+          "Allocate": {
+            "new_states": 0,
+            "successors": 0
+          },
+          "Use": {
+            "new_states": 0,
+            "successors": 0
+          },
+          "Release": {
+            "new_states": 0,
+            "successors": 0
+          },
+          "Exit": {
+            "new_states": 1,
+            "successors": 1
+          },
+          "Finished": {
+            "new_states": 0,
+            "successors": 0
+          },
+          "Done": {
+            "new_states": 0,
+            "successors": 0
+          }
+        }
+      },
+      {
+        "name": "authority-wrap",
+        "status": "expected-counterexample",
+        "expected_invariant": "NoGenerationWrap",
+        "generated": 9806,
+        "distinct": 4022,
+        "queued": 2393,
+        "trace_states": 6,
+        "action_counts": {
+          "Init": {
+            "new_states": 2,
+            "successors": 2
+          },
+          "Root": {
+            "new_states": 1,
+            "successors": 1075
+          },
+          "Derive": {
+            "new_states": 1221,
+            "successors": 3529
+          },
+          "Allocate": {
+            "new_states": 148,
+            "successors": 488
+          },
+          "Use": {
+            "new_states": 1014,
+            "successors": 3042
+          },
+          "Release": {
+            "new_states": 115,
+            "successors": 228
+          },
+          "Exit": {
+            "new_states": 1069,
+            "successors": 1069
+          },
+          "Finished": {
+            "new_states": 453,
+            "successors": 453
+          },
+          "Done": {
+            "new_states": 0,
+            "successors": 34
+          }
+        }
+      },
+      {
+        "name": "authority-cleanup",
+        "status": "expected-counterexample",
+        "expected_invariant": "ExitCloses",
+        "generated": 4430,
+        "distinct": 1632,
+        "queued": 1070,
+        "trace_states": 5,
+        "action_counts": {
+          "Init": {
+            "new_states": 2,
+            "successors": 2
+          },
+          "Root": {
+            "new_states": 1,
+            "successors": 528
+          },
+          "Derive": {
+            "new_states": 434,
+            "successors": 1572
+          },
+          "Allocate": {
+            "new_states": 74,
+            "successors": 217
+          },
+          "Use": {
+            "new_states": 523,
+            "successors": 1499
+          },
+          "Release": {
+            "new_states": 39,
+            "successors": 76
+          },
+          "Exit": {
+            "new_states": 525,
+            "successors": 526
+          },
+          "Finished": {
+            "new_states": 35,
+            "successors": 70
+          },
+          "Done": {
+            "new_states": 0,
+            "successors": 1
+          }
+        }
+      },
+      {
+        "name": "operations-untracked-fault",
+        "status": "expected-counterexample",
+        "expected_invariant": "ExitCloses",
+        "generated": 5,
+        "distinct": 5,
+        "queued": 1,
+        "trace_states": 4,
+        "action_counts": {
+          "Init": {
+            "new_states": 2,
+            "successors": 2
+          },
+          "Acquire": {
+            "new_states": 1,
+            "successors": 2
+          },
+          "Connect": {
+            "new_states": 0,
+            "successors": 0
+          },
+          "Validate": {
+            "new_states": 0,
+            "successors": 0
+          },
+          "RejectPeer": {
+            "new_states": 0,
+            "successors": 0
+          },
+          "StartIO": {
+            "new_states": 0,
+            "successors": 0
+          },
+          "BeginIO": {
+            "new_states": 0,
+            "successors": 0
+          },
+          "Retry": {
+            "new_states": 0,
+            "successors": 0
+          },
+          "Timeout": {
+            "new_states": 0,
+            "successors": 0
+          },
+          "Fault": {
+            "new_states": 1,
+            "successors": 2
+          },
+          "OsFailure": {
+            "new_states": 1,
+            "successors": 1
+          },
+          "Write": {
+            "new_states": 0,
+            "successors": 0
+          },
+          "Read": {
+            "new_states": 0,
+            "successors": 0
+          },
+          "Shutdown": {
+            "new_states": 0,
+            "successors": 0
+          },
+          "Eof": {
+            "new_states": 0,
+            "successors": 0
+          },
+          "QuotaFailure": {
+            "new_states": 0,
+            "successors": 0
+          },
+          "Cleanup": {
+            "new_states": 1,
+            "successors": 2
+          },
+          "Done": {
+            "new_states": 0,
+            "successors": 0
+          }
+        }
+      },
+      {
+        "name": "operations-publish",
+        "status": "expected-counterexample",
+        "expected_invariant": "ValidatedPublication",
+        "generated": 8,
+        "distinct": 8,
+        "queued": 4,
+        "trace_states": 4,
+        "action_counts": {
+          "Init": {
+            "new_states": 2,
+            "successors": 2
+          },
+          "Acquire": {
+            "new_states": 1,
+            "successors": 2
+          },
+          "Connect": {
+            "new_states": 2,
+            "successors": 3
+          },
+          "Validate": {
+            "new_states": 1,
+            "successors": 2
+          },
+          "RejectPeer": {
+            "new_states": 0,
+            "successors": 0
+          },
+          "StartIO": {
+            "new_states": 0,
+            "successors": 0
+          },
+          "BeginIO": {
+            "new_states": 0,
+            "successors": 0
+          },
+          "Retry": {
+            "new_states": 2,
+            "successors": 2
+          },
+          "Timeout": {
+            "new_states": 0,
+            "successors": 0
+          },
+          "Fault": {
+            "new_states": 0,
+            "successors": 0
+          },
+          "OsFailure": {
+            "new_states": 1,
+            "successors": 1
+          },
+          "Write": {
+            "new_states": 0,
+            "successors": 0
+          },
+          "Read": {
+            "new_states": 0,
+            "successors": 0
+          },
+          "Shutdown": {
+            "new_states": 0,
+            "successors": 0
+          },
+          "Eof": {
+            "new_states": 0,
+            "successors": 0
+          },
+          "QuotaFailure": {
+            "new_states": 0,
+            "successors": 0
+          },
+          "Cleanup": {
+            "new_states": 0,
+            "successors": 0
+          },
+          "Done": {
+            "new_states": 0,
+            "successors": 0
+          }
+        }
+      },
+      {
+        "name": "operations-deadline",
+        "status": "expected-counterexample",
+        "expected_invariant": "FixedDeadline",
+        "generated": 6,
+        "distinct": 6,
+        "queued": 3,
+        "trace_states": 3,
+        "action_counts": {
+          "Init": {
+            "new_states": 2,
+            "successors": 2
+          },
+          "Acquire": {
+            "new_states": 1,
+            "successors": 2
+          },
+          "Connect": {
+            "new_states": 2,
+            "successors": 4
+          },
+          "Validate": {
+            "new_states": 0,
+            "successors": 0
+          },
+          "RejectPeer": {
+            "new_states": 0,
+            "successors": 0
+          },
+          "StartIO": {
+            "new_states": 0,
+            "successors": 0
+          },
+          "BeginIO": {
+            "new_states": 0,
+            "successors": 0
+          },
+          "Retry": {
+            "new_states": 2,
+            "successors": 4
+          },
+          "Timeout": {
+            "new_states": 0,
+            "successors": 0
+          },
+          "Fault": {
+            "new_states": 0,
+            "successors": 0
+          },
+          "OsFailure": {
+            "new_states": 0,
+            "successors": 0
+          },
+          "Write": {
+            "new_states": 0,
+            "successors": 0
+          },
+          "Read": {
+            "new_states": 0,
+            "successors": 0
+          },
+          "Shutdown": {
+            "new_states": 0,
+            "successors": 0
+          },
+          "Eof": {
+            "new_states": 0,
+            "successors": 0
+          },
+          "QuotaFailure": {
+            "new_states": 0,
+            "successors": 0
+          },
+          "Cleanup": {
+            "new_states": 0,
+            "successors": 0
+          },
+          "Done": {
+            "new_states": 0,
+            "successors": 0
+          }
+        }
+      }
+    ],
+    "c_replays": [
+      {
+        "case": "root",
+        "mode": "optimized",
+        "status": "pass",
+        "exit_code": 1,
+        "model_invariant": "EntryAuthority"
+      },
+      {
+        "case": "root",
+        "mode": "sanitized",
+        "status": "pass",
+        "exit_code": 1,
+        "model_invariant": "EntryAuthority"
+      },
+      {
+        "case": "amplify",
+        "mode": "optimized",
+        "status": "pass",
+        "exit_code": 0,
+        "model_invariant": "NoAmplification"
+      },
+      {
+        "case": "amplify",
+        "mode": "sanitized",
+        "status": "pass",
+        "exit_code": 0,
+        "model_invariant": "NoAmplification"
+      },
+      {
+        "case": "stale",
+        "mode": "optimized",
+        "status": "pass",
+        "exit_code": 0,
+        "model_invariant": "ValidGeneration"
+      },
+      {
+        "case": "stale",
+        "mode": "sanitized",
+        "status": "pass",
+        "exit_code": 0,
+        "model_invariant": "ValidGeneration"
+      },
+      {
+        "case": "kind",
+        "mode": "optimized",
+        "status": "pass",
+        "exit_code": 0,
+        "model_invariant": "ValidKind"
+      },
+      {
+        "case": "kind",
+        "mode": "sanitized",
+        "status": "pass",
+        "exit_code": 0,
+        "model_invariant": "ValidKind"
+      },
+      {
+        "case": "denied",
+        "mode": "optimized",
+        "status": "pass",
+        "exit_code": 0,
+        "model_invariant": "NoDeniedSyscall"
+      },
+      {
+        "case": "denied",
+        "mode": "sanitized",
+        "status": "pass",
+        "exit_code": 0,
+        "model_invariant": "NoDeniedSyscall"
+      },
+      {
+        "case": "quota",
+        "mode": "optimized",
+        "status": "pass",
+        "exit_code": 0,
+        "model_invariant": "WithinQuota"
+      },
+      {
+        "case": "quota",
+        "mode": "sanitized",
+        "status": "pass",
+        "exit_code": 0,
+        "model_invariant": "WithinQuota"
+      },
+      {
+        "case": "wrap",
+        "mode": "optimized",
+        "status": "pass",
+        "exit_code": 0,
+        "model_invariant": "NoGenerationWrap"
+      },
+      {
+        "case": "wrap",
+        "mode": "sanitized",
+        "status": "pass",
+        "exit_code": 0,
+        "model_invariant": "NoGenerationWrap"
+      },
+      {
+        "case": "cleanup",
+        "mode": "optimized",
+        "status": "pass",
+        "exit_code": 0,
+        "model_invariant": "ExitCloses"
+      },
+      {
+        "case": "cleanup",
+        "mode": "sanitized",
+        "status": "pass",
+        "exit_code": 0,
+        "model_invariant": "ExitCloses"
+      },
+      {
+        "case": "untracked-fault",
+        "mode": "optimized",
+        "status": "pass",
+        "exit_code": 1,
+        "model_invariant": "ExitCloses"
+      },
+      {
+        "case": "untracked-fault",
+        "mode": "sanitized",
+        "status": "pass",
+        "exit_code": 1,
+        "model_invariant": "ExitCloses"
+      },
+      {
+        "case": "publish",
+        "mode": "optimized",
+        "status": "pass",
+        "exit_code": 0,
+        "model_invariant": "ValidatedPublication"
+      },
+      {
+        "case": "publish",
+        "mode": "sanitized",
+        "status": "pass",
+        "exit_code": 0,
+        "model_invariant": "ValidatedPublication"
+      },
+      {
+        "case": "deadline",
+        "mode": "optimized",
+        "status": "pass",
+        "exit_code": 0,
+        "model_invariant": "FixedDeadline"
+      },
+      {
+        "case": "deadline",
+        "mode": "sanitized",
+        "status": "pass",
+        "exit_code": 0,
+        "model_invariant": "FixedDeadline"
+      }
+    ],
+    "c_mutations": [
+      {
+        "case": "root",
+        "mode": "optimized",
+        "status": "expected-rejection",
+        "exit_code": 3,
+        "model_invariant": "EntryAuthority"
+      },
+      {
+        "case": "root",
+        "mode": "sanitized",
+        "status": "expected-rejection",
+        "exit_code": 3,
+        "model_invariant": "EntryAuthority"
+      },
+      {
+        "case": "amplify",
+        "mode": "optimized",
+        "status": "expected-rejection",
+        "exit_code": 1,
+        "model_invariant": "NoAmplification"
+      },
+      {
+        "case": "amplify",
+        "mode": "sanitized",
+        "status": "expected-rejection",
+        "exit_code": 1,
+        "model_invariant": "NoAmplification"
+      },
+      {
+        "case": "stale",
+        "mode": "optimized",
+        "status": "expected-rejection",
+        "exit_code": 1,
+        "model_invariant": "ValidGeneration"
+      },
+      {
+        "case": "stale",
+        "mode": "sanitized",
+        "status": "expected-rejection",
+        "exit_code": 1,
+        "model_invariant": "ValidGeneration"
+      },
+      {
+        "case": "kind",
+        "mode": "optimized",
+        "status": "expected-rejection",
+        "exit_code": 1,
+        "model_invariant": "ValidKind"
+      },
+      {
+        "case": "kind",
+        "mode": "sanitized",
+        "status": "expected-rejection",
+        "exit_code": 1,
+        "model_invariant": "ValidKind"
+      },
+      {
+        "case": "denied",
+        "mode": "optimized",
+        "status": "expected-rejection",
+        "exit_code": 1,
+        "model_invariant": "NoDeniedSyscall"
+      },
+      {
+        "case": "denied",
+        "mode": "sanitized",
+        "status": "expected-rejection",
+        "exit_code": 1,
+        "model_invariant": "NoDeniedSyscall"
+      },
+      {
+        "case": "quota",
+        "mode": "optimized",
+        "status": "expected-rejection",
+        "exit_code": 1,
+        "model_invariant": "WithinQuota"
+      },
+      {
+        "case": "quota",
+        "mode": "sanitized",
+        "status": "expected-rejection",
+        "exit_code": 1,
+        "model_invariant": "WithinQuota"
+      },
+      {
+        "case": "wrap",
+        "mode": "optimized",
+        "status": "expected-rejection",
+        "exit_code": 1,
+        "model_invariant": "NoGenerationWrap"
+      },
+      {
+        "case": "wrap",
+        "mode": "sanitized",
+        "status": "expected-rejection",
+        "exit_code": 1,
+        "model_invariant": "NoGenerationWrap"
+      },
+      {
+        "case": "cleanup",
+        "mode": "optimized",
+        "status": "expected-rejection",
+        "exit_code": 1,
+        "model_invariant": "ExitCloses"
+      },
+      {
+        "case": "cleanup",
+        "mode": "sanitized",
+        "status": "expected-rejection",
+        "exit_code": 1,
+        "model_invariant": "ExitCloses"
+      },
+      {
+        "case": "untracked-fault",
+        "mode": "optimized",
+        "status": "expected-rejection",
+        "exit_code": 2,
+        "model_invariant": "ExitCloses"
+      },
+      {
+        "case": "untracked-fault",
+        "mode": "sanitized",
+        "status": "expected-rejection",
+        "exit_code": 2,
+        "model_invariant": "ExitCloses"
+      },
+      {
+        "case": "publish",
+        "mode": "optimized",
+        "status": "expected-rejection",
+        "exit_code": 1,
+        "model_invariant": "ValidatedPublication"
+      },
+      {
+        "case": "publish",
+        "mode": "sanitized",
+        "status": "expected-rejection",
+        "exit_code": 1,
+        "model_invariant": "ValidatedPublication"
+      },
+      {
+        "case": "deadline",
+        "mode": "optimized",
+        "status": "expected-rejection",
+        "exit_code": 1,
+        "model_invariant": "FixedDeadline"
+      },
+      {
+        "case": "deadline",
+        "mode": "sanitized",
+        "status": "expected-rejection",
+        "exit_code": 1,
+        "model_invariant": "FixedDeadline"
+      }
+    ],
+    "source_hashes": {
+      "src/native_api.c": "15d789a2129b16e2009c74e28987097c24ed7083a628fea9cc5cd03c43772c20",
+      "src/native_runtime.c": "32a67f4913cddeee51fe33d6464afeb42d9740f81350ddb0ae45d88015f7564c",
+      "tests/native/formal_trace_harness.c": "b76fd1b60987a762c37215e528a3a1d22987770307435478b3c12c51c945fa7e",
+      "tests/native/adapter_harness.c": "88f5215e6b5507bc9209df02dfad622db3c3c3fa5bfae4511f63f06ed676f49c",
+      "verification/native/Operations.tla": "4ae35551cda143f54b4c906f0e5bb8f8cdf4485fcc3a2f63109244f15aa0296b",
+      "verification/native/Authority.tla": "f43286c3cbb75963641133f0de32a4dc7ba6a7cf28799ad3cd2a7b57f5842c89"
+    },
+    "mode": "full",
+    "coverage_head": "39ec4662869ae992a508a06cf2f3a9cf36240220",
+    "coverage_note": "Source includes uncommitted work beyond HEAD; exact file hashes define reviewed inputs. No commit is claimed for the models. Windows snapshot milestone: Linux provider prefix reviewed byte-identical; new Windows profile is outside these Linux model claims.",
+    "checker_self_test": {
+      "status": "pass",
+      "counterexample_excludes_statistics": true,
+      "known_broken_baseline": "authority-root",
+      "python_optimization": true,
+      "broken_model_process_exit": 1,
+      "output": "/home/luis/dev/lobo-ar/lobo-lang/target/try-propagation/linux-models/checker-self-test"
+    }
+  },
+  "formal_models_prove_try": false,
+  "actual_windows_execution": null,
+  "editor_host": "passed, try navigation plus unsaved diagnostic/repair",
+  "clippy": "passed",
+  "skill": "validated, pure example runs through C and LLVM",
+  "llvm_verifier": "opt-18 verification passed",
+  "red_evidence": [
+    "task-evidence/red.log",
+    "task-evidence/editor-red.log",
+    "task-evidence/imported-payload-red.log"
+  ],
+  "corrected_failures": [
+    "operator-checker output field",
+    "native emitter module import",
+    "Clippy matches suggestion",
+    "VSIX relative link packaging",
+    "old language-tag expectations",
+    "extra inferred-payload visibility check",
+    "documentation links before receipt sealing"
+  ],
+  "integrity": {
+    "status": "pass",
+    "unchanged_before_inputs": 352,
+    "reviewed_changed_before_inputs": [
+      ".agents/skills/lobo-programming/SKILL.md",
+      ".agents/skills/lobo-programming/references/language.md",
+      ".agents/skills/lobo-programming/references/tools.md",
+      "AGENTS.md",
+      "CHANGELOG.md",
+      "Cargo.lock",
+      "Cargo.toml",
+      "README.md",
+      "decisions/0052-error-propagation-proposal.md",
+      "docs/compiler-and-backends.md",
+      "docs/testing-and-tdd.md",
+      "editors/vscode/README.md",
+      "editors/vscode/package-lock.json",
+      "editors/vscode/package.json",
+      "editors/vscode/src/compiler.cjs",
+      "editors/vscode/src/navigation.cjs",
+      "editors/vscode/syntaxes/lobo.tmLanguage.json",
+      "editors/vscode/test/bundle-navigation.test.mjs",
+      "editors/vscode/test/compiler.test.mjs",
+      "editors/vscode/test/grammar.test.mjs",
+      "editors/vscode/test/host-tests.cjs",
+      "editors/vscode/test/navigation.test.mjs",
+      "editors/vscode/test/run-host-tests.mjs",
+      "examples/native/README.md",
+      "examples/native/snapshot.lobo",
+      "spec/README.md",
+      "src/inference.rs",
+      "src/lib.rs",
+      "src/native.rs",
+      "src/native_llvm.rs",
+      "src/operators.rs",
+      "tests/actions.rs",
+      "tests/fold.rs",
+      "tests/native_syntax.rs"
+    ],
+    "prior_paper_entries": 26,
+    "frozen_1_0_artifacts": 86,
+    "snapshot_sidecar_unchanged": true,
+    "native_provider_and_runtime_C_files_unchanged": true,
+    "covered_formal_inputs_unchanged": true,
+    "locks_only_root_version_changed": true
+  },
+  "artifacts": {
+    "dist/lobo-syntax-1.8.0.vsix": {
+      "bytes": 39915,
+      "sha256": "c839ba61e775a602d2484108d6d1642c5469a93027b710e8c6c8ce7d8bf6aa1c"
+    },
+    "dist/lobo-snapshot-1.8.0-windows/LoboSnapshot.exe": {
+      "bytes": 48640,
+      "sha256": "67a5a0149e54d4257a246c5d05bd76f9602b015323abca78aab020a86943e709"
+    },
+    "dist/lobo-snapshot-1.8.0-windows/LoboSnapshot-windows-x64.zip": {
+      "bytes": 43053,
+      "sha256": "bbc5aa91239aa27bc9feabfca1e0d1d58fa79c23afd124152d54be8bf33e6597"
+    }
+  },
+  "preservation": {
+    "path": "benchmarks/private-evidence/try-propagation-20261122",
+    "manifest_sha256": "21e6593beea29822412a2fa71dadbd4e4717e7a11348a2b0c85e4ec01e87d83d",
+    "source_snapshot_files": 393,
+    "local_only": true,
+    "commit": null,
+    "publication": null,
+    "off_device_backup": null
+  },
+  "limits": [
+    "No automatic per-function resource cleanup, new permission mechanism or error conversion.",
+    "The structural result rule does not infer an unspecified result family/error parameter.",
+    "Ordinary try(value) calls remain ordinary calls; propagation uses prefix try producer().",
+    "Wine checks are distinct from actual Windows execution.",
+    "Linux formal claims cover unchanged mapped native functions, not generated try control flow.",
+    "Counts overlap across builds/platforms and are not independent subjects."
+  ],
+  "agent_construction_effect": null,
+  "agent_comprehension_effect": null,
+  "agent_token_effect": null,
+  "runtime_performance_effect": null
+}

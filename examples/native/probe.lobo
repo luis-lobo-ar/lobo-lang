@@ -1,0 +1,11 @@
+module native_probe;
+use os {IoResult,monotonic_ms,random_bytes};
+fn clock()->IoResult<I64> actions {native.authorize,clock.read} {
+  let cap=Native::capability();
+  os.monotonic_ms(cap)
+}
+fn random(count:I64)->IoResult<Bytes> actions {native.authorize,random.read} {
+  let cap=Native::capability();
+  os.random_bytes(cap,count)
+}
+identities {module:"native.probe",os.IoResult:"lobo.os.result",os.monotonic_ms:"lobo.os.monotonic_ms",os.random_bytes:"lobo.os.random_bytes",clock:"native.probe.clock",random:"native.probe.random"}

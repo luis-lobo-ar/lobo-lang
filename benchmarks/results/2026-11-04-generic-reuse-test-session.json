@@ -1,0 +1,328 @@
+{
+  "date": "2026-11-04",
+  "kind": "foreground-tool-smoke-no-model-agent",
+  "command": [
+    "./target/release/lobo-test",
+    "--session",
+    "--clang",
+    "/usr/bin/clang"
+  ],
+  "runner_sha256": "3bfba3c2ba9f7a3bdf45964abc7babe46d5abb95631db0f12b2942aeb2e6ec32",
+  "source_sha256": "486f02c8f314d37ba9b5720474772b2782095ac656aa24eac418529f8ae3e28f",
+  "requests": [
+    {
+      "op": "open",
+      "root": "generic",
+      "sources": [
+        {
+          "name": "generic",
+          "text": "module generics @id(\"example.generics\");\n\nfunction identity<T> @id(\"example.generics.identity\")(value: T) -> T\nensures { result == value }\n{ value }\n\nfunction contains<T> @id(\"example.generics.contains\")(xs: List<T>, value: T) -> Bool {\n  if List::length(xs) == 0 { false } else {\n    if List::head(xs) == value { true } else { contains::<T>(List::tail(xs), value) }\n  }\n}\n\nrecord Item @id(\"example.generics.item\") { key: I64, name: Text }\n\nfunction number @id(\"example.generics.number\")(value: I64) -> I64 { identity::<I64>(value) }\nfunction text @id(\"example.generics.text\")(value: Text) -> Text { identity::<Text>(value) }\nfunction item @id(\"example.generics.echo\")(value: Item) -> Item { identity::<Item>(value) }\nfunction has @id(\"example.generics.has\")(xs: List<Item>, value: Item) -> Bool {\n  contains::<Item>(xs, value)\n}\n"
+        }
+      ],
+      "requirements": [
+        {
+          "id": "reuse",
+          "description": "Generic scalar/text/record calls and independent membership"
+        }
+      ],
+      "tests": [
+        {
+          "id": "number",
+          "requirement": "reuse",
+          "entry": "example.generics.number",
+          "arguments": [
+            "I64:7"
+          ],
+          "expect": {
+            "kind": "value",
+            "value": {
+              "type": "I64",
+              "value": "7"
+            }
+          },
+          "fuel": 1000,
+          "heap_cells": 1000
+        },
+        {
+          "id": "text",
+          "requirement": "reuse",
+          "entry": "example.generics.text",
+          "arguments": [
+            "Text:c3a9"
+          ],
+          "expect": {
+            "kind": "value",
+            "value": {
+              "type": "Text",
+              "value": "é"
+            }
+          },
+          "fuel": 1000,
+          "heap_cells": 1000
+        },
+        {
+          "id": "item",
+          "requirement": "reuse",
+          "entry": "example.generics.echo",
+          "arguments": [
+            "Record:example.generics.item:I64:7,Text:78"
+          ],
+          "expect": {
+            "kind": "value",
+            "value": {
+              "type": "Record",
+              "value": {
+                "id": "example.generics.item",
+                "fields": {
+                  "key": {
+                    "type": "I64",
+                    "value": "7"
+                  },
+                  "name": {
+                    "type": "Text",
+                    "value": "x"
+                  }
+                }
+              }
+            }
+          },
+          "fuel": 1000,
+          "heap_cells": 1000
+        },
+        {
+          "id": "has",
+          "requirement": "reuse",
+          "entry": "example.generics.has",
+          "arguments": [
+            "List:Count:1,I64:7,Text:78",
+            "Record:example.generics.item:I64:7,Text:78"
+          ],
+          "expect": {
+            "kind": "value",
+            "value": {
+              "type": "Bool",
+              "value": true
+            }
+          },
+          "fuel": 1000,
+          "heap_cells": 1000
+        }
+      ]
+    },
+    {
+      "op": "verify",
+      "base": "s1",
+      "root": "generic",
+      "sources": [
+        {
+          "name": "generic",
+          "text": "module generics @id(\"example.generics\");\n\nfunction identity<T> @id(\"example.generics.identity\")(value: T) -> T\nensures { result == value }\n{ value }\n\nfunction contains<T> @id(\"example.generics.contains\")(xs: List<T>, value: T) -> Bool {\n  if List::length(xs) == 0 { false } else {\n    if List::head(xs) == value { true } else { contains::<T>(List::tail(xs), value) }\n  }\n}\n\nrecord Item @id(\"example.generics.item\") { key: I64, name: Text }\n\nfunction number @id(\"example.generics.number\")(value: I64) -> I64 { identity::<I64>(value) }\nfunction text @id(\"example.generics.text\")(value: Text) -> Text { identity::<Text>(value) }\nfunction item @id(\"example.generics.echo\")(value: Item) -> Item { identity::<Item>(value) }\nfunction has @id(\"example.generics.has\")(xs: List<Item>, value: Item) -> Bool {\n  contains::<Item>(xs, value)\n}\n"
+        }
+      ],
+      "environment": "core011-public-development-v1",
+      "scope": "all",
+      "max_cases": 256,
+      "wall_ms": 5000
+    },
+    {
+      "op": "verify",
+      "base": "s2",
+      "root": "generic",
+      "sources": [
+        {
+          "name": "generic",
+          "text": "module generics @id(\"example.generics\");\n\nfunction identity<T> @id(\"example.generics.identity\")(value: T) -> T\nensures { false }\n{ value }\n\nfunction contains<T> @id(\"example.generics.contains\")(xs: List<T>, value: T) -> Bool {\n  if List::length(xs) == 0 { false } else {\n    if List::head(xs) == value { true } else { contains::<T>(List::tail(xs), value) }\n  }\n}\n\nrecord Item @id(\"example.generics.item\") { key: I64, name: Text }\n\nfunction number @id(\"example.generics.number\")(value: I64) -> I64 { identity::<I64>(value) }\nfunction text @id(\"example.generics.text\")(value: Text) -> Text { identity::<Text>(value) }\nfunction item @id(\"example.generics.echo\")(value: Item) -> Item { identity::<Item>(value) }\nfunction has @id(\"example.generics.has\")(xs: List<Item>, value: Item) -> Bool {\n  contains::<Item>(xs, value)\n}\n"
+        }
+      ],
+      "environment": "core011-public-development-v1",
+      "scope": "affected",
+      "max_cases": 256,
+      "wall_ms": 5000
+    },
+    {
+      "op": "verify",
+      "base": "s2",
+      "root": "generic",
+      "sources": [
+        {
+          "name": "generic",
+          "text": "module generics @id(\"example.generics\");\n\nfunction identity<T> @id(\"example.generics.identity\")(value: T) -> T\nensures { result == value }\n{ value }\n\nfunction contains<T> @id(\"example.generics.contains\")(xs: List<T>, value: T) -> Bool {\n  if List::length(xs) == 0 { false } else {\n    if List::head(xs) == value { true } else { contains::<T>(List::tail(xs), value) }\n  }\n}\n\nrecord Item @id(\"example.generics.item\") { key: I64, name: Text }\n\nfunction number @id(\"example.generics.number\")(value: I64) -> I64 { identity::<I64>(value) }\nfunction text @id(\"example.generics.text\")(value: Text) -> Text { identity::<Text>(value) }\nfunction item @id(\"example.generics.echo\")(value: Item) -> Item { identity::<Item>(value) }\nfunction has @id(\"example.generics.has\")(xs: List<Item>, value: Item) -> Bool {\n  contains::<Item>(xs, value)\n}\n\nfunction flag @id(\"example.generics.flag\")() -> Bool { identity::<Bool>(true) }\n"
+        }
+      ],
+      "environment": "core011-public-development-v1",
+      "scope": "affected",
+      "max_cases": 256,
+      "wall_ms": 5000
+    },
+    {
+      "op": "verify",
+      "base": "s2",
+      "root": "generic",
+      "sources": [
+        {
+          "name": "generic",
+          "text": "module generics @id(\"example.generics\");\n\nfunction identity<T> @id(\"example.generics.identity\")(value: T) -> T\nensures { result == value }\n{ value }\n\nfunction contains<T> @id(\"example.generics.contains\")(xs: List<T>, value: T) -> Bool {\n  if List::length(xs) == 0 { false } else {\n    if List::head(xs) == value { true } else { contains::<T>(List::tail(xs), value) }\n  }\n}\n\nrecord Item @id(\"example.generics.item\") { key: I64, name: Text }\n\nfunction number @id(\"example.generics.number\")(value: I64) -> I64 { identity::<I64>(value) }\nfunction text @id(\"example.generics.text\")(value: Text) -> Text { identity::<Text>(value) }\nfunction item @id(\"example.generics.echo\")(value: Item) -> Item { identity::<Item>(value) }\nfunction has @id(\"example.generics.has\")(xs: List<Item>, value: Item) -> Bool {\n  contains::<Item>(xs, value)\n}\n"
+        }
+      ],
+      "environment": "core011-public-development-v1",
+      "scope": "all",
+      "max_cases": 256,
+      "wall_ms": 5000
+    },
+    {
+      "op": "close"
+    }
+  ],
+  "responses": [
+    {
+      "checks": 4,
+      "criteria": "frozen for this session; not external approval",
+      "format": "lobo-test/0.1",
+      "session": "92247:1793813503917104942",
+      "snapshot": "s1",
+      "status": "opened"
+    },
+    {
+      "counts": {
+        "executed": 4,
+        "failed": 0,
+        "passed": 4,
+        "pending": 0,
+        "reused": 0
+      },
+      "elapsed_ms": 247,
+      "failures": [],
+      "failures_omitted": 0,
+      "format": "lobo-test/0.1",
+      "full_execution": true,
+      "pending_omitted": 0,
+      "pending_tests": [],
+      "session": "92247:1793813503917104942",
+      "snapshot": "s2",
+      "status": "checks_satisfied",
+      "uncovered_requirements": []
+    },
+    {
+      "counts": {
+        "executed": 3,
+        "failed": 3,
+        "passed": 1,
+        "pending": 0,
+        "reused": 1
+      },
+      "elapsed_ms": 242,
+      "failures": [
+        {
+          "detail": {
+            "diagnostic": {
+              "code": "runtime.contract.postcondition",
+              "phase": "postcondition",
+              "subject": "lobo.generic.45d4779c75ecd5ff4b10c81f4bf61aee"
+            },
+            "kind": "runtime_fault",
+            "status": "error"
+          },
+          "replay": {
+            "snapshot": "s3",
+            "test": "number"
+          },
+          "requirement": "reuse",
+          "status": "runtime_fault",
+          "test": "number"
+        },
+        {
+          "detail": {
+            "diagnostic": {
+              "code": "runtime.contract.postcondition",
+              "phase": "postcondition",
+              "subject": "lobo.generic.2cf1a05e8b6b5121961a24d0f80ca3be"
+            },
+            "kind": "runtime_fault",
+            "status": "error"
+          },
+          "replay": {
+            "snapshot": "s3",
+            "test": "text"
+          },
+          "requirement": "reuse",
+          "status": "runtime_fault",
+          "test": "text"
+        },
+        {
+          "detail": {
+            "diagnostic": {
+              "code": "runtime.contract.postcondition",
+              "phase": "postcondition",
+              "subject": "lobo.generic.7e857f56b22a16214267a65f8e842eff"
+            },
+            "kind": "runtime_fault",
+            "status": "error"
+          },
+          "replay": {
+            "snapshot": "s3",
+            "test": "item"
+          },
+          "requirement": "reuse",
+          "status": "runtime_fault",
+          "test": "item"
+        }
+      ],
+      "failures_omitted": 0,
+      "format": "lobo-test/0.1",
+      "full_execution": false,
+      "pending_omitted": 0,
+      "pending_tests": [],
+      "session": "92247:1793813503917104942",
+      "snapshot": "s3",
+      "status": "failed",
+      "uncovered_requirements": []
+    },
+    {
+      "counts": {
+        "executed": 0,
+        "failed": 0,
+        "passed": 4,
+        "pending": 0,
+        "reused": 4
+      },
+      "elapsed_ms": 1,
+      "failures": [],
+      "failures_omitted": 0,
+      "format": "lobo-test/0.1",
+      "full_execution": false,
+      "pending_omitted": 0,
+      "pending_tests": [],
+      "session": "92247:1793813503917104942",
+      "snapshot": "s4",
+      "status": "checks_satisfied",
+      "uncovered_requirements": []
+    },
+    {
+      "counts": {
+        "executed": 4,
+        "failed": 0,
+        "passed": 4,
+        "pending": 0,
+        "reused": 0
+      },
+      "elapsed_ms": 262,
+      "failures": [],
+      "failures_omitted": 0,
+      "format": "lobo-test/0.1",
+      "full_execution": true,
+      "pending_omitted": 0,
+      "pending_tests": [],
+      "session": "92247:1793813503917104942",
+      "snapshot": "s5",
+      "status": "checks_satisfied",
+      "uncovered_requirements": []
+    },
+    {
+      "format": "lobo-test/0.1",
+      "session": "92247:1793813503917104942",
+      "status": "closed"
+    }
+  ],
+  "exit_code": 0,
+  "limits": "Public development fixture. No model, token usage, or comprehension scores. Failed generic contract is an intentional canary with unchanged criteria."
+}

@@ -1,0 +1,14 @@
+module rest_api;
+use http { Request, Response, serve };
+use controller { handle };
+
+fn main(port:I64,max_requests:I64)->Native::I64Result
+actions {native.authorize,clock.read,net.listen,net.accept,net.read,net.write,net.close}
+requires {port>=1 && port<=65535 && max_requests>=1 && max_requests<=128}
+{
+  let cap=try Native::restrict_capability(Native::capability(),5);
+  let listener=try Native::listen(cap,port);
+  let outcome=serve(listener,cap,max_requests,handle);
+  let closed=try Native::close_listener(listener);
+  outcome
+}

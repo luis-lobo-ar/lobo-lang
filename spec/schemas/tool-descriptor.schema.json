@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://lobo-lang.invalid/spec/ltp/0.1/tool-descriptor.schema.json",
+  "$id": "https://lobo-lang.invalid/spec/ltp/0.2/tool-descriptor.schema.json",
   "title": "Lobo Tool Protocol tool descriptor",
   "type": "object",
   "additionalProperties": false,
@@ -9,7 +9,7 @@
     "version",
     "safety_tier",
     "summary",
-    "effects",
+    "actions",
     "required_capabilities",
     "idempotency",
     "cancellable",
@@ -35,7 +35,7 @@
       "minLength": 1,
       "maxLength": 1024
     },
-    "effects": {
+    "actions": {
       "type": "array",
       "maxItems": 64,
       "items": {

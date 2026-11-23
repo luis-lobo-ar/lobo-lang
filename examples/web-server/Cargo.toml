@@ -1,0 +1,19 @@
+[package]
+name = "lobo-web-example"
+version = "0.1.0"
+edition = "2021"
+publish = false
+
+[[bin]]
+name = "lobo-web-example"
+path = "host.rs"
+
+[dependencies]
+httparse = "=1.10.1"
+httpdate = "=1.0.3"
+serde_json = "1"
+
+[profile.release]
+opt-level = 3
+lto = true
+strip = true

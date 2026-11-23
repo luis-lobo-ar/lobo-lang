@@ -1,0 +1,52 @@
+{
+  "format": "lobo-user-run/0.1",
+  "date": "2026-11-22",
+  "evidence_kind": "user-reported execution",
+  "os": "Windows 10",
+  "os_correction": "User initially said Windows 11, then corrected to Windows 10.",
+  "raw_stdout": "{\"status\":\"ok\",\"kind\":\"value\",\"value\":{\"type\":\"Variant\",\"value\":{\"id\":\"lobo.generic.type.c09c71e43c56183b079d77143d13711d\",\"case\":\"Ok\",\"payload\":{\"type\":\"Record\",\"value\":{\"id\":\"native.snapshot.value\",\"fields\":{\"monotonic_ms\":{\"type\":\"I64\",\"value\":\"112239546\"},\"random_bytes\":{\"type\":\"Bytes\",\"value\":\"6b9339187ff0fc992bd12680664e8efc\"}}}}}}}",
+  "parsed_stdout": {
+    "status": "ok",
+    "kind": "value",
+    "value": {
+      "type": "Variant",
+      "value": {
+        "id": "lobo.generic.type.c09c71e43c56183b079d77143d13711d",
+        "case": "Ok",
+        "payload": {
+          "type": "Record",
+          "value": {
+            "id": "native.snapshot.value",
+            "fields": {
+              "monotonic_ms": {
+                "type": "I64",
+                "value": "112239546"
+              },
+              "random_bytes": {
+                "type": "Bytes",
+                "value": "6b9339187ff0fc992bd12680664e8efc"
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "checks": {
+    "json_valid": true,
+    "typed_Ok_snapshot": true,
+    "nonnegative_I64_clock": true,
+    "random_bytes_length": 16
+  },
+  "artifact": "dist/windows-snapshot-1.7.2/LoboSnapshot.exe",
+  "delivered_artifact_sha256": "7b7bb92825d2ce980cbbf3d7902158a8ee84841ba1c1bd8d6b158f7cdf36b62a",
+  "executed_artifact_hash_verified": false,
+  "command": null,
+  "exit_code": null,
+  "windows_build": null,
+  "launch_mode": null,
+  "limits": [
+    "Pasted output and OS identification supplied by the user; agent did not execute on Windows.",
+    "One successful snapshot does not validate network operations, failure paths or RNG quality."
+  ]
+}

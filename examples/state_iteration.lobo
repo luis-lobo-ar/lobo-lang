@@ -1,0 +1,33 @@
+module state_iteration;
+
+record Pair { a: I64, b: I64 }
+record Search { remaining: List<I64>, index: I64, found: Bool }
+
+fn gcd(left: I64, right: I64) -> I64
+requires { left >= 0 && right >= 0 }
+{
+  let done = while(pair: Pair = Pair { a: left, b: right }; pair.b != 0) {
+    Pair { a: pair.b, b: pair.a % pair.b }
+  };
+  done.a
+}
+
+fn find(input: List<I64>, target: I64) -> I64 {
+  let done = while(state: Search = Search { remaining: input, index: 0, found: false };
+    !state.found && List::length(state.remaining) > 0) {
+    let found = List::head(state.remaining) == target;
+    Search {
+      remaining: List::tail(state.remaining), index: if found { state.index } else { state.index + 1 },
+      found: found
+    }
+  };
+  if done.found { done.index } else { -1 }
+}
+
+identities {
+  module: "example.state_iteration",
+  Pair: "example.state_iteration.pair",
+  Search: "example.state_iteration.search",
+  gcd: "example.state_iteration.gcd",
+  find: "example.state_iteration.find"
+}

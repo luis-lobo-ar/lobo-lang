@@ -1,0 +1,1698 @@
+{
+  "accessed": "2026-11-03",
+  "method": "Targeted scoping search, not a systematic review. Primary records and selected full-text sections were checked; studies were not replicated.",
+  "records": [
+    {
+      "key": "wu2026tokenmaxxing",
+      "arxiv": "2607.22807v2",
+      "category": "language_cost",
+      "priority": "essential",
+      "status": "ArXiv preprint; publication venue not independently confirmed",
+      "review": "Selected full text: methods, trajectory analysis, token accounting and representation appendix",
+      "title": "The Best Programming Language for Tokenmaxxing: An Investigation of Coding Agent Behavior Across Programming Languages",
+      "authors": [
+        "Wu, Zixuan",
+        "Anderson, Carolyn Jane",
+        "Guha, Arjun"
+      ],
+      "date": "2026/07/24",
+      "updated": "2026/10/21",
+      "year": "2026",
+      "pinned_id": "2607.22807v2",
+      "url": "https://arxiv.org/abs/2607.22807v2",
+      "doi": "10.48550/arXiv.2607.22807",
+      "metadata_sha256": "7629246b17d22a16c44ec3a55ab4d76a4313d5d9a71c6de837894077efbcebd0",
+      "metadata_fields": {
+        "citation_title": [
+          "The Best Programming Language for Tokenmaxxing: An Investigation of Coding Agent Behavior Across Programming Languages"
+        ],
+        "citation_author": [
+          "Wu, Zixuan",
+          "Anderson, Carolyn Jane",
+          "Guha, Arjun"
+        ],
+        "citation_date": [
+          "2026/07/24"
+        ],
+        "citation_online_date": [
+          "2026/10/21"
+        ],
+        "citation_pdf_url": [
+          "https://arxiv.org/pdf/2607.22807"
+        ],
+        "citation_arxiv_id": [
+          "2607.22807"
+        ]
+      },
+      "accessed": "2026-11-03"
+    },
+    {
+      "key": "chen2024typefly",
+      "arxiv": "2312.14950v2",
+      "category": "agent_language",
+      "priority": "essential",
+      "status": "ArXiv version reviewed; later journal record must be cited separately if used",
+      "review": "Selected full text: MiniSpec language/runtime design and evaluation section 7.3",
+      "title": "TypeFly: Flying Drones with Large Language Model",
+      "authors": [
+        "Chen, Guojun",
+        "Yu, Xiaojing",
+        "Ling, Neiwen",
+        "Zhong, Lin"
+      ],
+      "date": "2023/12/08",
+      "updated": "2024/09/26",
+      "year": "2023",
+      "pinned_id": "2312.14950v2",
+      "url": "https://arxiv.org/abs/2312.14950v2",
+      "doi": "10.48550/arXiv.2312.14950",
+      "metadata_sha256": "d11694a6cdb92b46309a14114c032c300c5efdb10dd658da9bf4b2c97b96e471",
+      "metadata_fields": {
+        "citation_title": [
+          "TypeFly: Flying Drones with Large Language Model"
+        ],
+        "citation_author": [
+          "Chen, Guojun",
+          "Yu, Xiaojing",
+          "Ling, Neiwen",
+          "Zhong, Lin"
+        ],
+        "citation_date": [
+          "2023/12/08"
+        ],
+        "citation_online_date": [
+          "2024/09/26"
+        ],
+        "citation_pdf_url": [
+          "https://arxiv.org/pdf/2312.14950"
+        ],
+        "citation_arxiv_id": [
+          "2312.14950"
+        ]
+      },
+      "accessed": "2026-11-03"
+    },
+    {
+      "key": "blinn2024typedholes",
+      "arxiv": "2409.00921v1",
+      "category": "semantic_context",
+      "priority": "essential",
+      "status": "Published PACMPL 8 OOPSLA2, 2024; DOI 10.1145/3689728",
+      "review": "Selected full text: static retrieval, Hazel crash course, TypeScript method and limitations",
+      "venue_url": "https://doi.org/10.1145/3689728",
+      "title": "Statically Contextualizing Large Language Models with Typed Holes",
+      "authors": [
+        "Blinn, Andrew",
+        "Li, Xiang",
+        "Kim, June Hyung",
+        "Omar, Cyrus"
+      ],
+      "date": "2024/09/02",
+      "updated": "2024/09/02",
+      "year": "2024",
+      "pinned_id": "2409.00921v1",
+      "url": "https://arxiv.org/abs/2409.00921v1",
+      "doi": "10.48550/arXiv.2409.00921",
+      "metadata_sha256": "a9efbf4c00fb95372c8fa43c58c083e19fbca690870603a3928833fb0fd63d5e",
+      "metadata_fields": {
+        "citation_title": [
+          "Statically Contextualizing Large Language Models with Typed Holes"
+        ],
+        "citation_author": [
+          "Blinn, Andrew",
+          "Li, Xiang",
+          "Kim, June Hyung",
+          "Omar, Cyrus"
+        ],
+        "citation_doi": [
+          "10.1145/3689728"
+        ],
+        "citation_date": [
+          "2024/09/02"
+        ],
+        "citation_online_date": [
+          "2024/09/02"
+        ],
+        "citation_pdf_url": [
+          "https://arxiv.org/pdf/2409.00921"
+        ],
+        "citation_arxiv_id": [
+          "2409.00921"
+        ]
+      },
+      "accessed": "2026-11-03"
+    },
+    {
+      "key": "hind2026llmon",
+      "arxiv": "2603.22519v4",
+      "category": "structured_interface",
+      "priority": "supporting",
+      "status": "ArXiv preprint; publication venue not independently confirmed",
+      "review": "Abstract and primary metadata",
+      "title": "LLMON: An LLM-native Markup Language to Leverage Structure and Semantics at the LLM Interface",
+      "authors": [
+        "Hind, Michael",
+        "Shbita, Basel",
+        "Wu, Bo",
+        "Ahmed, Farhan",
+        "DeLuca, Chad",
+        "Fulton, Nathan",
+        "Cox, David",
+        "Gutfreund, Dan"
+      ],
+      "date": "2026/03/23",
+      "updated": "2026/10/15",
+      "year": "2026",
+      "pinned_id": "2603.22519v4",
+      "url": "https://arxiv.org/abs/2603.22519v4",
+      "doi": "10.48550/arXiv.2603.22519",
+      "metadata_sha256": "6236c7af032a99308bc81a6b1b443abe1a902c9813717927f09161b48f8d4c1f",
+      "metadata_fields": {
+        "citation_title": [
+          "LLMON: An LLM-native Markup Language to Leverage Structure and Semantics at the LLM Interface"
+        ],
+        "citation_author": [
+          "Hind, Michael",
+          "Shbita, Basel",
+          "Wu, Bo",
+          "Ahmed, Farhan",
+          "DeLuca, Chad",
+          "Fulton, Nathan",
+          "Cox, David",
+          "Gutfreund, Dan"
+        ],
+        "citation_date": [
+          "2026/03/23"
+        ],
+        "citation_online_date": [
+          "2026/10/15"
+        ],
+        "citation_pdf_url": [
+          "https://arxiv.org/pdf/2603.22519"
+        ],
+        "citation_arxiv_id": [
+          "2603.22519"
+        ]
+      },
+      "accessed": "2026-11-03"
+    },
+    {
+      "key": "henniger2026djinnlang",
+      "arxiv": "2609.23954v1",
+      "category": "agent_language",
+      "priority": "essential",
+      "status": "ArXiv preprint; publication venue not independently confirmed",
+      "review": "Abstract and primary metadata",
+      "title": "Djinnlang: Higher-Level Programming by Unambiguous Specification with an LLM in the Compiler",
+      "authors": [
+        "Henniger, Simon",
+        "Chong, Stephen",
+        "Amin, Nada"
+      ],
+      "date": "2026/09/21",
+      "updated": "2026/09/21",
+      "year": "2026",
+      "pinned_id": "2609.23954v1",
+      "url": "https://arxiv.org/abs/2609.23954v1",
+      "doi": "10.48550/arXiv.2609.23954",
+      "metadata_sha256": "9139ad029a3f55e0efd37e59fd13012d56d03b344640aa661bb7c8055f74841f",
+      "metadata_fields": {
+        "citation_title": [
+          "Djinnlang: Higher-Level Programming by Unambiguous Specification with an LLM in the Compiler"
+        ],
+        "citation_author": [
+          "Henniger, Simon",
+          "Chong, Stephen",
+          "Amin, Nada"
+        ],
+        "citation_date": [
+          "2026/09/21"
+        ],
+        "citation_online_date": [
+          "2026/09/21"
+        ],
+        "citation_pdf_url": [
+          "https://arxiv.org/pdf/2609.23954"
+        ],
+        "citation_arxiv_id": [
+          "2609.23954"
+        ]
+      },
+      "accessed": "2026-11-03"
+    },
+    {
+      "key": "li2026skillsbench",
+      "arxiv": "2602.12670v4",
+      "category": "skills",
+      "priority": "essential",
+      "status": "ArXiv v4; publication venue not independently confirmed",
+      "review": "Selected full text: evaluation, invocation versus resolution, self-generated condition and limitations",
+      "title": "SkillsBench: Benchmarking How Well Agent Skills Work Across Diverse Tasks",
+      "authors": [
+        "Li, Xiangyi",
+        "Liu, Yimin",
+        "Chen, Wenbo",
+        "You, Bingran",
+        "Di, Zonglin",
+        "He, Yifeng",
+        "Zheng, Shenghan",
+        "Choe, Kyoung Whan",
+        "Sun, Jiankai",
+        "Wang, Shuyi",
+        "Tao, Chujun",
+        "Li, Binxu",
+        "Zhao, Xuandong",
+        "Geng, Hejia",
+        "Wu, Xiaojun",
+        "Zhou, Junwei",
+        "Chen, Xiaokun",
+        "Xing, Hanwen",
+        "Li, Yubo",
+        "Zeng, Qunhong",
+        "Wang, Di",
+        "Wang, Yuanli",
+        "Chaim, Roey Ben",
+        "Jiang, Penghao",
+        "Shen, Haotian",
+        "Kong, Luyang",
+        "Liu, Xinyi",
+        "Wang, Runhui",
+        "Liu, Xuanqing",
+        "Li, Jiachen",
+        "Lan, Xin",
+        "Lin, Yueqian",
+        "Ye, Wengao",
+        "He, Junwei",
+        "Li, Songlin",
+        "Zhang, Yue",
+        "Gao, Yipeng",
+        "Li, Yijiang",
+        "Ma, Ze",
+        "Jing, Liqiang",
+        "Wang, Tianyu",
+        "Li, Kaixin",
+        "Xue, Yiqi",
+        "Lyu, Haoran",
+        "He, Yizhuo",
+        "Tian, Yuchen",
+        "Wu, Shutong",
+        "Wang, Bowei",
+        "Gao, Yixuan",
+        "Chen, Bo",
+        "Liu, Litong",
+        "Cheng, Sikai",
+        "Bao, Jiajun",
+        "Tong, Shuaicheng",
+        "Xu, Shuwen",
+        "Zhuo, Terry Yue",
+        "Ye, Tinghan",
+        "Qi, Qi",
+        "Li, Miao",
+        "Liao, Longtai",
+        "Tan, Zelin",
+        "Shi, Chang",
+        "Tang, Xilin",
+        "Tankasala, Srinath",
+        "Yuan, Boqin",
+        "Qian, Yaoyao",
+        "Tu, Jianhong",
+        "Wang, Chenguang",
+        "Sun, Yizhou",
+        "Wang, Wei",
+        "Taylor, Aaron",
+        "Yang, Ziyue",
+        "Guan, Changkun",
+        "Dong, Zhikang",
+        "Zhang, Xinyu",
+        "Dillmann, Steven",
+        "Lee, Han-chung",
+        "Song, Dawn"
+      ],
+      "date": "2026/02/13",
+      "updated": "2026/06/14",
+      "year": "2026",
+      "pinned_id": "2602.12670v4",
+      "url": "https://arxiv.org/abs/2602.12670v4",
+      "doi": "10.48550/arXiv.2602.12670",
+      "metadata_sha256": "99d2f0ff935f50f230e1ec5527f96a677ab813be3aa79b3dae3afb82d887dbc8",
+      "metadata_fields": {
+        "citation_title": [
+          "SkillsBench: Benchmarking How Well Agent Skills Work Across Diverse Tasks"
+        ],
+        "citation_author": [
+          "Li, Xiangyi",
+          "Liu, Yimin",
+          "Chen, Wenbo",
+          "You, Bingran",
+          "Di, Zonglin",
+          "He, Yifeng",
+          "Zheng, Shenghan",
+          "Choe, Kyoung Whan",
+          "Sun, Jiankai",
+          "Wang, Shuyi",
+          "Tao, Chujun",
+          "Li, Binxu",
+          "Zhao, Xuandong",
+          "Geng, Hejia",
+          "Wu, Xiaojun",
+          "Zhou, Junwei",
+          "Chen, Xiaokun",
+          "Xing, Hanwen",
+          "Li, Yubo",
+          "Zeng, Qunhong",
+          "Wang, Di",
+          "Wang, Yuanli",
+          "Chaim, Roey Ben",
+          "Jiang, Penghao",
+          "Shen, Haotian",
+          "Kong, Luyang",
+          "Liu, Xinyi",
+          "Wang, Runhui",
+          "Liu, Xuanqing",
+          "Li, Jiachen",
+          "Lan, Xin",
+          "Lin, Yueqian",
+          "Ye, Wengao",
+          "He, Junwei",
+          "Li, Songlin",
+          "Zhang, Yue",
+          "Gao, Yipeng",
+          "Li, Yijiang",
+          "Ma, Ze",
+          "Jing, Liqiang",
+          "Wang, Tianyu",
+          "Li, Kaixin",
+          "Xue, Yiqi",
+          "Lyu, Haoran",
+          "He, Yizhuo",
+          "Tian, Yuchen",
+          "Wu, Shutong",
+          "Wang, Bowei",
+          "Gao, Yixuan",
+          "Chen, Bo",
+          "Liu, Litong",
+          "Cheng, Sikai",
+          "Bao, Jiajun",
+          "Tong, Shuaicheng",
+          "Xu, Shuwen",
+          "Zhuo, Terry Yue",
+          "Ye, Tinghan",
+          "Qi, Qi",
+          "Li, Miao",
+          "Liao, Longtai",
+          "Tan, Zelin",
+          "Shi, Chang",
+          "Tang, Xilin",
+          "Tankasala, Srinath",
+          "Yuan, Boqin",
+          "Qian, Yaoyao",
+          "Tu, Jianhong",
+          "Wang, Chenguang",
+          "Sun, Yizhou",
+          "Wang, Wei",
+          "Taylor, Aaron",
+          "Yang, Ziyue",
+          "Guan, Changkun",
+          "Dong, Zhikang",
+          "Zhang, Xinyu",
+          "Dillmann, Steven",
+          "Lee, Han-chung",
+          "Song, Dawn"
+        ],
+        "citation_date": [
+          "2026/02/13"
+        ],
+        "citation_online_date": [
+          "2026/06/14"
+        ],
+        "citation_pdf_url": [
+          "https://arxiv.org/pdf/2602.12670"
+        ],
+        "citation_arxiv_id": [
+          "2602.12670"
+        ]
+      },
+      "accessed": "2026-11-03"
+    },
+    {
+      "key": "han2026sweskills",
+      "arxiv": "2603.15401v2",
+      "category": "skills",
+      "priority": "essential",
+      "status": "ArXiv v2; publication venue not independently confirmed",
+      "review": "Selected full text: paired construction, removal of pre-existing skills, statistical procedure and results",
+      "title": "SWE-Skills-Bench: Do Agent Skills Actually Help in Real-World Software Engineering?",
+      "authors": [
+        "Han, Tingxu",
+        "Zhang, Yi",
+        "Song, Wei",
+        "Fang, Chunrong",
+        "Chen, Zhenyu",
+        "Sun, Youcheng",
+        "Hu, Lijie"
+      ],
+      "date": "2026/03/16",
+      "updated": "2026/10/27",
+      "year": "2026",
+      "pinned_id": "2603.15401v2",
+      "url": "https://arxiv.org/abs/2603.15401v2",
+      "doi": "10.48550/arXiv.2603.15401",
+      "metadata_sha256": "8a56793f588d215fd4b959fe9e7dfc16d3374f03df960c8c8b2f7f85e814b3b8",
+      "metadata_fields": {
+        "citation_title": [
+          "SWE-Skills-Bench: Do Agent Skills Actually Help in Real-World Software Engineering?"
+        ],
+        "citation_author": [
+          "Han, Tingxu",
+          "Zhang, Yi",
+          "Song, Wei",
+          "Fang, Chunrong",
+          "Chen, Zhenyu",
+          "Sun, Youcheng",
+          "Hu, Lijie"
+        ],
+        "citation_date": [
+          "2026/03/16"
+        ],
+        "citation_online_date": [
+          "2026/10/27"
+        ],
+        "citation_pdf_url": [
+          "https://arxiv.org/pdf/2603.15401"
+        ],
+        "citation_arxiv_id": [
+          "2603.15401"
+        ]
+      },
+      "accessed": "2026-11-03"
+    },
+    {
+      "key": "lulla2026agentsmd",
+      "arxiv": "2601.20404v2",
+      "category": "skills",
+      "priority": "essential",
+      "status": "ArXiv version reviewed; venue not independently confirmed here",
+      "review": "Abstract and primary metadata",
+      "title": "On the Impact of AGENTS.md Files on the Efficiency of AI Coding Agents",
+      "authors": [
+        "Lulla, Jai Lal",
+        "Mohsenimofidi, Seyedmoein",
+        "Galster, Matthias",
+        "Zhang, Jie M.",
+        "Baltes, Sebastian",
+        "Treude, Christoph"
+      ],
+      "date": "2026/01/28",
+      "updated": "2026/03/30",
+      "year": "2026",
+      "pinned_id": "2601.20404v2",
+      "url": "https://arxiv.org/abs/2601.20404v2",
+      "doi": "10.48550/arXiv.2601.20404",
+      "metadata_sha256": "e4372f180f6f73463e54671862309da0f3fe5d8a5c382ad0ebde13f1b2f3d177",
+      "metadata_fields": {
+        "citation_title": [
+          "On the Impact of AGENTS.md Files on the Efficiency of AI Coding Agents"
+        ],
+        "citation_author": [
+          "Lulla, Jai Lal",
+          "Mohsenimofidi, Seyedmoein",
+          "Galster, Matthias",
+          "Zhang, Jie M.",
+          "Baltes, Sebastian",
+          "Treude, Christoph"
+        ],
+        "citation_date": [
+          "2026/01/28"
+        ],
+        "citation_online_date": [
+          "2026/03/30"
+        ],
+        "citation_pdf_url": [
+          "https://arxiv.org/pdf/2601.20404"
+        ],
+        "citation_arxiv_id": [
+          "2601.20404"
+        ]
+      },
+      "accessed": "2026-11-03"
+    },
+    {
+      "key": "wang2024codeact",
+      "arxiv": "2402.01030v4",
+      "category": "agent_interface",
+      "priority": "essential",
+      "status": "Published ICML 2024, PMLR 235",
+      "review": "Abstract and selected primary paper excerpts",
+      "venue_url": "https://proceedings.mlr.press/v235/wang24h.html",
+      "title": "Executable Code Actions Elicit Better LLM Agents",
+      "authors": [
+        "Wang, Xingyao",
+        "Chen, Yangyi",
+        "Yuan, Lifan",
+        "Zhang, Yizhe",
+        "Li, Yunzhu",
+        "Peng, Hao",
+        "Ji, Heng"
+      ],
+      "date": "2024/02/01",
+      "updated": "2024/06/07",
+      "year": "2024",
+      "pinned_id": "2402.01030v4",
+      "url": "https://arxiv.org/abs/2402.01030v4",
+      "doi": "10.48550/arXiv.2402.01030",
+      "metadata_sha256": "5494765871e42a251bcbd9f2317ac0418c0bff2addb1e658dae99765316c20c1",
+      "metadata_fields": {
+        "citation_title": [
+          "Executable Code Actions Elicit Better LLM Agents"
+        ],
+        "citation_author": [
+          "Wang, Xingyao",
+          "Chen, Yangyi",
+          "Yuan, Lifan",
+          "Zhang, Yizhe",
+          "Li, Yunzhu",
+          "Peng, Hao",
+          "Ji, Heng"
+        ],
+        "citation_date": [
+          "2024/02/01"
+        ],
+        "citation_online_date": [
+          "2024/06/07"
+        ],
+        "citation_pdf_url": [
+          "https://arxiv.org/pdf/2402.01030"
+        ],
+        "citation_arxiv_id": [
+          "2402.01030"
+        ]
+      },
+      "accessed": "2026-11-03"
+    },
+    {
+      "key": "yang2024sweagent",
+      "arxiv": "2405.15793v3",
+      "category": "agent_interface",
+      "priority": "essential",
+      "status": "Published NeurIPS 2024",
+      "review": "Abstract and selected primary interface/ablation excerpts",
+      "title": "SWE-agent: Agent-Computer Interfaces Enable Automated Software Engineering",
+      "authors": [
+        "Yang, John",
+        "Jimenez, Carlos E.",
+        "Wettig, Alexander",
+        "Lieret, Kilian",
+        "Yao, Shunyu",
+        "Narasimhan, Karthik",
+        "Press, Ofir"
+      ],
+      "date": "2024/05/06",
+      "updated": "2024/11/11",
+      "year": "2024",
+      "pinned_id": "2405.15793v3",
+      "url": "https://arxiv.org/abs/2405.15793v3",
+      "doi": "10.48550/arXiv.2405.15793",
+      "metadata_sha256": "12358ac4ec3a588519c06f3dd08ef750d12436790e74e5e475d33384be53848a",
+      "metadata_fields": {
+        "citation_title": [
+          "SWE-agent: Agent-Computer Interfaces Enable Automated Software Engineering"
+        ],
+        "citation_author": [
+          "Yang, John",
+          "Jimenez, Carlos E.",
+          "Wettig, Alexander",
+          "Lieret, Kilian",
+          "Yao, Shunyu",
+          "Narasimhan, Karthik",
+          "Press, Ofir"
+        ],
+        "citation_date": [
+          "2024/05/06"
+        ],
+        "citation_online_date": [
+          "2024/11/11"
+        ],
+        "citation_pdf_url": [
+          "https://arxiv.org/pdf/2405.15793"
+        ],
+        "citation_arxiv_id": [
+          "2405.15793"
+        ]
+      },
+      "accessed": "2026-11-03"
+    },
+    {
+      "key": "beurerkellner2023lmql",
+      "arxiv": "2212.06094v3",
+      "category": "llm_orchestration_language",
+      "priority": "supporting",
+      "status": "Published PLDI 2023, DOI 10.1145/3591300",
+      "review": "Abstract and primary metadata",
+      "venue_url": "https://doi.org/10.1145/3591300",
+      "title": "Prompting Is Programming: A Query Language for Large Language Models",
+      "authors": [
+        "Beurer-Kellner, Luca",
+        "Fischer, Marc",
+        "Vechev, Martin"
+      ],
+      "date": "2022/12/12",
+      "updated": "2023/05/30",
+      "year": "2022",
+      "pinned_id": "2212.06094v3",
+      "url": "https://arxiv.org/abs/2212.06094v3",
+      "doi": "10.48550/arXiv.2212.06094",
+      "metadata_sha256": "8668e3139a297766ef079b07c98e971c11affccf99f3d74d6c8c1409348cfc41",
+      "metadata_fields": {
+        "citation_title": [
+          "Prompting Is Programming: A Query Language for Large Language Models"
+        ],
+        "citation_author": [
+          "Beurer-Kellner, Luca",
+          "Fischer, Marc",
+          "Vechev, Martin"
+        ],
+        "citation_doi": [
+          "10.1145/3591300"
+        ],
+        "citation_date": [
+          "2022/12/12"
+        ],
+        "citation_online_date": [
+          "2023/05/30"
+        ],
+        "citation_pdf_url": [
+          "https://arxiv.org/pdf/2212.06094"
+        ],
+        "citation_arxiv_id": [
+          "2212.06094"
+        ]
+      },
+      "accessed": "2026-11-03"
+    },
+    {
+      "key": "zheng2024sglang",
+      "arxiv": "2312.07104v2",
+      "category": "llm_orchestration_language",
+      "priority": "supporting",
+      "status": "Published NeurIPS 2024",
+      "review": "Abstract and primary proceedings introduction",
+      "venue_url": "https://proceedings.neurips.cc/paper_files/paper/2024/hash/724be4472168f31ba1c9ac630f15dec8-Abstract-Conference.html",
+      "title": "SGLang: Efficient Execution of Structured Language Model Programs",
+      "authors": [
+        "Zheng, Lianmin",
+        "Yin, Liangsheng",
+        "Xie, Zhiqiang",
+        "Sun, Chuyue",
+        "Huang, Jeff",
+        "Yu, Cody Hao",
+        "Cao, Shiyi",
+        "Kozyrakis, Christos",
+        "Stoica, Ion",
+        "Gonzalez, Joseph E.",
+        "Barrett, Clark",
+        "Sheng, Ying"
+      ],
+      "date": "2023/12/12",
+      "updated": "2024/06/06",
+      "year": "2023",
+      "pinned_id": "2312.07104v2",
+      "url": "https://arxiv.org/abs/2312.07104v2",
+      "doi": "10.48550/arXiv.2312.07104",
+      "metadata_sha256": "ecb269f43638086d003f76224d72205e11dff88aee5246d1d423cf9c3603f649",
+      "metadata_fields": {
+        "citation_title": [
+          "SGLang: Efficient Execution of Structured Language Model Programs"
+        ],
+        "citation_author": [
+          "Zheng, Lianmin",
+          "Yin, Liangsheng",
+          "Xie, Zhiqiang",
+          "Sun, Chuyue",
+          "Huang, Jeff",
+          "Yu, Cody Hao",
+          "Cao, Shiyi",
+          "Kozyrakis, Christos",
+          "Stoica, Ion",
+          "Gonzalez, Joseph E.",
+          "Barrett, Clark",
+          "Sheng, Ying"
+        ],
+        "citation_date": [
+          "2023/12/12"
+        ],
+        "citation_online_date": [
+          "2024/06/06"
+        ],
+        "citation_pdf_url": [
+          "https://arxiv.org/pdf/2312.07104"
+        ],
+        "citation_arxiv_id": [
+          "2312.07104"
+        ]
+      },
+      "accessed": "2026-11-03"
+    },
+    {
+      "key": "cassano2022multiple",
+      "arxiv": "2208.08227v4",
+      "category": "evaluation",
+      "priority": "supporting",
+      "status": "ArXiv 2022 version reviewed; later publication metadata not used",
+      "review": "Abstract and primary metadata",
+      "title": "MultiPL-E: A Scalable and Extensible Approach to Benchmarking Neural Code Generation",
+      "authors": [
+        "Cassano, Federico",
+        "Gouwar, John",
+        "Nguyen, Daniel",
+        "Nguyen, Sydney",
+        "Phipps-Costin, Luna",
+        "Pinckney, Donald",
+        "Yee, Ming-Ho",
+        "Zi, Yangtian",
+        "Anderson, Carolyn Jane",
+        "Feldman, Molly Q",
+        "Guha, Arjun",
+        "Greenberg, Michael",
+        "Jangda, Abhinav"
+      ],
+      "date": "2022/08/17",
+      "updated": "2022/12/19",
+      "year": "2022",
+      "pinned_id": "2208.08227v4",
+      "url": "https://arxiv.org/abs/2208.08227v4",
+      "doi": "10.48550/arXiv.2208.08227",
+      "metadata_sha256": "44891e8d7b294b2d4609a80248e60e9d8f7372be36296e504a67d40089deff88",
+      "metadata_fields": {
+        "citation_title": [
+          "MultiPL-E: A Scalable and Extensible Approach to Benchmarking Neural Code Generation"
+        ],
+        "citation_author": [
+          "Cassano, Federico",
+          "Gouwar, John",
+          "Nguyen, Daniel",
+          "Nguyen, Sydney",
+          "Phipps-Costin, Luna",
+          "Pinckney, Donald",
+          "Yee, Ming-Ho",
+          "Zi, Yangtian",
+          "Anderson, Carolyn Jane",
+          "Feldman, Molly Q",
+          "Guha, Arjun",
+          "Greenberg, Michael",
+          "Jangda, Abhinav"
+        ],
+        "citation_date": [
+          "2022/08/17"
+        ],
+        "citation_online_date": [
+          "2022/12/19"
+        ],
+        "citation_pdf_url": [
+          "https://arxiv.org/pdf/2208.08227"
+        ],
+        "citation_arxiv_id": [
+          "2208.08227"
+        ]
+      },
+      "accessed": "2026-11-03"
+    },
+    {
+      "key": "bairi2023codeplan",
+      "arxiv": "2309.12499v1",
+      "category": "semantic_context",
+      "priority": "supporting",
+      "status": "Later FSE 2024 publication exists; numeric results here are not merged across versions",
+      "review": "Abstract and primary conference/author repository records",
+      "venue_url": "https://github.com/microsoft/CodePlan",
+      "title": "CodePlan: Repository-level Coding using LLMs and Planning",
+      "authors": [
+        "Bairi, Ramakrishna",
+        "Sonwane, Atharv",
+        "Kanade, Aditya",
+        "C, Vageesh D",
+        "Iyer, Arun",
+        "Parthasarathy, Suresh",
+        "Rajamani, Sriram",
+        "Ashok, B.",
+        "Shet, Shashank"
+      ],
+      "date": "2023/09/21",
+      "updated": "2023/09/21",
+      "year": "2023",
+      "pinned_id": "2309.12499v1",
+      "url": "https://arxiv.org/abs/2309.12499v1",
+      "doi": "10.48550/arXiv.2309.12499",
+      "metadata_sha256": "a38c55a290410dc52648a3e9b8a0a6c32a83a5206e392917fa78663f942e38d4",
+      "metadata_fields": {
+        "citation_title": [
+          "CodePlan: Repository-level Coding using LLMs and Planning"
+        ],
+        "citation_author": [
+          "Bairi, Ramakrishna",
+          "Sonwane, Atharv",
+          "Kanade, Aditya",
+          "C, Vageesh D",
+          "Iyer, Arun",
+          "Parthasarathy, Suresh",
+          "Rajamani, Sriram",
+          "Ashok, B.",
+          "Shet, Shashank"
+        ],
+        "citation_date": [
+          "2023/09/21"
+        ],
+        "citation_online_date": [
+          "2023/09/21"
+        ],
+        "citation_pdf_url": [
+          "https://arxiv.org/pdf/2309.12499"
+        ],
+        "citation_arxiv_id": [
+          "2309.12499"
+        ]
+      },
+      "accessed": "2026-11-03"
+    },
+    {
+      "key": "mundler2025typeconstrained",
+      "arxiv": "2504.09246v2",
+      "category": "constrained_generation",
+      "priority": "essential",
+      "status": "Published PACMPL 9 PLDI, article 171, 2025; DOI 10.1145/3729274",
+      "review": "Primary publisher selected full text: method, experimental setup, emulated full-feature support and decoder integration limits",
+      "venue_url": "https://doi.org/10.1145/3729274",
+      "title": "Type-Constrained Code Generation with Language Models",
+      "authors": [
+        "Mündler, Niels",
+        "He, Jingxuan",
+        "Wang, Hao",
+        "Sen, Koushik",
+        "Song, Dawn",
+        "Vechev, Martin"
+      ],
+      "date": "2025/04/12",
+      "updated": "2025/05/08",
+      "year": "2025",
+      "pinned_id": "2504.09246v2",
+      "url": "https://arxiv.org/abs/2504.09246v2",
+      "doi": "10.48550/arXiv.2504.09246",
+      "metadata_sha256": "cbd9fb8a7f3d06e6962528480275390e3e6e8c72d882410c7997a5b5b8e1f2bf",
+      "metadata_fields": {
+        "citation_title": [
+          "Type-Constrained Code Generation with Language Models"
+        ],
+        "citation_author": [
+          "Mündler, Niels",
+          "He, Jingxuan",
+          "Wang, Hao",
+          "Sen, Koushik",
+          "Song, Dawn",
+          "Vechev, Martin"
+        ],
+        "citation_doi": [
+          "10.1145/3729274"
+        ],
+        "citation_date": [
+          "2025/04/12"
+        ],
+        "citation_online_date": [
+          "2025/05/08"
+        ],
+        "citation_pdf_url": [
+          "https://arxiv.org/pdf/2504.09246"
+        ],
+        "citation_arxiv_id": [
+          "2504.09246"
+        ]
+      },
+      "accessed": "2026-11-03"
+    },
+    {
+      "key": "xu2026lsptokens",
+      "arxiv": "2608.13568v1",
+      "category": "semantic_context",
+      "priority": "essential",
+      "status": "ArXiv preprint; preliminary study, no peer-reviewed venue independently confirmed",
+      "review": "Primary abstract and selected HTML sections: method, retrieval/edit results and limitations; success-only token formula and inconsistent coverage statements noted",
+      "venue_url": "https://github.com/agentconnect-md/lsp-vs-grep-token-study",
+      "title": "Does a Language Server Save Tokens for Coding Agents? A Measurement Methodology and Preliminary Study",
+      "authors": [
+        "Xu, Pengcheng"
+      ],
+      "date": "2026/06/29",
+      "updated": "2026/06/29",
+      "year": "2026",
+      "pinned_id": "2608.13568v1",
+      "url": "https://arxiv.org/abs/2608.13568v1",
+      "doi": "10.48550/arXiv.2608.13568",
+      "metadata_sha256": "3b65876d965ce04a323d4b3eb0b5e634e0333b35802a4b3ea5d19cf320700316",
+      "metadata_fields": {
+        "citation_title": [
+          "Does a Language Server Save Tokens for Coding Agents? A Measurement Methodology and Preliminary Study"
+        ],
+        "citation_author": [
+          "Xu, Pengcheng"
+        ],
+        "citation_date": [
+          "2026/06/29"
+        ],
+        "citation_online_date": [
+          "2026/06/29"
+        ],
+        "citation_pdf_url": [
+          "https://arxiv.org/pdf/2608.13568"
+        ],
+        "citation_arxiv_id": [
+          "2608.13568"
+        ]
+      },
+      "accessed": "2026-11-03"
+    },
+    {
+      "key": "sharma2026esolang",
+      "arxiv": "2603.09678v2",
+      "category": "language_learning",
+      "priority": "supporting",
+      "status": "ArXiv preprint",
+      "review": "Abstract and primary metadata",
+      "title": "EsoLang-Bench: Evaluating Genuine Reasoning in Large Language Models via Esoteric Programming Languages",
+      "authors": [
+        "Sharma, Aman",
+        "Chopra, Paras"
+      ],
+      "date": "2026/03/10",
+      "updated": "2026/05/11",
+      "year": "2026",
+      "pinned_id": "2603.09678v2",
+      "url": "https://arxiv.org/abs/2603.09678v2",
+      "doi": "10.48550/arXiv.2603.09678",
+      "metadata_sha256": "c8a3918c5338755c14ff8cd522008bc693dd0709f1dadaebab1648b7330d85cc",
+      "metadata_fields": {
+        "citation_title": [
+          "EsoLang-Bench: Evaluating Genuine Reasoning in Large Language Models via Esoteric Programming Languages"
+        ],
+        "citation_author": [
+          "Sharma, Aman",
+          "Chopra, Paras"
+        ],
+        "citation_date": [
+          "2026/03/10"
+        ],
+        "citation_online_date": [
+          "2026/05/11"
+        ],
+        "citation_pdf_url": [
+          "https://arxiv.org/pdf/2603.09678"
+        ],
+        "citation_arxiv_id": [
+          "2603.09678"
+        ]
+      },
+      "accessed": "2026-11-03"
+    },
+    {
+      "key": "li2025tokdrift",
+      "arxiv": "2510.14972v1",
+      "category": "tokenization",
+      "priority": "supporting",
+      "status": "ArXiv preprint; publication venue not independently confirmed",
+      "review": "Abstract and primary metadata",
+      "title": "TokDrift: When LLM Speaks in Subwords but Code Speaks in Grammar",
+      "authors": [
+        "Li, Yinxi",
+        "Deng, Yuntian",
+        "Nie, Pengyu"
+      ],
+      "date": "2025/10/16",
+      "updated": "2025/10/16",
+      "year": "2025",
+      "pinned_id": "2510.14972v1",
+      "url": "https://arxiv.org/abs/2510.14972v1",
+      "doi": "10.48550/arXiv.2510.14972",
+      "metadata_sha256": "01bc025c818ba50a224757a0ec3d2b9da716712ffb15e89099fc902dede4fb2d",
+      "metadata_fields": {
+        "citation_title": [
+          "TokDrift: When LLM Speaks in Subwords but Code Speaks in Grammar"
+        ],
+        "citation_author": [
+          "Li, Yinxi",
+          "Deng, Yuntian",
+          "Nie, Pengyu"
+        ],
+        "citation_date": [
+          "2025/10/16"
+        ],
+        "citation_online_date": [
+          "2025/10/16"
+        ],
+        "citation_pdf_url": [
+          "https://arxiv.org/pdf/2510.14972"
+        ],
+        "citation_arxiv_id": [
+          "2510.14972"
+        ]
+      },
+      "accessed": "2026-11-03"
+    },
+    {
+      "key": "kapoor2024agents",
+      "arxiv": "2407.01502v1",
+      "category": "evaluation",
+      "priority": "essential",
+      "status": "ArXiv version reviewed; publication venue not independently confirmed here",
+      "review": "Selected full text: cost-controlled evaluation, holdouts and reproducibility",
+      "title": "AI Agents That Matter",
+      "authors": [
+        "Kapoor, Sayash",
+        "Stroebl, Benedikt",
+        "Siegel, Zachary S.",
+        "Nadgir, Nitya",
+        "Narayanan, Arvind"
+      ],
+      "date": "2024/07/01",
+      "updated": "2024/07/01",
+      "year": "2024",
+      "pinned_id": "2407.01502v1",
+      "url": "https://arxiv.org/abs/2407.01502v1",
+      "doi": "10.48550/arXiv.2407.01502",
+      "metadata_sha256": "50da6668d912d8f1f0dd20623567849bfb75eff49e852cc08c165dac79a7aacb",
+      "metadata_fields": {
+        "citation_title": [
+          "AI Agents That Matter"
+        ],
+        "citation_author": [
+          "Kapoor, Sayash",
+          "Stroebl, Benedikt",
+          "Siegel, Zachary S.",
+          "Nadgir, Nitya",
+          "Narayanan, Arvind"
+        ],
+        "citation_date": [
+          "2024/07/01"
+        ],
+        "citation_online_date": [
+          "2024/07/01"
+        ],
+        "citation_pdf_url": [
+          "https://arxiv.org/pdf/2407.01502"
+        ],
+        "citation_arxiv_id": [
+          "2407.01502"
+        ]
+      },
+      "accessed": "2026-11-03"
+    },
+    {
+      "key": "sun2024clover",
+      "arxiv": "2310.17807v4",
+      "category": "verification",
+      "priority": "supporting",
+      "status": "ArXiv version reviewed; publication venue not independently confirmed here",
+      "review": "Abstract and primary metadata",
+      "title": "Clover: Closed-Loop Verifiable Code Generation",
+      "authors": [
+        "Sun, Chuyue",
+        "Sheng, Ying",
+        "Padon, Oded",
+        "Barrett, Clark"
+      ],
+      "date": "2023/10/26",
+      "updated": "2024/11/16",
+      "year": "2023",
+      "pinned_id": "2310.17807v4",
+      "url": "https://arxiv.org/abs/2310.17807v4",
+      "doi": "10.48550/arXiv.2310.17807",
+      "metadata_sha256": "f67e820d2837670a2b6aa327cce1a87d0b6dfb503a94fc75c64718ada1117c14",
+      "metadata_fields": {
+        "citation_title": [
+          "Clover: Closed-Loop Verifiable Code Generation"
+        ],
+        "citation_author": [
+          "Sun, Chuyue",
+          "Sheng, Ying",
+          "Padon, Oded",
+          "Barrett, Clark"
+        ],
+        "citation_date": [
+          "2023/10/26"
+        ],
+        "citation_online_date": [
+          "2024/11/16"
+        ],
+        "citation_pdf_url": [
+          "https://arxiv.org/pdf/2310.17807"
+        ],
+        "citation_arxiv_id": [
+          "2310.17807"
+        ]
+      },
+      "accessed": "2026-11-03"
+    },
+    {
+      "key": "liu2023evalplus",
+      "arxiv": "2305.01210v3",
+      "category": "evaluation",
+      "priority": "supporting",
+      "status": "ArXiv version reviewed; publication venue not independently confirmed here",
+      "review": "Abstract and primary metadata",
+      "title": "Is Your Code Generated by ChatGPT Really Correct? Rigorous Evaluation of Large Language Models for Code Generation",
+      "authors": [
+        "Liu, Jiawei",
+        "Xia, Chunqiu Steven",
+        "Wang, Yuyao",
+        "Zhang, Lingming"
+      ],
+      "date": "2023/05/02",
+      "updated": "2023/10/30",
+      "year": "2023",
+      "pinned_id": "2305.01210v3",
+      "url": "https://arxiv.org/abs/2305.01210v3",
+      "doi": "10.48550/arXiv.2305.01210",
+      "metadata_sha256": "6b7582b80fd2ca105e6b30b938308f99329709665a34b413679af963c3954c88",
+      "metadata_fields": {
+        "citation_title": [
+          "Is Your Code Generated by ChatGPT Really Correct? Rigorous Evaluation of Large Language Models for Code Generation"
+        ],
+        "citation_author": [
+          "Liu, Jiawei",
+          "Xia, Chunqiu Steven",
+          "Wang, Yuyao",
+          "Zhang, Lingming"
+        ],
+        "citation_date": [
+          "2023/05/02"
+        ],
+        "citation_online_date": [
+          "2023/10/30"
+        ],
+        "citation_pdf_url": [
+          "https://arxiv.org/pdf/2305.01210"
+        ],
+        "citation_arxiv_id": [
+          "2305.01210"
+        ]
+      },
+      "accessed": "2026-11-03"
+    },
+    {
+      "key": "jain2024livecodebench",
+      "arxiv": "2403.07974v2",
+      "category": "evaluation",
+      "priority": "supporting",
+      "status": "ArXiv version reviewed; publication venue not independently confirmed here",
+      "review": "Abstract and primary metadata",
+      "title": "LiveCodeBench: Holistic and Contamination Free Evaluation of Large Language Models for Code",
+      "authors": [
+        "Jain, Naman",
+        "Han, King",
+        "Gu, Alex",
+        "Li, Wen-Ding",
+        "Yan, Fanjia",
+        "Zhang, Tianjun",
+        "Wang, Sida",
+        "Solar-Lezama, Armando",
+        "Sen, Koushik",
+        "Stoica, Ion"
+      ],
+      "date": "2024/03/12",
+      "updated": "2024/06/06",
+      "year": "2024",
+      "pinned_id": "2403.07974v2",
+      "url": "https://arxiv.org/abs/2403.07974v2",
+      "doi": "10.48550/arXiv.2403.07974",
+      "metadata_sha256": "e8ba4f75db5c0861bcbd3194fdcad7bbd2b7b218648c5e72b4f9dc50eb5d42fb",
+      "metadata_fields": {
+        "citation_title": [
+          "LiveCodeBench: Holistic and Contamination Free Evaluation of Large Language Models for Code"
+        ],
+        "citation_author": [
+          "Jain, Naman",
+          "Han, King",
+          "Gu, Alex",
+          "Li, Wen-Ding",
+          "Yan, Fanjia",
+          "Zhang, Tianjun",
+          "Wang, Sida",
+          "Solar-Lezama, Armando",
+          "Sen, Koushik",
+          "Stoica, Ion"
+        ],
+        "citation_date": [
+          "2024/03/12"
+        ],
+        "citation_online_date": [
+          "2024/06/06"
+        ],
+        "citation_pdf_url": [
+          "https://arxiv.org/pdf/2403.07974"
+        ],
+        "citation_arxiv_id": [
+          "2403.07974"
+        ]
+      },
+      "accessed": "2026-11-03"
+    },
+    {
+      "key": "wang2026agentspec",
+      "arxiv": "2503.18666v3",
+      "category": "verification",
+      "priority": "supporting",
+      "status": "Published ICSE 2026, DOI 10.1145/3744916.3764546",
+      "review": "Primary author PDF abstract/introduction and publication block",
+      "venue_url": "https://cposkitt.github.io/files/publications/agentspec_llm_enforcement_icse26.pdf",
+      "title": "AgentSpec: Customizable Runtime Enforcement for Safe and Reliable LLM Agents",
+      "authors": [
+        "Wang, Haoyu",
+        "Poskitt, Christopher M.",
+        "Sun, Jun"
+      ],
+      "date": "2025/03/24",
+      "updated": "2025/07/31",
+      "year": "2025",
+      "pinned_id": "2503.18666v3",
+      "url": "https://arxiv.org/abs/2503.18666v3",
+      "doi": "10.48550/arXiv.2503.18666",
+      "metadata_sha256": "ca5571b39e04d1aa8a3a5987d60305e707ec2022f5071792e60f8783aa59b1f6",
+      "metadata_fields": {
+        "citation_title": [
+          "AgentSpec: Customizable Runtime Enforcement for Safe and Reliable LLM Agents"
+        ],
+        "citation_author": [
+          "Wang, Haoyu",
+          "Poskitt, Christopher M.",
+          "Sun, Jun"
+        ],
+        "citation_doi": [
+          "10.1145/3744916.3764546"
+        ],
+        "citation_date": [
+          "2025/03/24"
+        ],
+        "citation_online_date": [
+          "2025/07/31"
+        ],
+        "citation_pdf_url": [
+          "https://arxiv.org/pdf/2503.18666"
+        ],
+        "citation_arxiv_id": [
+          "2503.18666"
+        ]
+      },
+      "accessed": "2026-11-03"
+    },
+    {
+      "key": "debenedetti2025camel",
+      "arxiv": "2503.18813v2",
+      "category": "verification",
+      "priority": "supporting",
+      "status": "ArXiv version reviewed; publication venue not independently confirmed here",
+      "review": "Abstract and primary author artifact limitations",
+      "title": "Defeating Prompt Injections by Design",
+      "authors": [
+        "Debenedetti, Edoardo",
+        "Shumailov, Ilia",
+        "Fan, Tianqi",
+        "Hayes, Jamie",
+        "Carlini, Nicholas",
+        "Fabian, Daniel",
+        "Kern, Christoph",
+        "Shi, Chongyang",
+        "Terzis, Andreas",
+        "Tramèr, Florian"
+      ],
+      "date": "2025/03/24",
+      "updated": "2025/06/24",
+      "year": "2025",
+      "pinned_id": "2503.18813v2",
+      "url": "https://arxiv.org/abs/2503.18813v2",
+      "doi": "10.48550/arXiv.2503.18813",
+      "metadata_sha256": "e9c816f8fc174d3ba727a6f019268ef370c9a7e25c078e44b3721d5bf62690ec",
+      "metadata_fields": {
+        "citation_title": [
+          "Defeating Prompt Injections by Design"
+        ],
+        "citation_author": [
+          "Debenedetti, Edoardo",
+          "Shumailov, Ilia",
+          "Fan, Tianqi",
+          "Hayes, Jamie",
+          "Carlini, Nicholas",
+          "Fabian, Daniel",
+          "Kern, Christoph",
+          "Shi, Chongyang",
+          "Terzis, Andreas",
+          "Tramèr, Florian"
+        ],
+        "citation_date": [
+          "2025/03/24"
+        ],
+        "citation_online_date": [
+          "2025/06/24"
+        ],
+        "citation_pdf_url": [
+          "https://arxiv.org/pdf/2503.18813"
+        ],
+        "citation_arxiv_id": [
+          "2503.18813"
+        ]
+      },
+      "accessed": "2026-11-03"
+    },
+    {
+      "key": "gloaguen2026agentsmd",
+      "title": "Evaluating AGENTS.md: Are Repository-Level Context Files Helpful for Coding Agents?",
+      "authors": [
+        "Thibaud Gloaguen",
+        "Niels Mündler",
+        "Mark Niklas Müller",
+        "Veselin Raychev",
+        "Martin Vechev"
+      ],
+      "year": "2026",
+      "url": "https://www.sri.inf.ethz.ch/publications/gloaguen2026agentsmd",
+      "category": "skills",
+      "priority": "essential",
+      "status": "ICLR 2026 Workshop on Memory for LLM-Based Agentic Systems, not ICLR main conference",
+      "review": "Primary institutional abstract and publisher/workshop record",
+      "venue_url": "https://openreview.net/forum?id=pLi3A8bscP",
+      "accessed": "2026-11-03"
+    },
+    {
+      "key": "bubnov2026synoema",
+      "zenodo": "19514230",
+      "category": "agent_language",
+      "priority": "essential",
+      "status": "Author-deposited technical note/defensive disclosure; peer review not established",
+      "review": "Primary Zenodo metadata and selected PDF sections 5.1-5.3 and 10.3: evaluation scope, aggregate source-token table and limitations",
+      "related_record": "https://zenodo.org/records/19436200",
+      "title": "Synoema v0.1.0-alpha.3: Design, Type-Constrained Decoding, and Empirical Evaluation of a BPE-Aligned Programming Language for LLM Code Generation",
+      "authors": [
+        "Bubnov, Andrey"
+      ],
+      "date": "2026-04-11",
+      "year": "2026",
+      "doi": "10.5281/zenodo.19514230",
+      "url": "https://zenodo.org/records/19514230",
+      "primary_api": "https://zenodo.org/api/records/19514230",
+      "resource_type": {
+        "title": "Technical note",
+        "type": "publication",
+        "subtype": "technicalnote"
+      },
+      "files": [
+        {
+          "name": "bubnov2026_synoema_defensive_disclosure v3 alpha.pdf",
+          "url": "https://zenodo.org/api/records/19514230/files/bubnov2026_synoema_defensive_disclosure%20v3%20alpha.pdf/content"
+        }
+      ],
+      "metadata_sha256": "3e5f2265e5545e36a3b7c388d9812de862afba838005b76ca5cf796238ae832e",
+      "accessed": "2026-11-03"
+    },
+    {
+      "key": "chou2025autocodebench",
+      "arxiv": "2508.09101v1",
+      "category": "language_quality_comparison",
+      "priority": "essential",
+      "status": "ArXiv v1 reviewed; later ICLR 2026 primary PDF record exists, numeric results not merged across versions",
+      "review": "Selected HTML: dataset construction, approximate translation, language results and sandbox-feedback refinement",
+      "venue_url": "https://openreview.net/pdf?id=fN0MED2Idq",
+      "title": "AutoCodeBench: Large Language Models are Automatic Code Benchmark Generators",
+      "authors": [
+        "Chou, Jason",
+        "Liu, Ao",
+        "Deng, Yuchi",
+        "Zeng, Zhiying",
+        "Zhang, Tao",
+        "Zhu, Haotian",
+        "Cai, Jianwei",
+        "Mao, Yue",
+        "Zhang, Chenchen",
+        "Tan, Lingyun",
+        "Xu, Ziyan",
+        "Zhai, Bohui",
+        "Liu, Hengyi",
+        "Zhu, Speed",
+        "Zhou, Wiggin",
+        "Lian, Fengzong"
+      ],
+      "date": "2025/08/12",
+      "updated": "2025/08/12",
+      "year": "2025",
+      "pinned_id": "2508.09101v1",
+      "url": "https://arxiv.org/abs/2508.09101v1",
+      "doi": "10.48550/arXiv.2508.09101",
+      "metadata_sha256": "c5a05a3ea509adb29e769bcfd216b4d5a8a884f1f6b85902de611719622775bb",
+      "metadata_fields": {
+        "citation_title": [
+          "AutoCodeBench: Large Language Models are Automatic Code Benchmark Generators"
+        ],
+        "citation_author": [
+          "Chou, Jason",
+          "Liu, Ao",
+          "Deng, Yuchi",
+          "Zeng, Zhiying",
+          "Zhang, Tao",
+          "Zhu, Haotian",
+          "Cai, Jianwei",
+          "Mao, Yue",
+          "Zhang, Chenchen",
+          "Tan, Lingyun",
+          "Xu, Ziyan",
+          "Zhai, Bohui",
+          "Liu, Hengyi",
+          "Zhu, Speed",
+          "Zhou, Wiggin",
+          "Lian, Fengzong"
+        ],
+        "citation_date": [
+          "2025/08/12"
+        ],
+        "citation_online_date": [
+          "2025/08/12"
+        ],
+        "citation_pdf_url": [
+          "https://arxiv.org/pdf/2508.09101"
+        ],
+        "citation_arxiv_id": [
+          "2508.09101"
+        ]
+      },
+      "accessed": "2026-11-03"
+    },
+    {
+      "key": "ye2025verina",
+      "arxiv": "2505.23135v3",
+      "category": "verification",
+      "priority": "essential",
+      "status": "ArXiv v3 reviewed; peer-reviewed venue not independently confirmed here",
+      "review": "Abstract and selected HTML: code/specification/proof task separation, positive/negative tests, specification equivalence metrics and inconclusive verification",
+      "title": "VERINA: Benchmarking Verifiable Code Generation",
+      "authors": [
+        "Ye, Zhe",
+        "Yan, Zhengxu",
+        "He, Jingxuan",
+        "Kasriel, Timothe",
+        "Yang, Kaiyu",
+        "Song, Dawn"
+      ],
+      "date": "2025/05/29",
+      "updated": "2026/03/16",
+      "year": "2025",
+      "pinned_id": "2505.23135v3",
+      "url": "https://arxiv.org/abs/2505.23135v3",
+      "doi": "10.48550/arXiv.2505.23135",
+      "metadata_sha256": "fa48cd83800688188137e8148e9d207376228b0f092bbfdf6272ba00f23cd71e",
+      "metadata_fields": {
+        "citation_title": [
+          "VERINA: Benchmarking Verifiable Code Generation"
+        ],
+        "citation_author": [
+          "Ye, Zhe",
+          "Yan, Zhengxu",
+          "He, Jingxuan",
+          "Kasriel, Timothe",
+          "Yang, Kaiyu",
+          "Song, Dawn"
+        ],
+        "citation_date": [
+          "2025/05/29"
+        ],
+        "citation_online_date": [
+          "2026/03/16"
+        ],
+        "citation_pdf_url": [
+          "https://arxiv.org/pdf/2505.23135"
+        ],
+        "citation_arxiv_id": [
+          "2505.23135"
+        ]
+      },
+      "accessed": "2026-11-03"
+    },
+    {
+      "key": "loughridge2024dafnybench",
+      "arxiv": "2406.08467v1",
+      "category": "verification",
+      "priority": "essential",
+      "status": "ArXiv v1 reviewed; later versions or publication results not merged",
+      "review": "Primary abstract and metadata: verification-hint generation over existing programs, not general end-to-end software construction",
+      "title": "DafnyBench: A Benchmark for Formal Software Verification",
+      "authors": [
+        "Loughridge, Chloe",
+        "Sun, Qinyi",
+        "Ahrenbach, Seth",
+        "Cassano, Federico",
+        "Sun, Chuyue",
+        "Sheng, Ying",
+        "Mudide, Anish",
+        "Misu, Md Rakib Hossain",
+        "Amin, Nada",
+        "Tegmark, Max"
+      ],
+      "date": "2024/06/12",
+      "updated": "2024/06/12",
+      "year": "2024",
+      "pinned_id": "2406.08467v1",
+      "url": "https://arxiv.org/abs/2406.08467v1",
+      "doi": "10.48550/arXiv.2406.08467",
+      "metadata_sha256": "a7f7be6b2522dbf7ec3678a65e341313715181102b82470b9748f3a44a54bc16",
+      "metadata_fields": {
+        "citation_title": [
+          "DafnyBench: A Benchmark for Formal Software Verification"
+        ],
+        "citation_author": [
+          "Loughridge, Chloe",
+          "Sun, Qinyi",
+          "Ahrenbach, Seth",
+          "Cassano, Federico",
+          "Sun, Chuyue",
+          "Sheng, Ying",
+          "Mudide, Anish",
+          "Misu, Md Rakib Hossain",
+          "Amin, Nada",
+          "Tegmark, Max"
+        ],
+        "citation_date": [
+          "2024/06/12"
+        ],
+        "citation_online_date": [
+          "2024/06/12"
+        ],
+        "citation_pdf_url": [
+          "https://arxiv.org/pdf/2406.08467"
+        ],
+        "citation_arxiv_id": [
+          "2406.08467"
+        ]
+      },
+      "accessed": "2026-11-03"
+    },
+    {
+      "key": "berger2019codequality",
+      "arxiv": "1901.10220v2",
+      "category": "language_quality_comparison",
+      "priority": "essential",
+      "status": "Accepted TOPLAS per primary arXiv record; related publisher DOI 10.1145/3340571",
+      "review": "Primary abstract and author PDF introduction: reproduction, confounding and effect-size limitations",
+      "venue_url": "https://doi.org/10.1145/3340571",
+      "title": "On the Impact of Programming Languages on Code Quality",
+      "authors": [
+        "Berger, Emery D.",
+        "Hollenbeck, Celeste",
+        "Maj, Petr",
+        "Vitek, Olga",
+        "Vitek, Jan"
+      ],
+      "date": "2019/01/29",
+      "updated": "2019/04/24",
+      "year": "2019",
+      "pinned_id": "1901.10220v2",
+      "url": "https://arxiv.org/abs/1901.10220v2",
+      "doi": "10.48550/arXiv.1901.10220",
+      "metadata_sha256": "19265eda5448a11b771719b7880cfba75bf0ee70011f09bfed74a7ebf23af239",
+      "metadata_fields": {
+        "citation_title": [
+          "On the Impact of Programming Languages on Code Quality"
+        ],
+        "citation_author": [
+          "Berger, Emery D.",
+          "Hollenbeck, Celeste",
+          "Maj, Petr",
+          "Vitek, Olga",
+          "Vitek, Jan"
+        ],
+        "citation_doi": [
+          "10.1145/3340571"
+        ],
+        "citation_date": [
+          "2019/01/29"
+        ],
+        "citation_online_date": [
+          "2019/04/24"
+        ],
+        "citation_pdf_url": [
+          "https://arxiv.org/pdf/1901.10220"
+        ],
+        "citation_arxiv_id": [
+          "1901.10220"
+        ]
+      },
+      "accessed": "2026-11-03"
+    },
+    {
+      "key": "jung2018rustbelt",
+      "title": "RustBelt: Securing the Foundations of the Rust Programming Language",
+      "authors": [
+        "Jung, Ralf",
+        "Jourdan, Jacques-Henri",
+        "Krebbers, Robbert",
+        "Dreyer, Derek"
+      ],
+      "year": "2018",
+      "url": "https://people.mpi-sws.org/~dreyer/papers/rustbelt/paper.pdf",
+      "doi": "10.1145/3158154",
+      "category": "language_guarantees",
+      "priority": "essential",
+      "status": "Published PACMPL 2 POPL, article 66, 2018",
+      "review": "Primary author PDF abstract and introduction: machine-checked safety model for a realistic Rust subset and unsafe-library obligations",
+      "accessed": "2026-11-03"
+    },
+    {
+      "key": "allan2026vera",
+      "title": "Vera: a programming language designed for LLMs to write",
+      "authors": [
+        "Allan, Alasdair"
+      ],
+      "year": "2026",
+      "url": "https://github.com/aallan/vera/tree/f6d45a787ba66912fe6604089d3e977cefd26031",
+      "category": "agent_language",
+      "priority": "essential",
+      "status": "Author software artifact; peer review not established",
+      "review": "Pinned author README: language mechanisms, verification tiers, implementation caveats and citation; no compiler execution or independent audit",
+      "commit": "f6d45a787ba66912fe6604089d3e977cefd26031",
+      "artifact_url": "https://raw.githubusercontent.com/aallan/vera/f6d45a787ba66912fe6604089d3e977cefd26031/README.md",
+      "artifact_sha256": "44d0f1b92b16dd06286e5ab08e3386fdf838e266aa88a2e585b8771ca33062b6",
+      "cache_file": "vera-README.md",
+      "accessed": "2026-11-03"
+    },
+    {
+      "key": "allan2026verabench",
+      "title": "VeraBench: a benchmark suite for LLM code generation in Vera",
+      "authors": [
+        "Allan, Alasdair"
+      ],
+      "year": "2026",
+      "url": "https://github.com/aallan/vera-bench/tree/c33fe27d49ce15fa71db324347dbbde348c53c7c",
+      "category": "language_quality_comparison",
+      "priority": "essential",
+      "status": "Author software artifact and self-reported evaluation; peer review not established",
+      "review": "Pinned author README: full-spec versus NL modes, headline table, saturation, grading caveat, weak-contract counterexamples, T1-T4 comparison guidance and raw-evidence availability",
+      "commit": "c33fe27d49ce15fa71db324347dbbde348c53c7c",
+      "artifact_url": "https://raw.githubusercontent.com/aallan/vera-bench/c33fe27d49ce15fa71db324347dbbde348c53c7c/README.md",
+      "artifact_sha256": "a8212a67170f357fe7785ed25d1dcb2f5113b54b167038b19bad96781490c925",
+      "cache_file": "vera-bench-README.md",
+      "accessed": "2026-11-03"
+    }
+  ],
+  "collector_sha256": "8a2df2e8be16c5c3fca6f2ae4fa5ca80bb4c4216a00fc4e59bf447d97349edd1"
+}

@@ -1,0 +1,19 @@
+module sequences;
+
+// Stable identities survive moving this implementation out of collections.
+record Cursor { remaining: List<I64>, reversed: List<I64> }
+
+fn reverse(xs: List<I64>) -> List<I64>
+ensures { List::length(result) == List::length(xs) }
+{
+  let done = fold(i in List::length(xs), state: Cursor = Cursor { remaining: xs, reversed: List::empty<I64>() }) {
+    Cursor { remaining: List::tail(state.remaining), reversed: List::prepend(List::head(state.remaining), state.reversed) }
+  };
+  done.reversed
+}
+
+identities {
+  module: "example.sequences",
+  Cursor: "example.collections.cursor",
+  reverse: "example.collections.reverse"
+}

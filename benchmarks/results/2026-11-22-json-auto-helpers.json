@@ -1,0 +1,358 @@
+{
+  "format": "lobo-json-auto-helpers-result/0.1",
+  "date": "2026-11-22",
+  "timezone": "America/Chicago",
+  "status": "engineering-acceptance-passed",
+  "language": "core/1.6",
+  "compiler": "1.6.0",
+  "extension": "1.6.0",
+  "decision": "decisions/0047-json-literal-helper-dependencies.md",
+  "specification": "spec/core-v1.6.md",
+  "rust_tests_passed": 229,
+  "editor_tests_passed": 155,
+  "benchmark_tests_passed": 31,
+  "codemod_tests_passed": 4,
+  "web_tests_passed": 6,
+  "verification": [
+    {
+      "command": "cargo test --locked",
+      "exit_code": 0,
+      "log": "target/json-auto-helpers-rust-final.log",
+      "log_sha256": "986ce61d1586460f734ddf1ae0a1b5c379ed9fda7a2c45bd72046e3ef5b809f2",
+      "preserved_log": "benchmarks/private-evidence/json-auto-helpers-20261122/logs/json-auto-helpers-rust-final.log"
+    },
+    {
+      "command": "npm --prefix editors/vscode run package",
+      "exit_code": 0,
+      "log": "target/json-auto-helpers-package-delivery.log",
+      "log_sha256": "0fd9c3ed141919c3c30984dfa5aa94faf7ba92080806f0669203a2bad075ffbc",
+      "preserved_log": "benchmarks/private-evidence/json-auto-helpers-20261122/logs/json-auto-helpers-package-delivery.log"
+    },
+    {
+      "command": "LOBO_VSCODE_EXECUTABLE=/usr/share/code/code xvfb-run -a npm --prefix editors/vscode run test:host",
+      "exit_code": 0,
+      "log": "target/json-auto-helpers-host.log",
+      "log_sha256": "4a29812a1597b4034c22aba666eae63d803c5b00a1f2c4c3aa580c9fc26f982a",
+      "preserved_log": "benchmarks/private-evidence/json-auto-helpers-20261122/logs/json-auto-helpers-host.log"
+    },
+    {
+      "command": "cargo build --locked --release --bin lobo --bin lobo-test",
+      "exit_code": 0,
+      "log": "target/json-auto-helpers-release.log",
+      "log_sha256": "e4cbc1082709b190ba48e8b649b349fc4155f0c260289f6b8fcfb8ffc303e742",
+      "preserved_log": "benchmarks/private-evidence/json-auto-helpers-20261122/logs/json-auto-helpers-release.log"
+    },
+    {
+      "command": "cargo clippy --locked --all-targets -- -D warnings",
+      "exit_code": 0,
+      "log": "target/json-auto-helpers-clippy.log",
+      "log_sha256": "247f2df9f910736a4496c031310dc566a774a9687163886a0a347bd406cbaf5b",
+      "preserved_log": "benchmarks/private-evidence/json-auto-helpers-20261122/logs/json-auto-helpers-clippy.log"
+    },
+    {
+      "command": "cargo fmt --check",
+      "exit_code": 0,
+      "log": "target/json-auto-helpers-fmt.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "preserved_log": "benchmarks/private-evidence/json-auto-helpers-20261122/logs/json-auto-helpers-fmt.log"
+    },
+    {
+      "command": "python3 -m unittest discover -s benchmarks -p 'test_*.py'",
+      "exit_code": 0,
+      "log": "target/json-auto-helpers-python.log",
+      "log_sha256": "1803c8119b40fed277ab241a54fd194e20202a293c9972f7674b62abb0cc7b70",
+      "preserved_log": "benchmarks/private-evidence/json-auto-helpers-20261122/logs/json-auto-helpers-python.log"
+    },
+    {
+      "command": "node --test scripts/test-migrate-syntax.mjs",
+      "exit_code": 0,
+      "log": "target/json-auto-helpers-codemod.log",
+      "log_sha256": "f458edb7bbd72d27544188c022e1346999c4bc0b660f94e7dd7e34df02fd56f8",
+      "preserved_log": "benchmarks/private-evidence/json-auto-helpers-20261122/logs/json-auto-helpers-codemod.log"
+    },
+    {
+      "command": "python3 /home/luis/.codex/skills/.system/skill-creator/scripts/quick_validate.py .agents/skills/lobo-programming",
+      "exit_code": 0,
+      "log": "target/json-auto-helpers-skill-validation.log",
+      "log_sha256": "db349825903d66adffea3ecf1bd8e1803043e8a71cf1a051235dabc5371f5bb0",
+      "preserved_log": "benchmarks/private-evidence/json-auto-helpers-20261122/logs/json-auto-helpers-skill-validation.log"
+    },
+    {
+      "command": "python3 examples/web-server/build.py --compiler target/release/lobo --out-dir target/json-auto-helpers-web",
+      "exit_code": 0,
+      "log": "target/json-auto-helpers-web-build.log",
+      "log_sha256": "d6649da9a7293ca99e47521d5057a787fc9b8c915508d1c532264f0e3a712fc9",
+      "preserved_log": "benchmarks/private-evidence/json-auto-helpers-20261122/logs/json-auto-helpers-web-build.log"
+    },
+    {
+      "command": "LOBO_COMPILER=target/release/lobo LOBO_WEB_EXAMPLE_DIR=target/json-auto-helpers-web python3 examples/web-server/test_server.py",
+      "exit_code": 0,
+      "log": "target/json-auto-helpers-web-tests.log",
+      "log_sha256": "1e8f8c342853608d51b96562c6da33a5b83e51b6e70836d41183ad98e24f4dba",
+      "preserved_log": "benchmarks/private-evidence/json-auto-helpers-20261122/logs/json-auto-helpers-web-tests.log"
+    },
+    {
+      "command": "python3 target/json-auto-helpers-smoke.py --out-dir target/json-auto-helpers-native-final",
+      "exit_code": 0,
+      "log": "target/json-auto-helpers-smoke-final.log",
+      "log_sha256": "394ba6a299767b0e702cf8a51981096147c1a8dd4f88e5861d63a1e329207f5f",
+      "preserved_log": "benchmarks/private-evidence/json-auto-helpers-20261122/logs/json-auto-helpers-smoke-final.log"
+    },
+    {
+      "command": "python3 target/json-auto-helpers-integrity.py",
+      "exit_code": 0,
+      "log": "target/json-auto-helpers-integrity.log",
+      "log_sha256": "1741c34120cc637cbab8ab5a5e80488a2e0b97615d032cf63c7562b0bb30388b",
+      "preserved_log": "benchmarks/private-evidence/json-auto-helpers-20261122/logs/json-auto-helpers-integrity.log"
+    },
+    {
+      "command": "./scripts/check.sh",
+      "exit_code": 0,
+      "log": "target/json-auto-helpers-docs.log",
+      "log_sha256": "1f11bb3bb382f1877ffa8eec4eb376db85d0ecfa2e1301289bb91fbd2cc966ae",
+      "preserved_log": "benchmarks/private-evidence/json-auto-helpers-20261122/logs/json-auto-helpers-docs.log"
+    },
+    {
+      "command": "git diff --check",
+      "exit_code": 0,
+      "log": "target/json-auto-helpers-diff-check.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "preserved_log": "benchmarks/private-evidence/json-auto-helpers-20261122/logs/json-auto-helpers-diff-check.log"
+    }
+  ],
+  "smoke": {
+    "language": "core/1.6",
+    "compiler_sha256": "c4c4308b1ac327826f52a8eb2b9033ce7296539f2cdcbdfed2caf6f51d8d8a5b",
+    "baseline_compiler_sha256": "da3943887ae0e8c01218ef42efac4ad11ed938f50a6eefab5921b4c270727d72",
+    "observations": [
+      {
+        "backend": "c",
+        "user": 1,
+        "observed": {
+          "status": "ok",
+          "kind": "value",
+          "value": {
+            "type": "Record",
+            "value": {
+              "id": "example.web.response",
+              "fields": {
+                "status": {
+                  "type": "I64",
+                  "value": "200"
+                },
+                "content_type": {
+                  "type": "Text",
+                  "value": "application/json"
+                },
+                "body": {
+                  "type": "Text",
+                  "value": "{\"name\":\"Luis\"}"
+                }
+              }
+            }
+          }
+        }
+      },
+      {
+        "backend": "c",
+        "user": 42,
+        "observed": {
+          "status": "ok",
+          "kind": "value",
+          "value": {
+            "type": "Record",
+            "value": {
+              "id": "example.web.response",
+              "fields": {
+                "status": {
+                  "type": "I64",
+                  "value": "404"
+                },
+                "content_type": {
+                  "type": "Text",
+                  "value": "text/plain; charset=utf-8"
+                },
+                "body": {
+                  "type": "Text",
+                  "value": "Not found\n"
+                }
+              }
+            }
+          }
+        }
+      },
+      {
+        "backend": "llvm",
+        "user": 1,
+        "observed": {
+          "status": "ok",
+          "kind": "value",
+          "value": {
+            "type": "Record",
+            "value": {
+              "id": "example.web.response",
+              "fields": {
+                "status": {
+                  "type": "I64",
+                  "value": "200"
+                },
+                "content_type": {
+                  "type": "Text",
+                  "value": "application/json"
+                },
+                "body": {
+                  "type": "Text",
+                  "value": "{\"name\":\"Luis\"}"
+                }
+              }
+            }
+          }
+        }
+      },
+      {
+        "backend": "llvm",
+        "user": 42,
+        "observed": {
+          "status": "ok",
+          "kind": "value",
+          "value": {
+            "type": "Record",
+            "value": {
+              "id": "example.web.response",
+              "fields": {
+                "status": {
+                  "type": "I64",
+                  "value": "404"
+                },
+                "content_type": {
+                  "type": "Text",
+                  "value": "text/plain; charset=utf-8"
+                },
+                "body": {
+                  "type": "Text",
+                  "value": "Not found\n"
+                }
+              }
+            }
+          }
+        }
+      },
+      {
+        "skill": "boxed",
+        "observed": {
+          "status": "ok",
+          "kind": "value",
+          "value": {
+            "type": "Text",
+            "value": "\u00e9"
+          }
+        }
+      },
+      {
+        "skill": "text",
+        "observed": {
+          "status": "ok",
+          "kind": "value",
+          "value": {
+            "type": "Text",
+            "value": "\u00e9"
+          }
+        }
+      },
+      {
+        "skill": "compact",
+        "observed": {
+          "status": "ok",
+          "kind": "value",
+          "value": {
+            "type": "I64",
+            "value": "42"
+          }
+        }
+      },
+      {
+        "skill": "json",
+        "observed": {
+          "status": "ok",
+          "kind": "value",
+          "value": {
+            "type": "Text",
+            "value": "{\"text\":\"\\\"\\\\\\u000a\u00e9\"}"
+          }
+        }
+      }
+    ],
+    "mvc_checked_program_equal_after_helper_alias_and_import_order_normalization": true,
+    "versions": [
+      "core/1.5",
+      "core/1.6"
+    ],
+    "retained_identity_values_equal": true,
+    "compatibility_export_checked": "independent nongeneric JSON example; full inferred MVC export unsupported",
+    "source_and_metadata_unchanged_by_checks": true,
+    "status": "passed"
+  },
+  "historical_integrity": {
+    "status": "passed",
+    "protected_before_inputs_unchanged": 57,
+    "surveyed_historical_files_unchanged": 292,
+    "old_paper_entries_verified": 19,
+    "frozen_release_files_verified": 86,
+    "dependency_locks_unchanged_except_root_versions": true,
+    "mvc_retained_identity_values_unchanged": 11,
+    "retired_source_binding_keys": [
+      "json.object",
+      "json.field"
+    ]
+  },
+  "preservation": "benchmarks/private-evidence/json-auto-helpers-20261122",
+  "negative_attempts": [
+    {
+      "command": "cargo test --locked --test json_auto_helpers",
+      "exit_code": 101,
+      "log": "target/json-auto-helpers-red.log",
+      "log_sha256": "cad700b8ffc7992bbe28c740468179eb70007239ea2a158ff1f1cbe969e58e29",
+      "preserved_log": "benchmarks/private-evidence/json-auto-helpers-20261122/logs/json-auto-helpers-red.log",
+      "outcome": "3 failing regressions before implementation; mandatory builder imports"
+    },
+    {
+      "command": "node --test editors/vscode/test/json-auto-helpers.test.mjs",
+      "exit_code": 1,
+      "log": "target/json-auto-helpers-editor-red.log",
+      "log_sha256": "8bf3433711b5628fc5fa5b5c12c2294ac8d931c57dad75eddfc1513764f1a951",
+      "preserved_log": "benchmarks/private-evidence/json-auto-helpers-20261122/logs/json-auto-helpers-editor-red.log",
+      "outcome": "2 failing regressions before implementation; mandatory builder imports"
+    },
+    {
+      "command": "cargo test --locked",
+      "exit_code": 101,
+      "log": "target/json-auto-helpers-rust-first-full.log",
+      "log_sha256": "51403658a712e2a318df99f0c1c133a30871ab519e6939be00336ac5ed21514f",
+      "preserved_log": "benchmarks/private-evidence/json-auto-helpers-20261122/logs/json-auto-helpers-rust-first-full.log",
+      "outcome": "one existing diagnostic expectation changed from syntax to closed module linking; rejection preserved"
+    },
+    {
+      "command": "python3 target/json-auto-helpers-smoke.py",
+      "exit_code": 1,
+      "log": "target/json-auto-helpers-smoke.log",
+      "log_sha256": "62454c0f52b8278f52da75ee8411ebbb603ec4efd39356f61a4acaa360d58f43",
+      "preserved_log": "benchmarks/private-evidence/json-auto-helpers-20261122/logs/json-auto-helpers-smoke.log",
+      "outcome": "MVC and skill native assertions pass; optional inferred-generic MVC legacy export fails compile.generic.arguments; exporter does not elaborate inference"
+    }
+  ],
+  "limits": [
+    "Json and directly called functions remain explicit selections.",
+    "Builder IDs resolve only from explicitly supplied sources; no path or package discovery.",
+    "Text-valued literals only; existing explicit JSON constructors/builders remain available.",
+    "Checked equality normalizes helper import alias labels and import order only.",
+    "Optional legacy export requires explicit generic-call/constructor forms; no modern compilation projection needed.",
+    "Only before/current source and available logs retained; not every intermediate editing state was snapshotted.",
+    "No runtime operation, dependency, install, Git commit or publication added."
+  ],
+  "agent_outcomes": {
+    "construction_quality": null,
+    "comprehension": null,
+    "total_tokens": null
+  },
+  "runtime_speed_comparison": null
+}

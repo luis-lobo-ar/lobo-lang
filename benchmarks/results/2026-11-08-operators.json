@@ -1,0 +1,386 @@
+{
+  "format": "lobo-operator-verification/0.1",
+  "date": "2026-11-08",
+  "status": "passed",
+  "completed_utc": "2026-11-08T23:44:56.322319+00:00",
+  "compiler": "1.1.0",
+  "language": "core/1.1",
+  "checked_format": "lobo-checked/1.0",
+  "scope": "bounded typed binary arithmetic bindings and Text concatenation",
+  "decision": "decisions/0038-explicit-typed-operator-bindings.md",
+  "specification": "spec/core-v1.1.md",
+  "tests": {
+    "rust": 196,
+    "focused_operator_tests": 8,
+    "editor": 130,
+    "python": 31,
+    "http_sample": 6,
+    "execution_routes": [
+      "evaluator",
+      "C",
+      "LLVM",
+      "C ASan/UBSan",
+      "LLVM ASan/UBSan"
+    ],
+    "editor_host": "passed"
+  },
+  "commands": [
+    {
+      "command": "cargo test --locked --test operators",
+      "exit_code": 0,
+      "log": "benchmarks/private-evidence/operators-20261108/logs/operators-expanded-final.log",
+      "sha256": "591cfce5bad55c938398140e5f6074b9f41ba14168d290234ec652083e48651d"
+    },
+    {
+      "command": "cargo test --locked",
+      "exit_code": 0,
+      "log": "benchmarks/private-evidence/operators-20261108/logs/operators-rust-complete.log",
+      "sha256": "84c8e34152138e45d6e704ef195cf564c707bdfa97c9eff211d6cf9a3777bd51"
+    },
+    {
+      "command": "cargo clippy --locked --all-targets -- -D warnings",
+      "exit_code": 0,
+      "log": "benchmarks/private-evidence/operators-20261108/logs/operators-clippy-complete.log",
+      "sha256": "503e8ca6aaf7a69f532d6d9b27c2154ba865d5ba526044a6b86e98e2abb9ce0d"
+    },
+    {
+      "command": "cargo fmt --all -- --check",
+      "exit_code": 0,
+      "log": "benchmarks/private-evidence/operators-20261108/logs/operators-format-complete.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": "cargo build --locked --release --bin lobo --bin lobo-test",
+      "exit_code": 0,
+      "log": "benchmarks/private-evidence/operators-20261108/logs/operators-release-build.log",
+      "sha256": "fb1b34cac35f688b80a5a6d8e21bc5829ece9d7d87accfbbeb5799ef5bf79e64"
+    },
+    {
+      "command": "python3 -m unittest discover -s benchmarks -p 'test_*.py'",
+      "exit_code": 0,
+      "log": "benchmarks/private-evidence/operators-20261108/logs/operators-python-final.log",
+      "sha256": "c60ba488690514788df828a1328cf476e25d4cdb682b1af47360e52f9e5c6995"
+    },
+    {
+      "command": "python3 examples/web-server/test_server.py",
+      "exit_code": 0,
+      "log": "benchmarks/private-evidence/operators-20261108/logs/operators-http-regression.log",
+      "sha256": "d3afd7bdca00b83150dfe86ac5b564d5d995237e9072d2b3f82a01ae9aefa0b8"
+    },
+    {
+      "command": "npm --prefix editors/vscode run package",
+      "exit_code": 0,
+      "log": "benchmarks/private-evidence/operators-20261108/logs/operators-vsix-package-final.log",
+      "sha256": "a70878e4f8f957bf250de42dbf40f742910abc716124d3eaf8fccefba2917b8c"
+    },
+    {
+      "command": "LOBO_VSCODE_EXECUTABLE=/usr/share/code/code xvfb-run -a npm --prefix editors/vscode run test:host",
+      "exit_code": 0,
+      "log": "benchmarks/private-evidence/operators-20261108/logs/operators-editor-host-final.log",
+      "sha256": "7128388af996e8def041b7a54c283ca5d5ee59f6b28e552879a07b7976ed512c"
+    },
+    {
+      "command": "python3 /home/luis/.codex/skills/.system/skill-creator/scripts/quick_validate.py .agents/skills/lobo-programming",
+      "exit_code": 0,
+      "log": "benchmarks/private-evidence/operators-20261108/logs/operators-skill-validation.log",
+      "sha256": "db349825903d66adffea3ecf1bd8e1803043e8a71cf1a051235dabc5371f5bb0"
+    },
+    {
+      "command": "./scripts/check.sh",
+      "exit_code": 0,
+      "log": "benchmarks/private-evidence/operators-20261108/logs/operators-documents-final.log",
+      "sha256": "1f11bb3bb382f1877ffa8eec4eb376db85d0ecfa2e1301289bb91fbd2cc966ae"
+    }
+  ],
+  "cli_examples": {
+    "commands": [
+      {
+        "command": [
+          "/home/luis/dev/lobo-ar/lobo-lang/target/release/lobo",
+          "compile",
+          "examples/operators.lobo",
+          "--emit",
+          "checked",
+          "-o",
+          "target/operators-native-20261108/operators.loboc"
+        ],
+        "exit_code": 0,
+        "stdout": "{\"artifact\":\"target/operators-native-20261108/operators.loboc\",\"entries\":[\"example.operators.add\",\"example.operators.scale\",\"example.operators.combined\",\"example.operators.greeting\"],\"format\":\"checked\",\"status\":\"ok\"}\n",
+        "stderr": ""
+      },
+      {
+        "command": [
+          "/home/luis/dev/lobo-ar/lobo-lang/target/release/lobo",
+          "compile",
+          "examples/operators.lobo",
+          "--backend",
+          "c",
+          "-o",
+          "target/operators-native-20261108/operators-c"
+        ],
+        "exit_code": 0,
+        "stdout": "{\"artifact\":\"target/operators-native-20261108/operators-c\",\"entries\":[\"example.operators.add\",\"example.operators.scale\",\"example.operators.combined\",\"example.operators.greeting\"],\"format\":\"native\",\"status\":\"ok\"}\n",
+        "stderr": ""
+      },
+      {
+        "command": [
+          "/home/luis/dev/lobo-ar/lobo-lang/target/operators-native-20261108/operators-c",
+          "--entry",
+          "example.operators.combined"
+        ],
+        "exit_code": 0,
+        "stdout": "{\"status\":\"ok\",\"kind\":\"value\",\"value\":{\"type\":\"Record\",\"value\":{\"id\":\"example.operators.vec2\",\"fields\":{\"x\":{\"type\":\"I64\",\"value\":\"7\"},\"y\":{\"type\":\"I64\",\"value\":\"10\"}}}}}\n",
+        "stderr": ""
+      },
+      {
+        "command": [
+          "/home/luis/dev/lobo-ar/lobo-lang/target/operators-native-20261108/operators-c",
+          "--entry",
+          "example.operators.greeting",
+          "--arg",
+          "Text:c3a9"
+        ],
+        "exit_code": 0,
+        "stdout": "{\"status\":\"ok\",\"kind\":\"value\",\"value\":{\"type\":\"Text\",\"value\":\"Hello, \u00e9!\"}}\n",
+        "stderr": ""
+      },
+      {
+        "command": [
+          "/home/luis/dev/lobo-ar/lobo-lang/target/release/lobo",
+          "compile",
+          "examples/operators.lobo",
+          "--backend",
+          "llvm",
+          "-o",
+          "target/operators-native-20261108/operators-llvm"
+        ],
+        "exit_code": 0,
+        "stdout": "{\"artifact\":\"target/operators-native-20261108/operators-llvm\",\"entries\":[\"example.operators.add\",\"example.operators.scale\",\"example.operators.combined\",\"example.operators.greeting\"],\"format\":\"native\",\"status\":\"ok\"}\n",
+        "stderr": ""
+      },
+      {
+        "command": [
+          "/home/luis/dev/lobo-ar/lobo-lang/target/operators-native-20261108/operators-llvm",
+          "--entry",
+          "example.operators.combined"
+        ],
+        "exit_code": 0,
+        "stdout": "{\"status\":\"ok\",\"kind\":\"value\",\"value\":{\"type\":\"Record\",\"value\":{\"id\":\"example.operators.vec2\",\"fields\":{\"x\":{\"type\":\"I64\",\"value\":\"7\"},\"y\":{\"type\":\"I64\",\"value\":\"10\"}}}}}\n",
+        "stderr": ""
+      },
+      {
+        "command": [
+          "/home/luis/dev/lobo-ar/lobo-lang/target/operators-native-20261108/operators-llvm",
+          "--entry",
+          "example.operators.greeting",
+          "--arg",
+          "Text:c3a9"
+        ],
+        "exit_code": 0,
+        "stdout": "{\"status\":\"ok\",\"kind\":\"value\",\"value\":{\"type\":\"Text\",\"value\":\"Hello, \u00e9!\"}}\n",
+        "stderr": ""
+      },
+      {
+        "command": [
+          "/home/luis/dev/lobo-ar/lobo-lang/target/release/lobo",
+          "run",
+          ".agents/skills/lobo-programming/references/examples.lobo",
+          "--backend",
+          "c",
+          "--entry",
+          "skill.examples.sum_pair"
+        ],
+        "exit_code": 0,
+        "stdout": "{\"kind\":\"value\",\"status\":\"ok\",\"value\":{\"type\":\"Record\",\"value\":{\"fields\":{\"left\":{\"type\":\"I64\",\"value\":\"4\"},\"right\":{\"type\":\"I64\",\"value\":\"6\"}},\"id\":\"skill.examples.pair\"}}}\n",
+        "stderr": ""
+      },
+      {
+        "command": [
+          "/home/luis/dev/lobo-ar/lobo-lang/target/release/lobo",
+          "run",
+          ".agents/skills/lobo-programming/references/examples.lobo",
+          "--backend",
+          "c",
+          "--entry",
+          "skill.examples.framed",
+          "--arg",
+          "Text:f09f90ba"
+        ],
+        "exit_code": 0,
+        "stdout": "{\"kind\":\"value\",\"status\":\"ok\",\"value\":{\"type\":\"Text\",\"value\":\"<\ud83d\udc3a>\"}}\n",
+        "stderr": ""
+      },
+      {
+        "command": [
+          "/home/luis/dev/lobo-ar/lobo-lang/target/release/lobo",
+          "run",
+          ".agents/skills/lobo-programming/references/examples.lobo",
+          "--backend",
+          "llvm",
+          "--entry",
+          "skill.examples.sum_pair"
+        ],
+        "exit_code": 0,
+        "stdout": "{\"kind\":\"value\",\"status\":\"ok\",\"value\":{\"type\":\"Record\",\"value\":{\"fields\":{\"left\":{\"type\":\"I64\",\"value\":\"4\"},\"right\":{\"type\":\"I64\",\"value\":\"6\"}},\"id\":\"skill.examples.pair\"}}}\n",
+        "stderr": ""
+      },
+      {
+        "command": [
+          "/home/luis/dev/lobo-ar/lobo-lang/target/release/lobo",
+          "run",
+          ".agents/skills/lobo-programming/references/examples.lobo",
+          "--backend",
+          "llvm",
+          "--entry",
+          "skill.examples.framed",
+          "--arg",
+          "Text:f09f90ba"
+        ],
+        "exit_code": 0,
+        "stdout": "{\"kind\":\"value\",\"status\":\"ok\",\"value\":{\"type\":\"Text\",\"value\":\"<\ud83d\udc3a>\"}}\n",
+        "stderr": ""
+      },
+      {
+        "command": [
+          "/home/luis/dev/lobo-ar/lobo-lang/target/release/lobo",
+          "check",
+          "dist/lobo-1.0.0-linux-x86_64/programs/document.loboc"
+        ],
+        "exit_code": 0,
+        "stdout": "{\"actions\":{\"lobo.generic.22ce39c073d7c3d6018159c87db0ccc9\":[],\"lobo.generic.7fb7e3ccd3b846cbab55809153b4dfef\":[],\"lobo.generic.b7720a7cf808262ea445b2e0b6bf3144\":[],\"v1.doc.check_item\":[],\"v1.doc.doubled\":[],\"v1.doc.process\":[],\"v1.doc.run\":[],\"v1.doc.selected\":[],\"v1.doc.validate\":[]},\"entries\":[\"v1.doc.run\",\"v1.doc.selected\",\"v1.doc.doubled\",\"v1.doc.process\",\"v1.doc.check_item\",\"v1.doc.validate\",\"lobo.generic.b7720a7cf808262ea445b2e0b6bf3144\",\"lobo.generic.22ce39c073d7c3d6018159c87db0ccc9\",\"lobo.generic.7fb7e3ccd3b846cbab55809153b4dfef\"],\"language\":\"core/1.1\",\"status\":\"ok\"}\n",
+        "stderr": ""
+      }
+    ],
+    "frozen_release_artifacts_verified": 86,
+    "old_checked_artifact": "dist/lobo-1.0.0-linux-x86_64/programs/document.loboc",
+    "frozen_manifest_sha256": "f89af5f98e4d79e62cb3d5cfd37801b7539671d0826cca25ba63ed9fa039cf7a",
+    "files": [
+      {
+        "path": "/home/luis/dev/lobo-ar/lobo-lang/target/release/lobo",
+        "bytes": 1368360,
+        "sha256": "6e66eee2033465b8fce8624e6052bab3f5f0ce2b921a8178ee04a1dcbb410f8a"
+      },
+      {
+        "path": "/home/luis/dev/lobo-ar/lobo-lang/target/release/lobo-test",
+        "bytes": 1183352,
+        "sha256": "5aaaf4e2f9f7202635c5b02bcae772ce18ea4549cec14058be6de94641c4ca74"
+      },
+      {
+        "path": "target/operators-native-20261108/operators.loboc",
+        "bytes": 8641,
+        "sha256": "179ee35787cd24d2addf1fd3542f3ab0a75e6630f0c7cad1fd1c75d5034c7c06"
+      },
+      {
+        "path": "target/operators-native-20261108/operators-c",
+        "bytes": 22904,
+        "sha256": "6020385d1792fc944471a8b3b3b5baae295c3c39b09ffab83b9996c9b9725b25"
+      },
+      {
+        "path": "target/operators-native-20261108/operators-llvm",
+        "bytes": 22904,
+        "sha256": "31c86c226f2e25eefa90cd47c6d59e277c2bef70fe4f753b53e4f11ac01b22a0"
+      }
+    ]
+  },
+  "cli_evidence": "benchmarks/private-evidence/operators-20261108/logs/operators-cli-evidence.json",
+  "tool_identities": "benchmarks/private-evidence/operators-20261108/logs/operators-tool-versions.json",
+  "artifacts": [
+    {
+      "path": "target/release/lobo",
+      "bytes": 1368360,
+      "sha256": "6e66eee2033465b8fce8624e6052bab3f5f0ce2b921a8178ee04a1dcbb410f8a"
+    },
+    {
+      "path": "target/release/lobo-test",
+      "bytes": 1183352,
+      "sha256": "5aaaf4e2f9f7202635c5b02bcae772ce18ea4549cec14058be6de94641c4ca74"
+    },
+    {
+      "path": "dist/lobo-syntax-1.1.0.vsix",
+      "bytes": 29763,
+      "sha256": "78db9f754c9296a2cd6f7154fb9b344b664244765e48d173e3e1c964bcbcc586"
+    }
+  ],
+  "frozen_release": {
+    "manifest": "dist/lobo-1.0.0-linux-x86_64/manifest.json",
+    "manifest_sha256": "f89af5f98e4d79e62cb3d5cfd37801b7539671d0826cca25ba63ed9fa039cf7a",
+    "verified_artifacts": 86,
+    "old_checked_input_verified": "dist/lobo-1.0.0-linux-x86_64/programs/document.loboc"
+  },
+  "failed_attempts": [
+    {
+      "log": "operators-red.log",
+      "outcome": "four tests rejected missing operator syntax"
+    },
+    {
+      "log": "operators-green-attempt1.log",
+      "outcome": "three passed; comparison failed on deliberately different caller IDs; corrected the comparison to assert and normalize only caller identities"
+    },
+    {
+      "log": "operators-editor-red.log",
+      "outcome": "highlighting and local/project navigation failed before implementation"
+    },
+    {
+      "log": "operators-full-tests-attempt1.log",
+      "outcome": "version assertion expected historical core/1.0"
+    },
+    {
+      "log": "operators-full-tests-attempt2.log",
+      "outcome": "match diagnostic classification regression; corrected lowering and retained existing oracle"
+    },
+    {
+      "log": "operators-editor-full-attempt1.log",
+      "outcome": "adapter lacked core/1.1 success support"
+    },
+    {
+      "log": "operators-editor-final.log",
+      "outcome": "generic-binding diagnostic source projection unavailable with pre-fix debug compiler; rebuilt compiler retains source mapping"
+    },
+    {
+      "log": "operators-python-tests.log",
+      "outcome": "older release compiler could not parse updated skill example; built compiler 1.1 before dependent checks"
+    },
+    {
+      "log": "operators-editor-multiline-red.log",
+      "outcome": "multiline/comment-separated target had wrong highlighting; target-region grammar fixed"
+    },
+    {
+      "log": "operators-vsix-package.log",
+      "outcome": "repository-relative README link rejected by packager; packaged documentation corrected"
+    }
+  ],
+  "limits": {
+    "eligible_symbols": [
+      "+",
+      "-",
+      "*",
+      "/",
+      "%"
+    ],
+    "binding_limit": 64,
+    "generic_nominal_binding_signatures": "future work",
+    "generic_operation_requirements": "future work",
+    "navigation": "structural projection; compiler validates semantics",
+    "release_script": "scripts/release.py retains fixed 1.0 acceptance contract",
+    "agent_construction_quality": null,
+    "agent_comprehension": null,
+    "agent_token_usage": null,
+    "runtime_speed": null
+  },
+  "preservation": {
+    "directory": "benchmarks/private-evidence/operators-20261108",
+    "inputs": {
+      "path": "benchmarks/private-evidence/operators-20261108/inputs.json",
+      "sha256": "b351c6c5227a2fb772aa4fd9db6d73e6b8702888f2bd47d96928e33c29743505",
+      "files": 236
+    },
+    "source_archive": {
+      "path": "benchmarks/private-evidence/operators-20261108/source.tar.gz",
+      "bytes": 482561,
+      "sha256": "bbe500058551ffd185c9e9be9aa681b2ce434dd4316fd894ee45238a8d15a7d6"
+    },
+    "retained_logs": 37,
+    "caller_comparison_reproducer_retained": true,
+    "backup_scope": "local workspace"
+  }
+}

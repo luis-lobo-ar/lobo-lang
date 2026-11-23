@@ -1,0 +1,33 @@
+module operators;
+
+record Vec2 { x: I64, y: I64 }
+
+operator +(Vec2, Vec2) -> Vec2 = add;
+operator *(Vec2, I64) -> Vec2 = scale;
+
+fn add(a: Vec2, b: Vec2) -> Vec2 {
+  Vec2 { x: a.x + b.x, y: a.y + b.y }
+}
+
+fn scale(a: Vec2, factor: I64) -> Vec2
+requires { factor >= 0 }
+{
+  Vec2 { x: a.x * factor, y: a.y * factor }
+}
+
+fn combined() -> Vec2 {
+  Vec2 { x: 1, y: 2 } + Vec2 { x: 3, y: 4 } * 2
+}
+
+fn greeting(name: Text) -> Text {
+  "Hello, " + (name + "!")
+}
+
+identities {
+  module: "example.operators",
+  Vec2: "example.operators.vec2",
+  add: "example.operators.add",
+  scale: "example.operators.scale",
+  combined: "example.operators.combined",
+  greeting: "example.operators.greeting"
+}

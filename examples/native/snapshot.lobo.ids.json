@@ -1,0 +1,12 @@
+{
+  "format": "lobo-identities/0.1",
+  "identities": {
+    "module": "native.snapshot",
+    "Snapshot": "native.snapshot.value",
+    "main": "native.snapshot.main",
+    "os.IoResult": "lobo.os.result",
+    "os.restrict_capability": "lobo.os.restrict_capability",
+    "os.monotonic_ms": "lobo.os.monotonic_ms",
+    "os.random_bytes": "lobo.os.random_bytes"
+  }
+}

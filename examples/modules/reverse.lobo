@@ -1,0 +1,13 @@
+module reversed;
+
+use deps { reverse };
+
+fn main(input: List<I64>) -> List<I64> {
+  reverse(input)
+}
+
+identities {
+  module: "example.modules.reversed_app",
+  deps.reverse: "example.modules.reverse",
+  main: "example.modules.reversed"
+}

@@ -1,0 +1,1456 @@
+{
+  "date": "2026-11-04",
+  "scope": "User-authorized direct LLVM native backend implementation, verification and public workload comparison",
+  "versions": {
+    "compiler": "0.11.1",
+    "core": "core/0.11-draft",
+    "artifact": "lobo-checked/0.11",
+    "native_adapter": "0.6",
+    "extension": "0.13.0"
+  },
+  "checks": {
+    "cargo_test_locked": {
+      "passed": 163,
+      "failed": 0,
+      "ignored": 0,
+      "log": "target/llvm-cargo-final.log"
+    },
+    "llvm_focused_tests": {
+      "passed": 4,
+      "log": "target/llvm-cli-final.log"
+    },
+    "generated_oracle_cases": 100,
+    "python_harness_tests": 30,
+    "editor_tests": 114,
+    "real_vscode_host": {
+      "exit_code": 0,
+      "marker": "LOBO_HOST_TESTS_PASSED"
+    },
+    "clippy_strict": "passed",
+    "format_check": "passed",
+    "skill_validator_and_both_native_routes": "passed",
+    "release_build": "passed",
+    "llvm_verifier": "passed",
+    "actual_sample_without_tools_on_path": {
+      "status": "ok",
+      "kind": "value",
+      "value": {
+        "type": "Text",
+        "value": "\u00e9"
+      }
+    },
+    "repository_links_json_and_whitespace": "passed; target/llvm-docs-final.log and target/llvm-diff-final.log"
+  },
+  "commands": [
+    "cargo test --locked",
+    "cargo test --locked --test llvm --test recursive_values --test native_generated",
+    "cargo clippy --locked --all-targets -- -D warnings",
+    "cargo fmt --check",
+    "cargo build --locked --release --bins",
+    "python3 -m unittest discover -s benchmarks -p 'test_*.py'",
+    "npm --prefix editors/vscode test",
+    "env LOBO_VSCODE_EXECUTABLE=/usr/share/code/code xvfb-run -a npm --prefix editors/vscode run test:host",
+    "python3 /home/luis/.codex/skills/.system/skill-creator/scripts/quick_validate.py .agents/skills/lobo-programming",
+    "python3 benchmarks/llvm-backend.py --out benchmarks/private-evidence/llvm-comparison-20261104",
+    "python3 benchmarks/llvm-backend.py --out benchmarks/private-evidence/llvm-comparison-final-20261104"
+  ],
+  "baseline": "2026-11-04-core011-before-llvm-baseline.json",
+  "comparison": "2026-11-04-llvm-backend-comparison.json",
+  "source_manifest": [
+    {
+      "path": ".agents/skills/lobo-programming/SKILL.md",
+      "sha256": "45ca90319bd3571979ad6291f000fb21d266157e93521a69ed4a304b36e45457"
+    },
+    {
+      "path": ".agents/skills/lobo-programming/references/examples.lobo",
+      "sha256": "d9594ecb60c6bd351a427bb39de06c2ffd2115bc4fa0be8f02ca62e19601476c"
+    },
+    {
+      "path": ".agents/skills/lobo-programming/references/language.md",
+      "sha256": "ae70897eb644e7d2b8f0ad948a7811c6071f3b0695d21283daa10d37e9aef0aa"
+    },
+    {
+      "path": ".agents/skills/lobo-programming/references/tools.md",
+      "sha256": "6f58545c331111eebfc9d5257538cd672cd59fbeea574065225beaf621e0c6a1"
+    },
+    {
+      "path": "AGENTS.md",
+      "sha256": "ddf08bb3952ffb5dd4041554a0b76c3d5f4ab108335aa8d1c5a1bfc9f2ba5ad0"
+    },
+    {
+      "path": "CHANGELOG.md",
+      "sha256": "9db072df2cf1e9b2009bed215e543f6c2fdee5ef4b122a6d2f7385c28be044e8"
+    },
+    {
+      "path": "Cargo.lock",
+      "sha256": "08d784e7b6ad85f99f11f876cb25d2bede4ec3c0173f794c0bfc158b4d313956"
+    },
+    {
+      "path": "Cargo.toml",
+      "sha256": "75f3f50a2f9cba94853b5165f44a8319794e28f9562bda4a426610defc448492"
+    },
+    {
+      "path": "README.md",
+      "sha256": "d6c46c7cedc990aa81f093de9ae0466e2f259d0b20481141f6038887b3e44db5"
+    },
+    {
+      "path": "VISION.md",
+      "sha256": "555e3f073a6c6c2429adc83140e702245ca8aa5eacafcd2da29e844489570955"
+    },
+    {
+      "path": "benchmarks/README.md",
+      "sha256": "a46e03610483ed1baf614d60cd5f0bad9158f38dfc72ece2aeab5b1569b989b3"
+    },
+    {
+      "path": "benchmarks/llvm-backend.py",
+      "sha256": "e77626e51ceb251c0e1af5002abfb3347da446ff0c8fce9ed60f291becbd3c84"
+    },
+    {
+      "path": "benchmarks/results/2026-11-04-llvm-backend-verification.md",
+      "sha256": "ab82629b2035294d1714560937c8bcf97678f172b8be4c6e534993de465edadc"
+    },
+    {
+      "path": "benchmarks/results/README.md",
+      "sha256": "e589dfc909ffcca51750c2bbb8fc2929b005be6dc80516bed470d83703add27e"
+    },
+    {
+      "path": "decisions/0001-canonical-semantic-graph.md",
+      "sha256": "b6dba614a5e227e1fcb79bc840af75ac18d9ec5f045dfa5202a4e49051faca24"
+    },
+    {
+      "path": "decisions/0002-human-auditable-projections.md",
+      "sha256": "7268d0abc8475ca449f5903a3beaebc9a6475603e11483499b348aa26869125a"
+    },
+    {
+      "path": "decisions/0003-existing-execution-target-first.md",
+      "sha256": "f55e746a3ebdfd48c6c0b42f11939569fb0201f9c4ae44e3be68f3cac7dd1363"
+    },
+    {
+      "path": "decisions/0004-rust-reference-compiler-and-core-first.md",
+      "sha256": "42c12b2f73b2147939b8a154b94edafa2cdeb78b4235a6a96884d59dac6347c4"
+    },
+    {
+      "path": "decisions/0005-checked-artifact-for-first-executable-core.md",
+      "sha256": "3318071f72d4a02f259578a50e5524f9c332554ef738d383c3ebe15258a19f07"
+    },
+    {
+      "path": "decisions/0006-native-machine-code-is-the-default.md",
+      "sha256": "25f3c8fbb15b54800c721e19c836a00adb6c5f09aabfcc78a1e22516c379aff9"
+    },
+    {
+      "path": "decisions/0007-native-differential-and-sanitizer-gates.md",
+      "sha256": "86b5ce0851174548ac8f48c210dc086ea90ec56f4cf0e932baebb372d7c45b40"
+    },
+    {
+      "path": "decisions/0008-counted-folds-with-immutable-state.md",
+      "sha256": "2bb3353fe8132a48b1df1cb4f38c4b1e17348fafa22dc9e20b12f9c77198fd21"
+    },
+    {
+      "path": "decisions/0009-declarative-vscode-syntax-highlighting.md",
+      "sha256": "7f3563dd9a230227f39a3a6cfea9cad1f5f6eb008b6816b5e049a6f0ea46cd13"
+    },
+    {
+      "path": "decisions/0010-vscode-local-definition-navigation.md",
+      "sha256": "335719337b5c24910f2db2d921c9060f4bb5b5ec6507c543bbfccec485e26627"
+    },
+    {
+      "path": "decisions/0011-compiler-source-locations-and-editor-diagnostics.md",
+      "sha256": "f8d6a5290afbff74ea89394834e6568307f7d2d179adb44dc65a16212ef61857"
+    },
+    {
+      "path": "decisions/0012-actions-terminology.md",
+      "sha256": "d8b4c7630ac0115b73d96b709a529aebefe9b5de6d1affc37e3d8d8a2dabd8c0"
+    },
+    {
+      "path": "decisions/0013-checked-action-bounds.md",
+      "sha256": "92433b5d0e70b2410d45368ebd1f9fa0ab9c79085d9217ebd5fe9021907b1e9b"
+    },
+    {
+      "path": "decisions/0014-language-first-development.md",
+      "sha256": "200dca6298e29b7424971fc511a4a76602a2e906c556e6aa1e35ee7929191fcc"
+    },
+    {
+      "path": "decisions/0015-immutable-record-values.md",
+      "sha256": "e9951a581a6accebabf5ed0f41e1d4372ed3e4abf09467101bd9a38b1947ab6f"
+    },
+    {
+      "path": "decisions/0016-tagged-alternative-values.md",
+      "sha256": "2bbfe291836fb11a1d6a202db8dc0ecbb8bf2955c7d07cfdf4bf89d298750470"
+    },
+    {
+      "path": "decisions/0017-persistent-growable-lists.md",
+      "sha256": "dd6b6a36a281a0c8b67f6d6e9e45f0cfd136db6fa68747137e6c7a484bdb91cf"
+    },
+    {
+      "path": "decisions/0018-text-and-byte-values.md",
+      "sha256": "21db44c8af532edab6a8115148309f595c80a601fff042c30adc803fe72c8155"
+    },
+    {
+      "path": "decisions/0019-parser-workload-in-existing-lobo.md",
+      "sha256": "747f85e218507e567eda20eabb7b013e0397426465b8c10931102595907c9526"
+    },
+    {
+      "path": "decisions/0020-tree-workload-in-existing-lobo.md",
+      "sha256": "90ea96121533ce0747570af06d05c4c7429e7b4dd37eb41a29c80f49d5528b9d"
+    },
+    {
+      "path": "decisions/0021-immutable-state-driven-iteration.md",
+      "sha256": "b374d2a8405a4adee93da3a888667dd7cf6217acb3c9a444096d5239e3f035b6"
+    },
+    {
+      "path": "decisions/0022-closed-module-composition.md",
+      "sha256": "de390979867447d60ffd5a0ed4c1a5653e3656be0e4da3f42ddacc65afe97e34"
+    },
+    {
+      "path": "decisions/0023-explicit-editor-source-snapshots.md",
+      "sha256": "fbea26a1fdcb57c33004f89e856a555ec436c5bc1c4a383eb50412a00d834704"
+    },
+    {
+      "path": "decisions/0024-agent-first-verification-prototype.md",
+      "sha256": "c18767eedbe9d407c09477bcd2be582f158612e4d3384996a706e47808fe7924"
+    },
+    {
+      "path": "decisions/0025-real-agent-testing-pilot.md",
+      "sha256": "5df3e3c6132c88365a23e36da4899f07fa340d052290874384344070ce4f3789"
+    },
+    {
+      "path": "decisions/0026-repeated-library-repair-study.md",
+      "sha256": "b6660862191a9b6e3bac8a52091fca8c0fddce7286b76b661f1240638c29aa68"
+    },
+    {
+      "path": "decisions/0027-agent-language-knowledge-package.md",
+      "sha256": "dc5c80c950513dd984d31edc00e2e38251c44a0c6ddde3b0c6d4ba6f10fd916e"
+    },
+    {
+      "path": "decisions/0028-lobo-skill-onboarding-comparison.md",
+      "sha256": "d8d0eb1dd7666aabebd064ec853bc8b1d07722e5b9247f0a57735b80da17e87b"
+    },
+    {
+      "path": "decisions/0029-list-guarded-recursive-values.md",
+      "sha256": "b5d5092fc94d92003bb361c557e0ac5c77d110255952f1368d3e987a5ee9b167"
+    },
+    {
+      "path": "decisions/0030-explicit-generic-function-specialization.md",
+      "sha256": "346413f0901407050ba2773c0a3b6d086b3cf3fc48a2f10ce3f55e5b37856d32"
+    },
+    {
+      "path": "decisions/0031-direct-llvm-native-backend.md",
+      "sha256": "3f3a38ad833d6f40f28a13527ef23629f01cdc0fdcb00727ac91d80e4a50ffbf"
+    },
+    {
+      "path": "docs/architecture.md",
+      "sha256": "1fe255df7bb2377abdddac14013cfa72d519f8a21b608da824bb28491098c933"
+    },
+    {
+      "path": "docs/compiler-and-backends.md",
+      "sha256": "616582c111618d767e22393889f8c064cab89cb9f9eda4f7ddc7a209a5e552ea"
+    },
+    {
+      "path": "docs/compiler-development-workflow.md",
+      "sha256": "f466eca34398786da4dbf03bf5c9e9068ed53a027f2547efb7c23c802f4e328a"
+    },
+    {
+      "path": "docs/development-workflow.md",
+      "sha256": "6095689a39afe5259c8757db2b19246b4512e21812f5967b59c759dca944c065"
+    },
+    {
+      "path": "docs/language-completeness.md",
+      "sha256": "02c68a303c7512341b657058f01393ac1754d8d5c2e3ee2b7029218b8253719f"
+    },
+    {
+      "path": "docs/language-design.md",
+      "sha256": "bb90c4b441cbe7cdd6192f165f02a5f4e380c26ecc3d698b2d5c0218b9b7038c"
+    },
+    {
+      "path": "docs/native-development.md",
+      "sha256": "7a9e425260e9ac7168c8406a78c9e83fa02e8431b2918dae0ecd750014d218d5"
+    },
+    {
+      "path": "docs/native-performance.md",
+      "sha256": "9d127008214ab6f70b0be2b20d2ed48fc790572b264a545f018c5f0e067c2fec"
+    },
+    {
+      "path": "docs/roadmap.md",
+      "sha256": "ea29b615a6cf8debe8d4bca7ef70a5dc9b22310f6f81f7631a5bc9235aac0f29"
+    },
+    {
+      "path": "docs/self-hosting.md",
+      "sha256": "3c2746977ba5fd8ce54ee9b07ebbd4b44c850fb9e012e4fcc781e3779732e741"
+    },
+    {
+      "path": "docs/state-and-context.md",
+      "sha256": "718528849fa9dd07b35f0b18684a1b11618e6d47f01f2a0a6363c7b1039b5b96"
+    },
+    {
+      "path": "docs/testing-and-tdd.md",
+      "sha256": "ac9571c30e8f7c4465e7d93d0e82a9d08ae9b00e18871bb02dba430da4e3c62c"
+    },
+    {
+      "path": "docs/tool-protocol.md",
+      "sha256": "66975c0fd40a6d23c18fbbbe0c841bb1938bc4c037e272a1e7bb1150b5d37798"
+    },
+    {
+      "path": "docs/v1.0-target.md",
+      "sha256": "02ece8c615ef420551997c07da6e971a13a7bebf6e59f3edef12b35ccbc6e418"
+    },
+    {
+      "path": "docs/worktree-comparisons.md",
+      "sha256": "2417368b85237d0dfdcc6c2db1df04485b9d67db82e25ec558d95ad83b5b394a"
+    },
+    {
+      "path": "editors/vscode/README.md",
+      "sha256": "5af49212d832452ce8e33743cd639fa1c668b428dd97ad3cf1fd6090381c7b7a"
+    },
+    {
+      "path": "examples/actions.lobo",
+      "sha256": "21b5ca015de2773d1444e8c4d05b392d394f93dcb188227cabb97afe63f429b6"
+    },
+    {
+      "path": "examples/algorithms.lobo",
+      "sha256": "e33036cb366ef473fc310b7075fbc2282e275df70d7324d05bcb4c4106d461e3"
+    },
+    {
+      "path": "examples/ast.lobo",
+      "sha256": "f2e57a59fdf82e0dfed0263c6d6b196a36a5d0ac90399eab20277594d0ae2d5e"
+    },
+    {
+      "path": "examples/collections.lobo",
+      "sha256": "ec09d1a67ff2ec5ff49625186f66009022b61b521e7454af0de3213afc3f5425"
+    },
+    {
+      "path": "examples/core.lobo",
+      "sha256": "4321f5ae582d55e0ef973f37f317d71b579834f4d9efe5b1959dbc4dd66f3b57"
+    },
+    {
+      "path": "examples/generics.lobo",
+      "sha256": "486f02c8f314d37ba9b5720474772b2782095ac656aa24eac418529f8ae3e28f"
+    },
+    {
+      "path": "examples/iteration.lobo",
+      "sha256": "607c4f77a46b94833eb7c8438647a5a6baf157f523b2cc791d2c2068bfbc67b0"
+    },
+    {
+      "path": "examples/modules/mirror.lobo",
+      "sha256": "0ead2d707083b30c4d4218759be38e2ab44010daacc0e3e81ec3537ce1fb0a49"
+    },
+    {
+      "path": "examples/modules/reverse.lobo",
+      "sha256": "d42fd9670de9a6133452a020b9294e99e5df68f65103e3b4dacedd9bcad32e0f"
+    },
+    {
+      "path": "examples/modules/sequences.lobo",
+      "sha256": "4d4b08d31f0dee8f65ee0025f5bd342425c62b1e8b2091f7ea31ba7cebe9e0ff"
+    },
+    {
+      "path": "examples/parser.lobo",
+      "sha256": "a4e4fd24d51eb9cf610b1f0581158962202f048c4c5387873dcce5548adf4ea8"
+    },
+    {
+      "path": "examples/records.lobo",
+      "sha256": "f9c61078b287890ae7764182f6a9146341ea4471f8c3717ce4922a50c8092d4e"
+    },
+    {
+      "path": "examples/sequences.lobo",
+      "sha256": "dea6546640035a1a13831851309b7f0ab10c7a36151b76578eb16f7bf0c15384"
+    },
+    {
+      "path": "examples/state_iteration.lobo",
+      "sha256": "5deb87b4edead36b4c594e430a5cc3e4c10adc4ac906302afc2769003a22abed"
+    },
+    {
+      "path": "examples/testing/checks.lobo",
+      "sha256": "eb27de19d105fcce9cd30682fe133b78cff1169f255fad8086c7c2d49a1bf112"
+    },
+    {
+      "path": "examples/text.lobo",
+      "sha256": "7d6c561755d3447d2b54c8e1c481f6dd8ab33dc957c4057f59b4dfb7c4b4d94c"
+    },
+    {
+      "path": "examples/transfer.lobo",
+      "sha256": "1e6937cfabc588cf2bf9dc955bdcad018459f2331e34a0b1880400d22cddce08"
+    },
+    {
+      "path": "examples/tree.lobo",
+      "sha256": "5b18b333ed29c500d68fd318ca30b422ab12d82c27afddc004343a2e692f4601"
+    },
+    {
+      "path": "examples/variants.lobo",
+      "sha256": "b7e47a5753281fe34efc9a10a91cd591d8cc50d8f7f39a9e480990dfb24b222b"
+    },
+    {
+      "path": "spec/README.md",
+      "sha256": "ea33067cf49e335b5bb031306ab3028c633cd220e30f3a4e3f9bd05e96b6b134"
+    },
+    {
+      "path": "spec/agent-testing-v0.1.md",
+      "sha256": "dc9c1fb4b7f3aca5cc70a2cb844139190ec16218ee3ddb7759653f2d0fc4ab0e"
+    },
+    {
+      "path": "spec/checked-artifact-v0.1.md",
+      "sha256": "8e85e37b7a89812f135ccb796e083ea95771032d267e55bc9c0d18f53fa56cdf"
+    },
+    {
+      "path": "spec/checked-artifact-v0.2.md",
+      "sha256": "b13203846b1eb62eeb73445ef422cb526f7ae33d1e6804ecdef20e33c6365ff7"
+    },
+    {
+      "path": "spec/checked-artifact-v0.3.md",
+      "sha256": "4874fc7ba430389d8d3bf4df3c6fc34b2b5bb949ecfe646383e3f6fc04652b15"
+    },
+    {
+      "path": "spec/conformance/core-cases.json",
+      "sha256": "076f50cc9a45b7588eed4d150bb289fcdf04b0dcc7435dd871e71ef388cf71df"
+    },
+    {
+      "path": "spec/core-v0.1.md",
+      "sha256": "c3fe3c05e21bd22c9df8f9ff78c65f3c645f127b10350c93a888c5f133f16854"
+    },
+    {
+      "path": "spec/core-v0.10.md",
+      "sha256": "2ca585067a2c5113ce335847f433489c79a71d63471c2443786157038b60953e"
+    },
+    {
+      "path": "spec/core-v0.11.md",
+      "sha256": "275105a2b66f5f0f6ddb12828d3e30db47f8603933654ea92b6bb3d5597ba8f9"
+    },
+    {
+      "path": "spec/core-v0.2.md",
+      "sha256": "9cbdbe1ddd2a55ce69b3333d5984a12d437ed225d856668c69edfbfd2a4b1ad2"
+    },
+    {
+      "path": "spec/core-v0.3.md",
+      "sha256": "96e39f958c14b082ad0f3a0c72dc0b3318a7c1c442812b35c338d35b00759543"
+    },
+    {
+      "path": "spec/core-v0.4.md",
+      "sha256": "84828c9c83b0c0b70d278e2458d77e01231bfd75899a99193b80a762b78ede83"
+    },
+    {
+      "path": "spec/core-v0.5.md",
+      "sha256": "02ad206aa3cf73c38a8c13d082cdd7d0ea61c45a4dd2ab304497df2cc7c326cc"
+    },
+    {
+      "path": "spec/core-v0.6.md",
+      "sha256": "3d8737fe0d67ef67916ba63fc6d91386d9ff983c9148d2b2c671048a0cf35245"
+    },
+    {
+      "path": "spec/core-v0.7.md",
+      "sha256": "0111fcfce8f7ba3ca9abfa027282113dcb6c31df7fb2d946847260f392efb221"
+    },
+    {
+      "path": "spec/core-v0.8.md",
+      "sha256": "790cfe562577be3dafa5ca3d2028e34d8782cbb36731fe45c29560a4badc6887"
+    },
+    {
+      "path": "spec/core-v0.9.md",
+      "sha256": "4bc8977f5151c72df856a06da8cc1ff136a9fb355681b47075bbd17d570d5379"
+    },
+    {
+      "path": "spec/generic-reuse-workload.md",
+      "sha256": "53e5d3097494f3deb5379c77a343997dfa52f47edb6c3915006dac05082b244f"
+    },
+    {
+      "path": "spec/language-milestone-workloads.md",
+      "sha256": "f0be02538657fc901e9241049314b75d03b0472bc776ad3748d63c5c847a2b4d"
+    },
+    {
+      "path": "spec/native-llvm-v0.1.md",
+      "sha256": "580611e7fc27523e4aed69b9064a7c688096c8254eecf9a53541f93994045b21"
+    },
+    {
+      "path": "spec/native-v0.1.md",
+      "sha256": "befed14019840eea1988bf6ff982d531df105bb0d1b057e765e820ed72cdc0b6"
+    },
+    {
+      "path": "spec/recursive-ast-workload.md",
+      "sha256": "3138f238b71d5d12001391dc3d2f8cf054a1a59622608699732bcc05441c7a3a"
+    },
+    {
+      "path": "spec/schemas/conformance-case.schema.json",
+      "sha256": "ef3a27dd2a0caa8249c1f1439eb0abf96983350456db4efaabfdd2e2cc24c443"
+    },
+    {
+      "path": "spec/schemas/request-envelope.schema.json",
+      "sha256": "2abad3a1e8bbbb980cfa0fbe2c9c38a789ba94215bd6481f677d15cfe7c24409"
+    },
+    {
+      "path": "spec/schemas/response-envelope.schema.json",
+      "sha256": "a4e7d16a8bc25e06d5a571259df750f7c024319922e419bae57a8d66c64e7ca4"
+    },
+    {
+      "path": "spec/schemas/tool-descriptor.schema.json",
+      "sha256": "2e375db03b357fee59094e46252dcd847a3adf3fc04fae39457bf98a62bc17ef"
+    },
+    {
+      "path": "spec/source-diagnostics-v0.1.md",
+      "sha256": "d531df2c57fdd4ec2917fb029a8fc54f441f6632fbfb7c2b4cfe3b8168e6eb3b"
+    },
+    {
+      "path": "src/agent_testing/mod.rs",
+      "sha256": "359c598c64e7a6016de602a300376a5f3830fa47be9e9ff918af5b83c8b45a84"
+    },
+    {
+      "path": "src/agent_testing/process.rs",
+      "sha256": "b008879f8838f0a19ab8358588d1f26956a33c3a996c7f18565d11989fd0562f"
+    },
+    {
+      "path": "src/bin/lobo-test.rs",
+      "sha256": "b515be623037786da54bc49b3e7880b535d1d46a672379b007617d7d2c099904"
+    },
+    {
+      "path": "src/buffers.rs",
+      "sha256": "591dbf63b70dc87e6573fb8d62693cb600944a494abde9f77747a481ffbb9898"
+    },
+    {
+      "path": "src/generics.rs",
+      "sha256": "bf96272972abd1058deb1ff845806a8fc20f5121ed1ecdde201b35beee2deeda"
+    },
+    {
+      "path": "src/lib.rs",
+      "sha256": "6b52aa34411ed1d82496a5e405c9c266273e1b6f4822f0bb2ac8ec76eced8f25"
+    },
+    {
+      "path": "src/lists.rs",
+      "sha256": "e070811e4d6420fe414efdafaebb86bc56f3c66d0926c0e6f67e937d9509ec7c"
+    },
+    {
+      "path": "src/main.rs",
+      "sha256": "a27361d1938e9a43e9f991ab6680cd292a9ed6ea286478f3f1db7c091c96795d"
+    },
+    {
+      "path": "src/modules.rs",
+      "sha256": "dd45f5c2df30caa1cff484a4390e897280966923a3a15eee4d8eb9289daa1d0d"
+    },
+    {
+      "path": "src/native.rs",
+      "sha256": "59008816ff47662aeb0a136b4676b82fda4d244af6df6250d9bc1c50f36d5b12"
+    },
+    {
+      "path": "src/native_buffers.c",
+      "sha256": "9308ae7edb1da47d0323a38ffa84e4357d6f391084bea17757e13c45ad90942c"
+    },
+    {
+      "path": "src/native_lists.rs",
+      "sha256": "0a1799b60ebb15fe1f23d4ef486581d2de31332a112901d17198cedac81d3cc5"
+    },
+    {
+      "path": "src/native_llvm.rs",
+      "sha256": "fa91b21b0be982fa8f78ca908e24511f2d2c85cdc2a868315cdaa0e3c4564262"
+    },
+    {
+      "path": "src/native_llvm_runtime.c",
+      "sha256": "4708bd969fc5e58cba4d913dd9e0bde8bf62ae7da74af7f562f662874a0e0ec3"
+    },
+    {
+      "path": "src/native_runtime.c",
+      "sha256": "b4ce031fe130708c2f70e5fbd74c8af8e07b698417a6658f6da64805da5e7f67"
+    },
+    {
+      "path": "src/records.rs",
+      "sha256": "2abdfb8a702a9d03ad6d16f0cdfe58c088cef7e0810b2e55353e39aea2ff76f3"
+    },
+    {
+      "path": "tests/actions.rs",
+      "sha256": "ada1562913e3aa8bcf3bb736ed514bf24a10af9eb034616e914940b00933572c"
+    },
+    {
+      "path": "tests/agent_testing.rs",
+      "sha256": "83d50e1a560c1d8ccda150a0dd8134be94c26e34ec3ee6b1de390945661c2021"
+    },
+    {
+      "path": "tests/cli.rs",
+      "sha256": "736a926b863997badad5fd71cf2a932c1b6717a50df2484733b393771b10b78e"
+    },
+    {
+      "path": "tests/conformance.rs",
+      "sha256": "7acb8d726a6e16d6182fea130d6bcd8ecfcd5301760581553f8d99774796143e"
+    },
+    {
+      "path": "tests/fold.rs",
+      "sha256": "0c143201c583e4ebc0be2bc4bb78947c179a291827c7aabc179f5e9735357f15"
+    },
+    {
+      "path": "tests/generics.rs",
+      "sha256": "f212f4d3ce888d7bad80f3bff30021c333fd5d4be33b133f7292fbc5c6d77fde"
+    },
+    {
+      "path": "tests/lists.rs",
+      "sha256": "85e25183b85be99b4cc9e4cba9e562002fb250817c730a0ba8ba93141202d5b9"
+    },
+    {
+      "path": "tests/llvm.rs",
+      "sha256": "24ad8e3db49e109b26394455b2ce84621f3017367e149672bab5a3f624f90fc8"
+    },
+    {
+      "path": "tests/modules.rs",
+      "sha256": "3ff3ddf00812987cf59543c8f77fb337edb68efdd92925dd98e10fef745e64bf"
+    },
+    {
+      "path": "tests/native.rs",
+      "sha256": "c0280ce1d7c711c1d72d56b63f091a600b0b069d763771c0c3a8fd58e1a6c04e"
+    },
+    {
+      "path": "tests/native_generated.rs",
+      "sha256": "d494768e7e4e589b5234fd50a97d0054ebb8a7a1454b7dfeb0b35d37ed38b28f"
+    },
+    {
+      "path": "tests/protocol_actions.rs",
+      "sha256": "03b40b1873e5b27b598cf070572fa0b552105364991337e8992a99317cd47315"
+    },
+    {
+      "path": "tests/records.rs",
+      "sha256": "4ae5226fc93f3c8f9193052f16430401ca11a3593d7a7afec786735ac6578513"
+    },
+    {
+      "path": "tests/recursive_values.rs",
+      "sha256": "dabcf0a739e46420b2b0fa9a8eb7ca3113ff351a893dc56097b030eeaf2f2e6a"
+    },
+    {
+      "path": "tests/source_locations.rs",
+      "sha256": "bbe8bfa6479acf373d4b8811bde36900c7dfbc160f979522e25645c5ce7f4091"
+    },
+    {
+      "path": "tests/support/mod.rs",
+      "sha256": "4e2c2e83760d3bcff06688c7d778a0c2e190ea2b52d5035509549b266b870013"
+    },
+    {
+      "path": "tests/text.rs",
+      "sha256": "77a1fa12a174c7e111a3ab9251cb7db6bd2dde1af6c54fa4354f4b047c673c7e"
+    },
+    {
+      "path": "tests/tree.rs",
+      "sha256": "4847943a3f80c95612584a5ee21633712e853785958befa7af8e28db24a28e9e"
+    },
+    {
+      "path": "tests/variants.rs",
+      "sha256": "bd22c21508e31485804f356725d3112f44138ed54e08ca3f9fec2959daa9aef6"
+    },
+    {
+      "path": "tests/while.rs",
+      "sha256": "a9694d8bfa391a74f71fa3c3954013a37eb651f84129b1c2b90d7ef2ad11e8e9"
+    },
+    {
+      "path": "tests/workloads.rs",
+      "sha256": "bcd847d1fdcf069250ad5f535836eb47dbf7b655dbe8643bfaae705d81dd8ab2"
+    }
+  ],
+  "source_archive": {
+    "path": "benchmarks/private-evidence/llvm-evolution-20261104/source-llvm-final.tar.gz",
+    "sha256": "98465a83666502d9714651889e44da227b5c5267229cf5e2c5c100caf3104cd0"
+  },
+  "artifacts": [
+    {
+      "path": "target/release/lobo",
+      "bytes": 1198408,
+      "sha256": "fe74abee06002f49bc4918b2ef3bee8a32ddefb5271f13025488d1d4f4f7d264"
+    },
+    {
+      "path": "target/release/lobo-test",
+      "bytes": 1040488,
+      "sha256": "ffacf218c37c76faee3bcaba4d88a9fc22f3c621feaeb6a765e9c33d4d82ad84"
+    },
+    {
+      "path": "target/native-examples/generics-llvm-core0111",
+      "bytes": 22896,
+      "sha256": "6ec3ba3d16fa3b31fc0c5cc4d0052b9d51407693cc2c41f8113766844b236c59"
+    },
+    {
+      "path": "target/native-examples/generics-llvm-core0111.ll",
+      "bytes": 182574,
+      "sha256": "5e6234ae413f819b038c46c58e43fffa21adf895dc91cff61cd1314f24b2cf78"
+    }
+  ],
+  "raw_logs": [
+    {
+      "path": "benchmarks/private-evidence/llvm-evolution-20261104/llvm-artifacts-skill.log",
+      "bytes": 2039,
+      "sha256": "496af0d0f80ffaa4d02ae3e429f68ffbc7bd8403b75485c0ae49d0b745ed17dc"
+    },
+    {
+      "path": "benchmarks/private-evidence/llvm-evolution-20261104/llvm-benchmark-final.log",
+      "bytes": 2779,
+      "sha256": "39d2146f910503e2adadb5c406cfa3d54f005569abff923a930eefed2acd318e"
+    },
+    {
+      "path": "benchmarks/private-evidence/llvm-evolution-20261104/llvm-benchmark-first.log",
+      "bytes": 2796,
+      "sha256": "ead8f286c8376c9c1d562c049df3cf5dce3b0cfc0d9b493bc3947985eee669e5"
+    },
+    {
+      "path": "benchmarks/private-evidence/llvm-evolution-20261104/llvm-cargo-final.log",
+      "bytes": 17387,
+      "sha256": "db1fcc03421f6562cd3782ed5f725e154d250663f7af7d2a06ebaf732164dc60"
+    },
+    {
+      "path": "benchmarks/private-evidence/llvm-evolution-20261104/llvm-cargo-first.log",
+      "bytes": 17367,
+      "sha256": "d0f955239440d61f44a64f5af94021ee42a37d1c1f47acf9ae9970bfee987f4e"
+    },
+    {
+      "path": "benchmarks/private-evidence/llvm-evolution-20261104/llvm-cli-final.log",
+      "bytes": 650,
+      "sha256": "3447b0fcd4fcb88fc502d0e666aaea5e08e0e0d5e45beab9b9d247d7983710aa"
+    },
+    {
+      "path": "benchmarks/private-evidence/llvm-evolution-20261104/llvm-cli-first.log",
+      "bytes": 1058,
+      "sha256": "ac477d32408d1c15e081598bef0d2a84d966029bdaac695d1df2a009f7a4a534"
+    },
+    {
+      "path": "benchmarks/private-evidence/llvm-evolution-20261104/llvm-cli-red.log",
+      "bytes": 1713,
+      "sha256": "3ab8a806e9636d5ff0b2b7cddf2a1b5e5c234fcf4f24d5e7d5e795191a26e912"
+    },
+    {
+      "path": "benchmarks/private-evidence/llvm-evolution-20261104/llvm-clippy-final.log",
+      "bytes": 190,
+      "sha256": "f55327d825bb93aed499e841a13f18566b15139b4fa1e2efd237c38ced4e2304"
+    },
+    {
+      "path": "benchmarks/private-evidence/llvm-evolution-20261104/llvm-clippy-first.log",
+      "bytes": 191,
+      "sha256": "e76ffd17ccbdd92a363d0265081de86143f5cda2a9f17fb5b8e87487b78073bf"
+    },
+    {
+      "path": "benchmarks/private-evidence/llvm-evolution-20261104/llvm-differential-fourth.log",
+      "bytes": 1642,
+      "sha256": "1ed9c36db30c18afa55d2852b5f2a6e753be46fcadc39f405df9ef8e4cdf84ae"
+    },
+    {
+      "path": "benchmarks/private-evidence/llvm-evolution-20261104/llvm-differential-second.log",
+      "bytes": 1040,
+      "sha256": "874f3c49ba4a7137b657f2393ecec8dc1e794b7bd607c961fb46dd62d9a22e31"
+    },
+    {
+      "path": "benchmarks/private-evidence/llvm-evolution-20261104/llvm-differential-third.log",
+      "bytes": 37766,
+      "sha256": "47f46f3affd4b4226e255fa0cdfc192570ed84d356d85a24710bf73e9cd2b924"
+    },
+    {
+      "path": "benchmarks/private-evidence/llvm-evolution-20261104/llvm-editor-host.log",
+      "bytes": 1050,
+      "sha256": "fe43243ad64408918e11b9dd3397570cdf534b2ff930cc42e5f44dad654173f0"
+    },
+    {
+      "path": "benchmarks/private-evidence/llvm-evolution-20261104/llvm-editor-tests.log",
+      "bytes": 25778,
+      "sha256": "77e87eee1e3082d4adc3013663a04855f87d35b464ae5345ea77ff3a7120e53c"
+    },
+    {
+      "path": "benchmarks/private-evidence/llvm-evolution-20261104/llvm-format-final.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "benchmarks/private-evidence/llvm-evolution-20261104/llvm-profile.log",
+      "bytes": 2278,
+      "sha256": "ea6625674aaec8c4a26608fa2643fe1b79dd9a26ec714d9b3bdc0f189f2d069e"
+    },
+    {
+      "path": "benchmarks/private-evidence/llvm-evolution-20261104/llvm-python-tests.log",
+      "bytes": 130,
+      "sha256": "c7a457299c9c751de1fb4dc67ecba9f2b2c054d72d248eb367b9065a37d2102e"
+    },
+    {
+      "path": "benchmarks/private-evidence/llvm-evolution-20261104/llvm-release-final.log",
+      "bytes": 181,
+      "sha256": "7e06080625c2d21ea56aed99ad1ce003dbe0af9941bee612b224bbce3a591aaa"
+    },
+    {
+      "path": "benchmarks/private-evidence/llvm-evolution-20261104/llvm-release-first.log",
+      "bytes": 181,
+      "sha256": "5b09682a2014991da331a0402b051663ae85d0a5ea3fb3d94a6865d7a848e518"
+    },
+    {
+      "path": "benchmarks/private-evidence/llvm-evolution-20261104/llvm-skill-validation.log",
+      "bytes": 16,
+      "sha256": "db349825903d66adffea3ecf1bd8e1803043e8a71cf1a051235dabc5371f5bb0"
+    },
+    {
+      "path": "benchmarks/private-evidence/llvm-evolution-20261104/llvm-structured-first.log",
+      "bytes": 2601,
+      "sha256": "24f2dfa6f1a965fc3f028c19b5b6b365f111379e5055945cd3381340b66f8294"
+    },
+    {
+      "path": "benchmarks/private-evidence/llvm-evolution-20261104/llvm-docs-final.log",
+      "bytes": 55,
+      "sha256": "1f11bb3bb382f1877ffa8eec4eb376db85d0ecfa2e1301289bb91fbd2cc966ae"
+    },
+    {
+      "path": "benchmarks/private-evidence/llvm-evolution-20261104/llvm-diff-final.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "comparison_evidence": [
+    {
+      "path": "benchmarks/private-evidence/llvm-comparison-20261104/ast-c-0",
+      "bytes": 22888,
+      "sha256": "769efc9beea240a8f288cb9dcb34ed7adeb5ea9ddc1f8cc60ec671f9dbc27c88"
+    },
+    {
+      "path": "benchmarks/private-evidence/llvm-comparison-20261104/ast-c-1",
+      "bytes": 22888,
+      "sha256": "769efc9beea240a8f288cb9dcb34ed7adeb5ea9ddc1f8cc60ec671f9dbc27c88"
+    },
+    {
+      "path": "benchmarks/private-evidence/llvm-comparison-20261104/ast-c-2",
+      "bytes": 22888,
+      "sha256": "769efc9beea240a8f288cb9dcb34ed7adeb5ea9ddc1f8cc60ec671f9dbc27c88"
+    },
+    {
+      "path": "benchmarks/private-evidence/llvm-comparison-20261104/ast-c-3",
+      "bytes": 22888,
+      "sha256": "769efc9beea240a8f288cb9dcb34ed7adeb5ea9ddc1f8cc60ec671f9dbc27c88"
+    },
+    {
+      "path": "benchmarks/private-evidence/llvm-comparison-20261104/ast-c-4",
+      "bytes": 22888,
+      "sha256": "769efc9beea240a8f288cb9dcb34ed7adeb5ea9ddc1f8cc60ec671f9dbc27c88"
+    },
+    {
+      "path": "benchmarks/private-evidence/llvm-comparison-20261104/ast-c-5",
+      "bytes": 22888,
+      "sha256": "769efc9beea240a8f288cb9dcb34ed7adeb5ea9ddc1f8cc60ec671f9dbc27c88"
+    },
+    {
+      "path": "benchmarks/private-evidence/llvm-comparison-20261104/ast-llvm-0",
+      "bytes": 22896,
+      "sha256": "d020868e8615cf64a5181bad27fad8e2e8ad624e21972b992513aa5fa52d518d"
+    },
+    {
+      "path": "benchmarks/private-evidence/llvm-comparison-20261104/ast-llvm-1",
+      "bytes": 22896,
+      "sha256": "d020868e8615cf64a5181bad27fad8e2e8ad624e21972b992513aa5fa52d518d"
+    },
+    {
+      "path": "benchmarks/private-evidence/llvm-comparison-20261104/ast-llvm-2",
+      "bytes": 22896,
+      "sha256": "d020868e8615cf64a5181bad27fad8e2e8ad624e21972b992513aa5fa52d518d"
+    },
+    {
+      "path": "benchmarks/private-evidence/llvm-comparison-20261104/ast-llvm-3",
+      "bytes": 22896,
+      "sha256": "d020868e8615cf64a5181bad27fad8e2e8ad624e21972b992513aa5fa52d518d"
+    },
+    {
+      "path": "benchmarks/private-evidence/llvm-comparison-20261104/ast-llvm-4",
+      "bytes": 22896,
+      "sha256": "d020868e8615cf64a5181bad27fad8e2e8ad624e21972b992513aa5fa52d518d"
+    },
+    {
+      "path": "benchmarks/private-evidence/llvm-comparison-20261104/ast-llvm-5",
+      "bytes": 22896,
+      "sha256": "d020868e8615cf64a5181bad27fad8e2e8ad624e21972b992513aa5fa52d518d"
+    },
+    {
+      "path": "benchmarks/private-evidence/llvm-comparison-20261104/generic-c-0",
+      "bytes": 22888,
+      "sha256": "8909c511a8e1e460693265d986b2a5ff959b0024adda8d1d3bc1e7378404167e"
+    },
+    {
+      "path": "benchmarks/private-evidence/llvm-comparison-20261104/generic-c-1",
+      "bytes": 22888,
+      "sha256": "8909c511a8e1e460693265d986b2a5ff959b0024adda8d1d3bc1e7378404167e"
+    },
+    {
+      "path": "benchmarks/private-evidence/llvm-comparison-20261104/generic-c-2",
+      "bytes": 22888,
+      "sha256": "8909c511a8e1e460693265d986b2a5ff959b0024adda8d1d3bc1e7378404167e"
+    },
+    {
+      "path": "benchmarks/private-evidence/llvm-comparison-20261104/generic-c-3",
+      "bytes": 22888,
+      "sha256": "8909c511a8e1e460693265d986b2a5ff959b0024adda8d1d3bc1e7378404167e"
+    },
+    {
+      "path": "benchmarks/private-evidence/llvm-comparison-20261104/generic-c-4",
+      "bytes": 22888,
+      "sha256": "8909c511a8e1e460693265d986b2a5ff959b0024adda8d1d3bc1e7378404167e"
+    },
+    {
+      "path": "benchmarks/private-evidence/llvm-comparison-20261104/generic-c-5",
+      "bytes": 22888,
+      "sha256": "8909c511a8e1e460693265d986b2a5ff959b0024adda8d1d3bc1e7378404167e"
+    },
+    {
+      "path": "benchmarks/private-evidence/llvm-comparison-20261104/generic-llvm-0",
+      "bytes": 22896,
+      "sha256": "6ec3ba3d16fa3b31fc0c5cc4d0052b9d51407693cc2c41f8113766844b236c59"
+    },
+    {
+      "path": "benchmarks/private-evidence/llvm-comparison-20261104/generic-llvm-1",
+      "bytes": 22896,
+      "sha256": "6ec3ba3d16fa3b31fc0c5cc4d0052b9d51407693cc2c41f8113766844b236c59"
+    },
+    {
+      "path": "benchmarks/private-evidence/llvm-comparison-20261104/generic-llvm-2",
+      "bytes": 22896,
+      "sha256": "6ec3ba3d16fa3b31fc0c5cc4d0052b9d51407693cc2c41f8113766844b236c59"
+    },
+    {
+      "path": "benchmarks/private-evidence/llvm-comparison-20261104/generic-llvm-3",
+      "bytes": 22896,
+      "sha256": "6ec3ba3d16fa3b31fc0c5cc4d0052b9d51407693cc2c41f8113766844b236c59"
+    },
+    {
+      "path": "benchmarks/private-evidence/llvm-comparison-20261104/generic-llvm-4",
+      "bytes": 22896,
+      "sha256": "6ec3ba3d16fa3b31fc0c5cc4d0052b9d51407693cc2c41f8113766844b236c59"
+    },
+    {
+      "path": "benchmarks/private-evidence/llvm-comparison-20261104/generic-llvm-5",
+      "bytes": 22896,
+      "sha256": "6ec3ba3d16fa3b31fc0c5cc4d0052b9d51407693cc2c41f8113766844b236c59"
+    },
+    {
+      "path": "benchmarks/private-evidence/llvm-comparison-20261104/harness-measured.py",
+      "bytes": 7123,
+      "sha256": "e77626e51ceb251c0e1af5002abfb3347da446ff0c8fce9ed60f291becbd3c84"
+    },
+    {
+      "path": "benchmarks/private-evidence/llvm-comparison-20261104/lobo-measured",
+      "bytes": 1198344,
+      "sha256": "6f7b40a369fa405ef173ffa583e7bed0370791f3aaa4e1e7cd0a5a49e73d27ac"
+    },
+    {
+      "path": "benchmarks/private-evidence/llvm-comparison-20261104/observations.jsonl",
+      "bytes": 292102,
+      "sha256": "1441af82e58bd86e673adcd40787dddcc89721b5eb8220d969db87e6ccbf7a5e"
+    },
+    {
+      "path": "benchmarks/private-evidence/llvm-comparison-20261104/parser-c-0",
+      "bytes": 47480,
+      "sha256": "20904086fb49dd24a103e20088df7e9aec8b3074c426441c0b262b43b8127cac"
+    },
+    {
+      "path": "benchmarks/private-evidence/llvm-comparison-20261104/parser-c-1",
+      "bytes": 47480,
+      "sha256": "20904086fb49dd24a103e20088df7e9aec8b3074c426441c0b262b43b8127cac"
+    },
+    {
+      "path": "benchmarks/private-evidence/llvm-comparison-20261104/parser-c-2",
+      "bytes": 47480,
+      "sha256": "20904086fb49dd24a103e20088df7e9aec8b3074c426441c0b262b43b8127cac"
+    },
+    {
+      "path": "benchmarks/private-evidence/llvm-comparison-20261104/parser-c-3",
+      "bytes": 47480,
+      "sha256": "20904086fb49dd24a103e20088df7e9aec8b3074c426441c0b262b43b8127cac"
+    },
+    {
+      "path": "benchmarks/private-evidence/llvm-comparison-20261104/parser-c-4",
+      "bytes": 47480,
+      "sha256": "20904086fb49dd24a103e20088df7e9aec8b3074c426441c0b262b43b8127cac"
+    },
+    {
+      "path": "benchmarks/private-evidence/llvm-comparison-20261104/parser-c-5",
+      "bytes": 47480,
+      "sha256": "20904086fb49dd24a103e20088df7e9aec8b3074c426441c0b262b43b8127cac"
+    },
+    {
+      "path": "benchmarks/private-evidence/llvm-comparison-20261104/parser-llvm-0",
+      "bytes": 47480,
+      "sha256": "86b93bbbbc8e8e36a6c11024bff4d76a61bb61043690a85c76b5d6a1d873d674"
+    },
+    {
+      "path": "benchmarks/private-evidence/llvm-comparison-20261104/parser-llvm-1",
+      "bytes": 47480,
+      "sha256": "86b93bbbbc8e8e36a6c11024bff4d76a61bb61043690a85c76b5d6a1d873d674"
+    },
+    {
+      "path": "benchmarks/private-evidence/llvm-comparison-20261104/parser-llvm-2",
+      "bytes": 47480,
+      "sha256": "86b93bbbbc8e8e36a6c11024bff4d76a61bb61043690a85c76b5d6a1d873d674"
+    },
+    {
+      "path": "benchmarks/private-evidence/llvm-comparison-20261104/parser-llvm-3",
+      "bytes": 47480,
+      "sha256": "86b93bbbbc8e8e36a6c11024bff4d76a61bb61043690a85c76b5d6a1d873d674"
+    },
+    {
+      "path": "benchmarks/private-evidence/llvm-comparison-20261104/parser-llvm-4",
+      "bytes": 47480,
+      "sha256": "86b93bbbbc8e8e36a6c11024bff4d76a61bb61043690a85c76b5d6a1d873d674"
+    },
+    {
+      "path": "benchmarks/private-evidence/llvm-comparison-20261104/parser-llvm-5",
+      "bytes": 47480,
+      "sha256": "86b93bbbbc8e8e36a6c11024bff4d76a61bb61043690a85c76b5d6a1d873d674"
+    },
+    {
+      "path": "benchmarks/private-evidence/llvm-comparison-20261104/plan.json",
+      "bytes": 10539,
+      "sha256": "c10be24191a6a453035ed8207aedb05726ba8d2134a1c905bec52ffdd8bf0226"
+    },
+    {
+      "path": "benchmarks/private-evidence/llvm-comparison-20261104/results.json",
+      "bytes": 354453,
+      "sha256": "b5a95c86562ac40a12ad969532e913bf5472737c12e71e1560cfb5edc396b55f"
+    },
+    {
+      "path": "benchmarks/private-evidence/llvm-comparison-20261104/sum-c-0",
+      "bytes": 14664,
+      "sha256": "820f2c1de24a59a5e17030abeec0045eb9e4ce4029709319712035e7ccc2134d"
+    },
+    {
+      "path": "benchmarks/private-evidence/llvm-comparison-20261104/sum-c-1",
+      "bytes": 14664,
+      "sha256": "820f2c1de24a59a5e17030abeec0045eb9e4ce4029709319712035e7ccc2134d"
+    },
+    {
+      "path": "benchmarks/private-evidence/llvm-comparison-20261104/sum-c-2",
+      "bytes": 14664,
+      "sha256": "820f2c1de24a59a5e17030abeec0045eb9e4ce4029709319712035e7ccc2134d"
+    },
+    {
+      "path": "benchmarks/private-evidence/llvm-comparison-20261104/sum-c-3",
+      "bytes": 14664,
+      "sha256": "820f2c1de24a59a5e17030abeec0045eb9e4ce4029709319712035e7ccc2134d"
+    },
+    {
+      "path": "benchmarks/private-evidence/llvm-comparison-20261104/sum-c-4",
+      "bytes": 14664,
+      "sha256": "820f2c1de24a59a5e17030abeec0045eb9e4ce4029709319712035e7ccc2134d"
+    },
+    {
+      "path": "benchmarks/private-evidence/llvm-comparison-20261104/sum-c-5",
+      "bytes": 14664,
+      "sha256": "820f2c1de24a59a5e17030abeec0045eb9e4ce4029709319712035e7ccc2134d"
+    },
+    {
+      "path": "benchmarks/private-evidence/llvm-comparison-20261104/sum-llvm-0",
+      "bytes": 14664,
+      "sha256": "c1881e42631da28458cfcdd6840ea76541e48855d2b188f9481b86ef3a70fb3c"
+    },
+    {
+      "path": "benchmarks/private-evidence/llvm-comparison-20261104/sum-llvm-1",
+      "bytes": 14664,
+      "sha256": "c1881e42631da28458cfcdd6840ea76541e48855d2b188f9481b86ef3a70fb3c"
+    },
+    {
+      "path": "benchmarks/private-evidence/llvm-comparison-20261104/sum-llvm-2",
+      "bytes": 14664,
+      "sha256": "c1881e42631da28458cfcdd6840ea76541e48855d2b188f9481b86ef3a70fb3c"
+    },
+    {
+      "path": "benchmarks/private-evidence/llvm-comparison-20261104/sum-llvm-3",
+      "bytes": 14664,
+      "sha256": "c1881e42631da28458cfcdd6840ea76541e48855d2b188f9481b86ef3a70fb3c"
+    },
+    {
+      "path": "benchmarks/private-evidence/llvm-comparison-20261104/sum-llvm-4",
+      "bytes": 14664,
+      "sha256": "c1881e42631da28458cfcdd6840ea76541e48855d2b188f9481b86ef3a70fb3c"
+    },
+    {
+      "path": "benchmarks/private-evidence/llvm-comparison-20261104/sum-llvm-5",
+      "bytes": 14664,
+      "sha256": "c1881e42631da28458cfcdd6840ea76541e48855d2b188f9481b86ef3a70fb3c"
+    },
+    {
+      "path": "benchmarks/private-evidence/llvm-comparison-final-20261104/ast-after.c",
+      "bytes": 39738,
+      "sha256": "3092c4cb37516a5dadaa4a2488d973df49c650e8af69e3c71346acd35fa0cf75"
+    },
+    {
+      "path": "benchmarks/private-evidence/llvm-comparison-final-20261104/ast-before.c",
+      "bytes": 39738,
+      "sha256": "3092c4cb37516a5dadaa4a2488d973df49c650e8af69e3c71346acd35fa0cf75"
+    },
+    {
+      "path": "benchmarks/private-evidence/llvm-comparison-final-20261104/ast-c-0",
+      "bytes": 22888,
+      "sha256": "769efc9beea240a8f288cb9dcb34ed7adeb5ea9ddc1f8cc60ec671f9dbc27c88"
+    },
+    {
+      "path": "benchmarks/private-evidence/llvm-comparison-final-20261104/ast-c-1",
+      "bytes": 22888,
+      "sha256": "769efc9beea240a8f288cb9dcb34ed7adeb5ea9ddc1f8cc60ec671f9dbc27c88"
+    },
+    {
+      "path": "benchmarks/private-evidence/llvm-comparison-final-20261104/ast-c-2",
+      "bytes": 22888,
+      "sha256": "769efc9beea240a8f288cb9dcb34ed7adeb5ea9ddc1f8cc60ec671f9dbc27c88"
+    },
+    {
+      "path": "benchmarks/private-evidence/llvm-comparison-final-20261104/ast-c-3",
+      "bytes": 22888,
+      "sha256": "769efc9beea240a8f288cb9dcb34ed7adeb5ea9ddc1f8cc60ec671f9dbc27c88"
+    },
+    {
+      "path": "benchmarks/private-evidence/llvm-comparison-final-20261104/ast-c-4",
+      "bytes": 22888,
+      "sha256": "769efc9beea240a8f288cb9dcb34ed7adeb5ea9ddc1f8cc60ec671f9dbc27c88"
+    },
+    {
+      "path": "benchmarks/private-evidence/llvm-comparison-final-20261104/ast-c-5",
+      "bytes": 22888,
+      "sha256": "769efc9beea240a8f288cb9dcb34ed7adeb5ea9ddc1f8cc60ec671f9dbc27c88"
+    },
+    {
+      "path": "benchmarks/private-evidence/llvm-comparison-final-20261104/ast-llvm-0",
+      "bytes": 22896,
+      "sha256": "d020868e8615cf64a5181bad27fad8e2e8ad624e21972b992513aa5fa52d518d"
+    },
+    {
+      "path": "benchmarks/private-evidence/llvm-comparison-final-20261104/ast-llvm-1",
+      "bytes": 22896,
+      "sha256": "d020868e8615cf64a5181bad27fad8e2e8ad624e21972b992513aa5fa52d518d"
+    },
+    {
+      "path": "benchmarks/private-evidence/llvm-comparison-final-20261104/ast-llvm-2",
+      "bytes": 22896,
+      "sha256": "d020868e8615cf64a5181bad27fad8e2e8ad624e21972b992513aa5fa52d518d"
+    },
+    {
+      "path": "benchmarks/private-evidence/llvm-comparison-final-20261104/ast-llvm-3",
+      "bytes": 22896,
+      "sha256": "d020868e8615cf64a5181bad27fad8e2e8ad624e21972b992513aa5fa52d518d"
+    },
+    {
+      "path": "benchmarks/private-evidence/llvm-comparison-final-20261104/ast-llvm-4",
+      "bytes": 22896,
+      "sha256": "d020868e8615cf64a5181bad27fad8e2e8ad624e21972b992513aa5fa52d518d"
+    },
+    {
+      "path": "benchmarks/private-evidence/llvm-comparison-final-20261104/ast-llvm-5",
+      "bytes": 22896,
+      "sha256": "d020868e8615cf64a5181bad27fad8e2e8ad624e21972b992513aa5fa52d518d"
+    },
+    {
+      "path": "benchmarks/private-evidence/llvm-comparison-final-20261104/compile-c.trace",
+      "bytes": 18475,
+      "sha256": "842859b6dfc6a034ea7a2b1c5cc7ac71da9293f631186437161fb378de21bc8c"
+    },
+    {
+      "path": "benchmarks/private-evidence/llvm-comparison-final-20261104/compile-llvm.trace",
+      "bytes": 46006,
+      "sha256": "f201f04303754459122f93b862710cae8adc80f2057264374a8ef0ee48a44e8e"
+    },
+    {
+      "path": "benchmarks/private-evidence/llvm-comparison-final-20261104/generic-c-0",
+      "bytes": 22888,
+      "sha256": "8909c511a8e1e460693265d986b2a5ff959b0024adda8d1d3bc1e7378404167e"
+    },
+    {
+      "path": "benchmarks/private-evidence/llvm-comparison-final-20261104/generic-c-1",
+      "bytes": 22888,
+      "sha256": "8909c511a8e1e460693265d986b2a5ff959b0024adda8d1d3bc1e7378404167e"
+    },
+    {
+      "path": "benchmarks/private-evidence/llvm-comparison-final-20261104/generic-c-2",
+      "bytes": 22888,
+      "sha256": "8909c511a8e1e460693265d986b2a5ff959b0024adda8d1d3bc1e7378404167e"
+    },
+    {
+      "path": "benchmarks/private-evidence/llvm-comparison-final-20261104/generic-c-3",
+      "bytes": 22888,
+      "sha256": "8909c511a8e1e460693265d986b2a5ff959b0024adda8d1d3bc1e7378404167e"
+    },
+    {
+      "path": "benchmarks/private-evidence/llvm-comparison-final-20261104/generic-c-4",
+      "bytes": 22888,
+      "sha256": "8909c511a8e1e460693265d986b2a5ff959b0024adda8d1d3bc1e7378404167e"
+    },
+    {
+      "path": "benchmarks/private-evidence/llvm-comparison-final-20261104/generic-c-5",
+      "bytes": 22888,
+      "sha256": "8909c511a8e1e460693265d986b2a5ff959b0024adda8d1d3bc1e7378404167e"
+    },
+    {
+      "path": "benchmarks/private-evidence/llvm-comparison-final-20261104/generic-llvm-0",
+      "bytes": 22896,
+      "sha256": "6ec3ba3d16fa3b31fc0c5cc4d0052b9d51407693cc2c41f8113766844b236c59"
+    },
+    {
+      "path": "benchmarks/private-evidence/llvm-comparison-final-20261104/generic-llvm-1",
+      "bytes": 22896,
+      "sha256": "6ec3ba3d16fa3b31fc0c5cc4d0052b9d51407693cc2c41f8113766844b236c59"
+    },
+    {
+      "path": "benchmarks/private-evidence/llvm-comparison-final-20261104/generic-llvm-2",
+      "bytes": 22896,
+      "sha256": "6ec3ba3d16fa3b31fc0c5cc4d0052b9d51407693cc2c41f8113766844b236c59"
+    },
+    {
+      "path": "benchmarks/private-evidence/llvm-comparison-final-20261104/generic-llvm-3",
+      "bytes": 22896,
+      "sha256": "6ec3ba3d16fa3b31fc0c5cc4d0052b9d51407693cc2c41f8113766844b236c59"
+    },
+    {
+      "path": "benchmarks/private-evidence/llvm-comparison-final-20261104/generic-llvm-4",
+      "bytes": 22896,
+      "sha256": "6ec3ba3d16fa3b31fc0c5cc4d0052b9d51407693cc2c41f8113766844b236c59"
+    },
+    {
+      "path": "benchmarks/private-evidence/llvm-comparison-final-20261104/generic-llvm-5",
+      "bytes": 22896,
+      "sha256": "6ec3ba3d16fa3b31fc0c5cc4d0052b9d51407693cc2c41f8113766844b236c59"
+    },
+    {
+      "path": "benchmarks/private-evidence/llvm-comparison-final-20261104/generics-after.c",
+      "bytes": 34096,
+      "sha256": "ced75a432a639a6502f281047849993bc07cf85456587dd286d4a7de752a2d32"
+    },
+    {
+      "path": "benchmarks/private-evidence/llvm-comparison-final-20261104/generics-before.c",
+      "bytes": 34096,
+      "sha256": "ced75a432a639a6502f281047849993bc07cf85456587dd286d4a7de752a2d32"
+    },
+    {
+      "path": "benchmarks/private-evidence/llvm-comparison-final-20261104/harness-measured.py",
+      "bytes": 7123,
+      "sha256": "e77626e51ceb251c0e1af5002abfb3347da446ff0c8fce9ed60f291becbd3c84"
+    },
+    {
+      "path": "benchmarks/private-evidence/llvm-comparison-final-20261104/iteration-after.c",
+      "bytes": 21981,
+      "sha256": "c2d2ea11b226a68c7f267d948abb26e77a662156b9e1be2914e3c3a74993688f"
+    },
+    {
+      "path": "benchmarks/private-evidence/llvm-comparison-final-20261104/iteration-before.c",
+      "bytes": 21981,
+      "sha256": "c2d2ea11b226a68c7f267d948abb26e77a662156b9e1be2914e3c3a74993688f"
+    },
+    {
+      "path": "benchmarks/private-evidence/llvm-comparison-final-20261104/lobo-measured",
+      "bytes": 1198408,
+      "sha256": "fe74abee06002f49bc4918b2ef3bee8a32ddefb5271f13025488d1d4f4f7d264"
+    },
+    {
+      "path": "benchmarks/private-evidence/llvm-comparison-final-20261104/observations.jsonl",
+      "bytes": 293298,
+      "sha256": "09fad47fa1281ac519b3c9aa7efe571c3f9a5eef4a166efb315bb9e8f0bec040"
+    },
+    {
+      "path": "benchmarks/private-evidence/llvm-comparison-final-20261104/parser-after.c",
+      "bytes": 79480,
+      "sha256": "112530ea677c6dcdaf0272ecfc968a0fef70a737c01a19aa6e6ae99bc7e27ace"
+    },
+    {
+      "path": "benchmarks/private-evidence/llvm-comparison-final-20261104/parser-before.c",
+      "bytes": 79480,
+      "sha256": "112530ea677c6dcdaf0272ecfc968a0fef70a737c01a19aa6e6ae99bc7e27ace"
+    },
+    {
+      "path": "benchmarks/private-evidence/llvm-comparison-final-20261104/parser-c-0",
+      "bytes": 47480,
+      "sha256": "20904086fb49dd24a103e20088df7e9aec8b3074c426441c0b262b43b8127cac"
+    },
+    {
+      "path": "benchmarks/private-evidence/llvm-comparison-final-20261104/parser-c-1",
+      "bytes": 47480,
+      "sha256": "20904086fb49dd24a103e20088df7e9aec8b3074c426441c0b262b43b8127cac"
+    },
+    {
+      "path": "benchmarks/private-evidence/llvm-comparison-final-20261104/parser-c-2",
+      "bytes": 47480,
+      "sha256": "20904086fb49dd24a103e20088df7e9aec8b3074c426441c0b262b43b8127cac"
+    },
+    {
+      "path": "benchmarks/private-evidence/llvm-comparison-final-20261104/parser-c-3",
+      "bytes": 47480,
+      "sha256": "20904086fb49dd24a103e20088df7e9aec8b3074c426441c0b262b43b8127cac"
+    },
+    {
+      "path": "benchmarks/private-evidence/llvm-comparison-final-20261104/parser-c-4",
+      "bytes": 47480,
+      "sha256": "20904086fb49dd24a103e20088df7e9aec8b3074c426441c0b262b43b8127cac"
+    },
+    {
+      "path": "benchmarks/private-evidence/llvm-comparison-final-20261104/parser-c-5",
+      "bytes": 47480,
+      "sha256": "20904086fb49dd24a103e20088df7e9aec8b3074c426441c0b262b43b8127cac"
+    },
+    {
+      "path": "benchmarks/private-evidence/llvm-comparison-final-20261104/parser-llvm-0",
+      "bytes": 47480,
+      "sha256": "86b93bbbbc8e8e36a6c11024bff4d76a61bb61043690a85c76b5d6a1d873d674"
+    },
+    {
+      "path": "benchmarks/private-evidence/llvm-comparison-final-20261104/parser-llvm-1",
+      "bytes": 47480,
+      "sha256": "86b93bbbbc8e8e36a6c11024bff4d76a61bb61043690a85c76b5d6a1d873d674"
+    },
+    {
+      "path": "benchmarks/private-evidence/llvm-comparison-final-20261104/parser-llvm-2",
+      "bytes": 47480,
+      "sha256": "86b93bbbbc8e8e36a6c11024bff4d76a61bb61043690a85c76b5d6a1d873d674"
+    },
+    {
+      "path": "benchmarks/private-evidence/llvm-comparison-final-20261104/parser-llvm-3",
+      "bytes": 47480,
+      "sha256": "86b93bbbbc8e8e36a6c11024bff4d76a61bb61043690a85c76b5d6a1d873d674"
+    },
+    {
+      "path": "benchmarks/private-evidence/llvm-comparison-final-20261104/parser-llvm-4",
+      "bytes": 47480,
+      "sha256": "86b93bbbbc8e8e36a6c11024bff4d76a61bb61043690a85c76b5d6a1d873d674"
+    },
+    {
+      "path": "benchmarks/private-evidence/llvm-comparison-final-20261104/parser-llvm-5",
+      "bytes": 47480,
+      "sha256": "86b93bbbbc8e8e36a6c11024bff4d76a61bb61043690a85c76b5d6a1d873d674"
+    },
+    {
+      "path": "benchmarks/private-evidence/llvm-comparison-final-20261104/plan.json",
+      "bytes": 10539,
+      "sha256": "b2a30a31f3a01e76365eca194c9d3ea03477e13c4999c37d8bbda7cb5fc3e8fa"
+    },
+    {
+      "path": "benchmarks/private-evidence/llvm-comparison-final-20261104/process-stages.json",
+      "bytes": 985,
+      "sha256": "c8865867dfd1ddad7eefb292b364d5cc1023479519e4aeb8ba31fa0a3d8dc4cb"
+    },
+    {
+      "path": "benchmarks/private-evidence/llvm-comparison-final-20261104/profile-c",
+      "bytes": 14664,
+      "sha256": "820f2c1de24a59a5e17030abeec0045eb9e4ce4029709319712035e7ccc2134d"
+    },
+    {
+      "path": "benchmarks/private-evidence/llvm-comparison-final-20261104/profile-llvm",
+      "bytes": 14664,
+      "sha256": "c1881e42631da28458cfcdd6840ea76541e48855d2b188f9481b86ef3a70fb3c"
+    },
+    {
+      "path": "benchmarks/private-evidence/llvm-comparison-final-20261104/profiles.json",
+      "bytes": 7490,
+      "sha256": "06db942c33894f67f3de12e8214da0d7c8bf144ea060a75bfdd1246c3620d287"
+    },
+    {
+      "path": "benchmarks/private-evidence/llvm-comparison-final-20261104/results.json",
+      "bytes": 355911,
+      "sha256": "079468c8d321b4f9f8d78766a54ac894189668144305c017f806852e08bd9164"
+    },
+    {
+      "path": "benchmarks/private-evidence/llvm-comparison-final-20261104/sum-c-0",
+      "bytes": 14664,
+      "sha256": "820f2c1de24a59a5e17030abeec0045eb9e4ce4029709319712035e7ccc2134d"
+    },
+    {
+      "path": "benchmarks/private-evidence/llvm-comparison-final-20261104/sum-c-1",
+      "bytes": 14664,
+      "sha256": "820f2c1de24a59a5e17030abeec0045eb9e4ce4029709319712035e7ccc2134d"
+    },
+    {
+      "path": "benchmarks/private-evidence/llvm-comparison-final-20261104/sum-c-2",
+      "bytes": 14664,
+      "sha256": "820f2c1de24a59a5e17030abeec0045eb9e4ce4029709319712035e7ccc2134d"
+    },
+    {
+      "path": "benchmarks/private-evidence/llvm-comparison-final-20261104/sum-c-3",
+      "bytes": 14664,
+      "sha256": "820f2c1de24a59a5e17030abeec0045eb9e4ce4029709319712035e7ccc2134d"
+    },
+    {
+      "path": "benchmarks/private-evidence/llvm-comparison-final-20261104/sum-c-4",
+      "bytes": 14664,
+      "sha256": "820f2c1de24a59a5e17030abeec0045eb9e4ce4029709319712035e7ccc2134d"
+    },
+    {
+      "path": "benchmarks/private-evidence/llvm-comparison-final-20261104/sum-c-5",
+      "bytes": 14664,
+      "sha256": "820f2c1de24a59a5e17030abeec0045eb9e4ce4029709319712035e7ccc2134d"
+    },
+    {
+      "path": "benchmarks/private-evidence/llvm-comparison-final-20261104/sum-c-section-copy",
+      "bytes": 14664,
+      "sha256": "820f2c1de24a59a5e17030abeec0045eb9e4ce4029709319712035e7ccc2134d"
+    },
+    {
+      "path": "benchmarks/private-evidence/llvm-comparison-final-20261104/sum-c.asm",
+      "bytes": 52001,
+      "sha256": "d4425f2ecf564ec1d7a709327011b3944ed96eab993066c1a7a8b5839f26a7d8"
+    },
+    {
+      "path": "benchmarks/private-evidence/llvm-comparison-final-20261104/sum-c.cpu",
+      "bytes": 889,
+      "sha256": "3942d8cdd28de18ebcda71413bce4d64c03d218d35b76f2bb09d5501b7a39e01"
+    },
+    {
+      "path": "benchmarks/private-evidence/llvm-comparison-final-20261104/sum-c.syscalls",
+      "bytes": 1377,
+      "sha256": "3ba163e478b0ded46cfd2673d978cd2725525147fcdc072ed0d52bd7e37600c7"
+    },
+    {
+      "path": "benchmarks/private-evidence/llvm-comparison-final-20261104/sum-c.text",
+      "bytes": 3330,
+      "sha256": "56431f6791b53e3e215d948bea5ef1bb0404b0e6a8934bccc04ad1a32a94bbe4"
+    },
+    {
+      "path": "benchmarks/private-evidence/llvm-comparison-final-20261104/sum-llvm-0",
+      "bytes": 14664,
+      "sha256": "c1881e42631da28458cfcdd6840ea76541e48855d2b188f9481b86ef3a70fb3c"
+    },
+    {
+      "path": "benchmarks/private-evidence/llvm-comparison-final-20261104/sum-llvm-1",
+      "bytes": 14664,
+      "sha256": "c1881e42631da28458cfcdd6840ea76541e48855d2b188f9481b86ef3a70fb3c"
+    },
+    {
+      "path": "benchmarks/private-evidence/llvm-comparison-final-20261104/sum-llvm-2",
+      "bytes": 14664,
+      "sha256": "c1881e42631da28458cfcdd6840ea76541e48855d2b188f9481b86ef3a70fb3c"
+    },
+    {
+      "path": "benchmarks/private-evidence/llvm-comparison-final-20261104/sum-llvm-3",
+      "bytes": 14664,
+      "sha256": "c1881e42631da28458cfcdd6840ea76541e48855d2b188f9481b86ef3a70fb3c"
+    },
+    {
+      "path": "benchmarks/private-evidence/llvm-comparison-final-20261104/sum-llvm-4",
+      "bytes": 14664,
+      "sha256": "c1881e42631da28458cfcdd6840ea76541e48855d2b188f9481b86ef3a70fb3c"
+    },
+    {
+      "path": "benchmarks/private-evidence/llvm-comparison-final-20261104/sum-llvm-5",
+      "bytes": 14664,
+      "sha256": "c1881e42631da28458cfcdd6840ea76541e48855d2b188f9481b86ef3a70fb3c"
+    },
+    {
+      "path": "benchmarks/private-evidence/llvm-comparison-final-20261104/sum-llvm-section-copy",
+      "bytes": 14664,
+      "sha256": "c1881e42631da28458cfcdd6840ea76541e48855d2b188f9481b86ef3a70fb3c"
+    },
+    {
+      "path": "benchmarks/private-evidence/llvm-comparison-final-20261104/sum-llvm.asm",
+      "bytes": 56438,
+      "sha256": "9354cc15ea7c05fceb40341aedd29dc125095f59cae47a19193e72d322cdaaa1"
+    },
+    {
+      "path": "benchmarks/private-evidence/llvm-comparison-final-20261104/sum-llvm.cpu",
+      "bytes": 893,
+      "sha256": "bdf54a92dc322942f379e61d50eb732707d0e2759be2944e25d8b16d598713aa"
+    },
+    {
+      "path": "benchmarks/private-evidence/llvm-comparison-final-20261104/sum-llvm.syscalls",
+      "bytes": 1377,
+      "sha256": "d2185b687cc4a2ad5f7a0950a72ae740bd18baf78bdf9cbca184b7132cca84c9"
+    },
+    {
+      "path": "benchmarks/private-evidence/llvm-comparison-final-20261104/sum-llvm.text",
+      "bytes": 3602,
+      "sha256": "dd90fdf8b0b3924608b4ede7b1453e19645460b41c940ee84979acf5d8384783"
+    }
+  ],
+  "failures_and_corrections": [
+    "TDD red: unsupported --backend llvm.",
+    "First CLI pass had temporary unused-support warnings; later tests use support and strict Clippy passes.",
+    "Reference prose mismatch fixed by comparing specified fields; native C/LLVM compared directly.",
+    "Two ineffective ASan probes optimized away; two-cell runtime-offset probe and UBSan alignment probe pass active checks.",
+    "One Rust build failed with ENOSPC and linker crashes; removed only regenerable target/debug/incremental cache; rerun passed.",
+    "Two atomic patch context failures changed no files; tool transcript retained, no separate filesystem log.",
+    "Hardware perf counters denied on both sides; unknown, not zero.",
+    "Trace summarizer initially omitted resumed execve calls; corrected summary without altering traces or measured data."
+  ],
+  "limits": [
+    "Shared frontend/runtime can mask shared bugs; finite differential/oracle tests are not semantic equivalence proofs.",
+    "The full Rust run preceded a final help-string-only addition; actual release --help and direct LLVM artifact were exercised afterward. No execution logic changed after the full run.",
+    "No syntax, checked-artifact, session-cache or extension runtime change. Session test runner remains C.",
+    "No measured agent construction/comprehension/token benefit, model call, new Cargo dependency, tool install, commit, publication or user-profile install.",
+    "Busy host, one-CPU affinity, warm caches; small invocation measurements include startup/parsing/JSON.",
+    "Private evidence is local and ignored; requires normal backup."
+  ],
+  "public_comparison_sha256": "3c40d6d0080bf851113b95235a81d4ee0539e564ae592a8f3ca487092051b26a"
+}

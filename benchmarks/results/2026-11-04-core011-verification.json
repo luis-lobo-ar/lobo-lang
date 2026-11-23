@@ -1,0 +1,967 @@
+{
+  "date": "2026-11-04",
+  "scope": "Core/compiler 0.11 explicit generic function specialization and maintained tooling; no agent comparison",
+  "versions": {
+    "compiler": "0.11.0",
+    "language": "core/0.11-draft",
+    "artifact": "lobo-checked/0.11",
+    "native_adapter": "0.6",
+    "extension": "0.13.0"
+  },
+  "checks": {
+    "cargo_test_locked": {
+      "passed": 159,
+      "failed": 0,
+      "ignored": 0,
+      "log": "target/core011-cargo-final2.log"
+    },
+    "generic_integration_tests": {
+      "passed": 7,
+      "modes": [
+        "reference",
+        "native",
+        "asan-ubsan-leaks"
+      ],
+      "log": "target/core011-generics-final.log"
+    },
+    "python_harness_tests": {
+      "passed": 30,
+      "log": "target/core011-python-tests.log"
+    },
+    "editor_tests": {
+      "passed": 114,
+      "failed": 0,
+      "skipped": 0,
+      "log": "target/core011-editor-package-second.log"
+    },
+    "editor_host": {
+      "exit_code": 0,
+      "marker": "LOBO_HOST_TESTS_PASSED",
+      "log": "target/core011-editor-host-first.log"
+    },
+    "clippy_strict": "passed",
+    "format_check": "passed",
+    "release_build": "passed",
+    "skill_validator_and_native_examples": "passed",
+    "vsix_matches_current_source": "passed",
+    "repository_json_jsonl_and_local_links": "passed; target/core011-docs-final.log",
+    "diff_whitespace": "passed; target/core011-diff-final.log"
+  },
+  "commands": [
+    "cargo test --locked",
+    "cargo test --locked --test generics",
+    "cargo clippy --locked --all-targets -- -D warnings",
+    "cargo fmt --check",
+    "cargo build --locked --release --bins",
+    "python3 -m unittest discover -s benchmarks -p 'test_*.py'",
+    "npm --prefix editors/vscode run package",
+    "env LOBO_VSCODE_EXECUTABLE=/usr/share/code/code xvfb-run -a npm --prefix editors/vscode run test:host",
+    "python3 /home/luis/.codex/skills/.system/skill-creator/scripts/quick_validate.py .agents/skills/lobo-programming",
+    "./scripts/check.sh",
+    "git diff --check"
+  ],
+  "baseline": "2026-11-04-core010-language-baseline.json",
+  "native_smoke": "2026-11-04-generic-reuse-native.json",
+  "foreground_tool_smoke": "2026-11-04-generic-reuse-test-session.json",
+  "source_manifest": [
+    {
+      "path": ".agents/skills/lobo-programming/SKILL.md",
+      "sha256": "837093854b8b30a23e2d68f26005e243ca6b6705d4c15ae7a3add5d851fcdaeb"
+    },
+    {
+      "path": ".agents/skills/lobo-programming/references/examples.lobo",
+      "sha256": "d9594ecb60c6bd351a427bb39de06c2ffd2115bc4fa0be8f02ca62e19601476c"
+    },
+    {
+      "path": ".agents/skills/lobo-programming/references/language.md",
+      "sha256": "ae70897eb644e7d2b8f0ad948a7811c6071f3b0695d21283daa10d37e9aef0aa"
+    },
+    {
+      "path": ".agents/skills/lobo-programming/references/tools.md",
+      "sha256": "3b54302079e7dc90fa3ba1e662cc3cb3f96588835096e23a818e9edf4f5163f0"
+    },
+    {
+      "path": "AGENTS.md",
+      "sha256": "e0e8c2beb575cb4e7ca52538c55792ff6328b7f7009b730684b795a645666d89"
+    },
+    {
+      "path": "CHANGELOG.md",
+      "sha256": "1244dd9962a9fcf31228faa556749d82d7a87936430737e71aa98f7455da2e49"
+    },
+    {
+      "path": "Cargo.lock",
+      "sha256": "89828a0e6396551d19ef7f2d5ae742055e4bb49e1670c0b22b6e05738d09e096"
+    },
+    {
+      "path": "Cargo.toml",
+      "sha256": "6a1f57bcd16b3fe8656c52fe5519f9ba361d9eb8e74e0a7e9f775f4dcc37c3d5"
+    },
+    {
+      "path": "README.md",
+      "sha256": "5455783f19933577b85bf2fd52e412edd5fd008f6b09e5e9092767fe7b458665"
+    },
+    {
+      "path": "VISION.md",
+      "sha256": "555e3f073a6c6c2429adc83140e702245ca8aa5eacafcd2da29e844489570955"
+    },
+    {
+      "path": "benchmarks/results/2026-11-04-core011-verification.md",
+      "sha256": "0c2b8648dbdd907d5fb858b2d3eea5bc33fa425a03216023bf3a3aee61a54080"
+    },
+    {
+      "path": "decisions/0001-canonical-semantic-graph.md",
+      "sha256": "b6dba614a5e227e1fcb79bc840af75ac18d9ec5f045dfa5202a4e49051faca24"
+    },
+    {
+      "path": "decisions/0002-human-auditable-projections.md",
+      "sha256": "7268d0abc8475ca449f5903a3beaebc9a6475603e11483499b348aa26869125a"
+    },
+    {
+      "path": "decisions/0003-existing-execution-target-first.md",
+      "sha256": "f55e746a3ebdfd48c6c0b42f11939569fb0201f9c4ae44e3be68f3cac7dd1363"
+    },
+    {
+      "path": "decisions/0004-rust-reference-compiler-and-core-first.md",
+      "sha256": "42c12b2f73b2147939b8a154b94edafa2cdeb78b4235a6a96884d59dac6347c4"
+    },
+    {
+      "path": "decisions/0005-checked-artifact-for-first-executable-core.md",
+      "sha256": "3318071f72d4a02f259578a50e5524f9c332554ef738d383c3ebe15258a19f07"
+    },
+    {
+      "path": "decisions/0006-native-machine-code-is-the-default.md",
+      "sha256": "25f3c8fbb15b54800c721e19c836a00adb6c5f09aabfcc78a1e22516c379aff9"
+    },
+    {
+      "path": "decisions/0007-native-differential-and-sanitizer-gates.md",
+      "sha256": "86b5ce0851174548ac8f48c210dc086ea90ec56f4cf0e932baebb372d7c45b40"
+    },
+    {
+      "path": "decisions/0008-counted-folds-with-immutable-state.md",
+      "sha256": "2bb3353fe8132a48b1df1cb4f38c4b1e17348fafa22dc9e20b12f9c77198fd21"
+    },
+    {
+      "path": "decisions/0009-declarative-vscode-syntax-highlighting.md",
+      "sha256": "7f3563dd9a230227f39a3a6cfea9cad1f5f6eb008b6816b5e049a6f0ea46cd13"
+    },
+    {
+      "path": "decisions/0010-vscode-local-definition-navigation.md",
+      "sha256": "335719337b5c24910f2db2d921c9060f4bb5b5ec6507c543bbfccec485e26627"
+    },
+    {
+      "path": "decisions/0011-compiler-source-locations-and-editor-diagnostics.md",
+      "sha256": "f8d6a5290afbff74ea89394834e6568307f7d2d179adb44dc65a16212ef61857"
+    },
+    {
+      "path": "decisions/0012-actions-terminology.md",
+      "sha256": "d8b4c7630ac0115b73d96b709a529aebefe9b5de6d1affc37e3d8d8a2dabd8c0"
+    },
+    {
+      "path": "decisions/0013-checked-action-bounds.md",
+      "sha256": "92433b5d0e70b2410d45368ebd1f9fa0ab9c79085d9217ebd5fe9021907b1e9b"
+    },
+    {
+      "path": "decisions/0014-language-first-development.md",
+      "sha256": "200dca6298e29b7424971fc511a4a76602a2e906c556e6aa1e35ee7929191fcc"
+    },
+    {
+      "path": "decisions/0015-immutable-record-values.md",
+      "sha256": "e9951a581a6accebabf5ed0f41e1d4372ed3e4abf09467101bd9a38b1947ab6f"
+    },
+    {
+      "path": "decisions/0016-tagged-alternative-values.md",
+      "sha256": "2bbfe291836fb11a1d6a202db8dc0ecbb8bf2955c7d07cfdf4bf89d298750470"
+    },
+    {
+      "path": "decisions/0017-persistent-growable-lists.md",
+      "sha256": "dd6b6a36a281a0c8b67f6d6e9e45f0cfd136db6fa68747137e6c7a484bdb91cf"
+    },
+    {
+      "path": "decisions/0018-text-and-byte-values.md",
+      "sha256": "21db44c8af532edab6a8115148309f595c80a601fff042c30adc803fe72c8155"
+    },
+    {
+      "path": "decisions/0019-parser-workload-in-existing-lobo.md",
+      "sha256": "747f85e218507e567eda20eabb7b013e0397426465b8c10931102595907c9526"
+    },
+    {
+      "path": "decisions/0020-tree-workload-in-existing-lobo.md",
+      "sha256": "90ea96121533ce0747570af06d05c4c7429e7b4dd37eb41a29c80f49d5528b9d"
+    },
+    {
+      "path": "decisions/0021-immutable-state-driven-iteration.md",
+      "sha256": "b374d2a8405a4adee93da3a888667dd7cf6217acb3c9a444096d5239e3f035b6"
+    },
+    {
+      "path": "decisions/0022-closed-module-composition.md",
+      "sha256": "de390979867447d60ffd5a0ed4c1a5653e3656be0e4da3f42ddacc65afe97e34"
+    },
+    {
+      "path": "decisions/0023-explicit-editor-source-snapshots.md",
+      "sha256": "fbea26a1fdcb57c33004f89e856a555ec436c5bc1c4a383eb50412a00d834704"
+    },
+    {
+      "path": "decisions/0024-agent-first-verification-prototype.md",
+      "sha256": "c18767eedbe9d407c09477bcd2be582f158612e4d3384996a706e47808fe7924"
+    },
+    {
+      "path": "decisions/0025-real-agent-testing-pilot.md",
+      "sha256": "5df3e3c6132c88365a23e36da4899f07fa340d052290874384344070ce4f3789"
+    },
+    {
+      "path": "decisions/0026-repeated-library-repair-study.md",
+      "sha256": "b6660862191a9b6e3bac8a52091fca8c0fddce7286b76b661f1240638c29aa68"
+    },
+    {
+      "path": "decisions/0027-agent-language-knowledge-package.md",
+      "sha256": "dc5c80c950513dd984d31edc00e2e38251c44a0c6ddde3b0c6d4ba6f10fd916e"
+    },
+    {
+      "path": "decisions/0028-lobo-skill-onboarding-comparison.md",
+      "sha256": "d8d0eb1dd7666aabebd064ec853bc8b1d07722e5b9247f0a57735b80da17e87b"
+    },
+    {
+      "path": "decisions/0029-list-guarded-recursive-values.md",
+      "sha256": "b5d5092fc94d92003bb361c557e0ac5c77d110255952f1368d3e987a5ee9b167"
+    },
+    {
+      "path": "decisions/0030-explicit-generic-function-specialization.md",
+      "sha256": "346413f0901407050ba2773c0a3b6d086b3cf3fc48a2f10ce3f55e5b37856d32"
+    },
+    {
+      "path": "docs/architecture.md",
+      "sha256": "1fe255df7bb2377abdddac14013cfa72d519f8a21b608da824bb28491098c933"
+    },
+    {
+      "path": "docs/compiler-and-backends.md",
+      "sha256": "1f164925ab4a7656661081785712273b63f3bdc2a295d685d25f9ebe1480e196"
+    },
+    {
+      "path": "docs/compiler-development-workflow.md",
+      "sha256": "f466eca34398786da4dbf03bf5c9e9068ed53a027f2547efb7c23c802f4e328a"
+    },
+    {
+      "path": "docs/development-workflow.md",
+      "sha256": "6095689a39afe5259c8757db2b19246b4512e21812f5967b59c759dca944c065"
+    },
+    {
+      "path": "docs/language-completeness.md",
+      "sha256": "02c68a303c7512341b657058f01393ac1754d8d5c2e3ee2b7029218b8253719f"
+    },
+    {
+      "path": "docs/language-design.md",
+      "sha256": "bb90c4b441cbe7cdd6192f165f02a5f4e380c26ecc3d698b2d5c0218b9b7038c"
+    },
+    {
+      "path": "docs/native-development.md",
+      "sha256": "7f3d098bd9a380d3bcab4c36030b5b46a10426d294134b0c2b5c282f27c64ed5"
+    },
+    {
+      "path": "docs/native-performance.md",
+      "sha256": "9d127008214ab6f70b0be2b20d2ed48fc790572b264a545f018c5f0e067c2fec"
+    },
+    {
+      "path": "docs/roadmap.md",
+      "sha256": "ea29b615a6cf8debe8d4bca7ef70a5dc9b22310f6f81f7631a5bc9235aac0f29"
+    },
+    {
+      "path": "docs/self-hosting.md",
+      "sha256": "3c2746977ba5fd8ce54ee9b07ebbd4b44c850fb9e012e4fcc781e3779732e741"
+    },
+    {
+      "path": "docs/state-and-context.md",
+      "sha256": "718528849fa9dd07b35f0b18684a1b11618e6d47f01f2a0a6363c7b1039b5b96"
+    },
+    {
+      "path": "docs/testing-and-tdd.md",
+      "sha256": "ac9571c30e8f7c4465e7d93d0e82a9d08ae9b00e18871bb02dba430da4e3c62c"
+    },
+    {
+      "path": "docs/tool-protocol.md",
+      "sha256": "66975c0fd40a6d23c18fbbbe0c841bb1938bc4c037e272a1e7bb1150b5d37798"
+    },
+    {
+      "path": "docs/v1.0-target.md",
+      "sha256": "02ece8c615ef420551997c07da6e971a13a7bebf6e59f3edef12b35ccbc6e418"
+    },
+    {
+      "path": "docs/worktree-comparisons.md",
+      "sha256": "2417368b85237d0dfdcc6c2db1df04485b9d67db82e25ec558d95ad83b5b394a"
+    },
+    {
+      "path": "editors/vscode/CHANGELOG.md",
+      "sha256": "abf28f1cad87c7c8a63505ee792daa4483601861a8a97d1b954d86a956667b5e"
+    },
+    {
+      "path": "editors/vscode/README.md",
+      "sha256": "27571cc9661de12826c3aaadee7796c34cbd6899d1916275d817fdf5acd9cf69"
+    },
+    {
+      "path": "editors/vscode/language-configuration.json",
+      "sha256": "b8330a423ec3cd976e1a4f56f0760bdc28790911a3c06c5fdb639dc3895f5e9f"
+    },
+    {
+      "path": "editors/vscode/package-lock.json",
+      "sha256": "36f470c13f67e471aed62cbb03da7fb5e4f92548d9cc26e5579658f4660ba67a"
+    },
+    {
+      "path": "editors/vscode/package.json",
+      "sha256": "a39b83212d9190a3423d8c2087c3c85ca9e0cc755a00074bf05b3656fa012b21"
+    },
+    {
+      "path": "editors/vscode/src/compiler.cjs",
+      "sha256": "61d321f7cfb4248dabcddae20c1c21b4f78c58bbb21b19977cbc5873596e31ff"
+    },
+    {
+      "path": "editors/vscode/src/diagnostics.cjs",
+      "sha256": "c902637b51dc2d493e56b5095c0baf65a8c600a039a4f69ea564582ad6aabc62"
+    },
+    {
+      "path": "editors/vscode/src/extension.cjs",
+      "sha256": "fc7c2b1a520122f8206e4856a8d8d74a87531fffeb43470b8ab4879cc296c75e"
+    },
+    {
+      "path": "editors/vscode/src/navigation.cjs",
+      "sha256": "839e51877a66666120b97e5979c989960c723ea0eb1b484bb5af9976cbf184e2"
+    },
+    {
+      "path": "editors/vscode/src/project.cjs",
+      "sha256": "fbbecb2fa3e375a314c9cc32ce81e15b231ea96bbaa21ca6a6c33952f496e683"
+    },
+    {
+      "path": "editors/vscode/syntaxes/lobo.tmLanguage.json",
+      "sha256": "0f9f6bb2812b4f677a29ecf9971e646b285686a269881834c00ed66fc7a6e67b"
+    },
+    {
+      "path": "editors/vscode/test/bundle-compiler.test.mjs",
+      "sha256": "113fc6f04f63d95f0e8e3110bc4a38efa5389510a624d9b1ec329b348a82078d"
+    },
+    {
+      "path": "editors/vscode/test/bundle-navigation.test.mjs",
+      "sha256": "a40b47935d0e402e7e34e3910c4bb636ec477e487594be25a61a3e8241652d6d"
+    },
+    {
+      "path": "editors/vscode/test/compiler.test.mjs",
+      "sha256": "6227a8c65c5600b5984280abecf110fb084a295e08c63b37a61d7fdb7a00b571"
+    },
+    {
+      "path": "editors/vscode/test/diagnostics.test.mjs",
+      "sha256": "7302ff0fb3db78b214790d16284586200b6b10e8ac2cffc6e1a6794907888287"
+    },
+    {
+      "path": "editors/vscode/test/grammar.test.mjs",
+      "sha256": "263de84ac9ba18152e9751502a722ecc57f922a9034e3f4a85cb33d79b64dd0a"
+    },
+    {
+      "path": "editors/vscode/test/host-tests.cjs",
+      "sha256": "c3195891a7848522cb05191f60ff9075cc831767eec3024382f798505ee9e3f7"
+    },
+    {
+      "path": "editors/vscode/test/navigation.test.mjs",
+      "sha256": "25eeba9591063431adc6b5d88b10bfcc306fdd5edcdc18341aec163c7e82708e"
+    },
+    {
+      "path": "editors/vscode/test/project-sources.test.mjs",
+      "sha256": "c865b9e487b5ca139b3cc949e88b0d1da8a9881fa60fdf6ed89bd79a76565aea"
+    },
+    {
+      "path": "editors/vscode/test/provider.test.mjs",
+      "sha256": "608c942f8ad450ec3c4e7f70136fa272b61c89495bc497ab92a6eca0308103c9"
+    },
+    {
+      "path": "editors/vscode/test/run-host-tests.mjs",
+      "sha256": "ae164dc5f1919953a4e0e6503aeae855ea3cb76ef0d8ffb5c18eb7d51589c8a5"
+    },
+    {
+      "path": "examples/actions.lobo",
+      "sha256": "21b5ca015de2773d1444e8c4d05b392d394f93dcb188227cabb97afe63f429b6"
+    },
+    {
+      "path": "examples/algorithms.lobo",
+      "sha256": "e33036cb366ef473fc310b7075fbc2282e275df70d7324d05bcb4c4106d461e3"
+    },
+    {
+      "path": "examples/ast.lobo",
+      "sha256": "f2e57a59fdf82e0dfed0263c6d6b196a36a5d0ac90399eab20277594d0ae2d5e"
+    },
+    {
+      "path": "examples/collections.lobo",
+      "sha256": "ec09d1a67ff2ec5ff49625186f66009022b61b521e7454af0de3213afc3f5425"
+    },
+    {
+      "path": "examples/core.lobo",
+      "sha256": "4321f5ae582d55e0ef973f37f317d71b579834f4d9efe5b1959dbc4dd66f3b57"
+    },
+    {
+      "path": "examples/generics.lobo",
+      "sha256": "486f02c8f314d37ba9b5720474772b2782095ac656aa24eac418529f8ae3e28f"
+    },
+    {
+      "path": "examples/iteration.lobo",
+      "sha256": "607c4f77a46b94833eb7c8438647a5a6baf157f523b2cc791d2c2068bfbc67b0"
+    },
+    {
+      "path": "examples/modules/mirror.lobo",
+      "sha256": "0ead2d707083b30c4d4218759be38e2ab44010daacc0e3e81ec3537ce1fb0a49"
+    },
+    {
+      "path": "examples/modules/reverse.lobo",
+      "sha256": "d42fd9670de9a6133452a020b9294e99e5df68f65103e3b4dacedd9bcad32e0f"
+    },
+    {
+      "path": "examples/modules/sequences.lobo",
+      "sha256": "4d4b08d31f0dee8f65ee0025f5bd342425c62b1e8b2091f7ea31ba7cebe9e0ff"
+    },
+    {
+      "path": "examples/parser.lobo",
+      "sha256": "a4e4fd24d51eb9cf610b1f0581158962202f048c4c5387873dcce5548adf4ea8"
+    },
+    {
+      "path": "examples/records.lobo",
+      "sha256": "f9c61078b287890ae7764182f6a9146341ea4471f8c3717ce4922a50c8092d4e"
+    },
+    {
+      "path": "examples/sequences.lobo",
+      "sha256": "dea6546640035a1a13831851309b7f0ab10c7a36151b76578eb16f7bf0c15384"
+    },
+    {
+      "path": "examples/state_iteration.lobo",
+      "sha256": "5deb87b4edead36b4c594e430a5cc3e4c10adc4ac906302afc2769003a22abed"
+    },
+    {
+      "path": "examples/testing/checks.lobo",
+      "sha256": "eb27de19d105fcce9cd30682fe133b78cff1169f255fad8086c7c2d49a1bf112"
+    },
+    {
+      "path": "examples/text.lobo",
+      "sha256": "7d6c561755d3447d2b54c8e1c481f6dd8ab33dc957c4057f59b4dfb7c4b4d94c"
+    },
+    {
+      "path": "examples/transfer.lobo",
+      "sha256": "1e6937cfabc588cf2bf9dc955bdcad018459f2331e34a0b1880400d22cddce08"
+    },
+    {
+      "path": "examples/tree.lobo",
+      "sha256": "5b18b333ed29c500d68fd318ca30b422ab12d82c27afddc004343a2e692f4601"
+    },
+    {
+      "path": "examples/variants.lobo",
+      "sha256": "b7e47a5753281fe34efc9a10a91cd591d8cc50d8f7f39a9e480990dfb24b222b"
+    },
+    {
+      "path": "research/comparison-readiness.md",
+      "sha256": "89d3d443b837f6a615a7b0a9343bb712d98d17865a27ada66630e247bd6453fb"
+    },
+    {
+      "path": "research/lobo-comparison.md",
+      "sha256": "214a7ded00c4d1944d66eadcf76eea0866feae5d77af13759418587832150264"
+    },
+    {
+      "path": "research/paper-plan.md",
+      "sha256": "5a5e55d8a302e327898e2307e9c098a0a392680ee924d65ebf73a0e16c9cf558"
+    },
+    {
+      "path": "spec/README.md",
+      "sha256": "968f30f517a7ffa04354ebf7fbedd5f0ef0ef84069532ad11ba0524ad0f7df1c"
+    },
+    {
+      "path": "spec/agent-testing-v0.1.md",
+      "sha256": "dc9c1fb4b7f3aca5cc70a2cb844139190ec16218ee3ddb7759653f2d0fc4ab0e"
+    },
+    {
+      "path": "spec/checked-artifact-v0.1.md",
+      "sha256": "8e85e37b7a89812f135ccb796e083ea95771032d267e55bc9c0d18f53fa56cdf"
+    },
+    {
+      "path": "spec/checked-artifact-v0.2.md",
+      "sha256": "b13203846b1eb62eeb73445ef422cb526f7ae33d1e6804ecdef20e33c6365ff7"
+    },
+    {
+      "path": "spec/checked-artifact-v0.3.md",
+      "sha256": "4874fc7ba430389d8d3bf4df3c6fc34b2b5bb949ecfe646383e3f6fc04652b15"
+    },
+    {
+      "path": "spec/conformance/core-cases.json",
+      "sha256": "076f50cc9a45b7588eed4d150bb289fcdf04b0dcc7435dd871e71ef388cf71df"
+    },
+    {
+      "path": "spec/core-v0.1.md",
+      "sha256": "c3fe3c05e21bd22c9df8f9ff78c65f3c645f127b10350c93a888c5f133f16854"
+    },
+    {
+      "path": "spec/core-v0.10.md",
+      "sha256": "2ca585067a2c5113ce335847f433489c79a71d63471c2443786157038b60953e"
+    },
+    {
+      "path": "spec/core-v0.11.md",
+      "sha256": "275105a2b66f5f0f6ddb12828d3e30db47f8603933654ea92b6bb3d5597ba8f9"
+    },
+    {
+      "path": "spec/core-v0.2.md",
+      "sha256": "9cbdbe1ddd2a55ce69b3333d5984a12d437ed225d856668c69edfbfd2a4b1ad2"
+    },
+    {
+      "path": "spec/core-v0.3.md",
+      "sha256": "96e39f958c14b082ad0f3a0c72dc0b3318a7c1c442812b35c338d35b00759543"
+    },
+    {
+      "path": "spec/core-v0.4.md",
+      "sha256": "84828c9c83b0c0b70d278e2458d77e01231bfd75899a99193b80a762b78ede83"
+    },
+    {
+      "path": "spec/core-v0.5.md",
+      "sha256": "02ad206aa3cf73c38a8c13d082cdd7d0ea61c45a4dd2ab304497df2cc7c326cc"
+    },
+    {
+      "path": "spec/core-v0.6.md",
+      "sha256": "3d8737fe0d67ef67916ba63fc6d91386d9ff983c9148d2b2c671048a0cf35245"
+    },
+    {
+      "path": "spec/core-v0.7.md",
+      "sha256": "0111fcfce8f7ba3ca9abfa027282113dcb6c31df7fb2d946847260f392efb221"
+    },
+    {
+      "path": "spec/core-v0.8.md",
+      "sha256": "790cfe562577be3dafa5ca3d2028e34d8782cbb36731fe45c29560a4badc6887"
+    },
+    {
+      "path": "spec/core-v0.9.md",
+      "sha256": "4bc8977f5151c72df856a06da8cc1ff136a9fb355681b47075bbd17d570d5379"
+    },
+    {
+      "path": "spec/generic-reuse-workload.md",
+      "sha256": "53e5d3097494f3deb5379c77a343997dfa52f47edb6c3915006dac05082b244f"
+    },
+    {
+      "path": "spec/language-milestone-workloads.md",
+      "sha256": "f0be02538657fc901e9241049314b75d03b0472bc776ad3748d63c5c847a2b4d"
+    },
+    {
+      "path": "spec/native-v0.1.md",
+      "sha256": "af4d3df44ae4be8ae92e35c21ed88fcb488c18e2df285cc8aee026d0a7553011"
+    },
+    {
+      "path": "spec/recursive-ast-workload.md",
+      "sha256": "3138f238b71d5d12001391dc3d2f8cf054a1a59622608699732bcc05441c7a3a"
+    },
+    {
+      "path": "spec/schemas/conformance-case.schema.json",
+      "sha256": "ef3a27dd2a0caa8249c1f1439eb0abf96983350456db4efaabfdd2e2cc24c443"
+    },
+    {
+      "path": "spec/schemas/request-envelope.schema.json",
+      "sha256": "2abad3a1e8bbbb980cfa0fbe2c9c38a789ba94215bd6481f677d15cfe7c24409"
+    },
+    {
+      "path": "spec/schemas/response-envelope.schema.json",
+      "sha256": "a4e7d16a8bc25e06d5a571259df750f7c024319922e419bae57a8d66c64e7ca4"
+    },
+    {
+      "path": "spec/schemas/tool-descriptor.schema.json",
+      "sha256": "2e375db03b357fee59094e46252dcd847a3adf3fc04fae39457bf98a62bc17ef"
+    },
+    {
+      "path": "spec/source-diagnostics-v0.1.md",
+      "sha256": "d531df2c57fdd4ec2917fb029a8fc54f441f6632fbfb7c2b4cfe3b8168e6eb3b"
+    },
+    {
+      "path": "src/agent_testing/mod.rs",
+      "sha256": "359c598c64e7a6016de602a300376a5f3830fa47be9e9ff918af5b83c8b45a84"
+    },
+    {
+      "path": "src/agent_testing/process.rs",
+      "sha256": "b008879f8838f0a19ab8358588d1f26956a33c3a996c7f18565d11989fd0562f"
+    },
+    {
+      "path": "src/bin/lobo-test.rs",
+      "sha256": "b515be623037786da54bc49b3e7880b535d1d46a672379b007617d7d2c099904"
+    },
+    {
+      "path": "src/buffers.rs",
+      "sha256": "591dbf63b70dc87e6573fb8d62693cb600944a494abde9f77747a481ffbb9898"
+    },
+    {
+      "path": "src/generics.rs",
+      "sha256": "bf96272972abd1058deb1ff845806a8fc20f5121ed1ecdde201b35beee2deeda"
+    },
+    {
+      "path": "src/lib.rs",
+      "sha256": "eed861f1e86cb74f8e864c8e676b166b4ed185d7070861e825dc13e7babc6cff"
+    },
+    {
+      "path": "src/lists.rs",
+      "sha256": "e070811e4d6420fe414efdafaebb86bc56f3c66d0926c0e6f67e937d9509ec7c"
+    },
+    {
+      "path": "src/main.rs",
+      "sha256": "f63ad8359454c2f376589b5d8885d653bd99035aea7b6a480a102115d3c1f53e"
+    },
+    {
+      "path": "src/modules.rs",
+      "sha256": "dd45f5c2df30caa1cff484a4390e897280966923a3a15eee4d8eb9289daa1d0d"
+    },
+    {
+      "path": "src/native.rs",
+      "sha256": "1b922ba3b171a12ae9ee48d9f1fabf5cf3cfc81f92df1cdf4ece0d49b59ca094"
+    },
+    {
+      "path": "src/native_buffers.c",
+      "sha256": "9308ae7edb1da47d0323a38ffa84e4357d6f391084bea17757e13c45ad90942c"
+    },
+    {
+      "path": "src/native_lists.rs",
+      "sha256": "0a1799b60ebb15fe1f23d4ef486581d2de31332a112901d17198cedac81d3cc5"
+    },
+    {
+      "path": "src/native_runtime.c",
+      "sha256": "b4ce031fe130708c2f70e5fbd74c8af8e07b698417a6658f6da64805da5e7f67"
+    },
+    {
+      "path": "src/records.rs",
+      "sha256": "2abdfb8a702a9d03ad6d16f0cdfe58c088cef7e0810b2e55353e39aea2ff76f3"
+    },
+    {
+      "path": "tests/actions.rs",
+      "sha256": "ada1562913e3aa8bcf3bb736ed514bf24a10af9eb034616e914940b00933572c"
+    },
+    {
+      "path": "tests/agent_testing.rs",
+      "sha256": "83d50e1a560c1d8ccda150a0dd8134be94c26e34ec3ee6b1de390945661c2021"
+    },
+    {
+      "path": "tests/cli.rs",
+      "sha256": "736a926b863997badad5fd71cf2a932c1b6717a50df2484733b393771b10b78e"
+    },
+    {
+      "path": "tests/conformance.rs",
+      "sha256": "7acb8d726a6e16d6182fea130d6bcd8ecfcd5301760581553f8d99774796143e"
+    },
+    {
+      "path": "tests/fold.rs",
+      "sha256": "0c143201c583e4ebc0be2bc4bb78947c179a291827c7aabc179f5e9735357f15"
+    },
+    {
+      "path": "tests/generics.rs",
+      "sha256": "f212f4d3ce888d7bad80f3bff30021c333fd5d4be33b133f7292fbc5c6d77fde"
+    },
+    {
+      "path": "tests/lists.rs",
+      "sha256": "85e25183b85be99b4cc9e4cba9e562002fb250817c730a0ba8ba93141202d5b9"
+    },
+    {
+      "path": "tests/modules.rs",
+      "sha256": "3ff3ddf00812987cf59543c8f77fb337edb68efdd92925dd98e10fef745e64bf"
+    },
+    {
+      "path": "tests/native.rs",
+      "sha256": "c0280ce1d7c711c1d72d56b63f091a600b0b069d763771c0c3a8fd58e1a6c04e"
+    },
+    {
+      "path": "tests/native_generated.rs",
+      "sha256": "4b5af582cddf928e98f20d5e14cb93821f88a32fec4ccbc83533ff49461da536"
+    },
+    {
+      "path": "tests/protocol_actions.rs",
+      "sha256": "03b40b1873e5b27b598cf070572fa0b552105364991337e8992a99317cd47315"
+    },
+    {
+      "path": "tests/records.rs",
+      "sha256": "4ae5226fc93f3c8f9193052f16430401ca11a3593d7a7afec786735ac6578513"
+    },
+    {
+      "path": "tests/recursive_values.rs",
+      "sha256": "dabcf0a739e46420b2b0fa9a8eb7ca3113ff351a893dc56097b030eeaf2f2e6a"
+    },
+    {
+      "path": "tests/source_locations.rs",
+      "sha256": "bbe8bfa6479acf373d4b8811bde36900c7dfbc160f979522e25645c5ce7f4091"
+    },
+    {
+      "path": "tests/support/mod.rs",
+      "sha256": "1add7bc922c2e2b012dfaa6c4cf91ca1c82ef08fe3ea9306b3c43099423138ef"
+    },
+    {
+      "path": "tests/text.rs",
+      "sha256": "77a1fa12a174c7e111a3ab9251cb7db6bd2dde1af6c54fa4354f4b047c673c7e"
+    },
+    {
+      "path": "tests/tree.rs",
+      "sha256": "4847943a3f80c95612584a5ee21633712e853785958befa7af8e28db24a28e9e"
+    },
+    {
+      "path": "tests/variants.rs",
+      "sha256": "bd22c21508e31485804f356725d3112f44138ed54e08ca3f9fec2959daa9aef6"
+    },
+    {
+      "path": "tests/while.rs",
+      "sha256": "a9694d8bfa391a74f71fa3c3954013a37eb651f84129b1c2b90d7ef2ad11e8e9"
+    },
+    {
+      "path": "tests/workloads.rs",
+      "sha256": "bcd847d1fdcf069250ad5f535836eb47dbf7b655dbe8643bfaae705d81dd8ab2"
+    }
+  ],
+  "artifacts": [
+    {
+      "path": "target/release/lobo",
+      "bytes": 1128584,
+      "sha256": "0dcc91f47f97357467e821daf02ea4581b959b2fe026603a4ed03d910deae7bb"
+    },
+    {
+      "path": "target/release/lobo-test",
+      "bytes": 1040248,
+      "sha256": "3bfba3c2ba9f7a3bdf45964abc7babe46d5abb95631db0f12b2942aeb2e6ec32"
+    },
+    {
+      "path": "target/native-examples/generics-core011",
+      "bytes": 22888,
+      "sha256": "8909c511a8e1e460693265d986b2a5ff959b0024adda8d1d3bc1e7378404167e"
+    },
+    {
+      "path": "dist/lobo-syntax-0.13.0.vsix",
+      "bytes": 27217,
+      "sha256": "50c5a2ca98b9b50dc100e4523ad35c6023f73c4bb7c8a868a00be2eb6a1b7195"
+    }
+  ],
+  "failures_and_corrections": [
+    "Initial semantic red: 3 tests reject generic syntax. Initial shell wrapper returned 0 after printing a failed cargo log; this is recorded as test failure, not success.",
+    "First implementation did not compile: missing Clone; replaced cloning with an owned work queue.",
+    "List argument and JSON-key fixture corrected against existing interchange, not a wire change.",
+    "Expanded test oracle corrections: existing contract/action diagnostic spelling; forge removes actual needed nominal imports.",
+    "Editor semantic red: three new generic tests fail before support. Later failed package attempt used single-source adapter for bundle; corrected checkBundle call.",
+    "Function-as-type regression rejected correctly but lost source range; concrete argument-kind checking now diagnoses at the requesting call.",
+    "First complete run with new agent-tool regression stopped at a wrong expected status string. Corrected all_checks_satisfied to documented checks_satisfied; next full run passes 159.",
+    "Two atomic apply_patch context failures changed no files; evidence remains in tool transcript, not a separate filesystem log."
+  ],
+  "limits": [
+    "Requested bodies checked; unused templates parsed and declaration references resolved, with local-name/body-type checks deferred.",
+    "No generic nominal types, inference, constraints, traits, function values, new dependencies or runtime authority.",
+    "At most 16 source modules, 64 instances, 80 lowered scopes, 1024 declaration/import slots, 32768 visited expression nodes; prior type/runtime limits remain.",
+    "No model agent, comprehension score, billed-token measurement, performance comparison, commit, publication or user-profile extension install.",
+    "Public development fixtures are not unseen confirmatory evaluation. Baselines capture dirty workspaces."
+  ],
+  "environment": {
+    "platform": "Linux-6.8.0-142-generic-x86_64-with-glibc2.39",
+    "python": "3.12.3",
+    "rustc": "rustc 1.92.0 (ded5c06cf 2025-12-08)",
+    "cargo": "cargo 1.92.0 (344c4567c 2025-10-21)",
+    "clang": "Ubuntu clang version 18.1.3 (1ubuntu1)",
+    "node": "v22.19.0"
+  },
+  "raw_evidence": {
+    "directory": "benchmarks/private-evidence/core011-evolution-20261104",
+    "retention": "Ignored local evidence, outside target cleanup. Requires normal backup; not committed, published or an independent archive.",
+    "logs": [
+      {
+        "path": "benchmarks/private-evidence/core011-evolution-20261104/core011-cargo-final.log",
+        "original_path": "target/core011-cargo-final.log",
+        "bytes": 4266,
+        "sha256": "685a5232a17b21d5d64e34ac242e30181ac7f53e1186b455267673d802415dfb",
+        "outcome": "failed; correction retained in report"
+      },
+      {
+        "path": "benchmarks/private-evidence/core011-evolution-20261104/core011-cargo-final2.log",
+        "original_path": "target/core011-cargo-final2.log",
+        "bytes": 16941,
+        "sha256": "bcf0268afb738cb32d4c0a096c8339378cd05ff21f5699c3f7b06c694a420871",
+        "outcome": "passed; scope/stage in log and report"
+      },
+      {
+        "path": "benchmarks/private-evidence/core011-evolution-20261104/core011-cargo-first.log",
+        "original_path": "target/core011-cargo-first.log",
+        "bytes": 16845,
+        "sha256": "c4b2d022324765fa594e43ca75804bc3e3277b18f16a7a7f675e7c4d50d19ea2",
+        "outcome": "passed; scope/stage in log and report"
+      },
+      {
+        "path": "benchmarks/private-evidence/core011-evolution-20261104/core011-clippy-final.log",
+        "original_path": "target/core011-clippy-final.log",
+        "bytes": 138,
+        "sha256": "381a9a7f03357bd25f75f39c14c47f86fdd18a3f0c70920ddd81ef98b9b77828",
+        "outcome": "passed; scope/stage in log and report"
+      },
+      {
+        "path": "benchmarks/private-evidence/core011-evolution-20261104/core011-clippy.log",
+        "original_path": "target/core011-clippy.log",
+        "bytes": 138,
+        "sha256": "32ca6c0155a6b8aedcb7c9d176b2583008a40c2d2035534c410611d108c56d6f",
+        "outcome": "passed; scope/stage in log and report"
+      },
+      {
+        "path": "benchmarks/private-evidence/core011-evolution-20261104/core011-diff-check.log",
+        "original_path": "target/core011-diff-check.log",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "outcome": "passed; scope/stage in log and report"
+      },
+      {
+        "path": "benchmarks/private-evidence/core011-evolution-20261104/core011-diff-final.log",
+        "original_path": "target/core011-diff-final.log",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "outcome": "passed; scope/stage in log and report"
+      },
+      {
+        "path": "benchmarks/private-evidence/core011-evolution-20261104/core011-docs-check.log",
+        "original_path": "target/core011-docs-check.log",
+        "bytes": 55,
+        "sha256": "1f11bb3bb382f1877ffa8eec4eb376db85d0ecfa2e1301289bb91fbd2cc966ae",
+        "outcome": "passed; scope/stage in log and report"
+      },
+      {
+        "path": "benchmarks/private-evidence/core011-evolution-20261104/core011-docs-final.log",
+        "original_path": "target/core011-docs-final.log",
+        "bytes": 55,
+        "sha256": "1f11bb3bb382f1877ffa8eec4eb376db85d0ecfa2e1301289bb91fbd2cc966ae",
+        "outcome": "passed; scope/stage in log and report"
+      },
+      {
+        "path": "benchmarks/private-evidence/core011-evolution-20261104/core011-editor-first.log",
+        "original_path": "target/core011-editor-first.log",
+        "bytes": 25300,
+        "sha256": "47684c229ca7cc5ba9547de407522005617a28195f7e78db691161b8ae190e29",
+        "outcome": "passed; scope/stage in log and report"
+      },
+      {
+        "path": "benchmarks/private-evidence/core011-evolution-20261104/core011-editor-host-first.log",
+        "original_path": "target/core011-editor-host-first.log",
+        "bytes": 1046,
+        "sha256": "0200a83cf277d6bfc7f8d3a9418d7dfe83a4b110ebf121648f928edae4defa63",
+        "outcome": "passed; scope/stage in log and report"
+      },
+      {
+        "path": "benchmarks/private-evidence/core011-evolution-20261104/core011-editor-package-first.log",
+        "original_path": "target/core011-editor-package-first.log",
+        "bytes": 26874,
+        "sha256": "a0310c1bffe18dc7159f1e6dcdc37c4c5d549b151cc771d3fad9675dded3724f",
+        "outcome": "failed; correction retained in report"
+      },
+      {
+        "path": "benchmarks/private-evidence/core011-evolution-20261104/core011-editor-package-second.log",
+        "original_path": "target/core011-editor-package-second.log",
+        "bytes": 26652,
+        "sha256": "7105ddafc950b768fe93d5207d3eaddc287ebc6eb7bc478f99d1c45ae38aade8",
+        "outcome": "passed; scope/stage in log and report"
+      },
+      {
+        "path": "benchmarks/private-evidence/core011-evolution-20261104/core011-editor-red.log",
+        "original_path": "target/core011-editor-red.log",
+        "bytes": 27551,
+        "sha256": "0bc987bf13b5b7a5d718d8ad0abe35b041d280fde139e5a80246f69ae5b00b04",
+        "outcome": "failed; correction retained in report"
+      },
+      {
+        "path": "benchmarks/private-evidence/core011-evolution-20261104/core011-format-final.log",
+        "original_path": "target/core011-format-final.log",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "outcome": "passed; scope/stage in log and report"
+      },
+      {
+        "path": "benchmarks/private-evidence/core011-evolution-20261104/core011-format.log",
+        "original_path": "target/core011-format.log",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "outcome": "passed; scope/stage in log and report"
+      },
+      {
+        "path": "benchmarks/private-evidence/core011-evolution-20261104/core011-generics-expanded.log",
+        "original_path": "target/core011-generics-expanded.log",
+        "bytes": 1764,
+        "sha256": "0fd52c6890cbd62efac5ff7c40f0849f956b6605992f6b6058543becdadbef06",
+        "outcome": "failed; correction retained in report"
+      },
+      {
+        "path": "benchmarks/private-evidence/core011-evolution-20261104/core011-generics-final.log",
+        "original_path": "target/core011-generics-final.log",
+        "bytes": 869,
+        "sha256": "55b1c1bc9a750013701df37c7768a9f2c85be7c7e162e4dfc2812619fa6bd800",
+        "outcome": "passed; scope/stage in log and report"
+      },
+      {
+        "path": "benchmarks/private-evidence/core011-evolution-20261104/core011-generics-first.log",
+        "original_path": "target/core011-generics-first.log",
+        "bytes": 811,
+        "sha256": "42fa25b94d1c6942b91fc96264d4c001196ed2b766be06e4bbf57c3597fd8b45",
+        "outcome": "failed; correction retained in report"
+      },
+      {
+        "path": "benchmarks/private-evidence/core011-evolution-20261104/core011-generics-green.log",
+        "original_path": "target/core011-generics-green.log",
+        "bytes": 869,
+        "sha256": "edf948d93264813bdd4b93d1b343fd3226ade3789ac12513b040d526b701f966",
+        "outcome": "passed; scope/stage in log and report"
+      },
+      {
+        "path": "benchmarks/private-evidence/core011-evolution-20261104/core011-generics-red.log",
+        "original_path": "target/core011-generics-red.log",
+        "bytes": 2662,
+        "sha256": "bc0e8c29dd358e12b819447e5ccb1dec01241aee4455b28b71523c298acc3158",
+        "outcome": "failed; correction retained in report"
+      },
+      {
+        "path": "benchmarks/private-evidence/core011-evolution-20261104/core011-generics-second.log",
+        "original_path": "target/core011-generics-second.log",
+        "bytes": 1474,
+        "sha256": "0078f14e8ba2152ae24010eb0730848f908c4637b8f90803eb43adf351000740",
+        "outcome": "failed; correction retained in report"
+      },
+      {
+        "path": "benchmarks/private-evidence/core011-evolution-20261104/core011-generics-third.log",
+        "original_path": "target/core011-generics-third.log",
+        "bytes": 562,
+        "sha256": "016cfdf36b7e76a2141129bb931e0d361b8dc186bcc35ef1c2f58d3bf13c3620",
+        "outcome": "passed; scope/stage in log and report"
+      },
+      {
+        "path": "benchmarks/private-evidence/core011-evolution-20261104/core011-native-session-smoke.log",
+        "original_path": "target/core011-native-session-smoke.log",
+        "bytes": 688,
+        "sha256": "23024bdd9c84c2b60412ffdc3d74ef04f61dc82be7160a4ae60d69e66b1bbdd0",
+        "outcome": "passed; scope/stage in log and report"
+      },
+      {
+        "path": "benchmarks/private-evidence/core011-evolution-20261104/core011-python-tests.log",
+        "original_path": "target/core011-python-tests.log",
+        "bytes": 130,
+        "sha256": "05af54bcb9525ca6eaac690a0068942af4be44880ccacb9f1147e9a7e9416d1d",
+        "outcome": "passed; scope/stage in log and report"
+      },
+      {
+        "path": "benchmarks/private-evidence/core011-evolution-20261104/core011-release-build-final.log",
+        "original_path": "target/core011-release-build-final.log",
+        "bytes": 129,
+        "sha256": "fd93a275ee2e9e6e4460a50fb647cfb7704a06cac219e4d8a49b9f4877127ac7",
+        "outcome": "passed; scope/stage in log and report"
+      },
+      {
+        "path": "benchmarks/private-evidence/core011-evolution-20261104/core011-release-build-first.log",
+        "original_path": "target/core011-release-build-first.log",
+        "bytes": 129,
+        "sha256": "38421716b39b15ddc2f82a67de5a0a0cd1f3138c7e20e1e5361f5d006bf12ea3",
+        "outcome": "passed; scope/stage in log and report"
+      },
+      {
+        "path": "benchmarks/private-evidence/core011-evolution-20261104/core011-skill-native.log",
+        "original_path": "target/core011-skill-native.log",
+        "bytes": 1088,
+        "sha256": "eeff8d2ef931c234646dbc55cf5d1d872c49afe80053fafaf4bc972de4b6f03d",
+        "outcome": "passed; scope/stage in log and report"
+      },
+      {
+        "path": "benchmarks/private-evidence/core011-evolution-20261104/core011-skill-validation.log",
+        "original_path": "target/core011-skill-validation.log",
+        "bytes": 16,
+        "sha256": "db349825903d66adffea3ecf1bd8e1803043e8a71cf1a051235dabc5371f5bb0",
+        "outcome": "passed; scope/stage in log and report"
+      },
+      {
+        "path": "benchmarks/private-evidence/core011-evolution-20261104/core011-type-kind-red.log",
+        "original_path": "target/core011-type-kind-red.log",
+        "bytes": 850,
+        "sha256": "dc41785b0a914e08b16a9cbe925a37597d17e302de985eafc9608052803020dc",
+        "outcome": "failed; correction retained in report"
+      }
+    ]
+  }
+}

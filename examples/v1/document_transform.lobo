@@ -1,0 +1,19 @@
+module document_transform @id("v1.doc.transform.module");
+import Document @id("v1.doc.document"); import Item @id("v1.doc.item"); import Report @id("v1.doc.report");
+import DocError @id("v1.doc.error"); import Option @id("v1.option"); import Result @id("v1.result");
+import validate @id("v1.doc.validate"); import filter @id("v1.filter"); import map @id("v1.map");
+record TotalCursor @id("v1.doc.total_cursor") { remaining: List<Item>, sum: I64 }
+function selected @id("v1.doc.selected")(item: Item) -> Bool { item.enabled }
+function doubled @id("v1.doc.doubled")(item: Item) -> Item { Item { key: item.key, score: item.score * 2, enabled: item.enabled } }
+function process @id("v1.doc.process")(document: Document) -> Result<Report,DocError> {
+  match(validate(document)) {
+    Some(error) { Result::<Report,DocError>::Err(error) },
+    None {
+      let items = map::<Item,Item>(filter::<Item>(document.items,&selected),&doubled);
+      let done = while(state: TotalCursor = TotalCursor { remaining: items, sum: 0 }; List::length(state.remaining) > 0) {
+        TotalCursor { remaining: List::tail(state.remaining), sum: state.sum + List::head(state.remaining).score }
+      };
+      Result::<Report,DocError>::Ok(Report { document: Document { id: document.id, name: Text::concat("checked:",document.name), items: items }, count: List::length(items), total: done.sum })
+    }
+  }
+}

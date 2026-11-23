@@ -1,0 +1,31 @@
+{
+  "format": "lobo-identities/0.1",
+  "identities": {
+    "module": "example.sqlite.controller",
+    "ViewResult": "example.sqlite.controller.ViewResult",
+    "IdResult": "example.sqlite.controller.IdResult",
+    "IdState": "example.sqlite.controller.IdState",
+    "RenderState": "example.sqlite.controller.RenderState",
+    "read_id": "example.sqlite.controller.read_id",
+    "render_row": "example.sqlite.controller.render_row",
+    "render_rows": "example.sqlite.controller.render_rows",
+    "response": "example.sqlite.controller.response",
+    "handle": "example.sqlite.controller.handle",
+    "http.Request": "lobo.http.server.Request",
+    "http.Response": "example.web.response",
+    "http.error_response": "lobo.http.server.error_response",
+    "http.json_response": "lobo.http.server.json_response",
+    "helpers.PathMatch": "lobo.http.path_match",
+    "helpers.strip_prefix": "lobo.http.strip_prefix",
+    "model.find": "example.sqlite.users.find",
+    "model.all": "example.sqlite.users.all",
+    "sql.Cell": "lobo.sql.Cell",
+    "sql.Row": "lobo.sql.Row",
+    "sql.SqlResult": "lobo.sql.SqlResult",
+    "json.Json": "lobo.json.value",
+    "json.JsonArray": "lobo.json.array_type",
+    "json.array": "lobo.json.array",
+    "json.append": "lobo.json.append",
+    "json.integer_text": "lobo.json.integer_text"
+  }
+}

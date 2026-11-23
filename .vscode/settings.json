@@ -1,0 +1,21 @@
+{
+  "lobo.compilerPath": "${workspaceFolder}/target/release/lobo",
+  "lobo.sourceFiles": [
+    "examples/sequences.lobo",
+    "examples/collections.lobo",
+    "examples/tree.lobo",
+    "examples/modules/sequences.lobo",
+    "examples/modules/reverse.lobo",
+    "examples/modules/mirror.lobo",
+    "examples/testing/checks.lobo",
+    "examples/web-server/app.lobo",
+    "libraries/http/http.lobo",
+    "libraries/json/json.lobo",
+    "examples/mvc.compact.lobo",
+    "examples/mvc.generic.lobo",
+    "libraries/http-server/server.lobo",
+    "libraries/http-server/transport.lobo",
+    "examples/native/rest/controller.lobo",
+    "examples/native/rest/app.lobo"
+  ]
+}

@@ -1,0 +1,40 @@
+module numerical @id("v1.numerical.module");
+import Option @id("v1.option"); import Result @id("v1.result");
+record Stats @id("v1.numerical.stats") { count: I64, sum: F64, mean: F64, variance: F64 }
+variant NumericError @id("v1.numerical.error") { Empty, NonFinite(I64), Negative(I64), ArithmeticNonFinite }
+record ValidationCursor @id("v1.numerical.validation_cursor") { remaining: List<F64>, index: I64, problem: Option<NumericError> }
+record SumCursor @id("v1.numerical.sum_cursor") { remaining: List<F64>, sum: F64 }
+function check_value @id("v1.numerical.check_value")(value: F64, index: I64) -> Option<NumericError> {
+  if !F64::is_finite(value) { Option::<NumericError>::Some(NumericError::NonFinite(index)) } else { Option::<NumericError>::None }
+}
+function validate @id("v1.numerical.validate")(values: List<F64>) -> Option<NumericError> {
+  let done = while(state: ValidationCursor = ValidationCursor { remaining: values, index: 0, problem: Option::<NumericError>::None };
+    match(state.problem) { None { List::length(state.remaining) > 0 }, Some(error) { false } }) {
+    ValidationCursor { remaining: List::tail(state.remaining), index: state.index + 1, problem: check_value(List::head(state.remaining),state.index) }
+  };
+  done.problem
+}
+function run @id("v1.numerical.run")(values: List<F64>) -> Result<Stats,NumericError> {
+  if List::length(values) == 0 { Result::<Stats,NumericError>::Err(NumericError::Empty) } else {
+    match(validate(values)) {
+      Some(error) { Result::<Stats,NumericError>::Err(error) },
+      None {
+        let total = while(state: SumCursor = SumCursor { remaining: values, sum: 0.0 }; List::length(state.remaining) > 0) {
+          SumCursor { remaining: List::tail(state.remaining), sum: state.sum + List::head(state.remaining) }
+        };
+        if !F64::is_finite(total.sum) { Result::<Stats,NumericError>::Err(NumericError::ArithmeticNonFinite) } else {
+          let count = List::length(values);
+          let mean = total.sum / F64::from_i64(count);
+          let squares = while(state: SumCursor = SumCursor { remaining: values, sum: 0.0 }; List::length(state.remaining) > 0) {
+            let difference = List::head(state.remaining) - mean;
+            SumCursor { remaining: List::tail(state.remaining), sum: state.sum + difference * difference }
+          };
+          let variance = squares.sum / F64::from_i64(count);
+          if !F64::is_finite(mean) || !F64::is_finite(variance) { Result::<Stats,NumericError>::Err(NumericError::ArithmeticNonFinite) } else {
+            Result::<Stats,NumericError>::Ok(Stats { count: count, sum: total.sum, mean: mean, variance: variance })
+          }
+        }
+      }
+    }
+  }
+}

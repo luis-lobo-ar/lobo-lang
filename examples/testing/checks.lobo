@@ -1,0 +1,21 @@
+module checks;
+
+use deps { reverse, summarize };
+
+// Ordinary Lobo functions express laws; the runner only supplies inputs and compares outcomes.
+fn reverse_twice(values: List<I64>) -> Bool {
+  reverse(reverse(values)) == values
+}
+
+fn duplicate_count(key: I64) -> Bool {
+  let input = List::prepend(key, List::prepend(key, List::empty<I64>()));
+  summarize(input, false).count == 1
+}
+
+identities {
+  module: "example.testing.checks",
+  deps.reverse: "example.collections.reverse",
+  deps.summarize: "example.tree.summarize",
+  reverse_twice: "example.testing.reverse_twice",
+  duplicate_count: "example.testing.duplicate_count"
+}

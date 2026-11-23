@@ -1,0 +1,200 @@
+module parser;
+
+// Operators: 0 marks an opening parenthesis, 1 adds, 2 multiplies.
+record Operator { kind: I64, offset: I64 }
+record Machine {
+  values: List<I64>, operators: List<Operator>, expect_operand: Bool
+}
+record Scanner { machine: Machine, number: I64, digits: Bool }
+variant Error {
+  MissingOperand(I64), MissingOperator(I64), UnexpectedByte(I64), Unbalanced(I64),
+  IntegerOverflow(I64), ArithmeticOverflow(I64)
+}
+variant State { Running(Scanner), Failed(Error) }
+variant Reduction { Ready(Machine), Failed(Error) }
+variant Answer { Ok(I64), Failed(Error) }
+
+fn apply(machine: Machine) -> Reduction
+requires { List::length(machine.values) >= 2 && List::length(machine.operators) > 0 }
+{
+  let op = List::head(machine.operators);
+  let right = List::head(machine.values);
+  let rest = List::tail(machine.values);
+  let left = List::head(rest);
+  let overflow = if op.kind == 1 { left > 9223372036854775807 - right } else {
+    right != 0 && left > 9223372036854775807 / right
+  };
+  if overflow { Failed(ArithmeticOverflow(op.offset)) } else {
+    let value = if op.kind == 1 { left + right } else { left * right };
+    Ready(Machine {
+      values: List::prepend(value, List::tail(rest)),
+      operators: List::tail(machine.operators), expect_operand: false
+    })
+  }
+}
+
+fn reducible(state: Reduction, threshold: I64) -> Bool {
+  match state {
+    Failed(error) => false,
+    Ready(current) => List::length(current.operators) > 0 && List::head(current.operators).kind >= threshold
+  }
+}
+
+fn reduce(machine: Machine, threshold: I64) -> Reduction {
+  while(state: Reduction = Ready(machine); reducible(state, threshold)) {
+    match state {
+      Failed(error) => Failed(error),
+      Ready(current) => apply(current)
+    }
+  }
+}
+
+fn finish_number(scanner: Scanner) -> Scanner
+ensures { !result.digits }
+{
+  let machine = scanner.machine;
+  if scanner.digits {
+    Scanner {
+      machine: Machine {
+        values: List::prepend(scanner.number, machine.values), operators: machine.operators,
+        expect_operand: false
+      }, number: 0, digits: false
+    }
+  } else { scanner }
+}
+
+fn digit(scanner: Scanner, value: I64, offset: I64) -> State {
+  if !scanner.digits && !scanner.machine.expect_operand {
+    Failed(MissingOperator(offset))
+  } else {
+    if scanner.number > (9223372036854775807 - value) / 10 {
+      Failed(IntegerOverflow(offset))
+    } else {
+      Running(Scanner {
+        machine: scanner.machine, number: scanner.number * 10 + value, digits: true
+      })
+    }
+  }
+}
+
+fn push_operator(machine: Machine, kind: I64, offset: I64) -> State {
+  Running(Scanner {
+    machine: Machine {
+      values: machine.values,
+      operators: List::prepend(Operator { kind: kind, offset: offset }, machine.operators),
+      expect_operand: true
+    }, number: 0, digits: false
+  })
+}
+
+fn binary(machine: Machine, kind: I64, offset: I64) -> State {
+  if machine.expect_operand { Failed(MissingOperand(offset)) } else {
+    match reduce(machine, kind) {
+      Failed(error) => Failed(error),
+      Ready(current) => push_operator(current, kind, offset)
+    }
+  }
+}
+
+record Search { operators: List<Operator>, found: Bool }
+fn has_open(operators: List<Operator>) -> Bool {
+  let done = fold(i in List::length(operators), state: Search = Search { operators: operators, found: false }) {
+    Search {
+      operators: List::tail(state.operators),
+      found: state.found || List::head(state.operators).kind == 0
+    }
+  };
+  done.found
+}
+
+fn close(machine: Machine, offset: I64) -> State {
+  if !has_open(machine.operators) { Failed(Unbalanced(offset)) } else {
+    if machine.expect_operand { Failed(MissingOperand(offset)) } else {
+      match reduce(machine, 1) {
+        Failed(error) => Failed(error),
+        Ready(current) => Running(Scanner {
+          machine: Machine {
+            values: current.values, operators: List::tail(current.operators), expect_operand: false
+          }, number: 0, digits: false
+        })
+      }
+    }
+  }
+}
+
+fn delimiter(scanner: Scanner, byte: I64, offset: I64) -> State {
+  let machine = scanner.machine;
+  if byte == 32 { Running(scanner) } else {
+    if byte == 43 { binary(machine, 1, offset) } else {
+      if byte == 42 { binary(machine, 2, offset) } else {
+        if byte == 40 {
+          if machine.expect_operand { push_operator(machine, 0, offset) } else {
+            Failed(MissingOperator(offset))
+          }
+        } else {
+          if byte == 41 { close(machine, offset) } else { Failed(UnexpectedByte(offset)) }
+        }
+      }
+    }
+  }
+}
+
+fn scan(scanner: Scanner, byte: I64, offset: I64) -> State {
+  if byte >= 48 && byte <= 57 { digit(scanner, byte - 48, offset) } else {
+    delimiter(finish_number(scanner), byte, offset)
+  }
+}
+
+fn finish(scanner: Scanner, offset: I64) -> Answer {
+  let machine = finish_number(scanner).machine;
+  if machine.expect_operand { Failed(MissingOperand(offset)) } else {
+    match reduce(machine, 1) {
+      Failed(error) => Failed(error),
+      Ready(current) => if List::length(current.operators) > 0 { Failed(Unbalanced(offset)) } else {
+        Ok(List::head(current.values))
+      }
+    }
+  }
+}
+
+fn evaluate(input: Bytes) -> Answer {
+  let initial = Scanner {
+    machine: Machine { values: List::empty<I64>(), operators: List::empty<Operator>(), expect_operand: true },
+    number: 0, digits: false
+  };
+  let done = fold(i in Bytes::length(input), state: State = Running(initial)) {
+    match state {
+      Failed(error) => Failed(error),
+      Running(scanner) => scan(scanner, Bytes::at(input, i), i)
+    }
+  };
+  match done {
+    Failed(error) => Failed(error),
+    Running(scanner) => finish(scanner, Bytes::length(input))
+  }
+}
+
+identities {
+  module: "example.parser",
+  Operator: "example.parser.operator",
+  Machine: "example.parser.machine",
+  Scanner: "example.parser.scanner",
+  Error: "example.parser.error",
+  State: "example.parser.state",
+  Reduction: "example.parser.reduction",
+  Answer: "example.parser.answer",
+  apply: "example.parser.apply",
+  reducible: "example.parser.reducible",
+  reduce: "example.parser.reduce",
+  finish_number: "example.parser.finish_number",
+  digit: "example.parser.digit",
+  push_operator: "example.parser.push_operator",
+  binary: "example.parser.binary",
+  Search: "example.parser.search",
+  has_open: "example.parser.has_open",
+  close: "example.parser.close",
+  delimiter: "example.parser.delimiter",
+  scan: "example.parser.scan",
+  finish: "example.parser.finish",
+  evaluate: "example.parser.evaluate"
+}

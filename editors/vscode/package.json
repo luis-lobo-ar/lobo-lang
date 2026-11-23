@@ -1,0 +1,96 @@
+{
+  "name": "lobo-syntax",
+  "displayName": "Lobo Language Support",
+  "description": "Lobo 1.9 syntax, SQLite resources, definition navigation and compiler diagnostics.",
+  "version": "1.9.0",
+  "main": "./src/extension.cjs",
+  "publisher": "lobo-lang",
+  "private": true,
+  "license": "UNLICENSED",
+  "engines": {
+    "vscode": "^1.85.0",
+    "node": ">=22"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "capabilities": {
+    "untrustedWorkspaces": {
+      "supported": "limited",
+      "description": "Highlighting and local navigation work; dependency reads and compiler diagnostics require trust.",
+      "restrictedConfigurations": [
+        "lobo.compilerPath",
+        "lobo.sourceFiles"
+      ]
+    },
+    "virtualWorkspaces": {
+      "supported": true
+    }
+  },
+  "contributes": {
+    "configuration": {
+      "title": "Lobo",
+      "properties": {
+        "lobo.compilerPath": {
+          "type": "string",
+          "default": "lobo",
+          "scope": "resource",
+          "description": "Compiler executable (Lobo 0.2.1+), without shell arguments. Supports ${workspaceFolder}. Only executed in trusted workspaces."
+        },
+        "lobo.diagnostics.enabled": {
+          "type": "boolean",
+          "default": true,
+          "scope": "resource",
+          "description": "Check current unsaved Lobo source using the compiler in trusted workspaces."
+        },
+        "lobo.sourceFiles": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "default": [],
+          "maxItems": 16,
+          "uniqueItems": true,
+          "scope": "resource",
+          "description": "Complete explicit source set for listed documents, as workspace-relative .lobo files. Enables cross-file navigation and compiler 0.9+ bundle diagnostics. No globs, traversal, downloads, or file reads without workspace trust."
+        }
+      }
+    },
+    "languages": [
+      {
+        "id": "lobo",
+        "aliases": [
+          "Lobo",
+          "lobo"
+        ],
+        "extensions": [
+          ".lobo"
+        ],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "lobo",
+        "scopeName": "source.lobo",
+        "path": "./syntaxes/lobo.tmLanguage.json"
+      }
+    ]
+  },
+  "scripts": {
+    "test": "node --test test/*.test.mjs",
+    "test:host": "node test/run-host-tests.mjs",
+    "prepackage": "node -e \"require('node:fs').mkdirSync('../../dist', { recursive: true })\"",
+    "package": "npm test && vsce package --no-dependencies --allow-missing-repository --skip-license --out ../../dist/lobo-syntax-1.9.0.vsix"
+  },
+  "devDependencies": {
+    "@vscode/vsce": "4.0.0",
+    "vscode-oniguruma": "2.0.1",
+    "vscode-textmate": "9.3.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/luis-lobo-ar/lobo-lang.git",
+    "directory": "editors/vscode"
+  }
+}

@@ -1,0 +1,136 @@
+{
+  "format": "lobo-native-formal-mutations/0.1",
+  "cases": [
+    {
+      "name": "root",
+      "model": "Authority",
+      "invariant": "EntryAuthority",
+      "config": "configs/authority-root.cfg",
+      "c_case": "root",
+      "c_mutation": {
+        "before": "if(lobo_depth!=1) lobo_fail(\"invocation.native.authority\");",
+        "after": "",
+        "first_only": false
+      }
+    },
+    {
+      "name": "amplify",
+      "model": "Authority",
+      "invariant": "NoAmplification",
+      "config": "configs/authority-amplify.cfg",
+      "c_case": "amplify",
+      "c_mutation": {
+        "before": "if(((unsigned)mask & slot->rights)!=(unsigned)mask) return lobo_native_error_v1(LN_DENIED);",
+        "after": "",
+        "first_only": false
+      }
+    },
+    {
+      "name": "stale",
+      "model": "Authority",
+      "invariant": "ValidGeneration",
+      "config": "configs/authority-stale.cfg",
+      "c_case": "stale",
+      "c_mutation": {
+        "before": "if(slot->generation!=generation || slot->kind==LN_FREE || slot->kind==LN_RETIRED)",
+        "after": "if(slot->kind==LN_FREE || slot->kind==LN_RETIRED)",
+        "first_only": false
+      }
+    },
+    {
+      "name": "kind",
+      "model": "Authority",
+      "invariant": "ValidKind",
+      "config": "configs/authority-kind.cfg",
+      "c_case": "kind",
+      "c_mutation": {
+        "before": "if(slot->kind!=kind) return LN_KIND;",
+        "after": "",
+        "first_only": false
+      }
+    },
+    {
+      "name": "denied",
+      "model": "Authority",
+      "invariant": "NoDeniedSyscall",
+      "config": "configs/authority-denied.cfg",
+      "c_case": "denied",
+      "c_mutation": {
+        "before": "if(!(slot->rights&4) || !lobo_native_listen ||",
+        "after": "if(!lobo_native_listen ||",
+        "first_only": false
+      }
+    },
+    {
+      "name": "quota",
+      "model": "Authority",
+      "invariant": "WithinQuota",
+      "config": "configs/authority-quota.cfg",
+      "c_case": "quota",
+      "c_mutation": {
+        "before": "if(live>=lobo_native_handles) return LN_LIMIT;",
+        "after": "",
+        "first_only": false
+      }
+    },
+    {
+      "name": "wrap",
+      "model": "Authority",
+      "invariant": "NoGenerationWrap",
+      "config": "configs/authority-wrap.cfg",
+      "c_case": "wrap",
+      "c_mutation": {
+        "before": "if(slot->generation==UINT64_C(0x00ffffffffffffff)) slot->kind=LN_RETIRED;",
+        "after": "if(false) slot->kind=LN_RETIRED;",
+        "first_only": false
+      }
+    },
+    {
+      "name": "cleanup",
+      "model": "Authority",
+      "invariant": "ExitCloses",
+      "config": "configs/authority-cleanup.cfg",
+      "c_case": "cleanup",
+      "c_mutation": {
+        "before": "if(slot->kind==LN_LISTENER || slot->kind==LN_STREAM) {",
+        "after": "if(false) {",
+        "first_only": false
+      }
+    },
+    {
+      "name": "untracked-fault",
+      "model": "Operations",
+      "invariant": "ExitCloses",
+      "config": "configs/operations-untracked-fault.cfg",
+      "c_case": "untracked-fault",
+      "c_mutation": {
+        "before": "    lobo_native_pending_fd=fd;",
+        "after": "",
+        "first_only": false
+      }
+    },
+    {
+      "name": "publish",
+      "model": "Operations",
+      "invariant": "ValidatedPublication",
+      "config": "configs/operations-publish.cfg",
+      "c_case": "publish",
+      "c_mutation": {
+        "start": "    struct sockaddr_in peer={0};socklen_t peer_size=sizeof(peer);",
+        "end": "    return lobo_native_socket_result_v1(LN_STREAM,fd,(uint16_t)port,cap);"
+      }
+    },
+    {
+      "name": "deadline",
+      "model": "Operations",
+      "invariant": "FixedDeadline",
+      "config": "configs/operations-deadline.cfg",
+      "c_case": "deadline",
+      "c_mutation": {
+        "before": "if(now>=deadline) return LN_TIMEOUT;",
+        "after": "deadline=now+10;",
+        "first_only": true
+      }
+    }
+  ]
+}

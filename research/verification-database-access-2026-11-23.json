@@ -1,0 +1,19 @@
+{
+  "format": "lobo-database-proposal-verification/0.1",
+  "date": "2026-11-23",
+  "status": "passed documentation and preservation checks",
+  "links": {
+    "command": "./scripts/check.sh",
+    "exit_code": 0,
+    "stdout": "check: JSON, JSONL, and local Markdown links are valid\n"
+  },
+  "native_compiler_tests_and_tooling_unchanged_files": 238,
+  "prior_paper_entries_preserved": 28,
+  "source_count": 8,
+  "runtime_tests": "not run; no runtime/compiler changes",
+  "database_connections": "none",
+  "implementation": "not authorized or performed",
+  "formal_models": "not created or checked",
+  "agent_and_performance_measurements": null,
+  "snapshot_sha256": "91ab6c4822ca951e83a29d7a6216fffb569f57a7cb96b8c639651294076e33c2"
+}

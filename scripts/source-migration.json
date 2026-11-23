@@ -1,0 +1,573 @@
+{
+  "format": "lobo-source-migration/1",
+  "language": "core/1.2",
+  "files": [
+    {
+      "path": "examples/actions.lobo",
+      "before_sha256": "21b5ca015de2773d1444e8c4d05b392d394f93dcb188227cabb97afe63f429b6",
+      "identities": [
+        "example.actions",
+        "example.actions.increment",
+        "example.actions.pipeline"
+      ],
+      "import_ids": []
+    },
+    {
+      "path": "examples/algorithms.lobo",
+      "before_sha256": "e33036cb366ef473fc310b7075fbc2282e275df70d7324d05bcb4c4106d461e3",
+      "identities": [
+        "example.algorithms",
+        "example.gcd",
+        "example.factorial"
+      ],
+      "import_ids": []
+    },
+    {
+      "path": "examples/ast.lobo",
+      "before_sha256": "f2e57a59fdf82e0dfed0263c6d6b196a36a5d0ac90399eab20277594d0ae2d5e",
+      "identities": [
+        "example.ast",
+        "example.ast.node",
+        "example.ast.reduction",
+        "example.ast.rewrite",
+        "example.ast.evaluate",
+        "example.ast.evaluate_children",
+        "example.ast.reverse",
+        "example.ast.shift",
+        "example.ast.shift_children",
+        "example.ast.shifted_value"
+      ],
+      "import_ids": []
+    },
+    {
+      "path": "examples/collections.lobo",
+      "before_sha256": "ec09d1a67ff2ec5ff49625186f66009022b61b521e7454af0de3213afc3f5425",
+      "identities": [
+        "example.collections",
+        "example.collections.work",
+        "example.collections.invalid",
+        "example.collections.summary",
+        "example.collections.step",
+        "example.collections.selection",
+        "example.collections.select"
+      ],
+      "import_ids": [
+        "example.collections.reverse"
+      ]
+    },
+    {
+      "path": "examples/core.lobo",
+      "before_sha256": "4321f5ae582d55e0ef973f37f317d71b579834f4d9efe5b1959dbc4dd66f3b57",
+      "identities": [
+        "example.arithmetic",
+        "example.increment",
+        "example.absolute"
+      ],
+      "import_ids": []
+    },
+    {
+      "path": "examples/generic_data.lobo",
+      "before_sha256": "9f934d88d835d26266456dff9cb46ee362252880f5ec1429550db17cd419a1a7",
+      "identities": [
+        "example.generic_data",
+        "example.generic_data.box",
+        "example.generic_data.option",
+        "example.generic_data.identity",
+        "example.generic_data.apply",
+        "example.generic_data.main"
+      ],
+      "import_ids": []
+    },
+    {
+      "path": "examples/generics.lobo",
+      "before_sha256": "486f02c8f314d37ba9b5720474772b2782095ac656aa24eac418529f8ae3e28f",
+      "identities": [
+        "example.generics",
+        "example.generics.identity",
+        "example.generics.contains",
+        "example.generics.item",
+        "example.generics.number",
+        "example.generics.text",
+        "example.generics.echo",
+        "example.generics.has"
+      ],
+      "import_ids": []
+    },
+    {
+      "path": "examples/iteration.lobo",
+      "before_sha256": "607c4f77a46b94833eb7c8438647a5a6baf157f523b2cc791d2c2068bfbc67b0",
+      "identities": [
+        "example.iteration",
+        "example.sum",
+        "example.factorial.iterative"
+      ],
+      "import_ids": []
+    },
+    {
+      "path": "examples/modules/mirror.lobo",
+      "before_sha256": "0ead2d707083b30c4d4218759be38e2ab44010daacc0e3e81ec3537ce1fb0a49",
+      "identities": [
+        "example.modules.mirrored_app",
+        "example.modules.mirrored"
+      ],
+      "import_ids": [
+        "example.modules.reverse"
+      ]
+    },
+    {
+      "path": "examples/modules/reverse.lobo",
+      "before_sha256": "d42fd9670de9a6133452a020b9294e99e5df68f65103e3b4dacedd9bcad32e0f",
+      "identities": [
+        "example.modules.reversed_app",
+        "example.modules.reversed"
+      ],
+      "import_ids": [
+        "example.modules.reverse"
+      ]
+    },
+    {
+      "path": "examples/modules/sequences.lobo",
+      "before_sha256": "4d4b08d31f0dee8f65ee0025f5bd342425c62b1e8b2091f7ea31ba7cebe9e0ff",
+      "identities": [
+        "example.modules.sequences",
+        "example.modules.reverse"
+      ],
+      "import_ids": [
+        "example.collections.reverse"
+      ]
+    },
+    {
+      "path": "examples/operators.lobo",
+      "before_sha256": "a9e183449c31163674ab16c3e1e7fcb48799e290324a3e165dbc6569bffb6948",
+      "identities": [
+        "example.operators",
+        "example.operators.vec2",
+        "example.operators.add",
+        "example.operators.scale",
+        "example.operators.combined",
+        "example.operators.greeting"
+      ],
+      "import_ids": []
+    },
+    {
+      "path": "examples/parser.lobo",
+      "before_sha256": "a4e4fd24d51eb9cf610b1f0581158962202f048c4c5387873dcce5548adf4ea8",
+      "identities": [
+        "example.parser",
+        "example.parser.operator",
+        "example.parser.machine",
+        "example.parser.scanner",
+        "example.parser.error",
+        "example.parser.state",
+        "example.parser.reduction",
+        "example.parser.answer",
+        "example.parser.apply",
+        "example.parser.reducible",
+        "example.parser.reduce",
+        "example.parser.finish_number",
+        "example.parser.digit",
+        "example.parser.push_operator",
+        "example.parser.binary",
+        "example.parser.search",
+        "example.parser.has_open",
+        "example.parser.close",
+        "example.parser.delimiter",
+        "example.parser.scan",
+        "example.parser.finish",
+        "example.parser.evaluate"
+      ],
+      "import_ids": []
+    },
+    {
+      "path": "examples/records.lobo",
+      "before_sha256": "f9c61078b287890ae7764182f6a9146341ea4471f8c3717ce4922a50c8092d4e",
+      "identities": [
+        "example.records",
+        "example.records.pair",
+        "example.records.swap",
+        "example.records.gcd"
+      ],
+      "import_ids": []
+    },
+    {
+      "path": "examples/sequences.lobo",
+      "before_sha256": "dea6546640035a1a13831851309b7f0ab10c7a36151b76578eb16f7bf0c15384",
+      "identities": [
+        "example.sequences",
+        "example.collections.cursor",
+        "example.collections.reverse"
+      ],
+      "import_ids": []
+    },
+    {
+      "path": "examples/state_iteration.lobo",
+      "before_sha256": "5deb87b4edead36b4c594e430a5cc3e4c10adc4ac906302afc2769003a22abed",
+      "identities": [
+        "example.state_iteration",
+        "example.state_iteration.pair",
+        "example.state_iteration.search",
+        "example.state_iteration.gcd",
+        "example.state_iteration.find"
+      ],
+      "import_ids": []
+    },
+    {
+      "path": "examples/testing/checks.lobo",
+      "before_sha256": "eb27de19d105fcce9cd30682fe133b78cff1169f255fad8086c7c2d49a1bf112",
+      "identities": [
+        "example.testing.checks",
+        "example.testing.reverse_twice",
+        "example.testing.duplicate_count"
+      ],
+      "import_ids": [
+        "example.collections.reverse",
+        "example.tree.summarize"
+      ]
+    },
+    {
+      "path": "examples/text.lobo",
+      "before_sha256": "7d6c561755d3447d2b54c8e1c481f6dd8ab33dc957c4057f59b4dfb7c4b4d94c",
+      "identities": [
+        "example.text",
+        "example.text.decoded",
+        "example.text.frame",
+        "example.text.decode",
+        "example.text.greeting"
+      ],
+      "import_ids": []
+    },
+    {
+      "path": "examples/tree.lobo",
+      "before_sha256": "5b18b333ed29c500d68fd318ca30b422ab12d82c27afddc004343a2e692f4601",
+      "identities": [
+        "example.tree",
+        "example.tree.node",
+        "example.tree.optional_node",
+        "example.tree.tree",
+        "example.tree.lookup",
+        "example.tree.search",
+        "example.tree.build",
+        "example.tree.walk",
+        "example.tree.summary",
+        "example.tree.child",
+        "example.tree.insert",
+        "example.tree.build_tree",
+        "example.tree.reverse",
+        "example.tree.traverse",
+        "example.tree.summarize"
+      ],
+      "import_ids": [
+        "example.collections.reverse"
+      ]
+    },
+    {
+      "path": "examples/variants.lobo",
+      "before_sha256": "b7e47a5753281fe34efc9a10a91cd591d8cc50d8f7f39a9e480990dfb24b222b",
+      "identities": [
+        "example.variants",
+        "example.variants.quotient",
+        "example.variants.divide",
+        "example.variants.fallback"
+      ],
+      "import_ids": []
+    },
+    {
+      "path": "examples/web-server/app.lobo",
+      "before_sha256": "35bc3e7cce33585661b94d43c403637a506cd59603a8c7e3378ac3ae5e66997c",
+      "identities": [
+        "example.web",
+        "example.web.handle"
+      ],
+      "import_ids": [
+        "example.web.response",
+        "lobo.http.path_match",
+        "lobo.http.text_response",
+        "lobo.http.json_document",
+        "lobo.http.not_found",
+        "lobo.http.method_not_allowed",
+        "lobo.http.read_method",
+        "lobo.http.strip_prefix"
+      ]
+    },
+    {
+      "path": "libraries/http/http.lobo",
+      "before_sha256": "0abe60f6076436752ee25ff306a713dbe0fd8b27288c30aaa4dd6795655742f1",
+      "identities": [
+        "lobo.http.helpers",
+        "example.web.response",
+        "lobo.http.path_match",
+        "lobo.http.byte_cursor",
+        "lobo.http.text_response",
+        "lobo.http.json_document",
+        "lobo.http.not_found",
+        "lobo.http.method_not_allowed",
+        "lobo.http.read_method",
+        "lobo.http.strip_prefix",
+        "lobo.http.quote_byte",
+        "lobo.http.json_string"
+      ],
+      "import_ids": []
+    },
+    {
+      "path": "libraries/json/json.lobo",
+      "before_sha256": "5969b28672a3cdf07c2d99a7efb743468fd354562549e54c237d3af8855f405b",
+      "identities": [
+        "lobo.json.helpers",
+        "lobo.json.object_type",
+        "lobo.json.array_type",
+        "lobo.json.member",
+        "lobo.json.value",
+        "lobo.json.object",
+        "lobo.json.field",
+        "lobo.json.array",
+        "lobo.json.append",
+        "lobo.json.field_scan",
+        "lobo.json.has_key",
+        "lobo.json.unique_fields",
+        "lobo.json.skip_digits",
+        "lobo.json.is_number",
+        "lobo.json.number_token",
+        "lobo.json.digits",
+        "lobo.json.integer_text",
+        "lobo.json.task",
+        "lobo.json.encoding",
+        "lobo.json.array_schedule",
+        "lobo.json.object_schedule",
+        "lobo.json.flatten_state",
+        "lobo.json.array_tasks",
+        "lobo.json.object_tasks",
+        "lobo.json.flatten",
+        "lobo.json.stringify",
+        "lobo.json.response"
+      ],
+      "import_ids": [
+        "example.web.response",
+        "lobo.http.json_string",
+        "lobo.http.json_document"
+      ]
+    }
+  ],
+  "bundles": [
+    {
+      "root": "examples/actions.lobo",
+      "sources": [
+        "examples/actions.lobo"
+      ],
+      "program_sha256": "64a4ddef4ae66ffecc8585d3d41fa75a62369ee494ef7f20015d731ca1bbe9ee"
+    },
+    {
+      "root": "examples/algorithms.lobo",
+      "sources": [
+        "examples/algorithms.lobo"
+      ],
+      "program_sha256": "1525d2e8cf71fc5abd8fd44bc6d766c12bad4a577ea354ce0b006e639a688407"
+    },
+    {
+      "root": "examples/ast.lobo",
+      "sources": [
+        "examples/ast.lobo"
+      ],
+      "program_sha256": "ab7815a19c0e141451349a6bb57a6bec591cafcd68fa47be307be07928b9507a"
+    },
+    {
+      "root": "examples/collections.lobo",
+      "sources": [
+        "examples/collections.lobo",
+        "examples/sequences.lobo"
+      ],
+      "program_sha256": "6ad1c334f176f10c55ad578f86eda3e6480d612ca6026de9bee65d4cadb31306"
+    },
+    {
+      "root": "examples/core.lobo",
+      "sources": [
+        "examples/core.lobo"
+      ],
+      "program_sha256": "bace759274dd1501ee0729870287b40bb7e4cb5fdc36a09077863c7b04f46259"
+    },
+    {
+      "root": "examples/generic_data.lobo",
+      "sources": [
+        "examples/generic_data.lobo"
+      ],
+      "program_sha256": "33209c5fb53183be26325ee2c59295df59cfc25437a93b906b6142d7eed20bb9"
+    },
+    {
+      "root": "examples/generics.lobo",
+      "sources": [
+        "examples/generics.lobo"
+      ],
+      "program_sha256": "c7018400e6d8d6740ecb3e4e4adfac9c01f2402982691b6b32b00557cea86b6a"
+    },
+    {
+      "root": "examples/iteration.lobo",
+      "sources": [
+        "examples/iteration.lobo"
+      ],
+      "program_sha256": "802d5db2e75f4c2958fc2dc92d7c28a6e2d189fee27bb7713827e8bfe6b2d599"
+    },
+    {
+      "root": "examples/modules/mirror.lobo",
+      "sources": [
+        "examples/modules/mirror.lobo",
+        "examples/modules/sequences.lobo",
+        "examples/sequences.lobo"
+      ],
+      "program_sha256": "b3bdc9ff46732ff4b723e4e04e416bdc144251b3757cae1114b1b4e04514588a"
+    },
+    {
+      "root": "examples/modules/reverse.lobo",
+      "sources": [
+        "examples/modules/reverse.lobo",
+        "examples/modules/sequences.lobo",
+        "examples/sequences.lobo"
+      ],
+      "program_sha256": "ceff1466689e0d91b2c6ea3eea244c6d9f54fb6ddae6e5b85a00cb146c527819"
+    },
+    {
+      "root": "examples/modules/sequences.lobo",
+      "sources": [
+        "examples/modules/sequences.lobo",
+        "examples/sequences.lobo"
+      ],
+      "program_sha256": "4fbce0146a03135a80b3220c134e5ed7a0c5d7c20bc08c3916c86eb1794e0f98"
+    },
+    {
+      "root": "examples/operators.lobo",
+      "sources": [
+        "examples/operators.lobo"
+      ],
+      "program_sha256": "40153cda2589d33c22b5700b740085acec1f899989b899b246c333e5bf187647"
+    },
+    {
+      "root": "examples/parser.lobo",
+      "sources": [
+        "examples/parser.lobo"
+      ],
+      "program_sha256": "980bc4bc259d15796212102bb635730c3924c32fa4981e4df78e2b799fcc5d03"
+    },
+    {
+      "root": "examples/records.lobo",
+      "sources": [
+        "examples/records.lobo"
+      ],
+      "program_sha256": "ea9361b41d16734f138a543f5009a057603f46cf28964fb1e1f2f256461bb483"
+    },
+    {
+      "root": "examples/sequences.lobo",
+      "sources": [
+        "examples/sequences.lobo"
+      ],
+      "program_sha256": "51d52e4b748d5918c77b84ba65586ac7de7944e38de605bbb41858daf9fe4549"
+    },
+    {
+      "root": "examples/state_iteration.lobo",
+      "sources": [
+        "examples/state_iteration.lobo"
+      ],
+      "program_sha256": "956b7c9708d77b68b60b8df73331920dfc2c71f0ab23d33b78d9f817ea48cee2"
+    },
+    {
+      "root": "examples/testing/checks.lobo",
+      "sources": [
+        "examples/testing/checks.lobo",
+        "examples/sequences.lobo",
+        "examples/tree.lobo"
+      ],
+      "program_sha256": "1a96c1467811b02a581eba932afd512b6eb2bb2bc22d90b2d09089c6e75cb84d"
+    },
+    {
+      "root": "examples/text.lobo",
+      "sources": [
+        "examples/text.lobo"
+      ],
+      "program_sha256": "bae3b0bfc1aa558168168b86fe1cf3ae3fd192ae0040b53aebcd46db57999f1c"
+    },
+    {
+      "root": "examples/tree.lobo",
+      "sources": [
+        "examples/tree.lobo",
+        "examples/sequences.lobo"
+      ],
+      "program_sha256": "652aaf36e6293dab176e905c7cc0296efec7c474515d80f8f640d554444f4c21"
+    },
+    {
+      "root": "examples/variants.lobo",
+      "sources": [
+        "examples/variants.lobo"
+      ],
+      "program_sha256": "85f0c275f208b97dc33f60b6e5c13e41647eb79e1c6987f75e6117580f517ea8"
+    },
+    {
+      "root": "examples/web-server/app.lobo",
+      "sources": [
+        "examples/web-server/app.lobo",
+        "libraries/http/http.lobo"
+      ],
+      "program_sha256": "541c3d1ffc181b367eb79e4c0b007f56f6eaf00f78ba98ea9602159b516c50cd"
+    },
+    {
+      "root": "libraries/http/http.lobo",
+      "sources": [
+        "libraries/http/http.lobo"
+      ],
+      "program_sha256": "386005e3d1067518b52fc8073206022d83eb58a46e4f31891a59dac8e7e94fb4"
+    },
+    {
+      "root": "libraries/json/json.lobo",
+      "sources": [
+        "libraries/json/json.lobo",
+        "libraries/http/http.lobo"
+      ],
+      "program_sha256": "07a56894fa691882635fad13d7b86a2cb5ca96b53b2fb146f9662aa8d90e5891"
+    }
+  ],
+  "session": {
+    "path": "examples/testing/agent-session.jsonl",
+    "before_sha256": "fdf3ded18088196b36164c78b5d1d58aec41262961bf2a8c99369103f3b9919f",
+    "embedded": [
+      {
+        "line": 1,
+        "index": 0,
+        "program_sha256": "3980574e84641e0b91631436e3dcc1ff1d3f65d4d14b6686c295f32398402041"
+      },
+      {
+        "line": 2,
+        "index": 0,
+        "program_sha256": "3980574e84641e0b91631436e3dcc1ff1d3f65d4d14b6686c295f32398402041"
+      },
+      {
+        "line": 3,
+        "index": 0,
+        "program_sha256": "104a180682b15c8c85da7288b6628f7d967271a29259f224e3f2c9c3b3fca9b5"
+      }
+    ]
+  },
+  "excluded": [
+    "examples/v1/**",
+    "examples/mvc.lobo",
+    "examples/mvc.compact.lobo",
+    "examples/transfer.lobo",
+    "examples/agent-session.jsonl",
+    "benchmarks/**",
+    "research/**",
+    "spec/**",
+    "dist/**"
+  ],
+  "frozen_study_sources": [
+    {
+      "path": "benchmarks/fixtures/repair-study/collections.lobo",
+      "sha256": "ec09d1a67ff2ec5ff49625186f66009022b61b521e7454af0de3213afc3f5425",
+      "original_path": "examples/collections.lobo"
+    },
+    {
+      "path": "benchmarks/fixtures/repair-study/tree.lobo",
+      "sha256": "5b18b333ed29c500d68fd318ca30b422ab12d82c27afddc004343a2e692f4601",
+      "original_path": "examples/tree.lobo"
+    },
+    {
+      "path": "benchmarks/fixtures/repair-study/sequences.lobo",
+      "sha256": "dea6546640035a1a13831851309b7f0ab10c7a36151b76578eb16f7bf0c15384",
+      "original_path": "examples/sequences.lobo"
+    }
+  ]
+}

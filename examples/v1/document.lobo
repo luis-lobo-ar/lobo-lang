@@ -1,0 +1,5 @@
+module document_app @id("v1.doc.app.module");
+import Document @id("v1.doc.document"); import Report @id("v1.doc.report");
+import DocError @id("v1.doc.error"); import Result @id("v1.result");
+import process @id("v1.doc.process");
+function run @id("v1.doc.run")(document: Document) -> Result<Report,DocError> { process(document) }

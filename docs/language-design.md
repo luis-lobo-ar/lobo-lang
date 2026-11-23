@@ -2,8 +2,13 @@
 
 Status: semantic sketch. Example syntax is illustrative and non-normative.
 
-The proposed [Core v0.1 specification](../spec/core-v0.1.md) defines the initial executable subset. It takes
-precedence over the sketches here for Core behavior. Richer examples in this document remain future designs.
+The [language 1.7 specification](../spec/core-v1.7.md), inheriting the earlier rules, defines current experimental
+behavior. Language 1.0 added generic data, parametric definition checking and pure function references.
+Language 1.1 adds typed operator bindings and Text concatenation. These specifications take precedence over
+the sketches here. Language 1.3 accepts modern source with managed identity sidecars. Inline tables and deprecated older source remain readable.
+Language 1.7 adds the closed native capability/OS catalog. Richer resource-handling examples below remain future designs. Action clauses and static call bounds
+are implemented, as are bounded immutable records/variants, persistent lists, UTF-8 text/bytes, and exhaustive matches. User-declared variants can
+carry typed failures; labels do not execute host operations or grant authority.
 
 ## Design center
 
@@ -22,12 +27,12 @@ bootstrapping—not because lines and columns define program identity.
 
 ## Semantic entities
 
-The initial core consists of:
+The proposed wider language includes:
 
 - primitive, record, enum, collection, and function types;
 - components and functions;
 - contracts: `requires`, `ensures`, and invariants;
-- declared effects and capabilities;
+- declared actions and capabilities;
 - state machines and legal transitions;
 - examples and universally quantified properties;
 - resource limits;
@@ -62,7 +67,7 @@ component TransferFunds @id("finance.transfer.v1") {
     result.amount == amount
   }
 
-  effects {
+  actions {
     read ledger.accounts(from, to)
     write ledger.accounts(from, to)
     emit TransferCompleted
@@ -104,22 +109,39 @@ ensures response.latency <= 100.ms
 
 These are different claims and must remain distinguishable.
 
-## Effects and capabilities
+## Actions, capabilities, and limits
 
-Functions are pure unless they declare effects. Effects describe behavior; capabilities grant authority. Declaring
-`network.request` does not itself authorize network access.
+Lobo calls possible resource interactions **actions**. This replaces the earlier term "effects"; see
+[decision 0012](../decisions/0012-actions-terminology.md). It changes vocabulary, not authority.
+
+- Actions describe what a function might do, including through functions it calls.
+- Capabilities supply authority over particular resources; declaring an action grants nothing.
+- Limits constrain execution and resource use, enforced by the host rather than by annotations alone.
+
+In Core v0.3, functions without declared actions have pure bounds. The compiler checks every call edge against
+its declaration and keeps contracts pure. In the wider proposal, capability requirements are passed as narrow, opaque resource
+handles, not acquired through imports or a global context object. For example, this future syntax is illustrative:
 
 ```lobo
-effects {
-  read clock
-  request network.host("risk.internal")
+function download @id("example.download")(
+  client: HttpGet,
+  url: Url
+) -> Result<Bytes, HttpError>
+actions { http.request }
+{
+  http_get(client, url)
 }
-
-run with capability RiskService.Read
 ```
 
-Capability scopes must be attenuable. A caller may pass a narrower grant but cannot manufacture a broader one.
-Time, randomness, environment variables, and process execution are effects—not invisible runtime facilities.
+The host supplies `client` with a destination scope and limits. A program cannot construct authority by creating
+an ordinary record or writing `actions { http.request }`. A caller may delegate a narrower grant but cannot
+manufacture a broader one; delegation must not reset shared quotas. Time, randomness, environment variables,
+and process execution are actions too, not invisible runtime facilities.
+
+Static label/call checking is specified in [Core v0.3](../spec/core-v0.3.md). Host-operation resolution, handle
+ownership/lifetimes, scope enforcement, quota accounting, revocation, and failures still need specifications
+and fixtures before implementation. Core has no resource handles or host operations; `actions` is contextual
+in signatures and remains an ordinary identifier elsewhere.
 
 ## Errors
 
@@ -148,7 +170,7 @@ machine TransferLifecycle for Transfer {
 }
 ```
 
-Persistence and transactions are effects of an implementation; the state machine defines permitted behavior.
+Persistence and transactions are actions of an implementation; the state machine defines permitted behavior.
 
 ## Typed holes
 
@@ -158,12 +180,12 @@ Incomplete work is explicit and cannot masquerade as a complete program:
 run {
   ?implementation(
     must_satisfy: [ledger_conservation, idempotent_by(request.id)],
-    allowed_effects: [Ledger.Read, Ledger.Write]
+    allowed_actions: [Ledger.Read, Ledger.Write]
   )
 }
 ```
 
-A hole carries expected type, constraints, permitted effects, and blocking status. Production builds reject holes
+A hole carries expected type, constraints, permitted actions, and blocking status. Production builds reject holes
 unless a policy explicitly permits a declared fallback.
 
 ## Identity and references
@@ -183,6 +205,6 @@ observable semantics must follow a declared concurrency model.
 ## Concurrency position
 
 The first language subset should be sequential. Concurrency will require explicit task ownership, cancellation,
-deadlines, communication, and effect ordering. It should not be added as syntactic sugar over an unspecified
+deadlines, communication, and action ordering. It should not be added as syntactic sugar over an unspecified
 memory model.
 

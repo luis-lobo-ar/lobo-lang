@@ -1,0 +1,129 @@
+module native_io;
+
+variant IoError { Denied, InvalidInput, InvalidHandle, WrongKind, Closed, TimedOut, WouldBlock, ConnectionRefused, AddressInUse, OsFailure, LimitExceeded, Unknown(I64) }
+variant IoResult<T> { Ok(T), Err(IoError) }
+
+fn from_error_code(code:I64)->IoError {
+  if code == 1 { Denied } else { if code == 2 { InvalidInput } else { if code == 3 { InvalidHandle } else { if code == 4 { WrongKind } else { if code == 5 { Closed } else { if code == 6 { TimedOut } else { if code == 7 { WouldBlock } else { if code == 8 { ConnectionRefused } else { if code == 9 { AddressInUse } else { if code == 10 { OsFailure } else { if code == 11 { LimitExceeded } else { Unknown(code) } } } } } } } } } } }
+}
+
+fn to_error_code(error:IoError)->I64 {
+  match error {
+    Denied => 1,
+    InvalidInput => 2,
+    InvalidHandle => 3,
+    WrongKind => 4,
+    Closed => 5,
+    TimedOut => 6,
+    WouldBlock => 7,
+    ConnectionRefused => 8,
+    AddressInUse => 9,
+    OsFailure => 10,
+    LimitExceeded => 11,
+    Unknown(code) => code
+  }
+}
+
+fn restrict_capability(cap:Native::Capability, mask:I64)->IoResult<Native::Capability> actions {native.authorize} {
+  match Native::restrict_capability(cap,mask) {
+    Ok(value) => Ok(value),
+    Err(code) => Err(from_error_code(code))
+  }
+}
+
+fn monotonic_ms(cap:Native::Capability)->IoResult<I64> actions {clock.read} {
+  match Native::monotonic_ms(cap) {
+    Ok(value) => Ok(value),
+    Err(code) => Err(from_error_code(code))
+  }
+}
+
+fn random_bytes(cap:Native::Capability, count:I64)->IoResult<Bytes> actions {random.read} {
+  match Native::random_bytes(cap,count) {
+    Ok(value) => Ok(value),
+    Err(code) => Err(from_error_code(code))
+  }
+}
+
+fn listen(cap:Native::Capability, port_number:I64)->IoResult<Native::Listener> actions {net.listen} {
+  match Native::listen(cap,port_number) {
+    Ok(value) => Ok(value),
+    Err(code) => Err(from_error_code(code))
+  }
+}
+
+fn connect(cap:Native::Capability, port_number:I64, timeout_ms:I64)->IoResult<Native::Stream> actions {net.connect} {
+  match Native::connect(cap,port_number,timeout_ms) {
+    Ok(value) => Ok(value),
+    Err(code) => Err(from_error_code(code))
+  }
+}
+
+fn accept(listener:Native::Listener, timeout_ms:I64)->IoResult<Native::Stream> actions {net.accept} {
+  match Native::accept(listener,timeout_ms) {
+    Ok(value) => Ok(value),
+    Err(code) => Err(from_error_code(code))
+  }
+}
+
+fn port(listener:Native::Listener)->IoResult<I64> actions {net.inspect} {
+  match Native::port(listener) {
+    Ok(value) => Ok(value),
+    Err(code) => Err(from_error_code(code))
+  }
+}
+
+fn read(stream:Native::Stream, count:I64, timeout_ms:I64)->IoResult<Bytes> actions {net.read} {
+  match Native::read(stream,count,timeout_ms) {
+    Ok(value) => Ok(value),
+    Err(code) => Err(from_error_code(code))
+  }
+}
+
+fn write(stream:Native::Stream, data:Bytes, timeout_ms:I64)->IoResult<I64> actions {net.write} {
+  match Native::write(stream,data,timeout_ms) {
+    Ok(value) => Ok(value),
+    Err(code) => Err(from_error_code(code))
+  }
+}
+
+fn shutdown_write(stream:Native::Stream)->IoResult<Bool> actions {net.write} {
+  match Native::shutdown_write(stream) {
+    Ok(value) => Ok(value),
+    Err(code) => Err(from_error_code(code))
+  }
+}
+
+fn close_listener(listener:Native::Listener)->IoResult<Bool> actions {net.close} {
+  match Native::close_listener(listener) {
+    Ok(value) => Ok(value),
+    Err(code) => Err(from_error_code(code))
+  }
+}
+
+fn close_stream(stream:Native::Stream)->IoResult<Bool> actions {net.close} {
+  match Native::close_stream(stream) {
+    Ok(value) => Ok(value),
+    Err(code) => Err(from_error_code(code))
+  }
+}
+
+identities {
+  module: "lobo.os",
+  IoError: "lobo.os.error",
+  IoResult: "lobo.os.result",
+  from_error_code: "lobo.os.from_error_code",
+  to_error_code: "lobo.os.to_error_code",
+  restrict_capability: "lobo.os.restrict_capability",
+  monotonic_ms: "lobo.os.monotonic_ms",
+  random_bytes: "lobo.os.random_bytes",
+  listen: "lobo.os.listen",
+  connect: "lobo.os.connect",
+  accept: "lobo.os.accept",
+  port: "lobo.os.port",
+  read: "lobo.os.read",
+  write: "lobo.os.write",
+  shutdown_write: "lobo.os.shutdown_write",
+  close_listener: "lobo.os.close_listener",
+  close_stream: "lobo.os.close_stream"
+}

@@ -1,0 +1,37 @@
+module web;
+
+use deps { Response, PathMatch, text_response, json_document, not_found, method_not_allowed, read_method, strip_prefix };
+
+fn handle(method: Text, path: Text) -> Response {
+  if !read_method(method) {
+    method_not_allowed()
+  } else {
+    if path == "/" {
+      text_response(200,"Hello from native Lobo!\n")
+    } else {
+      if path == "/health" {
+        json_document(200,"{\"status\":\"ok\",\"language\":\"lobo\"}\n")
+      } else {
+        match strip_prefix(path,"/greet/") {
+          NoMatch => not_found(),
+          Matched(name) => if Bytes::length(Text::bytes(name)) == 0 { not_found() } else {
+            text_response(200,"Hello, " + (name + "!\n"))
+          }
+        }
+      }
+    }
+  }
+}
+
+identities {
+  module: "example.web",
+  deps.Response: "example.web.response",
+  deps.PathMatch: "lobo.http.path_match",
+  deps.text_response: "lobo.http.text_response",
+  deps.json_document: "lobo.http.json_document",
+  deps.not_found: "lobo.http.not_found",
+  deps.method_not_allowed: "lobo.http.method_not_allowed",
+  deps.read_method: "lobo.http.read_method",
+  deps.strip_prefix: "lobo.http.strip_prefix",
+  handle: "example.web.handle"
+}

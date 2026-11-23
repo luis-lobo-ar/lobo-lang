@@ -1,0 +1,1714 @@
+{
+  "format": "lobo-windows-snapshot-result/0.1",
+  "date": "2026-11-22",
+  "status": "passed",
+  "compiler": "1.7.2",
+  "extension": "1.7.2",
+  "language": "core/1.7",
+  "native_abi": 1,
+  "target": "Windows 10/11 x64",
+  "same_lobo_program": true,
+  "application_source_sha256": "ca72962383d1ac394c4ae911731bbdfd2d2b0095b7e6de05f1c7f077332e1612",
+  "identity_sidecar_sha256": "90c3f11bc8665b64d85690e03cb17d55b7290bb2fe25ff00d949d2ccf994369b",
+  "artifacts": {
+    "LoboSnapshot.exe": {
+      "path": "dist/windows-snapshot-1.7.2/LoboSnapshot.exe",
+      "bytes": 48640,
+      "sha256": "7b7bb92825d2ce980cbbf3d7902158a8ee84841ba1c1bd8d6b158f7cdf36b62a"
+    },
+    "LoboSnapshot-windows-x64.zip": {
+      "path": "dist/windows-snapshot-1.7.2/LoboSnapshot-windows-x64.zip",
+      "bytes": 43107,
+      "sha256": "8421a6c2bf07123b68a01e4fb2332c65f103c627e7423f6c28682b1a08e9ac6f"
+    }
+  },
+  "build": {
+    "format": "lobo-windows-snapshot-build/0.1",
+    "target": "Windows 10/11 x64",
+    "application_source": "examples/native/snapshot.lobo",
+    "standalone": true,
+    "default_launch_grants": [
+      "clock",
+      "random"
+    ],
+    "unsupported": [
+      "networking",
+      "full native Windows compiler distribution"
+    ],
+    "dll_imports": [
+      "bcrypt.dll",
+      "api-ms-win-crt-stdio-l1-1-0.dll",
+      "api-ms-win-crt-runtime-l1-1-0.dll",
+      "api-ms-win-crt-locale-l1-1-0.dll",
+      "api-ms-win-crt-heap-l1-1-0.dll",
+      "api-ms-win-crt-private-l1-1-0.dll",
+      "api-ms-win-crt-string-l1-1-0.dll",
+      "api-ms-win-crt-convert-l1-1-0.dll",
+      "KERNEL32.dll",
+      "api-ms-win-crt-filesystem-l1-1-0.dll",
+      "api-ms-win-crt-math-l1-1-0.dll",
+      "api-ms-win-crt-environment-l1-1-0.dll"
+    ],
+    "executable": {
+      "path": "/home/luis/dev/lobo-ar/lobo-lang/dist/windows-snapshot-1.7.2/LoboSnapshot.exe",
+      "bytes": 48640,
+      "sha256": "7b7bb92825d2ce980cbbf3d7902158a8ee84841ba1c1bd8d6b158f7cdf36b62a"
+    },
+    "compiler_sha256": "89bf3e299488f330765e1eb437fbf10958f6f0eaa31753159a2579f3f453f4d9",
+    "provider_sha256": "6cb7589f48a8853eebdbb46f04dcba84936a64fe1864c6ab27ff9280228f9076",
+    "commands": [
+      {
+        "command": [
+          "/home/luis/dev/lobo-ar/lobo-lang/target/release/lobo",
+          "compile",
+          "/home/luis/dev/lobo-ar/lobo-lang/examples/native/snapshot.lobo",
+          "--source",
+          "/home/luis/dev/lobo-ar/lobo-lang/libraries/native/native.lobo",
+          "--emit",
+          "c",
+          "-o",
+          "/home/luis/dev/lobo-ar/lobo-lang/dist/windows-snapshot-1.7.2/snapshot.generated.c"
+        ],
+        "exit_code": 0,
+        "stdout": "{\"artifact\":\"/home/luis/dev/lobo-ar/lobo-lang/dist/windows-snapshot-1.7.2/snapshot.generated.c\",\"entries\":[\"lobo.os.from_error_code\",\"lobo.os.to_error_code\",\"lobo.os.restrict_capability\",\"lobo.os.monotonic_ms\",\"lobo.os.random_bytes\",\"lobo.os.listen\",\"lobo.os.connect\",\"lobo.os.accept\",\"lobo.os.port\",\"lobo.os.read\",\"lobo.os.write\",\"lobo.os.shutdown_write\",\"lobo.os.close_listener\",\"lobo.os.close_stream\",\"native.snapshot.main\"],\"format\":\"c\",\"status\":\"ok\"}\n",
+        "stderr": ""
+      },
+      {
+        "command": [
+          "/home/luis/dev/lobo-ar/lobo-lang/target/windows-snapshot/llvm-mingw-20261117-ucrt-ubuntu-22.04-x86_64/bin/x86_64-w64-mingw32-clang",
+          "-std=c11",
+          "-O3",
+          "-g0",
+          "-ffunction-sections",
+          "-fdata-sections",
+          "-D_WIN32_WINNT=0x0A00",
+          "-Dmain=lobo_generated_main",
+          "-c",
+          "/home/luis/dev/lobo-ar/lobo-lang/dist/windows-snapshot-1.7.2/snapshot.generated.c",
+          "-o",
+          "/home/luis/dev/lobo-ar/lobo-lang/dist/windows-snapshot-1.7.2/snapshot.o"
+        ],
+        "exit_code": 0,
+        "stdout": "",
+        "stderr": ""
+      },
+      {
+        "command": [
+          "/home/luis/dev/lobo-ar/lobo-lang/target/windows-snapshot/llvm-mingw-20261117-ucrt-ubuntu-22.04-x86_64/bin/x86_64-w64-mingw32-clang",
+          "-std=c11",
+          "-O3",
+          "-g0",
+          "-ffunction-sections",
+          "-fdata-sections",
+          "-D_WIN32_WINNT=0x0A00",
+          "/home/luis/dev/lobo-ar/lobo-lang/examples/native/windows/launcher.c",
+          "/home/luis/dev/lobo-ar/lobo-lang/dist/windows-snapshot-1.7.2/snapshot.o",
+          "-static",
+          "-lbcrypt",
+          "-Wl,--gc-sections",
+          "-Wl,-s",
+          "-o",
+          "/home/luis/dev/lobo-ar/lobo-lang/dist/windows-snapshot-1.7.2/LoboSnapshot.exe"
+        ],
+        "exit_code": 0,
+        "stdout": "",
+        "stderr": ""
+      },
+      {
+        "command": [
+          "/home/luis/dev/lobo-ar/lobo-lang/target/windows-snapshot/llvm-mingw-20261117-ucrt-ubuntu-22.04-x86_64/bin/llvm-readobj",
+          "--coff-imports",
+          "/home/luis/dev/lobo-ar/lobo-lang/dist/windows-snapshot-1.7.2/LoboSnapshot.exe"
+        ],
+        "exit_code": 0,
+        "stdout": "\nFile: /home/luis/dev/lobo-ar/lobo-lang/dist/windows-snapshot-1.7.2/LoboSnapshot.exe\nFormat: COFF-x86-64\nArch: x86_64\nAddressSize: 64bit\nImport {\n  Name: bcrypt.dll\n  ImportLookupTableRVA: 0xB810\n  ImportAddressTableRVA: 0xBA58\n  Symbol: BCryptGenRandom (0)\n}\nImport {\n  Name: api-ms-win-crt-stdio-l1-1-0.dll\n  ImportLookupTableRVA: 0xB820\n  ImportAddressTableRVA: 0xBA68\n  Symbol: __acrt_iob_func (0)\n  Symbol: __p__commode (0)\n  Symbol: __p__fmode (0)\n  Symbol: __stdio_common_vfprintf (0)\n  Symbol: fflush (0)\n  Symbol: fputc (0)\n  Symbol: fwrite (0)\n  Symbol: getchar (0)\n  Symbol: setvbuf (0)\n}\nImport {\n  Name: api-ms-win-crt-runtime-l1-1-0.dll\n  ImportLookupTableRVA: 0xB870\n  ImportAddressTableRVA: 0xBAB8\n  Symbol: __p___argc (0)\n  Symbol: __p___argv (0)\n  Symbol: _cexit (0)\n  Symbol: _configure_narrow_argv (0)\n  Symbol: _crt_atexit (0)\n  Symbol: _errno (0)\n  Symbol: _exit (0)\n  Symbol: _fpreset (0)\n  Symbol: _initialize_narrow_environment (0)\n  Symbol: _initterm (0)\n  Symbol: _initterm_e (0)\n  Symbol: _seh_filter_exe (0)\n  Symbol: _set_app_type (0)\n  Symbol: _set_invalid_parameter_handler (0)\n  Symbol: abort (0)\n  Symbol: exit (0)\n  Symbol: strerror (0)\n}\nImport {\n  Name: api-ms-win-crt-locale-l1-1-0.dll\n  ImportLookupTableRVA: 0xB900\n  ImportAddressTableRVA: 0xBB48\n  Symbol: _configthreadlocale (0)\n  Symbol: localeconv (0)\n}\nImport {\n  Name: api-ms-win-crt-heap-l1-1-0.dll\n  ImportLookupTableRVA: 0xB918\n  ImportAddressTableRVA: 0xBB60\n  Symbol: _set_new_mode (0)\n  Symbol: calloc (0)\n  Symbol: free (0)\n  Symbol: malloc (0)\n}\nImport {\n  Name: api-ms-win-crt-private-l1-1-0.dll\n  ImportLookupTableRVA: 0xB940\n  ImportAddressTableRVA: 0xBB88\n  Symbol: memcpy (0)\n  Symbol: strchr (0)\n}\nImport {\n  Name: api-ms-win-crt-string-l1-1-0.dll\n  ImportLookupTableRVA: 0xB958\n  ImportAddressTableRVA: 0xBBA0\n  Symbol: strcmp (0)\n  Symbol: strlen (0)\n  Symbol: strncmp (0)\n  Symbol: strnlen (0)\n  Symbol: wcslen (0)\n  Symbol: wcsnlen (0)\n}\nImport {\n  Name: api-ms-win-crt-convert-l1-1-0.dll\n  ImportLookupTableRVA: 0xB990\n  ImportAddressTableRVA: 0xBBD8\n  Symbol: mbrtowc (0)\n  Symbol: strtoll (0)\n  Symbol: strtoull (0)\n  Symbol: wcrtomb (0)\n}\nImport {\n  Name: KERNEL32.dll\n  ImportLookupTableRVA: 0xB9B8\n  ImportAddressTableRVA: 0xBC00\n  Symbol: DeleteCriticalSection (0)\n  Symbol: EnterCriticalSection (0)\n  Symbol: GetConsoleMode (0)\n  Symbol: GetLastError (0)\n  Symbol: GetStdHandle (0)\n  Symbol: GetTickCount64 (0)\n  Symbol: InitializeCriticalSection (0)\n  Symbol: LeaveCriticalSection (0)\n  Symbol: SetUnhandledExceptionFilter (0)\n  Symbol: Sleep (0)\n  Symbol: VirtualProtect (0)\n  Symbol: VirtualQuery (0)\n}\nImport {\n  Name: api-ms-win-crt-filesystem-l1-1-0.dll\n  ImportLookupTableRVA: 0xBA20\n  ImportAddressTableRVA: 0xBC68\n  Symbol: _lock_file (0)\n  Symbol: _unlock_file (0)\n}\nImport {\n  Name: api-ms-win-crt-math-l1-1-0.dll\n  ImportLookupTableRVA: 0xBA38\n  ImportAddressTableRVA: 0xBC80\n  Symbol: __setusermatherr (0)\n}\nImport {\n  Name: api-ms-win-crt-environment-l1-1-0.dll\n  ImportLookupTableRVA: 0xBA48\n  ImportAddressTableRVA: 0xBC90\n  Symbol: __p__environ (0)\n}\n",
+        "stderr": ""
+      }
+    ],
+    "actual_windows_execution": null
+  },
+  "windows_validation": {
+    "status": "pass",
+    "platform": "Wine Windows API compatibility layer, not actual Windows hardware",
+    "application_cases": 14,
+    "provider_cases": 10,
+    "permission_pairs": 64,
+    "actual_windows_execution": null,
+    "commands": [
+      {
+        "command": [
+          "wine",
+          "/home/luis/dev/lobo-ar/lobo-lang/dist/windows-snapshot-1.7.2/LoboSnapshot.exe"
+        ],
+        "exit_code": 0,
+        "stdout": "{\"status\":\"ok\",\"kind\":\"value\",\"value\":{\"type\":\"Variant\",\"value\":{\"id\":\"lobo.generic.type.c09c71e43c56183b079d77143d13711d\",\"case\":\"Ok\",\"payload\":{\"type\":\"Record\",\"value\":{\"id\":\"native.snapshot.value\",\"fields\":{\"monotonic_ms\":{\"type\":\"I64\",\"value\":\"1176671172\"},\"random_bytes\":{\"type\":\"Bytes\",\"value\":\"ac29bbea6af2f30b307ce099d4b597f1\"}}}}}}}\n",
+        "stderr": ""
+      },
+      {
+        "command": [
+          "wine",
+          "/home/luis/dev/lobo-ar/lobo-lang/dist/windows-snapshot-1.7.2/LoboSnapshot.exe",
+          "--no-pause"
+        ],
+        "exit_code": 0,
+        "stdout": "{\"status\":\"ok\",\"kind\":\"value\",\"value\":{\"type\":\"Variant\",\"value\":{\"id\":\"lobo.generic.type.c09c71e43c56183b079d77143d13711d\",\"case\":\"Ok\",\"payload\":{\"type\":\"Record\",\"value\":{\"id\":\"native.snapshot.value\",\"fields\":{\"monotonic_ms\":{\"type\":\"I64\",\"value\":\"1176673291\"},\"random_bytes\":{\"type\":\"Bytes\",\"value\":\"1d06701189cd90f50d9ce9ee16b7baa2\"}}}}}}}\n",
+        "stderr": ""
+      },
+      {
+        "command": [
+          "wine",
+          "/home/luis/dev/lobo-ar/lobo-lang/dist/windows-snapshot-1.7.2/LoboSnapshot.exe",
+          "--entry",
+          "native.snapshot.main"
+        ],
+        "exit_code": 0,
+        "stdout": "{\"status\":\"ok\",\"kind\":\"value\",\"value\":{\"type\":\"Variant\",\"value\":{\"id\":\"lobo.generic.type.c09c71e43c56183b079d77143d13711d\",\"case\":\"Err\",\"payload\":{\"type\":\"Variant\",\"value\":{\"id\":\"lobo.os.error\",\"case\":\"Denied\",\"payload\":null}}}}}\n",
+        "stderr": ""
+      },
+      {
+        "command": [
+          "wine",
+          "/home/luis/dev/lobo-ar/lobo-lang/dist/windows-snapshot-1.7.2/LoboSnapshot.exe",
+          "--entry",
+          "native.snapshot.main",
+          "--native-clock",
+          "true"
+        ],
+        "exit_code": 0,
+        "stdout": "{\"status\":\"ok\",\"kind\":\"value\",\"value\":{\"type\":\"Variant\",\"value\":{\"id\":\"lobo.generic.type.c09c71e43c56183b079d77143d13711d\",\"case\":\"Err\",\"payload\":{\"type\":\"Variant\",\"value\":{\"id\":\"lobo.os.error\",\"case\":\"Denied\",\"payload\":null}}}}}\n",
+        "stderr": ""
+      },
+      {
+        "command": [
+          "wine",
+          "/home/luis/dev/lobo-ar/lobo-lang/dist/windows-snapshot-1.7.2/LoboSnapshot.exe",
+          "--entry",
+          "native.snapshot.main",
+          "--native-random",
+          "true"
+        ],
+        "exit_code": 0,
+        "stdout": "{\"status\":\"ok\",\"kind\":\"value\",\"value\":{\"type\":\"Variant\",\"value\":{\"id\":\"lobo.generic.type.c09c71e43c56183b079d77143d13711d\",\"case\":\"Err\",\"payload\":{\"type\":\"Variant\",\"value\":{\"id\":\"lobo.os.error\",\"case\":\"Denied\",\"payload\":null}}}}}\n",
+        "stderr": ""
+      },
+      {
+        "command": [
+          "wine",
+          "/home/luis/dev/lobo-ar/lobo-lang/dist/windows-snapshot-1.7.2/LoboSnapshot.exe",
+          "--entry",
+          "native.snapshot.main",
+          "--native-clock",
+          "true",
+          "--native-random",
+          "true"
+        ],
+        "exit_code": 0,
+        "stdout": "{\"status\":\"ok\",\"kind\":\"value\",\"value\":{\"type\":\"Variant\",\"value\":{\"id\":\"lobo.generic.type.c09c71e43c56183b079d77143d13711d\",\"case\":\"Ok\",\"payload\":{\"type\":\"Record\",\"value\":{\"id\":\"native.snapshot.value\",\"fields\":{\"monotonic_ms\":{\"type\":\"I64\",\"value\":\"1176681750\"},\"random_bytes\":{\"type\":\"Bytes\",\"value\":\"958c323bc6f5ecfd1787dfe48dc7a090\"}}}}}}}\n",
+        "stderr": ""
+      },
+      {
+        "command": [
+          "wine",
+          "/home/luis/dev/lobo-ar/lobo-lang/dist/windows-snapshot-1.7.2/LoboSnapshot.exe",
+          "--entry",
+          "native.snapshot.main",
+          "--native-clock",
+          "true",
+          "--native-random",
+          "true",
+          "--native-bytes",
+          "0"
+        ],
+        "exit_code": 0,
+        "stdout": "{\"status\":\"ok\",\"kind\":\"value\",\"value\":{\"type\":\"Variant\",\"value\":{\"id\":\"lobo.generic.type.c09c71e43c56183b079d77143d13711d\",\"case\":\"Err\",\"payload\":{\"type\":\"Variant\",\"value\":{\"id\":\"lobo.os.error\",\"case\":\"LimitExceeded\",\"payload\":null}}}}}\n",
+        "stderr": ""
+      },
+      {
+        "command": [
+          "wine",
+          "/home/luis/dev/lobo-ar/lobo-lang/dist/windows-snapshot-1.7.2/LoboSnapshot.exe",
+          "--entry",
+          "native.snapshot.main",
+          "--native-clock",
+          "true",
+          "--native-random",
+          "true",
+          "--native-handles",
+          "1"
+        ],
+        "exit_code": 0,
+        "stdout": "{\"status\":\"ok\",\"kind\":\"value\",\"value\":{\"type\":\"Variant\",\"value\":{\"id\":\"lobo.generic.type.c09c71e43c56183b079d77143d13711d\",\"case\":\"Err\",\"payload\":{\"type\":\"Variant\",\"value\":{\"id\":\"lobo.os.error\",\"case\":\"LimitExceeded\",\"payload\":null}}}}}\n",
+        "stderr": ""
+      },
+      {
+        "command": [
+          "wine",
+          "/home/luis/dev/lobo-ar/lobo-lang/dist/windows-snapshot-1.7.2/LoboSnapshot.exe",
+          "--entry",
+          "native.snapshot.main",
+          "--native-clock",
+          "true",
+          "--native-random",
+          "true",
+          "--native-calls",
+          "1"
+        ],
+        "exit_code": 0,
+        "stdout": "{\"status\":\"ok\",\"kind\":\"value\",\"value\":{\"type\":\"Variant\",\"value\":{\"id\":\"lobo.generic.type.c09c71e43c56183b079d77143d13711d\",\"case\":\"Err\",\"payload\":{\"type\":\"Variant\",\"value\":{\"id\":\"lobo.os.error\",\"case\":\"LimitExceeded\",\"payload\":null}}}}}\n",
+        "stderr": ""
+      },
+      {
+        "command": [
+          "wine",
+          "/home/luis/dev/lobo-ar/lobo-lang/dist/windows-snapshot-1.7.2/LoboSnapshot.exe",
+          "--entry",
+          "native.snapshot.main",
+          "--native-clock",
+          "false"
+        ],
+        "exit_code": 1,
+        "stdout": "{\"status\":\"error\",\"kind\":\"invocation_error\",\"diagnostic\":{\"code\":\"invocation.cli.invalid\",\"phase\":\"invoke\"}}\n",
+        "stderr": ""
+      },
+      {
+        "command": [
+          "wine",
+          "/home/luis/dev/lobo-ar/lobo-lang/dist/windows-snapshot-1.7.2/LoboSnapshot.exe",
+          "--entry",
+          "native.snapshot.main",
+          "--native-calls",
+          "0"
+        ],
+        "exit_code": 1,
+        "stdout": "{\"status\":\"error\",\"kind\":\"invocation_error\",\"diagnostic\":{\"code\":\"invocation.cli.invalid\",\"phase\":\"invoke\"}}\n",
+        "stderr": ""
+      },
+      {
+        "command": [
+          "wine",
+          "/home/luis/dev/lobo-ar/lobo-lang/dist/windows-snapshot-1.7.2/LoboSnapshot.exe",
+          "--entry",
+          "native.snapshot.main",
+          "--native-clock",
+          "true",
+          "--native-clock",
+          "true"
+        ],
+        "exit_code": 1,
+        "stdout": "{\"status\":\"error\",\"kind\":\"invocation_error\",\"diagnostic\":{\"code\":\"invocation.cli.invalid\",\"phase\":\"invoke\"}}\n",
+        "stderr": ""
+      },
+      {
+        "command": [
+          "wine",
+          "/home/luis/dev/lobo-ar/lobo-lang/dist/windows-snapshot-1.7.2/LoboSnapshot.exe",
+          "--entry",
+          "native.snapshot.main",
+          "--native-listen",
+          "127.0.0.1:0"
+        ],
+        "exit_code": 1,
+        "stdout": "{\"status\":\"error\",\"kind\":\"invocation_error\",\"diagnostic\":{\"code\":\"invocation.cli.invalid\",\"phase\":\"invoke\"}}\n",
+        "stderr": ""
+      },
+      {
+        "command": [
+          "wine",
+          "/home/luis/dev/lobo-ar/lobo-lang/dist/windows-snapshot-1.7.2/LoboSnapshot.exe",
+          "--entry",
+          "native.snapshot.main",
+          "--native-handles",
+          "01"
+        ],
+        "exit_code": 1,
+        "stdout": "{\"status\":\"error\",\"kind\":\"invocation_error\",\"diagnostic\":{\"code\":\"invocation.cli.invalid\",\"phase\":\"invoke\"}}\n",
+        "stderr": ""
+      },
+      {
+        "command": [
+          "/home/luis/dev/lobo-ar/lobo-lang/target/windows-snapshot/llvm-mingw-20261117-ucrt-ubuntu-22.04-x86_64/bin/x86_64-w64-mingw32-clang",
+          "-std=c11",
+          "-O2",
+          "-I",
+          "/home/luis/dev/lobo-ar/lobo-lang/src",
+          "/home/luis/dev/lobo-ar/lobo-lang/tests/native/windows_snapshot_harness.c",
+          "-static",
+          "-lbcrypt",
+          "-o",
+          "/home/luis/dev/lobo-ar/lobo-lang/target/windows-snapshot/tests-shipped/provider-tests.exe"
+        ],
+        "exit_code": 0,
+        "stdout": "",
+        "stderr": ""
+      },
+      {
+        "command": [
+          "wine",
+          "/home/luis/dev/lobo-ar/lobo-lang/target/windows-snapshot/tests-shipped/provider-tests.exe",
+          "matrix"
+        ],
+        "exit_code": 0,
+        "stdout": "windows-provider-case-passed\n",
+        "stderr": ""
+      },
+      {
+        "command": [
+          "wine",
+          "/home/luis/dev/lobo-ar/lobo-lang/target/windows-snapshot/tests-shipped/provider-tests.exe",
+          "deny"
+        ],
+        "exit_code": 0,
+        "stdout": "windows-provider-case-passed\n",
+        "stderr": ""
+      },
+      {
+        "command": [
+          "wine",
+          "/home/luis/dev/lobo-ar/lobo-lang/target/windows-snapshot/tests-shipped/provider-tests.exe",
+          "bounds"
+        ],
+        "exit_code": 0,
+        "stdout": "windows-provider-case-passed\n",
+        "stderr": ""
+      },
+      {
+        "command": [
+          "wine",
+          "/home/luis/dev/lobo-ar/lobo-lang/target/windows-snapshot/tests-shipped/provider-tests.exe",
+          "quotas"
+        ],
+        "exit_code": 0,
+        "stdout": "windows-provider-case-passed\n",
+        "stderr": ""
+      },
+      {
+        "command": [
+          "wine",
+          "/home/luis/dev/lobo-ar/lobo-lang/target/windows-snapshot/tests-shipped/provider-tests.exe",
+          "rng-failure"
+        ],
+        "exit_code": 0,
+        "stdout": "windows-provider-case-passed\n",
+        "stderr": ""
+      },
+      {
+        "command": [
+          "wine",
+          "/home/luis/dev/lobo-ar/lobo-lang/target/windows-snapshot/tests-shipped/provider-tests.exe",
+          "clock-overflow"
+        ],
+        "exit_code": 0,
+        "stdout": "windows-provider-case-passed\n",
+        "stderr": ""
+      },
+      {
+        "command": [
+          "wine",
+          "/home/luis/dev/lobo-ar/lobo-lang/target/windows-snapshot/tests-shipped/provider-tests.exe",
+          "root-depth"
+        ],
+        "exit_code": 1,
+        "stdout": "{\"status\":\"error\",\"kind\":\"invocation_error\",\"diagnostic\":{\"code\":\"invocation.native.authority\",\"phase\":\"invoke\"}}\n",
+        "stderr": ""
+      },
+      {
+        "command": [
+          "wine",
+          "/home/luis/dev/lobo-ar/lobo-lang/target/windows-snapshot/tests-shipped/provider-tests.exe",
+          "unsupported"
+        ],
+        "exit_code": 1,
+        "stdout": "{\"status\":\"error\",\"kind\":\"invocation_error\",\"diagnostic\":{\"code\":\"invocation.native.operation_unsupported\",\"phase\":\"invoke\"}}\n",
+        "stderr": ""
+      },
+      {
+        "command": [
+          "wine",
+          "/home/luis/dev/lobo-ar/lobo-lang/target/windows-snapshot/tests-shipped/provider-tests.exe",
+          "fuel"
+        ],
+        "exit_code": 1,
+        "stdout": "{\"status\":\"error\",\"kind\":\"resource_exhausted\",\"diagnostic\":{\"code\":\"resource.fuel.exhausted\",\"phase\":\"invoke\"}}\n",
+        "stderr": ""
+      },
+      {
+        "command": [
+          "wine",
+          "/home/luis/dev/lobo-ar/lobo-lang/target/windows-snapshot/tests-shipped/provider-tests.exe",
+          "heap"
+        ],
+        "exit_code": 1,
+        "stdout": "{\"status\":\"error\",\"kind\":\"resource_exhausted\",\"diagnostic\":{\"code\":\"resource.memory.exhausted\",\"phase\":\"invoke\"}}\n",
+        "stderr": ""
+      }
+    ]
+  },
+  "actual_windows_execution": null,
+  "linux_models": {
+    "format": "lobo-native-model-check/0.1",
+    "status": "pass",
+    "tlc_jar_sha256": "936a262061c914694dfd669a543be24573c45d5aa0ff20a8b96b23d01e050e88",
+    "model_results": [
+      {
+        "name": "authority",
+        "status": "pass",
+        "expected_invariant": null,
+        "generated": 31141,
+        "distinct": 11991,
+        "queued": 0,
+        "trace_states": null,
+        "action_counts": {
+          "Init": {
+            "new_states": 1,
+            "successors": 1
+          },
+          "Root": {
+            "new_states": 1,
+            "successors": 4121
+          },
+          "Derive": {
+            "new_states": 2202,
+            "successors": 6320
+          },
+          "Allocate": {
+            "new_states": 230,
+            "successors": 884
+          },
+          "Use": {
+            "new_states": 1511,
+            "successors": 7400
+          },
+          "Release": {
+            "new_states": 294,
+            "successors": 1032
+          },
+          "Exit": {
+            "new_states": 4121,
+            "successors": 4121
+          },
+          "Finished": {
+            "new_states": 3631,
+            "successors": 3631
+          },
+          "Done": {
+            "new_states": 0,
+            "successors": 3631
+          }
+        }
+      },
+      {
+        "name": "operations",
+        "status": "pass",
+        "expected_invariant": null,
+        "generated": 3061,
+        "distinct": 1815,
+        "queued": 0,
+        "trace_states": null,
+        "action_counts": {
+          "Init": {
+            "new_states": 1,
+            "successors": 1
+          },
+          "Acquire": {
+            "new_states": 1,
+            "successors": 1
+          },
+          "Connect": {
+            "new_states": 18,
+            "successors": 18
+          },
+          "Validate": {
+            "new_states": 9,
+            "successors": 9
+          },
+          "RejectPeer": {
+            "new_states": 9,
+            "successors": 9
+          },
+          "StartIO": {
+            "new_states": 9,
+            "successors": 9
+          },
+          "BeginIO": {
+            "new_states": 273,
+            "successors": 534
+          },
+          "Retry": {
+            "new_states": 174,
+            "successors": 316
+          },
+          "Timeout": {
+            "new_states": 21,
+            "successors": 33
+          },
+          "Fault": {
+            "new_states": 202,
+            "successors": 284
+          },
+          "OsFailure": {
+            "new_states": 322,
+            "successors": 466
+          },
+          "Write": {
+            "new_states": 110,
+            "successors": 126
+          },
+          "Read": {
+            "new_states": 40,
+            "successors": 64
+          },
+          "Shutdown": {
+            "new_states": 50,
+            "successors": 50
+          },
+          "Eof": {
+            "new_states": 2,
+            "successors": 2
+          },
+          "QuotaFailure": {
+            "new_states": 9,
+            "successors": 9
+          },
+          "Cleanup": {
+            "new_states": 565,
+            "successors": 565
+          },
+          "Done": {
+            "new_states": 0,
+            "successors": 565
+          }
+        }
+      },
+      {
+        "name": "authority-root",
+        "status": "expected-counterexample",
+        "expected_invariant": "EntryAuthority",
+        "generated": 4,
+        "distinct": 3,
+        "queued": 1,
+        "trace_states": 2,
+        "action_counts": {
+          "Init": {
+            "new_states": 1,
+            "successors": 1
+          },
+          "Root": {
+            "new_states": 2,
+            "successors": 6
+          },
+          "Derive": {
+            "new_states": 0,
+            "successors": 0
+          },
+          "Allocate": {
+            "new_states": 0,
+            "successors": 0
+          },
+          "Use": {
+            "new_states": 0,
+            "successors": 0
+          },
+          "Release": {
+            "new_states": 0,
+            "successors": 0
+          },
+          "Exit": {
+            "new_states": 0,
+            "successors": 0
+          },
+          "Finished": {
+            "new_states": 0,
+            "successors": 0
+          },
+          "Done": {
+            "new_states": 0,
+            "successors": 0
+          }
+        }
+      },
+      {
+        "name": "authority-amplify",
+        "status": "expected-counterexample",
+        "expected_invariant": "NoAmplification",
+        "generated": 83,
+        "distinct": 46,
+        "queued": 41,
+        "trace_states": 4,
+        "action_counts": {
+          "Init": {
+            "new_states": 2,
+            "successors": 2
+          },
+          "Root": {
+            "new_states": 1,
+            "successors": 6
+          },
+          "Derive": {
+            "new_states": 36,
+            "successors": 80
+          },
+          "Allocate": {
+            "new_states": 4,
+            "successors": 4
+          },
+          "Use": {
+            "new_states": 1,
+            "successors": 1
+          },
+          "Release": {
+            "new_states": 0,
+            "successors": 0
+          },
+          "Exit": {
+            "new_states": 2,
+            "successors": 2
+          },
+          "Finished": {
+            "new_states": 1,
+            "successors": 1
+          },
+          "Done": {
+            "new_states": 0,
+            "successors": 0
+          }
+        }
+      },
+      {
+        "name": "authority-stale",
+        "status": "expected-counterexample",
+        "expected_invariant": "ValidGeneration",
+        "generated": 12362,
+        "distinct": 3942,
+        "queued": 2329,
+        "trace_states": 6,
+        "action_counts": {
+          "Init": {
+            "new_states": 2,
+            "successors": 2
+          },
+          "Root": {
+            "new_states": 1,
+            "successors": 1059
+          },
+          "Derive": {
+            "new_states": 1157,
+            "successors": 3163
+          },
+          "Allocate": {
+            "new_states": 148,
+            "successors": 439
+          },
+          "Use": {
+            "new_states": 1015,
+            "successors": 6018
+          },
+          "Release": {
+            "new_states": 114,
+            "successors": 226
+          },
+          "Exit": {
+            "new_states": 1053,
+            "successors": 1053
+          },
+          "Finished": {
+            "new_states": 453,
+            "successors": 453
+          },
+          "Done": {
+            "new_states": 0,
+            "successors": 34
+          }
+        }
+      },
+      {
+        "name": "authority-kind",
+        "status": "expected-counterexample",
+        "expected_invariant": "ValidKind",
+        "generated": 43,
+        "distinct": 41,
+        "queued": 38,
+        "trace_states": 3,
+        "action_counts": {
+          "Init": {
+            "new_states": 2,
+            "successors": 2
+          },
+          "Root": {
+            "new_states": 1,
+            "successors": 4
+          },
+          "Derive": {
+            "new_states": 32,
+            "successors": 64
+          },
+          "Allocate": {
+            "new_states": 4,
+            "successors": 8
+          },
+          "Use": {
+            "new_states": 2,
+            "successors": 6
+          },
+          "Release": {
+            "new_states": 0,
+            "successors": 0
+          },
+          "Exit": {
+            "new_states": 1,
+            "successors": 1
+          },
+          "Finished": {
+            "new_states": 0,
+            "successors": 0
+          },
+          "Done": {
+            "new_states": 0,
+            "successors": 0
+          }
+        }
+      },
+      {
+        "name": "authority-denied",
+        "status": "expected-counterexample",
+        "expected_invariant": "NoDeniedSyscall",
+        "generated": 68,
+        "distinct": 61,
+        "queued": 56,
+        "trace_states": 4,
+        "action_counts": {
+          "Init": {
+            "new_states": 2,
+            "successors": 2
+          },
+          "Root": {
+            "new_states": 1,
+            "successors": 6
+          },
+          "Derive": {
+            "new_states": 49,
+            "successors": 67
+          },
+          "Allocate": {
+            "new_states": 6,
+            "successors": 14
+          },
+          "Use": {
+            "new_states": 1,
+            "successors": 1
+          },
+          "Release": {
+            "new_states": 0,
+            "successors": 0
+          },
+          "Exit": {
+            "new_states": 2,
+            "successors": 2
+          },
+          "Finished": {
+            "new_states": 1,
+            "successors": 1
+          },
+          "Done": {
+            "new_states": 0,
+            "successors": 0
+          }
+        }
+      },
+      {
+        "name": "authority-quota",
+        "status": "expected-counterexample",
+        "expected_invariant": "WithinQuota",
+        "generated": 6,
+        "distinct": 4,
+        "queued": 1,
+        "trace_states": 3,
+        "action_counts": {
+          "Init": {
+            "new_states": 2,
+            "successors": 2
+          },
+          "Root": {
+            "new_states": 1,
+            "successors": 6
+          },
+          "Derive": {
+            "new_states": 1,
+            "successors": 2
+          },
+          "Allocate": {
+            "new_states": 0,
+            "successors": 0
+          },
+          "Use": {
+            "new_states": 0,
+            "successors": 0
+          },
+          "Release": {
+            "new_states": 0,
+            "successors": 0
+          },
+          "Exit": {
+            "new_states": 1,
+            "successors": 1
+          },
+          "Finished": {
+            "new_states": 0,
+            "successors": 0
+          },
+          "Done": {
+            "new_states": 0,
+            "successors": 0
+          }
+        }
+      },
+      {
+        "name": "authority-wrap",
+        "status": "expected-counterexample",
+        "expected_invariant": "NoGenerationWrap",
+        "generated": 9806,
+        "distinct": 4022,
+        "queued": 2393,
+        "trace_states": 6,
+        "action_counts": {
+          "Init": {
+            "new_states": 2,
+            "successors": 2
+          },
+          "Root": {
+            "new_states": 1,
+            "successors": 1075
+          },
+          "Derive": {
+            "new_states": 1221,
+            "successors": 3529
+          },
+          "Allocate": {
+            "new_states": 148,
+            "successors": 488
+          },
+          "Use": {
+            "new_states": 1014,
+            "successors": 3042
+          },
+          "Release": {
+            "new_states": 115,
+            "successors": 228
+          },
+          "Exit": {
+            "new_states": 1069,
+            "successors": 1069
+          },
+          "Finished": {
+            "new_states": 453,
+            "successors": 453
+          },
+          "Done": {
+            "new_states": 0,
+            "successors": 34
+          }
+        }
+      },
+      {
+        "name": "authority-cleanup",
+        "status": "expected-counterexample",
+        "expected_invariant": "ExitCloses",
+        "generated": 4430,
+        "distinct": 1632,
+        "queued": 1070,
+        "trace_states": 5,
+        "action_counts": {
+          "Init": {
+            "new_states": 2,
+            "successors": 2
+          },
+          "Root": {
+            "new_states": 1,
+            "successors": 528
+          },
+          "Derive": {
+            "new_states": 434,
+            "successors": 1572
+          },
+          "Allocate": {
+            "new_states": 74,
+            "successors": 217
+          },
+          "Use": {
+            "new_states": 523,
+            "successors": 1499
+          },
+          "Release": {
+            "new_states": 39,
+            "successors": 76
+          },
+          "Exit": {
+            "new_states": 525,
+            "successors": 526
+          },
+          "Finished": {
+            "new_states": 35,
+            "successors": 70
+          },
+          "Done": {
+            "new_states": 0,
+            "successors": 1
+          }
+        }
+      },
+      {
+        "name": "operations-untracked-fault",
+        "status": "expected-counterexample",
+        "expected_invariant": "ExitCloses",
+        "generated": 5,
+        "distinct": 5,
+        "queued": 1,
+        "trace_states": 4,
+        "action_counts": {
+          "Init": {
+            "new_states": 2,
+            "successors": 2
+          },
+          "Acquire": {
+            "new_states": 1,
+            "successors": 2
+          },
+          "Connect": {
+            "new_states": 0,
+            "successors": 0
+          },
+          "Validate": {
+            "new_states": 0,
+            "successors": 0
+          },
+          "RejectPeer": {
+            "new_states": 0,
+            "successors": 0
+          },
+          "StartIO": {
+            "new_states": 0,
+            "successors": 0
+          },
+          "BeginIO": {
+            "new_states": 0,
+            "successors": 0
+          },
+          "Retry": {
+            "new_states": 0,
+            "successors": 0
+          },
+          "Timeout": {
+            "new_states": 0,
+            "successors": 0
+          },
+          "Fault": {
+            "new_states": 1,
+            "successors": 2
+          },
+          "OsFailure": {
+            "new_states": 1,
+            "successors": 1
+          },
+          "Write": {
+            "new_states": 0,
+            "successors": 0
+          },
+          "Read": {
+            "new_states": 0,
+            "successors": 0
+          },
+          "Shutdown": {
+            "new_states": 0,
+            "successors": 0
+          },
+          "Eof": {
+            "new_states": 0,
+            "successors": 0
+          },
+          "QuotaFailure": {
+            "new_states": 0,
+            "successors": 0
+          },
+          "Cleanup": {
+            "new_states": 1,
+            "successors": 2
+          },
+          "Done": {
+            "new_states": 0,
+            "successors": 0
+          }
+        }
+      },
+      {
+        "name": "operations-publish",
+        "status": "expected-counterexample",
+        "expected_invariant": "ValidatedPublication",
+        "generated": 8,
+        "distinct": 8,
+        "queued": 4,
+        "trace_states": 4,
+        "action_counts": {
+          "Init": {
+            "new_states": 2,
+            "successors": 2
+          },
+          "Acquire": {
+            "new_states": 1,
+            "successors": 2
+          },
+          "Connect": {
+            "new_states": 2,
+            "successors": 3
+          },
+          "Validate": {
+            "new_states": 1,
+            "successors": 2
+          },
+          "RejectPeer": {
+            "new_states": 0,
+            "successors": 0
+          },
+          "StartIO": {
+            "new_states": 0,
+            "successors": 0
+          },
+          "BeginIO": {
+            "new_states": 0,
+            "successors": 0
+          },
+          "Retry": {
+            "new_states": 2,
+            "successors": 2
+          },
+          "Timeout": {
+            "new_states": 0,
+            "successors": 0
+          },
+          "Fault": {
+            "new_states": 0,
+            "successors": 0
+          },
+          "OsFailure": {
+            "new_states": 1,
+            "successors": 1
+          },
+          "Write": {
+            "new_states": 0,
+            "successors": 0
+          },
+          "Read": {
+            "new_states": 0,
+            "successors": 0
+          },
+          "Shutdown": {
+            "new_states": 0,
+            "successors": 0
+          },
+          "Eof": {
+            "new_states": 0,
+            "successors": 0
+          },
+          "QuotaFailure": {
+            "new_states": 0,
+            "successors": 0
+          },
+          "Cleanup": {
+            "new_states": 0,
+            "successors": 0
+          },
+          "Done": {
+            "new_states": 0,
+            "successors": 0
+          }
+        }
+      },
+      {
+        "name": "operations-deadline",
+        "status": "expected-counterexample",
+        "expected_invariant": "FixedDeadline",
+        "generated": 6,
+        "distinct": 6,
+        "queued": 3,
+        "trace_states": 3,
+        "action_counts": {
+          "Init": {
+            "new_states": 2,
+            "successors": 2
+          },
+          "Acquire": {
+            "new_states": 1,
+            "successors": 2
+          },
+          "Connect": {
+            "new_states": 2,
+            "successors": 4
+          },
+          "Validate": {
+            "new_states": 0,
+            "successors": 0
+          },
+          "RejectPeer": {
+            "new_states": 0,
+            "successors": 0
+          },
+          "StartIO": {
+            "new_states": 0,
+            "successors": 0
+          },
+          "BeginIO": {
+            "new_states": 0,
+            "successors": 0
+          },
+          "Retry": {
+            "new_states": 2,
+            "successors": 4
+          },
+          "Timeout": {
+            "new_states": 0,
+            "successors": 0
+          },
+          "Fault": {
+            "new_states": 0,
+            "successors": 0
+          },
+          "OsFailure": {
+            "new_states": 0,
+            "successors": 0
+          },
+          "Write": {
+            "new_states": 0,
+            "successors": 0
+          },
+          "Read": {
+            "new_states": 0,
+            "successors": 0
+          },
+          "Shutdown": {
+            "new_states": 0,
+            "successors": 0
+          },
+          "Eof": {
+            "new_states": 0,
+            "successors": 0
+          },
+          "QuotaFailure": {
+            "new_states": 0,
+            "successors": 0
+          },
+          "Cleanup": {
+            "new_states": 0,
+            "successors": 0
+          },
+          "Done": {
+            "new_states": 0,
+            "successors": 0
+          }
+        }
+      }
+    ],
+    "c_replays": [
+      {
+        "case": "root",
+        "mode": "optimized",
+        "status": "pass",
+        "exit_code": 1,
+        "model_invariant": "EntryAuthority"
+      },
+      {
+        "case": "root",
+        "mode": "sanitized",
+        "status": "pass",
+        "exit_code": 1,
+        "model_invariant": "EntryAuthority"
+      },
+      {
+        "case": "amplify",
+        "mode": "optimized",
+        "status": "pass",
+        "exit_code": 0,
+        "model_invariant": "NoAmplification"
+      },
+      {
+        "case": "amplify",
+        "mode": "sanitized",
+        "status": "pass",
+        "exit_code": 0,
+        "model_invariant": "NoAmplification"
+      },
+      {
+        "case": "stale",
+        "mode": "optimized",
+        "status": "pass",
+        "exit_code": 0,
+        "model_invariant": "ValidGeneration"
+      },
+      {
+        "case": "stale",
+        "mode": "sanitized",
+        "status": "pass",
+        "exit_code": 0,
+        "model_invariant": "ValidGeneration"
+      },
+      {
+        "case": "kind",
+        "mode": "optimized",
+        "status": "pass",
+        "exit_code": 0,
+        "model_invariant": "ValidKind"
+      },
+      {
+        "case": "kind",
+        "mode": "sanitized",
+        "status": "pass",
+        "exit_code": 0,
+        "model_invariant": "ValidKind"
+      },
+      {
+        "case": "denied",
+        "mode": "optimized",
+        "status": "pass",
+        "exit_code": 0,
+        "model_invariant": "NoDeniedSyscall"
+      },
+      {
+        "case": "denied",
+        "mode": "sanitized",
+        "status": "pass",
+        "exit_code": 0,
+        "model_invariant": "NoDeniedSyscall"
+      },
+      {
+        "case": "quota",
+        "mode": "optimized",
+        "status": "pass",
+        "exit_code": 0,
+        "model_invariant": "WithinQuota"
+      },
+      {
+        "case": "quota",
+        "mode": "sanitized",
+        "status": "pass",
+        "exit_code": 0,
+        "model_invariant": "WithinQuota"
+      },
+      {
+        "case": "wrap",
+        "mode": "optimized",
+        "status": "pass",
+        "exit_code": 0,
+        "model_invariant": "NoGenerationWrap"
+      },
+      {
+        "case": "wrap",
+        "mode": "sanitized",
+        "status": "pass",
+        "exit_code": 0,
+        "model_invariant": "NoGenerationWrap"
+      },
+      {
+        "case": "cleanup",
+        "mode": "optimized",
+        "status": "pass",
+        "exit_code": 0,
+        "model_invariant": "ExitCloses"
+      },
+      {
+        "case": "cleanup",
+        "mode": "sanitized",
+        "status": "pass",
+        "exit_code": 0,
+        "model_invariant": "ExitCloses"
+      },
+      {
+        "case": "untracked-fault",
+        "mode": "optimized",
+        "status": "pass",
+        "exit_code": 1,
+        "model_invariant": "ExitCloses"
+      },
+      {
+        "case": "untracked-fault",
+        "mode": "sanitized",
+        "status": "pass",
+        "exit_code": 1,
+        "model_invariant": "ExitCloses"
+      },
+      {
+        "case": "publish",
+        "mode": "optimized",
+        "status": "pass",
+        "exit_code": 0,
+        "model_invariant": "ValidatedPublication"
+      },
+      {
+        "case": "publish",
+        "mode": "sanitized",
+        "status": "pass",
+        "exit_code": 0,
+        "model_invariant": "ValidatedPublication"
+      },
+      {
+        "case": "deadline",
+        "mode": "optimized",
+        "status": "pass",
+        "exit_code": 0,
+        "model_invariant": "FixedDeadline"
+      },
+      {
+        "case": "deadline",
+        "mode": "sanitized",
+        "status": "pass",
+        "exit_code": 0,
+        "model_invariant": "FixedDeadline"
+      }
+    ],
+    "c_mutations": [
+      {
+        "case": "root",
+        "mode": "optimized",
+        "status": "expected-rejection",
+        "exit_code": 3,
+        "model_invariant": "EntryAuthority"
+      },
+      {
+        "case": "root",
+        "mode": "sanitized",
+        "status": "expected-rejection",
+        "exit_code": 3,
+        "model_invariant": "EntryAuthority"
+      },
+      {
+        "case": "amplify",
+        "mode": "optimized",
+        "status": "expected-rejection",
+        "exit_code": 1,
+        "model_invariant": "NoAmplification"
+      },
+      {
+        "case": "amplify",
+        "mode": "sanitized",
+        "status": "expected-rejection",
+        "exit_code": 1,
+        "model_invariant": "NoAmplification"
+      },
+      {
+        "case": "stale",
+        "mode": "optimized",
+        "status": "expected-rejection",
+        "exit_code": 1,
+        "model_invariant": "ValidGeneration"
+      },
+      {
+        "case": "stale",
+        "mode": "sanitized",
+        "status": "expected-rejection",
+        "exit_code": 1,
+        "model_invariant": "ValidGeneration"
+      },
+      {
+        "case": "kind",
+        "mode": "optimized",
+        "status": "expected-rejection",
+        "exit_code": 1,
+        "model_invariant": "ValidKind"
+      },
+      {
+        "case": "kind",
+        "mode": "sanitized",
+        "status": "expected-rejection",
+        "exit_code": 1,
+        "model_invariant": "ValidKind"
+      },
+      {
+        "case": "denied",
+        "mode": "optimized",
+        "status": "expected-rejection",
+        "exit_code": 1,
+        "model_invariant": "NoDeniedSyscall"
+      },
+      {
+        "case": "denied",
+        "mode": "sanitized",
+        "status": "expected-rejection",
+        "exit_code": 1,
+        "model_invariant": "NoDeniedSyscall"
+      },
+      {
+        "case": "quota",
+        "mode": "optimized",
+        "status": "expected-rejection",
+        "exit_code": 1,
+        "model_invariant": "WithinQuota"
+      },
+      {
+        "case": "quota",
+        "mode": "sanitized",
+        "status": "expected-rejection",
+        "exit_code": 1,
+        "model_invariant": "WithinQuota"
+      },
+      {
+        "case": "wrap",
+        "mode": "optimized",
+        "status": "expected-rejection",
+        "exit_code": 1,
+        "model_invariant": "NoGenerationWrap"
+      },
+      {
+        "case": "wrap",
+        "mode": "sanitized",
+        "status": "expected-rejection",
+        "exit_code": 1,
+        "model_invariant": "NoGenerationWrap"
+      },
+      {
+        "case": "cleanup",
+        "mode": "optimized",
+        "status": "expected-rejection",
+        "exit_code": 1,
+        "model_invariant": "ExitCloses"
+      },
+      {
+        "case": "cleanup",
+        "mode": "sanitized",
+        "status": "expected-rejection",
+        "exit_code": 1,
+        "model_invariant": "ExitCloses"
+      },
+      {
+        "case": "untracked-fault",
+        "mode": "optimized",
+        "status": "expected-rejection",
+        "exit_code": 2,
+        "model_invariant": "ExitCloses"
+      },
+      {
+        "case": "untracked-fault",
+        "mode": "sanitized",
+        "status": "expected-rejection",
+        "exit_code": 2,
+        "model_invariant": "ExitCloses"
+      },
+      {
+        "case": "publish",
+        "mode": "optimized",
+        "status": "expected-rejection",
+        "exit_code": 1,
+        "model_invariant": "ValidatedPublication"
+      },
+      {
+        "case": "publish",
+        "mode": "sanitized",
+        "status": "expected-rejection",
+        "exit_code": 1,
+        "model_invariant": "ValidatedPublication"
+      },
+      {
+        "case": "deadline",
+        "mode": "optimized",
+        "status": "expected-rejection",
+        "exit_code": 1,
+        "model_invariant": "FixedDeadline"
+      },
+      {
+        "case": "deadline",
+        "mode": "sanitized",
+        "status": "expected-rejection",
+        "exit_code": 1,
+        "model_invariant": "FixedDeadline"
+      }
+    ],
+    "mode": "full",
+    "coverage_head": "39ec4662869ae992a508a06cf2f3a9cf36240220",
+    "coverage_note": "Source includes uncommitted work beyond HEAD; exact file hashes define reviewed inputs. No commit is claimed for the models. Windows snapshot milestone: Linux provider prefix reviewed byte-identical; new Windows profile is outside these Linux model claims.",
+    "checker_self_test": {
+      "status": "pass",
+      "counterexample_excludes_statistics": true,
+      "known_broken_baseline": "authority-root",
+      "python_optimization": true,
+      "broken_model_process_exit": 1,
+      "output": "/home/luis/dev/lobo-ar/lobo-lang/target/windows-snapshot/linux-model-check/checker-self-test"
+    }
+  },
+  "linux_model_claims_apply_to_windows": false,
+  "counts": {
+    "rust": 262,
+    "editor": 161,
+    "python_benchmark_tools": 31,
+    "codemod": 4,
+    "wine_application": 14,
+    "wine_provider": 10,
+    "wine_permission_pairs": 64
+  },
+  "integrity": {
+    "status": "pass",
+    "protected_before_inputs": 115,
+    "prior_paper_entries": 23,
+    "frozen_release_artifacts": 86,
+    "linux_provider_prefix_byte_identical": true,
+    "dependency_locks_only_root_version_changed": true,
+    "application_source_and_ids_unchanged": true
+  },
+  "toolchain_provenance": {
+    "version": "20261117",
+    "url": "https://github.com/mstorsjo/llvm-mingw/releases/download/20261117/llvm-mingw-20261117-ucrt-ubuntu-22.04-x86_64.tar.xz",
+    "sha256": "e7a15a49a2ea95e9f3d8a9d0cfabe5052a4b10fb4777cc54de5a8c27b64bb701",
+    "bytes": 84103316
+  },
+  "preservation": {
+    "path": "benchmarks/private-evidence/windows-snapshot-20261122",
+    "manifest_sha256": "16ef310581d783dcb94b99863d1afa80c564a6534bae2e5e20e064b5bf8fc0b5",
+    "source_snapshot_files": 365,
+    "local_only": true,
+    "commit": null,
+    "publication": null,
+    "off_device_backup": null
+  },
+  "logs": [
+    {
+      "path": "benchmarks/private-evidence/windows-snapshot-20261122/logs/windows-snapshot-build-console-fixed.log",
+      "sha256": "ff29c4c9b0206d63aed7165ed6b2d314fb08ae8150360a508594d6a92f0b740b",
+      "bytes": 663
+    },
+    {
+      "path": "benchmarks/private-evidence/windows-snapshot-20261122/logs/windows-snapshot-build-final.log",
+      "sha256": "41cb81b1c354483dc1da85789d49eb9d5adcf5ceacf72f7232c7e37806403b91",
+      "bytes": 631
+    },
+    {
+      "path": "benchmarks/private-evidence/windows-snapshot-20261122/logs/windows-snapshot-build-first.log",
+      "sha256": "807dad8449b8eaf4d66aabdcd1a9358836a8467cf2bf1a772c5e1496215f83fb",
+      "bytes": 647
+    },
+    {
+      "path": "benchmarks/private-evidence/windows-snapshot-20261122/logs/windows-snapshot-build-red.log",
+      "sha256": "fd62265840ba018f4fa9ef06cf7a9f5091547fa3fd3f56d45bb5214dab591245",
+      "bytes": 3604
+    },
+    {
+      "path": "benchmarks/private-evidence/windows-snapshot-20261122/logs/windows-snapshot-clippy.log",
+      "sha256": "07920828bad440cab026b87c2696760f969a79e858d1c1939a750126cc5f6d80",
+      "bytes": 137
+    },
+    {
+      "path": "benchmarks/private-evidence/windows-snapshot-20261122/logs/windows-snapshot-codemod.log",
+      "sha256": "c37a3016ec30e32117eac9d8fb18bd6a43d48ff3414cc12b7fb9690055069f33",
+      "bytes": 1032
+    },
+    {
+      "path": "benchmarks/private-evidence/windows-snapshot-20261122/logs/windows-snapshot-compiler-build.log",
+      "sha256": "b31473b8fba3e4d67e1a39abfb12e67843368dc729bab8eb597446f330e81d39",
+      "bytes": 128
+    },
+    {
+      "path": "benchmarks/private-evidence/windows-snapshot-20261122/logs/windows-snapshot-diff.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "benchmarks/private-evidence/windows-snapshot-20261122/logs/windows-snapshot-doc-check.log",
+      "sha256": "1f11bb3bb382f1877ffa8eec4eb376db85d0ecfa2e1301289bb91fbd2cc966ae",
+      "bytes": 55
+    },
+    {
+      "path": "benchmarks/private-evidence/windows-snapshot-20261122/logs/windows-snapshot-editor-host.log",
+      "sha256": "174b34d842944941ac7c825697c501ecc5af404c6d53d2aec8f044efc8c135c4",
+      "bytes": 1252
+    },
+    {
+      "path": "benchmarks/private-evidence/windows-snapshot-20261122/logs/windows-snapshot-editor-package.log",
+      "sha256": "4b5281a5e7710f2d78b3892ab04e2f9512ea9b453570f3c7733a2e389e61227a",
+      "bytes": 37141
+    },
+    {
+      "path": "benchmarks/private-evidence/windows-snapshot-20261122/logs/windows-snapshot-export-before.log",
+      "sha256": "2e0047c9d2d8ec7461d7c85cb651e577253bcda2aa8e2c839c1d2c4fee48e72e",
+      "bytes": 416
+    },
+    {
+      "path": "benchmarks/private-evidence/windows-snapshot-20261122/logs/windows-snapshot-first-run.log",
+      "sha256": "ff2c908f1a4bab68f34d7f254d4cad20d888e069ae8b571b9caaa92c300d5686",
+      "bytes": 496
+    },
+    {
+      "path": "benchmarks/private-evidence/windows-snapshot-20261122/logs/windows-snapshot-fmt.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "benchmarks/private-evidence/windows-snapshot-20261122/logs/windows-snapshot-formal-skill.log",
+      "sha256": "db349825903d66adffea3ecf1bd8e1803043e8a71cf1a051235dabc5371f5bb0",
+      "bytes": 16
+    },
+    {
+      "path": "benchmarks/private-evidence/windows-snapshot-20261122/logs/windows-snapshot-harness-build.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "benchmarks/private-evidence/windows-snapshot-20261122/logs/windows-snapshot-linux-model-check.log",
+      "sha256": "f3ab297f315e8fc83ebbd51ec2dedae9468d4e9b89979c58e571d87ba461e4f7",
+      "bytes": 1184
+    },
+    {
+      "path": "benchmarks/private-evidence/windows-snapshot-20261122/logs/windows-snapshot-python.log",
+      "sha256": "ced7c180bc38249e71f09e9ad2069e1d85c1320710c2b62da87668f20ef0363e",
+      "bytes": 131
+    },
+    {
+      "path": "benchmarks/private-evidence/windows-snapshot-20261122/logs/windows-snapshot-release.log",
+      "sha256": "c7c25d888c82bae95e1278c9d50797641e229262215833e249313e0b41f7161a",
+      "bytes": 128
+    },
+    {
+      "path": "benchmarks/private-evidence/windows-snapshot-20261122/logs/windows-snapshot-rust-full.log",
+      "sha256": "1bc97ac7d26099b9e8b04d7adbf576a074f9e3175da6bc2f94b79fa32aa8514b",
+      "bytes": 29689
+    },
+    {
+      "path": "benchmarks/private-evidence/windows-snapshot-20261122/logs/windows-snapshot-sealed.log",
+      "sha256": "299af934054f45fbf886f613bb0ab1d600702a304849509507e51244da9d59e9",
+      "bytes": 377
+    },
+    {
+      "path": "benchmarks/private-evidence/windows-snapshot-20261122/logs/windows-snapshot-skill.log",
+      "sha256": "db349825903d66adffea3ecf1bd8e1803043e8a71cf1a051235dabc5371f5bb0",
+      "bytes": 16
+    },
+    {
+      "path": "benchmarks/private-evidence/windows-snapshot-20261122/logs/windows-snapshot-tests-console-fixed.log",
+      "sha256": "21e01550a4ed2e2cba3ba4c297b6a6a07988c6378425c0b5a73a1305fa003ee5",
+      "bytes": 205
+    },
+    {
+      "path": "benchmarks/private-evidence/windows-snapshot-20261122/logs/windows-snapshot-tests-default-launch.log",
+      "sha256": "def9db3c8d10be3215b3e24085e776f38c3cf9d8dcd7a7bc29e4666e938629c0",
+      "bytes": 205
+    },
+    {
+      "path": "benchmarks/private-evidence/windows-snapshot-20261122/logs/windows-snapshot-tests-first.log",
+      "sha256": "21e01550a4ed2e2cba3ba4c297b6a6a07988c6378425c0b5a73a1305fa003ee5",
+      "bytes": 205
+    },
+    {
+      "path": "benchmarks/private-evidence/windows-snapshot-20261122/logs/windows-snapshot-tests-shipped.log",
+      "sha256": "def9db3c8d10be3215b3e24085e776f38c3cf9d8dcd7a7bc29e4666e938629c0",
+      "bytes": 205
+    },
+    {
+      "path": "benchmarks/private-evidence/windows-snapshot-20261122/logs/windows-snapshot-wine-baseline.log",
+      "sha256": "95ed9c30f18da0f7a2afe6c776d7796df4efc382c934a9867c239b4c2797cfdc",
+      "bytes": 386
+    }
+  ],
+  "limits": [
+    "Wine compatibility tests, not actual Windows hardware execution.",
+    "Only clock/random/capability profile, not Windows sockets or a complete Windows compiler distribution.",
+    "Existing TLA+ results remain Linux-only; no Windows refinement/security proof.",
+    "Unsigned local demo; no performance/agent productivity claim.",
+    "One portable cross-toolchain was explicitly downloaded/unpacked for this task; build/test scripts do not download tools."
+  ],
+  "agent_construction_effect": null,
+  "agent_comprehension_effect": null,
+  "agent_token_effect": null,
+  "runtime_performance_effect": null
+}

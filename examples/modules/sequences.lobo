@@ -1,0 +1,15 @@
+module sequences;
+
+use deps { reverse_shared };
+
+fn reverse(input: List<I64>) -> List<I64>
+ensures { List::length(result) == List::length(input) }
+{
+  reverse_shared(input)
+}
+
+identities {
+  module: "example.modules.sequences",
+  deps.reverse_shared: "example.collections.reverse",
+  reverse: "example.modules.reverse"
+}

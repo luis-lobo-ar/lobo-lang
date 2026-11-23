@@ -1,0 +1,62 @@
+module sqlite_users;
+use sql { Cell, Row, SqlResult, open, close, query, execute, no_params, params1, params2, begin, commit, rollback };
+
+fn setup_data(db:Native::Database)->SqlResult<Bool> actions {db.execute,db.read,db.close,db.transaction} {
+  let started=try begin(db);
+  let table=try execute(db,"CREATE TABLE IF NOT EXISTS users(id INTEGER PRIMARY KEY, name TEXT NOT NULL)",no_params());
+  let first=try execute(db,"INSERT OR IGNORE INTO users VALUES(?1,?2)",params2(Integer(1),String("Luis")));
+  let second=try execute(db,"INSERT OR IGNORE INTO users VALUES(?1,?2)",params2(Integer(2),String("Ada")));
+  commit(db)
+}
+fn setup()->SqlResult<Bool> actions {native.authorize,db.open,db.execute,db.read,db.close,db.transaction} {
+  let db=try open(Native::sqlite_capability());
+  let outcome=setup_data(db);
+  let closed=try close(db);
+  outcome
+}
+fn find(db:Native::Database,id:I64)->SqlResult<List<Row>> actions {db.execute,db.read,db.close} {
+  query(db,"SELECT id,name FROM users WHERE id=?1",params1(Integer(id)))
+}
+fn all(db:Native::Database)->SqlResult<List<Row>> actions {db.execute,db.read,db.close} {
+  query(db,"SELECT id,name FROM users ORDER BY id",no_params())
+}
+fn save_data(db:Native::Database,id:I64,name:Text)->SqlResult<Bool> actions {db.execute,db.read,db.close,db.transaction} {
+  let started=try begin(db);
+  let changed=try execute(db,"INSERT INTO users VALUES(?1,?2) ON CONFLICT(id) DO UPDATE SET name=excluded.name",params2(Integer(id),String(name)));
+  commit(db)
+}
+fn save(id:I64,name:Text)->SqlResult<Bool> actions {native.authorize,db.open,db.execute,db.read,db.close,db.transaction} {
+  let db=try open(Native::sqlite_capability());
+  let outcome=save_data(db,id,name);
+  let closed=try close(db);
+  outcome
+}
+fn get(id:I64)->SqlResult<List<Row>> actions {native.authorize,db.open,db.execute,db.read,db.close} {
+  let db=try open(Native::sqlite_capability());
+  let outcome=find(db,id);
+  let closed=try close(db);
+  outcome
+}
+fn list()->SqlResult<List<Row>> actions {native.authorize,db.open,db.execute,db.read,db.close} {
+  let db=try open(Native::sqlite_capability());
+  let outcome=all(db);
+  let closed=try close(db);
+  outcome
+}
+fn undo_data(db:Native::Database)->SqlResult<Bool> actions {db.execute,db.read,db.close,db.transaction} {
+  let started=try begin(db);
+  let removed=try execute(db,"DELETE FROM users",no_params());
+  rollback(db)
+}
+fn undo()->SqlResult<Bool> actions {native.authorize,db.open,db.execute,db.read,db.close,db.transaction} {
+  let db=try open(Native::sqlite_capability());
+  let outcome=undo_data(db);
+  let closed=try close(db);
+  outcome
+}
+fn typed()->SqlResult<List<Row>> actions {native.authorize,db.open,db.execute,db.read,db.close} {
+  let db=try open(Native::sqlite_capability());
+  let outcome=query(db,"SELECT NULL,42,1.25,'',X''",no_params());
+  let closed=try close(db);
+  outcome
+}

@@ -1,0 +1,24 @@
+// Executable Core examples: pure recursive algorithms with checked contracts.
+module algorithms;
+
+fn gcd(a: I64, b: I64) -> I64
+requires { a >= 0 && b >= 0 }
+requires { a > 0 || b > 0 }
+ensures { result > 0 }
+ensures { a % result == 0 && b % result == 0 }
+{
+  if b == 0 { a } else { gcd(b, a % b) }
+}
+
+fn factorial(n: I64) -> I64
+requires { n >= 0 && n <= 20 }
+ensures { result >= 1 }
+{
+  if n == 0 { 1 } else { n * factorial(n - 1) }
+}
+
+identities {
+  module: "example.algorithms",
+  gcd: "example.gcd",
+  factorial: "example.factorial"
+}

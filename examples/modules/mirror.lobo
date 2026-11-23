@@ -1,0 +1,13 @@
+module mirrored;
+
+use deps { reverse };
+
+fn main(input: List<I64>) -> List<I64> {
+  reverse(reverse(input))
+}
+
+identities {
+  module: "example.modules.mirrored_app",
+  deps.reverse: "example.modules.reverse",
+  main: "example.modules.mirrored"
+}

@@ -1,0 +1,77 @@
+module syntax_tree;
+
+variant Node { Num(I64), Sum(List<Node>), Product(List<Node>) }
+record Reduction { remaining: List<Node>, value: I64 }
+record Rewrite { remaining: List<Node>, reversed: List<Node> }
+
+fn evaluate(node: Node) -> I64 {
+  match node {
+    Num(n) => n,
+    Sum(children) => evaluate_children(children, false),
+    Product(children) => evaluate_children(children, true)
+  }
+}
+
+fn evaluate_children(children: List<Node>, product: Bool) -> I64 {
+  let done = fold(i in List::length(children), state: Reduction = Reduction {
+    remaining: children, value: if product { 1 } else { 0 }
+  }) {
+    let value = evaluate(List::head(state.remaining));
+    Reduction {
+      remaining: List::tail(state.remaining),
+      value: if product { state.value * value } else { state.value + value }
+    }
+  };
+  done.value
+}
+
+fn reverse(children: List<Node>) -> List<Node>
+ensures { List::length(result) == List::length(children) }
+{
+  let done = fold(i in List::length(children), state: Rewrite = Rewrite {
+    remaining: children, reversed: List::empty<Node>()
+  }) {
+    Rewrite {
+      remaining: List::tail(state.remaining),
+      reversed: List::prepend(List::head(state.remaining), state.reversed)
+    }
+  };
+  done.reversed
+}
+
+fn shift(node: Node, delta: I64) -> Node {
+  match node {
+    Num(n) => Num(n + delta),
+    Sum(children) => Sum(shift_children(children, delta)),
+    Product(children) => Product(shift_children(children, delta))
+  }
+}
+
+fn shift_children(children: List<Node>, delta: I64) -> List<Node> {
+  let done = fold(i in List::length(children), state: Rewrite = Rewrite {
+    remaining: children, reversed: List::empty<Node>()
+  }) {
+    Rewrite {
+      remaining: List::tail(state.remaining),
+      reversed: List::prepend(shift(List::head(state.remaining), delta), state.reversed)
+    }
+  };
+  reverse(done.reversed)
+}
+
+fn shifted_value(node: Node, delta: I64) -> I64 {
+  evaluate(shift(node, delta))
+}
+
+identities {
+  module: "example.ast",
+  Node: "example.ast.node",
+  Reduction: "example.ast.reduction",
+  Rewrite: "example.ast.rewrite",
+  evaluate: "example.ast.evaluate",
+  evaluate_children: "example.ast.evaluate_children",
+  reverse: "example.ast.reverse",
+  shift: "example.ast.shift",
+  shift_children: "example.ast.shift_children",
+  shifted_value: "example.ast.shifted_value"
+}

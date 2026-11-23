@@ -1,0 +1,67 @@
+{
+  "date": "2026-11-03",
+  "scope": "Comprehension literature and cross-language calibration; not agent performance",
+  "bibliography_records": 36,
+  "network_metadata_records": 30,
+  "curated_metadata_records": 6,
+  "baseline_arms": 5,
+  "baseline_observations_passed": 750,
+  "mutation_builds": 15,
+  "mutation_builds_rejected": 4,
+  "wrong_mutants_executed_and_detected": 11,
+  "comprehension_reference_items": 11,
+  "new_agent_trials": 0,
+  "comprehension_agent_scores": null,
+  "human_comprehension_measured": false,
+  "checks": [
+    {
+      "command": "python3 -m unittest discover -s benchmarks -p 'test_*.py'",
+      "passed": 30,
+      "failed": 0,
+      "exit_code": 0,
+      "raw_log": "target/language-comparison-tests.log"
+    },
+    {
+      "command": "python3 -m unittest discover -s benchmarks -p test_language_comparison.py -k reordered_dependencies",
+      "passed": 1,
+      "failed": 0,
+      "exit_code": 0,
+      "note": "Focused check after strengthening the alternative-counterexample test"
+    },
+    {
+      "command": "cargo test --locked",
+      "passed": 145,
+      "failed": 0,
+      "ignored": 0,
+      "exit_code": 0,
+      "raw_log": "target/language-comparison-cargo-tests.log"
+    },
+    {
+      "command": "./scripts/check.sh",
+      "result": "passed"
+    },
+    {
+      "command": "git diff --check",
+      "result": "passed"
+    },
+    {
+      "method": "JSON, bibliography/source identities, 29 arXiv pins, metadata hashes, result/source/harness hashes and research whitespace",
+      "result": "passed"
+    }
+  ],
+  "tdd_failures_retained_in_report": [
+    "New comparison module initially absent",
+    "Python invalid-tag probe initially targeted two return sites; narrowed to unique decode branch context"
+  ],
+  "artifacts": {
+    "report": "../benchmarks/results/2026-11-03-language-comparison-fixtures.md",
+    "data": "../benchmarks/results/2026-11-03-language-comparison-fixtures.json",
+    "data_sha256": "5da81ea501685a02ac1fc8d0bb4732f8eabaf228cf641a47626e2dd8244f2177"
+  },
+  "limits": [
+    "Single tiny workflow family, bounded inputs and selected mutations",
+    "Public calibration answers are not confirmatory holdouts",
+    "Ignored target logs and public-source caches are local artifacts, not an archival guarantee",
+    "Explicit launch request for additional agents remains pending"
+  ]
+}

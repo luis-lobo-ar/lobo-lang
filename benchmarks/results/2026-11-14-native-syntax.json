@@ -1,0 +1,251 @@
+{
+  "format": "lobo-native-syntax-result/0.1",
+  "date": "2026-11-14",
+  "timezone": "America/Chicago",
+  "status": "engineering-acceptance-passed",
+  "language": "core/1.2",
+  "compiler": "1.2.0",
+  "extension": "1.2.0",
+  "checked_format": "lobo-checked/1.0",
+  "accepted_checked_languages": [
+    "core/1.0",
+    "core/1.1",
+    "core/1.2"
+  ],
+  "decision": "decisions/0042-native-compact-syntax-and-legacy-deprecation.md",
+  "specification": "spec/core-v1.2.md",
+  "compatibility": {
+    "old_source": "deprecated read support, frozen",
+    "selection": "per-source module header",
+    "legacy_cli_flag": false,
+    "shared_semantics_and_backends": true,
+    "warnings": false,
+    "removal_date": null
+  },
+  "verification": [
+    {
+      "command": "cargo test --locked",
+      "exit_code": 0,
+      "passed": 206,
+      "log": "target/native-syntax-rust-full-final.log",
+      "log_sha256": "2245eb40a06443ef7a1f618a01b67371ee1aad19be7e080d78f133b8b2f28568",
+      "preserved_log": "benchmarks/private-evidence/native-syntax-20261114/logs/native-syntax-rust-full-final.log"
+    },
+    {
+      "command": "npm --prefix editors/vscode run package",
+      "exit_code": 0,
+      "editor_tests_passed": 141,
+      "log": "target/native-syntax-package.log",
+      "log_sha256": "a6bb47b3abdde16cd683adc833ea009af2181f978574fc1f63b88c353a5d5cc4",
+      "preserved_log": "benchmarks/private-evidence/native-syntax-20261114/logs/native-syntax-package.log"
+    },
+    {
+      "command": "python3 -m unittest discover -s benchmarks -p 'test_*.py'",
+      "exit_code": 0,
+      "passed": 31,
+      "log": "target/native-syntax-python.log",
+      "log_sha256": "52e4c96ddc7c268c929d7f4bbd2f33c8af19ae62b6ea33e1d1673de378095c0b",
+      "preserved_log": "benchmarks/private-evidence/native-syntax-20261114/logs/native-syntax-python.log"
+    },
+    {
+      "command": "cargo clippy --locked --all-targets -- -D warnings",
+      "exit_code": 0,
+      "log": "target/native-syntax-clippy-final.log",
+      "log_sha256": "7241010a60bb4d84cba49d73219d86ebcfdd9345b44e42a61d7c61890563ad1e",
+      "preserved_log": "benchmarks/private-evidence/native-syntax-20261114/logs/native-syntax-clippy-final.log"
+    },
+    {
+      "command": "cargo fmt --check",
+      "exit_code": 0,
+      "log": "target/native-syntax-format.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "preserved_log": "benchmarks/private-evidence/native-syntax-20261114/logs/native-syntax-format.log"
+    },
+    {
+      "command": "LOBO_VSCODE_EXECUTABLE=/usr/share/code/code xvfb-run -a npm --prefix editors/vscode run test:host",
+      "exit_code": 0,
+      "log": "target/native-syntax-host.log",
+      "log_sha256": "8a2db4f4da837b7393d41bba10764f33d48b8ea075d6d6884032fefa9a0c2a8d",
+      "preserved_log": "benchmarks/private-evidence/native-syntax-20261114/logs/native-syntax-host.log"
+    },
+    {
+      "command": "cargo build --locked --release --bin lobo --bin lobo-test",
+      "exit_code": 0,
+      "log": "target/native-syntax-release-final.log",
+      "log_sha256": "3a9bda986c701ecf9090277aade5ebfdd5854c9a1853686498d2a9f3a032da5c",
+      "preserved_log": "benchmarks/private-evidence/native-syntax-20261114/logs/native-syntax-release-final.log"
+    },
+    {
+      "command": "python3 /home/luis/.codex/skills/.system/skill-creator/scripts/quick_validate.py .agents/skills/lobo-programming",
+      "exit_code": 0,
+      "log": "target/native-syntax-skill-validation.log",
+      "log_sha256": "db349825903d66adffea3ecf1bd8e1803043e8a71cf1a051235dabc5371f5bb0",
+      "preserved_log": "benchmarks/private-evidence/native-syntax-20261114/logs/native-syntax-skill-validation.log"
+    },
+    {
+      "command": "git diff --check",
+      "exit_code": 0,
+      "log": "target/native-syntax-diff.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "preserved_log": "benchmarks/private-evidence/native-syntax-20261114/logs/native-syntax-diff.log"
+    },
+    {
+      "command": "./scripts/check.sh",
+      "exit_code": 0,
+      "log": "target/native-syntax-documents.log",
+      "log_sha256": "1f11bb3bb382f1877ffa8eec4eb376db85d0ecfa2e1301289bb91fbd2cc966ae",
+      "preserved_log": "benchmarks/private-evidence/native-syntax-20261114/logs/native-syntax-documents.log"
+    },
+    {
+      "command": "./scripts/check.sh",
+      "exit_code": 0,
+      "log": "target/native-syntax-documents-final.log",
+      "log_sha256": "1f11bb3bb382f1877ffa8eec4eb376db85d0ecfa2e1301289bb91fbd2cc966ae",
+      "preserved_log": "benchmarks/private-evidence/native-syntax-20261114/logs/native-syntax-documents-final.log"
+    }
+  ],
+  "failures": [
+    {
+      "exit_code": 101,
+      "log": "target/native-syntax-red.log",
+      "outcome": "all five native adoption cases fail before parser implementation",
+      "log_sha256": "deed2db1256fcacd880b0ff2212b8e31a005df48671c5b67ebdb536e8512eb51",
+      "preserved_log": "benchmarks/private-evidence/native-syntax-20261114/logs/native-syntax-red.log"
+    },
+    {
+      "exit_code": 1,
+      "log": "target/native-syntax-editor-red.log",
+      "outcome": "two adoption cases return unavailable before the adapter accepts core/1.2",
+      "log_sha256": "3785a8f9b9f60422a3b663423c7abc5764ef3a390ca0eaec59a2e55166a437dc",
+      "preserved_log": "benchmarks/private-evidence/native-syntax-20261114/logs/native-syntax-editor-red.log"
+    },
+    {
+      "exit_code": 1,
+      "log": "target/native-syntax-editor-red-behavior.log",
+      "outcome": "raw-input assertion fails against the adapter's projection path; generic admission still unavailable",
+      "log_sha256": "0f9565e7940b6e866c571b407c870360b5a549428895d5a74ae17481987dc14a",
+      "preserved_log": "benchmarks/private-evidence/native-syntax-20261114/logs/native-syntax-editor-red-behavior.log"
+    },
+    {
+      "exit_code": 1,
+      "log": "target/native-syntax-grammar-red.log",
+      "outcome": "modern declaration lacks keyword scope without the prototype marker",
+      "log_sha256": "1c7b5e809eae0d3729f774b3a48c41a52d952df2c8d67ddc6afcb17169100a46",
+      "preserved_log": "benchmarks/private-evidence/native-syntax-20261114/logs/native-syntax-grammar-red.log"
+    },
+    {
+      "exit_code": 101,
+      "log": "target/native-syntax-clippy.log",
+      "outcome": "nonminimal optional-state boolean; corrected with is_none_or",
+      "log_sha256": "0e86f62c4c36390fdf174885c8af29471706449bedf58ebfcf626867dcae6316",
+      "preserved_log": "benchmarks/private-evidence/native-syntax-20261114/logs/native-syntax-clippy.log"
+    },
+    {
+      "exit_code": 1,
+      "log": null,
+      "outcome": "guarded skill migration expected 20 identities but found 18; stopped before writing; rerun derives count from source declaration inventory",
+      "evidence": "tool transcript"
+    }
+  ],
+  "native_routes": [
+    "reference evaluator",
+    "C/Clang",
+    "direct LLVM",
+    "C ASan/UBSan",
+    "LLVM ASan/UBSan"
+  ],
+  "limits": {
+    "fuel": 10000,
+    "heap_cells": 10000,
+    "configured_sources": 11
+  },
+  "cli_evidence": "target/native-syntax-cli-evidence.json",
+  "cli_observations": 19,
+  "no_node_environment": "PATH empty for stock file and source-bundle checks",
+  "skill_identities_preserved": 18,
+  "skill_checked_artifact_equality": true,
+  "agent_outcomes": {
+    "construction": null,
+    "comprehension": null,
+    "total_tokens": null,
+    "repair_efficiency": null
+  },
+  "performance_comparison": null,
+  "intermediate_source_preservation": "raw logs only; exact intermediate modified source states were not separately snapshotted",
+  "preservation": "benchmarks/private-evidence/native-syntax-20261114",
+  "intermediate_successes": [
+    {
+      "log": "target/native-syntax-first-green-attempt.log",
+      "scope": "first five native adoption cases pass before package-version bump",
+      "log_sha256": "fd9c32e469150104a074245c4cfde15dc461a210eea2ea6cd34ee11bbf671c1a",
+      "preserved_log": "benchmarks/private-evidence/native-syntax-20261114/logs/native-syntax-first-green-attempt.log"
+    },
+    {
+      "log": "target/native-syntax-editor-first-green.log",
+      "scope": "eight compact/native editor cases pass",
+      "log_sha256": "1a00ede7ec9ecc7f482012359a352c750d7c63565e5ef329726711b0d755b27c",
+      "preserved_log": "benchmarks/private-evidence/native-syntax-20261114/logs/native-syntax-editor-first-green.log"
+    },
+    {
+      "log": "target/native-syntax-rust-full-first.log",
+      "scope": "first full 206-test Rust pass before final parser predicate/import-order refinement",
+      "log_sha256": "d48c3e889e47f22f2fd49d1ff75276baadaea55b9c0150032bae79f02158781b",
+      "preserved_log": "benchmarks/private-evidence/native-syntax-20261114/logs/native-syntax-rust-full-first.log"
+    },
+    {
+      "log": "target/native-syntax-editor-full-first.log",
+      "scope": "141 editor tests pass",
+      "log_sha256": "989f6e72652c3df5a86cf5a05f1e10388e4297d5bbbb9c94dcdec5a8ef878aa2",
+      "preserved_log": "benchmarks/private-evidence/native-syntax-20261114/logs/native-syntax-editor-full-first.log"
+    }
+  ],
+  "source_inputs": {
+    "path": "benchmarks/private-evidence/native-syntax-20261114/inputs.json",
+    "count": 256,
+    "sha256": "337659c592db14dd5aacddce9166bfd38587e47d7c578871403c65012a960fe3"
+  },
+  "source_archive": {
+    "path": "benchmarks/private-evidence/native-syntax-20261114/source.tar.gz",
+    "bytes": 515658,
+    "sha256": "bfdb6c33cd0e413c0e40f2991ebae536c683d42f7a2f0ced993feaecb2479f92"
+  },
+  "artifacts": [
+    {
+      "path": "target/release/lobo",
+      "bytes": 1390352,
+      "sha256": "8309a14ac962c6022b2a5c8630f50bdd377d3933f5bbb3c0db942ae9df17e8f8"
+    },
+    {
+      "path": "target/release/lobo-test",
+      "bytes": 1206576,
+      "sha256": "6527e5a9441a05232f21601b084ea75901e5e986f9ce6e3be91a6735aa5e0b4f"
+    },
+    {
+      "path": "dist/lobo-syntax-1.2.0.vsix",
+      "bytes": 34563,
+      "sha256": "991f149f220262c896f5cd809aa88d3ba3a4807dd726a21e5a19001377c70a6e"
+    },
+    {
+      "path": "target/native-syntax-20261114/controller-c",
+      "bytes": 72136,
+      "sha256": "d6f4be3527b2209811d2a67250795fa5f5c7103e7625fbfca3564cf65a87fc4f"
+    },
+    {
+      "path": "target/native-syntax-20261114/controller-llvm",
+      "bytes": 68040,
+      "sha256": "61c002586db7df01efbc9a01783e81eb6bc6d5365c96057ff1864b131c035796"
+    },
+    {
+      "path": "target/native-syntax-20261114/mvc.loboc",
+      "bytes": 157685,
+      "sha256": "6cd24e3da18c88ade352af9be984a1298cc7e9c913cd96c6e80118572b963505"
+    }
+  ],
+  "input_verification": {
+    "status": "passed",
+    "frozen_release_artifacts_verified": 86,
+    "frozen_manifest_sha256": "f89af5f98e4d79e62cb3d5cfd37801b7539671d0826cca25ba63ed9fa039cf7a",
+    "vsix_matches_current_runtime_and_docs": true
+  },
+  "tools": "benchmarks/private-evidence/native-syntax-20261114/logs/native-syntax-tools.json"
+}

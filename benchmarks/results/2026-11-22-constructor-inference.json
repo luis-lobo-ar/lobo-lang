@@ -1,0 +1,310 @@
+{
+  "format": "lobo-constructor-inference-result/0.1",
+  "date": "2026-11-22",
+  "timezone": "America/Chicago",
+  "status": "engineering-acceptance-passed",
+  "language": "core/1.5",
+  "compiler": "1.5.0",
+  "extension": "1.5.0",
+  "decision": "decisions/0046-constructor-inference.md",
+  "specification": "spec/core-v1.5.md",
+  "rust_tests_passed": 226,
+  "editor_tests_passed": 153,
+  "benchmark_tests_passed": 31,
+  "codemod_tests_passed": 4,
+  "web_tests_passed": 6,
+  "verification": [
+    {
+      "command": "cargo test --locked",
+      "exit_code": 0,
+      "log": "target/constructor-inference-rust-final.log",
+      "log_sha256": "e2c45626ecdc0ed43d66121dbff0b31bd603ffceb50e34f68f24391198806063",
+      "preserved_log": "benchmarks/private-evidence/constructor-inference-20261122/logs/constructor-inference-rust-final.log"
+    },
+    {
+      "command": "npm --prefix editors/vscode run package",
+      "exit_code": 0,
+      "log": "target/constructor-inference-package.log",
+      "log_sha256": "4b2ee4b4a1c7516b1f43189cc8726a88def7c2e181f50a3f86586f94e1083384",
+      "preserved_log": "benchmarks/private-evidence/constructor-inference-20261122/logs/constructor-inference-package.log"
+    },
+    {
+      "command": "LOBO_VSCODE_EXECUTABLE=/usr/share/code/code xvfb-run -a npm --prefix editors/vscode run test:host",
+      "exit_code": 0,
+      "log": "target/constructor-inference-host-final.log",
+      "log_sha256": "8c01e199197d0e89a6198210e4006fb61ddfca99b9b53e0a67b11adf1fbcdaad",
+      "preserved_log": "benchmarks/private-evidence/constructor-inference-20261122/logs/constructor-inference-host-final.log"
+    },
+    {
+      "command": "python3 -m unittest discover -s benchmarks -p test_*.py",
+      "exit_code": 0,
+      "log": "target/constructor-inference-python.log",
+      "log_sha256": "3c393df64263c74ee76a859339cae9c2eaf936e8e44d0c3518918243c26d07ad",
+      "preserved_log": "benchmarks/private-evidence/constructor-inference-20261122/logs/constructor-inference-python.log"
+    },
+    {
+      "command": "node --test scripts/test-migrate-syntax.mjs",
+      "exit_code": 0,
+      "log": "target/constructor-inference-codemod.log",
+      "log_sha256": "a52da4b46f0c222be26beabb2ff950e59a00042afdc07c7d493134c0c82a02af",
+      "preserved_log": "benchmarks/private-evidence/constructor-inference-20261122/logs/constructor-inference-codemod.log"
+    },
+    {
+      "command": "LOBO_COMPILER=target/release/lobo LOBO_WEB_EXAMPLE_DIR=target/constructor-inference-web python3 examples/web-server/test_server.py",
+      "exit_code": 0,
+      "log": "target/constructor-inference-web-tests.log",
+      "log_sha256": "c81440508f7ee3ff3160a3a18547c500efc0a44be0c0c58708711921363d593a",
+      "preserved_log": "benchmarks/private-evidence/constructor-inference-20261122/logs/constructor-inference-web-tests.log"
+    },
+    {
+      "command": "cargo clippy --locked --all-targets -- -D warnings",
+      "exit_code": 0,
+      "log": "target/constructor-inference-clippy-final.log",
+      "log_sha256": "51ee292796e67665c20105048a0d26ab2e5098fa5114b82387b52ddb02ac6cde",
+      "preserved_log": "benchmarks/private-evidence/constructor-inference-20261122/logs/constructor-inference-clippy-final.log"
+    },
+    {
+      "command": "cargo fmt --check",
+      "exit_code": 0,
+      "log": "target/constructor-inference-fmt.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "preserved_log": "benchmarks/private-evidence/constructor-inference-20261122/logs/constructor-inference-fmt.log"
+    },
+    {
+      "command": "python3 /home/luis/.codex/skills/.system/skill-creator/scripts/quick_validate.py .agents/skills/lobo-programming",
+      "exit_code": 0,
+      "log": "target/constructor-inference-skill-validation.log",
+      "log_sha256": "db349825903d66adffea3ecf1bd8e1803043e8a71cf1a051235dabc5371f5bb0",
+      "preserved_log": "benchmarks/private-evidence/constructor-inference-20261122/logs/constructor-inference-skill-validation.log"
+    },
+    {
+      "command": "python3 target/constructor-inference-smoke.py",
+      "exit_code": 0,
+      "log": "target/constructor-inference-smoke.log",
+      "log_sha256": "c58e0a1fc17200ec344e719a51bd371ce400e29cd79e6a466569284ca19909bb",
+      "preserved_log": "benchmarks/private-evidence/constructor-inference-20261122/logs/constructor-inference-smoke.log"
+    },
+    {
+      "command": "./scripts/check.sh",
+      "exit_code": 0,
+      "log": "target/constructor-inference-docs.log",
+      "log_sha256": "1f11bb3bb382f1877ffa8eec4eb376db85d0ecfa2e1301289bb91fbd2cc966ae",
+      "preserved_log": "benchmarks/private-evidence/constructor-inference-20261122/logs/constructor-inference-docs.log"
+    }
+  ],
+  "smoke": {
+    "language": "core/1.5",
+    "compiler_sha256": "da3943887ae0e8c01218ef42efac4ad11ed938f50a6eefab5921b4c270727d72",
+    "baseline_compiler_sha256": "e17261a6b5a6a562c982f6bc278b7513283fe283adde4c115cf30470384d40d5",
+    "observations": [
+      {
+        "backend": "c",
+        "user": 1,
+        "observed": {
+          "status": "ok",
+          "kind": "value",
+          "value": {
+            "type": "Record",
+            "value": {
+              "id": "example.web.response",
+              "fields": {
+                "status": {
+                  "type": "I64",
+                  "value": "200"
+                },
+                "content_type": {
+                  "type": "Text",
+                  "value": "application/json"
+                },
+                "body": {
+                  "type": "Text",
+                  "value": "{\"name\":\"Luis\"}"
+                }
+              }
+            }
+          }
+        }
+      },
+      {
+        "backend": "c",
+        "user": 42,
+        "observed": {
+          "status": "ok",
+          "kind": "value",
+          "value": {
+            "type": "Record",
+            "value": {
+              "id": "example.web.response",
+              "fields": {
+                "status": {
+                  "type": "I64",
+                  "value": "404"
+                },
+                "content_type": {
+                  "type": "Text",
+                  "value": "text/plain; charset=utf-8"
+                },
+                "body": {
+                  "type": "Text",
+                  "value": "Not found\n"
+                }
+              }
+            }
+          }
+        }
+      },
+      {
+        "backend": "llvm",
+        "user": 1,
+        "observed": {
+          "status": "ok",
+          "kind": "value",
+          "value": {
+            "type": "Record",
+            "value": {
+              "id": "example.web.response",
+              "fields": {
+                "status": {
+                  "type": "I64",
+                  "value": "200"
+                },
+                "content_type": {
+                  "type": "Text",
+                  "value": "application/json"
+                },
+                "body": {
+                  "type": "Text",
+                  "value": "{\"name\":\"Luis\"}"
+                }
+              }
+            }
+          }
+        }
+      },
+      {
+        "backend": "llvm",
+        "user": 42,
+        "observed": {
+          "status": "ok",
+          "kind": "value",
+          "value": {
+            "type": "Record",
+            "value": {
+              "id": "example.web.response",
+              "fields": {
+                "status": {
+                  "type": "I64",
+                  "value": "404"
+                },
+                "content_type": {
+                  "type": "Text",
+                  "value": "text/plain; charset=utf-8"
+                },
+                "body": {
+                  "type": "Text",
+                  "value": "Not found\n"
+                }
+              }
+            }
+          }
+        }
+      },
+      {
+        "skill": "boxed",
+        "observed": {
+          "status": "ok",
+          "kind": "value",
+          "value": {
+            "type": "Text",
+            "value": "\u00e9"
+          }
+        }
+      },
+      {
+        "skill": "text",
+        "observed": {
+          "status": "ok",
+          "kind": "value",
+          "value": {
+            "type": "Text",
+            "value": "\u00e9"
+          }
+        }
+      },
+      {
+        "skill": "compact",
+        "observed": {
+          "status": "ok",
+          "kind": "value",
+          "value": {
+            "type": "I64",
+            "value": "42"
+          }
+        }
+      }
+    ],
+    "mvc_checked_program_equal": true,
+    "versions": [
+      "core/1.4",
+      "core/1.5"
+    ],
+    "skill_checked_program_equal": true,
+    "source_and_metadata_unchanged": true,
+    "status": "passed"
+  },
+  "historical_integrity": {
+    "status": "passed",
+    "protected_before_inputs_unchanged": 41,
+    "surveyed_historical_files_unchanged": 292,
+    "old_paper_entries_verified": 18,
+    "frozen_release_files_verified": 86,
+    "dependency_lock_unchanged_except_root_version": true,
+    "mvc_identity_sidecar_unchanged": true
+  },
+  "preservation": "benchmarks/private-evidence/constructor-inference-20261122",
+  "negative_attempts": [
+    {
+      "log": "target/constructor-inference-red.log",
+      "sha256": "d5da23bc6caa311d63cb59b2e6653d51e91e9730599231d16150d17de6af763d",
+      "preserved_log": "benchmarks/private-evidence/constructor-inference-20261122/logs/constructor-inference-red.log"
+    },
+    {
+      "log": "target/constructor-inference-editor-red.log",
+      "sha256": "ed001fac87ed4030a3750b68b2675116c408534f9e2829ac731900bb0dc2e25f",
+      "preserved_log": "benchmarks/private-evidence/constructor-inference-20261122/logs/constructor-inference-editor-red.log"
+    },
+    {
+      "log": "target/constructor-inference-editor-first-implementation.log",
+      "sha256": "71538e2392991de9083e25febe74f077fa0d3f881face4d218599c1655df02a0",
+      "preserved_log": "benchmarks/private-evidence/constructor-inference-20261122/logs/constructor-inference-editor-first-implementation.log"
+    },
+    {
+      "log": "target/constructor-inference-source-only.log",
+      "sha256": "aac1123eb642879383cfd612b6f6449216aa2b72765dd2bfef17d4fdaf2de07a",
+      "preserved_log": "benchmarks/private-evidence/constructor-inference-20261122/logs/constructor-inference-source-only.log"
+    },
+    {
+      "log": "target/constructor-inference-editor-growth-red.log",
+      "sha256": "0b285d6ea1bd83d43834d75fb7c8645bb522beb21f631dfbaff64d172bba3dbc",
+      "preserved_log": "benchmarks/private-evidence/constructor-inference-20261122/logs/constructor-inference-editor-growth-red.log"
+    },
+    {
+      "log": "target/constructor-inference-editor-corrected-baseline-red.log",
+      "sha256": "35c2ae50adf282f96cbf1c6d5f29272bda790fb04094d2253943ea9d43b35f20",
+      "preserved_log": "benchmarks/private-evidence/constructor-inference-20261122/logs/constructor-inference-editor-corrected-baseline-red.log"
+    }
+  ],
+  "limits": [
+    "Bare cases require an expected nominal owner; locals and explicit aliases take precedence.",
+    "No global case search, function signature inference or generic-call return-context inference.",
+    "Underconstrained constructors require annotations or explicit arguments.",
+    "Source-only elaboration; checked artifacts require concrete constructors.",
+    "No new runtime, dependency or publication."
+  ],
+  "agent_outcomes": {
+    "construction_quality": null,
+    "comprehension": null,
+    "total_tokens": null
+  },
+  "runtime_speed_comparison": null
+}

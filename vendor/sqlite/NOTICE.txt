@@ -1,0 +1,8 @@
+SQLite 3.54.1 source distribution
+Official project: https://www.sqlite.org/
+Source and licensing: https://www.sqlite.org/copyright.html
+
+The upstream source headers dedicate this code to the public domain and retain the authors' original
+notices. Those headers remain unchanged in sqlite3.c and sqlite3.h. Lobo's adapter and build profile are
+separate code. This distribution is not an SQLite endorsement or a claim that the complete upstream test
+suite was executed. Exact source archive and file digests are in provenance.json.

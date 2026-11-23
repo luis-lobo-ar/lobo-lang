@@ -1,0 +1,890 @@
+{
+  "name": "Lobo",
+  "scopeName": "source.lobo",
+  "patterns": [
+    {
+      "include": "#compact-projection"
+    },
+    {
+      "include": "#comments"
+    },
+    {
+      "include": "#strings"
+    },
+    {
+      "include": "#imports"
+    },
+    {
+      "include": "#operator-binding"
+    },
+    {
+      "include": "#generic-declaration"
+    },
+    {
+      "include": "#declarations"
+    },
+    {
+      "include": "#annotations"
+    },
+    {
+      "include": "#fold"
+    },
+    {
+      "include": "#while"
+    },
+    {
+      "include": "#actions"
+    },
+    {
+      "include": "#list-operation"
+    },
+    {
+      "include": "#list-type"
+    },
+    {
+      "include": "#native-operation"
+    },
+    {
+      "include": "#buffer-operation"
+    },
+    {
+      "include": "#generic-call"
+    },
+    {
+      "include": "#variant-constructor"
+    },
+    {
+      "include": "#match"
+    },
+    {
+      "include": "#record-constructor"
+    },
+    {
+      "include": "#field-selection"
+    },
+    {
+      "include": "#type-references"
+    },
+    {
+      "include": "#types"
+    },
+    {
+      "include": "#keywords"
+    },
+    {
+      "include": "#booleans"
+    },
+    {
+      "include": "#result"
+    },
+    {
+      "include": "#numbers"
+    },
+    {
+      "include": "#calls"
+    },
+    {
+      "include": "#operators"
+    },
+    {
+      "include": "#punctuation"
+    },
+    {
+      "include": "#identifiers"
+    }
+  ],
+  "repository": {
+    "compact-projection": {
+      "patterns": [
+        {
+          "include": "#comments"
+        },
+        {
+          "include": "#strings"
+        },
+        {
+          "include": "#generic-declaration"
+        },
+        {
+          "match": "\\b(fn)\\s+([A-Za-z_][A-Za-z0-9_]*)",
+          "captures": {
+            "1": {
+              "name": "storage.type.function.lobo"
+            },
+            "2": {
+              "name": "entity.name.function.lobo"
+            }
+          }
+        },
+        {
+          "begin": "\\b(use)\\s+([A-Za-z_][A-Za-z0-9_]*)\\s*\\{",
+          "end": "\\}",
+          "beginCaptures": {
+            "1": {
+              "name": "keyword.control.import.lobo"
+            },
+            "2": {
+              "name": "entity.name.namespace.lobo"
+            }
+          },
+          "patterns": [
+            {
+              "include": "#comments"
+            },
+            {
+              "match": "\\b[A-Za-z_][A-Za-z0-9_]*\\b",
+              "name": "entity.name.import.lobo"
+            },
+            {
+              "include": "#punctuation"
+            }
+          ]
+        },
+        {
+          "begin": "\\b(identities)\\s*\\{",
+          "end": "\\}",
+          "beginCaptures": {
+            "1": {
+              "name": "storage.type.metadata.lobo"
+            }
+          },
+          "patterns": [
+            {
+              "include": "#comments"
+            },
+            {
+              "include": "#strings"
+            },
+            {
+              "include": "#punctuation"
+            },
+            {
+              "include": "#identifiers"
+            }
+          ]
+        },
+        {
+          "match": "\\bjson(?=\\s*\\{)",
+          "name": "support.function.json.lobo"
+        },
+        {
+          "match": "\\bmatch(?=\\s+Native\\s*::\\s*[A-Za-z_][A-Za-z0-9_]*\\s*\\()",
+          "name": "keyword.control.conditional.lobo"
+        },
+        {
+          "match": "\\bmatch(?=\\s+(?:[A-Za-z_][A-Za-z0-9_]*(?:\\([^()\\r\\n]*\\))?|\\([^()\\r\\n]*\\))\\s*\\{)",
+          "name": "keyword.control.conditional.lobo"
+        },
+        {
+          "match": "=>",
+          "name": "keyword.operator.lobo"
+        },
+        {
+          "match": "\\b([A-Za-z_][A-Za-z0-9_]*)(\\.)\\s*([A-Za-z_][A-Za-z0-9_]*)(?=\\s*\\()",
+          "captures": {
+            "1": {
+              "name": "entity.name.namespace.lobo"
+            },
+            "2": {
+              "name": "punctuation.accessor.lobo"
+            },
+            "3": {
+              "name": "entity.name.function.lobo"
+            }
+          }
+        }
+      ]
+    },
+    "operator-binding": {
+      "begin": "\\b(operator)\\s+(?=[+*/%\\-]\\s*\\()",
+      "end": ";",
+      "beginCaptures": {
+        "1": {
+          "name": "storage.type.operator.lobo"
+        }
+      },
+      "patterns": [
+        {
+          "include": "#comments"
+        },
+        {
+          "begin": "=",
+          "end": "(?=;)",
+          "beginCaptures": {
+            "0": {
+              "name": "keyword.operator.lobo"
+            }
+          },
+          "patterns": [
+            {
+              "include": "#comments"
+            },
+            {
+              "match": "\\b[A-Za-z_][A-Za-z0-9_]*\\b",
+              "name": "entity.name.function.lobo"
+            }
+          ]
+        },
+        {
+          "include": "#list-type"
+        },
+        {
+          "include": "#types"
+        },
+        {
+          "match": "\\b[A-Za-z_][A-Za-z0-9_]*\\b",
+          "name": "entity.name.type.lobo"
+        },
+        {
+          "include": "#operators"
+        },
+        {
+          "include": "#punctuation"
+        }
+      ]
+    },
+    "generic-declaration": {
+      "begin": "\\b(function|fn)\\s+([A-Za-z_][A-Za-z0-9_]*)\\s*(<)",
+      "end": ">",
+      "beginCaptures": {
+        "1": {
+          "name": "storage.type.function.lobo"
+        },
+        "2": {
+          "name": "entity.name.function.lobo"
+        },
+        "3": {
+          "name": "punctuation.definition.typeparameters.begin.lobo"
+        }
+      },
+      "endCaptures": {
+        "0": {
+          "name": "punctuation.definition.typeparameters.end.lobo"
+        }
+      },
+      "patterns": [
+        {
+          "include": "#comments"
+        },
+        {
+          "match": "\\b[A-Za-z_][A-Za-z0-9_]*\\b",
+          "name": "entity.name.type.lobo"
+        },
+        {
+          "include": "#punctuation"
+        }
+      ]
+    },
+    "generic-call": {
+      "begin": "\\b([A-Za-z_][A-Za-z0-9_]*)\\s*(::)\\s*(<)",
+      "end": ">",
+      "beginCaptures": {
+        "1": {
+          "name": "entity.name.function.lobo"
+        },
+        "2": {
+          "name": "punctuation.accessor.lobo"
+        },
+        "3": {
+          "name": "punctuation.definition.typeparameters.begin.lobo"
+        }
+      },
+      "endCaptures": {
+        "0": {
+          "name": "punctuation.definition.typeparameters.end.lobo"
+        }
+      },
+      "patterns": [
+        {
+          "include": "#comments"
+        },
+        {
+          "include": "#list-type"
+        },
+        {
+          "include": "#native-operation"
+        },
+        {
+          "include": "#types"
+        },
+        {
+          "match": "\\b[A-Za-z_][A-Za-z0-9_]*\\b",
+          "name": "entity.name.type.lobo"
+        },
+        {
+          "include": "#punctuation"
+        }
+      ]
+    },
+    "comments": {
+      "name": "comment.line.double-slash.lobo",
+      "begin": "//",
+      "end": "$",
+      "beginCaptures": {
+        "0": {
+          "name": "punctuation.definition.comment.lobo"
+        }
+      }
+    },
+    "strings": {
+      "name": "string.quoted.double.lobo",
+      "begin": "\"",
+      "end": "\"|(?=$)",
+      "beginCaptures": {
+        "0": {
+          "name": "punctuation.definition.string.begin.lobo"
+        }
+      },
+      "endCaptures": {
+        "0": {
+          "name": "punctuation.definition.string.end.lobo"
+        }
+      },
+      "patterns": [
+        {
+          "match": "\\\\(?:[\"\\\\/bfnrt]|u[0-9A-Fa-f]{4})",
+          "name": "constant.character.escape.lobo"
+        },
+        {
+          "match": "\\\\.",
+          "name": "invalid.illegal.escape.lobo"
+        }
+      ]
+    },
+    "declarations": {
+      "patterns": [
+        {
+          "begin": "\\b(variant)\\s+([A-Za-z_][A-Za-z0-9_]*)",
+          "end": "\\}",
+          "beginCaptures": {
+            "1": {
+              "name": "storage.type.variant.lobo"
+            },
+            "2": {
+              "name": "entity.name.type.lobo"
+            }
+          },
+          "endCaptures": {
+            "0": {
+              "name": "punctuation.section.block.end.lobo"
+            }
+          },
+          "patterns": [
+            {
+              "include": "#comments"
+            },
+            {
+              "include": "#annotations"
+            },
+            {
+              "include": "#strings"
+            },
+            {
+              "begin": "\\b([A-Za-z_][A-Za-z0-9_]*)\\s*(\\()",
+              "end": "\\)",
+              "beginCaptures": {
+                "1": {
+                  "name": "entity.name.constant.lobo"
+                },
+                "2": {
+                  "name": "punctuation.section.group.begin.lobo"
+                }
+              },
+              "endCaptures": {
+                "0": {
+                  "name": "punctuation.section.group.end.lobo"
+                }
+              },
+              "patterns": [
+                {
+                  "include": "#comments"
+                },
+                {
+                  "include": "#list-type"
+                },
+                {
+                  "include": "#native-operation"
+                },
+                {
+                  "include": "#types"
+                },
+                {
+                  "match": "\\b[A-Za-z_][A-Za-z0-9_]*\\b",
+                  "name": "entity.name.type.lobo"
+                }
+              ]
+            },
+            {
+              "match": "\\b[A-Za-z_][A-Za-z0-9_]*\\b",
+              "name": "entity.name.constant.lobo"
+            },
+            {
+              "include": "#punctuation"
+            }
+          ]
+        },
+        {
+          "begin": "\\b(record)\\s+([A-Za-z_][A-Za-z0-9_]*)",
+          "end": "\\}",
+          "beginCaptures": {
+            "1": {
+              "name": "storage.type.record.lobo"
+            },
+            "2": {
+              "name": "entity.name.type.lobo"
+            }
+          },
+          "endCaptures": {
+            "0": {
+              "name": "punctuation.section.block.end.lobo"
+            }
+          },
+          "patterns": [
+            {
+              "include": "#comments"
+            },
+            {
+              "include": "#annotations"
+            },
+            {
+              "include": "#strings"
+            },
+            {
+              "include": "#field-label"
+            },
+            {
+              "include": "#list-type"
+            },
+            {
+              "include": "#type-references"
+            },
+            {
+              "include": "#types"
+            },
+            {
+              "include": "#punctuation"
+            }
+          ]
+        },
+        {
+          "match": "\\b(module)\\s+([A-Za-z_][A-Za-z0-9_]*)",
+          "captures": {
+            "1": {
+              "name": "storage.type.module.lobo"
+            },
+            "2": {
+              "name": "entity.name.namespace.lobo"
+            }
+          }
+        },
+        {
+          "match": "\\b(function)\\s+([A-Za-z_][A-Za-z0-9_]*)",
+          "captures": {
+            "1": {
+              "name": "storage.type.function.lobo"
+            },
+            "2": {
+              "name": "entity.name.function.lobo"
+            }
+          }
+        }
+      ]
+    },
+    "annotations": {
+      "match": "(@)\\s*(id)\\b",
+      "captures": {
+        "1": {
+          "name": "punctuation.definition.annotation.lobo"
+        },
+        "2": {
+          "name": "entity.name.function.annotation.lobo"
+        }
+      }
+    },
+    "imports": {
+      "match": "\\b(import)\\s+([A-Za-z_][A-Za-z0-9_]*)(?=\\s*@id\\s*\\()",
+      "captures": {
+        "1": {
+          "name": "keyword.control.import.lobo"
+        },
+        "2": {
+          "name": "entity.name.import.lobo"
+        }
+      }
+    },
+    "while": {
+      "match": "\\b(while)\\s*(\\()\\s*([A-Za-z_][A-Za-z0-9_]*)\\s*(:)",
+      "captures": {
+        "1": {
+          "name": "keyword.control.loop.lobo"
+        },
+        "2": {
+          "name": "punctuation.section.group.begin.lobo"
+        },
+        "3": {
+          "name": "variable.other.lobo"
+        },
+        "4": {
+          "name": "punctuation.separator.lobo"
+        }
+      }
+    },
+    "fold": {
+      "match": "\\b(fold)\\s*(\\()\\s*([A-Za-z_][A-Za-z0-9_]*)\\s+(in)\\b",
+      "captures": {
+        "1": {
+          "name": "keyword.control.loop.lobo"
+        },
+        "2": {
+          "name": "punctuation.section.group.begin.lobo"
+        },
+        "3": {
+          "name": "variable.other.lobo"
+        },
+        "4": {
+          "name": "keyword.control.loop.lobo"
+        }
+      }
+    },
+    "actions": {
+      "begin": "(?:(->)\\s*([A-Za-z_][A-Za-z0-9_]*)\\s+|^\\s*)(actions)\\s*(\\{)",
+      "end": "\\}",
+      "beginCaptures": {
+        "1": {
+          "name": "keyword.operator.lobo"
+        },
+        "2": {
+          "name": "support.type.lobo"
+        },
+        "3": {
+          "name": "keyword.control.action.lobo"
+        },
+        "4": {
+          "name": "punctuation.section.block.begin.lobo"
+        }
+      },
+      "endCaptures": {
+        "0": {
+          "name": "punctuation.section.block.end.lobo"
+        }
+      },
+      "patterns": [
+        {
+          "include": "#comments"
+        },
+        {
+          "match": "\\b[A-Za-z_][A-Za-z0-9_]*(?:\\s*\\.\\s*[A-Za-z_][A-Za-z0-9_]*)+\\b",
+          "name": "support.constant.action.lobo"
+        },
+        {
+          "match": "[,.]",
+          "name": "punctuation.separator.lobo"
+        }
+      ]
+    },
+    "record-constructor": {
+      "begin": "\\b([A-Za-z_][A-Za-z0-9_]*)(\\s*)(\\{)(?=\\s*[A-Za-z_][A-Za-z0-9_]*\\s*:(?!:))",
+      "end": "\\}",
+      "beginCaptures": {
+        "1": {
+          "name": "entity.name.type.lobo"
+        },
+        "3": {
+          "name": "punctuation.section.block.begin.lobo"
+        }
+      },
+      "endCaptures": {
+        "0": {
+          "name": "punctuation.section.block.end.lobo"
+        }
+      },
+      "patterns": [
+        {
+          "include": "#field-label"
+        },
+        {
+          "include": "$self"
+        }
+      ]
+    },
+    "variant-constructor": {
+      "match": "\\b([A-Za-z_][A-Za-z0-9_]*)\\s*(::)\\s*([A-Za-z_][A-Za-z0-9_]*)",
+      "captures": {
+        "1": {
+          "name": "entity.name.type.lobo"
+        },
+        "2": {
+          "name": "punctuation.accessor.lobo"
+        },
+        "3": {
+          "name": "entity.name.constant.lobo"
+        }
+      }
+    },
+    "native-operation": {
+      "patterns": [
+        {
+          "match": "\\b(Native)\\s*(::)\\s*(Capability|Listener|Stream|CapabilityResult|I64Result|BoolResult|BytesResult|ListenerResult|StreamResult|SqliteCapability|Database|Statement|SqliteCapabilityResult|DatabaseResult|StatementResult|TextResult|F64Result)\\b",
+          "captures": {
+            "1": {
+              "name": "support.type.lobo"
+            },
+            "2": {
+              "name": "punctuation.accessor.lobo"
+            },
+            "3": {
+              "name": "support.type.lobo"
+            }
+          }
+        },
+        {
+          "match": "\\b(Native)\\s*(::)\\s*(abi_version|roundtrip_i64|roundtrip_bool|copy_bytes|capability|restrict_capability|monotonic_ms|random_bytes|listen|connect|accept|port|read|write|shutdown_write|close_listener|close_stream|sqlite_capability|sqlite_restrict|sqlite_open|sqlite_close|sqlite_prepare|sqlite_bind_null|sqlite_bind_i64|sqlite_bind_f64|sqlite_bind_text|sqlite_bind_bytes|sqlite_step|sqlite_column_count|sqlite_column_type|sqlite_column_i64|sqlite_column_f64|sqlite_column_text|sqlite_column_bytes|sqlite_finalize|sqlite_begin|sqlite_commit|sqlite_rollback|sqlite_changes)\\b",
+          "captures": {
+            "1": {
+              "name": "support.type.lobo"
+            },
+            "2": {
+              "name": "punctuation.accessor.lobo"
+            },
+            "3": {
+              "name": "support.function.native.lobo"
+            }
+          }
+        }
+      ]
+    },
+    "buffer-operation": {
+      "match": "\\b(Bytes|Text|F64)\\s*(::)\\s*(empty|length|at|slice|push|concat|from_list|bytes|valid|from_bytes|from_i64|to_i64|from_bits|to_bits|is_finite|is_nan)\\b",
+      "captures": {
+        "1": {
+          "name": "support.type.lobo"
+        },
+        "2": {
+          "name": "punctuation.accessor.lobo"
+        },
+        "3": {
+          "name": "support.function.buffer.lobo"
+        }
+      }
+    },
+    "list-type": {
+      "begin": "\\b(List)\\s*(<)",
+      "end": ">",
+      "beginCaptures": {
+        "1": {
+          "name": "support.type.lobo"
+        },
+        "2": {
+          "name": "punctuation.definition.typeparameters.begin.lobo"
+        }
+      },
+      "endCaptures": {
+        "0": {
+          "name": "punctuation.definition.typeparameters.end.lobo"
+        }
+      },
+      "patterns": [
+        {
+          "include": "#comments"
+        },
+        {
+          "include": "#list-type"
+        },
+        {
+          "include": "#native-operation"
+        },
+        {
+          "include": "#types"
+        },
+        {
+          "match": "\\b[A-Za-z_][A-Za-z0-9_]*\\b",
+          "name": "entity.name.type.lobo"
+        }
+      ]
+    },
+    "list-operation": {
+      "patterns": [
+        {
+          "begin": "\\b(List)\\s*(::)\\s*(empty)\\s*(<)",
+          "end": ">",
+          "beginCaptures": {
+            "1": {
+              "name": "support.type.lobo"
+            },
+            "2": {
+              "name": "punctuation.accessor.lobo"
+            },
+            "3": {
+              "name": "support.function.list.lobo"
+            },
+            "4": {
+              "name": "punctuation.definition.typeparameters.begin.lobo"
+            }
+          },
+          "endCaptures": {
+            "0": {
+              "name": "punctuation.definition.typeparameters.end.lobo"
+            }
+          },
+          "patterns": [
+            {
+              "include": "#comments"
+            },
+            {
+              "include": "#list-type"
+            },
+            {
+              "include": "#native-operation"
+            },
+            {
+              "include": "#types"
+            },
+            {
+              "match": "\\b[A-Za-z_][A-Za-z0-9_]*\\b",
+              "name": "entity.name.type.lobo"
+            }
+          ]
+        },
+        {
+          "match": "\\b(List)\\s*(::)\\s*(prepend|head|tail|length)\\b",
+          "captures": {
+            "1": {
+              "name": "support.type.lobo"
+            },
+            "2": {
+              "name": "punctuation.accessor.lobo"
+            },
+            "3": {
+              "name": "support.function.list.lobo"
+            }
+          }
+        }
+      ]
+    },
+    "match": {
+      "match": "\\bmatch(?=\\s*\\([^()\\r\\n]*\\)\\s*\\{)",
+      "name": "keyword.control.conditional.lobo"
+    },
+    "field-label": {
+      "match": "\\b[A-Za-z_][A-Za-z0-9_]*(?=\\s*:(?!:))",
+      "name": "variable.other.property.lobo"
+    },
+    "field-selection": {
+      "match": "(\\.)\\s*([A-Za-z_][A-Za-z0-9_]*)",
+      "captures": {
+        "1": {
+          "name": "punctuation.accessor.lobo"
+        },
+        "2": {
+          "name": "variable.other.property.lobo"
+        }
+      }
+    },
+    "type-references": {
+      "match": "(?:(->)|(:))\\s*((?!Native\\s*::)(?!(?:I64|F64|Bool|List|Bytes|Text|Fn)\\b)[A-Za-z_][A-Za-z0-9_]*)",
+      "captures": {
+        "1": {
+          "name": "keyword.operator.lobo"
+        },
+        "2": {
+          "name": "punctuation.separator.lobo"
+        },
+        "3": {
+          "name": "entity.name.type.lobo"
+        }
+      }
+    },
+    "types": {
+      "match": "\\b(?:I64|F64|Bool|List|Bytes|Text|Fn)\\b",
+      "name": "support.type.lobo"
+    },
+    "keywords": {
+      "patterns": [
+        {
+          "match": "\\bmodule\\b",
+          "name": "storage.type.module.lobo"
+        },
+        {
+          "match": "\\bfunction\\b",
+          "name": "storage.type.function.lobo"
+        },
+        {
+          "match": "\\blet\\b",
+          "name": "storage.type.lobo"
+        },
+        {
+          "match": "\\b(?:requires|ensures)\\b",
+          "name": "keyword.control.contract.lobo"
+        },
+        {
+          "match": "\\btry\\b(?=\\s*[A-Za-z_0-9\"])",
+          "name": "keyword.control.propagation.lobo"
+        },
+        {
+          "match": "\\b(?:if|else)\\b",
+          "name": "keyword.control.conditional.lobo"
+        }
+      ]
+    },
+    "booleans": {
+      "match": "\\b(?:true|false)\\b",
+      "name": "constant.language.boolean.lobo"
+    },
+    "result": {
+      "match": "\\bresult\\b",
+      "name": "variable.language.result.lobo"
+    },
+    "numbers": {
+      "patterns": [
+        {
+          "match": "\\b[0-9]+(?:\\.[0-9]+(?:[eE][+\\-]?[0-9]+)?|[eE][+\\-]?[0-9]+)\\b",
+          "name": "constant.numeric.float.lobo"
+        },
+        {
+          "match": "\\b[0-9]+\\b",
+          "name": "constant.numeric.integer.lobo"
+        }
+      ]
+    },
+    "calls": {
+      "match": "\\b[A-Za-z_][A-Za-z0-9_]*(?=\\s*\\()",
+      "name": "entity.name.function.lobo"
+    },
+    "operators": {
+      "match": "->|==|!=|<=|>=|&&|\\|\\||[+*/%<>=!&\\-]",
+      "name": "keyword.operator.lobo"
+    },
+    "punctuation": {
+      "patterns": [
+        {
+          "match": "\\{",
+          "name": "punctuation.section.block.begin.lobo"
+        },
+        {
+          "match": "\\}",
+          "name": "punctuation.section.block.end.lobo"
+        },
+        {
+          "match": "\\(",
+          "name": "punctuation.section.group.begin.lobo"
+        },
+        {
+          "match": "\\)",
+          "name": "punctuation.section.group.end.lobo"
+        },
+        {
+          "match": ";",
+          "name": "punctuation.terminator.statement.lobo"
+        },
+        {
+          "match": "[:,]",
+          "name": "punctuation.separator.lobo"
+        }
+      ]
+    },
+    "identifiers": {
+      "match": "\\b[A-Za-z_][A-Za-z0-9_]*\\b",
+      "name": "variable.other.lobo"
+    }
+  }
+}

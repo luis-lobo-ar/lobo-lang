@@ -17,7 +17,7 @@ Lobo should therefore optimize for:
 
 - unambiguous program structure;
 - bounded retrieval of relevant context;
-- explicit state, effects, permissions, and uncertainty;
+- explicit state, actions, permissions, and uncertainty;
 - small semantic mutations with precise impact analysis;
 - fast counterexamples and machine-readable diagnostics;
 - replayable evidence for every accepted change;
@@ -27,6 +27,11 @@ A compact binary format may eventually improve storage or transmission, but byte
 problems. Execution format and development interface are separate concerns.
 
 ## Product boundary
+
+Current development priority: establish a small general-purpose language core before expanding the ecosystem
+or workspace services. This changes sequencing, not the long-term thesis; see
+[the language-completeness goal](docs/language-completeness.md) and
+[decision 0014](decisions/0014-language-first-development.md).
 
 Lobo is the combination of:
 
@@ -81,7 +86,7 @@ permission requests. A novel syntax without measurable workflow gains is not suc
 - Automatically granting production or external-write authority.
 - Hiding behavior from human operators.
 - Optimizing token density before correctness and inspectability.
-- Supporting unrestricted metaprogramming or implicit ambient effects.
+- Supporting unrestricted metaprogramming or implicit ambient resource access.
 
 ## Open research questions
 

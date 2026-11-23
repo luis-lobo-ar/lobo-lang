@@ -1,0 +1,23 @@
+// Executable Core v0.3 action-bound example. demo.observe is a conservative
+// label, NOT a real host operation: this program has no external resource access.
+module action_demo;
+
+fn increment(n: I64) -> I64
+actions { demo.observe }
+requires { n < 9223372036854775807 }
+ensures { result == n + 1 }
+{
+  n + 1
+}
+
+fn pipeline(n: I64) -> I64
+actions { demo.observe }
+{
+  increment(n)
+}
+
+identities {
+  module: "example.actions",
+  increment: "example.actions.increment",
+  pipeline: "example.actions.pipeline"
+}

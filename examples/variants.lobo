@@ -1,0 +1,30 @@
+module alternatives;
+
+variant Quotient {
+  Ok(I64), ZeroDivisor, Overflow
+}
+
+fn divide(a: I64, b: I64) -> Quotient
+ensures {
+  match result {
+    Ok(n) => b != 0,
+    ZeroDivisor => b == 0,
+    Overflow => a == -9223372036854775808 && b == -1
+  }
+}
+{
+  if b == 0 { ZeroDivisor } else {
+    if a == -9223372036854775808 && b == -1 { Overflow } else { Ok(a / b) }
+  }
+}
+
+fn fallback(q: Quotient) -> I64 {
+  match q { Ok(n) => n, ZeroDivisor => 0, Overflow => -1 }
+}
+
+identities {
+  module: "example.variants",
+  Quotient: "example.variants.quotient",
+  divide: "example.variants.divide",
+  fallback: "example.variants.fallback"
+}

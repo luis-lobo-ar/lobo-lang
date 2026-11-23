@@ -36,7 +36,7 @@ can cite them.
 ### 2. Acquire context
 
 The agent asks the context engine a specific question with a budget. The returned package contains relevant
-symbols, governing contracts, effect boundaries, callers, tests, decisions, failures, and known uncertainty. It
+symbols, governing contracts, action boundaries, callers, tests, decisions, failures, and known uncertainty. It
 also declares important material omitted because of the budget.
 
 ### 3. Begin a transaction
@@ -79,7 +79,7 @@ The agent can revise or revert individual operations without discarding the tran
 Checks run from narrow to broad:
 
 1. operation and graph validity;
-2. type and effect checks;
+2. type and action checks;
 3. changed contracts and examples;
 4. affected dependency closure;
 5. compatibility and policy gates;
@@ -100,7 +100,7 @@ turn file ownership into the conflict model.
 Merge analysis has three levels:
 
 1. **Structural:** Can both operation logs apply to the same graph?
-2. **Contractual:** Do their combined contracts and effects remain consistent?
+2. **Contractual:** Do their combined contracts and actions remain consistent?
 3. **Behavioral:** Does combined verification satisfy all affected obligations?
 
 Two operations on the same declaration may commute, while operations in different modules may conflict through a
@@ -149,6 +149,6 @@ projection.render
 - The agent cannot execute its own proposed tool call without host validation.
 - Verification evidence names the exact program and environment checked.
 - A context summary never silently becomes canonical program state.
-- External effects are separate from local program mutation.
+- External actions are separate from local program mutation.
 - “Unknown” is represented explicitly rather than converted into success.
 

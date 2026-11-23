@@ -1,0 +1,211 @@
+{
+  "format": "lobo-sqlite-driver-result/0.1",
+  "date": "2026-11-23",
+  "status": "passed",
+  "compiler": "1.9.0",
+  "extension": "1.9.0",
+  "language": "core/1.9",
+  "native_abi": 1,
+  "sqlite_extension": 1,
+  "sqlite_version": "3.54.1",
+  "repository": "https://github.com/luis-lobo-ar/lobo-lang",
+  "repository_visibility": "private",
+  "test_counts": {
+    "rust": 286,
+    "editor": 168,
+    "sqlite_adapter_linux_cases": 21,
+    "sqlite_native_execution_modes": 4,
+    "sqlite_windows_provider_cases": 20,
+    "database_operations_per_platform": 10,
+    "read_only_rest_restarts_per_platform": 2,
+    "http_scenarios_per_platform": 35,
+    "windows_default_connections": 128,
+    "python_benchmark_tools": 31,
+    "node_source_tools": 12
+  },
+  "sqlite_model": {
+    "status": "pass",
+    "configurations": 5,
+    "baseline_distinct": 3973,
+    "baseline_generated": 16450,
+    "queued": 0,
+    "intended_invariant_violations": 4,
+    "c_mutant_rejections": 8,
+    "coverage": {
+      "format": "lobo-sqlite-formal-coverage/0.1",
+      "reviewed_head": "39ec4662869ae992a508a06cf2f3a9cf36240220",
+      "working_tree_note": "Includes uncommitted work beyond HEAD. Exact fingerprints identify reviewed inputs; no clean commit or refinement proof is claimed.",
+      "files": {
+        "src/native_sqlite.c": {
+          "sha256": "7c686679a4082d02a1d722782a3ee832b421059ea06bfc6efcb52d98bde54538"
+        },
+        "src/sqlite_api.h": {
+          "sha256": "6544115ba3bac924c09d7c5f94d7cd72c30c6708304331a3dd9e2f98c40be6ee"
+        },
+        "src/sqlite_profile.h": {
+          "sha256": "5fe390bbeb43b6f440498a8703098da9e3ceda44038f62fee01b8ee219040fb1"
+        },
+        "vendor/sqlite/sqlite3.c": {
+          "sha256": "0c657666d819f261cc4007526ad57e1669de9949df7a8ea847aa284a2bf0ee52"
+        },
+        "vendor/sqlite/sqlite3.h": {
+          "sha256": "d6c84557261893439b341d2e6c35187ae3ea24fbfd843ad94616f72d89242b8c"
+        },
+        "tests/native/sqlite_harness.c": {
+          "sha256": "53701c22d4f05af04d0807798f2ab2d125171167aeab9a3c033abe26c70b2dcd"
+        },
+        "verification/sqlite/Lifecycle.tla": {
+          "sha256": "445eb74870d7dcc81247c9e0c3c1451dc6517a3e6bb7d7974856a62ad586f1ab"
+        },
+        "scripts/check-sqlite-models.py": {
+          "sha256": "5eddab3f1b7293370644b9a01eca8294bdfe88b0de7b1d1616a4f17a8c8bf3a6"
+        },
+        "verification/sqlite/configs/amplify.cfg": {
+          "sha256": "2e81e977d59bb16e00d3f0d2955ac794dfba0bdc057a53e85b32b273fe06be3e"
+        },
+        "verification/sqlite/configs/cleanup.cfg": {
+          "sha256": "0adc9b702be51da79a5169b89dab84a30717fc850a5526410c9cb3196dde9761"
+        },
+        "verification/sqlite/configs/commit.cfg": {
+          "sha256": "3c05f17e7222c2dfdacbeb95023a1354561afc72ebb7517b167703f62df90187"
+        },
+        "verification/sqlite/configs/none.cfg": {
+          "sha256": "cdda35504c010939a1c4d923b5bfa7ff93a0158006e77d0581d5cbc3ea156112"
+        },
+        "verification/sqlite/configs/persist.cfg": {
+          "sha256": "f0138fe982cf94773ab4ad661956af80fafe1cc80c7adb739aefb76a5785f416"
+        }
+      },
+      "mapping": {
+        "Open": "lobo_sqlite_open_v1 registers connection before callbacks; SQLite owns heap allocation until registration",
+        "Prepare/ReadRow/DoneStatement/Finalize": "prepare, step, finalize; owned parent token; finalization is available after query quotas are exhausted",
+        "Begin/Write/Commit/Rollback": "transaction guard requires correct autocommit state and no live statements; successful writable step is abstracted as one write; engine failures stutter at this abstraction",
+        "Derive": "restrict requires requested mask subset of parent rights; opened connection copies rights",
+        "Exit": "finalize every statement, disable progress, rollback pending transaction, close connections, release capabilities before OS/arena cleanup"
+      },
+      "bounds": {
+        "operation_budget": 8,
+        "writes": 2,
+        "connections": 1,
+        "statements": 1,
+        "rights_atoms": 3
+      },
+      "exclusions": [
+        "SQLite engine correctness and filesystem/crash durability",
+        "general 32-slot/generation cutoff proof",
+        "Windows OS behavior",
+        "C memory safety, compiler typing and ABI correctness",
+        "concurrency, secure VFS, hostile parent directory replacement",
+        "automatic implementation refinement or liveness proof"
+      ]
+    }
+  },
+  "prior_native_models": {
+    "status": "pass",
+    "baseline_models": 2,
+    "broken_models": 11,
+    "c_replays": 22,
+    "c_mutant_rejections": 22,
+    "source_map": {
+      "status": "pass",
+      "reviewed_files": 29,
+      "stale": [],
+      "note": "Existing model checker has no --verify-map mode; checked the same pinned hashes directly."
+    }
+  },
+  "preservation": {
+    "status": "pass",
+    "prior_paper_entries": 29,
+    "v1_artifacts": 86,
+    "protected_current_inputs": 22,
+    "failures": []
+  },
+  "modernization": {
+    "files": 43,
+    "rewrites": 0,
+    "compiler_calls": 137
+  },
+  "artifacts": [
+    {
+      "path": "target/release/lobo",
+      "bytes": 11244784,
+      "sha256": "c2d3351484c2fdc3a4128ed385297d9bb74dfba06d934fcab534f56af7587046"
+    },
+    {
+      "path": "target/release/lobo-test",
+      "bytes": 10988584,
+      "sha256": "c9bb2040bb260a1c3063cd1286746cd820edfcebee4dc08cf1761ddfe067999d"
+    },
+    {
+      "path": "dist/lobo-syntax-1.9.0.vsix",
+      "bytes": 40790,
+      "sha256": "72f14091d1d133dc1f23c61cfd61c2e4f91341e30be7fcaa5f5631c9c8f7906e"
+    },
+    {
+      "path": "dist/lobo-sqlite-rest-1.9.0-linux-x86_64/lobo-sqlite-rest",
+      "bytes": 1432560,
+      "sha256": "809de40335f81a10a3174054bb0b08d0173f1f856b287855c704d35e7e0472ea"
+    },
+    {
+      "path": "dist/lobo-sqlite-rest-1.9.0-windows-x64/LoboSqliteRest.exe",
+      "bytes": 1397248,
+      "sha256": "b80a027fd38e72d0528d0be4992550db466c17f99d737994bd3c73db47c9b337"
+    },
+    {
+      "path": "dist/lobo-sqlite-rest-1.9.0-windows-x64/LoboSqliteRest-windows-x64.zip",
+      "bytes": 767354,
+      "sha256": "82d7586f76782b53defe43180befd16c3f4dbfcec03b4ef1609b5950a23b6e35"
+    }
+  ],
+  "windows_build": {
+    "imports": [
+      "WS2_32.dll",
+      "api-ms-win-crt-stdio-l1-1-0.dll",
+      "api-ms-win-crt-runtime-l1-1-0.dll",
+      "api-ms-win-crt-locale-l1-1-0.dll",
+      "api-ms-win-crt-time-l1-1-0.dll",
+      "api-ms-win-crt-heap-l1-1-0.dll",
+      "api-ms-win-crt-private-l1-1-0.dll",
+      "api-ms-win-crt-string-l1-1-0.dll",
+      "api-ms-win-crt-convert-l1-1-0.dll",
+      "KERNEL32.dll",
+      "api-ms-win-crt-filesystem-l1-1-0.dll",
+      "api-ms-win-crt-math-l1-1-0.dll",
+      "api-ms-win-crt-environment-l1-1-0.dll"
+    ],
+    "actual_windows_execution": null,
+    "tested_on": "Wine 9 compatibility layer"
+  },
+  "verification_commands": [
+    "cargo test --locked --no-fail-fast",
+    "cargo clippy --locked --all-targets -- -D warnings",
+    "cargo fmt --all --check",
+    "npm --prefix editors/vscode test",
+    "env LOBO_VSCODE_EXECUTABLE=/usr/share/code/code xvfb-run -a npm --prefix editors/vscode run test:host",
+    "npm --prefix editors/vscode run package",
+    "python3 scripts/check-sqlite-models.py --out target/sqlite-driver/lifecycle-corrected",
+    "python3 scripts/check-native-models.py --out target/sqlite-driver/existing-native-models",
+    "node --test scripts/test-modernize-source.mjs scripts/test-migrate-syntax.mjs",
+    "python3 -m unittest discover -s benchmarks -p test_*.py",
+    "./scripts/check.sh",
+    "python3 scripts/test-sqlite-executable.py --exe dist/lobo-sqlite-rest-1.9.0-linux-x86_64/lobo-sqlite-rest --out target/sqlite-driver/linux-executable-final",
+    "xvfb-run -a python3 scripts/test-sqlite-executable.py --exe dist/lobo-sqlite-rest-1.9.0-windows-x64/LoboSqliteRest.exe --harness target/sqlite-driver/sqlite-harness.exe --wine-prefix target/windows-snapshot/wine-prefix --out target/sqlite-driver/wine-executable-final",
+    "python3 scripts/test-native-rest.py --exe dist/lobo-sqlite-rest-1.9.0-linux-x86_64/lobo-sqlite-rest --entry example.sqlite.rest.main --entry-extra-arg Bool:true --sqlite-file /tmp/lobo-sqlite-rest-final-20261123.sqlite --out target/sqlite-driver/linux-tcp-final",
+    "xvfb-run -a python3 scripts/test-native-rest.py --exe dist/lobo-sqlite-rest-1.9.0-windows-x64/LoboSqliteRest.exe --default-launch --entry example.sqlite.rest.main --entry-extra-arg Bool:true --cwd target/sqlite-driver/windows-default-data --wine-prefix target/windows-snapshot/wine-prefix --out target/sqlite-driver/wine-default-final"
+  ],
+  "raw_evidence": "benchmarks/private-evidence/sqlite-driver-20261123",
+  "raw_evidence_manifest": {
+    "path": "benchmarks/private-evidence/sqlite-driver-20261123/manifest.json",
+    "sha256": "ce5ef4290045cea57163ddf7d3f5b566f922ff27c9ad2e10f2a0a1af2a4cd54f",
+    "files": 14,
+    "source_inputs": 570
+  },
+  "limits": [
+    "No agent/token/comprehension or speed measurements",
+    "No actual Windows hardware result",
+    "Finite lifecycle mapping, not engine/OS/automatic refinement proof",
+    "Trusted parent directories; no secure VFS/process sandbox",
+    "No concurrency/TLS/auth/remote driver/NoSQL/ORM"
+  ],
+  "staged_whitespace_review": "Historical example/register blank EOF lines and exact upstream/license/amalgamation whitespace retained; no new adapter/test implementation whitespace findings."
+}

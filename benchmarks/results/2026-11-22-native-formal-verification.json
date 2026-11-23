@@ -1,0 +1,1776 @@
+{
+  "format": "lobo-native-formal-result/0.1",
+  "date": "2026-11-22",
+  "status": "passed",
+  "compiler": "1.7.1",
+  "extension": "1.7.1",
+  "language": "core/1.7",
+  "native_abi": 1,
+  "checked_format": "lobo-checked/1.0",
+  "coverage": {
+    "path": "verification/native/coverage.json",
+    "sha256": "501a1e300b3a35b99d95c393a9b0a1d32afacbdde4a97d164d75fb48063fc1d9",
+    "reviewed_head": "39ec4662869ae992a508a06cf2f3a9cf36240220",
+    "working_tree_note": "Source includes uncommitted work beyond HEAD; exact file hashes define reviewed inputs. No commit is claimed for the models."
+  },
+  "formal_results": {
+    "format": "lobo-native-model-check/0.1",
+    "status": "pass",
+    "tlc_jar_sha256": "936a262061c914694dfd669a543be24573c45d5aa0ff20a8b96b23d01e050e88",
+    "model_results": [
+      {
+        "name": "authority",
+        "status": "pass",
+        "expected_invariant": null,
+        "generated": 31141,
+        "distinct": 11991,
+        "queued": 0,
+        "trace_states": null,
+        "action_counts": {
+          "Init": {
+            "new_states": 1,
+            "successors": 1
+          },
+          "Root": {
+            "new_states": 1,
+            "successors": 4121
+          },
+          "Derive": {
+            "new_states": 2202,
+            "successors": 6320
+          },
+          "Allocate": {
+            "new_states": 230,
+            "successors": 884
+          },
+          "Use": {
+            "new_states": 1511,
+            "successors": 7400
+          },
+          "Release": {
+            "new_states": 294,
+            "successors": 1032
+          },
+          "Exit": {
+            "new_states": 4121,
+            "successors": 4121
+          },
+          "Finished": {
+            "new_states": 3631,
+            "successors": 3631
+          },
+          "Done": {
+            "new_states": 0,
+            "successors": 3631
+          }
+        }
+      },
+      {
+        "name": "operations",
+        "status": "pass",
+        "expected_invariant": null,
+        "generated": 3061,
+        "distinct": 1815,
+        "queued": 0,
+        "trace_states": null,
+        "action_counts": {
+          "Init": {
+            "new_states": 1,
+            "successors": 1
+          },
+          "Acquire": {
+            "new_states": 1,
+            "successors": 1
+          },
+          "Connect": {
+            "new_states": 18,
+            "successors": 18
+          },
+          "Validate": {
+            "new_states": 9,
+            "successors": 9
+          },
+          "RejectPeer": {
+            "new_states": 9,
+            "successors": 9
+          },
+          "StartIO": {
+            "new_states": 9,
+            "successors": 9
+          },
+          "BeginIO": {
+            "new_states": 273,
+            "successors": 534
+          },
+          "Retry": {
+            "new_states": 174,
+            "successors": 316
+          },
+          "Timeout": {
+            "new_states": 21,
+            "successors": 33
+          },
+          "Fault": {
+            "new_states": 202,
+            "successors": 284
+          },
+          "OsFailure": {
+            "new_states": 322,
+            "successors": 466
+          },
+          "Write": {
+            "new_states": 110,
+            "successors": 126
+          },
+          "Read": {
+            "new_states": 40,
+            "successors": 64
+          },
+          "Shutdown": {
+            "new_states": 50,
+            "successors": 50
+          },
+          "Eof": {
+            "new_states": 2,
+            "successors": 2
+          },
+          "QuotaFailure": {
+            "new_states": 9,
+            "successors": 9
+          },
+          "Cleanup": {
+            "new_states": 565,
+            "successors": 565
+          },
+          "Done": {
+            "new_states": 0,
+            "successors": 565
+          }
+        }
+      },
+      {
+        "name": "authority-root",
+        "status": "expected-counterexample",
+        "expected_invariant": "EntryAuthority",
+        "generated": 4,
+        "distinct": 3,
+        "queued": 1,
+        "trace_states": 2,
+        "action_counts": {
+          "Init": {
+            "new_states": 1,
+            "successors": 1
+          },
+          "Root": {
+            "new_states": 2,
+            "successors": 6
+          },
+          "Derive": {
+            "new_states": 0,
+            "successors": 0
+          },
+          "Allocate": {
+            "new_states": 0,
+            "successors": 0
+          },
+          "Use": {
+            "new_states": 0,
+            "successors": 0
+          },
+          "Release": {
+            "new_states": 0,
+            "successors": 0
+          },
+          "Exit": {
+            "new_states": 0,
+            "successors": 0
+          },
+          "Finished": {
+            "new_states": 0,
+            "successors": 0
+          },
+          "Done": {
+            "new_states": 0,
+            "successors": 0
+          }
+        }
+      },
+      {
+        "name": "authority-amplify",
+        "status": "expected-counterexample",
+        "expected_invariant": "NoAmplification",
+        "generated": 83,
+        "distinct": 46,
+        "queued": 41,
+        "trace_states": 4,
+        "action_counts": {
+          "Init": {
+            "new_states": 2,
+            "successors": 2
+          },
+          "Root": {
+            "new_states": 1,
+            "successors": 6
+          },
+          "Derive": {
+            "new_states": 36,
+            "successors": 80
+          },
+          "Allocate": {
+            "new_states": 4,
+            "successors": 4
+          },
+          "Use": {
+            "new_states": 1,
+            "successors": 1
+          },
+          "Release": {
+            "new_states": 0,
+            "successors": 0
+          },
+          "Exit": {
+            "new_states": 2,
+            "successors": 2
+          },
+          "Finished": {
+            "new_states": 1,
+            "successors": 1
+          },
+          "Done": {
+            "new_states": 0,
+            "successors": 0
+          }
+        }
+      },
+      {
+        "name": "authority-stale",
+        "status": "expected-counterexample",
+        "expected_invariant": "ValidGeneration",
+        "generated": 12362,
+        "distinct": 3942,
+        "queued": 2329,
+        "trace_states": 6,
+        "action_counts": {
+          "Init": {
+            "new_states": 2,
+            "successors": 2
+          },
+          "Root": {
+            "new_states": 1,
+            "successors": 1059
+          },
+          "Derive": {
+            "new_states": 1157,
+            "successors": 3163
+          },
+          "Allocate": {
+            "new_states": 148,
+            "successors": 439
+          },
+          "Use": {
+            "new_states": 1015,
+            "successors": 6018
+          },
+          "Release": {
+            "new_states": 114,
+            "successors": 226
+          },
+          "Exit": {
+            "new_states": 1053,
+            "successors": 1053
+          },
+          "Finished": {
+            "new_states": 453,
+            "successors": 453
+          },
+          "Done": {
+            "new_states": 0,
+            "successors": 34
+          }
+        }
+      },
+      {
+        "name": "authority-kind",
+        "status": "expected-counterexample",
+        "expected_invariant": "ValidKind",
+        "generated": 43,
+        "distinct": 41,
+        "queued": 38,
+        "trace_states": 3,
+        "action_counts": {
+          "Init": {
+            "new_states": 2,
+            "successors": 2
+          },
+          "Root": {
+            "new_states": 1,
+            "successors": 4
+          },
+          "Derive": {
+            "new_states": 32,
+            "successors": 64
+          },
+          "Allocate": {
+            "new_states": 4,
+            "successors": 8
+          },
+          "Use": {
+            "new_states": 2,
+            "successors": 6
+          },
+          "Release": {
+            "new_states": 0,
+            "successors": 0
+          },
+          "Exit": {
+            "new_states": 1,
+            "successors": 1
+          },
+          "Finished": {
+            "new_states": 0,
+            "successors": 0
+          },
+          "Done": {
+            "new_states": 0,
+            "successors": 0
+          }
+        }
+      },
+      {
+        "name": "authority-denied",
+        "status": "expected-counterexample",
+        "expected_invariant": "NoDeniedSyscall",
+        "generated": 68,
+        "distinct": 61,
+        "queued": 56,
+        "trace_states": 4,
+        "action_counts": {
+          "Init": {
+            "new_states": 2,
+            "successors": 2
+          },
+          "Root": {
+            "new_states": 1,
+            "successors": 6
+          },
+          "Derive": {
+            "new_states": 49,
+            "successors": 67
+          },
+          "Allocate": {
+            "new_states": 6,
+            "successors": 14
+          },
+          "Use": {
+            "new_states": 1,
+            "successors": 1
+          },
+          "Release": {
+            "new_states": 0,
+            "successors": 0
+          },
+          "Exit": {
+            "new_states": 2,
+            "successors": 2
+          },
+          "Finished": {
+            "new_states": 1,
+            "successors": 1
+          },
+          "Done": {
+            "new_states": 0,
+            "successors": 0
+          }
+        }
+      },
+      {
+        "name": "authority-quota",
+        "status": "expected-counterexample",
+        "expected_invariant": "WithinQuota",
+        "generated": 6,
+        "distinct": 4,
+        "queued": 1,
+        "trace_states": 3,
+        "action_counts": {
+          "Init": {
+            "new_states": 2,
+            "successors": 2
+          },
+          "Root": {
+            "new_states": 1,
+            "successors": 6
+          },
+          "Derive": {
+            "new_states": 1,
+            "successors": 2
+          },
+          "Allocate": {
+            "new_states": 0,
+            "successors": 0
+          },
+          "Use": {
+            "new_states": 0,
+            "successors": 0
+          },
+          "Release": {
+            "new_states": 0,
+            "successors": 0
+          },
+          "Exit": {
+            "new_states": 1,
+            "successors": 1
+          },
+          "Finished": {
+            "new_states": 0,
+            "successors": 0
+          },
+          "Done": {
+            "new_states": 0,
+            "successors": 0
+          }
+        }
+      },
+      {
+        "name": "authority-wrap",
+        "status": "expected-counterexample",
+        "expected_invariant": "NoGenerationWrap",
+        "generated": 9806,
+        "distinct": 4022,
+        "queued": 2393,
+        "trace_states": 6,
+        "action_counts": {
+          "Init": {
+            "new_states": 2,
+            "successors": 2
+          },
+          "Root": {
+            "new_states": 1,
+            "successors": 1075
+          },
+          "Derive": {
+            "new_states": 1221,
+            "successors": 3529
+          },
+          "Allocate": {
+            "new_states": 148,
+            "successors": 488
+          },
+          "Use": {
+            "new_states": 1014,
+            "successors": 3042
+          },
+          "Release": {
+            "new_states": 115,
+            "successors": 228
+          },
+          "Exit": {
+            "new_states": 1069,
+            "successors": 1069
+          },
+          "Finished": {
+            "new_states": 453,
+            "successors": 453
+          },
+          "Done": {
+            "new_states": 0,
+            "successors": 34
+          }
+        }
+      },
+      {
+        "name": "authority-cleanup",
+        "status": "expected-counterexample",
+        "expected_invariant": "ExitCloses",
+        "generated": 4430,
+        "distinct": 1632,
+        "queued": 1070,
+        "trace_states": 5,
+        "action_counts": {
+          "Init": {
+            "new_states": 2,
+            "successors": 2
+          },
+          "Root": {
+            "new_states": 1,
+            "successors": 528
+          },
+          "Derive": {
+            "new_states": 434,
+            "successors": 1572
+          },
+          "Allocate": {
+            "new_states": 74,
+            "successors": 217
+          },
+          "Use": {
+            "new_states": 523,
+            "successors": 1499
+          },
+          "Release": {
+            "new_states": 39,
+            "successors": 76
+          },
+          "Exit": {
+            "new_states": 525,
+            "successors": 526
+          },
+          "Finished": {
+            "new_states": 35,
+            "successors": 70
+          },
+          "Done": {
+            "new_states": 0,
+            "successors": 1
+          }
+        }
+      },
+      {
+        "name": "operations-untracked-fault",
+        "status": "expected-counterexample",
+        "expected_invariant": "ExitCloses",
+        "generated": 5,
+        "distinct": 5,
+        "queued": 1,
+        "trace_states": 4,
+        "action_counts": {
+          "Init": {
+            "new_states": 2,
+            "successors": 2
+          },
+          "Acquire": {
+            "new_states": 1,
+            "successors": 2
+          },
+          "Connect": {
+            "new_states": 0,
+            "successors": 0
+          },
+          "Validate": {
+            "new_states": 0,
+            "successors": 0
+          },
+          "RejectPeer": {
+            "new_states": 0,
+            "successors": 0
+          },
+          "StartIO": {
+            "new_states": 0,
+            "successors": 0
+          },
+          "BeginIO": {
+            "new_states": 0,
+            "successors": 0
+          },
+          "Retry": {
+            "new_states": 0,
+            "successors": 0
+          },
+          "Timeout": {
+            "new_states": 0,
+            "successors": 0
+          },
+          "Fault": {
+            "new_states": 1,
+            "successors": 2
+          },
+          "OsFailure": {
+            "new_states": 1,
+            "successors": 1
+          },
+          "Write": {
+            "new_states": 0,
+            "successors": 0
+          },
+          "Read": {
+            "new_states": 0,
+            "successors": 0
+          },
+          "Shutdown": {
+            "new_states": 0,
+            "successors": 0
+          },
+          "Eof": {
+            "new_states": 0,
+            "successors": 0
+          },
+          "QuotaFailure": {
+            "new_states": 0,
+            "successors": 0
+          },
+          "Cleanup": {
+            "new_states": 1,
+            "successors": 2
+          },
+          "Done": {
+            "new_states": 0,
+            "successors": 0
+          }
+        }
+      },
+      {
+        "name": "operations-publish",
+        "status": "expected-counterexample",
+        "expected_invariant": "ValidatedPublication",
+        "generated": 8,
+        "distinct": 8,
+        "queued": 4,
+        "trace_states": 4,
+        "action_counts": {
+          "Init": {
+            "new_states": 2,
+            "successors": 2
+          },
+          "Acquire": {
+            "new_states": 1,
+            "successors": 2
+          },
+          "Connect": {
+            "new_states": 2,
+            "successors": 3
+          },
+          "Validate": {
+            "new_states": 1,
+            "successors": 2
+          },
+          "RejectPeer": {
+            "new_states": 0,
+            "successors": 0
+          },
+          "StartIO": {
+            "new_states": 0,
+            "successors": 0
+          },
+          "BeginIO": {
+            "new_states": 0,
+            "successors": 0
+          },
+          "Retry": {
+            "new_states": 2,
+            "successors": 2
+          },
+          "Timeout": {
+            "new_states": 0,
+            "successors": 0
+          },
+          "Fault": {
+            "new_states": 0,
+            "successors": 0
+          },
+          "OsFailure": {
+            "new_states": 1,
+            "successors": 1
+          },
+          "Write": {
+            "new_states": 0,
+            "successors": 0
+          },
+          "Read": {
+            "new_states": 0,
+            "successors": 0
+          },
+          "Shutdown": {
+            "new_states": 0,
+            "successors": 0
+          },
+          "Eof": {
+            "new_states": 0,
+            "successors": 0
+          },
+          "QuotaFailure": {
+            "new_states": 0,
+            "successors": 0
+          },
+          "Cleanup": {
+            "new_states": 0,
+            "successors": 0
+          },
+          "Done": {
+            "new_states": 0,
+            "successors": 0
+          }
+        }
+      },
+      {
+        "name": "operations-deadline",
+        "status": "expected-counterexample",
+        "expected_invariant": "FixedDeadline",
+        "generated": 6,
+        "distinct": 6,
+        "queued": 3,
+        "trace_states": 3,
+        "action_counts": {
+          "Init": {
+            "new_states": 2,
+            "successors": 2
+          },
+          "Acquire": {
+            "new_states": 1,
+            "successors": 2
+          },
+          "Connect": {
+            "new_states": 2,
+            "successors": 4
+          },
+          "Validate": {
+            "new_states": 0,
+            "successors": 0
+          },
+          "RejectPeer": {
+            "new_states": 0,
+            "successors": 0
+          },
+          "StartIO": {
+            "new_states": 0,
+            "successors": 0
+          },
+          "BeginIO": {
+            "new_states": 0,
+            "successors": 0
+          },
+          "Retry": {
+            "new_states": 2,
+            "successors": 4
+          },
+          "Timeout": {
+            "new_states": 0,
+            "successors": 0
+          },
+          "Fault": {
+            "new_states": 0,
+            "successors": 0
+          },
+          "OsFailure": {
+            "new_states": 0,
+            "successors": 0
+          },
+          "Write": {
+            "new_states": 0,
+            "successors": 0
+          },
+          "Read": {
+            "new_states": 0,
+            "successors": 0
+          },
+          "Shutdown": {
+            "new_states": 0,
+            "successors": 0
+          },
+          "Eof": {
+            "new_states": 0,
+            "successors": 0
+          },
+          "QuotaFailure": {
+            "new_states": 0,
+            "successors": 0
+          },
+          "Cleanup": {
+            "new_states": 0,
+            "successors": 0
+          },
+          "Done": {
+            "new_states": 0,
+            "successors": 0
+          }
+        }
+      }
+    ],
+    "c_replays": [
+      {
+        "case": "root",
+        "mode": "optimized",
+        "status": "pass",
+        "exit_code": 1,
+        "model_invariant": "EntryAuthority"
+      },
+      {
+        "case": "root",
+        "mode": "sanitized",
+        "status": "pass",
+        "exit_code": 1,
+        "model_invariant": "EntryAuthority"
+      },
+      {
+        "case": "amplify",
+        "mode": "optimized",
+        "status": "pass",
+        "exit_code": 0,
+        "model_invariant": "NoAmplification"
+      },
+      {
+        "case": "amplify",
+        "mode": "sanitized",
+        "status": "pass",
+        "exit_code": 0,
+        "model_invariant": "NoAmplification"
+      },
+      {
+        "case": "stale",
+        "mode": "optimized",
+        "status": "pass",
+        "exit_code": 0,
+        "model_invariant": "ValidGeneration"
+      },
+      {
+        "case": "stale",
+        "mode": "sanitized",
+        "status": "pass",
+        "exit_code": 0,
+        "model_invariant": "ValidGeneration"
+      },
+      {
+        "case": "kind",
+        "mode": "optimized",
+        "status": "pass",
+        "exit_code": 0,
+        "model_invariant": "ValidKind"
+      },
+      {
+        "case": "kind",
+        "mode": "sanitized",
+        "status": "pass",
+        "exit_code": 0,
+        "model_invariant": "ValidKind"
+      },
+      {
+        "case": "denied",
+        "mode": "optimized",
+        "status": "pass",
+        "exit_code": 0,
+        "model_invariant": "NoDeniedSyscall"
+      },
+      {
+        "case": "denied",
+        "mode": "sanitized",
+        "status": "pass",
+        "exit_code": 0,
+        "model_invariant": "NoDeniedSyscall"
+      },
+      {
+        "case": "quota",
+        "mode": "optimized",
+        "status": "pass",
+        "exit_code": 0,
+        "model_invariant": "WithinQuota"
+      },
+      {
+        "case": "quota",
+        "mode": "sanitized",
+        "status": "pass",
+        "exit_code": 0,
+        "model_invariant": "WithinQuota"
+      },
+      {
+        "case": "wrap",
+        "mode": "optimized",
+        "status": "pass",
+        "exit_code": 0,
+        "model_invariant": "NoGenerationWrap"
+      },
+      {
+        "case": "wrap",
+        "mode": "sanitized",
+        "status": "pass",
+        "exit_code": 0,
+        "model_invariant": "NoGenerationWrap"
+      },
+      {
+        "case": "cleanup",
+        "mode": "optimized",
+        "status": "pass",
+        "exit_code": 0,
+        "model_invariant": "ExitCloses"
+      },
+      {
+        "case": "cleanup",
+        "mode": "sanitized",
+        "status": "pass",
+        "exit_code": 0,
+        "model_invariant": "ExitCloses"
+      },
+      {
+        "case": "untracked-fault",
+        "mode": "optimized",
+        "status": "pass",
+        "exit_code": 1,
+        "model_invariant": "ExitCloses"
+      },
+      {
+        "case": "untracked-fault",
+        "mode": "sanitized",
+        "status": "pass",
+        "exit_code": 1,
+        "model_invariant": "ExitCloses"
+      },
+      {
+        "case": "publish",
+        "mode": "optimized",
+        "status": "pass",
+        "exit_code": 0,
+        "model_invariant": "ValidatedPublication"
+      },
+      {
+        "case": "publish",
+        "mode": "sanitized",
+        "status": "pass",
+        "exit_code": 0,
+        "model_invariant": "ValidatedPublication"
+      },
+      {
+        "case": "deadline",
+        "mode": "optimized",
+        "status": "pass",
+        "exit_code": 0,
+        "model_invariant": "FixedDeadline"
+      },
+      {
+        "case": "deadline",
+        "mode": "sanitized",
+        "status": "pass",
+        "exit_code": 0,
+        "model_invariant": "FixedDeadline"
+      }
+    ],
+    "c_mutations": [
+      {
+        "case": "root",
+        "mode": "optimized",
+        "status": "expected-rejection",
+        "exit_code": 3,
+        "model_invariant": "EntryAuthority"
+      },
+      {
+        "case": "root",
+        "mode": "sanitized",
+        "status": "expected-rejection",
+        "exit_code": 3,
+        "model_invariant": "EntryAuthority"
+      },
+      {
+        "case": "amplify",
+        "mode": "optimized",
+        "status": "expected-rejection",
+        "exit_code": 1,
+        "model_invariant": "NoAmplification"
+      },
+      {
+        "case": "amplify",
+        "mode": "sanitized",
+        "status": "expected-rejection",
+        "exit_code": 1,
+        "model_invariant": "NoAmplification"
+      },
+      {
+        "case": "stale",
+        "mode": "optimized",
+        "status": "expected-rejection",
+        "exit_code": 1,
+        "model_invariant": "ValidGeneration"
+      },
+      {
+        "case": "stale",
+        "mode": "sanitized",
+        "status": "expected-rejection",
+        "exit_code": 1,
+        "model_invariant": "ValidGeneration"
+      },
+      {
+        "case": "kind",
+        "mode": "optimized",
+        "status": "expected-rejection",
+        "exit_code": 1,
+        "model_invariant": "ValidKind"
+      },
+      {
+        "case": "kind",
+        "mode": "sanitized",
+        "status": "expected-rejection",
+        "exit_code": 1,
+        "model_invariant": "ValidKind"
+      },
+      {
+        "case": "denied",
+        "mode": "optimized",
+        "status": "expected-rejection",
+        "exit_code": 1,
+        "model_invariant": "NoDeniedSyscall"
+      },
+      {
+        "case": "denied",
+        "mode": "sanitized",
+        "status": "expected-rejection",
+        "exit_code": 1,
+        "model_invariant": "NoDeniedSyscall"
+      },
+      {
+        "case": "quota",
+        "mode": "optimized",
+        "status": "expected-rejection",
+        "exit_code": 1,
+        "model_invariant": "WithinQuota"
+      },
+      {
+        "case": "quota",
+        "mode": "sanitized",
+        "status": "expected-rejection",
+        "exit_code": 1,
+        "model_invariant": "WithinQuota"
+      },
+      {
+        "case": "wrap",
+        "mode": "optimized",
+        "status": "expected-rejection",
+        "exit_code": 1,
+        "model_invariant": "NoGenerationWrap"
+      },
+      {
+        "case": "wrap",
+        "mode": "sanitized",
+        "status": "expected-rejection",
+        "exit_code": 1,
+        "model_invariant": "NoGenerationWrap"
+      },
+      {
+        "case": "cleanup",
+        "mode": "optimized",
+        "status": "expected-rejection",
+        "exit_code": 1,
+        "model_invariant": "ExitCloses"
+      },
+      {
+        "case": "cleanup",
+        "mode": "sanitized",
+        "status": "expected-rejection",
+        "exit_code": 1,
+        "model_invariant": "ExitCloses"
+      },
+      {
+        "case": "untracked-fault",
+        "mode": "optimized",
+        "status": "expected-rejection",
+        "exit_code": 2,
+        "model_invariant": "ExitCloses"
+      },
+      {
+        "case": "untracked-fault",
+        "mode": "sanitized",
+        "status": "expected-rejection",
+        "exit_code": 2,
+        "model_invariant": "ExitCloses"
+      },
+      {
+        "case": "publish",
+        "mode": "optimized",
+        "status": "expected-rejection",
+        "exit_code": 1,
+        "model_invariant": "ValidatedPublication"
+      },
+      {
+        "case": "publish",
+        "mode": "sanitized",
+        "status": "expected-rejection",
+        "exit_code": 1,
+        "model_invariant": "ValidatedPublication"
+      },
+      {
+        "case": "deadline",
+        "mode": "optimized",
+        "status": "expected-rejection",
+        "exit_code": 1,
+        "model_invariant": "FixedDeadline"
+      },
+      {
+        "case": "deadline",
+        "mode": "sanitized",
+        "status": "expected-rejection",
+        "exit_code": 1,
+        "model_invariant": "FixedDeadline"
+      }
+    ],
+    "source_hashes": {
+      "src/native_api.c": "326e8173e5d7fa4e551715374f9d0767c181f3897c71ed27fa1c0903c805a704",
+      "src/native_runtime.c": "32a67f4913cddeee51fe33d6464afeb42d9740f81350ddb0ae45d88015f7564c",
+      "tests/native/formal_trace_harness.c": "b76fd1b60987a762c37215e528a3a1d22987770307435478b3c12c51c945fa7e",
+      "tests/native/adapter_harness.c": "88f5215e6b5507bc9209df02dfad622db3c3c3fa5bfae4511f63f06ed676f49c",
+      "verification/native/Operations.tla": "4ae35551cda143f54b4c906f0e5bb8f8cdf4485fcc3a2f63109244f15aa0296b",
+      "verification/native/Authority.tla": "f43286c3cbb75963641133f0de32a4dc7ba6a7cf28799ad3cd2a7b57f5842c89"
+    },
+    "mode": "full",
+    "coverage_head": "39ec4662869ae992a508a06cf2f3a9cf36240220",
+    "coverage_note": "Source includes uncommitted work beyond HEAD; exact file hashes define reviewed inputs. No commit is claimed for the models.",
+    "checker_self_test": {
+      "status": "pass",
+      "counterexample_excludes_statistics": true,
+      "known_broken_baseline": "authority-root",
+      "python_optimization": true,
+      "broken_model_process_exit": 1,
+      "output": "/home/luis/dev/lobo-ar/lobo-lang/target/native-formal-release-acceptance/checker-self-test"
+    }
+  },
+  "commands": [
+    {
+      "command": "python3 scripts/check-native-models.py --tla2tools /home/luis/.cache/xport-verification/tla2tools-1.7.4.jar --out target/native-formal-release-acceptance",
+      "cwd": "/home/luis/dev/lobo-ar/lobo-lang",
+      "exit_code": 0,
+      "log": "benchmarks/private-evidence/native-formal-20261122/logs/native-formal-release-acceptance.log",
+      "log_sha256": "f3ab297f315e8fc83ebbd51ec2dedae9468d4e9b89979c58e571d87ba461e4f7"
+    },
+    {
+      "command": "cargo test --locked",
+      "cwd": "/home/luis/dev/lobo-ar/lobo-lang",
+      "exit_code": 0,
+      "log": "benchmarks/private-evidence/native-formal-20261122/logs/native-formal-rust-full.log",
+      "log_sha256": "04f12b98b6d6b7b6910973628b1a8020a38167443c6696def947a0d085932977"
+    },
+    {
+      "command": "cargo clippy --locked --all-targets -- -D warnings",
+      "cwd": "/home/luis/dev/lobo-ar/lobo-lang",
+      "exit_code": 0,
+      "log": "benchmarks/private-evidence/native-formal-20261122/logs/native-formal-clippy.log",
+      "log_sha256": "01136fadc24dc4d7487e74191ac85eb2419facdea280b2f13d0546806435504f"
+    },
+    {
+      "command": "cargo fmt -- --check",
+      "cwd": "/home/luis/dev/lobo-ar/lobo-lang",
+      "exit_code": 0,
+      "log": "benchmarks/private-evidence/native-formal-20261122/logs/native-formal-format.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": "npm --prefix editors/vscode run package",
+      "cwd": "/home/luis/dev/lobo-ar/lobo-lang",
+      "exit_code": 0,
+      "log": "benchmarks/private-evidence/native-formal-20261122/logs/native-formal-editor-package.log",
+      "log_sha256": "175252d33bbf4b8d9f9faf7c23aa6a91bdec019f021c97f385fd10f13bc38854"
+    },
+    {
+      "command": "LOBO_VSCODE_EXECUTABLE=/usr/share/code/code xvfb-run -a npm --prefix editors/vscode run test:host",
+      "cwd": "/home/luis/dev/lobo-ar/lobo-lang",
+      "exit_code": 0,
+      "log": "benchmarks/private-evidence/native-formal-20261122/logs/native-formal-editor-host-confirmed.log",
+      "log_sha256": "ffae331a0abf2ce57b0e2c3e4f83c06dc108a37b2c2bf99a5e6bb050bced3e5c"
+    },
+    {
+      "command": "python3 -m unittest discover -s benchmarks -p 'test_*.py'",
+      "cwd": "/home/luis/dev/lobo-ar/lobo-lang",
+      "exit_code": 0,
+      "log": "benchmarks/private-evidence/native-formal-20261122/logs/native-formal-python.log",
+      "log_sha256": "211813d587a5433ddce7dcc5becd43d5ce349b0bba7be5f629a4856a231ab928"
+    },
+    {
+      "command": "node --test scripts/test-migrate-syntax.mjs",
+      "cwd": "/home/luis/dev/lobo-ar/lobo-lang",
+      "exit_code": 0,
+      "log": "benchmarks/private-evidence/native-formal-20261122/logs/native-formal-codemod.log",
+      "log_sha256": "c434ff6e468f3d4aacb89b72a6d956993d2ddc05140ad204e72d78fc6eaf3415"
+    },
+    {
+      "command": "cargo build --locked --release --bins",
+      "cwd": "/home/luis/dev/lobo-ar/lobo-lang",
+      "exit_code": 0,
+      "log": "benchmarks/private-evidence/native-formal-20261122/logs/native-formal-release.log",
+      "log_sha256": "cccdab7565b4ca3cbaaac79edd4f3374a29caa132a3d8683e5895d1e0b5d9ad4"
+    },
+    {
+      "command": "python3 target/verify-native-formal-smoke.py",
+      "cwd": "/home/luis/dev/lobo-ar/lobo-lang",
+      "exit_code": 0,
+      "log": "benchmarks/private-evidence/native-formal-20261122/logs/native-formal-smoke.log",
+      "log_sha256": "f6d23a47aea0c7d94aa5663c522c4923a1c76075466727f715e6112cbd07a7c6"
+    },
+    {
+      "command": "python3 examples/web-server/build.py --compiler target/release/lobo --out-dir target/native-formal-web",
+      "cwd": "/home/luis/dev/lobo-ar/lobo-lang",
+      "exit_code": 0,
+      "log": "benchmarks/private-evidence/native-formal-20261122/logs/native-formal-web-build.log",
+      "log_sha256": "75c98eadbf45404868cb7cba5f5d3d66d52ee5b81caa2433ca2941a117b7dc23"
+    },
+    {
+      "command": "LOBO_COMPILER=/home/luis/dev/lobo-ar/lobo-lang/target/release/lobo LOBO_WEB_EXAMPLE_DIR=/home/luis/dev/lobo-ar/lobo-lang/target/native-formal-web python3 examples/web-server/test_server.py",
+      "cwd": "/home/luis/dev/lobo-ar/lobo-lang",
+      "exit_code": 0,
+      "log": "benchmarks/private-evidence/native-formal-20261122/logs/native-formal-http.log",
+      "log_sha256": "d4ff7f5c26b09a5ee2cd093da1fe200d7b937d5fd6f270ae77332a24d06edd42"
+    },
+    {
+      "command": "python3 /home/luis/.codex/skills/.system/skill-creator/scripts/quick_validate.py .agents/skills/lobo-native-verification",
+      "cwd": "/home/luis/dev/lobo-ar/lobo-lang",
+      "exit_code": 0,
+      "log": "benchmarks/private-evidence/native-formal-20261122/logs/native-formal-skill-final.log",
+      "log_sha256": "db349825903d66adffea3ecf1bd8e1803043e8a71cf1a051235dabc5371f5bb0"
+    },
+    {
+      "command": "python3 /home/luis/.codex/skills/.system/skill-creator/scripts/quick_validate.py .agents/skills/lobo-programming",
+      "cwd": "/home/luis/dev/lobo-ar/lobo-lang",
+      "exit_code": 0,
+      "log": "benchmarks/private-evidence/native-formal-20261122/logs/native-formal-language-skill-validate.log",
+      "log_sha256": "db349825903d66adffea3ecf1bd8e1803043e8a71cf1a051235dabc5371f5bb0"
+    },
+    {
+      "command": "python3 scripts/check-native-upstream.py",
+      "cwd": "/home/luis/dev/lobo-ar/lobo-lang",
+      "exit_code": 0,
+      "log": "benchmarks/private-evidence/native-formal-20261122/logs/native-formal-upstream-check.log",
+      "log_sha256": "4e8ce6ed6cbea7a5b21e35aa2f21afd9912127e1249db77dfc914e6853a8a4fd"
+    },
+    {
+      "command": "python3 target/check-native-formal-integrity.py",
+      "cwd": "/home/luis/dev/lobo-ar/lobo-lang",
+      "exit_code": 0,
+      "log": "benchmarks/private-evidence/native-formal-20261122/logs/native-formal-integrity-final.log",
+      "log_sha256": "1e52d6023652f64b63cc47be7ae6a0510d79d1d9eb2e73404b6743d15e6ec359"
+    },
+    {
+      "command": "./scripts/check.sh",
+      "cwd": "/home/luis/dev/lobo-ar/lobo-lang",
+      "exit_code": 0,
+      "log": "benchmarks/private-evidence/native-formal-20261122/logs/native-formal-doc-sealed.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": "git diff --check",
+      "cwd": "/home/luis/dev/lobo-ar/lobo-lang",
+      "exit_code": 0,
+      "log": "benchmarks/private-evidence/native-formal-20261122/logs/native-formal-diff-final.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": "python3 target/test-native-formal-optimized-python.py",
+      "cwd": "/home/luis/dev/lobo-ar/lobo-lang",
+      "exit_code": 1,
+      "log": "benchmarks/private-evidence/native-formal-20261122/logs/native-formal-optimized-python-red.log",
+      "log_sha256": "5fa1889a39861094c8c2f8d6b8e9d3d03a7b7aea2daab599a185fcac0061cfd5"
+    },
+    {
+      "command": "python3 scripts/test-native-model-checker.py --tla2tools /home/luis/.cache/xport-verification/tla2tools-1.7.4.jar --out target/native-formal-trace-json-red",
+      "cwd": "/home/luis/dev/lobo-ar/lobo-lang",
+      "exit_code": 1,
+      "log": "benchmarks/private-evidence/native-formal-20261122/logs/native-formal-trace-json-red.log",
+      "log_sha256": "005c4b16bb676021b1a69dba66316aaafbc83afcdd797a2014627502f28a3358"
+    },
+    {
+      "command": "cargo test --locked --test native_adapter formal_counterexample_fault_before_handle_publication -- --nocapture",
+      "cwd": "/home/luis/dev/lobo-ar/lobo-lang",
+      "exit_code": 101,
+      "log": "benchmarks/private-evidence/native-formal-20261122/logs/native-formal-c-pending-red.log",
+      "log_sha256": "9c04377cc5c6486b1d1048478d90b5e31e8477c627bb36dda10b124502a72c38"
+    },
+    {
+      "command": "cargo test --locked --test native_adapter",
+      "cwd": "/home/luis/dev/lobo-ar/lobo-lang",
+      "exit_code": 0,
+      "log": "benchmarks/private-evidence/native-formal-20261122/logs/native-formal-c-pending-green.log",
+      "log_sha256": "59ae03f82e8bc1f71b701f943fbb78394e5242fe6ce75dd3b99ed18b985fd46d"
+    },
+    {
+      "command": "cargo test --locked --test native_formal",
+      "cwd": "/home/luis/dev/lobo-ar/lobo-lang",
+      "exit_code": 0,
+      "log": "benchmarks/private-evidence/native-formal-20261122/logs/native-formal-cargo-replays.log",
+      "log_sha256": "61214119d56dfc7ecbbf95587a3f753ab813daedd815b9c11a578efdabd335f5"
+    }
+  ],
+  "counts": {
+    "rust": 262,
+    "editor": 161,
+    "python_benchmark_tools": 31,
+    "codemod": 4,
+    "historical_http": 6,
+    "rust_ignored": 0,
+    "model_baselines": 2,
+    "model_mutants": 11,
+    "current_c_witness_runs": 22,
+    "rejected_c_mutant_runs": 22,
+    "checker_negative_tests": [
+      "stale-source guard",
+      "broken baseline under optimized Python",
+      "counterexample excludes TLC statistics"
+    ]
+  },
+  "actual_bug": {
+    "description": "unpublished connect descriptor remained open during fuel-fault invocation cleanup before kernel teardown",
+    "before_failure": "native-formal-c-pending-red.log",
+    "after_success": "native-formal-c-pending-green.log",
+    "exact_before_provider_replay": "native-formal-exact-before/results.json",
+    "kernel_teardown_distinguished": true,
+    "fix": "single pending fd owner, explicit error disposal, transfer to registry on publication, budget-independent cleanup"
+  },
+  "concrete_replay_translation": "Handwritten witnesses of model counterexamples, using documented slot/kind/permission/generation abstractions; not an automatic TLC-trace interpreter or mechanical refinement proof.",
+  "checker_corrections": [
+    "initial removable assertions falsely passed a known bad baseline under Python -O; always-active checks and real-TLC negative self-test now reject it",
+    "raw trace parsing initially included trailing coverage statistics; actual-TLC regression now requires clean raw states"
+  ],
+  "integrity": {
+    "status": "pass",
+    "protected_before_inputs": 151,
+    "prior_paper_entries": 22,
+    "frozen_release_artifacts": 86,
+    "historical_survey_files": 291,
+    "survey_exclusions": [
+      "generated __pycache__",
+      "prior repair-study path rebind",
+      "live specification index",
+      "live research index"
+    ],
+    "only_root_dependency_lock_versions_changed": true,
+    "only_changed_existing_compiler_source": "src/native_api.c",
+    "extension_implementation_and_existing_tests_unchanged": true
+  },
+  "smoke": {
+    "commands": 39,
+    "binaries": 12,
+    "results": "benchmarks/private-evidence/native-formal-20261122/native-formal-smoke/results.json",
+    "sha256": "957d2a73c92e4d73386782d5d0c2d1706212a302fc214155615ab53b0e456b9f"
+  },
+  "tool_versions": {
+    "path": "benchmarks/private-evidence/native-formal-20261122/tool-versions.json",
+    "sha256": "ce69d6875809e79d6c8b16c5d338a0be2c8de673f8f5c9a869ae6949c4fd4ef1"
+  },
+  "preservation": {
+    "path": "benchmarks/private-evidence/native-formal-20261122",
+    "manifest": "benchmarks/private-evidence/native-formal-20261122/manifest.json",
+    "manifest_sha256": "2745ab433e4c42f0e60b9ace502af8f5e72f11d29cc29ca13d030d3bf0ab1f4d",
+    "source_snapshot_files": 356,
+    "preserved_files": 2264,
+    "local_only": true,
+    "commit": null,
+    "publication": null,
+    "off_device_backup": null
+  },
+  "artifacts": {
+    "lobo": {
+      "sha256": "923fbf3bea911f27f1050611417837f2ab8fa02b6f167f90b354689a4372555d",
+      "bytes": 1570360
+    },
+    "lobo-test": {
+      "sha256": "9684e16c2e891a582d441473b044ad1c789bf1b270094b25b1a2b0794a165b39",
+      "bytes": 1333984
+    },
+    "lobo-syntax-1.7.1.vsix": {
+      "sha256": "f6b1805a56114d585def7018935896d4980fae5b7c7e7caa57e1d12ee0ce175e",
+      "bytes": 39470
+    },
+    "before-lobo": {
+      "sha256": "8c9a58282f27da17d8290b5a0a02f0ca18ec32fb7f5a7164836005eec22a0057",
+      "bytes": 1569592
+    },
+    "before-lobo-test": {
+      "sha256": "14fd3d1e84a5c1e1fa3f250bcb60e85abc87bfb7bebeafcfccda3de09404ad88",
+      "bytes": 1333232
+    },
+    "before-extension.vsix": {
+      "sha256": "a9bbbe1cead8f8ec2606ea75dd6a94a474481d20acf1202a5a3bf37b4eaa7050",
+      "bytes": 39404
+    },
+    "before-source.tar.gz": {
+      "sha256": "f5d5000838a88f969bc2f13dfd06d3b8e5fba1b6f2c1c767bbc0abd60e627c73",
+      "bytes": 798258
+    },
+    "current-source.tar.gz": {
+      "sha256": "c18b184bf6ec8cb1bd2c9f03ef086c476976e9f046af783aee4c64778a46f585",
+      "bytes": 750109
+    }
+  },
+  "attempt_logs": [
+    {
+      "path": "benchmarks/private-evidence/native-formal-20261122/logs/native-formal-acceptance.log",
+      "sha256": "f3ab297f315e8fc83ebbd51ec2dedae9468d4e9b89979c58e571d87ba461e4f7",
+      "bytes": 1184,
+      "original_command": null
+    },
+    {
+      "path": "benchmarks/private-evidence/native-formal-20261122/logs/native-formal-authority-expanded.log",
+      "sha256": "a974ff2c074ed4e85556dd851a8989177d27a52918f4758f0a238831587ddceb",
+      "bytes": 1346,
+      "original_command": null
+    },
+    {
+      "path": "benchmarks/private-evidence/native-formal-20261122/logs/native-formal-authority-first.log",
+      "sha256": "e30e3ad2e71ae84f465cabfa4eb3c7099fbabfc0b821af20740ebaf5070bc436",
+      "bytes": 1364,
+      "original_command": null
+    },
+    {
+      "path": "benchmarks/private-evidence/native-formal-20261122/logs/native-formal-c-pending-green.log",
+      "sha256": "59ae03f82e8bc1f71b701f943fbb78394e5242fe6ce75dd3b99ed18b985fd46d",
+      "bytes": 1149,
+      "original_command": "cargo test --locked --test native_adapter"
+    },
+    {
+      "path": "benchmarks/private-evidence/native-formal-20261122/logs/native-formal-c-pending-red.log",
+      "sha256": "9c04377cc5c6486b1d1048478d90b5e31e8477c627bb36dda10b124502a72c38",
+      "bytes": 1106,
+      "original_command": "cargo test --locked --test native_adapter formal_counterexample_fault_before_handle_publication -- --nocapture"
+    },
+    {
+      "path": "benchmarks/private-evidence/native-formal-20261122/logs/native-formal-cargo-replays.log",
+      "sha256": "61214119d56dfc7ecbbf95587a3f753ab813daedd815b9c11a578efdabd335f5",
+      "bytes": 474,
+      "original_command": "cargo test --locked --test native_formal"
+    },
+    {
+      "path": "benchmarks/private-evidence/native-formal-20261122/logs/native-formal-chart-authority-amplify.log",
+      "sha256": "7bbce729feb318ecc863d5e8d4e17fa5270e6e4706d35d8a652129d04182722a",
+      "bytes": 509,
+      "original_command": null
+    },
+    {
+      "path": "benchmarks/private-evidence/native-formal-20261122/logs/native-formal-chart-authority-cleanup.log",
+      "sha256": "b96226a1c59b0c14fa4559f7aa3c8df862b5ae9c0c64bafd9328f7f3046d5a5e",
+      "bytes": 538,
+      "original_command": null
+    },
+    {
+      "path": "benchmarks/private-evidence/native-formal-20261122/logs/native-formal-chart-authority-denied.log",
+      "sha256": "cc768fdef92fc4a61e3a180f0bdff6f09f4e4e5942ed04dd43bd0a9b8b6b75c6",
+      "bytes": 506,
+      "original_command": null
+    },
+    {
+      "path": "benchmarks/private-evidence/native-formal-20261122/logs/native-formal-chart-authority-kind.log",
+      "sha256": "8cadf6c883c1ee828cb9b43f3358dd51de31098cf6dd1b36e455bc76593da6d3",
+      "bytes": 474,
+      "original_command": null
+    },
+    {
+      "path": "benchmarks/private-evidence/native-formal-20261122/logs/native-formal-chart-authority-quota.log",
+      "sha256": "9dbc7a3b36bd3550d2c048ffe7baa45b6ae754878651ddf8f52eb72bc608afc3",
+      "bytes": 478,
+      "original_command": null
+    },
+    {
+      "path": "benchmarks/private-evidence/native-formal-20261122/logs/native-formal-chart-authority-root.log",
+      "sha256": "8e5d47006e595ac7f1adcb527e523a87622e1899f987ea7c6b8dce94f8091b56",
+      "bytes": 447,
+      "original_command": null
+    },
+    {
+      "path": "benchmarks/private-evidence/native-formal-20261122/logs/native-formal-chart-authority-stale.log",
+      "sha256": "dce4cdbaf6b0ed1f7b1de921ce98f04cb9e04216b39957f079b59a53661805d6",
+      "bytes": 561,
+      "original_command": null
+    },
+    {
+      "path": "benchmarks/private-evidence/native-formal-20261122/logs/native-formal-chart-authority-wrap.log",
+      "sha256": "d214a6855a3459b2d4df7263d0020c9101b5892c24acf2c143025c0d69667da0",
+      "bytes": 562,
+      "original_command": null
+    },
+    {
+      "path": "benchmarks/private-evidence/native-formal-20261122/logs/native-formal-chart-operations-deadline.log",
+      "sha256": "d8c023540c274fa3d8c2947cc6bba93b3744264a15a0642be651a272c880afcd",
+      "bytes": 473,
+      "original_command": null
+    },
+    {
+      "path": "benchmarks/private-evidence/native-formal-20261122/logs/native-formal-chart-operations-publish.log",
+      "sha256": "82890aec1905dce128df0f6cefa25e59020fc8314c90be02920f030b69cc073e",
+      "bytes": 510,
+      "original_command": null
+    },
+    {
+      "path": "benchmarks/private-evidence/native-formal-20261122/logs/native-formal-chart-operations-untracked-fault.log",
+      "sha256": "45b84fb64cffd013bd0e2d91a5ab241f34477c1c4a031c1ac3fbf68a0341d9ff",
+      "bytes": 529,
+      "original_command": null
+    },
+    {
+      "path": "benchmarks/private-evidence/native-formal-20261122/logs/native-formal-clippy.log",
+      "sha256": "01136fadc24dc4d7487e74191ac85eb2419facdea280b2f13d0546806435504f",
+      "bytes": 137,
+      "original_command": "cargo clippy --locked --all-targets -- -D warnings"
+    },
+    {
+      "path": "benchmarks/private-evidence/native-formal-20261122/logs/native-formal-codemod.log",
+      "sha256": "c434ff6e468f3d4aacb89b72a6d956993d2ddc05140ad204e72d78fc6eaf3415",
+      "bytes": 1031,
+      "original_command": "node --test scripts/test-migrate-syntax.mjs"
+    },
+    {
+      "path": "benchmarks/private-evidence/native-formal-20261122/logs/native-formal-diff-check.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "original_command": null
+    },
+    {
+      "path": "benchmarks/private-evidence/native-formal-20261122/logs/native-formal-diff-final.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "original_command": "git diff --check"
+    },
+    {
+      "path": "benchmarks/private-evidence/native-formal-20261122/logs/native-formal-doc-check.log",
+      "sha256": "1f11bb3bb382f1877ffa8eec4eb376db85d0ecfa2e1301289bb91fbd2cc966ae",
+      "bytes": 55,
+      "original_command": null
+    },
+    {
+      "path": "benchmarks/private-evidence/native-formal-20261122/logs/native-formal-doc-final.log",
+      "sha256": "1f11bb3bb382f1877ffa8eec4eb376db85d0ecfa2e1301289bb91fbd2cc966ae",
+      "bytes": 55,
+      "original_command": null
+    },
+    {
+      "path": "benchmarks/private-evidence/native-formal-20261122/logs/native-formal-doc-sealed.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "original_command": "./scripts/check.sh"
+    },
+    {
+      "path": "benchmarks/private-evidence/native-formal-20261122/logs/native-formal-drift-negative.log",
+      "sha256": "7923e0fe27de745f140a57740f4dd176d911b1d23c3d601af6f350e3d6f78eea",
+      "bytes": 378,
+      "original_command": null
+    },
+    {
+      "path": "benchmarks/private-evidence/native-formal-20261122/logs/native-formal-editor-host-confirmed.log",
+      "sha256": "ffae331a0abf2ce57b0e2c3e4f83c06dc108a37b2c2bf99a5e6bb050bced3e5c",
+      "bytes": 1252,
+      "original_command": "LOBO_VSCODE_EXECUTABLE=/usr/share/code/code xvfb-run -a npm --prefix editors/vscode run test:host"
+    },
+    {
+      "path": "benchmarks/private-evidence/native-formal-20261122/logs/native-formal-editor-host.log",
+      "sha256": "11c03139fdccd8a326c534c815c9ae3526e6f48b22b8c59b399a20aa0f93809d",
+      "bytes": 1409,
+      "original_command": null
+    },
+    {
+      "path": "benchmarks/private-evidence/native-formal-20261122/logs/native-formal-editor-package.log",
+      "sha256": "175252d33bbf4b8d9f9faf7c23aa6a91bdec019f021c97f385fd10f13bc38854",
+      "bytes": 37108,
+      "original_command": "npm --prefix editors/vscode run package"
+    },
+    {
+      "path": "benchmarks/private-evidence/native-formal-20261122/logs/native-formal-exact-before-replay.log",
+      "sha256": "3b09f3a06d77ed12edeeb8f96501dc7ae8b499b1903caba6638e3059477f0893",
+      "bytes": 197,
+      "original_command": null
+    },
+    {
+      "path": "benchmarks/private-evidence/native-formal-20261122/logs/native-formal-final.log",
+      "sha256": "f3ab297f315e8fc83ebbd51ec2dedae9468d4e9b89979c58e571d87ba461e4f7",
+      "bytes": 1184,
+      "original_command": null
+    },
+    {
+      "path": "benchmarks/private-evidence/native-formal-20261122/logs/native-formal-first.log",
+      "sha256": "2ab11aa0a1bbefd673b696731196c650629f51ed16c187aff7b536057f4c39fc",
+      "bytes": 178,
+      "original_command": null
+    },
+    {
+      "path": "benchmarks/private-evidence/native-formal-20261122/logs/native-formal-format.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "original_command": "cargo fmt -- --check"
+    },
+    {
+      "path": "benchmarks/private-evidence/native-formal-20261122/logs/native-formal-http.log",
+      "sha256": "d4ff7f5c26b09a5ee2cd093da1fe200d7b937d5fd6f270ae77332a24d06edd42",
+      "bytes": 104,
+      "original_command": "LOBO_COMPILER=/home/luis/dev/lobo-ar/lobo-lang/target/release/lobo LOBO_WEB_EXAMPLE_DIR=/home/luis/dev/lobo-ar/lobo-lang/target/native-formal-web python3 examples/web-server/test_server.py"
+    },
+    {
+      "path": "benchmarks/private-evidence/native-formal-20261122/logs/native-formal-integrity-final.log",
+      "sha256": "1e52d6023652f64b63cc47be7ae6a0510d79d1d9eb2e73404b6743d15e6ec359",
+      "bytes": 451,
+      "original_command": "python3 target/check-native-formal-integrity.py"
+    },
+    {
+      "path": "benchmarks/private-evidence/native-formal-20261122/logs/native-formal-integrity.log",
+      "sha256": "1e52d6023652f64b63cc47be7ae6a0510d79d1d9eb2e73404b6743d15e6ec359",
+      "bytes": 451,
+      "original_command": null
+    },
+    {
+      "path": "benchmarks/private-evidence/native-formal-20261122/logs/native-formal-language-skill-validate.log",
+      "sha256": "db349825903d66adffea3ecf1bd8e1803043e8a71cf1a051235dabc5371f5bb0",
+      "bytes": 16,
+      "original_command": "python3 /home/luis/.codex/skills/.system/skill-creator/scripts/quick_validate.py .agents/skills/lobo-programming"
+    },
+    {
+      "path": "benchmarks/private-evidence/native-formal-20261122/logs/native-formal-operations-corrected.log",
+      "sha256": "c945c2eb9ae95963df9d1c63314819ce0dab40435d53e1d54417a10eef7b8381",
+      "bytes": 3032,
+      "original_command": null
+    },
+    {
+      "path": "benchmarks/private-evidence/native-formal-20261122/logs/native-formal-operations-corrected2.log",
+      "sha256": "3057b0964b9c26ebdfa23b0bd14fe53cdbe39fc87b53db49c292cdea82ae5af9",
+      "bytes": 1701,
+      "original_command": null
+    },
+    {
+      "path": "benchmarks/private-evidence/native-formal-20261122/logs/native-formal-operations-first.log",
+      "sha256": "a63eba0fcdfc3cc50768688f81cb349d5a41aa8ade47957c8528bbc2ea854ea2",
+      "bytes": 1099,
+      "original_command": null
+    },
+    {
+      "path": "benchmarks/private-evidence/native-formal-20261122/logs/native-formal-operations-green.log",
+      "sha256": "25f254710fae77695a2764a0f2d4c6ecc11f23f377d36bf49aa8cfdfd070c628",
+      "bytes": 1701,
+      "original_command": null
+    },
+    {
+      "path": "benchmarks/private-evidence/native-formal-20261122/logs/native-formal-operations-red-actual.log",
+      "sha256": "0375131167071962979f5086e4bc5873ccc597ce5d10ca6219c4cf3787d2c295",
+      "bytes": 138,
+      "original_command": null
+    },
+    {
+      "path": "benchmarks/private-evidence/native-formal-20261122/logs/native-formal-operations-red-corrected.log",
+      "sha256": "b53b5cf1069140bf08667b57a1831764532a04beb8ae2541283b5c10662324f0",
+      "bytes": 2490,
+      "original_command": null
+    },
+    {
+      "path": "benchmarks/private-evidence/native-formal-20261122/logs/native-formal-operations-red-witness.log",
+      "sha256": "f87db1bec5077003acbedcb82060b0130e7d50ef7a578c279b48c99219ff33b7",
+      "bytes": 2488,
+      "original_command": null
+    },
+    {
+      "path": "benchmarks/private-evidence/native-formal-20261122/logs/native-formal-operations-red.log",
+      "sha256": "bf0bdab3405e06a9cb7a6d24fde8f3bc9259ec4f6cf4d81a231dd5f85d6ffe21",
+      "bytes": 1099,
+      "original_command": null
+    },
+    {
+      "path": "benchmarks/private-evidence/native-formal-20261122/logs/native-formal-optimized-python-red.log",
+      "sha256": "5fa1889a39861094c8c2f8d6b8e9d3d03a7b7aea2daab599a185fcac0061cfd5",
+      "bytes": 736,
+      "original_command": "python3 target/test-native-formal-optimized-python.py"
+    },
+    {
+      "path": "benchmarks/private-evidence/native-formal-20261122/logs/native-formal-preservation.log",
+      "sha256": "cd63116c7ae877a18d8b6039b88b174275bb73c30f5c4d072610ebfc2c25337d",
+      "bytes": 161,
+      "original_command": null
+    },
+    {
+      "path": "benchmarks/private-evidence/native-formal-20261122/logs/native-formal-python.log",
+      "sha256": "211813d587a5433ddce7dcc5becd43d5ce349b0bba7be5f629a4856a231ab928",
+      "bytes": 131,
+      "original_command": "python3 -m unittest discover -s benchmarks -p 'test_*.py'"
+    },
+    {
+      "path": "benchmarks/private-evidence/native-formal-20261122/logs/native-formal-release-acceptance.log",
+      "sha256": "f3ab297f315e8fc83ebbd51ec2dedae9468d4e9b89979c58e571d87ba461e4f7",
+      "bytes": 1184,
+      "original_command": "python3 scripts/check-native-models.py --tla2tools /home/luis/.cache/xport-verification/tla2tools-1.7.4.jar --out target/native-formal-release-acceptance"
+    },
+    {
+      "path": "benchmarks/private-evidence/native-formal-20261122/logs/native-formal-release.log",
+      "sha256": "cccdab7565b4ca3cbaaac79edd4f3374a29caa132a3d8683e5895d1e0b5d9ad4",
+      "bytes": 128,
+      "original_command": "cargo build --locked --release --bins"
+    },
+    {
+      "path": "benchmarks/private-evidence/native-formal-20261122/logs/native-formal-rust-full.log",
+      "sha256": "04f12b98b6d6b7b6910973628b1a8020a38167443c6696def947a0d085932977",
+      "bytes": 29688,
+      "original_command": "cargo test --locked"
+    },
+    {
+      "path": "benchmarks/private-evidence/native-formal-20261122/logs/native-formal-second.log",
+      "sha256": "b5f2ba665157f82a0d916a589631acda70996f68d0d364c4946c5c4676030cfe",
+      "bytes": 1182,
+      "original_command": null
+    },
+    {
+      "path": "benchmarks/private-evidence/native-formal-20261122/logs/native-formal-skill-final.log",
+      "sha256": "db349825903d66adffea3ecf1bd8e1803043e8a71cf1a051235dabc5371f5bb0",
+      "bytes": 16,
+      "original_command": "python3 /home/luis/.codex/skills/.system/skill-creator/scripts/quick_validate.py .agents/skills/lobo-native-verification"
+    },
+    {
+      "path": "benchmarks/private-evidence/native-formal-20261122/logs/native-formal-skill-validate.log",
+      "sha256": "db349825903d66adffea3ecf1bd8e1803043e8a71cf1a051235dabc5371f5bb0",
+      "bytes": 16,
+      "original_command": null
+    },
+    {
+      "path": "benchmarks/private-evidence/native-formal-20261122/logs/native-formal-smoke.log",
+      "sha256": "f6d23a47aea0c7d94aa5663c522c4923a1c76075466727f715e6112cbd07a7c6",
+      "bytes": 51,
+      "original_command": "python3 target/verify-native-formal-smoke.py"
+    },
+    {
+      "path": "benchmarks/private-evidence/native-formal-20261122/logs/native-formal-statechart-authority.log",
+      "sha256": "c62fb0877f49bf7b16b23af071ff227d13e83e713192674a5b961f7371659f58",
+      "bytes": 366,
+      "original_command": null
+    },
+    {
+      "path": "benchmarks/private-evidence/native-formal-20261122/logs/native-formal-statechart-expanded.log",
+      "sha256": "de66ed8089d05ae3672dfca6897a3c54bc348e8bfde93f7e2e415877ab0d4f2c",
+      "bytes": 364,
+      "original_command": null
+    },
+    {
+      "path": "benchmarks/private-evidence/native-formal-20261122/logs/native-formal-statechart-operations-final.log",
+      "sha256": "7ef0f22c09bbbef94d95782d5349fd38ae5f442992dae4823e6788c95c482c31",
+      "bytes": 364,
+      "original_command": null
+    },
+    {
+      "path": "benchmarks/private-evidence/native-formal-20261122/logs/native-formal-statechart-operations.log",
+      "sha256": "71d32c02605d0123343d9e22c872d3af7e3ef90410d631fae34ba13c4a8f7d89",
+      "bytes": 357,
+      "original_command": null
+    },
+    {
+      "path": "benchmarks/private-evidence/native-formal-20261122/logs/native-formal-statechart-pending.log",
+      "sha256": "f3ef75b58147d33f1bf21b43c7f451710099beca16f0b10101ff37e8587e131c",
+      "bytes": 485,
+      "original_command": null
+    },
+    {
+      "path": "benchmarks/private-evidence/native-formal-20261122/logs/native-formal-third.log",
+      "sha256": "f3ab297f315e8fc83ebbd51ec2dedae9468d4e9b89979c58e571d87ba461e4f7",
+      "bytes": 1184,
+      "original_command": null
+    },
+    {
+      "path": "benchmarks/private-evidence/native-formal-20261122/logs/native-formal-trace-json-red.log",
+      "sha256": "005c4b16bb676021b1a69dba66316aaafbc83afcdd797a2014627502f28a3358",
+      "bytes": 250,
+      "original_command": "python3 scripts/test-native-model-checker.py --tla2tools /home/luis/.cache/xport-verification/tla2tools-1.7.4.jar --out target/native-formal-trace-json-red"
+    },
+    {
+      "path": "benchmarks/private-evidence/native-formal-20261122/logs/native-formal-upstream-check.log",
+      "sha256": "4e8ce6ed6cbea7a5b21e35aa2f21afd9912127e1249db77dfc914e6853a8a4fd",
+      "bytes": 78,
+      "original_command": "python3 scripts/check-native-upstream.py"
+    },
+    {
+      "path": "benchmarks/private-evidence/native-formal-20261122/logs/native-formal-verified.log",
+      "sha256": "f3ab297f315e8fc83ebbd51ec2dedae9468d4e9b89979c58e571d87ba461e4f7",
+      "bytes": 1184,
+      "original_command": null
+    },
+    {
+      "path": "benchmarks/private-evidence/native-formal-20261122/logs/native-formal-web-build.log",
+      "sha256": "75c98eadbf45404868cb7cba5f5d3d66d52ee5b81caa2433ca2941a117b7dc23",
+      "bytes": 764,
+      "original_command": "python3 examples/web-server/build.py --compiler target/release/lobo --out-dir target/native-formal-web"
+    }
+  ],
+  "statechart_artifacts": "benchmarks/private-evidence/native-formal-20261122/statecharts",
+  "limits": [
+    "Finite separate models with selected bounds and assumptions, not an unbounded/cutoff or C-refinement proof.",
+    "No whole-compiler ABI, C memory-safety, malicious-native-code or kernel correctness proof.",
+    "Hand-translated witnesses and selected real C mutations do not cover every implementation execution.",
+    "Only the stated bounded driver has a fairness-qualified EventuallyDone property.",
+    "Some intermediate edited TLA sources and binaries were not retained; logs/hashes and availability caveats are explicit in attempt-notes.json.",
+    "One initial chart command shell-redirection failure survives as a transcription rather than a raw log.",
+    "Earlier host SIGPIPE warning was followed by a clean fresh host run; both logs remain.",
+    "No new language/network/OAuth scope or dependency installation.",
+    "No runtime/agent performance, construction, comprehension or token-efficiency experiment."
+  ],
+  "agent_construction_effect": null,
+  "agent_comprehension_effect": null,
+  "agent_token_effect": null,
+  "runtime_performance_effect": null,
+  "documentation_correction": "Clarified that forged-token C tests sample values; no exhaustive 64-bit coverage claim. Pre-correction source/receipt preserved under finalization/prior-wording."
+}

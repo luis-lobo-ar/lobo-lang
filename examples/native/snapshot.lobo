@@ -1,0 +1,17 @@
+module native_snapshot;
+use os { IoResult, restrict_capability, monotonic_ms, random_bytes };
+
+record Snapshot {
+  monotonic_ms: I64,
+  random_bytes: Bytes
+}
+
+fn main() -> IoResult<Snapshot>
+actions { native.authorize, clock.read, random.read }
+{
+  // Clock (1) + secure randomness (2); network permissions are excluded.
+  let cap = try os.restrict_capability(Native::capability(), 3);
+  let now = try os.monotonic_ms(cap);
+  let bytes = try os.random_bytes(cap, 16);
+  Ok(Snapshot { monotonic_ms: now, random_bytes: bytes })
+}

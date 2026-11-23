@@ -1,0 +1,26 @@
+module generic_data;
+
+record Box<T> { value: T }
+variant Option<T> { None, Some(T) }
+fn identity<T>(value: T) -> T { value }
+fn apply<T,U>(callback: Fn(T) -> U, value: T) -> U { callback(value) }
+
+fn main() -> Text
+ensures { Text::length(result) == 4 }
+{
+  let box: Box<Text> = Box { value: "lobo" };
+  let optional = Option::Some(box);
+  match optional {
+    None => "empty",
+    Some(present) => apply::<Text,Text>(identity, present.value)
+  }
+}
+
+identities {
+  module: "example.generic_data",
+  Box: "example.generic_data.box",
+  Option: "example.generic_data.option",
+  identity: "example.generic_data.identity",
+  apply: "example.generic_data.apply",
+  main: "example.generic_data.main"
+}

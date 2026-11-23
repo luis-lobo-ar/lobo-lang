@@ -1,6 +1,7 @@
 # Checked artifact v0.1
 
-Status: experimental compiler output format, implemented by the Rust reference.
+Status: historical experimental compiler output. The current format is linked from the [specification index](README.md)
+and rejects old artifacts; recompile their source rather than retagging the envelope.
 
 `lobo compile --emit checked` emits a JSON artifact with extension `.loboc`. It is a resolved, type-checked expression tree for
 the reference evaluator. Native executables are the default compiler output. This is an intermediate

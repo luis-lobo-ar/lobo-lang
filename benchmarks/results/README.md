@@ -1,0 +1,100 @@
+# Result register
+
+Record all experiments here, including negative, failed, interrupted and inconclusive runs.
+Link full reports and data rather than copy measurements into several summaries.
+Design decisions and unimplemented proposals belong in [decisions](../../decisions).
+
+| Date | Investigation | Recorded outcome | Evidence |
+| --- | --- | --- | --- |
+| 2026-11-23 | Native SQLite driver | Closed static adapter, SQL helpers and persistent REST demo; 286 Rust/168 editor checks, bounded lifecycle mutations and Linux/Wine execution pass. | [Report](2026-11-23-sqlite-driver.md), [receipt](2026-11-23-sqlite-driver.json), [decision](../../decisions/0055-first-sqlite-driver.md) |
+| 2026-11-23 | Database interface review; proposal only | Recommend first SQLite adapter with a thin SQL API, separate key-value/document APIs, explicit ownership/grants/limits and test-first gates. No implementation or performance/agent experiment. | [Proposal](../../docs/database-access-proposal.md), [primary sources](../../research/database-access-2026-11-23.json), [decision](../../decisions/0054-database-access-proposal.md) |
+| 2026-11-22 | Maintained Core 1.8 source modernization | 20 of 38 maintained sources migrated; checked equivalence, IDs, cleanup, native TCP and editor checks pass. Frozen research preserved; no agent-effect measurement. | [Report](2026-11-22-modernize-source.md), [receipt](2026-11-22-modernize-source.json), [decision](../../decisions/0053-maintained-core-1.8-source-modernization.md) |
+| 2026-11-22 | Try result propagation | Core/compiler/extension 1.8 implement checked prefix try, postconditions and caller boundaries; evaluator/native/sanitizer/editor/Windows checks pass. No agent-effect measurement. | [Report](2026-11-22-try-propagation.md), [receipt](2026-11-22-try-propagation.json), [rule](../../spec/core-v1.8.md) |
+| 2026-11-22 | Standalone native REST API | Lobo HTTP/controller/socket loops compile into one Windows PE; protocol, Linux/Wine TCP, partial IO and provider tests pass. Close-failure ownership regression fixed. Actual Windows API run unknown. | [Report](2026-11-22-native-rest.md), [receipt](2026-11-22-native-rest.json), [app](../../examples/native/rest/README.md) |
+| 2026-11-22 | Windows 10 snapshot user run | User supplies Ok snapshot output and corrects OS to Windows 10; one reported success, no independently checked hash or full regression run. | [Record](2026-11-22-windows10-user-run.json) |
+| 2026-11-22 | Standalone Windows snapshot | Same Lobo program linked to bounded Windows clock/random APIs; PE/import checks and 24 Wine application/provider cases pass, with actual Windows execution unknown. | [Report](2026-11-22-windows-snapshot.md), [receipt](2026-11-22-windows-snapshot.json), [profile](../../examples/native/windows/README.md) |
+| 2026-11-22 | Single native snapshot example | Existing capability, clock/random and typed-error APIs execute on both native backends; ten grant/quota cases pass. Initial compile-check timeout retained. | [Source](../../examples/native/snapshot.lobo), [receipt](2026-11-22-native-snapshot-example.json) |
+| 2026-11-22 | Native state models and C witnesses | Two finite TLA+ checks, eleven intended invariant violations and C mutations, and a reproduced/fixed pending-descriptor fault path. No unbounded/security or agent-effect claim. | [Report](2026-11-22-native-formal-verification.md), [receipt](2026-11-22-native-formal-verification.json), [decision](../../decisions/0049-native-state-models-and-pending-descriptor-cleanup.md) |
+| 2026-11-22 | Typed native OS boundary | Closed ABI, capabilities, clock/random and bounded loopback TCP; pinned upstream adaptations, model/fault/sanitizer/editor gates pass. No OAuth or agent-effect claim. | [Report](2026-11-22-native-boundary.md), [receipt](2026-11-22-native-boundary.json), [decision](../../decisions/0048-typed-native-os-boundary.md) |
+| 2026-11-22 | Native library and OS interface review | Primary-documentation comparison of TIOBE top ten, plus Rust. Proposed typed Lobo boundary remains unimplemented; no runtime or agent measurements. | [Review](../../research/native-interop-2026-11-22.md), [sources and limits](../../research/native-interop-2026-11-22.json) |
+| 2026-11-22 | Automatic JSON literal builders | Compiler 1.6 binds helpers by stable ID without unused imports. Native, closed dependency, editor and skill gates pass; retained MVC IDs and frozen fixtures preserved. | [Report](2026-11-22-json-auto-helpers.md), [receipt](2026-11-22-json-auto-helpers.json), [decision](../../decisions/0047-json-literal-helper-dependencies.md) |
+| 2026-11-22 | Constructor inference and contextual cases | Compiler 1.5 accepts shorter MVC constructors with unchanged IDs and checked behavior. Native, bounded-failure, editor and skill gates pass. | [Report](2026-11-22-constructor-inference.md), [receipt](2026-11-22-constructor-inference.json), [decision](../../decisions/0046-constructor-inference.md) |
+| 2026-11-22 | Local call inference | Compiler 1.4 accepts inferred generic calls and contextual callbacks. Explicit/inferred checked code is equal; native MVC, editor, skill and bounded-failure checks pass. | [Report](2026-11-22-call-inference.md), [receipt](2026-11-22-call-inference.json), [decision](../../decisions/0045-local-call-inference.md) |
+| 2026-11-22 | Shared generic MVC response policy | Existing generics and named callbacks share missing-to-404 handling across entity types. Eight native cases pass; incompatible renderer is rejected. No language change or agent measurement. | [Report](2026-11-22-generic-mvc.md), [data](2026-11-22-generic-mvc.json) |
+| 2026-11-22 | Managed persistent identities | Native authoring commands and explicit metadata snapshots remove the MVC identity table while preserving IDs and checked/native behavior. Editor, skill and evidence stay synchronized. Agent outcomes unmeasured. | [Report](2026-11-22-managed-identities.md), [receipt](2026-11-22-managed-identities.json), [decision](../../decisions/0044-managed-persistent-identities.md) |
+| 2026-11-14 | Maintained source migration | 23 source files and three embedded programs use modern syntax with identical checked fingerprints. Stable IDs preserved. Frozen study bytes retained through a path-only driver rebind. | [Report](2026-11-14-source-migration.md), [receipt](2026-11-14-source-migration.json), [decision](../../decisions/0043-maintained-source-migration.md) |
+| 2026-11-14 | Native syntax adoption and legacy deprecation | Compiler 1.2 accepts modern source directly. Old spelling is frozen read compatibility with shared semantics. Native equality, diagnostics and synchronized editor/skill checks pass. Agent outcomes unmeasured. | [Report](2026-11-14-native-syntax.md), [receipt](2026-11-14-native-syntax.json), [decision](../../decisions/0042-native-compact-syntax-and-legacy-deprecation.md) |
+| 2026-11-14 | Compact MVC authoring prototype | Opt-in projection preserves the exact checked MVC program and native behavior. Original-range editor support and docs pass. Agent construction, comprehension and token effects remain unmeasured. | [Report](2026-11-14-compact-syntax.md), [receipt](2026-11-14-compact-syntax.json), [decision](../../decisions/0041-compact-mvc-authoring-prototype.md) |
+| 2026-11-14 | Typed JSON source helpers | Construction/serialization, grammar/escaping, duplicate/resource bounds and MVC integration pass across evaluator/native/sanitizer routes. | [Result](2026-11-14-json-helpers.md), [receipt](2026-11-14-json-helpers.json), [API](../../libraries/json/README.md) |
+| 2026-11-14 | Simple MVC example | Native user-found, user-missing and JSON-escaping checks pass for an in-memory model, JSON view and response controller. | [Result](2026-11-14-mvc-example.md), [source](../../examples/mvc.lobo) |
+| 2026-11-08 | Language 1.1 typed operators | Exact typed arithmetic bindings, Text sugar, canonical calls, native differential/resource checks and editor/skill maintenance. Public engineering evidence with agent outcomes unmeasured. | [Report](2026-11-08-operators.md), [receipt](2026-11-08-operators.json), [decision](../../decisions/0038-explicit-typed-operator-bindings.md) |
+| 2026-11-04 | Finite future backlog; proposal only | Four later language families with closed acceptance gates, separate application/workspace scope and a current research checkpoint requiring no new features. No implementation or experiment. | [Future scope and enough criteria](../../docs/future-language-scope.md), [scope freeze](../../decisions/0032-stop-feature-growth-at-the-evaluation-checkpoint.md) |
+| 2026-11-04 | Scope correction and feature stopping rule | Current Core 0.11/compiler 0.11.1 is the evaluation checkpoint. Generic-data proposal deferred; missing facilities become findings instead of automatic feature tasks. No new implementation or experiment. | [Decision 0032](../../decisions/0032-stop-feature-growth-at-the-evaluation-checkpoint.md), [active roadmap](../../docs/roadmap.md) |
+| 2026-11-04 | Continuation recommendation; proposal only | Generic data declarations next for reusable iterative state and typed results, with frozen workload/TDD/editor gates and a later construction/comprehension checkpoint. No implementation or experiment. | [Proposed milestone](../../docs/next-language-milestone.md), [roadmap](../../docs/roadmap.md) |
+| 2026-11-04 | Paper evidence indexing and preservation | Linked existing findings to allowable paper claims, kept agent/comprehension effects unmeasured, and preserved a hashed local bundle of reports and recent evidence. No new experiment. | [Paper index](../../research/local-evidence.md), [register](../../research/local-evidence.json), [preservation receipt](../../research/verification-local-evidence.json) |
+| 2026-11-04 | Direct LLVM backend implementation and paired native comparison | Compiler 0.11.1 route implemented; 163 Rust, 30 Python and 114 editor tests plus real host pass. Two rounds show no runtime win on four public workloads, higher compile latency and equal/+8-byte executables. C remains default; no agent result. | [Verification/corrections](2026-11-04-llvm-backend-verification.md), [comparison](2026-11-04-llvm-backend-comparison.json), [baseline](2026-11-04-core011-before-llvm-baseline.json), [decision 0031](../../decisions/0031-direct-llvm-native-backend.md) |
+| 2026-11-04 | LLVM backend source/documentation review | Lobo already uses LLVM through C/Clang `-O3`. Retain that path; direct LLVM IR remains a proposed, evidence-driven alternative with no measured speed/size gain. | [Assessment and primary sources](2026-11-04-llvm-backend-assessment.md), [backend design](../../docs/compiler-and-backends.md) |
+| 2026-11-04 | Core 0.10 preservation and Core 0.11 generic-function development | Explicit concrete specialization passes 159 Rust, 30 Python and 114 editor tests plus native/sanitizer/host checks. Generic dependency invalidation/reuse verified; no agent/comprehension advantage measured. | [Baseline](2026-11-04-core010-language-baseline.json), [verification](2026-11-04-core011-verification.md), [native data](2026-11-04-generic-reuse-native.json), [tool session](2026-11-04-generic-reuse-test-session.json), [decision 0030](../../decisions/0030-explicit-generic-function-specialization.md) |
+| 2026-11-04 | Core 0.9 preservation and Core 0.10 recursive-value development | Preserved compiler/source baseline. New guarded-recursive AST executes natively; 151 Rust, 30 Python and 108 editor tests pass. No agent/comprehension advantage measured. | [Baseline](2026-11-04-core09-language-baseline.json), [verification](2026-11-04-core010-verification.md), [native data](2026-11-04-recursive-ast-native.json), [decision 0029](../../decisions/0029-list-guarded-recursive-values.md) |
+| 2026-10-10 | Native, reference-evaluator and Rust execution baseline | Scoped execution microbenchmark. Does not measure agent development. | [Data](2026-10-10-execution-baseline.json), [scope](../../docs/native-performance.md) |
+| 2026-10-18 | Scripted affected versus full verification | All 384 paired outcomes agree across six scenarios. Reuse reduces some executions; no real-agent productivity measurement. | [Data](2026-10-18-agent-testing-prototype.json), [decision 0024](../../decisions/0024-agent-first-verification-prototype.md) |
+| 2026-11-03 | Scalar repair pilot | Ten accepted repairs, five per arm. Reuse saves 20 executions. Time/token comparison inconclusive. Excluded socket-canary failure retained in the history. | [Analysis](2026-11-03-agent-repair-pilot.md), [data](2026-11-03-agent-repair-pilot.json), [decision 0025](../../decisions/0025-real-agent-testing-pilot.md) |
+| 2026-11-03 | Repeated library repairs | Thirty scheduled attempts, 29 accepted, one controller interruption without replacement. Reuse saves 44 cases per completed affected-mode repair. No consistent productivity gain. Two context deviations and counter corrections retained. | [Analysis](2026-11-03-library-repair-study.md), [data](2026-11-03-library-repair-study.json), [decision 0026](../../decisions/0026-repeated-library-repair-study.md) |
+| 2026-11-03 | Lobo skill versus equivalent guide | All twenty attempts accepted and all ten skill entries read. No accuracy or consistent time/token gain; three skill-arm parent-scope probes flagged separately. | [Analysis](2026-11-03-skill-evaluation.md), [data](2026-11-03-skill-evaluation.json), [audit](2026-11-03-skill-evaluation-audit.json), [decision 0028](../../decisions/0028-lobo-skill-onboarding-comparison.md) |
+| 2026-11-03 | Academic prior-work scoping review; no new experiment | 26 works cataloged. Direct language/interface precedents exist; skill/context results are mixed. Existing Lobo agent studies do not compare application languages. | [Review and method](../../research/README.md), [annotations](../../research/related-work.md), [proposed paper study](../../research/paper-plan.md) |
+| 2026-11-03 | Construction-quality research follow-up; no new experiment | Collection expanded to 33 papers/artifacts and eight selected findings. Construction quality at fixed budgets becomes primary; language guarantees and agent outcomes remain separate. | [Framework](../../research/construction-quality.md), [findings](../../research/findings.json), [initial snapshot](../../research/snapshots/2026-11-03-initial-review) |
+| 2026-11-03 | Three-hypothesis formulation; proposal only | Checked representations recommended as the lead; abstraction and context/feedback retained as alternatives. None tested by existing Lobo trials. | [Hypotheses and selection rationale](../../research/hypotheses.md) |
+| 2026-11-03 | Language-comparison fixture and comprehension-grader calibration | Five arms agree on 750 baseline observations. Lobo/Rust variants reject four selected mutation builds; eleven other mutant builds succeed but fail behavior. No agent/human comprehension or language-productivity scores. | [Report](2026-11-03-language-comparison-fixtures.md), [data](2026-11-03-language-comparison-fixtures.json), [current comparison](../../research/lobo-comparison.md) |
+| 2026-11-03 | Comparison-readiness audit; no new experiment | Core 0.9 is sufficient for narrow supported-task studies. Broader comparisons need workload-driven abstraction/data evolution and scale checks. | [Assessment, evidence and proposed order](../../research/comparison-readiness.md) |
+
+## Current interpretation
+
+Evidence reuse reduces native test executions on these fixtures. Host tooling takes roughly
+3% of elapsed time in the repeated study, so native savings alone cannot explain a large
+end-to-end improvement. All completed agents repaired the seeded defects in one candidate.
+Longer diagnosis and edit cycles remain unmeasured. JSON reduces some large feedback payloads,
+but its time/token advantage is inconsistent across workloads.
+
+State machines and TLA+ are proposed for verification-session invariants and recovery.
+No formal model has been checked. The [Lobo skill proposal](../../decisions/0027-agent-language-knowledge-package.md)
+now has an [implemented/evaluated skill](../../decisions/0028-lobo-skill-onboarding-comparison.md).
+It is usable but has no demonstrated accuracy or consistent efficiency advantage over an equally
+informed guide in that comparison. A plugin remains proposed. Existing trials already supplied
+language knowledge; none establish how agents perform without documentation.
+
+## Evidence retention
+
+Reports record commands, versions, input identities, limits, success/failure counts and raw
+artifact locations. Earlier private raw logs remain under ignored `target/` directories.
+They are local build artifacts and may be lost if that directory is cleaned. The JSON and
+Markdown reports and their hashes do not make private logs durable or publicly available.
+Before removing raw evidence, preserve an appropriate sanitized archive or record the loss.
+No report contains authentication secrets. No result is published or committed automatically.
+The newer skill study stores private raw evidence under ignored `benchmarks/private-evidence/`,
+outside build cleanup. That local directory still requires normal backup; ignoring it is not
+publication, version control or an independent archival guarantee.
+
+Corrections append the reason and retain original counters or analysis where available.
+An interrupted trial stays in its scheduled denominator; missing latency and usage stay unknown.
+Plans, proposals and hypotheses never become measured outcomes without a linked run.
+# Language 1.0 release evidence
+
+2026-11-05: [pure HTTP helpers](2026-11-05-http-helpers.md),
+[source/result receipt](2026-11-05-http-helpers.json). Sample migrated to reusable Lobo source; 188 Rust /
+31 Python / 123 editor tests and real host pass. Includes native/sanitized helper conformance, JSON quoting
+and a release-source completeness regression. No language/runtime expansion or independent agent study.
+
+2026-11-05 follow-up: [native web-server sample](2026-11-05-web-server.md) and
+[source/result receipt](2026-11-05-web-server.json). User-selected application, native Lobo handler plus
+native Rust transport, with frozen compiler/release retained. No language/network API expansion or agent study.
+
+See [the implementation record](2026-11-04-language-v1-progress.md) for the authorized scope,
+baseline and intermediate successes/failures, including the earlier pending states before final acceptance.
+The [first-three-families receipt](2026-11-04-language-v1-first-three.json) identifies a retained source/compiler
+checkpoint, raw logs, 172 Rust tests, 119 editor tests, real editor-host completion and four native examples.
+
+Final status: **language 1.0.0 local release passed**. See [the final report](2026-11-04-language-v1-release.md)
+and [hash/evidence receipt](2026-11-04-language-v1-release.json). All four families and six baseline/change
+configurations pass, with 185 Rust / 30 Python / 122 editor tests and the actual editor host. Earlier progress
+and checkpoint entries remain historical. No independent agent construction/comprehension/token result.
+

@@ -1,0 +1,15 @@
+{
+  "version": "3.54.1",
+  "url": "https://www.sqlite.org/2026/sqlite-src-3540100.zip",
+  "official_sha3_256": "877c6f4996ce7adb368686bce21638de9e3d91534832ad3d9d119037d1bc22ad",
+  "archive_sha256": "387e7f6cad4797b17848c07d453dc6606917bb356a6cfe5a3abafd38c240c71b",
+  "accessed_on": "2026-11-23",
+  "files": {
+    "misc1.test": "d83728b06d9507432156577864f66f6d0ca0d4c266f3451c7c5cd53ea2142182",
+    "bind.test": "e243f86ef77c246906f0634abf35a05999959c4aded2dfbecff7a311116aa2e7",
+    "malloc.test": "c04c13c87e2bce22a5bdba1f40fc002acd11c16b2233fb55c20a19fa5b5cdded",
+    "auth.test": "e683632c4604d506f93e6ad5e6b74e999df263322b697c9fd3bb7b6ac727291a",
+    "trans.test": "372c4b5533b02c6e32232878a3468df12c1be6e281393f4fb3968428261ef19e"
+  },
+  "status": "retained upstream sources for adapted driver cases, not execution of the complete upstream suite"
+}

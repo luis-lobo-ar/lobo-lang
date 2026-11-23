@@ -1,0 +1,104 @@
+module tree @id("example.tree");
+import reverse_shared @id("example.collections.reverse");
+
+// Children are the nodes with this parent's index and a lesser/greater key.
+// Index -1 means no parent; every I64 remains available as a key.
+record Node @id("example.tree.node") { index: I64, parent: I64, key: I64, depth: I64 }
+variant OptionalNode @id("example.tree.optional_node") { Found(Node), Empty }
+record Tree @id("example.tree.tree") { nodes: List<Node>, root: OptionalNode, height: I64 }
+record Lookup @id("example.tree.lookup") { remaining: List<Node>, found: OptionalNode }
+record Search @id("example.tree.search") {
+  current: OptionalNode, parent: I64, depth: I64, duplicate: Bool
+}
+record Build @id("example.tree.build") { remaining: List<I64>, tree: Tree }
+record Walk @id("example.tree.walk") { current: OptionalNode, pending: List<Node>, keys: List<I64> }
+record Summary @id("example.tree.summary") { keys: List<I64>, count: I64, height: I64 }
+
+function child @id("example.tree.child")(nodes: List<Node>, parent: Node, left: Bool) -> OptionalNode {
+  let done = fold(i in List::length(nodes), state: Lookup = Lookup { remaining: nodes, found: OptionalNode::Empty }) {
+    let node = List::head(state.remaining);
+    Lookup {
+      remaining: List::tail(state.remaining),
+      found: if node.parent == parent.index && (node.key < parent.key) == left {
+        OptionalNode::Found(node)
+      } else { state.found }
+    }
+  };
+  done.found
+}
+
+function insert @id("example.tree.insert")(tree: Tree, key: I64) -> Tree {
+  let position = while(state: Search = Search {
+    current: tree.root, parent: -1, depth: 1, duplicate: false
+  }; !state.duplicate && match(state.current) { Empty { false }, Found(node) { true } }) {
+    if state.duplicate { state } else {
+      match (state.current) {
+        Empty { state },
+        Found(node) {
+          if key == node.key {
+            Search { current: state.current, parent: state.parent, depth: state.depth, duplicate: true }
+          } else {
+            Search {
+              current: child(tree.nodes, node, key < node.key), parent: node.index,
+              depth: node.depth + 1, duplicate: false
+            }
+          }
+        }
+      }
+    }
+  };
+  if position.duplicate { tree } else {
+    let node = Node { index: List::length(tree.nodes), parent: position.parent, key: key, depth: position.depth };
+    let root = match (tree.root) { Empty { OptionalNode::Found(node) }, Found(existing) { OptionalNode::Found(existing) } };
+    Tree {
+      nodes: List::prepend(node, tree.nodes), root: root,
+      height: if position.depth > tree.height { position.depth } else { tree.height }
+    }
+  }
+}
+
+function build @id("example.tree.build_tree")(input: List<I64>) -> Tree {
+  let done = fold(i in List::length(input), state: Build = Build {
+    remaining: input, tree: Tree { nodes: List::empty<Node>(), root: OptionalNode::Empty, height: 0 }
+  }) {
+    Build { remaining: List::tail(state.remaining), tree: insert(state.tree, List::head(state.remaining)) }
+  };
+  done.tree
+}
+
+function reverse @id("example.tree.reverse")(input: List<I64>) -> List<I64>
+ensures { List::length(result) == List::length(input) }
+{
+  reverse_shared(input)
+}
+
+function traverse @id("example.tree.traverse")(tree: Tree, descending: Bool) -> List<I64> {
+  let done = fold(i in 2 * List::length(tree.nodes), state: Walk = Walk {
+    current: tree.root, pending: List::empty<Node>(), keys: List::empty<I64>()
+  }) {
+    match (state.current) {
+      Found(node) {
+        Walk {
+          current: child(tree.nodes, node, !descending), pending: List::prepend(node, state.pending), keys: state.keys
+        }
+      },
+      Empty {
+        if List::length(state.pending) == 0 { state } else {
+          let node = List::head(state.pending);
+          Walk {
+            current: child(tree.nodes, node, descending), pending: List::tail(state.pending),
+            keys: List::prepend(node.key, state.keys)
+          }
+        }
+      }
+    }
+  };
+  reverse(done.keys)
+}
+
+function summarize @id("example.tree.summarize")(input: List<I64>, descending: Bool) -> Summary
+ensures { result.count == List::length(result.keys) }
+{
+  let tree = build(input);
+  Summary { keys: traverse(tree, descending), count: List::length(tree.nodes), height: tree.height }
+}

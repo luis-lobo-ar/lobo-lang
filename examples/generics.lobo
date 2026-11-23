@@ -1,0 +1,31 @@
+module generics;
+
+fn identity<T>(value: T) -> T
+ensures { result == value }
+{ value }
+
+fn contains<T>(xs: List<T>, value: T) -> Bool {
+  if List::length(xs) == 0 { false } else {
+    if List::head(xs) == value { true } else { contains(List::tail(xs), value) }
+  }
+}
+
+record Item { key: I64, name: Text }
+
+fn number(value: I64) -> I64 { identity(value) }
+fn text(value: Text) -> Text { identity(value) }
+fn item(value: Item) -> Item { identity(value) }
+fn has(xs: List<Item>, value: Item) -> Bool {
+  contains(xs, value)
+}
+
+identities {
+  module: "example.generics",
+  identity: "example.generics.identity",
+  contains: "example.generics.contains",
+  Item: "example.generics.item",
+  number: "example.generics.number",
+  text: "example.generics.text",
+  item: "example.generics.echo",
+  has: "example.generics.has"
+}

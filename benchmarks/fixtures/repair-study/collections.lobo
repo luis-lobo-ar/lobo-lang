@@ -1,0 +1,31 @@
+module collections @id("example.collections");
+import reverse @id("example.collections.reverse");
+
+record Work @id("example.collections.work") { remaining: List<I64>, kept: List<I64>, sum: I64 }
+record Invalid @id("example.collections.invalid") { index: I64, value: I64 }
+record Summary @id("example.collections.summary") { values: List<I64>, count: I64, sum: I64 }
+variant Step @id("example.collections.step") { Continue(Work), InvalidValue(Invalid) }
+variant Selection @id("example.collections.selection") { Ok(Summary), InvalidValue(Invalid) }
+
+function select @id("example.collections.select")(input: List<I64>, keep_even: Bool) -> Selection {
+  let final = fold(i in List::length(input), state: Step = Step::Continue(Work { remaining: input, kept: List::empty<I64>(), sum: 0 })) {
+    match (state) {
+      InvalidValue(error) { Step::InvalidValue(error) },
+      Continue(work) {
+        let value = List::head(work.remaining);
+        if value < 0 || value > 1000 { Step::InvalidValue(Invalid { index: i, value: value }) } else {
+          let keep = (value % 2 == 0) == keep_even;
+          let kept = if keep { List::prepend(value, work.kept) } else { work.kept };
+          let total = if keep { work.sum + value } else { work.sum };
+          Step::Continue(Work { remaining: List::tail(work.remaining), kept: kept, sum: total })
+        }
+      }
+    }
+  };
+  match (final) {
+    InvalidValue(error) { Selection::InvalidValue(error) },
+    Continue(work) {
+      Selection::Ok(Summary { values: reverse(work.kept), count: List::length(work.kept), sum: work.sum })
+    }
+  }
+}

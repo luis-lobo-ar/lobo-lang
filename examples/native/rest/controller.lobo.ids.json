@@ -1,0 +1,18 @@
+{
+  "format": "lobo-identities/0.1",
+  "identities": {
+    "module": "example.rest.controller",
+    "http.Request": "lobo.http.server.Request",
+    "http.Response": "example.web.response",
+    "http.json_response": "lobo.http.server.json_response",
+    "http.error_response": "lobo.http.server.error_response",
+    "http.respond": "lobo.http.server.respond",
+    "json.Json": "lobo.json.value",
+    "json.JsonArray": "lobo.json.array_type",
+    "json.array": "lobo.json.array",
+    "json.append": "lobo.json.append",
+    "users": "example.rest.controller.users",
+    "handle": "example.rest.controller.handle",
+    "respond_to": "example.rest.controller.respond"
+  }
+}

@@ -1,13 +1,13 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://lobo-lang.invalid/spec/ltp/0.1/response-envelope.schema.json",
+  "$id": "https://lobo-lang.invalid/spec/ltp/0.2/response-envelope.schema.json",
   "title": "Lobo Tool Protocol response envelope",
   "type": "object",
   "additionalProperties": false,
   "required": ["ltp", "request_id", "status", "result", "diagnostics", "evidence", "usage"],
   "properties": {
     "ltp": {
-      "const": "0.1"
+      "const": "0.2"
     },
     "request_id": {
       "$ref": "#/$defs/identifier"

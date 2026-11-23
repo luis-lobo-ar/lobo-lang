@@ -1,0 +1,30 @@
+module users_generic;
+
+use http { Response, not_found };
+use json { Json, json_response };
+
+variant Lookup<T> { Missing, Found(T) }
+record User { name: Text }
+
+fn respond_json<T>(lookup: Lookup<T>, render: Fn(T) -> Json) -> Response {
+  match lookup {
+    Missing => http.not_found(),
+    Found(value) => json.json_response(200, render(value))
+  }
+}
+
+fn find_user(id: I64) -> Lookup<User> {
+  if id == 1 {
+    Found(User { name: "Luis" })
+  } else {
+    Missing
+  }
+}
+
+fn render_user(user: User) -> Json {
+  json { "name": user.name }
+}
+
+fn show_user(id: I64) -> Response {
+  respond_json(find_user(id), render_user)
+}

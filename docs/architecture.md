@@ -2,6 +2,10 @@
 
 Status: initial design, not an implementation commitment.
 
+The daemon/workspace architecture below remains the long-term design. The current development goal is
+[language expressiveness first](language-completeness.md); these components are not prerequisites for that
+language-only milestone. See [decision 0014](../decisions/0014-language-first-development.md).
+
 ## Overview
 
 Lobo is organized around a persistent workspace daemon named `lobod`. The daemon is the authority for canonical
@@ -19,7 +23,7 @@ transactions and receive typed results.
 │ context   │ impact       │ diagnostics │
 ├───────────────┬──────────────┬──────────┤
 │ semantic DB   │ verifier     │ executor │
-│ graph/indexes │ type/effect  │ sandbox  │
+│ graph/indexes │ type/action  │ sandbox  │
 ├───────────────┴──────────────┴──────────┤
 │ revisions │ evidence │ traces │ blobs   │
 └───────────────────┬─────────────────────┘
@@ -32,7 +36,7 @@ transactions and receive typed results.
 ### Semantic database
 
 The database stores nodes and typed relationships with stable logical IDs. A node may represent a declaration,
-type, contract, effect, test, policy, requirement, decision, or evidence claim. Revisions are immutable and
+type, contract, action, test, policy, requirement, decision, or evidence claim. Revisions are immutable and
 content-addressed; logical IDs persist across revisions when identity is preserved.
 
 The initial implementation may use ordinary files and SQLite. The abstraction matters more than the storage
@@ -65,7 +69,7 @@ always names the revision from which it was derived.
 The verifier owns several complementary checks:
 
 - structural and schema validation;
-- type and effect checking;
+- type and action checking;
 - contract and invariant checking;
 - policy evaluation;
 - property and example tests;
@@ -79,7 +83,7 @@ assumptions, result, and reproducibility metadata.
 
 The executor runs lowered programs and tests with explicit capabilities. Time, randomness, filesystem access,
 network access, and environment inputs will be injectable so that runs can be replayed. Core currently generates
-native executables through Clang/LLVM. Native execution is not an OS sandbox; isolation and effectful capability
+native executables through Clang/LLVM. Native execution is not an OS sandbox; isolation and resource capability
 adapters need their own implementation. WASM remains an optional future execution backend.
 
 ### Projection engine
@@ -124,7 +128,7 @@ The following require distinct authority:
 5. Committing to a shared branch.
 6. Deploying or migrating persistent data.
 
-Possessing one does not imply another. Tool descriptions must disclose effects and rollback behavior before a
+Possessing one does not imply another. Tool descriptions must disclose actions and rollback behavior before a
 request is made.
 
 ## Consistency model
@@ -133,7 +137,7 @@ request is made.
 - Transactions provide snapshot isolation against their base revision.
 - Reads within a transaction see the base plus accepted local operations.
 - Commit is atomic.
-- External effects do not occur inside an ordinary workspace transaction.
+- External actions do not occur inside an ordinary workspace transaction.
 - Operations intended to affect external systems require a separate, audited execution plan and idempotency key.
 
 ## Failure semantics

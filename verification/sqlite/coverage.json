@@ -1,0 +1,68 @@
+{
+  "format": "lobo-sqlite-formal-coverage/0.1",
+  "reviewed_head": "39ec4662869ae992a508a06cf2f3a9cf36240220",
+  "working_tree_note": "Includes uncommitted work beyond HEAD. Exact fingerprints identify reviewed inputs; no clean commit or refinement proof is claimed.",
+  "files": {
+    "src/native_sqlite.c": {
+      "sha256": "7c686679a4082d02a1d722782a3ee832b421059ea06bfc6efcb52d98bde54538"
+    },
+    "src/sqlite_api.h": {
+      "sha256": "6544115ba3bac924c09d7c5f94d7cd72c30c6708304331a3dd9e2f98c40be6ee"
+    },
+    "src/sqlite_profile.h": {
+      "sha256": "5fe390bbeb43b6f440498a8703098da9e3ceda44038f62fee01b8ee219040fb1"
+    },
+    "vendor/sqlite/sqlite3.c": {
+      "sha256": "0c657666d819f261cc4007526ad57e1669de9949df7a8ea847aa284a2bf0ee52"
+    },
+    "vendor/sqlite/sqlite3.h": {
+      "sha256": "d6c84557261893439b341d2e6c35187ae3ea24fbfd843ad94616f72d89242b8c"
+    },
+    "tests/native/sqlite_harness.c": {
+      "sha256": "53701c22d4f05af04d0807798f2ab2d125171167aeab9a3c033abe26c70b2dcd"
+    },
+    "verification/sqlite/Lifecycle.tla": {
+      "sha256": "445eb74870d7dcc81247c9e0c3c1451dc6517a3e6bb7d7974856a62ad586f1ab"
+    },
+    "scripts/check-sqlite-models.py": {
+      "sha256": "5eddab3f1b7293370644b9a01eca8294bdfe88b0de7b1d1616a4f17a8c8bf3a6"
+    },
+    "verification/sqlite/configs/amplify.cfg": {
+      "sha256": "2e81e977d59bb16e00d3f0d2955ac794dfba0bdc057a53e85b32b273fe06be3e"
+    },
+    "verification/sqlite/configs/cleanup.cfg": {
+      "sha256": "0adc9b702be51da79a5169b89dab84a30717fc850a5526410c9cb3196dde9761"
+    },
+    "verification/sqlite/configs/commit.cfg": {
+      "sha256": "3c05f17e7222c2dfdacbeb95023a1354561afc72ebb7517b167703f62df90187"
+    },
+    "verification/sqlite/configs/none.cfg": {
+      "sha256": "cdda35504c010939a1c4d923b5bfa7ff93a0158006e77d0581d5cbc3ea156112"
+    },
+    "verification/sqlite/configs/persist.cfg": {
+      "sha256": "f0138fe982cf94773ab4ad661956af80fafe1cc80c7adb739aefb76a5785f416"
+    }
+  },
+  "mapping": {
+    "Open": "lobo_sqlite_open_v1 registers connection before callbacks; SQLite owns heap allocation until registration",
+    "Prepare/ReadRow/DoneStatement/Finalize": "prepare, step, finalize; owned parent token; finalization is available after query quotas are exhausted",
+    "Begin/Write/Commit/Rollback": "transaction guard requires correct autocommit state and no live statements; successful writable step is abstracted as one write; engine failures stutter at this abstraction",
+    "Derive": "restrict requires requested mask subset of parent rights; opened connection copies rights",
+    "Exit": "finalize every statement, disable progress, rollback pending transaction, close connections, release capabilities before OS/arena cleanup"
+  },
+  "bounds": {
+    "operation_budget": 8,
+    "writes": 2,
+    "connections": 1,
+    "statements": 1,
+    "rights_atoms": 3
+  },
+  "exclusions": [
+    "SQLite engine correctness and filesystem/crash durability",
+    "general 32-slot/generation cutoff proof",
+    "Windows OS behavior",
+    "C memory safety, compiler typing and ABI correctness",
+    "concurrency, secure VFS, hostile parent directory replacement",
+    "automatic implementation refinement or liveness proof"
+  ]
+}

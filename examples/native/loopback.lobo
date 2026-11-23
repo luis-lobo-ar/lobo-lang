@@ -1,0 +1,80 @@
+module loopback;
+record Pair { cap:Native::Capability, listener: Native::Listener, client: Native::Stream, server: Native::Stream }
+variant PairResult { Ok(Pair), Err(I64) }
+record ReadState { done: Bool, data: Bytes, error: I64 }
+record WriteState { offset: I64, error: I64 }
+
+fn pair(cap:Native::Capability) -> PairResult actions {net.listen,net.inspect,net.connect,net.accept} {
+  let listener=try Native::listen(cap,0);
+  let port=try Native::port(listener);
+  let client=try Native::connect(cap,port,1000);
+  let server=try Native::accept(listener,1000);
+  Ok(Pair {cap:cap,listener:listener,client:client,server:server})
+}
+
+fn write_all(stream:Native::Stream,data:Bytes)->I64 actions {net.write} {
+  let size=Bytes::length(data);
+  let final_state=while (state:WriteState=WriteState {offset:0,error:0};state.offset<size && state.error==0) {
+    match Native::write(stream,Bytes::slice(data,state.offset,size-state.offset),1000) {
+      Err(code)=> WriteState {offset:state.offset,error:code},
+      Ok(count)=> if count==0 {WriteState {offset:state.offset,error:5}} else {WriteState {offset:state.offset+count,error:0}}
+    }
+  };
+  final_state.error
+}
+fn read_all(stream:Native::Stream)->Native::BytesResult actions {net.read} {
+  let final_state=while (state:ReadState=ReadState {done:false,data:Bytes::empty(),error:0};!state.done) {
+    match Native::read(stream,64,1000) {
+      Err(code)=> ReadState {done:true,data:state.data,error:code},
+      Ok(chunk)=> ReadState {done:Bytes::length(chunk)==0,data:Bytes::concat(state.data,chunk),error:0}
+    }
+  };
+  if final_state.error==0 {Ok(final_state.data)} else {Err(final_state.error)}
+}
+fn roundtrip(data:Bytes)->Native::BytesResult actions {native.authorize,net.listen,net.inspect,net.connect,net.accept,net.write,net.read,net.close} {
+  let p=try pair(Native::capability());
+  let sent=write_all(p.client,data);
+  let shutdown=Native::shutdown_write(p.client);
+  let received:Native::BytesResult=if sent==0 {read_all(p.server)} else {Err(sent)};
+  let close_client=Native::close_stream(p.client);
+  let close_server=Native::close_stream(p.server);
+  let close_listener=Native::close_listener(p.listener);
+  received
+}
+
+fn edge_first(p:Pair,which:I64)->I64 actions {net.write,net.read} {
+  if which==0 {match Native::read(p.server,1,0) {Err(code)=> code,Ok(data)=> 0}}
+  else {if which==1 {match Native::read(p.server,-1,0) {Err(code)=> code,Ok(data)=> 0}}
+    else {if which==2 {match Native::read(p.server,65537,0) {Err(code)=> code,Ok(data)=> 0}}
+      else {if which==3 {
+          let shutdown=Native::shutdown_write(p.client);
+          match Native::write(p.client,Text::bytes("x"),100) {Err(code)=> code,Ok(count)=> 0}
+        } else {
+          let shutdown=Native::shutdown_write(p.client);
+          match Native::read(p.server,64,1000) {Err(code)=> code,Ok(data)=> Bytes::length(data)}
+  }}}}
+}
+fn edge_last(p:Pair,which:I64)->I64 actions {native.authorize,net.listen,net.inspect,net.close,net.read} {
+  if which==5 {
+    let closed=Native::close_stream(p.server);
+    match Native::read(p.server,1,0) {Err(code)=> code,Ok(data)=> 0}
+  } else {if which==6 {
+      let closed=Native::close_listener(p.listener);
+      let replacement=Native::listen(p.cap,0);
+      match Native::port(p.listener) {Err(code)=> code,Ok(port)=> 0}
+    } else {if which==7 {
+        let closed=Native::close_stream(p.client);
+        match Native::close_stream(p.client) {Err(code)=> code,Ok(done)=> 0}
+      } else {if which==8 {match Native::read(p.server,1,-1) {Err(code)=> code,Ok(data)=> 0}}
+        else {match Native::read(p.server,0,0) {Err(code)=> code,Ok(data)=> Bytes::length(data)}}}}}
+}
+fn edge(which:I64)->I64 actions {native.authorize,net.listen,net.inspect,net.connect,net.accept,net.write,net.read,net.close} {
+  match pair(Native::capability()) {
+    Err(code)=> code,
+    Ok(p)=> if which<5 {edge_first(p,which)} else {edge_last(p,which)}
+  }
+}
+identities {
+  module:"native.loopback",Pair:"native.loopback.pair",PairResult:"native.loopback.pair_result",ReadState:"native.loopback.read_state",WriteState:"native.loopback.write_state",
+  pair:"native.loopback.make_pair",write_all:"native.loopback.write_all",read_all:"native.loopback.read_all",roundtrip:"native.loopback.roundtrip",edge:"native.loopback.edge",edge_first:"native.loopback.edge_first",edge_last:"native.loopback.edge_last"
+}

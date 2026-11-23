@@ -1,0 +1,76 @@
+{
+  "review_date": "2026-11-03",
+  "scope": "Selected external results and research implications; complements related-work.md",
+  "replicated_here": false,
+  "entries": [
+    {
+      "id": "quality-001",
+      "sources": ["jung2018rustbelt"],
+      "evidence_kind": "formal language-semantics result",
+      "reported_result": "Machine-checked safety proof for a realistic Rust subset, with obligations for unsafe libraries.",
+      "limits": ["Not all production Rust implementations", "No measured agent construction advantage", "Not general functional correctness"],
+      "lobo_implication": "Separate language guarantees from agent construction success."
+    },
+    {
+      "id": "quality-002",
+      "sources": ["ye2025verina"],
+      "evidence_kind": "author-reported benchmark; selected methods inspected",
+      "conditions": "ArXiv v3, 189 Lean tasks; abstract's best-model single-trial results for o3, not a current leaderboard",
+      "reported_results_percent": {"code_correctness": 72.6, "specification_soundness_and_completeness": 52.3, "proof_success": 4.9},
+      "limits": ["Different foundational tasks, not one end-to-end probability", "Specification evaluation uses tests when proofs are inconclusive", "No controlled cross-language comparison"],
+      "lobo_implication": "Evaluate specifications, implementations and proofs separately."
+    },
+    {
+      "id": "quality-003",
+      "sources": ["loughridge2024dafnybench"],
+      "evidence_kind": "author-reported benchmark; abstract review",
+      "conditions": "ArXiv v1, verification hints for more than 750 existing programs",
+      "reported_result": "Best reported model/prompt configuration reaches 68% verification success.",
+      "limits": ["Hint generation is not full construction", "Do not merge later results with v1"],
+      "lobo_implication": "Distinguish verifier-loop success from solving the original requirement."
+    },
+    {
+      "id": "quality-004",
+      "sources": ["chou2025autocodebench"],
+      "evidence_kind": "author-reported multilingual benchmark; selected methods inspected",
+      "conditions": "ArXiv v1, 3920 problems across 20 languages, model-dependent scores",
+      "reported_result": "Per-language problem generation and approximate translation for 14 languages.",
+      "limits": ["Different language problem pools", "Columns do not isolate construct effects", "Generated tests do not prove completeness"],
+      "lobo_implication": "Use matched requirements and independent validation."
+    },
+    {
+      "id": "quality-005",
+      "sources": ["allan2026vera", "allan2026verabench"],
+      "evidence_kind": "author artifacts and self-reported benchmark; not replicated",
+      "conditions": "Pinned VeraBench README, nine models, 60 graded problems, single runs; headline against Vera v0.1.8",
+      "reported_mean_solved_percent": {"vera_full_spec": 98.7, "python": 96.7, "typescript": 99.7},
+      "limits": ["Ceiling effects", "Full-spec and NL modes differ", "T1-T4 guidance differs from five-tier headline scope", "Disclosed Python/TypeScript grading asymmetry", "Raw attempts not obtained and documented as ignored", "Training absence and typing causality are unverified author claims"],
+      "lobo_implication": "Control specification information, include existing typed languages and test harder changes."
+    },
+    {
+      "id": "quality-006",
+      "sources": ["berger2019codequality"],
+      "evidence_kind": "reproduction/reanalysis of observational human-repository data",
+      "reported_result": "Reanalysis undermines broad language/defect associations; remaining effect sizes are very small.",
+      "limits": ["Not an agent experiment", "Correlation does not identify construct effects"],
+      "lobo_implication": "Control domain, task and tools; avoid universal language rankings."
+    },
+    {
+      "id": "quality-007",
+      "sources": ["mundler2025typeconstrained"],
+      "evidence_kind": "published generation intervention; selected methods inspected",
+      "reported_result": "Type-constrained decoding improves compiler acceptance and functional correctness in evaluated TypeScript tasks.",
+      "limits": ["Not ordinary compiler feedback", "Emulated support outside the implemented subset", "Not all autonomous development"],
+      "lobo_implication": "Separate generator, language constructs and feedback interventions."
+    },
+    {
+      "id": "quality-008",
+      "sources": ["ye2025verina", "berger2019codequality", "allan2026verabench"],
+      "evidence_kind": "Lobo research proposal",
+      "reported_result": null,
+      "hypothesis": "Appropriate checked constructs improve acceptance and requirement-preserving changes at a fixed resource budget.",
+      "limits": ["Not measured in Lobo", "Existing Lobo trials vary workflow, not language or constructs", "Token reduction alone is insufficient evidence"],
+      "lobo_implication": "Make construction quality primary; retain tokens as one cost dimension."
+    }
+  ]
+}

@@ -1,0 +1,205 @@
+{
+  "format": "lobo-native-snapshot-example/0.1",
+  "date": "2026-11-22",
+  "status": "pass",
+  "compiler": "1.7.1",
+  "language": "core/1.7",
+  "backends": [
+    "c",
+    "llvm"
+  ],
+  "invocations": 10,
+  "checks": [
+    "default deny",
+    "clock-only grant cannot widen to clock+random",
+    "random-only grant cannot widen to clock+random",
+    "both grants return a nonnegative monotonic time and exactly 16 bytes",
+    "zero byte quota returns typed LimitExceeded"
+  ],
+  "commands": [
+    {
+      "command": [
+        "/home/luis/dev/lobo-ar/lobo-lang/target/release/lobo",
+        "compile",
+        "examples/native/snapshot.lobo",
+        "--source",
+        "libraries/native/native.lobo",
+        "--backend",
+        "c",
+        "-o",
+        "/home/luis/dev/lobo-ar/lobo-lang/target/native-snapshot-example-retry/c"
+      ],
+      "exit_code": 0,
+      "stdout": "{\"artifact\":\"/home/luis/dev/lobo-ar/lobo-lang/target/native-snapshot-example-retry/c\",\"entries\":[\"lobo.os.from_error_code\",\"lobo.os.to_error_code\",\"lobo.os.restrict_capability\",\"lobo.os.monotonic_ms\",\"lobo.os.random_bytes\",\"lobo.os.listen\",\"lobo.os.connect\",\"lobo.os.accept\",\"lobo.os.port\",\"lobo.os.read\",\"lobo.os.write\",\"lobo.os.shutdown_write\",\"lobo.os.close_listener\",\"lobo.os.close_stream\",\"native.snapshot.main\"],\"format\":\"native\",\"status\":\"ok\"}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/home/luis/dev/lobo-ar/lobo-lang/target/native-snapshot-example-retry/c",
+        "--entry",
+        "native.snapshot.main"
+      ],
+      "exit_code": 0,
+      "stdout": "{\"status\":\"ok\",\"kind\":\"value\",\"value\":{\"type\":\"Variant\",\"value\":{\"id\":\"lobo.generic.type.c09c71e43c56183b079d77143d13711d\",\"case\":\"Err\",\"payload\":{\"type\":\"Variant\",\"value\":{\"id\":\"lobo.os.error\",\"case\":\"Denied\",\"payload\":null}}}}}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/home/luis/dev/lobo-ar/lobo-lang/target/native-snapshot-example-retry/c",
+        "--entry",
+        "native.snapshot.main",
+        "--native-clock",
+        "true"
+      ],
+      "exit_code": 0,
+      "stdout": "{\"status\":\"ok\",\"kind\":\"value\",\"value\":{\"type\":\"Variant\",\"value\":{\"id\":\"lobo.generic.type.c09c71e43c56183b079d77143d13711d\",\"case\":\"Err\",\"payload\":{\"type\":\"Variant\",\"value\":{\"id\":\"lobo.os.error\",\"case\":\"Denied\",\"payload\":null}}}}}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/home/luis/dev/lobo-ar/lobo-lang/target/native-snapshot-example-retry/c",
+        "--entry",
+        "native.snapshot.main",
+        "--native-random",
+        "true"
+      ],
+      "exit_code": 0,
+      "stdout": "{\"status\":\"ok\",\"kind\":\"value\",\"value\":{\"type\":\"Variant\",\"value\":{\"id\":\"lobo.generic.type.c09c71e43c56183b079d77143d13711d\",\"case\":\"Err\",\"payload\":{\"type\":\"Variant\",\"value\":{\"id\":\"lobo.os.error\",\"case\":\"Denied\",\"payload\":null}}}}}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/home/luis/dev/lobo-ar/lobo-lang/target/native-snapshot-example-retry/c",
+        "--entry",
+        "native.snapshot.main",
+        "--native-clock",
+        "true",
+        "--native-random",
+        "true"
+      ],
+      "exit_code": 0,
+      "stdout": "{\"status\":\"ok\",\"kind\":\"value\",\"value\":{\"type\":\"Variant\",\"value\":{\"id\":\"lobo.generic.type.c09c71e43c56183b079d77143d13711d\",\"case\":\"Ok\",\"payload\":{\"type\":\"Record\",\"value\":{\"id\":\"native.snapshot.value\",\"fields\":{\"monotonic_ms\":{\"type\":\"I64\",\"value\":\"1174586343\"},\"random_bytes\":{\"type\":\"Bytes\",\"value\":\"ade64818137fb48722ddf224b1ab75b2\"}}}}}}}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/home/luis/dev/lobo-ar/lobo-lang/target/native-snapshot-example-retry/c",
+        "--entry",
+        "native.snapshot.main",
+        "--native-clock",
+        "true",
+        "--native-random",
+        "true",
+        "--native-bytes",
+        "0"
+      ],
+      "exit_code": 0,
+      "stdout": "{\"status\":\"ok\",\"kind\":\"value\",\"value\":{\"type\":\"Variant\",\"value\":{\"id\":\"lobo.generic.type.c09c71e43c56183b079d77143d13711d\",\"case\":\"Err\",\"payload\":{\"type\":\"Variant\",\"value\":{\"id\":\"lobo.os.error\",\"case\":\"LimitExceeded\",\"payload\":null}}}}}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/home/luis/dev/lobo-ar/lobo-lang/target/release/lobo",
+        "compile",
+        "examples/native/snapshot.lobo",
+        "--source",
+        "libraries/native/native.lobo",
+        "--backend",
+        "llvm",
+        "-o",
+        "/home/luis/dev/lobo-ar/lobo-lang/target/native-snapshot-example-retry/llvm"
+      ],
+      "exit_code": 0,
+      "stdout": "{\"artifact\":\"/home/luis/dev/lobo-ar/lobo-lang/target/native-snapshot-example-retry/llvm\",\"entries\":[\"lobo.os.from_error_code\",\"lobo.os.to_error_code\",\"lobo.os.restrict_capability\",\"lobo.os.monotonic_ms\",\"lobo.os.random_bytes\",\"lobo.os.listen\",\"lobo.os.connect\",\"lobo.os.accept\",\"lobo.os.port\",\"lobo.os.read\",\"lobo.os.write\",\"lobo.os.shutdown_write\",\"lobo.os.close_listener\",\"lobo.os.close_stream\",\"native.snapshot.main\"],\"format\":\"native\",\"status\":\"ok\"}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/home/luis/dev/lobo-ar/lobo-lang/target/native-snapshot-example-retry/llvm",
+        "--entry",
+        "native.snapshot.main"
+      ],
+      "exit_code": 0,
+      "stdout": "{\"status\":\"ok\",\"kind\":\"value\",\"value\":{\"type\":\"Variant\",\"value\":{\"id\":\"lobo.generic.type.c09c71e43c56183b079d77143d13711d\",\"case\":\"Err\",\"payload\":{\"type\":\"Variant\",\"value\":{\"id\":\"lobo.os.error\",\"case\":\"Denied\",\"payload\":null}}}}}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/home/luis/dev/lobo-ar/lobo-lang/target/native-snapshot-example-retry/llvm",
+        "--entry",
+        "native.snapshot.main",
+        "--native-clock",
+        "true"
+      ],
+      "exit_code": 0,
+      "stdout": "{\"status\":\"ok\",\"kind\":\"value\",\"value\":{\"type\":\"Variant\",\"value\":{\"id\":\"lobo.generic.type.c09c71e43c56183b079d77143d13711d\",\"case\":\"Err\",\"payload\":{\"type\":\"Variant\",\"value\":{\"id\":\"lobo.os.error\",\"case\":\"Denied\",\"payload\":null}}}}}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/home/luis/dev/lobo-ar/lobo-lang/target/native-snapshot-example-retry/llvm",
+        "--entry",
+        "native.snapshot.main",
+        "--native-random",
+        "true"
+      ],
+      "exit_code": 0,
+      "stdout": "{\"status\":\"ok\",\"kind\":\"value\",\"value\":{\"type\":\"Variant\",\"value\":{\"id\":\"lobo.generic.type.c09c71e43c56183b079d77143d13711d\",\"case\":\"Err\",\"payload\":{\"type\":\"Variant\",\"value\":{\"id\":\"lobo.os.error\",\"case\":\"Denied\",\"payload\":null}}}}}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/home/luis/dev/lobo-ar/lobo-lang/target/native-snapshot-example-retry/llvm",
+        "--entry",
+        "native.snapshot.main",
+        "--native-clock",
+        "true",
+        "--native-random",
+        "true"
+      ],
+      "exit_code": 0,
+      "stdout": "{\"status\":\"ok\",\"kind\":\"value\",\"value\":{\"type\":\"Variant\",\"value\":{\"id\":\"lobo.generic.type.c09c71e43c56183b079d77143d13711d\",\"case\":\"Ok\",\"payload\":{\"type\":\"Record\",\"value\":{\"id\":\"native.snapshot.value\",\"fields\":{\"monotonic_ms\":{\"type\":\"I64\",\"value\":\"1174587412\"},\"random_bytes\":{\"type\":\"Bytes\",\"value\":\"3fb3315ef27f4a6cf91dded64848158c\"}}}}}}}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/home/luis/dev/lobo-ar/lobo-lang/target/native-snapshot-example-retry/llvm",
+        "--entry",
+        "native.snapshot.main",
+        "--native-clock",
+        "true",
+        "--native-random",
+        "true",
+        "--native-bytes",
+        "0"
+      ],
+      "exit_code": 0,
+      "stdout": "{\"status\":\"ok\",\"kind\":\"value\",\"value\":{\"type\":\"Variant\",\"value\":{\"id\":\"lobo.generic.type.c09c71e43c56183b079d77143d13711d\",\"case\":\"Err\",\"payload\":{\"type\":\"Variant\",\"value\":{\"id\":\"lobo.os.error\",\"case\":\"LimitExceeded\",\"payload\":null}}}}}\n",
+      "stderr": ""
+    }
+  ],
+  "inputs": {
+    "examples/native/snapshot.lobo": "ca72962383d1ac394c4ae911731bbdfd2d2b0095b7e6de05f1c7f077332e1612",
+    "examples/native/snapshot.lobo.ids.json": "90c3f11bc8665b64d85690e03cb17d55b7290bb2fe25ff00d949d2ccf994369b",
+    "libraries/native/native.lobo": "417c2f8d8352a963f4fc1ae765d151114b97b0e5455aaf5e3ae920d77c42cae8",
+    "target/release/lobo": "923fbf3bea911f27f1050611417837f2ab8fa02b6f167f90b354689a4372555d"
+  },
+  "scope": "Executable example of existing features; no language/runtime/tooling change or performance/agent measurement",
+  "attempts": [
+    {
+      "status": "inconclusive",
+      "stage": "first C compilation",
+      "timeout_seconds": 30,
+      "log": "benchmarks/private-evidence/native-snapshot-example-20261122/native-snapshot-example.log"
+    },
+    {
+      "status": "pass",
+      "timeout_seconds_per_command": 120,
+      "log": "benchmarks/private-evidence/native-snapshot-example-20261122/native-snapshot-example-retry.log"
+    }
+  ],
+  "preservation": {
+    "path": "benchmarks/private-evidence/native-snapshot-example-20261122",
+    "local_only": true
+  }
+}

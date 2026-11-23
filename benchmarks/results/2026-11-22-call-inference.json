@@ -1,0 +1,296 @@
+{
+  "format": "lobo-call-inference-result/0.1",
+  "date": "2026-11-22",
+  "timezone": "America/Chicago",
+  "status": "engineering-acceptance-passed",
+  "language": "core/1.4",
+  "compiler": "1.4.0",
+  "extension": "1.4.0",
+  "decision": "decisions/0045-local-call-inference.md",
+  "specification": "spec/core-v1.4.md",
+  "rust_tests_passed": 219,
+  "editor_tests_passed": 148,
+  "benchmark_tests_passed": 31,
+  "codemod_tests_passed": 4,
+  "web_tests_passed": 6,
+  "verification": [
+    {
+      "command": "cargo test --locked",
+      "exit_code": 0,
+      "log": "target/call-inference-rust-final.log",
+      "log_sha256": "f9ee28b841f5c1e787dccb74288bd3a609708ace0f284362be82629ce4de4362",
+      "preserved_log": "benchmarks/private-evidence/call-inference-20261122/logs/call-inference-rust-final.log"
+    },
+    {
+      "command": "npm --prefix editors/vscode run package",
+      "exit_code": 0,
+      "log": "target/call-inference-package.log",
+      "log_sha256": "4fc17c6e00e603860e604975157b34b3c0c47da2facb9247e3126a88a8ad68e0",
+      "preserved_log": "benchmarks/private-evidence/call-inference-20261122/logs/call-inference-package.log"
+    },
+    {
+      "command": "LOBO_VSCODE_EXECUTABLE=/usr/share/code/code xvfb-run -a npm --prefix editors/vscode run test:host",
+      "exit_code": 0,
+      "log": "target/call-inference-host-final.log",
+      "log_sha256": "08bb306070ac97933e202216d9d3ff95b584d9bb7c1dd1ce645d4c36c2066555",
+      "preserved_log": "benchmarks/private-evidence/call-inference-20261122/logs/call-inference-host-final.log"
+    },
+    {
+      "command": "python3 -m unittest discover -s benchmarks -p test_*.py",
+      "exit_code": 0,
+      "log": "target/call-inference-python.log",
+      "log_sha256": "7be3214a0150461761376f228e3e47f07af333c88363b2a4b7b9b5938376d9c2",
+      "preserved_log": "benchmarks/private-evidence/call-inference-20261122/logs/call-inference-python.log"
+    },
+    {
+      "command": "node --test scripts/test-migrate-syntax.mjs",
+      "exit_code": 0,
+      "log": "target/call-inference-codemod.log",
+      "log_sha256": "2d0e399ae7da7b0d157adba82294ff3ea8f31d7aa3b4232a5a495ca8aaa4600e",
+      "preserved_log": "benchmarks/private-evidence/call-inference-20261122/logs/call-inference-codemod.log"
+    },
+    {
+      "command": "LOBO_COMPILER=target/release/lobo LOBO_WEB_EXAMPLE_DIR=target/call-inference-web python3 examples/web-server/test_server.py",
+      "exit_code": 0,
+      "log": "target/call-inference-web-tests.log",
+      "log_sha256": "5a38231703946b2c3d47fc04f4c6b53152e5b2636b1d705f154a75eacda387f9",
+      "preserved_log": "benchmarks/private-evidence/call-inference-20261122/logs/call-inference-web-tests.log"
+    },
+    {
+      "command": "cargo clippy --locked --all-targets -- -D warnings",
+      "exit_code": 0,
+      "log": "target/call-inference-clippy-final.log",
+      "log_sha256": "9c6a8fdab00ac904aa146bd9e8bb0ed3ad30d78739f56c40e1d37095a60e2340",
+      "preserved_log": "benchmarks/private-evidence/call-inference-20261122/logs/call-inference-clippy-final.log"
+    },
+    {
+      "command": "cargo fmt --check",
+      "exit_code": 0,
+      "log": "target/call-inference-fmt.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "preserved_log": "benchmarks/private-evidence/call-inference-20261122/logs/call-inference-fmt.log"
+    },
+    {
+      "command": "python3 /home/luis/.codex/skills/.system/skill-creator/scripts/quick_validate.py .agents/skills/lobo-programming",
+      "exit_code": 0,
+      "log": "target/call-inference-skill-validation.log",
+      "log_sha256": "db349825903d66adffea3ecf1bd8e1803043e8a71cf1a051235dabc5371f5bb0",
+      "preserved_log": "benchmarks/private-evidence/call-inference-20261122/logs/call-inference-skill-validation.log"
+    },
+    {
+      "command": "./scripts/check.sh",
+      "exit_code": 0,
+      "log": "target/call-inference-docs.log",
+      "log_sha256": "1f11bb3bb382f1877ffa8eec4eb376db85d0ecfa2e1301289bb91fbd2cc966ae",
+      "preserved_log": "benchmarks/private-evidence/call-inference-20261122/logs/call-inference-docs.log"
+    }
+  ],
+  "smoke": {
+    "language": "core/1.4",
+    "observations": [
+      {
+        "backend": "c",
+        "user": 1,
+        "observed": {
+          "status": "ok",
+          "kind": "value",
+          "value": {
+            "type": "Record",
+            "value": {
+              "id": "example.web.response",
+              "fields": {
+                "status": {
+                  "type": "I64",
+                  "value": "200"
+                },
+                "content_type": {
+                  "type": "Text",
+                  "value": "application/json"
+                },
+                "body": {
+                  "type": "Text",
+                  "value": "{\"name\":\"Luis\"}"
+                }
+              }
+            }
+          }
+        }
+      },
+      {
+        "backend": "c",
+        "user": 42,
+        "observed": {
+          "status": "ok",
+          "kind": "value",
+          "value": {
+            "type": "Record",
+            "value": {
+              "id": "example.web.response",
+              "fields": {
+                "status": {
+                  "type": "I64",
+                  "value": "404"
+                },
+                "content_type": {
+                  "type": "Text",
+                  "value": "text/plain; charset=utf-8"
+                },
+                "body": {
+                  "type": "Text",
+                  "value": "Not found\n"
+                }
+              }
+            }
+          }
+        }
+      },
+      {
+        "backend": "llvm",
+        "user": 1,
+        "observed": {
+          "status": "ok",
+          "kind": "value",
+          "value": {
+            "type": "Record",
+            "value": {
+              "id": "example.web.response",
+              "fields": {
+                "status": {
+                  "type": "I64",
+                  "value": "200"
+                },
+                "content_type": {
+                  "type": "Text",
+                  "value": "application/json"
+                },
+                "body": {
+                  "type": "Text",
+                  "value": "{\"name\":\"Luis\"}"
+                }
+              }
+            }
+          }
+        }
+      },
+      {
+        "backend": "llvm",
+        "user": 42,
+        "observed": {
+          "status": "ok",
+          "kind": "value",
+          "value": {
+            "type": "Record",
+            "value": {
+              "id": "example.web.response",
+              "fields": {
+                "status": {
+                  "type": "I64",
+                  "value": "404"
+                },
+                "content_type": {
+                  "type": "Text",
+                  "value": "text/plain; charset=utf-8"
+                },
+                "body": {
+                  "type": "Text",
+                  "value": "Not found\n"
+                }
+              }
+            }
+          }
+        }
+      },
+      {
+        "skill": "compact",
+        "observed": {
+          "status": "ok",
+          "kind": "value",
+          "value": {
+            "type": "I64",
+            "value": "42"
+          }
+        }
+      },
+      {
+        "skill": "text",
+        "observed": {
+          "status": "ok",
+          "kind": "value",
+          "value": {
+            "type": "Text",
+            "value": "\u00e9"
+          }
+        }
+      },
+      {
+        "skill": "boxed",
+        "observed": {
+          "status": "ok",
+          "kind": "value",
+          "value": {
+            "type": "Text",
+            "value": "\u00e9"
+          }
+        }
+      }
+    ],
+    "before_after_checked_program_equal": true,
+    "versions": [
+      "core/1.3",
+      "core/1.4"
+    ],
+    "source_and_metadata_unchanged": true,
+    "status": "passed"
+  },
+  "historical_integrity": {
+    "status": "passed",
+    "protected_before_inputs_unchanged": 39,
+    "old_paper_entries_verified": 17,
+    "frozen_release_files_verified": 86,
+    "dependency_lock_unchanged_except_root_version": true,
+    "surveyed_historical_files_unchanged": 292,
+    "old_compact_skill_id_bindings_preserved": 2,
+    "main_skill_checked_program_preserved": true
+  },
+  "preservation": "benchmarks/private-evidence/call-inference-20261122",
+  "negative_attempts": [
+    {
+      "log": "target/call-inference-red.log",
+      "sha256": "60476b03c4de777e350aff410e910c432430885884f673de401e68cdeedd80e2",
+      "preserved_log": "benchmarks/private-evidence/call-inference-20261122/logs/call-inference-red.log"
+    },
+    {
+      "log": "target/call-inference-nesting-red.log",
+      "sha256": "c1e8b23b208b7f3ff8bc223fac07cdd834f426407229681c23f986cace6554d9",
+      "preserved_log": "benchmarks/private-evidence/call-inference-20261122/logs/call-inference-nesting-red.log"
+    },
+    {
+      "log": "target/call-inference-editor-red.log",
+      "sha256": "5a22edf64f4563c3de14a471a17a1585816ced871c2b80771f7e2856c9434552",
+      "preserved_log": "benchmarks/private-evidence/call-inference-20261122/logs/call-inference-editor-red.log"
+    },
+    {
+      "log": "target/call-inference-editor-green.log",
+      "sha256": "a24a3b1284aa1dc45d967bbf224a17e88b084c0e6fbd253981cba46f6c9929a1",
+      "preserved_log": "benchmarks/private-evidence/call-inference-20261122/logs/call-inference-editor-green.log"
+    },
+    {
+      "log": "target/call-inference-rust-first-full.log",
+      "sha256": "b3aa60fc804fd2b087e56254a667f5f8ceb36862e12949734f510d29b9f43cad",
+      "preserved_log": "benchmarks/private-evidence/call-inference-20261122/logs/call-inference-rust-first-full.log"
+    }
+  ],
+  "limits": [
+    "Modern callers only; deprecated legacy calls retain explicit requirements.",
+    "No generic constructor, signature or return-context inference.",
+    "No joint solving of outer unknowns from a generic callback partial signature.",
+    "Bare names require supported expected-function contexts; purity checks remain.",
+    "Local ignored preservation is not an external backup, commit or publication."
+  ],
+  "agent_outcomes": {
+    "construction_quality": null,
+    "comprehension": null,
+    "total_tokens": null
+  },
+  "runtime_speed_comparison": null
+}

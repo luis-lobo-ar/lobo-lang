@@ -1,0 +1,250 @@
+{
+  "status": "passed",
+  "recorded_at": "2026-11-05T23:25:43.290190-06:00",
+  "scope": "pure Lobo source helpers for the selected web sample; language 1.0 unchanged",
+  "helpers": [
+    "text_response",
+    "json_document",
+    "not_found",
+    "method_not_allowed",
+    "read_method",
+    "strip_prefix",
+    "json_string"
+  ],
+  "response_id_preserved": "example.web.response",
+  "verification": {
+    "rust_tests": 188,
+    "python_tests": 31,
+    "editor_tests": 123,
+    "real_editor_host": "passed",
+    "helper_routes": [
+      "evaluator",
+      "C native",
+      "LLVM native",
+      "C ASan/UBSan",
+      "LLVM sanitizer"
+    ],
+    "web_sample_tests": 6,
+    "clippy_warnings_denied": "passed",
+    "format": "passed",
+    "docs_and_skill_validation": "passed",
+    "documented_json_example": "passed",
+    "workspace_sources_checked": 9,
+    "release_snapshot_library_regression": "passed"
+  },
+  "budgets": {
+    "helper_conformance_fuel": 200000,
+    "helper_conformance_heap": 100000,
+    "live_host_fuel": 10000,
+    "live_host_heap": 10000,
+    "live_host_maximum_target_bytes": 2048
+  },
+  "source_files": [
+    {
+      "path": "libraries/http/http.lobo",
+      "bytes": 2712,
+      "sha256": "0abe60f6076436752ee25ff306a713dbe0fd8b27288c30aaa4dd6795655742f1"
+    },
+    {
+      "path": "libraries/http/README.md",
+      "bytes": 3754,
+      "sha256": "82e838cb012b4358ebfb13b052c2773237e48a5fbe842aee99353ba848dbb549"
+    },
+    {
+      "path": "tests/http_helpers.rs",
+      "bytes": 5770,
+      "sha256": "b9be11f0700ff70ed381c5643043a395738395ff970e64c3e2dbfd1422939eef"
+    },
+    {
+      "path": "benchmarks/test_release_inputs.py",
+      "bytes": 637,
+      "sha256": "714baf9b79020972f66c291feffac955a2b6800d8ae632b48b3b7f0dcef16d52"
+    },
+    {
+      "path": "scripts/release.py",
+      "bytes": 13571,
+      "sha256": "bac2e591e4146a517020b79720a76c9a15610945135a5c588934e5226d157cac"
+    },
+    {
+      "path": ".vscode/settings.json",
+      "bytes": 402,
+      "sha256": "d5fef1d723d1d6b60700dca5359505bcaeebe717fda9900eec90c7a82190877e"
+    },
+    {
+      "path": "decisions/0036-pure-http-helper-module.md",
+      "bytes": 1912,
+      "sha256": "ad44b8f5f4458a1dedf056a70365c742beb8020b482a1ade6ad1322c23d4157b"
+    },
+    {
+      "path": "examples/web-server/app.lobo",
+      "bytes": 1109,
+      "sha256": "35bc3e7cce33585661b94d43c403637a506cd59603a8c7e3378ac3ae5e66997c"
+    },
+    {
+      "path": "examples/web-server/build.py",
+      "bytes": 2264,
+      "sha256": "e80b4b863fa572d21fe8669a885dfd09a9ae25865504702071a48d8a857775f1"
+    },
+    {
+      "path": "examples/web-server/test_server.py",
+      "bytes": 7400,
+      "sha256": "e51d5a8db07dd0e2439132b85cbda82ae1b36d8f7415dad5613f16f19de9bf14"
+    },
+    {
+      "path": "examples/web-server/README.md",
+      "bytes": 4151,
+      "sha256": "377b1c7e58a586d0de93f5fe229e65cb94254b40df53736568a2b74fa2254cfc"
+    },
+    {
+      "path": "editors/vscode/test/bundle-navigation.test.mjs",
+      "bytes": 6844,
+      "sha256": "3508404f7193377fd6e71121f661381f3a822d424b5a2cf0b10c3020aa4049bd"
+    },
+    {
+      "path": ".agents/skills/lobo-programming/references/tools.md",
+      "bytes": 4728,
+      "sha256": "335b4772c34081a3d688fd5ea74da4ff712114315c4a776f0e658837de0e83d7"
+    }
+  ],
+  "binaries": [
+    {
+      "path": "dist/web-server/server",
+      "bytes": 504600,
+      "sha256": "1a16efb4a65020233c0ed0b42632a56eb54f706892f3abe077acd89abac8db0b"
+    },
+    {
+      "path": "dist/web-server/handler",
+      "bytes": 35280,
+      "sha256": "c9630695356e09aaf538bbbd6b109af8549e1a183003e33cbab599f6d8047354"
+    }
+  ],
+  "live_checks": {
+    "observations": [
+      {
+        "path": "/health",
+        "status": 200,
+        "body": "{\"status\":\"ok\",\"language\":\"lobo\"}\n"
+      },
+      {
+        "path": "/greet/Luis",
+        "status": 200,
+        "body": "Hello, Luis!\n"
+      }
+    ],
+    "frozen_release_hashes_verified": 86,
+    "compiler_and_editor_implementation_unchanged": true
+  },
+  "preserved_evidence": [
+    {
+      "path": "benchmarks/private-evidence/http-helpers-20261105/binaries/handler",
+      "bytes": 35280,
+      "sha256": "c9630695356e09aaf538bbbd6b109af8549e1a183003e33cbab599f6d8047354"
+    },
+    {
+      "path": "benchmarks/private-evidence/http-helpers-20261105/binaries/server",
+      "bytes": 504600,
+      "sha256": "1a16efb4a65020233c0ed0b42632a56eb54f706892f3abe077acd89abac8db0b"
+    },
+    {
+      "path": "benchmarks/private-evidence/http-helpers-20261105/logs/http-helpers-clippy-final.log",
+      "bytes": 137,
+      "sha256": "abab6bd5926937926e68ddec0cb9ea27cbb1f06f7ad86c8eca42a3140a3b6839"
+    },
+    {
+      "path": "benchmarks/private-evidence/http-helpers-20261105/logs/http-helpers-clippy.log",
+      "bytes": 137,
+      "sha256": "bf7db96035af0a0da895b419ba8b2878e604935c94795ef73349acf71b78fcd8"
+    },
+    {
+      "path": "benchmarks/private-evidence/http-helpers-20261105/logs/http-helpers-docs.log",
+      "bytes": 55,
+      "sha256": "1f11bb3bb382f1877ffa8eec4eb376db85d0ecfa2e1301289bb91fbd2cc966ae"
+    },
+    {
+      "path": "benchmarks/private-evidence/http-helpers-20261105/logs/http-helpers-documented-example.json",
+      "bytes": 1094,
+      "sha256": "ea04fe17849a9e7db9a1fcb318c1ee88cf52995b2db291387e5e0617ba0ff43e"
+    },
+    {
+      "path": "benchmarks/private-evidence/http-helpers-20261105/logs/http-helpers-editor-host.log",
+      "bytes": 1049,
+      "sha256": "44a41ad61ed97e8ad3384ca493ae923c17a28b91538543ab8984f97cbf07bbec"
+    },
+    {
+      "path": "benchmarks/private-evidence/http-helpers-20261105/logs/http-helpers-editor-navigation.log",
+      "bytes": 1897,
+      "sha256": "f3e91fb7ae11261b772f5638715784e2cbf9c266aa70cf8e71c3c95d0d2c292e"
+    },
+    {
+      "path": "benchmarks/private-evidence/http-helpers-20261105/logs/http-helpers-full-editor.log",
+      "bytes": 27723,
+      "sha256": "eeb36806d605cc9622a025829fa7fd1124a68a28c7bc42874a81d5e19ec83ca3"
+    },
+    {
+      "path": "benchmarks/private-evidence/http-helpers-20261105/logs/http-helpers-full-python.log",
+      "bytes": 131,
+      "sha256": "26588096fa86028b7acfa6feaea372580fa1a3f76042930b9b48f295b94b87b8"
+    },
+    {
+      "path": "benchmarks/private-evidence/http-helpers-20261105/logs/http-helpers-full-rust.log",
+      "bytes": 20577,
+      "sha256": "dd85a87070e383a75e32c556e60c837bbe2bdd65ea9e00e9699fe2743710175f"
+    },
+    {
+      "path": "benchmarks/private-evidence/http-helpers-20261105/logs/http-helpers-green.log",
+      "bytes": 545,
+      "sha256": "16ce748fd82aaaac97f3c2bf789835ff83ef2fc7de58ce72dd8803f5d8cb4e8c"
+    },
+    {
+      "path": "benchmarks/private-evidence/http-helpers-20261105/logs/http-helpers-live-check.json",
+      "bytes": 336,
+      "sha256": "7b5ddd8fc756ca1195c350cc1d6d87ad261caf39aa4bcd09d87de044dabf7b03"
+    },
+    {
+      "path": "benchmarks/private-evidence/http-helpers-20261105/logs/http-helpers-red.log",
+      "bytes": 1914,
+      "sha256": "7390a54e2d5af94408c460a51f3153cef90a6dc0f9a2434793e70db7f3a6e4e2"
+    },
+    {
+      "path": "benchmarks/private-evidence/http-helpers-20261105/logs/http-helpers-release-inputs-final.log",
+      "bytes": 98,
+      "sha256": "a146ffbdf9b07bb226ef66ce59c2a411149b39de43ba5ad86bc5ec9e95a7fb61"
+    },
+    {
+      "path": "benchmarks/private-evidence/http-helpers-20261105/logs/http-helpers-release-inputs-green.log",
+      "bytes": 98,
+      "sha256": "3230caf5bcf7b75210d6ff84024c594754689765ada21013297a85b6f4fb1f1f"
+    },
+    {
+      "path": "benchmarks/private-evidence/http-helpers-20261105/logs/http-helpers-release-inputs-red.log",
+      "bytes": 23887,
+      "sha256": "81f29e733241d88f44c0db0377364f02389ff37e028e5a609fb872023ab66617"
+    },
+    {
+      "path": "benchmarks/private-evidence/http-helpers-20261105/logs/http-helpers-web-build.log",
+      "bytes": 645,
+      "sha256": "1562c0c7b920d77e660f3128de9f0b77639cd18320c4468225466c1acd16120b"
+    },
+    {
+      "path": "benchmarks/private-evidence/http-helpers-20261105/logs/http-helpers-web-tests.log",
+      "bytes": 104,
+      "sha256": "d3f365d706f3a177f231ff00855497f46f1b660e7b8614f5211ae90314ae1f55"
+    },
+    {
+      "path": "benchmarks/private-evidence/http-helpers-20261105/logs/http-helpers-workspace-bundle.json",
+      "bytes": 1264,
+      "sha256": "3fd044f4da17a1b1daf4308d06c6daf0709d1abaf7e2938aa1f383c259c98363"
+    },
+    {
+      "path": "benchmarks/private-evidence/http-helpers-20261105/source.tar.gz",
+      "bytes": 17950,
+      "sha256": "6e235ed2dbd88a9f2fc861836bd6ff479f493ab0a617573e4aaa908a42f85ea0"
+    }
+  ],
+  "limits": [
+    "serialized JSON documents are not parsed by json_document",
+    "pure helpers grant no IO authority or budget exemption",
+    "sample statuses limited to 200/404/405",
+    "no independent agent/throughput/token outcome measured"
+  ]
+}

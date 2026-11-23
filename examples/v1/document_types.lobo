@@ -1,0 +1,5 @@
+module document_types @id("v1.doc.types.module");
+record Item @id("v1.doc.item") { key: I64, score: I64, enabled: Bool }
+record Document @id("v1.doc.document") { id: I64, name: Text, items: List<Item> }
+variant DocError @id("v1.doc.error") { DocBadId, EmptyName, BadItem(I64) }
+record Report @id("v1.doc.report") { document: Document, count: I64, total: I64 }

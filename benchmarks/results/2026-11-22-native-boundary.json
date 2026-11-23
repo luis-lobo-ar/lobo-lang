@@ -1,0 +1,1923 @@
+{
+  "format": "lobo-native-boundary-result/0.1",
+  "date": "2026-11-22",
+  "status": "passed",
+  "compiler": "1.7.0",
+  "language": "core/1.7",
+  "native_abi": 1,
+  "checked_format": "lobo-checked/1.0",
+  "extension": "1.7.0",
+  "scope": "Closed synchronous 64-bit Linux ABI with explicit grants, opaque resources, clock, randomness and bounded IPv4 loopback TCP",
+  "commands": [
+    {
+      "command": "cargo test --locked",
+      "cwd": "/home/luis/dev/lobo-ar/lobo-lang",
+      "exit_code": 0,
+      "log": "benchmarks/private-evidence/native-boundary-20261122/logs/native-boundary-rust-verified.log",
+      "log_sha256": "173f7afec00ae63ce3139cd7eb417cc55cd9cbe108c8df52f339832c54aa5747"
+    },
+    {
+      "command": "cargo clippy --locked --all-targets -- -D warnings",
+      "cwd": "/home/luis/dev/lobo-ar/lobo-lang",
+      "exit_code": 0,
+      "log": "benchmarks/private-evidence/native-boundary-20261122/logs/native-boundary-clippy-verified.log",
+      "log_sha256": "4f2ed37cb1397adabafb1fd9ce0549101390916a9e41f92d3317945b50945251"
+    },
+    {
+      "command": "cargo fmt -- --check",
+      "cwd": "/home/luis/dev/lobo-ar/lobo-lang",
+      "exit_code": 0,
+      "log": "benchmarks/private-evidence/native-boundary-20261122/logs/native-boundary-format-corrected.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": "python3 scripts/check-native-upstream.py",
+      "cwd": "/home/luis/dev/lobo-ar/lobo-lang",
+      "exit_code": 0,
+      "log": "benchmarks/private-evidence/native-boundary-20261122/logs/native-boundary-upstream-check.log",
+      "log_sha256": "4e8ce6ed6cbea7a5b21e35aa2f21afd9912127e1249db77dfc914e6853a8a4fd"
+    },
+    {
+      "command": "npm --prefix editors/vscode test",
+      "cwd": "/home/luis/dev/lobo-ar/lobo-lang",
+      "exit_code": 0,
+      "log": "benchmarks/private-evidence/native-boundary-20261122/logs/native-boundary-editor-full.log",
+      "log_sha256": "1eb8ef5107147e79b1c7b0323b79e4c93a7ff430dc57b56dc69637b17d573597"
+    },
+    {
+      "command": "LOBO_VSCODE_EXECUTABLE=/usr/share/code/code xvfb-run -a npm --prefix editors/vscode run test:host",
+      "cwd": "/home/luis/dev/lobo-ar/lobo-lang",
+      "exit_code": 0,
+      "log": "benchmarks/private-evidence/native-boundary-20261122/logs/native-boundary-editor-host.log",
+      "log_sha256": "0e1284efa3d0a96a619f7996cf6ead6912d8ec13a94d21af02cdbcddf41abf7d"
+    },
+    {
+      "command": "npm --prefix editors/vscode run package",
+      "cwd": "/home/luis/dev/lobo-ar/lobo-lang",
+      "exit_code": 0,
+      "log": "benchmarks/private-evidence/native-boundary-20261122/logs/native-boundary-package-verified.log",
+      "log_sha256": "016f99bf8591627aff9d14be1878e7ecc32d6c68b46240818d624404d145da97"
+    },
+    {
+      "command": "python3 -m unittest discover -s benchmarks -p 'test_*.py'",
+      "cwd": "/home/luis/dev/lobo-ar/lobo-lang",
+      "exit_code": 0,
+      "log": "benchmarks/private-evidence/native-boundary-20261122/logs/native-boundary-python.log",
+      "log_sha256": "fedaeec03d3fb17c38f73bcfd7424e51c88daf3cc51763b4f1340341a97fa77d"
+    },
+    {
+      "command": "node --test scripts/test-migrate-syntax.mjs",
+      "cwd": "/home/luis/dev/lobo-ar/lobo-lang",
+      "exit_code": 0,
+      "log": "benchmarks/private-evidence/native-boundary-20261122/logs/native-boundary-codemod.log",
+      "log_sha256": "5f3c0c2cc76f143509abf00064f00e5f45ee05377df87529875af94858e02346"
+    },
+    {
+      "command": "cargo build --locked --release --bins",
+      "cwd": "/home/luis/dev/lobo-ar/lobo-lang",
+      "exit_code": 0,
+      "log": "benchmarks/private-evidence/native-boundary-20261122/logs/native-boundary-release-build.log",
+      "log_sha256": "a8c3023a1f4f908e6c86493b8243d48421bc88ccbc9fa31f495f6f2f3bdab79a"
+    },
+    {
+      "command": "python3 /home/luis/.codex/skills/.system/skill-creator/scripts/quick_validate.py .agents/skills/lobo-programming",
+      "cwd": "/home/luis/dev/lobo-ar/lobo-lang",
+      "exit_code": 0,
+      "log": "benchmarks/private-evidence/native-boundary-20261122/logs/native-boundary-skill-validator.log",
+      "log_sha256": "db349825903d66adffea3ecf1bd8e1803043e8a71cf1a051235dabc5371f5bb0"
+    },
+    {
+      "command": "python3 target/verify-native-boundary-smoke.py",
+      "cwd": "/home/luis/dev/lobo-ar/lobo-lang",
+      "exit_code": 0,
+      "log": "benchmarks/private-evidence/native-boundary-20261122/logs/native-boundary-smoke-corrected.log",
+      "log_sha256": "f6d23a47aea0c7d94aa5663c522c4923a1c76075466727f715e6112cbd07a7c6"
+    },
+    {
+      "command": "python3 examples/web-server/build.py --compiler target/release/lobo --out-dir target/native-boundary-web",
+      "cwd": "/home/luis/dev/lobo-ar/lobo-lang",
+      "exit_code": 0,
+      "log": "benchmarks/private-evidence/native-boundary-20261122/logs/native-boundary-web-build.log",
+      "log_sha256": "01bb2a18489b44de237dd9bfc40c33206c065064a676655797b8e2622248dd5b"
+    },
+    {
+      "command": "LOBO_COMPILER=/home/luis/dev/lobo-ar/lobo-lang/target/release/lobo LOBO_WEB_EXAMPLE_DIR=/home/luis/dev/lobo-ar/lobo-lang/target/native-boundary-web python3 examples/web-server/test_server.py",
+      "cwd": "/home/luis/dev/lobo-ar/lobo-lang",
+      "exit_code": 0,
+      "log": "benchmarks/private-evidence/native-boundary-20261122/logs/native-boundary-http.log",
+      "log_sha256": "49e65486a8bc34ee522057059bb07ef332dcc9a5892d9f53da895d32b03a53fa"
+    },
+    {
+      "command": "python3 target/check-native-boundary-integrity.py",
+      "cwd": "/home/luis/dev/lobo-ar/lobo-lang",
+      "exit_code": 0,
+      "log": "benchmarks/private-evidence/native-boundary-20261122/logs/native-boundary-integrity-verified.log",
+      "log_sha256": "aff65efcaf04cba9e3dd77efe10d101e7ecdc462d001144bda2aeab1a9093301"
+    },
+    {
+      "command": "./scripts/check.sh",
+      "cwd": "/home/luis/dev/lobo-ar/lobo-lang",
+      "exit_code": 0,
+      "log": "benchmarks/private-evidence/native-boundary-20261122/logs/native-boundary-doc-verified.log",
+      "log_sha256": "1f11bb3bb382f1877ffa8eec4eb376db85d0ecfa2e1301289bb91fbd2cc966ae"
+    },
+    {
+      "command": "git diff --check",
+      "cwd": "/home/luis/dev/lobo-ar/lobo-lang",
+      "exit_code": 0,
+      "log": "benchmarks/private-evidence/native-boundary-20261122/logs/native-boundary-diff-verified.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": "embedded Python: validate each relative Markdown link under .agents/skills/lobo-programming",
+      "cwd": "/home/luis/dev/lobo-ar/lobo-lang",
+      "exit_code": 0,
+      "log": "benchmarks/private-evidence/native-boundary-20261122/logs/native-boundary-skill-links.log",
+      "log_sha256": "bb2881b45f9feb19148424fced4eff91ed18e3cd62d05e9b6ea15c34d0eda092"
+    }
+  ],
+  "test_counts": {
+    "rust": 259,
+    "new_native_rust": 30,
+    "editor": 161,
+    "python_benchmark_tools": 31,
+    "codemod": 4,
+    "historical_http_sample": 6,
+    "rust_ignored": 0,
+    "editor_skipped": 0
+  },
+  "provider_harness": {
+    "model_steps_per_run": 50000,
+    "permission_pairs_per_run": 256,
+    "builds": [
+      "optimized",
+      "ASan/UBSan"
+    ],
+    "faults": [
+      "poll interruption/spurious readiness",
+      "receive interruption with clock failure",
+      "short reads/writes",
+      "partial interrupted getrandom",
+      "interrupted unstarted connect",
+      "malformed null input buffer",
+      "wrong/stale/forged handles",
+      "fault-exit cleanup"
+    ]
+  },
+  "smoke": {
+    "commands": 39,
+    "native_binaries": 12,
+    "results": "benchmarks/private-evidence/native-boundary-20261122/smoke/results.json",
+    "sha256": "8009c04df33508d3a59bc8bc20b32d9032de069247ddffa5835b9339d44c8757",
+    "mvc_checked_programs_equal_preserved_1_6": 2
+  },
+  "upstream": {
+    "manifest": "tests/upstream/native/manifest.json",
+    "sha256": "3e8fc99d343f6f2b65a1214411d530983a85cf7e64d5749a710425a9d90a9618",
+    "projects": 5,
+    "pinned_source_and_license_files": 16,
+    "adaptation_groups": 8,
+    "complete_upstream_suites_executed": false
+  },
+  "integrity": {
+    "status": "pass",
+    "checks": {
+      "prior_paper_entries": 21,
+      "historical_protected_files": 291,
+      "historical_survey_exclusions": {
+        "__pycache__": "generated caches",
+        "benchmarks/agent-repair-study.py": "prior frozen-fixture path rebind",
+        "spec/README.md": "current specification index",
+        "research/README.md": "current research index, updated by prior native-interface review"
+      },
+      "frozen_release_artifacts": 86,
+      "selected_identity_fixture_and_historical_review_files": 8,
+      "current_baseline_protected_files": 57,
+      "dependency_locks": "only root package version changed"
+    }
+  },
+  "preservation": {
+    "path": "benchmarks/private-evidence/native-boundary-20261122",
+    "manifest": "benchmarks/private-evidence/native-boundary-20261122/manifest.json",
+    "manifest_sha256": "fa77f300be7106baab4d8f25d456bc97bec74104ae586778fd114f5b9ae3b6c1",
+    "source_snapshot_files": 327,
+    "local_only": true,
+    "commit": null,
+    "publication": null,
+    "off_device_backup": null
+  },
+  "artifacts": {
+    "lobo": {
+      "sha256": "8c9a58282f27da17d8290b5a0a02f0ca18ec32fb7f5a7164836005eec22a0057",
+      "bytes": 1569592
+    },
+    "lobo-test": {
+      "sha256": "14fd3d1e84a5c1e1fa3f250bcb60e85abc87bfb7bebeafcfccda3de09404ad88",
+      "bytes": 1333232
+    },
+    "lobo-syntax-1.7.0.vsix": {
+      "sha256": "a9bbbe1cead8f8ec2606ea75dd6a94a474481d20acf1202a5a3bf37b4eaa7050",
+      "bytes": 39404
+    },
+    "before-lobo": {
+      "sha256": "c4c4308b1ac327826f52a8eb2b9033ce7296539f2cdcbdfed2caf6f51d8d8a5b",
+      "bytes": 1511640
+    },
+    "before-lobo-test": {
+      "sha256": "c12d451d72ed9e9d3a3b984456fcde0f0c47141cde3bb65d27be5caa2e93ad28",
+      "bytes": 1284272
+    },
+    "before-lobo-syntax-1.6.0.vsix": {
+      "sha256": "836d1f1d10689a8fb5ead8483e6ec34e413dec9658057fe7d2293d3904af94ea",
+      "bytes": 38375
+    },
+    "before-source.tar.gz": {
+      "sha256": "46d2e81621e601218c44176fca6ed95c8c70c8210a63ae317dadeb1f3dc3bc08",
+      "bytes": 592402
+    },
+    "current-source.tar.gz": {
+      "sha256": "70da8acc36b01545774abc3a9951d8266bc92642b6ba301c7745b5dfc8aad915",
+      "bytes": 723706
+    }
+  },
+  "tool_versions": {
+    "path": "benchmarks/private-evidence/native-boundary-20261122/tool-versions.json",
+    "sha256": "d39b0011612fd930ad71ea06f5473b4731b2d709e72487e9b34a191225b0d01c"
+  },
+  "attempt_logs": [
+    {
+      "log": "benchmarks/private-evidence/native-boundary-20261122/logs/native-boundary-abi-corrected.log",
+      "sha256": "1e3221b38cd274cfbe2c143e709b5ef3ca0f080241829350859511da01ed55b5",
+      "bytes": 560,
+      "rust_test_summaries": [
+        {
+          "status": "ok",
+          "passed": 3,
+          "failed": 0,
+          "ignored": 0
+        }
+      ],
+      "exact_command": null
+    },
+    {
+      "log": "benchmarks/private-evidence/native-boundary-20261122/logs/native-boundary-abi-first.log",
+      "sha256": "d876ba04d4574a99fec844f8932bf27f5265d55b55727ae6d96a41fe7065f6c3",
+      "bytes": 875,
+      "rust_test_summaries": [],
+      "exact_command": null
+    },
+    {
+      "log": "benchmarks/private-evidence/native-boundary-20261122/logs/native-boundary-abi-red.log",
+      "sha256": "c55df3612d3659f02946d0f476044dd5c0d9a68280b3e230a007869036028c86",
+      "bytes": 2306,
+      "rust_test_summaries": [
+        {
+          "status": "FAILED",
+          "passed": 0,
+          "failed": 3,
+          "ignored": 0
+        }
+      ],
+      "exact_command": null
+    },
+    {
+      "log": "benchmarks/private-evidence/native-boundary-20261122/logs/native-boundary-adapter-deadline-fixed.log",
+      "sha256": "99a3226ce0239f53c99bcf560665de97ec38dd90590c8ffc087a43c740171255",
+      "bytes": 687,
+      "rust_test_summaries": [
+        {
+          "status": "ok",
+          "passed": 4,
+          "failed": 0,
+          "ignored": 0
+        }
+      ],
+      "exact_command": null
+    },
+    {
+      "log": "benchmarks/private-evidence/native-boundary-20261122/logs/native-boundary-adapter-expanded-red.log",
+      "sha256": "00a44d37233025b9c20a32db28d39c6be118bf2e86c60fa82f8b7debe22d9723",
+      "bytes": 1667,
+      "rust_test_summaries": [
+        {
+          "status": "FAILED",
+          "passed": 7,
+          "failed": 1,
+          "ignored": 0
+        }
+      ],
+      "exact_command": null
+    },
+    {
+      "log": "benchmarks/private-evidence/native-boundary-20261122/logs/native-boundary-adapter-red.log",
+      "sha256": "df7d5a26456c429e39626aab6b8844d06d94375d9e19d75d3b6951eac0b388b5",
+      "bytes": 1476,
+      "rust_test_summaries": [
+        {
+          "status": "FAILED",
+          "passed": 3,
+          "failed": 1,
+          "ignored": 0
+        }
+      ],
+      "exact_command": null
+    },
+    {
+      "log": "benchmarks/private-evidence/native-boundary-20261122/logs/native-boundary-attenuation-red.log",
+      "sha256": "474c17f11ca0b1e23f91f784f86157a092ffc8b2d230f29a0e266a191e80e979",
+      "bytes": 1599,
+      "rust_test_summaries": [
+        {
+          "status": "FAILED",
+          "passed": 0,
+          "failed": 1,
+          "ignored": 0
+        }
+      ],
+      "exact_command": null
+    },
+    {
+      "log": "benchmarks/private-evidence/native-boundary-20261122/logs/native-boundary-authority-fixed.log",
+      "sha256": "11424ed735dda2c497ffe7544e3e51ee9e7d92283df65bbf04599e46f00b03d5",
+      "bytes": 2652,
+      "rust_test_summaries": [
+        {
+          "status": "ok",
+          "passed": 4,
+          "failed": 0,
+          "ignored": 0
+        },
+        {
+          "status": "ok",
+          "passed": 3,
+          "failed": 0,
+          "ignored": 0
+        },
+        {
+          "status": "ok",
+          "passed": 6,
+          "failed": 0,
+          "ignored": 0
+        },
+        {
+          "status": "ok",
+          "passed": 3,
+          "failed": 0,
+          "ignored": 0
+        }
+      ],
+      "exact_command": null
+    },
+    {
+      "log": "benchmarks/private-evidence/native-boundary-20261122/logs/native-boundary-authority-red.log",
+      "sha256": "359d967489b6324bcd711d89cfc099ad386901386cd5677fbd284be6721e4bb5",
+      "bytes": 1438,
+      "rust_test_summaries": [
+        {
+          "status": "FAILED",
+          "passed": 0,
+          "failed": 1,
+          "ignored": 0
+        }
+      ],
+      "exact_command": null
+    },
+    {
+      "log": "benchmarks/private-evidence/native-boundary-20261122/logs/native-boundary-clippy-verified.log",
+      "sha256": "4f2ed37cb1397adabafb1fd9ce0549101390916a9e41f92d3317945b50945251",
+      "bytes": 137,
+      "rust_test_summaries": [],
+      "exact_command": "cargo clippy --locked --all-targets -- -D warnings"
+    },
+    {
+      "log": "benchmarks/private-evidence/native-boundary-20261122/logs/native-boundary-clippy.log",
+      "sha256": "c7d70d1dce372fe5c7dd95011f6666332c3588a6c2c3dd69a448b5e670b57d80",
+      "bytes": 137,
+      "rust_test_summaries": [],
+      "exact_command": null
+    },
+    {
+      "log": "benchmarks/private-evidence/native-boundary-20261122/logs/native-boundary-codemod.log",
+      "sha256": "5f3c0c2cc76f143509abf00064f00e5f45ee05377df87529875af94858e02346",
+      "bytes": 1032,
+      "rust_test_summaries": [],
+      "exact_command": "node --test scripts/test-migrate-syntax.mjs"
+    },
+    {
+      "log": "benchmarks/private-evidence/native-boundary-20261122/logs/native-boundary-connect-interruption-red.log",
+      "sha256": "cbe0b5fb9da429722c0e3dde96aba942fa4d6ac518037e8437aacf409a62176a",
+      "bytes": 1075,
+      "rust_test_summaries": [
+        {
+          "status": "FAILED",
+          "passed": 0,
+          "failed": 1,
+          "ignored": 0
+        }
+      ],
+      "exact_command": null
+    },
+    {
+      "log": "benchmarks/private-evidence/native-boundary-20261122/logs/native-boundary-corpus-final.log",
+      "sha256": "032c8450cef9c7971bbc5bc396aea09846a554d9929559473a2d2c78652c7b4d",
+      "bytes": 1339,
+      "rust_test_summaries": [
+        {
+          "status": "ok",
+          "passed": 8,
+          "failed": 0,
+          "ignored": 0
+        },
+        {
+          "status": "ok",
+          "passed": 3,
+          "failed": 0,
+          "ignored": 0
+        }
+      ],
+      "exact_command": null
+    },
+    {
+      "log": "benchmarks/private-evidence/native-boundary-20261122/logs/native-boundary-debug.log",
+      "sha256": "f897ac8c057bbb12de28162b136091fb2236159447d5c2f895a690a5bd549a86",
+      "bytes": 137,
+      "rust_test_summaries": [],
+      "exact_command": null
+    },
+    {
+      "log": "benchmarks/private-evidence/native-boundary-20261122/logs/native-boundary-diff-check.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "rust_test_summaries": [],
+      "exact_command": null
+    },
+    {
+      "log": "benchmarks/private-evidence/native-boundary-20261122/logs/native-boundary-diff-verified.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "rust_test_summaries": [],
+      "exact_command": "git diff --check"
+    },
+    {
+      "log": "benchmarks/private-evidence/native-boundary-20261122/logs/native-boundary-doc-check.log",
+      "sha256": "1f11bb3bb382f1877ffa8eec4eb376db85d0ecfa2e1301289bb91fbd2cc966ae",
+      "bytes": 55,
+      "rust_test_summaries": [],
+      "exact_command": null
+    },
+    {
+      "log": "benchmarks/private-evidence/native-boundary-20261122/logs/native-boundary-doc-verified.log",
+      "sha256": "1f11bb3bb382f1877ffa8eec4eb376db85d0ecfa2e1301289bb91fbd2cc966ae",
+      "bytes": 55,
+      "rust_test_summaries": [],
+      "exact_command": "./scripts/check.sh"
+    },
+    {
+      "log": "benchmarks/private-evidence/native-boundary-20261122/logs/native-boundary-editor-corrected.log",
+      "sha256": "f3ac2cbb268f48125ee5cf34e07c52a5498f584336c5419fc3ef54a29eb8adb0",
+      "bytes": 679,
+      "rust_test_summaries": [],
+      "exact_command": null
+    },
+    {
+      "log": "benchmarks/private-evidence/native-boundary-20261122/logs/native-boundary-editor-first.log",
+      "sha256": "e2e87514473c3acc8cb32390f4d621c1b2c388b8a46eb915c08721aa0297a680",
+      "bytes": 2244,
+      "rust_test_summaries": [],
+      "exact_command": null
+    },
+    {
+      "log": "benchmarks/private-evidence/native-boundary-20261122/logs/native-boundary-editor-full.log",
+      "sha256": "1eb8ef5107147e79b1c7b0323b79e4c93a7ff430dc57b56dc69637b17d573597",
+      "bytes": 36163,
+      "rust_test_summaries": [],
+      "exact_command": "npm --prefix editors/vscode test"
+    },
+    {
+      "log": "benchmarks/private-evidence/native-boundary-20261122/logs/native-boundary-editor-host.log",
+      "sha256": "0e1284efa3d0a96a619f7996cf6ead6912d8ec13a94d21af02cdbcddf41abf7d",
+      "bytes": 1252,
+      "rust_test_summaries": [],
+      "exact_command": "LOBO_VSCODE_EXECUTABLE=/usr/share/code/code xvfb-run -a npm --prefix editors/vscode run test:host"
+    },
+    {
+      "log": "benchmarks/private-evidence/native-boundary-20261122/logs/native-boundary-editor-legacy-fixed.log",
+      "sha256": "b8f140c8ecc6864ff14c2bd5a355f4764a3649bbe2b5ef1e16cf5d3d9d47d5ec",
+      "bytes": 868,
+      "rust_test_summaries": [],
+      "exact_command": null
+    },
+    {
+      "log": "benchmarks/private-evidence/native-boundary-20261122/logs/native-boundary-editor-legacy-red-actual.log",
+      "sha256": "97dbbf50218ba6fc97df37244331f2802bb3a5b2471697ccd7b68619923e5148",
+      "bytes": 1757,
+      "rust_test_summaries": [],
+      "exact_command": null
+    },
+    {
+      "log": "benchmarks/private-evidence/native-boundary-20261122/logs/native-boundary-editor-legacy-red.log",
+      "sha256": "b996b25733a4f9b4e08f2cdaa08b492a84163271551943a813f0de77efc3c0e6",
+      "bytes": 680,
+      "rust_test_summaries": [],
+      "exact_command": null
+    },
+    {
+      "log": "benchmarks/private-evidence/native-boundary-20261122/logs/native-boundary-editor-red-complete.log",
+      "sha256": "cc7fa20707291ad3eedd513ab99e2b7b1090baa0df369119228536cd2372e461",
+      "bytes": 2962,
+      "rust_test_summaries": [],
+      "exact_command": null
+    },
+    {
+      "log": "benchmarks/private-evidence/native-boundary-20261122/logs/native-boundary-editor-red.log",
+      "sha256": "1f5cd8e35b3b2a0d2758d1391fad2e291509fd61218da7b079146d541a608134",
+      "bytes": 1904,
+      "rust_test_summaries": [],
+      "exact_command": null
+    },
+    {
+      "log": "benchmarks/private-evidence/native-boundary-20261122/logs/native-boundary-format-corrected.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "rust_test_summaries": [],
+      "exact_command": "cargo fmt -- --check"
+    },
+    {
+      "log": "benchmarks/private-evidence/native-boundary-20261122/logs/native-boundary-format.log",
+      "sha256": "9f02b2639bd9d211237a539bfa52c3ac9f08e8d69c9eb4779a3881005435b20d",
+      "bytes": 626,
+      "rust_test_summaries": [],
+      "exact_command": null
+    },
+    {
+      "log": "benchmarks/private-evidence/native-boundary-20261122/logs/native-boundary-grammar-corrected.log",
+      "sha256": "ee181ed668bfe6eb7140678bc7971d86499b3c9e3973f0e0c0f8aa12ee182eff",
+      "bytes": 11012,
+      "rust_test_summaries": [],
+      "exact_command": null
+    },
+    {
+      "log": "benchmarks/private-evidence/native-boundary-20261122/logs/native-boundary-grammar-final.log",
+      "sha256": "76a4250d5fbf3fde63619a1e012f495d0aada8ef5b9fa405c61e2069c4f2a8a6",
+      "bytes": 9225,
+      "rust_test_summaries": [],
+      "exact_command": null
+    },
+    {
+      "log": "benchmarks/private-evidence/native-boundary-20261122/logs/native-boundary-grammar-nested-red.log",
+      "sha256": "faa370f9d55a7fed7bf9a03864ce46bd854ce155e8f9fedadbfb9f8b22c3a96a",
+      "bytes": 11025,
+      "rust_test_summaries": [],
+      "exact_command": null
+    },
+    {
+      "log": "benchmarks/private-evidence/native-boundary-20261122/logs/native-boundary-grammar-red.log",
+      "sha256": "59eb8e877483849454f3026e43abc568c09a40281d29a4e64f6ba4f8febc4a47",
+      "bytes": 9944,
+      "rust_test_summaries": [],
+      "exact_command": null
+    },
+    {
+      "log": "benchmarks/private-evidence/native-boundary-20261122/logs/native-boundary-header-red.log",
+      "sha256": "4183d8f213a13e8317082263d8b7e94a253372958ca520d406ec00cd66614a14",
+      "bytes": 905,
+      "rust_test_summaries": [
+        {
+          "status": "FAILED",
+          "passed": 0,
+          "failed": 1,
+          "ignored": 0
+        }
+      ],
+      "exact_command": null
+    },
+    {
+      "log": "benchmarks/private-evidence/native-boundary-20261122/logs/native-boundary-http.log",
+      "sha256": "49e65486a8bc34ee522057059bb07ef332dcc9a5892d9f53da895d32b03a53fa",
+      "bytes": 104,
+      "rust_test_summaries": [],
+      "exact_command": "LOBO_COMPILER=/home/luis/dev/lobo-ar/lobo-lang/target/release/lobo LOBO_WEB_EXAMPLE_DIR=/home/luis/dev/lobo-ar/lobo-lang/target/native-boundary-web python3 examples/web-server/test_server.py"
+    },
+    {
+      "log": "benchmarks/private-evidence/native-boundary-20261122/logs/native-boundary-integrity-corrected.log",
+      "sha256": "e0187c41228e29d775a2ad499129ccf312976b08be2d2c67f4cdf59332df6fc1",
+      "bytes": 552,
+      "rust_test_summaries": [],
+      "exact_command": null
+    },
+    {
+      "log": "benchmarks/private-evidence/native-boundary-20261122/logs/native-boundary-integrity-final.log",
+      "sha256": "da04af98785142c64ff4738cdba446500dff27a162e870f324409ded83fffafb",
+      "bytes": 344,
+      "rust_test_summaries": [],
+      "exact_command": null
+    },
+    {
+      "log": "benchmarks/private-evidence/native-boundary-20261122/logs/native-boundary-integrity-verified.log",
+      "sha256": "aff65efcaf04cba9e3dd77efe10d101e7ecdc462d001144bda2aeab1a9093301",
+      "bytes": 532,
+      "rust_test_summaries": [],
+      "exact_command": "python3 target/check-native-boundary-integrity.py"
+    },
+    {
+      "log": "benchmarks/private-evidence/native-boundary-20261122/logs/native-boundary-integrity.log",
+      "sha256": "a3859a0710772d6e10f604a04d931ea7449cf79b56e5f080b4ec051052fdf11c",
+      "bytes": 286,
+      "rust_test_summaries": [],
+      "exact_command": null
+    },
+    {
+      "log": "benchmarks/private-evidence/native-boundary-20261122/logs/native-boundary-legacy-namespace-red.log",
+      "sha256": "045ce4a6860a72c38480a7b60c5584f7ec5afae2acec0129fe1223d0c8d5ac09",
+      "bytes": 1113,
+      "rust_test_summaries": [
+        {
+          "status": "FAILED",
+          "passed": 0,
+          "failed": 1,
+          "ignored": 0
+        }
+      ],
+      "exact_command": null
+    },
+    {
+      "log": "benchmarks/private-evidence/native-boundary-20261122/logs/native-boundary-library-corrected.log",
+      "sha256": "a086d8afa594462157d4aece99ae63e784f3e02eec2266ec195ec46dad411dad",
+      "bytes": 1281,
+      "rust_test_summaries": [
+        {
+          "status": "ok",
+          "passed": 7,
+          "failed": 0,
+          "ignored": 0
+        },
+        {
+          "status": "ok",
+          "passed": 3,
+          "failed": 0,
+          "ignored": 0
+        }
+      ],
+      "exact_command": null
+    },
+    {
+      "log": "benchmarks/private-evidence/native-boundary-20261122/logs/native-boundary-library-first.log",
+      "sha256": "8d7c4e682634cbde5c94b1e60317e7c04985a25eedc80c93b6557514b49e08be",
+      "bytes": 3365,
+      "rust_test_summaries": [
+        {
+          "status": "ok",
+          "passed": 6,
+          "failed": 0,
+          "ignored": 0
+        },
+        {
+          "status": "FAILED",
+          "passed": 0,
+          "failed": 3,
+          "ignored": 0
+        }
+      ],
+      "exact_command": null
+    },
+    {
+      "log": "benchmarks/private-evidence/native-boundary-20261122/logs/native-boundary-library-red.log",
+      "sha256": "16ebbc897f6d7d8b4120f20943957997a9bbfd3644d915c6469f8d40ab6011e5",
+      "bytes": 1848,
+      "rust_test_summaries": [
+        {
+          "status": "FAILED",
+          "passed": 0,
+          "failed": 3,
+          "ignored": 0
+        }
+      ],
+      "exact_command": null
+    },
+    {
+      "log": "benchmarks/private-evidence/native-boundary-20261122/logs/native-boundary-marker-corrected.log",
+      "sha256": "7feec1b61a3a07decd0eb5ae0463255dcef5527b65a172d2c3bb445f4ff393e4",
+      "bytes": 3241,
+      "rust_test_summaries": [
+        {
+          "status": "ok",
+          "passed": 1,
+          "failed": 0,
+          "ignored": 0
+        },
+        {
+          "status": "ok",
+          "passed": 4,
+          "failed": 0,
+          "ignored": 0
+        },
+        {
+          "status": "ok",
+          "passed": 8,
+          "failed": 0,
+          "ignored": 0
+        },
+        {
+          "status": "ok",
+          "passed": 3,
+          "failed": 0,
+          "ignored": 0
+        },
+        {
+          "status": "ok",
+          "passed": 6,
+          "failed": 0,
+          "ignored": 0
+        },
+        {
+          "status": "ok",
+          "passed": 3,
+          "failed": 0,
+          "ignored": 0
+        }
+      ],
+      "exact_command": null
+    },
+    {
+      "log": "benchmarks/private-evidence/native-boundary-20261122/logs/native-boundary-marker-first.log",
+      "sha256": "6b788de388eb12a8c19b0ba5da5d61efafc4e0e7f417a2c60b538331fc875419",
+      "bytes": 2466,
+      "rust_test_summaries": [
+        {
+          "status": "ok",
+          "passed": 1,
+          "failed": 0,
+          "ignored": 0
+        },
+        {
+          "status": "ok",
+          "passed": 4,
+          "failed": 0,
+          "ignored": 0
+        },
+        {
+          "status": "FAILED",
+          "passed": 7,
+          "failed": 1,
+          "ignored": 0
+        }
+      ],
+      "exact_command": null
+    },
+    {
+      "log": "benchmarks/private-evidence/native-boundary-20261122/logs/native-boundary-native-final-focused.log",
+      "sha256": "6187824fb9116dc4bffd40dbfbefef23f032eb043a1ec5443bce306a5700c7cf",
+      "bytes": 2436,
+      "rust_test_summaries": [
+        {
+          "status": "ok",
+          "passed": 1,
+          "failed": 0,
+          "ignored": 0
+        },
+        {
+          "status": "ok",
+          "passed": 4,
+          "failed": 0,
+          "ignored": 0
+        },
+        {
+          "status": "ok",
+          "passed": 3,
+          "failed": 0,
+          "ignored": 0
+        },
+        {
+          "status": "ok",
+          "passed": 6,
+          "failed": 0,
+          "ignored": 0
+        },
+        {
+          "status": "ok",
+          "passed": 3,
+          "failed": 0,
+          "ignored": 0
+        }
+      ],
+      "exact_command": null
+    },
+    {
+      "log": "benchmarks/private-evidence/native-boundary-20261122/logs/native-boundary-native-hardened.log",
+      "sha256": "2416cf87fe48429765f6243f4c5b9ded81e92f124c59eeec3ac8be7b610c114e",
+      "bytes": 3609,
+      "rust_test_summaries": [
+        {
+          "status": "ok",
+          "passed": 1,
+          "failed": 0,
+          "ignored": 0
+        },
+        {
+          "status": "ok",
+          "passed": 9,
+          "failed": 0,
+          "ignored": 0
+        },
+        {
+          "status": "ok",
+          "passed": 8,
+          "failed": 0,
+          "ignored": 0
+        },
+        {
+          "status": "ok",
+          "passed": 3,
+          "failed": 0,
+          "ignored": 0
+        },
+        {
+          "status": "ok",
+          "passed": 6,
+          "failed": 0,
+          "ignored": 0
+        },
+        {
+          "status": "ok",
+          "passed": 3,
+          "failed": 0,
+          "ignored": 0
+        }
+      ],
+      "exact_command": null
+    },
+    {
+      "log": "benchmarks/private-evidence/native-boundary-20261122/logs/native-boundary-os-first.log",
+      "sha256": "98cfdc18115957472afa7086f90acd252c7b36f539e2a7b35f1c136ea6f4ce26",
+      "bytes": 3916,
+      "rust_test_summaries": [
+        {
+          "status": "ok",
+          "passed": 3,
+          "failed": 0,
+          "ignored": 0
+        },
+        {
+          "status": "ok",
+          "passed": 4,
+          "failed": 0,
+          "ignored": 0
+        },
+        {
+          "status": "FAILED",
+          "passed": 0,
+          "failed": 3,
+          "ignored": 0
+        }
+      ],
+      "exact_command": null
+    },
+    {
+      "log": "benchmarks/private-evidence/native-boundary-20261122/logs/native-boundary-package-corrected.log",
+      "sha256": "bbe3b56fbee505a65a3054d1c6804822f1b1bb7d05615522ac0a2486ff8917b2",
+      "bytes": 37104,
+      "rust_test_summaries": [],
+      "exact_command": null
+    },
+    {
+      "log": "benchmarks/private-evidence/native-boundary-20261122/logs/native-boundary-package-final.log",
+      "sha256": "5748d8bf103d69864a5504046743098887c682f5be9c6ef49a77eb4f3613a8b6",
+      "bytes": 37103,
+      "rust_test_summaries": [],
+      "exact_command": null
+    },
+    {
+      "log": "benchmarks/private-evidence/native-boundary-20261122/logs/native-boundary-package-verified.log",
+      "sha256": "016f99bf8591627aff9d14be1878e7ecc32d6c68b46240818d624404d145da97",
+      "bytes": 37112,
+      "rust_test_summaries": [],
+      "exact_command": "npm --prefix editors/vscode run package"
+    },
+    {
+      "log": "benchmarks/private-evidence/native-boundary-20261122/logs/native-boundary-package.log",
+      "sha256": "c95ccff11d357278f0e0285b4d42c870843a7163cf0d560d6013f591ce93654b",
+      "bytes": 36751,
+      "rust_test_summaries": [],
+      "exact_command": null
+    },
+    {
+      "log": "benchmarks/private-evidence/native-boundary-20261122/logs/native-boundary-preservation.log",
+      "sha256": "96a3901d1a6f6613cc5f4f391a6691e8cc9e266d96b6a92e1d159d3b31224584",
+      "bytes": 160,
+      "rust_test_summaries": [],
+      "exact_command": null
+    },
+    {
+      "log": "benchmarks/private-evidence/native-boundary-20261122/logs/native-boundary-python.log",
+      "sha256": "fedaeec03d3fb17c38f73bcfd7424e51c88daf3cc51763b4f1340341a97fa77d",
+      "bytes": 131,
+      "rust_test_summaries": [],
+      "exact_command": "python3 -m unittest discover -s benchmarks -p 'test_*.py'"
+    },
+    {
+      "log": "benchmarks/private-evidence/native-boundary-20261122/logs/native-boundary-release-build.log",
+      "sha256": "a8c3023a1f4f908e6c86493b8243d48421bc88ccbc9fa31f495f6f2f3bdab79a",
+      "bytes": 128,
+      "rust_test_summaries": [],
+      "exact_command": "cargo build --locked --release --bins"
+    },
+    {
+      "log": "benchmarks/private-evidence/native-boundary-20261122/logs/native-boundary-reserved-artifact-red.log",
+      "sha256": "f50dca032f27774250bc361eadd706094c96eac3237388f76108e0c79e11b6f4",
+      "bytes": 4460,
+      "rust_test_summaries": [
+        {
+          "status": "FAILED",
+          "passed": 0,
+          "failed": 1,
+          "ignored": 0
+        }
+      ],
+      "exact_command": null
+    },
+    {
+      "log": "benchmarks/private-evidence/native-boundary-20261122/logs/native-boundary-resources-red.log",
+      "sha256": "eba1a3f8be8f6be161ce0be8cd1bc14b910ca20e1ab620c238199bce7bdd819a",
+      "bytes": 3575,
+      "rust_test_summaries": [
+        {
+          "status": "FAILED",
+          "passed": 0,
+          "failed": 4,
+          "ignored": 0
+        }
+      ],
+      "exact_command": null
+    },
+    {
+      "log": "benchmarks/private-evidence/native-boundary-20261122/logs/native-boundary-resources-shape-check.log",
+      "sha256": "fb6219a2c13fd6aa213d3ee6162926153954de99eafc3d5cc4f7c8357cc7c0c9",
+      "bytes": 137,
+      "rust_test_summaries": [],
+      "exact_command": null
+    },
+    {
+      "log": "benchmarks/private-evidence/native-boundary-20261122/logs/native-boundary-rust-final.log",
+      "sha256": "631921a4d8f3a513be334b56e6be6970d3706b033143675756aa0ee5b08849db",
+      "bytes": 29257,
+      "rust_test_summaries": [
+        {
+          "status": "ok",
+          "passed": 1,
+          "failed": 0,
+          "ignored": 0
+        },
+        {
+          "status": "ok",
+          "passed": 0,
+          "failed": 0,
+          "ignored": 0
+        },
+        {
+          "status": "ok",
+          "passed": 2,
+          "failed": 0,
+          "ignored": 0
+        },
+        {
+          "status": "ok",
+          "passed": 8,
+          "failed": 0,
+          "ignored": 0
+        },
+        {
+          "status": "ok",
+          "passed": 16,
+          "failed": 0,
+          "ignored": 0
+        },
+        {
+          "status": "ok",
+          "passed": 7,
+          "failed": 0,
+          "ignored": 0
+        },
+        {
+          "status": "ok",
+          "passed": 1,
+          "failed": 0,
+          "ignored": 0
+        },
+        {
+          "status": "ok",
+          "passed": 1,
+          "failed": 0,
+          "ignored": 0
+        },
+        {
+          "status": "ok",
+          "passed": 6,
+          "failed": 0,
+          "ignored": 0
+        },
+        {
+          "status": "ok",
+          "passed": 7,
+          "failed": 0,
+          "ignored": 0
+        },
+        {
+          "status": "ok",
+          "passed": 7,
+          "failed": 0,
+          "ignored": 0
+        },
+        {
+          "status": "ok",
+          "passed": 10,
+          "failed": 0,
+          "ignored": 0
+        },
+        {
+          "status": "ok",
+          "passed": 3,
+          "failed": 0,
+          "ignored": 0
+        },
+        {
+          "status": "ok",
+          "passed": 5,
+          "failed": 0,
+          "ignored": 0
+        },
+        {
+          "status": "ok",
+          "passed": 4,
+          "failed": 0,
+          "ignored": 0
+        },
+        {
+          "status": "ok",
+          "passed": 7,
+          "failed": 0,
+          "ignored": 0
+        },
+        {
+          "status": "ok",
+          "passed": 3,
+          "failed": 0,
+          "ignored": 0
+        },
+        {
+          "status": "ok",
+          "passed": 3,
+          "failed": 0,
+          "ignored": 0
+        },
+        {
+          "status": "ok",
+          "passed": 4,
+          "failed": 0,
+          "ignored": 0
+        },
+        {
+          "status": "ok",
+          "passed": 12,
+          "failed": 0,
+          "ignored": 0
+        },
+        {
+          "status": "ok",
+          "passed": 4,
+          "failed": 0,
+          "ignored": 0
+        },
+        {
+          "status": "ok",
+          "passed": 4,
+          "failed": 0,
+          "ignored": 0
+        },
+        {
+          "status": "ok",
+          "passed": 17,
+          "failed": 0,
+          "ignored": 0
+        },
+        {
+          "status": "ok",
+          "passed": 3,
+          "failed": 0,
+          "ignored": 0
+        },
+        {
+          "status": "ok",
+          "passed": 1,
+          "failed": 0,
+          "ignored": 0
+        },
+        {
+          "status": "ok",
+          "passed": 9,
+          "failed": 0,
+          "ignored": 0
+        },
+        {
+          "status": "ok",
+          "passed": 8,
+          "failed": 0,
+          "ignored": 0
+        },
+        {
+          "status": "ok",
+          "passed": 3,
+          "failed": 0,
+          "ignored": 0
+        },
+        {
+          "status": "ok",
+          "passed": 3,
+          "failed": 0,
+          "ignored": 0
+        },
+        {
+          "status": "ok",
+          "passed": 6,
+          "failed": 0,
+          "ignored": 0
+        },
+        {
+          "status": "ok",
+          "passed": 5,
+          "failed": 0,
+          "ignored": 0
+        },
+        {
+          "status": "ok",
+          "passed": 3,
+          "failed": 0,
+          "ignored": 0
+        },
+        {
+          "status": "ok",
+          "passed": 8,
+          "failed": 0,
+          "ignored": 0
+        },
+        {
+          "status": "ok",
+          "passed": 3,
+          "failed": 0,
+          "ignored": 0
+        },
+        {
+          "status": "ok",
+          "passed": 9,
+          "failed": 0,
+          "ignored": 0
+        },
+        {
+          "status": "ok",
+          "passed": 6,
+          "failed": 0,
+          "ignored": 0
+        },
+        {
+          "status": "ok",
+          "passed": 8,
+          "failed": 0,
+          "ignored": 0
+        },
+        {
+          "status": "ok",
+          "passed": 1,
+          "failed": 0,
+          "ignored": 0
+        },
+        {
+          "status": "ok",
+          "passed": 15,
+          "failed": 0,
+          "ignored": 0
+        },
+        {
+          "status": "ok",
+          "passed": 6,
+          "failed": 0,
+          "ignored": 0
+        },
+        {
+          "status": "ok",
+          "passed": 3,
+          "failed": 0,
+          "ignored": 0
+        },
+        {
+          "status": "ok",
+          "passed": 10,
+          "failed": 0,
+          "ignored": 0
+        },
+        {
+          "status": "ok",
+          "passed": 12,
+          "failed": 0,
+          "ignored": 0
+        },
+        {
+          "status": "ok",
+          "passed": 5,
+          "failed": 0,
+          "ignored": 0
+        },
+        {
+          "status": "ok",
+          "passed": 0,
+          "failed": 0,
+          "ignored": 0
+        }
+      ],
+      "exact_command": null
+    },
+    {
+      "log": "benchmarks/private-evidence/native-boundary-20261122/logs/native-boundary-rust-first-full.log",
+      "sha256": "5a366f69a0477f1757f876df0e7a107493a065bb6f485d110866277acdc9cade",
+      "bytes": 28222,
+      "rust_test_summaries": [
+        {
+          "status": "ok",
+          "passed": 1,
+          "failed": 0,
+          "ignored": 0
+        },
+        {
+          "status": "ok",
+          "passed": 0,
+          "failed": 0,
+          "ignored": 0
+        },
+        {
+          "status": "ok",
+          "passed": 2,
+          "failed": 0,
+          "ignored": 0
+        },
+        {
+          "status": "ok",
+          "passed": 8,
+          "failed": 0,
+          "ignored": 0
+        },
+        {
+          "status": "ok",
+          "passed": 16,
+          "failed": 0,
+          "ignored": 0
+        },
+        {
+          "status": "ok",
+          "passed": 7,
+          "failed": 0,
+          "ignored": 0
+        },
+        {
+          "status": "ok",
+          "passed": 1,
+          "failed": 0,
+          "ignored": 0
+        },
+        {
+          "status": "ok",
+          "passed": 1,
+          "failed": 0,
+          "ignored": 0
+        },
+        {
+          "status": "ok",
+          "passed": 6,
+          "failed": 0,
+          "ignored": 0
+        },
+        {
+          "status": "ok",
+          "passed": 7,
+          "failed": 0,
+          "ignored": 0
+        },
+        {
+          "status": "ok",
+          "passed": 7,
+          "failed": 0,
+          "ignored": 0
+        },
+        {
+          "status": "ok",
+          "passed": 10,
+          "failed": 0,
+          "ignored": 0
+        },
+        {
+          "status": "ok",
+          "passed": 3,
+          "failed": 0,
+          "ignored": 0
+        },
+        {
+          "status": "ok",
+          "passed": 5,
+          "failed": 0,
+          "ignored": 0
+        },
+        {
+          "status": "ok",
+          "passed": 4,
+          "failed": 0,
+          "ignored": 0
+        },
+        {
+          "status": "ok",
+          "passed": 7,
+          "failed": 0,
+          "ignored": 0
+        },
+        {
+          "status": "ok",
+          "passed": 3,
+          "failed": 0,
+          "ignored": 0
+        },
+        {
+          "status": "ok",
+          "passed": 3,
+          "failed": 0,
+          "ignored": 0
+        },
+        {
+          "status": "ok",
+          "passed": 4,
+          "failed": 0,
+          "ignored": 0
+        },
+        {
+          "status": "ok",
+          "passed": 12,
+          "failed": 0,
+          "ignored": 0
+        },
+        {
+          "status": "ok",
+          "passed": 4,
+          "failed": 0,
+          "ignored": 0
+        },
+        {
+          "status": "ok",
+          "passed": 4,
+          "failed": 0,
+          "ignored": 0
+        },
+        {
+          "status": "ok",
+          "passed": 17,
+          "failed": 0,
+          "ignored": 0
+        },
+        {
+          "status": "ok",
+          "passed": 3,
+          "failed": 0,
+          "ignored": 0
+        },
+        {
+          "status": "ok",
+          "passed": 1,
+          "failed": 0,
+          "ignored": 0
+        },
+        {
+          "status": "ok",
+          "passed": 4,
+          "failed": 0,
+          "ignored": 0
+        },
+        {
+          "status": "ok",
+          "passed": 5,
+          "failed": 0,
+          "ignored": 0
+        },
+        {
+          "status": "ok",
+          "passed": 3,
+          "failed": 0,
+          "ignored": 0
+        },
+        {
+          "status": "ok",
+          "passed": 6,
+          "failed": 0,
+          "ignored": 0
+        },
+        {
+          "status": "ok",
+          "passed": 5,
+          "failed": 0,
+          "ignored": 0
+        },
+        {
+          "status": "ok",
+          "passed": 3,
+          "failed": 0,
+          "ignored": 0
+        },
+        {
+          "status": "ok",
+          "passed": 8,
+          "failed": 0,
+          "ignored": 0
+        },
+        {
+          "status": "ok",
+          "passed": 3,
+          "failed": 0,
+          "ignored": 0
+        },
+        {
+          "status": "ok",
+          "passed": 9,
+          "failed": 0,
+          "ignored": 0
+        },
+        {
+          "status": "ok",
+          "passed": 6,
+          "failed": 0,
+          "ignored": 0
+        },
+        {
+          "status": "ok",
+          "passed": 8,
+          "failed": 0,
+          "ignored": 0
+        },
+        {
+          "status": "ok",
+          "passed": 1,
+          "failed": 0,
+          "ignored": 0
+        },
+        {
+          "status": "ok",
+          "passed": 15,
+          "failed": 0,
+          "ignored": 0
+        },
+        {
+          "status": "ok",
+          "passed": 6,
+          "failed": 0,
+          "ignored": 0
+        },
+        {
+          "status": "ok",
+          "passed": 3,
+          "failed": 0,
+          "ignored": 0
+        },
+        {
+          "status": "ok",
+          "passed": 10,
+          "failed": 0,
+          "ignored": 0
+        },
+        {
+          "status": "ok",
+          "passed": 12,
+          "failed": 0,
+          "ignored": 0
+        },
+        {
+          "status": "ok",
+          "passed": 5,
+          "failed": 0,
+          "ignored": 0
+        },
+        {
+          "status": "ok",
+          "passed": 0,
+          "failed": 0,
+          "ignored": 0
+        }
+      ],
+      "exact_command": null
+    },
+    {
+      "log": "benchmarks/private-evidence/native-boundary-20261122/logs/native-boundary-rust-verified.log",
+      "sha256": "173f7afec00ae63ce3139cd7eb417cc55cd9cbe108c8df52f339832c54aa5747",
+      "bytes": 29257,
+      "rust_test_summaries": [
+        {
+          "status": "ok",
+          "passed": 1,
+          "failed": 0,
+          "ignored": 0
+        },
+        {
+          "status": "ok",
+          "passed": 0,
+          "failed": 0,
+          "ignored": 0
+        },
+        {
+          "status": "ok",
+          "passed": 2,
+          "failed": 0,
+          "ignored": 0
+        },
+        {
+          "status": "ok",
+          "passed": 8,
+          "failed": 0,
+          "ignored": 0
+        },
+        {
+          "status": "ok",
+          "passed": 16,
+          "failed": 0,
+          "ignored": 0
+        },
+        {
+          "status": "ok",
+          "passed": 7,
+          "failed": 0,
+          "ignored": 0
+        },
+        {
+          "status": "ok",
+          "passed": 1,
+          "failed": 0,
+          "ignored": 0
+        },
+        {
+          "status": "ok",
+          "passed": 1,
+          "failed": 0,
+          "ignored": 0
+        },
+        {
+          "status": "ok",
+          "passed": 6,
+          "failed": 0,
+          "ignored": 0
+        },
+        {
+          "status": "ok",
+          "passed": 7,
+          "failed": 0,
+          "ignored": 0
+        },
+        {
+          "status": "ok",
+          "passed": 7,
+          "failed": 0,
+          "ignored": 0
+        },
+        {
+          "status": "ok",
+          "passed": 10,
+          "failed": 0,
+          "ignored": 0
+        },
+        {
+          "status": "ok",
+          "passed": 3,
+          "failed": 0,
+          "ignored": 0
+        },
+        {
+          "status": "ok",
+          "passed": 5,
+          "failed": 0,
+          "ignored": 0
+        },
+        {
+          "status": "ok",
+          "passed": 4,
+          "failed": 0,
+          "ignored": 0
+        },
+        {
+          "status": "ok",
+          "passed": 7,
+          "failed": 0,
+          "ignored": 0
+        },
+        {
+          "status": "ok",
+          "passed": 3,
+          "failed": 0,
+          "ignored": 0
+        },
+        {
+          "status": "ok",
+          "passed": 3,
+          "failed": 0,
+          "ignored": 0
+        },
+        {
+          "status": "ok",
+          "passed": 4,
+          "failed": 0,
+          "ignored": 0
+        },
+        {
+          "status": "ok",
+          "passed": 12,
+          "failed": 0,
+          "ignored": 0
+        },
+        {
+          "status": "ok",
+          "passed": 4,
+          "failed": 0,
+          "ignored": 0
+        },
+        {
+          "status": "ok",
+          "passed": 4,
+          "failed": 0,
+          "ignored": 0
+        },
+        {
+          "status": "ok",
+          "passed": 17,
+          "failed": 0,
+          "ignored": 0
+        },
+        {
+          "status": "ok",
+          "passed": 3,
+          "failed": 0,
+          "ignored": 0
+        },
+        {
+          "status": "ok",
+          "passed": 1,
+          "failed": 0,
+          "ignored": 0
+        },
+        {
+          "status": "ok",
+          "passed": 9,
+          "failed": 0,
+          "ignored": 0
+        },
+        {
+          "status": "ok",
+          "passed": 8,
+          "failed": 0,
+          "ignored": 0
+        },
+        {
+          "status": "ok",
+          "passed": 3,
+          "failed": 0,
+          "ignored": 0
+        },
+        {
+          "status": "ok",
+          "passed": 3,
+          "failed": 0,
+          "ignored": 0
+        },
+        {
+          "status": "ok",
+          "passed": 6,
+          "failed": 0,
+          "ignored": 0
+        },
+        {
+          "status": "ok",
+          "passed": 5,
+          "failed": 0,
+          "ignored": 0
+        },
+        {
+          "status": "ok",
+          "passed": 3,
+          "failed": 0,
+          "ignored": 0
+        },
+        {
+          "status": "ok",
+          "passed": 8,
+          "failed": 0,
+          "ignored": 0
+        },
+        {
+          "status": "ok",
+          "passed": 3,
+          "failed": 0,
+          "ignored": 0
+        },
+        {
+          "status": "ok",
+          "passed": 9,
+          "failed": 0,
+          "ignored": 0
+        },
+        {
+          "status": "ok",
+          "passed": 6,
+          "failed": 0,
+          "ignored": 0
+        },
+        {
+          "status": "ok",
+          "passed": 8,
+          "failed": 0,
+          "ignored": 0
+        },
+        {
+          "status": "ok",
+          "passed": 1,
+          "failed": 0,
+          "ignored": 0
+        },
+        {
+          "status": "ok",
+          "passed": 15,
+          "failed": 0,
+          "ignored": 0
+        },
+        {
+          "status": "ok",
+          "passed": 6,
+          "failed": 0,
+          "ignored": 0
+        },
+        {
+          "status": "ok",
+          "passed": 3,
+          "failed": 0,
+          "ignored": 0
+        },
+        {
+          "status": "ok",
+          "passed": 10,
+          "failed": 0,
+          "ignored": 0
+        },
+        {
+          "status": "ok",
+          "passed": 12,
+          "failed": 0,
+          "ignored": 0
+        },
+        {
+          "status": "ok",
+          "passed": 5,
+          "failed": 0,
+          "ignored": 0
+        },
+        {
+          "status": "ok",
+          "passed": 0,
+          "failed": 0,
+          "ignored": 0
+        }
+      ],
+      "exact_command": "cargo test --locked"
+    },
+    {
+      "log": "benchmarks/private-evidence/native-boundary-20261122/logs/native-boundary-skill-links.log",
+      "sha256": "bb2881b45f9feb19148424fced4eff91ed18e3cd62d05e9b6ea15c34d0eda092",
+      "bytes": 33,
+      "rust_test_summaries": [],
+      "exact_command": "embedded Python: validate each relative Markdown link under .agents/skills/lobo-programming"
+    },
+    {
+      "log": "benchmarks/private-evidence/native-boundary-20261122/logs/native-boundary-skill-validator.log",
+      "sha256": "db349825903d66adffea3ecf1bd8e1803043e8a71cf1a051235dabc5371f5bb0",
+      "bytes": 16,
+      "rust_test_summaries": [],
+      "exact_command": "python3 /home/luis/.codex/skills/.system/skill-creator/scripts/quick_validate.py .agents/skills/lobo-programming"
+    },
+    {
+      "log": "benchmarks/private-evidence/native-boundary-20261122/logs/native-boundary-smoke-corrected.log",
+      "sha256": "f6d23a47aea0c7d94aa5663c522c4923a1c76075466727f715e6112cbd07a7c6",
+      "bytes": 51,
+      "rust_test_summaries": [],
+      "exact_command": "python3 target/verify-native-boundary-smoke.py"
+    },
+    {
+      "log": "benchmarks/private-evidence/native-boundary-20261122/logs/native-boundary-smoke.log",
+      "sha256": "a5299de75681569d5310cc3cb4a97d7e5f42f563c8f49a75c52e6edd42e849ce",
+      "bytes": 412,
+      "rust_test_summaries": [],
+      "exact_command": null
+    },
+    {
+      "log": "benchmarks/private-evidence/native-boundary-20261122/logs/native-boundary-tcp-corrected-fixture.log",
+      "sha256": "1638658c2cefb08aebfec4c16603754ae8c147d2de032f7153efe1b2fe9c2700",
+      "bytes": 2959,
+      "rust_test_summaries": [
+        {
+          "status": "FAILED",
+          "passed": 0,
+          "failed": 3,
+          "ignored": 0
+        }
+      ],
+      "exact_command": null
+    },
+    {
+      "log": "benchmarks/private-evidence/native-boundary-20261122/logs/native-boundary-tcp-first-green.log",
+      "sha256": "1ed9ccae676a10d301884e074d81275866405f63028fec8a0e75048cd34a2b0e",
+      "bytes": 949,
+      "rust_test_summaries": [
+        {
+          "status": "ok",
+          "passed": 3,
+          "failed": 0,
+          "ignored": 0
+        }
+      ],
+      "exact_command": null
+    },
+    {
+      "log": "benchmarks/private-evidence/native-boundary-20261122/logs/native-boundary-tcp-red.log",
+      "sha256": "dd2d46abfcdd24060e0773d960871cd2d410d94fee29d90f2789ad0873ca427b",
+      "bytes": 2893,
+      "rust_test_summaries": [
+        {
+          "status": "FAILED",
+          "passed": 0,
+          "failed": 3,
+          "ignored": 0
+        }
+      ],
+      "exact_command": null
+    },
+    {
+      "log": "benchmarks/private-evidence/native-boundary-20261122/logs/native-boundary-unselected-red.log",
+      "sha256": "0bfefa57743225f1e8b09f8446584fba4b679a442521452491e1ba2c951aa503",
+      "bytes": 953,
+      "rust_test_summaries": [
+        {
+          "status": "FAILED",
+          "passed": 0,
+          "failed": 1,
+          "ignored": 0
+        }
+      ],
+      "exact_command": null
+    },
+    {
+      "log": "benchmarks/private-evidence/native-boundary-20261122/logs/native-boundary-unused-types-red.log",
+      "sha256": "63e4bdc52e498af6955734d7e45335f471e200eef01b6ad9833db1e67c15694d",
+      "bytes": 1581,
+      "rust_test_summaries": [
+        {
+          "status": "FAILED",
+          "passed": 0,
+          "failed": 1,
+          "ignored": 0
+        }
+      ],
+      "exact_command": null
+    },
+    {
+      "log": "benchmarks/private-evidence/native-boundary-20261122/logs/native-boundary-upstream-check.log",
+      "sha256": "4e8ce6ed6cbea7a5b21e35aa2f21afd9912127e1249db77dfc914e6853a8a4fd",
+      "bytes": 78,
+      "rust_test_summaries": [],
+      "exact_command": "python3 scripts/check-native-upstream.py"
+    },
+    {
+      "log": "benchmarks/private-evidence/native-boundary-20261122/logs/native-boundary-upstream-import.log",
+      "sha256": "609a013b71b4c45a15f5a2ce07479a065ddc7f7339275bc8b3bf6fab9e729ba1",
+      "bytes": 234,
+      "rust_test_summaries": [],
+      "exact_command": null
+    },
+    {
+      "log": "benchmarks/private-evidence/native-boundary-20261122/logs/native-boundary-web-build.log",
+      "sha256": "01bb2a18489b44de237dd9bfc40c33206c065064a676655797b8e2622248dd5b",
+      "bytes": 770,
+      "rust_test_summaries": [],
+      "exact_command": "python3 examples/web-server/build.py --compiler target/release/lobo --out-dir target/native-boundary-web"
+    }
+  ],
+  "corrections_report": "benchmarks/results/2026-11-22-native-boundary.md",
+  "limits": [
+    "C and LLVM share one C provider and OS; no independent OS implementation proof.",
+    "Finite deterministic models/fault injection and sanitizers do not establish security or production readiness.",
+    "Intermediate source states and every original shell flag are not independently retained; unknown command fields are null. Before/current snapshots and available attempt logs are retained.",
+    "No general external FFI, filesystem, external network, TLS, HTTP server, OAuth, static asset embedding or concurrency.",
+    "No sustained fuzz campaign or independent security audit.",
+    "Per-operation timeouts only; no aggregate wall-clock deadline, revocation or read-only stream capability.",
+    "Live research/spec indexes and prior repair path rebind excluded from the historical survey; exclusions are explicit in integrity data.",
+    "Failed patch/fixture/oracle/packaging/integrity attempts are not counted as successful red regressions.",
+    "The new result is public development evidence; no unseen confirmatory or agent experiment."
+  ],
+  "agent_construction_effect": null,
+  "agent_comprehension_effect": null,
+  "agent_token_effect": null,
+  "runtime_performance_effect": null
+}
