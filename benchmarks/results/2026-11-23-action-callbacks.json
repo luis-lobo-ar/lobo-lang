@@ -1,0 +1,309 @@
+{
+  "format": "lobo-action-callbacks-result/0.1",
+  "date": "2026-11-23",
+  "status": "passed",
+  "compiler": "1.11.0",
+  "extension": "1.11.0",
+  "language": "core/1.11",
+  "checked_format": "lobo-checked/1.0",
+  "native_abi": 1,
+  "sqlite_extension": 1,
+  "scope": [
+    "explicit finite action bounds in noncapturing named callback types",
+    "exact source/artifact/argument signatures and checked indirect calls",
+    "explicit-context HTTP helpers and SQLite app extraction"
+  ],
+  "syntax": "Fn(C, Request) actions { db.close, db.execute, db.read } -> Response",
+  "design_limits": [
+    "exact action sets, without implicit widening or higher-order variance",
+    "no closures or action variables/polymorphism",
+    "serve_with<C> has the concrete DB handler bound; pure serve API retained",
+    "no native provider/runtime/model change or new authority",
+    "no new network, database or concurrency feature"
+  ],
+  "baseline": {
+    "git_head": "410214d12c11a7f831e6c3dfaeff29e94ec727dc",
+    "source_files": 593,
+    "compiler_language": "core/1.10",
+    "compiler_sha256": "f17bb652292ee4411fd72f5d0a451e3441792a5014ec86875017778201aabf2e",
+    "private_evidence": "benchmarks/private-evidence/core111-20261123",
+    "failed_probe": "CLI --version is unsupported; retained output and used --help language identity."
+  },
+  "test_counts": {
+    "rust_full": 304,
+    "rust_groups_including_empty": 56,
+    "rust_failed": 0,
+    "rust_ignored": 0,
+    "final_strengthened_callback_groups": 7,
+    "editor": 178,
+    "editor_failed": 0,
+    "http_context_fixture_cases_per_execution_route": 30,
+    "http_cases_per_linux_c_linux_llvm_wine": 35,
+    "connections_per_http_run": 38,
+    "pure_http_linux_cases": 35,
+    "invalid_row_http_cases_per_linux_backend": 4,
+    "sql_operations_per_linux_c_wine": 10,
+    "read_only_restarts_per_linux_c_wine": 2
+  },
+  "gates": {
+    "rust_full": {
+      "command": "cargo test --locked",
+      "evidence": "cargo-acceptance-2.log",
+      "status": "pass"
+    },
+    "final_stronger_callbacks": {
+      "command": "cargo test --locked --test action_callbacks",
+      "evidence": "callback-adversarial-final.log",
+      "status": "pass",
+      "note": "Added inferred/explicit equality, 64-action admission, signature-erasure and nested old-tag assertions; no production change after the full-suite build."
+    },
+    "editor": {
+      "command": "npm --prefix editors/vscode test",
+      "evidence": "editor-acceptance-final.log",
+      "status": "pass"
+    },
+    "real_editor_host": {
+      "command": "LOBO_VSCODE_EXECUTABLE=/usr/share/code/code xvfb-run -a npm --prefix editors/vscode run test:host",
+      "evidence": "editor-host-final.log",
+      "status": "pass"
+    },
+    "clippy": {
+      "command": "cargo clippy --locked --all-targets -- -D warnings",
+      "evidence": "clippy-adversarial-final.log",
+      "status": "pass"
+    },
+    "format": {
+      "command": "cargo fmt --check",
+      "evidence": "format-adversarial-final.log",
+      "status": "pass"
+    },
+    "source_tools": {
+      "command": "node --test scripts/test-modernize-source.mjs",
+      "evidence": "source-tools.log",
+      "status": "pass"
+    },
+    "skill": {
+      "command": "python3 /home/luis/.codex/skills/.system/skill-creator/scripts/quick_validate.py .agents/skills/lobo-programming",
+      "evidence": "skill-validation-final.log",
+      "status": "pass"
+    },
+    "package": {
+      "command": "npm --prefix editors/vscode run package",
+      "evidence": "vsix-final.log",
+      "status": "pass"
+    },
+    "markdown_json": {
+      "command": "bash scripts/check.sh",
+      "evidence": "docs-final.log",
+      "status": "pass"
+    },
+    "source_audit": {
+      "evidence": "source-audit-green.log",
+      "status": "pass"
+    },
+    "linux_c_http": {
+      "evidence": "rest-linux/results.json",
+      "status": "pass"
+    },
+    "linux_llvm_http": {
+      "evidence": "rest-llvm/results.json",
+      "status": "pass"
+    },
+    "wine_http": {
+      "evidence": "rest-wine/results.json",
+      "status": "pass"
+    },
+    "pure_http": {
+      "evidence": "pure-rest-tcp/results.json",
+      "status": "pass"
+    },
+    "bad_rows": {
+      "evidence": [
+        "row-http/results.json",
+        "row-http-llvm/results.json"
+      ],
+      "status": "pass"
+    },
+    "persistence_restart": {
+      "evidence": [
+        "sqlite-executable/results.json",
+        "sqlite-wine/results.json"
+      ],
+      "status": "pass"
+    },
+    "old_compiler": {
+      "evidence": "compatibility/results.json",
+      "status": "pass"
+    },
+    "review": {
+      "evidence": "review/deep-signature-retag.log",
+      "status": "no actionable finding",
+      "note": "Independent read-only source review of typing, artifacts, inference, dispatch and cleanup; nested old-tag probe also made a permanent test."
+    }
+  },
+  "preservation": {
+    "status": "pass",
+    "protected_files_unchanged": 64,
+    "prior_sidecar_identity_values": 154,
+    "all_prior_sidecar_ids_retained": true,
+    "relocations": {
+      "dispatch": {
+        "id": "example.sqlite.rest.dispatch",
+        "target": "libraries/http-server/server.lobo:respond_with"
+      },
+      "serve_one": {
+        "id": "example.sqlite.rest.serve_one",
+        "target": "libraries/http-server/transport.lobo:serve_one_with"
+      },
+      "serve": {
+        "id": "example.sqlite.rest.serve",
+        "target": "libraries/http-server/transport.lobo:serve_context"
+      },
+      "with_database": {
+        "id": "example.sqlite.rest.with_database",
+        "target": "libraries/http-server/transport.lobo:serve_with"
+      }
+    }
+  },
+  "prior_paper_entries_unchanged": 33,
+  "app": {
+    "before_lines": 107,
+    "after_lines": 39,
+    "note": "Source layout observation only; no productivity, token or comprehension measurement."
+  },
+  "formatting_equivalence": {
+    "status": "pass",
+    "identical_emitted_c_after_layout": true,
+    "sha256": "9c97085faaed386e303d4ba6613d772a978840668c7fd9576ce6912d6491cd6a",
+    "linux_build_sha256": "9c97085faaed386e303d4ba6613d772a978840668c7fd9576ce6912d6491cd6a",
+    "windows_build_sha256": "9c97085faaed386e303d4ba6613d772a978840668c7fd9576ce6912d6491cd6a"
+  },
+  "editor_install": {
+    "installed_extension": "1.11.0",
+    "app_window_confirmed": true,
+    "window_titles": [
+      "0x04a00003  0 2812911 nbk-alien-linux app.lobo - SQLiteRest (Workspace) - Visual Studio Code"
+    ]
+  },
+  "failures_and_corrections": [
+    {
+      "stage": "baseline tooling",
+      "observed": "--version is not a Lobo CLI command; retained the error and used --help plus compiler hash.",
+      "evidence": "baseline-version-attempt.log"
+    },
+    {
+      "stage": "TDD red",
+      "observed": "All four initial Rust groups rejected the not-yet-supported Fn action clause; two navigation tests and the inline grammar test failed.",
+      "evidence": [
+        "callback-red.log",
+        "editor-red.log",
+        "grammar-red.log"
+      ]
+    },
+    {
+      "stage": "HTTP red",
+      "observed": "The explicit respond_with import had no declaration before extraction.",
+      "evidence": "http-red.log"
+    },
+    {
+      "stage": "test correction",
+      "observed": "Erasing an otherwise-unused callback parameter bound creates a valid pure API. Added a real actionful caller so erasure must be rejected, rather than requiring rejection of that valid program.",
+      "evidence": [
+        "callback-green-1.log",
+        "callback-green-2.log"
+      ]
+    },
+    {
+      "stage": "metadata extraction",
+      "observed": "Inferred callback signatures still require visible Request/Response nominal types. Added those imports. Existing aliases span two supplied modules, so their known target IDs were recorded before identity sync.",
+      "evidence": [
+        "identity-sync.log",
+        "identity-sync-2.log",
+        "identity-sync-3.log"
+      ]
+    },
+    {
+      "stage": "command correction",
+      "observed": "The nearby test command named nonexistent generic_inference; reran the actual call_inference target.",
+      "evidence": "nearby-1.log"
+    },
+    {
+      "stage": "native harness correction",
+      "observed": "--native-clock false is invalid; default denial omits the flag. Replaced the zero-call-budget case with two callback invocations under an accepted one-call budget. No provider semantics changed.",
+      "evidence": [
+        "nearby-2.log",
+        "nearby-3.log",
+        "callback-containers.log"
+      ]
+    },
+    {
+      "stage": "regression correction",
+      "observed": "An inferred callback action mismatch moved an existing diagnostic to the outer call. Attached that action-bound diagnostic to the original callback argument, retaining the old assertion.",
+      "evidence": [
+        "nearby-4.log",
+        "nearby-5.log"
+      ]
+    },
+    {
+      "stage": "full suite correction",
+      "observed": "The maintained-source audit found six layout rewrites, including the prior sample refresh. Applied the existing checked formatter; no semantic rewrite was accepted. Emitted C before and after formatting is byte-identical. The audit and full suite then pass.",
+      "evidence": [
+        "cargo-acceptance-1.log",
+        "source-audit-failure.json",
+        "source-layout-apply/results.json",
+        "source-audit-green.log",
+        "layout-c-equivalence.json",
+        "cargo-acceptance-2.log"
+      ]
+    },
+    {
+      "stage": "incidental edit correction",
+      "observed": "A scripted test insertion failed to match formatted text before writing the test file; corrected the anchor and reran the strengthened callback groups. The edit traceback is retained in the task tool transcript, not a separate raw log.",
+      "evidence": "callback-adversarial-final.log"
+    }
+  ],
+  "artifacts": {
+    "target/release/lobo": {
+      "bytes": 11265744,
+      "sha256": "dd641d18d212b5eaf86277e42364c28cc2fe4b36b7ebcac8512bac48561b688e"
+    },
+    "target/release/lobo-test": {
+      "bytes": 11012616,
+      "sha256": "46808619868444e68fe0677af0dc2a6b3e4b9ef22b5b1af23660666efd7aee70"
+    },
+    "dist/lobo-syntax-1.11.0.vsix": {
+      "bytes": 41548,
+      "sha256": "c72b993635b811ed98e379dc7e42ba435cb38bd01af9222404b4e28b074a09cd"
+    },
+    "target/core111/linux-rest/lobo-sqlite-rest": {
+      "bytes": 1448944,
+      "sha256": "b49fc2bf9fbb08a3dbaae0938e5db540dca1905fc8df8ce53d07dc2a66f1fef2"
+    },
+    "target/core111/windows-rest/LoboSqliteRest.exe": {
+      "bytes": 1411072,
+      "sha256": "a95926840e097dc715b2903239412b9b5f40391e98fa8aafd19ffbc40a32f7a0"
+    },
+    "target/core111/sqlite-rest-llvm": {
+      "bytes": 1403896,
+      "sha256": "25222440568cae5ac5ce1278ac1d50729c4f57406d65a59107e59a94eac281aa"
+    }
+  },
+  "evidence": {
+    "raw_directory": "target/core111",
+    "private_bundle": "benchmarks/private-evidence/core111-20261123",
+    "native_build_commands": [
+      "linux-rest/commands.json",
+      "windows-rest/commands.json",
+      "llvm-build.json"
+    ],
+    "tool_identities": "tool-identities.json"
+  },
+  "limits": [
+    "No agent construction, comprehension or token-efficiency trial.",
+    "No runtime-performance claim or identical fuel guarantee.",
+    "No full TLC rerun; provider/model inputs unchanged, with C counterexample replay and source-correspondence checks in the Rust suite. Existing formal claims retain their original finite Linux scope.",
+    "Wine results are not actual Windows hardware results.",
+    "Working tree includes earlier uncommitted DX/Core1.10 work and is not pushed as a new release."
+  ],
+  "actual_windows_execution": null
+}

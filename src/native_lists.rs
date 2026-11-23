@@ -204,7 +204,7 @@ impl Emitter<'_> {
             Type::Function(signature) => {
                 self.line(format!("lobo_output_tick(); switch ({value}) {{"));
                 for (index, target) in self.functions.values().copied().collect::<Vec<_>>() {
-                    if target.actions.is_empty() && target.signature_type() == *signature {
+                    if target.signature_type() == *signature {
                         let wire = serde_json::to_string(&Value::Function(FunctionValue {
                             id: target.id.clone(),
                             signature: signature.clone(),

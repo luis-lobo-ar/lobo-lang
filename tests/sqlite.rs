@@ -1,3 +1,5 @@
+#[path = "support/sql_rows.rs"]
+mod sql_rows;
 use lobo_core::compile;
 
 const SMOKE: &str = r#"module sqlite;
@@ -152,6 +154,7 @@ fn http_and_sql_libraries_compose_within_the_current_bundle_budget() {
         "examples/native/rest/app.lobo",
         "examples/native/rest/controller.lobo",
         "libraries/http-server/transport.lobo",
+        "libraries/native/permissions.lobo",
         "libraries/http-server/server.lobo",
         "libraries/http/http.lobo",
         "libraries/json/json.lobo",
@@ -223,5 +226,45 @@ fn old_user_identities_that_resemble_sqlite_results_keep_their_meaning() {
             old.run("old.f", vec![], 100).unwrap(),
             artifact.run("old.f", vec![], 100).unwrap()
         );
+    }
+}
+
+#[test]
+fn sql_row_helpers_validate_shape_bounds_and_exact_cell_classes() {
+    let sources = [
+        lobo_core::SourceFile {
+            name: "rows".into(),
+            text: include_str!("fixtures/sql_row_helpers.lobo").into(),
+            identities: None,
+        },
+        lobo_core::SourceFile {
+            name: "sql".into(),
+            text: include_str!("../libraries/sql/sql.lobo").into(),
+            identities: Some(
+                lobo_core::identities::parse_manifest(include_str!("../libraries/sql/sql.lobo.ids.json"))
+                    .unwrap(),
+            ),
+        },
+    ];
+    let artifact = lobo_core::compile_bundle("rows", &sources).unwrap();
+    for (name, expected) in sql_rows::CASES {
+        let value = artifact
+            .run(&format!("test.sql.rows.{name}"), vec![], 100000)
+            .unwrap();
+        let observed = serde_json::to_value(value).unwrap();
+        if let Some(expected) = expected {
+            assert_eq!(observed["value"]["case"], "Ok", "{name}: {observed}");
+            assert_eq!(observed["value"]["payload"]["value"], expected, "{name}");
+        } else {
+            assert_eq!(observed["value"]["case"], "Err", "{name}: {observed}");
+            assert_eq!(
+                observed["value"]["payload"]["value"]["fields"]["kind"]["value"]["case"], "Decode",
+                "{name}"
+            );
+            assert_eq!(
+                observed["value"]["payload"]["value"]["fields"]["backend_code"]["value"],
+                "0"
+            );
+        }
     }
 }

@@ -1,0 +1,40 @@
+{
+  "date": "2026-11-23",
+  "kind": "sample-refresh",
+  "status": "pass",
+  "scope": "Readable SQLite MVC sample with Core 1.10 record updates and standalone try.",
+  "before_source_sha256": {
+    "examples/native/sqlite-rest/controller.lobo": "cba4331caf3621b8330229264ce407c948108695918a39d05b2dc5db8166ebb6",
+    "examples/native/sqlite-rest/app.lobo": "5389a68b0fa9730647b4957571c1a0b2fd2d83b25afc247cb74b3ca0716f490d",
+    "examples/native/sqlite/users.lobo": "5944eff0c6fcc5140fe98960768aeb66cbc52255ad2fa2b42ce89256808a5d27"
+  },
+  "after_source_sha256": {
+    "examples/native/sqlite-rest/controller.lobo": "d87585b4e59c86d716a8fc05cebc067cefe3c32464c0d1415299ab38146c7e41",
+    "examples/native/sqlite-rest/app.lobo": "35b7b2046f08e3ffac8d024356a640b66a4592ceee7cf3e6afbb482426797633",
+    "examples/native/sqlite/users.lobo": "eafc88376c0fa71e36426a1d6047751c91808bf9cce04c65a67d2b234a241ae4"
+  },
+  "verification": {
+    "status": "pass",
+    "byte_identical_checked_program": true,
+    "before_sha256": "38cc1d4a21c6b1b748e309f8aae204711f0ef6137c4f253a4fa4b5f65971aaa0",
+    "after_sha256": "38cc1d4a21c6b1b748e309f8aae204711f0ef6137c4f253a4fa4b5f65971aaa0"
+  },
+  "unchanged_identity_sidecars_sha256": {
+    "examples/native/sqlite-rest/controller.lobo.ids.json": "266ce4401d011efa622fa8d5664251be1a1a19835813898ef5ff2141d0f72c44",
+    "examples/native/sqlite-rest/app.lobo.ids.json": "d1799f301407314e72e330c715bdc88cb3ff72f3d99c162676f4aca2816b7ac6",
+    "examples/native/sqlite/users.lobo.ids.json": "4d1d806107ac3c3af950b6cf868c780c9c7151fe5158dc15978df723bfed0d3d"
+  },
+  "editor": {
+    "bundle_navigation_tests": 12,
+    "failed": 0,
+    "installed_extension_before": "0.3.0",
+    "installed_extension_after": "1.10.0",
+    "workspace": "examples/native/sqlite-rest/SQLiteRest.code-workspace",
+    "selected_file": "examples/native/sqlite-rest/controller.lobo",
+    "requested_line": 38,
+    "visible_window_confirmed": true
+  },
+  "open_attempts": "Initial CLI calls returned zero without DISPLAY. The existing user Xorg display :1 accepted the launch; wmctrl confirmed the controller workspace window.",
+  "raw_evidence_directory": "target/mvc-refresh-20261123",
+  "limits": "Formatting and comments only. No new language feature, runtime benchmark, or agent-efficiency measurement. Existing Core 1.10 test results remain separately recorded."
+}

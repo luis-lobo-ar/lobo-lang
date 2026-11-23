@@ -1,14 +1,14 @@
 # Standalone persistent SQLite REST API
 
-Lobo 1.9 compiles HTTP parsing, controller code, SQL helpers and SQLite into one native executable.
+Compiler 1.11.2 and Core 1.11 compile HTTP parsing, controller code, SQL helpers and SQLite into one native executable.
 The database file is runtime data. The API serves /health, /api/users and /api/users/ID with GET/HEAD.
 It remains a sequential loopback demo with bounded requests. No TLS, authentication or HTTP writes are added.
 HTTP IDs use nonnegative decimal syntax up to I64 maximum. The native SQL model also exposes CLI operations.
 
-The server owns its database connection and calls the controller directly. The older pure callback server
-is unchanged. Bootstrap creates the users table and seeds Luis/Ada without replacing existing records.
+The application owns its database connection. The shared HTTP library invokes the action-bound controller
+with that connection as explicit context. Both native HTTP apps share transport policy. Bootstrap creates the users table and seeds Luis/Ada without replacing existing records.
 It then closes the privileged connection, derives read-only authority and opens the connection handed to
-controllers. Read-only launches can disable bootstrap. Each request finalizes its statements. Connection,
+controllers. Read-only launches can disable bootstrap. The controller validates the exact row width and uses strict typed SQL accessors with try. Each request finalizes its statements. Connection,
 listener and accepted-stream owners close resources after handled outcomes.
 
 ## Windows executable
@@ -44,9 +44,26 @@ system runtime. Native C export is self-contained; direct LLVM application lower
 The Windows compiler itself is not ported by this distribution.
 
 For cross-file navigation and diagnostics, open
-[SQLiteRest.code-workspace](SQLiteRest.code-workspace) with extension 1.9.0. Its source set contains the eight
+[SQLiteRest.code-workspace](SQLiteRest.code-workspace) with extension 1.11.2. Its source set contains the nine
 explicit sources. This avoids replacing the existing repository editor source configuration.
 
 Read the [SQL library](../../../libraries/sql/README.md) and [native contract](../../../spec/sqlite-interface-v0.1.md)
 for query limits, role restrictions, cleanup and storage assumptions. Use a local filesystem with trusted
 parent directories. The linked native engine is trusted code, not a process sandbox or a crash-recovery proof.
+
+## Application composition in Core 1.11
+
+`app.lobo` owns grants, optional data setup and the read-only database lifetime. It delegates the accept,
+read/dispatch/write loops and listener cleanup to `serve_with` in the HTTP transport library. The callback
+is a named action-bound function with an explicit database argument; it captures no state. Request and
+Response are imported for the inferred callback signature. Stream/listener close errors and the database
+close retain their previous precedence. Existing main/controller/model identities remain; moved helper IDs
+are relocated with their definitions. See [the library API](../../../libraries/http-server/README.md).
+
+Compiler/extension 1.11.1 retain this app's source and identities. Its context handler now uses the same
+accept/retry, preparation and cleanup policies as the stateless native REST example. The shared TCP driver
+can use `--native-handles 4` to verify repeated stream-slot reuse. Database and bootstrap ownership remain
+explicit in the application. See [the maintained HTTP scope](../../../scripts/http-refactor-scope.json).
+
+Compiler/extension 1.11.2 use the typed HTTP `server_permissions()` profile and SQL `one(Read)` delegation.
+The workspace and build source manifest include the shared OS permissions module. Original declaration IDs remain.

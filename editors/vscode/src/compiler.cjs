@@ -30,8 +30,8 @@ function decodeResult(stdout, stderr, code, source) {
   }
   if (!result || typeof result !== 'object' || Array.isArray(result)) return unavailable('Invalid compiler response envelope')
   if (code === 0 && result.status === 'ok' &&
-      (typeof source === 'string' || ['core/0.9-draft', 'core/0.10-draft', 'core/0.11-draft', 'core/0.12-draft', 'core/1.0', 'core/1.1', 'core/1.2', 'core/1.3', 'core/1.4', 'core/1.5', 'core/1.6', 'core/1.7', 'core/1.8', 'core/1.9'].includes(result.language)) &&
-      ['core/0.2-draft', 'core/0.3-draft', 'core/0.4-draft', 'core/0.5-draft', 'core/0.6-draft', 'core/0.7-draft', 'core/0.8-draft', 'core/0.9-draft', 'core/0.10-draft', 'core/0.11-draft', 'core/0.12-draft', 'core/1.0', 'core/1.1', 'core/1.2', 'core/1.3', 'core/1.4', 'core/1.5', 'core/1.6', 'core/1.7', 'core/1.8', 'core/1.9'].includes(result.language) && Array.isArray(result.entries)) {
+      (typeof source === 'string' || ['core/0.9-draft', 'core/0.10-draft', 'core/0.11-draft', 'core/0.12-draft', 'core/1.0', 'core/1.1', 'core/1.2', 'core/1.3', 'core/1.4', 'core/1.5', 'core/1.6', 'core/1.7', 'core/1.8', 'core/1.9', 'core/1.10', 'core/1.11'].includes(result.language)) &&
+      ['core/0.2-draft', 'core/0.3-draft', 'core/0.4-draft', 'core/0.5-draft', 'core/0.6-draft', 'core/0.7-draft', 'core/0.8-draft', 'core/0.9-draft', 'core/0.10-draft', 'core/0.11-draft', 'core/0.12-draft', 'core/1.0', 'core/1.1', 'core/1.2', 'core/1.3', 'core/1.4', 'core/1.5', 'core/1.6', 'core/1.7', 'core/1.8', 'core/1.9', 'core/1.10', 'core/1.11'].includes(result.language) && Array.isArray(result.entries)) {
     return { kind: 'ok' }
   }
   const diagnostic = result.diagnostic

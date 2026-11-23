@@ -12,7 +12,7 @@ function maintainedPath(file) {
     !file.startsWith('examples/v1/') && !['examples/mvc.lobo','examples/transfer.lobo'].includes(file)
 }
 function lex(source) {
-  const re=/\s+|\/\/[^\r\n]*|"(?:[^"\\\r\n]|\\[^\r\n])*"|[A-Za-z_][A-Za-z_0-9]*|[0-9]+(?:\.[0-9]+)?(?:[eE][+\-]?[0-9]+)?|::|->|=>|==|!=|<=|>=|&&|\|\||[@();,:{}.+*/%<>=!&\-]/gy
+  const re=/\s+|\/\/[^\r\n]*|"(?:[^"\\\r\n]|\\[^\r\n])*"|[A-Za-z_][A-Za-z_0-9]*|[0-9]+(?:\.[0-9]+)?(?:[eE][+\-]?[0-9]+)?|\.\.\.|::|->|=>|==|!=|<=|>=|&&|\|\||[@();,:{}.+*/%<>=!&\-]/gy
   const t=[]
   while(re.lastIndex<source.length) {
     const start=re.lastIndex,m=re.exec(source)
@@ -210,7 +210,7 @@ function run({compiler,out,apply=false}) {
     const value=JSON.parse(fs.readFileSync(object,'utf8'))
     return {hash:fingerprint(value.program),program:value.program}
   }
-  const report={format:'lobo-modernize-source/0.1',language:'core/1.9',compiler_sha256:sha(fs.readFileSync(compiler)),files:[],compiler_calls:0}
+  const report={format:'lobo-modernize-source/0.1',language:'core/1.11',compiler_sha256:sha(fs.readFileSync(compiler)),files:[],compiler_calls:0}
   try {
     for(const [name,file] of all) {
       let source=file.text,sidecar=file.sidecar

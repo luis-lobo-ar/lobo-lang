@@ -1,6 +1,6 @@
 # Native programs without a host process
 
-These executable sources use compiler/language 1.8. [probe.lobo](probe.lobo) uses the
+The standalone OS examples use Core 1.8 constructs. Current compiler/extension 1.11.2 also build the HTTP examples with Core 1.11 callbacks. [probe.lobo](probe.lobo) uses the
 [Lobo OS library](../../libraries/native/README.md). [loopback.lobo](loopback.lobo) exercises raw typed
 operations, short IO loops, write-side shutdown and EOF; the Rust regression suite compiles this same source.
 Its bounded test protocol writes before reading, so keep messages at the tested 4096-byte bound. It is not a
@@ -27,11 +27,11 @@ Its stable identities are in [the adjacent sidecar](snapshot.lobo.ids.json).
 From the repository root, choose a new executable output path:
 
 ```sh
-./target/release/lobo compile examples/native/snapshot.lobo --source libraries/native/native.lobo -o /tmp/lobo-snapshot
+./target/release/lobo compile examples/native/snapshot.lobo --source libraries/native/native.lobo --source libraries/native/permissions.lobo -o /tmp/lobo-snapshot
 /tmp/lobo-snapshot --entry native.snapshot.main --native-clock true --native-random true
 ```
 
-Both grants are required for the requested restriction mask 3 (clock=1, random=2). Without both, the program
+Both grants are required for the requested ClockRead and RandomRead permissions. Without both, the program
 returns Err(Denied). The returned clock value is elapsed monotonic milliseconds, not a calendar timestamp.
 The executable contains the native support code and needs no Rust host or interpreter at runtime.
 [Recorded checks](../../benchmarks/results/2026-11-22-native-snapshot-example.json) cover both native backends,
@@ -52,9 +52,10 @@ workspace settings. Choose the files for the active program rather than combinin
 {
   "lobo.sourceFiles": [
     "examples/native/snapshot.lobo",
-    "libraries/native/native.lobo"
+    "libraries/native/native.lobo",
+    "libraries/native/permissions.lobo"
   ]
 }
 ```
 
-Keep the snapshot's adjacent identity file in place. The compiler and editor use the same two-file closure.
+Keep the snapshot's adjacent identity file in place. The compiler and editor use the same three-file closure.

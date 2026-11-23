@@ -1,5 +1,29 @@
 # Working on Lobo
 
+Use the GitHub account luis-lobo-ar for this repository. Commit author and committer email must be
+182034884+luis-lobo-ar@users.noreply.github.com. Verify push credentials belong to that account; the globally
+active gh account may belong to another project. Keep user-facing examples on the lobo CLI. Cargo commands
+belong in compiler build/test instructions. Preserve frozen research documents and fixtures.
+
+Current state: compiler/extension 1.11.2, language Core 1.11, native ABI 1, optional SQLite extension 1.
+The user selected completing the maintained HTTP refactor in decision 0060. Both native HTTP apps delegate
+listener lifetime to serve/serve_with. The library centralizes accept/retry/termination, preparation and
+close policy, with thin pure/DB adapters preserving exact action bounds. serve_listener retains the old
+listener-based serve ID and signature; the new serve owns its listener. Preserve all stable IDs and
+captured outcomes before close. Capability/bootstrap/database ownership stays in application code.
+Run the maintained HTTP role audit and its tests, update its explicit role manifest when a new maintained
+source is added, and run the checked maintained-source audit. Keep the extension/skill/docs/evidence in sync.
+For patch versions, edit only root version fields with structured JSON. The extension lockfile test checks
+installed package versions and dependency metadata; never replace version substrings globally.
+No grammar/type-system change, action polymorphism, widening, closure, native provider/model change or new
+HTTP feature is selected. Low-level ABI examples and the explicit Rust-host integration keep their reviewed
+roles; frozen research/release fixtures and prior paper evidence stay unchanged. Stop at this refactor.
+The user then selected typed permissions in decision 0062. Maintained callers use native/permissions.lobo
+and SQL Permission/Permissions helpers. Preserve raw restrict_mask IDs and provider semantics. The role
+audit rejects raw delegation in maintained consumers. Include permissions.lobo in every OS-wrapper/transport
+closure. Stop at this library/tooling change; no grammar, provider or model expansion is selected.
+The milestone sections below record history; their earlier "current" labels apply to those checkpoints.
+
 Lobo is an early research project. It has a Rust Core native compiler and a reference evaluator.
 `compile` and `run` use native code by default. Clang is required for compilation and native tests.
 The generated native suite additionally requires Clang's ASan/UBSan runtimes; missing tools are failures, not skips.

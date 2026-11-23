@@ -127,6 +127,40 @@ async function run() {
   await expectDefinition(document, edited.lastIndexOf('changed +'), edited.indexOf('changed:'))
   await vscode.workspace.getConfiguration('lobo').update('compilerPath',
     path.resolve(__dirname, '../../../target/debug/lobo'), vscode.ConfigurationTarget.Global)
+  const callbackSource='module callback_host; record Item {value:I64} fn observed(value:Item)->Item actions {demo.read} {value} fn apply<T>(callback:Fn(T) actions {demo.read}->T,value:T)->T actions {demo.read} {callback(value)} fn main()->I64 actions {demo.read} {let item=apply(observed,Item {value:42}); item.value} identities {module:"host.callback",Item:"host.callback.item",observed:"host.callback.observed",apply:"host.callback.apply",main:"host.callback.main"}'
+  const callbacks=await vscode.workspace.openTextDocument({language:'lobo',content:callbackSource})
+  await expectDefinition(callbacks,callbackSource.indexOf('apply(observed')+6,callbackSource.indexOf('observed(value:'))
+  await expectDefinition(callbacks,callbackSource.indexOf('item.value')+5,callbackSource.indexOf('value:I64'))
+  await expectDefinition(callbacks,callbackSource.indexOf('callback(value)'),callbackSource.indexOf('callback:Fn'))
+  const callbackEdit=new vscode.WorkspaceEdit()
+  const callbackStart=callbackSource.indexOf('actions {demo.read} {callback(value)}')
+  callbackEdit.replace(callbacks.uri,new vscode.Range(callbacks.positionAt(callbackStart),callbacks.positionAt(callbackStart+19)),'actions {}')
+  const callbackFailure=waitForDiagnostics(callbacks,items=>items.some(item=>item.code==='compile.action.undeclared'))
+  assert.ok(await vscode.workspace.applyEdit(callbackEdit))
+  const callbackErrors=await callbackFailure
+  assert.ok(callbackErrors.some(item=>callbacks.getText(item.range)==='callback(value)'))
+  const callbackRestore=new vscode.WorkspaceEdit()
+  callbackRestore.replace(callbacks.uri,new vscode.Range(callbacks.positionAt(0),callbacks.positionAt(callbacks.getText().length)),callbackSource)
+  const callbacksRepaired=waitForDiagnostics(callbacks,items=>items.length===0)
+  assert.ok(await vscode.workspace.applyEdit(callbackRestore))
+  await callbacksRepaired
+  const updateSource='module updates; record Setting {value:I64,enabled:Bool} variant R {Ok(I64),Err(Text)} fn ready()->R {Ok(1)} fn main()->R {try ready(); let before=Setting {value:41,enabled:false}; let after=Setting { ...before,enabled:true }; Ok(after.value)} identities {module:"host.updates",Setting:"host.updates.setting",R:"host.updates.result",ready:"host.updates.ready",main:"host.updates.main"}'
+  const updates=await vscode.workspace.openTextDocument({language:'lobo',content:updateSource})
+  await expectDefinition(updates,updateSource.indexOf('...before')+3,updateSource.indexOf('before=Setting'))
+  await expectDefinition(updates,updateSource.indexOf('enabled:true'),updateSource.indexOf('enabled:Bool'))
+  await expectDefinition(updates,updateSource.indexOf('after.value')+6,updateSource.indexOf('value:I64'))
+  const updateEdit=new vscode.WorkspaceEdit()
+  const badField=updateSource.indexOf('enabled:true')+8
+  updateEdit.replace(updates.uri,new vscode.Range(updates.positionAt(badField),updates.positionAt(badField+4)),'42')
+  const updateFailure=waitForDiagnostics(updates,items=>items.some(item=>item.code==='compile.type.mismatch'))
+  assert.ok(await vscode.workspace.applyEdit(updateEdit))
+  const [updateDiagnostic]=await updateFailure
+  assert.equal(updates.getText(updateDiagnostic.range),'42')
+  const restoreUpdate=new vscode.WorkspaceEdit()
+  restoreUpdate.replace(updates.uri,new vscode.Range(updates.positionAt(0),updates.positionAt(updates.getText().length)),updateSource)
+  const updatesRepaired=waitForDiagnostics(updates,items=>items.length===0)
+  assert.ok(await vscode.workspace.applyEdit(restoreUpdate))
+  await updatesRepaired
   const native = await vscode.workspace.openTextDocument(vscode.Uri.file(path.join(process.env.LOBO_TEST_WORKSPACE, 'native.lobo')))
   const nativeText = native.getText()
   await expectDefinition(native, nativeText.indexOf('input.value') + 6, nativeText.indexOf('value:I64'))
@@ -304,6 +338,39 @@ async function run() {
   assert.ok(await vscode.workspace.applyEdit(repairJson))
   await jsonRepaired
   await vscode.workspace.getConfiguration('lobo').update('sourceFiles',
+    ['rest-app.lobo','rest-controller.lobo','rest-transport.lobo','rest-parser.lobo','rest-response.lobo','rest-json.lobo','rest-permissions.lobo'],vscode.ConfigurationTarget.Workspace)
+  const restApp=await vscode.workspace.openTextDocument(vscode.Uri.file(path.join(process.env.LOBO_TEST_WORKSPACE,'rest-app.lobo')))
+  const restTransport=await vscode.workspace.openTextDocument(vscode.Uri.file(path.join(process.env.LOBO_TEST_WORKSPACE,'rest-transport.lobo')))
+  const restText=restApp.getText(),transportText=restTransport.getText()
+  await expectDefinition(restApp,restText.indexOf('serve(cap'),transportText.indexOf('serve(cap:'),restTransport)
+  await expectDefinition(restTransport,transportText.indexOf('next_connection(listener, state'),transportText.indexOf('next_connection(listener:'),restTransport)
+  const restPermissions=await vscode.workspace.openTextDocument(vscode.Uri.file(path.join(process.env.LOBO_TEST_WORKSPACE,'rest-permissions.lobo')))
+  await expectDefinition(restApp,restText.indexOf('restrict(Native'),restPermissions.getText().indexOf('restrict(cap:'),restPermissions)
+  await expectDefinition(restApp,restText.indexOf('server_permissions()'),transportText.indexOf('server_permissions()->'),restTransport)
+  const badPermission=new vscode.WorkspaceEdit()
+  const profileStart=restText.indexOf('server_permissions()')
+  badPermission.replace(restApp.uri,new vscode.Range(restApp.positionAt(profileStart),restApp.positionAt(profileStart+20)),'5')
+  const permissionFailure=waitForDiagnostics(restApp,items=>items.some(item=>item.code==='compile.type.mismatch'))
+  assert.ok(await vscode.workspace.applyEdit(badPermission))
+  await permissionFailure
+  const repairPermission=new vscode.WorkspaceEdit()
+  repairPermission.replace(restApp.uri,new vscode.Range(restApp.positionAt(0),restApp.positionAt(restApp.getText().length)),restText)
+  const permissionRepaired=waitForDiagnostics(restApp,items=>items.length===0)
+  assert.ok(await vscode.workspace.applyEdit(repairPermission))
+  await permissionRepaired
+  const restEdit=new vscode.WorkspaceEdit()
+  const listenAction=restText.indexOf('net.listen, ')
+  restEdit.replace(restApp.uri,new vscode.Range(restApp.positionAt(listenAction),restApp.positionAt(listenAction+12)),'')
+  const restFailure=waitForDiagnostics(restApp,items=>items.some(item=>item.code==='compile.action.undeclared'))
+  assert.ok(await vscode.workspace.applyEdit(restEdit))
+  const restErrors=await restFailure
+  assert.ok(restErrors.some(item=>restApp.getText(item.range)==='serve(cap, port, max_requests, handle)'))
+  const restRestore=new vscode.WorkspaceEdit()
+  restRestore.replace(restApp.uri,new vscode.Range(restApp.positionAt(0),restApp.positionAt(restApp.getText().length)),restText)
+  const restRepaired=waitForDiagnostics(restApp,items=>items.length===0)
+  assert.ok(await vscode.workspace.applyEdit(restRestore))
+  await restRepaired
+  await vscode.workspace.getConfiguration('lobo').update('sourceFiles',
     ['entry.lobo', 'shared.lobo', 'other.lobo'], vscode.ConfigurationTarget.Workspace)
   const projectDirectory = process.env.LOBO_TEST_WORKSPACE
   assert.ok(projectDirectory)
@@ -354,7 +421,7 @@ async function run() {
   breakCompact.replace(entry.uri, new vscode.Range(entry.positionAt(emptyValue), entry.positionAt(emptyValue + 1)), 'false')
   assert.ok(await vscode.workspace.applyEdit(breakCompact))
   await compactProjectBad
-  console.log('LOBO_HOST_TESTS_PASSED: try payload navigation/unsaved diagnostics, native bindings/resource navigation/unsaved diagnostics, automatic JSON helpers/navigation/unsaved diagnostics, activation, compact local/project navigation and mapped unsaved diagnostics, operator symbols/targets, local navigation/squiggles, unsaved values/actions/loops, explicit-project remote function/field/case targets, dependency overlays/errors and external invalidation')
+  console.log('LOBO_HOST_TESTS_PASSED: shared HTTP lifecycle navigation/unsaved action diagnostics, action-bound callback navigation/unsaved diagnostics, record update bases/fields and standalone try diagnostics, try payload navigation/unsaved diagnostics, native bindings/resource navigation/unsaved diagnostics, automatic JSON helpers/navigation/unsaved diagnostics, activation, compact local/project navigation and mapped unsaved diagnostics, operator symbols/targets, local navigation/squiggles, unsaved values/actions/loops, explicit-project remote function/field/case targets, dependency overlays/errors and external invalidation')
 }
 
 module.exports = { run }

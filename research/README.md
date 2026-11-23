@@ -1,9 +1,32 @@
 # Lobo research record
 
+
+## Maintained HTTP refactor and reproducibility correction
+
+The [refactor report](../benchmarks/results/2026-11-23-maintained-http-refactor.md) and
+[receipt](../benchmarks/results/2026-11-23-maintained-http-refactor.json), paper entry local-035, record
+45-source coverage, shared policy, preserved IDs, minimal-handle native checks and a killed poll-limit
+variant. A new tooling guard also finds historical lock metadata corruption; corrected metadata matches
+installed tools while old archives remain unchanged. This is library/tooling engineering evidence, with
+no new language feature, agent trial, token/comprehension measurement or runtime speed claim.
+
+
+## Core 1.11 callbacks and HTTP construction
+
+The [report](../benchmarks/results/2026-11-23-action-callbacks.md) and
+[receipt](../benchmarks/results/2026-11-23-action-callbacks.json) record declared callback action bounds,
+explicit context, HTTP extraction, red/green corrections and native/editor verification. Paper entry
+local-034 also retains the preceding library-boundary review and sample refresh. Existing pinned evidence
+is unchanged. The shorter app is an engineering result; agent construction, comprehension, token and speed
+benefits remain unmeasured.
+
+
 Review date: **2026-11-03**. This is a targeted scoping review, not a systematic literature review.
 It supports a future paper; it does not establish novelty, replicate the cited experiments, or
 demonstrate that Lobo reduces agent cost.
 
+- [Core 1.10 source conveniences](../benchmarks/results/2026-11-23-source-conveniences.md): implemented immutable updates and standalone try, conformance/native/editor gates and preserved failures. No measured agent outcome.
+- [DX review and row utilities](../docs/dx-review-2026-11-23.md): static patterns, explicit proposals, strict SQL accessors and executable verification. No agent/token/comprehension outcome measured.
 - [Native SQLite implementation](../benchmarks/results/2026-11-23-sqlite-driver.md): pinned engine, typed SQL, separate authority, lifecycle verification and Linux/Wine native applications. No measured agent-effect claim.
 - [Database access proposal](../docs/database-access-proposal.md): SQLite-first SQL adapter recommendation, separate storage families and test-first gates; [eight primary sources](database-access-2026-11-23.json). Historical proposal; superseded for SQLite by decision 0055.
 - [Maintained Core 1.8 source migration](../benchmarks/results/2026-11-22-modernize-source.md): current constructs, IDs, native equivalence, editor checks and preserved failures; no agent-effect measurement.

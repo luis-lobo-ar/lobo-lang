@@ -10,7 +10,7 @@ function tokenize(source, identities) {
   const projection = project(source, identities)
   if (projection.tokens) return [...projection.tokens, { text: '', start: source.length, end: source.length }]
   if (source.length > 1_048_576) throw new SyntaxError('Document budget exceeded')
-  const pattern = /[ \t\r\n]+|\/\/[^\r\n]*|"(?:[^"\\\r\n]|\\[^\r\n])*"|[A-Za-z_][A-Za-z_0-9]*|[0-9]+(?:\.[0-9]+)?(?:[eE][+\-]?[0-9]+)?|::|->|==|!=|<=|>=|&&|\|\||[@();,:{}.+*/%<>=!&\-]/gy
+  const pattern = /[ \t\r\n]+|\/\/[^\r\n]*|"(?:[^"\\\r\n]|\\[^\r\n])*"|[A-Za-z_][A-Za-z_0-9]*|[0-9]+(?:\.[0-9]+)?(?:[eE][+\-]?[0-9]+)?|\.\.\.|::|->|==|!=|<=|>=|&&|\|\||[@();,:{}.+*/%<>=!&\-]/gy
   const tokens = []
   while (pattern.lastIndex < source.length) {
     const start = pattern.lastIndex
@@ -28,6 +28,9 @@ function tokenize(source, identities) {
 function range(token) {
   return { start: token.start, end: token.end }
 }
+
+function callbackName(actions = []) { return actions.length ? `Fn[${actions.join(';')}]` : 'Fn' }
+function isCallback(name) { return name === 'Fn' || name?.startsWith('Fn[') }
 
 function application(type) {
   if (type === undefined) return { name: undefined, arguments: [] }
@@ -196,7 +199,7 @@ class Resolver {
   functionType(name) {
     if (!this.functions.has(name) || this.functionParameters.get(name)?.length) return undefined
     const types = [...(this.inputs.get(name) ?? []), this.outputs.get(name)]
-    return appliedType('Fn',types)
+    return appliedType(callbackName(this.functions.get(name)?.actions),types)
   }
 
   inferenceBudget() {
@@ -257,8 +260,9 @@ class Resolver {
         do { if (parameters.length >= 16) throw new SyntaxError('Function signature arity exceeded'); parameters.push(this.type(depth+1)) } while (this.eat(','))
         this.expect(')')
       }
+      const actions = this.actions()
       this.expect('->')
-      return `Fn<${[...parameters,this.type(depth+1)].join(',')}>`
+      return `${callbackName(actions)}<${[...parameters,this.type(depth+1)].join(',')}>`
     }
     if (this.eat('List')) {
       this.expect('<')
@@ -573,7 +577,8 @@ class Resolver {
     this.inputs.set(name.text,[...parameters.values()].map(parameter => parameter.type()))
     this.outputs.set(name.text, output)
     name.type = () => output
-    name.pure = this.actions() === 0
+    name.actions = this.actions()
+    name.pure = name.actions.length === 0
     if (this.options.headersOnly) {
       while (this.eat('requires')) this.skipBlock()
       while (this.eat('ensures')) this.skipBlock()
@@ -590,7 +595,7 @@ class Resolver {
   }
 
   actions() {
-    if (!this.eat('actions')) return 0
+    if (!this.eat('actions')) return []
     this.expect('{')
     const seen = new Set()
     if (!this.eat('}')) {
@@ -604,7 +609,7 @@ class Resolver {
       } while (this.eat(','))
       this.expect('}')
     }
-    return seen.size
+    return [...seen].sort()
   }
 
   contract(env) {
@@ -616,18 +621,26 @@ class Resolver {
   block(outer, expected) {
     this.expect('{')
     const env = new Map(outer)
-    while (this.eat('let')) {
-      const name = this.name()
-      const annotation = this.eat(':') ? this.type() : undefined
-      this.expect('=')
-      const inferred = this.expression(env, 0, annotation ? () => annotation : undefined)
-      name.type = annotation ? () => annotation : inferred
-      this.expect(';')
-      this.bind(env, name)
+    while (true) {
+      if (this.eat('let')) {
+        const name = this.name()
+        const annotation = this.eat(':') ? this.type() : undefined
+        this.expect('=')
+        const inferred = this.expression(env, 0, annotation ? () => annotation : undefined)
+        name.type = annotation ? () => annotation : inferred
+        this.expect(';')
+        this.bind(env, name)
+        continue
+      }
+      const type = this.expression(env, 0, expected)
+      if (this.eat(';')) {
+        if (!this.inference || !type?.propagation) throw new SyntaxError('Only standalone try may discard a value')
+        this.checks.push(() => type() !== undefined)
+        continue
+      }
+      this.expect('}')
+      return type
     }
-    const type = this.expression(env, 0, expected)
-    this.expect('}')
-    return type
   }
 
   expression(env, level = 0, expected) {
@@ -658,7 +671,7 @@ class Resolver {
       if (this.eat('(')) {
         if (!this.eat(')')) { do { this.expression(env) } while (this.eat(',')); this.expect(')') }
         const callee = type
-        type = () => { const parsed = application(callee?.()); return parsed.name === 'Fn' ? parsed.arguments.at(-1) : undefined }
+        type = () => { const parsed = application(callee?.()); return isCallback(parsed.name) ? parsed.arguments.at(-1) : undefined }
         continue
       }
       this.expect('.')
@@ -678,12 +691,14 @@ class Resolver {
     if (this.current().text === 'try' && /^[A-Za-z_0-9"]/.test(this.tokens[this.position+1]?.text ?? '')) {
       this.position++
       const value = this.primary(env)
-      return () => {
+      const type = () => {
         const parsed = application(value?.())
         const shape = this.variantFor(parsed.name)
         if (shape?.cases.size !== 2 || shape.cases.get('Ok')?.payload === undefined || shape.cases.get('Err')?.payload === undefined) return undefined
         return instantiate(shape.cases.get('Ok').payload,shape,parsed.arguments)
       }
+      type.propagation = true
+      return type
     }
     if (this.eat('&')) {
       const token = this.name()
@@ -697,7 +712,7 @@ class Resolver {
       return () => {
         const atom = name => name.startsWith('@') ? args[this.functionParameters.get(token.text)?.indexOf(name.slice(1))] : name
         const types = [...(this.inputs.get(token.text) ?? []),this.outputs.get(token.text)].map(type => mapType(type,atom))
-        return appliedType('Fn',types)
+        return appliedType(callbackName((this.functions.get(token.text) ?? this.imports.get(token.text))?.actions),types)
       }
     }
     if (this.current().text.startsWith('"')) {
@@ -809,27 +824,40 @@ class Resolver {
       this.checks.push(() => target() && (target().payload !== undefined) === payload && types() !== undefined)
       return () => { const args=types(); return args === undefined ? undefined : appliedType(nominal,args) }
     }
-    if (this.current().text === '{' && /^[A-Za-z_][A-Za-z_0-9]*$/.test(this.tokens[this.position + 1]?.text) &&
-        this.tokens[this.position + 2]?.text === ':') {
+    if (this.current().text === '{' && (this.tokens[this.position+1]?.text === '...' ||
+        (/^[A-Za-z_][A-Za-z_0-9]*$/.test(this.tokens[this.position + 1]?.text) && this.tokens[this.position + 2]?.text === ':'))) {
       this.expect('{')
       this.references.push({ token, resolve: () => this.records.get(token.text)?.token })
       const names = new Set()
       const values = new Map()
       const shape = () => this.records.get(token.text)
       const nominal = this.nominal(token.text)
-      const types = guarded(() => this.constructorTypes(nominal, shape(), typeArguments, [...values].map(([name,value]) => [shape()?.fields.get(name)?.type,value]), expected))
-      do {
-        const field = this.name()
-        if (names.has(field.text)) throw new SyntaxError('Duplicate constructor field')
-        names.add(field.text)
-        this.references.push({ token: field, resolve: () => this.records.get(token.text)?.fields.get(field.text)?.token })
-        this.expect(':')
-        values.set(field.text,this.expression(env,0,() => instantiate(shape()?.fields.get(field.text)?.type,shape(),types() ?? [])))
-      } while (this.eat(','))
+      let base
+      const types = guarded(() => {
+        const parts=[...values].map(([name,value]) => [shape()?.fields.get(name)?.type,value])
+        if (base) parts.unshift([appliedType(nominal,(shape()?.typeParameters ?? []).map(p=>'@'+p)),base])
+        return this.constructorTypes(nominal,shape(),typeArguments,parts,expected)
+      })
+      if (this.eat('...')) {
+        if (!this.inference) throw new SyntaxError('Record updates require modern source')
+        base=this.expression(env,0,() => {const args=types();return args===undefined?undefined:appliedType(nominal,args)})
+      }
+      const fieldsPresent=base ? this.eat(',') : true
+      if (fieldsPresent) {
+        do {
+          const field = this.name()
+          if (names.has(field.text)) throw new SyntaxError('Duplicate constructor field')
+          names.add(field.text)
+          this.references.push({ token: field, resolve: () => this.records.get(token.text)?.fields.get(field.text)?.token })
+          this.expect(':')
+          values.set(field.text,this.expression(env,0,() => instantiate(shape()?.fields.get(field.text)?.type,shape(),types() ?? [])))
+        } while (this.eat(','))
+      }
       this.expect('}')
       this.checks.push(() => {
-        const fields = this.records.get(token.text)?.fields
-        return fields && fields.size === names.size && [...names].every(name => fields.has(name)) && types() !== undefined
+        const fields=shape()?.fields,args=types()
+        return fields && (base || fields.size===names.size) && [...names].every(name=>fields.has(name)) && args!==undefined &&
+          (!base || base()===appliedType(nominal,args))
       })
       return () => { const args=types(); return args === undefined ? undefined : appliedType(nominal,args) }
     }
@@ -852,7 +880,7 @@ class Resolver {
     this.checks.push(() => !this.functionParameters.has(token.text) || types() !== undefined)
     if (target && !this.functions.has(token.text)) return () => {
       const parsed = application(target.type?.())
-      return parsed.name === 'Fn' ? parsed.arguments.at(-1) : undefined
+      return isCallback(parsed.name) ? parsed.arguments.at(-1) : undefined
     }
     const substitute = type => mapType(type, atom => {
       if (atom.startsWith('@')) {
@@ -974,7 +1002,7 @@ function definitionInBundle(sources, root, offset) {
       }
     }
     const canonicalType = (type, scope) => mapType(type, atom => {
-      if (NATIVE_TYPES.has(atom) || atom.startsWith('@') || ['Fn', 'List', 'I64', 'F64', 'Bool', 'Bytes', 'Text'].includes(atom)) return atom
+      if (NATIVE_TYPES.has(atom) || isCallback(atom) || atom.startsWith('@') || ['Fn', 'List', 'I64', 'F64', 'Bool', 'Bytes', 'Text'].includes(atom)) return atom
       const target = scope.get(atom)
       if (!target || target.kind === 'function') throw new SyntaxError('Unresolved nominal type')
       return `$${target.id}`

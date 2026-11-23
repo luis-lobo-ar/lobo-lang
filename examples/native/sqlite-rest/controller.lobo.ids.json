@@ -19,13 +19,16 @@
     "helpers.strip_prefix": "lobo.http.strip_prefix",
     "model.find": "example.sqlite.users.find",
     "model.all": "example.sqlite.users.all",
-    "sql.Cell": "lobo.sql.Cell",
     "sql.Row": "lobo.sql.Row",
     "sql.SqlResult": "lobo.sql.SqlResult",
     "json.Json": "lobo.json.value",
     "json.JsonArray": "lobo.json.array_type",
     "json.array": "lobo.json.array",
     "json.append": "lobo.json.append",
-    "json.integer_text": "lobo.json.integer_text"
+    "json.integer_text": "lobo.json.integer_text",
+    "sql.expect_columns": "lobo.sql.expect_columns",
+    "sql.integer_at": "lobo.sql.integer_at",
+    "sql.text_at": "lobo.sql.text_at",
+    "row_json": "example.sqlite.controller.row_json"
   }
 }

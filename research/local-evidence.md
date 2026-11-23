@@ -1,5 +1,35 @@
 # Local evidence for the Lobo paper
 
+## Typed permission migration
+
+The [report](../benchmarks/results/2026-11-23-typed-permissions.md),
+[receipt](../benchmarks/results/2026-11-23-typed-permissions.json) and paper entry local-036 record separate
+OS/SQL permission sets, exhaustive bounded native checks, maintained-source migration and editor support.
+Old IDs, old-caller behavior, 35 earlier paper entries and frozen sources remain preserved. This is library
+and tooling verification. Agent construction, comprehension, token savings and speed effects remain unmeasured.
+
+
+
+## Maintained HTTP refactor and reproducibility correction
+
+The [refactor report](../benchmarks/results/2026-11-23-maintained-http-refactor.md) and
+[receipt](../benchmarks/results/2026-11-23-maintained-http-refactor.json), paper entry local-035, record
+45-source coverage, shared policy, preserved IDs, minimal-handle native checks and a killed poll-limit
+variant. A new tooling guard also finds historical lock metadata corruption; corrected metadata matches
+installed tools while old archives remain unchanged. This is library/tooling engineering evidence, with
+no new language feature, agent trial, token/comprehension measurement or runtime speed claim.
+
+
+## Core 1.11 callbacks and HTTP construction
+
+The [report](../benchmarks/results/2026-11-23-action-callbacks.md) and
+[receipt](../benchmarks/results/2026-11-23-action-callbacks.json) record declared callback action bounds,
+explicit context, HTTP extraction, red/green corrections and native/editor verification. Paper entry
+local-034 also retains the preceding library-boundary review and sample refresh. Existing pinned evidence
+is unchanged. The shorter app is an engineering result; agent construction, comprehension, token and speed
+benefits remain unmeasured.
+
+
 Recorded: 2026-11-04. This index connects our implementation results and experiments to the future paper.
 The [machine-readable register](local-evidence.json) pins report/data hashes and separates measurements,
 engineering decisions and unmeasured outcomes. [External findings](findings.json) and the
@@ -234,3 +264,23 @@ engine/upstream-test provenance, C/LLVM/sanitizers, finite lifecycle checks with
 file oracles and actual PE execution under Wine. Existing paper entries and frozen artifacts are preserved.
 This establishes the stated bounded behavior, not agent construction/comprehension gains, token savings,
 performance superiority, engine correctness, production security or actual Windows hardware coverage.
+
+
+## DX review and row utilities, 2026-11-23
+
+The [review](../docs/dx-review-2026-11-23.md) and
+[receipt](../benchmarks/results/2026-11-23-dx-review.json) retain a tracked-code inventory and rejected compiler
+probes. Recurring resource, immutable-state, result, callback and project-selection patterns motivate bounded
+proposals. Six pure SQL row helpers and the migrated controller execute under the recorded conformance,
+backend, sanitizer, editor and HTTP checks. Existing evidence remains pinned. This is a static review with
+an implementation slice, not a controlled agent experiment or evidence of token/comprehension gains.
+
+
+## Core 1.10 source conveniences, 2026-11-23
+
+[The report](../benchmarks/results/2026-11-23-source-conveniences.md) and
+[receipt](../benchmarks/results/2026-11-23-source-conveniences.json) record implementation of three-dot
+record updates and standalone try. Evidence includes one-evaluation/order/type/error/identity/range tests,
+C/LLVM/sanitizers, editor host repair, existing nesting-bound regression fixes, old-compiler checked execution
+and Linux/Wine application checks. Earlier proposal and DX evidence remain unchanged. No new controlled
+agent study or runtime performance comparison was run.

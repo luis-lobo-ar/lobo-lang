@@ -1,4 +1,4 @@
-# Lobo language 1.9 details
+# Lobo language 1.11 details
 
 Declarations use stable ASCII IDs. A project supplies every source explicitly; imports name
 declarations, never paths. Global IDs are unique; source names are local to each module.
@@ -32,7 +32,7 @@ identities {
 `I64`, `Bool`, `Text`, `Bytes`, records, variants and `List<T>` are supported. Recursive nominal
 types are allowed only when every cycle passes through a List. Direct inline cycles are rejected.
 This supports nested typed child values without indices or a new pointer constructor. Generic functions
-are supported explicitly. Generic records/variants and pure function values are also supported.
+are supported explicitly. Generic records/variants and function values with declared action bounds are also supported.
 Constructor syntax is `Pair { left: 1, right: 2 }`, `Result::Found(pair)` and `Result::Empty`.
 Field access is `pair.left`. Match all variant cases:
 
@@ -61,8 +61,14 @@ as explicit constructors. Constructor arguments can be inferred in 1.5; nominal 
 can return `Some(42)` or `None`. Typed annotations, call parameters and constructor members also supply context.
 An unannotated `let absent = None` has no owner and fails. Local bindings and explicit aliases take precedence.
 Use `Fn(T) -> U` for a pure callback and `&identity::<Text>` or `&function_name` to obtain a named reference.
-Call it with `callback(value)` or `record.callback(value)`. References capture no environment and reject
-actionful functions. Their exact signatures and action purity are rechecked on artifact load and typed input.
+Call it with `callback(value)` or `record.callback(value)`. For an action-bound value use
+`Fn(T) actions { demo.read } -> U`. The clause precedes the arrow to distinguish it from actions on a
+containing function. References capture no environment. Parameter/output types and declared action sets
+match exactly, including in generic inference. Invocation requires the callback's actions in its caller;
+contracts cannot invoke actionful callbacks. Merely obtaining a reference performs no actions. Bounds,
+target identity and exact signatures are rechecked on artifact load and typed input. Old pure signatures
+retain their wire spelling. No implicit widening, closures or action polymorphism. See the
+[callback example](callbacks.lobo) and [Core 1.11](../../../../spec/core-v1.11.md).
 F64 literals include `1.5`, `2e-3`, `-0.0`; plain `1` is I64. Use homogeneous `+ - * /`, comparisons and
 explicit `F64::from_i64` / `F64::to_i64` conversions. Float-to-integer conversion faults on nonfinite or
 out-of-range values before truncation toward zero. `F64::is_finite`, `is_nan`, `from_bits` and `to_bits`
@@ -139,3 +145,27 @@ See [the interface](../../../../spec/sqlite-interface-v0.1.md). Explicit close/f
 invocation cleanup rolls back active transactions. SQL execution has a separate progress/memory budget.
 The core source bundle limits are now 16,384 aggregate tokens and 64 source nominals, with existing
 per-file/size/depth/module/specialization bounds retained.
+
+
+For owned SQLite rows, prefer the pure SQL helpers `expect_columns`, `integer_at`, `decimal_at`, `text_at`
+and `bytes_at` with `try` instead of repeating cell-variant matches in controllers. `cell_at` preserves NULL
+when the application needs a nullable policy. These functions reject wrong classes and out-of-range indices
+as `SqlError::Decode` with backend code zero. They add no authority or implicit conversion. See
+[the SQL library](../../../../libraries/sql/README.md). A constructor inside `List::prepend` can still need
+an explicit owner such as `Cell::String("")` when expected-type inference cannot determine its owner.
+
+
+Core 1.10 record updates use three dots: `State { ...state, flag: true }`. One same-type base comes first;
+its value is computed once and overrides run in written order. No mutation or arbitrary object spread.
+Standalone `try operation();` discards success and propagates Err. It can appear between let bindings;
+a final block expression remains required. Neither convenience introduces automatic cleanup or implicit
+error conversion. [The current rules](../../../../spec/core-v1.10.md) define bounds and fuel lowering.
+
+Compiler 1.11.1 is a library/tooling refactor on unchanged Core 1.11. HTTP apps use serve/serve_with for
+library-owned listeners. serve_listener retains the old listener-based signature/ID. Exact callback action
+sets stay unchanged; pure APIs do not acquire DB bounds. Shared policy and reviewed exclusions are in
+[the HTTP library reference](../../../../libraries/http-server/README.md).
+
+Compiler/extension 1.11.2 add typed permission library sets on Core 1.11. Include libraries/native/permissions.lobo
+with the OS wrapper or HTTP transport. Use named permission helpers in maintained consumers; raw masks remain
+at the explicit ABI adapter and regression boundary. Both HTTP workspace files include the new dependency.

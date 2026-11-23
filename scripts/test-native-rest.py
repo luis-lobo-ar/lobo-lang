@@ -5,14 +5,16 @@ from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1]
 spec=importlib.util.spec_from_file_location('protocol',ROOT/'scripts/test-native-rest-protocol.py');protocol=importlib.util.module_from_spec(spec);spec.loader.exec_module(protocol)
 def main():
-    p=argparse.ArgumentParser(description=__doc__);p.add_argument('--exe',type=Path,required=True);p.add_argument('--default-launch',action='store_true');p.add_argument('--entry',default='example.rest.main');p.add_argument('--entry-extra-arg',action='append',default=[]);p.add_argument('--sqlite-file');p.add_argument('--sqlite-mode',choices=['read','write','schema'],default='schema');p.add_argument('--cwd',type=Path);p.add_argument('--wine-prefix',type=Path);p.add_argument('--out',type=Path,required=True);a=p.parse_args();a.out.mkdir(exist_ok=False,parents=True)
+    p=argparse.ArgumentParser(description=__doc__);p.add_argument('--exe',type=Path,required=True);p.add_argument('--default-launch',action='store_true');p.add_argument('--native-handles',type=int,choices=range(1,65),default=64);p.add_argument('--entry',default='example.rest.main');p.add_argument('--entry-extra-arg',action='append',default=[]);p.add_argument('--sqlite-file');p.add_argument('--sqlite-mode',choices=['read','write','schema'],default='schema');p.add_argument('--cwd',type=Path);p.add_argument('--wine-prefix',type=Path);p.add_argument('--out',type=Path,required=True);a=p.parse_args();
+    if a.default_launch and a.native_handles!=64:p.error('a custom native handle limit requires explicit launch arguments')
+    a.out.mkdir(exist_ok=False,parents=True)
     env=os.environ.copy();prefix=[]
     if a.wine_prefix:
         env.update(WINEPREFIX=str(a.wine_prefix.resolve()),WINEARCH='win64',WINEDEBUG='-all',WINEDLLOVERRIDES='mscoree,mshtml=');prefix=['wine']
     records=[];cases=json.loads((ROOT/'tests/native/rest_cases.json').read_text());total=len(cases)+8
     with socket.socket() as s:s.bind(('127.0.0.1',0));port=s.getsockname()[1]
     if a.default_launch:port=8080;total=128
-    args=[str(a.exe.resolve()),'--entry',a.entry,'--arg',f'I64:{port}','--arg',f'I64:{total}','--native-clock','true','--native-listen',f'127.0.0.1:{port}','--native-calls','65536','--native-bytes','1048576','--fuel','100000000','--heap-cells','16000000']
+    args=[str(a.exe.resolve()),'--entry',a.entry,'--arg',f'I64:{port}','--arg',f'I64:{total}','--native-clock','true','--native-listen',f'127.0.0.1:{port}','--native-calls','65536','--native-handles',str(a.native_handles),'--native-bytes','1048576','--fuel','100000000','--heap-cells','16000000']
     for atom in a.entry_extra_arg:args+=['--arg',atom]
     if a.sqlite_file:args+=['--sqlite-file',a.sqlite_file,'--sqlite-mode',a.sqlite_mode,'--sqlite-calls','65536','--sqlite-steps','1000000']
     if a.default_launch:args=[str(a.exe.resolve())]
@@ -62,7 +64,7 @@ def main():
             data=exchange(req);protocol.verify(health,data)
         stdout,stderr=proc.communicate(timeout=15);v=json.loads(stdout.decode().strip().splitlines()[-1])
         if proc.returncode or v['value']['value']['case']!='Ok' or v['value']['value']['payload']['value']!=str(total):raise RuntimeError(('server exit',proc.returncode,stdout,stderr))
-        result={'status':'pass','mode':'wine' if prefix else 'linux','cases':len(records),'connections':count,'server_stdout':stdout.decode(),'server_stderr':stderr.decode(),'command':prefix+args,'records':records,'actual_windows_execution':None}
+        result={'status':'pass','mode':'wine' if prefix else 'linux','cases':len(records),'connections':count,'native_handle_limit':a.native_handles,'server_stdout':stdout.decode(),'server_stderr':stderr.decode(),'command':prefix+args,'records':records,'actual_windows_execution':None}
     except BaseException as e:
         proc.kill();stdout,stderr=proc.communicate(timeout=15);result={'status':'fail','error':str(e),'records':records,'connections':count,'stdout':stdout.decode(errors='replace'),'stderr':stderr.decode(errors='replace')};raise
     finally:(a.out/'results.json').write_text(json.dumps(result,indent=2)+'\n')

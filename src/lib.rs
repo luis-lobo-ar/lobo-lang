@@ -2,6 +2,7 @@ use serde::{Deserialize, Serialize};
 use std::collections::{BTreeMap, BTreeSet};
 
 mod buffers;
+mod callbacks;
 mod compact;
 mod floats;
 mod generics;
@@ -20,7 +21,7 @@ mod records;
 pub use lists::ListValue;
 pub use modules::{compile_bundle, compile_bundle_json, SourceFile};
 
-pub const LANGUAGE: &str = "core/1.9";
+pub const LANGUAGE: &str = "core/1.11";
 pub const FORMAT: &str = "lobo-checked/1.0";
 pub const DEFAULT_HEAP_CELLS: u64 = 1_000_000;
 const MAX_DEPTH: usize = 32;
@@ -153,12 +154,15 @@ pub enum Type {
 #[derive(Debug, Clone, Serialize, Deserialize, PartialEq, Eq, PartialOrd, Ord)]
 #[serde(deny_unknown_fields)]
 pub struct FunctionType {
+    #[serde(default, skip_serializing_if = "Vec::is_empty")]
+    pub actions: Vec<String>,
     pub parameters: Vec<Type>,
     pub output: Box<Type>,
 }
 impl Function {
     fn signature_type(&self) -> FunctionType {
         FunctionType {
+            actions: self.actions.clone(),
             parameters: self.parameters.iter().map(|p| p.ty.clone()).collect(),
             output: Box::new(self.output.clone()),
         }
@@ -422,6 +426,12 @@ enum Expr {
         #[serde(default, skip_serializing_if = "Vec::is_empty")]
         type_arguments: Vec<Type>,
         fields: Vec<FieldValue>,
+        #[serde(
+            default,
+            skip_serializing_if = "Option::is_none",
+            deserialize_with = "reject_update_base"
+        )]
+        base: Option<Box<Expr>>,
         #[serde(skip)]
         span: Option<ByteSpan>,
     },
@@ -490,6 +500,10 @@ enum Expr {
         #[serde(skip)]
         span: Option<ByteSpan>,
     },
+}
+
+fn reject_update_base<'de, D: serde::Deserializer<'de>>(_d: D) -> Result<Option<Box<Expr>>, D::Error> {
+    Err(serde::de::Error::custom("record update bases are source-only"))
 }
 
 impl Expr {
@@ -712,7 +726,10 @@ fn lex(source: &str) -> Fallible<(Vec<Token>, Vec<ByteSpan>)> {
             i += 1;
         } else {
             let two = bytes.get(i..i + 2);
-            if matches!(
+            if bytes.get(i..i + 3) == Some(b"...") {
+                tokens.push(Token::Symbol("...".into()));
+                i += 3;
+            } else if matches!(
                 two,
                 Some(b"::" | b"->" | b"=>" | b"==" | b"!=" | b"<=" | b">=" | b"&&" | b"||")
             ) {
@@ -752,6 +769,7 @@ struct Parser {
     depth: usize,
     compact: Option<compact::Syntax>,
     managed: Option<BTreeMap<String, String>>,
+    statement_counter: usize,
 }
 
 impl Parser {
@@ -863,8 +881,10 @@ impl Parser {
                 }
             }
             self.expect(")")?;
+            let actions = self.action_clause()?;
             self.expect("->")?;
             return Ok(Type::Function(FunctionType {
+                actions,
                 parameters,
                 output: Box::new(self.ty_inner(depth + 1)?),
             }));
@@ -1136,6 +1156,7 @@ impl Parser {
         })
     }
     fn function(&mut self) -> Fallible<Function> {
+        self.statement_counter = 0;
         self.expect(if self.compact.is_some() { "fn" } else { "function" })?;
         let span = Some(self.span());
         let name = self.name()?;
@@ -1252,26 +1273,48 @@ impl Parser {
         self.expect("}")?;
         Ok(actions.into_iter().collect())
     }
+    fn let_binding(&mut self) -> Fallible<Binding> {
+        let span = Some(self.span());
+        let name = self.name()?;
+        let annotation = if self.eat(":") { Some(self.ty()?) } else { None };
+        self.expect("=")?;
+        let value = self.expr(0)?;
+        self.expect(";")?;
+        Ok(Binding {
+            name,
+            annotation,
+            value,
+            span,
+        })
+    }
     fn block(&mut self) -> Fallible<Block> {
         self.expect("{")?;
         let mut bindings = Vec::new();
-        while self.eat("let") {
-            let span = Some(self.span());
-            let name = self.name()?;
-            let annotation = if self.eat(":") { Some(self.ty()?) } else { None };
-            self.expect("=")?;
-            let value = self.expr(0)?;
-            self.expect(";")?;
-            bindings.push(Binding {
-                name,
-                annotation,
-                value,
-                span,
-            });
+        loop {
+            if self.eat("let") {
+                bindings.push(self.let_binding()?);
+                continue;
+            }
+            let value = Box::new(self.expr(0)?);
+            if self.compact.is_some()
+                && self.is(";")
+                && matches!(value.as_ref(),Expr::Unary {op,..} if op=="try")
+            {
+                self.position += 1;
+                let span = value.span();
+                let name = format!("__lobo_statement_{}", self.statement_counter);
+                self.statement_counter += 1;
+                bindings.push(Binding {
+                    name,
+                    annotation: None,
+                    value: *value,
+                    span,
+                });
+                continue;
+            }
+            self.expect("}")?;
+            return Ok(Block { bindings, value });
         }
-        let value = Box::new(self.expr(0)?);
-        self.expect("}")?;
-        Ok(Block { bindings, value })
     }
     fn expr(&mut self, level: u8) -> Fallible<Expr> {
         let start = self.span().start;
@@ -1388,6 +1431,40 @@ impl Parser {
             initial,
             condition,
             body,
+            span: self.through(start),
+        })
+    }
+    fn record_value(&mut self, name: String, type_arguments: Vec<Type>, start: usize) -> Fallible<Expr> {
+        self.position += 1;
+        let base = if self.eat("...") {
+            if self.compact.is_none() {
+                return Err(syntax("record updates require modern source"));
+            }
+            Some(Box::new(self.expr(0)?))
+        } else {
+            None
+        };
+        let has_fields = if base.is_some() { self.eat(",") } else { true };
+        let mut fields = Vec::new();
+        if has_fields {
+            loop {
+                let name = self.name()?;
+                self.expect(":")?;
+                fields.push(FieldValue {
+                    name,
+                    value: self.expr(0)?,
+                });
+                if !self.eat(",") {
+                    break;
+                }
+            }
+        }
+        self.expect("}")?;
+        Ok(Expr::Record {
+            record: name,
+            type_arguments,
+            fields,
+            base,
             span: self.through(start),
         })
     }
@@ -1741,29 +1818,11 @@ impl Parser {
                 });
             }
             if self.is("{")
-                && matches!(self.tokens.get(self.position + 1), Some(Token::Word(_)))
-                && self.tokens.get(self.position + 2) == Some(&Token::Symbol(":".into()))
+                && (self.tokens.get(self.position + 1) == Some(&Token::Symbol("...".into()))
+                    || (matches!(self.tokens.get(self.position + 1), Some(Token::Word(_)))
+                        && self.tokens.get(self.position + 2) == Some(&Token::Symbol(":".into()))))
             {
-                self.position += 1;
-                let mut fields = Vec::new();
-                loop {
-                    let name = self.name()?;
-                    self.expect(":")?;
-                    fields.push(FieldValue {
-                        name,
-                        value: self.expr(0)?,
-                    });
-                    if !self.eat(",") {
-                        break;
-                    }
-                }
-                self.expect("}")?;
-                return Ok(Expr::Record {
-                    record: name,
-                    type_arguments,
-                    fields,
-                    span: self.through(start),
-                });
+                return self.record_value(name, type_arguments, start);
             }
             if !self.eat("(") {
                 return Ok(Expr::Name {
@@ -1809,6 +1868,12 @@ fn mismatch(message: &str) -> Diagnostic {
     Diagnostic::new("compile.type.mismatch", "check", message)
 }
 fn same(actual: Type, expected: Type) -> Fallible<()> {
+    if matches!((&actual, &expected), (Type::Function(a), Type::Function(b)) if a.actions != b.actions) {
+        return Err(action_error(
+            "compile.action.reference",
+            "callback action bounds must match exactly",
+        ));
+    }
     if actual == expected {
         Ok(())
     } else {
@@ -1888,12 +1953,6 @@ impl Checker<'_> {
                     .get(function)
                     .filter(|_| self.visible.contains(function))
                     .ok_or_else(|| action_error("compile.name.unresolved", "unknown function reference"))?;
-                if !target.actions.is_empty() {
-                    return Err(action_error(
-                        "compile.action.reference",
-                        "Fn references require a pure function",
-                    ));
-                }
                 let ty = Type::Function(target.signature_type());
                 self.check_type(&ty)?;
                 Ok(ty)
@@ -1909,6 +1968,22 @@ impl Checker<'_> {
                 };
                 if signature.parameters.len() != arguments.len() {
                     return Err(action_error("compile.call.arity", "wrong number of arguments"));
+                }
+                if self.in_contract && !signature.actions.is_empty() {
+                    return Err(action_error(
+                        "compile.action.contract",
+                        "contracts cannot invoke actionful callbacks",
+                    ));
+                }
+                if signature
+                    .actions
+                    .iter()
+                    .any(|action| !self.actions.contains(action))
+                {
+                    return Err(action_error(
+                        "compile.action.undeclared",
+                        "callback invocation requires declared actions",
+                    ));
                 }
                 for (argument, ty) in arguments.iter().zip(&signature.parameters) {
                     same(self.expr(argument, env)?, ty.clone()).map_err(|e| e.at(argument.span()))?;
@@ -2080,7 +2155,15 @@ impl Checker<'_> {
                 }
                 Ok(output.expect("nonempty checked variant"))
             }
-            Expr::Record { record, fields, .. } => {
+            Expr::Record {
+                record, fields, base, ..
+            } => {
+                if base.is_some() {
+                    return Err(action_error(
+                        "compile.record.update",
+                        "record update must be elaborated before checking",
+                    ));
+                }
                 let definition = self.records.get(record)?;
                 if let Expr::Record { type_arguments, .. } = expression {
                     if !type_arguments.is_empty() {
@@ -2609,6 +2692,7 @@ fn resolve_expr(
                 record,
                 type_arguments,
                 fields,
+                base,
                 ..
             } => {
                 for ty in type_arguments {
@@ -2618,6 +2702,9 @@ fn resolve_expr(
                     .get(record)
                     .cloned()
                     .ok_or_else(|| action_error("compile.type.unknown", "unknown record constructor"))?;
+                if let Some(value) = base {
+                    resolve_expr(value, ids, variants, depth)?;
+                }
                 for field in fields {
                     resolve_expr(&mut field.value, ids, variants, depth)?;
                 }
@@ -2822,6 +2909,8 @@ impl Artifact {
                     | "core/1.6"
                     | "core/1.7"
                     | "core/1.8"
+                    | "core/1.9"
+                    | "core/1.10"
                     | LANGUAGE
             )
         {
@@ -2831,8 +2920,10 @@ impl Artifact {
                 "unsupported artifact or language version",
             ));
         }
-        if !matches!(self.language.as_str(), "core/1.7" | "core/1.8" | LANGUAGE)
-            && (self.program.native_abi.is_some() || native_api::has_new_nodes(&self.program)?)
+        if !matches!(
+            self.language.as_str(),
+            "core/1.7" | "core/1.8" | "core/1.9" | "core/1.10" | LANGUAGE
+        ) && (self.program.native_abi.is_some() || native_api::has_new_nodes(&self.program)?)
         {
             return Err(Diagnostic::new(
                 "invocation.artifact.version",
@@ -2840,20 +2931,31 @@ impl Artifact {
                 "native operations require core/1.7",
             ));
         }
-        if !matches!(self.language.as_str(), "core/1.8" | LANGUAGE) && propagation::present(&self.program)? {
+        if !matches!(
+            self.language.as_str(),
+            "core/1.8" | "core/1.9" | "core/1.10" | LANGUAGE
+        ) && propagation::present(&self.program)?
+        {
             return Err(Diagnostic::new(
                 "invocation.artifact.version",
                 "load",
                 "try requires core/1.8",
             ));
         }
-        if self.language != LANGUAGE
+        if !matches!(self.language.as_str(), "core/1.9" | "core/1.10" | LANGUAGE)
             && (self.program.sqlite_abi.is_some() || native_api::has_sqlite_nodes(&self.program)?)
         {
             return Err(Diagnostic::new(
                 "invocation.artifact.version",
                 "load",
                 "SQLite operations require core/1.9",
+            ));
+        }
+        if self.language != LANGUAGE && callbacks::present(&self.program)? {
+            return Err(Diagnostic::new(
+                "invocation.artifact.version",
+                "load",
+                "actionful callbacks require core/1.11",
             ));
         }
         native_api::validate_layouts(&self.program)?;

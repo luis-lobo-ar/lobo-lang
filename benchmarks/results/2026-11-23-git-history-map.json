@@ -1,0 +1,87 @@
+{
+  "date": "2026-11-23",
+  "status": "locally_rewritten_and_verified",
+  "scope": "all local branches, remote-tracking refs and lightweight tags",
+  "corrected_commits": 6,
+  "old_to_new": {
+    "8443531ea69083d8a090b276dd21140996ae4eb2": "37a58e2446c7c1ac0dff31f1ae40db1c7bd0ebd4",
+    "5a9651b6a83796f99b8214f1eae50356d933e904": "afd2456b263f8897b3ce97ab8a7c9fa07e7d871b",
+    "39ec4662869ae992a508a06cf2f3a9cf36240220": "9391e106b3ce8dfaf1df98c9bc0d14f6dd647130",
+    "f14fb8382a15eabdc34e17750e091e680b84e2dd": "6c9b875c4380b2262f75bcb5959ea02c237dc49c",
+    "075798cbf63cd8bc0d6866721b60eaac7b0e05cd": "033a600c45912e99b2d78293d800f373e4a88861",
+    "410214d12c11a7f831e6c3dfaeff29e94ec727dc": "db2085a5ff5f96d82e8ca58751421facfbac3c5e"
+  },
+  "commits": [
+    {
+      "old": "8443531ea69083d8a090b276dd21140996ae4eb2",
+      "new": "37a58e2446c7c1ac0dff31f1ae40db1c7bd0ebd4",
+      "tree": "b6d527705f92db976563cdc431eec223a01820b8",
+      "tree_message_dates_preserved": true,
+      "author_and_committer_corrected": true
+    },
+    {
+      "old": "5a9651b6a83796f99b8214f1eae50356d933e904",
+      "new": "afd2456b263f8897b3ce97ab8a7c9fa07e7d871b",
+      "tree": "0e875b4c79b77bbf00c012b331bfad9b8bc1e81f",
+      "tree_message_dates_preserved": true,
+      "author_and_committer_corrected": true
+    },
+    {
+      "old": "39ec4662869ae992a508a06cf2f3a9cf36240220",
+      "new": "9391e106b3ce8dfaf1df98c9bc0d14f6dd647130",
+      "tree": "7e668d3da01da16f13937e85e31392ab95986dfc",
+      "tree_message_dates_preserved": true,
+      "author_and_committer_corrected": true
+    },
+    {
+      "old": "f14fb8382a15eabdc34e17750e091e680b84e2dd",
+      "new": "6c9b875c4380b2262f75bcb5959ea02c237dc49c",
+      "tree": "e59c41ef4d48583c19e34e3654c4a782438fceb6",
+      "tree_message_dates_preserved": true,
+      "author_and_committer_corrected": true
+    },
+    {
+      "old": "075798cbf63cd8bc0d6866721b60eaac7b0e05cd",
+      "new": "033a600c45912e99b2d78293d800f373e4a88861",
+      "tree": "e2a5608313ed03c258b0a4119e1f086d82e4e31b",
+      "tree_message_dates_preserved": true,
+      "author_and_committer_corrected": true
+    },
+    {
+      "old": "410214d12c11a7f831e6c3dfaeff29e94ec727dc",
+      "new": "db2085a5ff5f96d82e8ca58751421facfbac3c5e",
+      "tree": "badbc79c4de8cf8a6ca3db33b3b6de28a2e11cf6",
+      "tree_message_dates_preserved": true,
+      "author_and_committer_corrected": true
+    }
+  ],
+  "refs": {
+    "refs/heads/compare/execution-baseline": {
+      "before": "5a9651b6a83796f99b8214f1eae50356d933e904",
+      "after": "afd2456b263f8897b3ce97ab8a7c9fa07e7d871b"
+    },
+    "refs/heads/compare/python-node": {
+      "before": "075798cbf63cd8bc0d6866721b60eaac7b0e05cd",
+      "after": "033a600c45912e99b2d78293d800f373e4a88861"
+    },
+    "refs/heads/main": {
+      "before": "410214d12c11a7f831e6c3dfaeff29e94ec727dc",
+      "after": "db2085a5ff5f96d82e8ca58751421facfbac3c5e"
+    },
+    "refs/remotes/origin/main": {
+      "before": "410214d12c11a7f831e6c3dfaeff29e94ec727dc",
+      "after": "db2085a5ff5f96d82e8ca58751421facfbac3c5e"
+    },
+    "refs/tags/baseline/core-0.1.1": {
+      "before": "8443531ea69083d8a090b276dd21140996ae4eb2",
+      "after": "37a58e2446c7c1ac0dff31f1ae40db1c7bd0ebd4"
+    },
+    "refs/tags/baseline/execution-comparison": {
+      "before": "5a9651b6a83796f99b8214f1eae50356d933e904",
+      "after": "afd2456b263f8897b3ce97ab8a7c9fa07e7d871b"
+    }
+  },
+  "worktree_contents_and_status_preserved": true,
+  "original_bundle": "benchmarks/private-evidence/git-identity-20261123/before-history.bundle",
+  "frozen_evidence_references": "Original checkpoint IDs remain in frozen reports. This mapping and the backup preserve their original provenance."
+}

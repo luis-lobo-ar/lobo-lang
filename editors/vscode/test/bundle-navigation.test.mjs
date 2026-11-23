@@ -146,14 +146,78 @@ test('try navigates an imported producer payload without unused type imports', (
   assert.equal(field?.target.start,library.indexOf('value:I64'))
 })
 
-test('maintained try snapshot resolves its OS producers with the explicit two-file closure', async () => {
+test('maintained try snapshot resolves its OS producers with the explicit three-file closure', async () => {
   const snapshot=await readFile(new URL('../../../examples/native/snapshot.lobo',import.meta.url),'utf8')
   const metadata=JSON.parse(await readFile(new URL('../../../examples/native/snapshot.lobo.ids.json',import.meta.url),'utf8')).identities
   const os=await readFile(new URL('../../../libraries/native/native.lobo',import.meta.url),'utf8')
-  const sources=[{name:'snapshot',text:snapshot,identities:metadata},{name:'os',text:os}]
+  const permissions=await readFile(new URL('../../../libraries/native/permissions.lobo',import.meta.url),'utf8')
+  const sources=[{name:'snapshot',text:snapshot,identities:metadata},{name:'os',text:os},{name:'access',text:permissions}]
   for(const name of ['restrict_capability','monotonic_ms','random_bytes']) {
     const result=navigation.definitionInBundle(sources,'snapshot',snapshot.indexOf(`os.${name}`)+3)
     assert.equal(result?.source,'os',name)
     assert.equal(result?.target.start,os.indexOf(`fn ${name}`)+3,name)
   }
+})
+
+test('SQLite row helpers and their typed try payloads navigate through the maintained bundle', async () => {
+  const paths=JSON.parse(await readFile(new URL('../../../scripts/sqlite-rest-sources.json',import.meta.url),'utf8'))
+  const sources=await Promise.all(paths.map(async name=>({
+    name,text:await readFile(new URL(`../../../${name}`,import.meta.url),'utf8'),
+    identities:JSON.parse(await readFile(new URL(`../../../${name}.ids.json`,import.meta.url),'utf8').catch(()=>'{}')).identities
+  })))
+  const controller=sources.find(s=>s.name.endsWith('/controller.lobo'))
+  const sql=sources.find(s=>s.name==='libraries/sql/sql.lobo')
+  for(const name of ['expect_columns','integer_at','text_at']) {
+    const result=navigation.definitionInBundle(sources,controller.name,controller.text.indexOf(`${name}(row`))
+    assert.equal(result?.source,sql.name,name)
+    assert.equal(result?.target.start,sql.text.indexOf(`fn ${name}(`)+3,name)
+  }
+  const rowUse=controller.text.indexOf('row_json(row)')
+  const result=navigation.definitionInBundle(sources,controller.name,rowUse)
+  assert.equal(result?.source,controller.name)
+  assert.equal(result?.target.start,controller.text.indexOf('fn row_json(')+3)
+})
+
+
+test('SQLite app navigates to the shared context server and actionful controller', async () => {
+  const paths=JSON.parse(await readFile(new URL('../../../scripts/sqlite-rest-sources.json',import.meta.url),'utf8'))
+  const sources=await Promise.all(paths.map(async name=>({name,
+    text:await readFile(new URL(`../../../${name}`,import.meta.url),'utf8'),
+    identities:JSON.parse(await readFile(new URL(`../../../${name}.ids.json`,import.meta.url),'utf8').catch(()=>'{}')).identities
+  })))
+  const app=sources.find(s=>s.name.endsWith('/sqlite-rest/app.lobo'))
+  const transport=sources.find(s=>s.name.endsWith('/http-server/transport.lobo'))
+  const controller=sources.find(s=>s.name.endsWith('/sqlite-rest/controller.lobo'))
+  for(const [offset,target,needle] of [[app.text.indexOf('serve_with(cap'),transport,'serve_with<C>'],[app.text.indexOf('db, handle')+4,controller,'handle(db:']]) {
+    const result=navigation.definitionInBundle(sources,app.name,offset)
+    assert.equal(result?.source,target.name)
+    assert.equal(result?.target.start,target.text.indexOf(needle))
+  }
+})
+
+
+test('pure REST app navigates its lifecycle entry and the shared accept state fields', async () => {
+ const paths=['examples/native/rest/app.lobo','examples/native/rest/controller.lobo','libraries/http-server/transport.lobo','libraries/http-server/server.lobo','libraries/http/http.lobo','libraries/json/json.lobo','libraries/native/permissions.lobo']
+ const sources=await Promise.all(paths.map(async name=>({name,text:await readFile(new URL(`../../../${name}`,import.meta.url),'utf8'),identities:JSON.parse(await readFile(new URL(`../../../${name}.ids.json`,import.meta.url),'utf8').catch(()=>'{}')).identities})))
+ const app=sources[0],transport=sources[2]
+ const entry=navigation.definitionInBundle(sources,app.name,app.text.indexOf('serve(cap'))
+ assert.equal(entry?.source,transport.name)
+ assert.equal(entry?.target.start,transport.text.indexOf('serve(cap:'))
+ for(const [needle,shift,target] of [['next_connection(listener, state',0,'next_connection(listener:'],['connection.state)',11,'state: ServeState }']]) {
+  const result=navigation.definitionInBundle(sources,transport.name,transport.text.indexOf(needle)+shift)
+  assert.equal(result?.source,transport.name,needle)
+  assert.equal(result?.target.start,transport.text.indexOf(target),needle)
+ }
+})
+
+
+test('typed OS permission cases and HTTP profile navigate to their definitions',async()=>{
+ const paths=['examples/native/snapshot.lobo','libraries/native/native.lobo','libraries/native/permissions.lobo']
+ const sources=await Promise.all(paths.map(async name=>({name,text:await readFile(new URL(`../../../${name}`,import.meta.url),'utf8'),identities:JSON.parse(await readFile(new URL(`../../../${name}.ids.json`,import.meta.url),'utf8').catch(()=>'{}')).identities})))
+ const app=sources[0],access=sources[2]
+ for(const [needle,target] of [['ClockRead','ClockRead,'],['RandomRead','RandomRead,'],['allow(one','allow(permissions:'],['one(ClockRead','one(permission:']]) {
+  const result=navigation.definitionInBundle(sources,app.name,app.text.indexOf(needle))
+  assert.equal(result?.source,access.name,needle)
+  assert.equal(result?.target.start,access.text.indexOf(target),needle)
+ }
 })

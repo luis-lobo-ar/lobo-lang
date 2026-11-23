@@ -45,7 +45,7 @@ The broader native compiler host remains Linux. This artifact does not distribut
 Build the same program as a Linux executable:
 
 ```sh
-target/release/lobo compile examples/native/rest/app.lobo --source examples/native/rest/controller.lobo --source libraries/http-server/server.lobo --source libraries/http-server/transport.lobo --source libraries/http/http.lobo --source libraries/json/json.lobo -o NEW_EXECUTABLE
+target/release/lobo compile examples/native/rest/app.lobo --source examples/native/rest/controller.lobo --source libraries/http-server/server.lobo --source libraries/http-server/transport.lobo --source libraries/http/http.lobo --source libraries/json/json.lobo --source libraries/native/permissions.lobo -o NEW_EXECUTABLE
 ```
 
 Use the same explicit entry, arguments and grants shown above when launching the Linux executable.
@@ -65,3 +65,16 @@ Use a task-specific Wine prefix, never your normal Wine profile. See the
 The current Core 1.8 source uses try for capability/listener setup. It captures the serve result, closes the
 listener, then returns the result; a close error takes precedence as before. Try does not close resources
 automatically at each function boundary. Frozen 1.7.3 distributions retain their original source snapshots.
+
+## Shared server entry
+
+Compiler/extension 1.11.1 keep Core 1.11. The app restricts its network capability and calls
+`serve(cap, port, max_requests, handle)`. The HTTP library owns listener open/close, accepts, request IO and
+stream cleanup. The controller stays pure. The app's main ID and controller IDs are unchanged; its serve
+import now selects the new owning API. The original listener-based library ID remains at serve_listener.
+Open [Rest.code-workspace](Rest.code-workspace) for the complete seven-source editor closure.
+See [the shared HTTP library](../../../libraries/http-server/README.md). The two-second/header/request
+limits and native launch policy above are unchanged. Tests can set the native handle budget to four slots.
+
+Compiler/extension 1.11.2 replace the app’s literal 5 with `server_permissions()`. The HTTP profile requests
+ClockRead and Listen through the typed permission library. It requires both corresponding launch grants.

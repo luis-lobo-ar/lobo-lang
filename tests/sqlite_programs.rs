@@ -1,3 +1,5 @@
+#[path = "support/sql_rows.rs"]
+mod sql_rows;
 use lobo_core::{compile_bundle, identities::parse_manifest, SourceFile};
 use serde_json::{json, Value as Json};
 use std::process::Command;
@@ -16,7 +18,7 @@ fn invoke(
     let mut command = Command::new(builds.0.join(mode));
     command.args([
         "--entry",
-        &if entry.starts_with("skill.") {
+        &if entry.contains('.') {
             entry.to_owned()
         } else {
             format!("example.sqlite.users.{entry}")
@@ -84,10 +86,36 @@ fn native_sql_library_persists_binds_decodes_and_rolls_back_in_both_backends() {
             .unwrap(),
         ),
     });
+    sources.push(SourceFile {
+        name: "rows".into(),
+        text: include_str!("fixtures/sql_row_helpers.lobo").into(),
+        identities: None,
+    });
     let artifact = compile_bundle("users", &sources).unwrap();
     let builds = Builds::new(&artifact);
     for mode in ["native", "llvm", "sanitized", "llvm-sanitized"] {
         let database = builds.0.join(format!("{mode}.sqlite"));
+        for (name, expected) in sql_rows::CASES {
+            let value = invoke(
+                &builds,
+                mode,
+                &database,
+                &format!("test.sql.rows.{name}"),
+                &[],
+                None,
+            );
+            if let Some(expected) = expected {
+                assert_eq!(value["case"], "Ok", "{mode}/{name}: {value}");
+                assert_eq!(value["payload"]["value"], expected, "{mode}/{name}");
+            } else {
+                assert_eq!(value["case"], "Err", "{mode}/{name}: {value}");
+                assert_eq!(
+                    value["payload"]["value"]["fields"]["kind"]["value"]["case"], "Decode",
+                    "{mode}/{name}"
+                );
+                assert_eq!(value["payload"]["value"]["fields"]["backend_code"]["value"], "0");
+            }
+        }
         let denied = invoke(&builds, mode, &database, "list", &[], None);
         assert_eq!(denied["case"], "Err");
         assert_eq!(

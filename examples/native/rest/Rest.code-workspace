@@ -1,0 +1,19 @@
+{
+  "folders": [
+    {
+      "path": "../../.."
+    }
+  ],
+  "settings": {
+    "lobo.compilerPath": "${workspaceFolder}/target/debug/lobo",
+    "lobo.sourceFiles": [
+      "examples/native/rest/app.lobo",
+      "examples/native/rest/controller.lobo",
+      "libraries/http-server/transport.lobo",
+      "libraries/http-server/server.lobo",
+      "libraries/http/http.lobo",
+      "libraries/json/json.lobo",
+      "libraries/native/permissions.lobo"
+    ]
+  }
+}

@@ -1,0 +1,577 @@
+{
+  "format": "lobo-maintained-http-refactor/0.1",
+  "date": "2026-11-23",
+  "status": "passed",
+  "compiler": "1.11.1",
+  "extension": "1.11.1",
+  "language": "core/1.11",
+  "checked_format": "lobo-checked/1.0",
+  "native_abi": 1,
+  "sqlite_extension": 1,
+  "scope": "Complete the maintained HTTP library/application refactor; no language expansion.",
+  "baseline": {
+    "git_head": "410214d12c11a7f831e6c3dfaeff29e94ec727dc",
+    "source_files": 604,
+    "compiler_language": "core/1.11",
+    "compiler_sha256": "dd641d18d212b5eaf86277e42364c28cc2fe4b36b7ebcac8512bac48561b688e",
+    "private_evidence": "benchmarks/private-evidence/http-refactor-20261123"
+  },
+  "design": {
+    "owning_pure_api": "serve(cap, port, count, handle)",
+    "owning_context_api": "serve_with(cap, port, count, context, handle)",
+    "borrowed_listener_api": "serve_listener retains the original serve ID and signature",
+    "shared_policy": [
+      "serving",
+      "next_connection",
+      "prepare_request",
+      "finish_connection",
+      "finish_listener"
+    ],
+    "typed_adapters": "Pure and exact DB-bound callback adapters retain separate small request-driving expressions. Native accept/retry/framing/cleanup policy is shared; there is no arbitrary-action generic driver."
+  },
+  "test_counts": {
+    "rust_full": 309,
+    "rust_result_groups_including_empty": 57,
+    "rust_failed": 0,
+    "rust_ignored": 0,
+    "lifecycle_groups": 4,
+    "editor": 180,
+    "editor_failed": 0,
+    "source_tool_tests": 13,
+    "reviewed_maintained_lobo_files": 45,
+    "tcp_scenarios_per_run": 35,
+    "tcp_connections_per_run": 38,
+    "tcp_handle_limit": 4,
+    "current_http_runs": 6,
+    "legacy_caller_runs": 1,
+    "bad_row_cases_per_linux_backend": 4,
+    "database_operations_per_c_and_wine": 10,
+    "database_restarts_per_c_and_wine": 2,
+    "poll_probe_baseline_cases": 4,
+    "one_intentional_poll_mutant_cases": 4
+  },
+  "http_results": {
+    "pure-c-tcp": {
+      "status": "pass",
+      "mode": "linux",
+      "cases": 35,
+      "connections": 38,
+      "native_handle_limit": 4,
+      "actual_windows_execution": null
+    },
+    "pure-llvm-tcp": {
+      "status": "pass",
+      "mode": "linux",
+      "cases": 35,
+      "connections": 38,
+      "native_handle_limit": 4,
+      "actual_windows_execution": null
+    },
+    "pure-wine-tcp": {
+      "status": "pass",
+      "mode": "wine",
+      "cases": 35,
+      "connections": 38,
+      "native_handle_limit": 4,
+      "actual_windows_execution": null
+    },
+    "sqlite-c-tcp": {
+      "status": "pass",
+      "mode": "linux",
+      "cases": 35,
+      "connections": 38,
+      "native_handle_limit": 4,
+      "actual_windows_execution": null
+    },
+    "sqlite-llvm-tcp": {
+      "status": "pass",
+      "mode": "linux",
+      "cases": 35,
+      "connections": 38,
+      "native_handle_limit": 4,
+      "actual_windows_execution": null
+    },
+    "sqlite-wine-tcp": {
+      "status": "pass",
+      "mode": "wine",
+      "cases": 35,
+      "connections": 38,
+      "native_handle_limit": 4,
+      "actual_windows_execution": null
+    },
+    "legacy-tcp": {
+      "status": "pass",
+      "mode": "linux",
+      "cases": 35,
+      "connections": 38,
+      "native_handle_limit": 4,
+      "actual_windows_execution": null
+    }
+  },
+  "poll_probe": "poll-probe-results.json",
+  "compiler_compatibility": {
+    "status": "pass",
+    "maintained_files": 45,
+    "checked_fingerprints_equal": true,
+    "before_compiler": "1.11.0",
+    "after_compiler": "1.11.1",
+    "source_language_unchanged": "core/1.11"
+  },
+  "preservation": {
+    "status": "pass",
+    "protected_files": [
+      "benchmarks/fixtures/repair-study/README.md",
+      "benchmarks/fixtures/repair-study/collections.lobo",
+      "benchmarks/fixtures/repair-study/sequences.lobo",
+      "benchmarks/fixtures/repair-study/tree.lobo",
+      "editors/vscode/src/compact.cjs",
+      "editors/vscode/src/compiler.cjs",
+      "editors/vscode/src/navigation.cjs",
+      "editors/vscode/syntaxes/lobo.tmLanguage.json",
+      "examples/mvc.lobo",
+      "examples/native/loopback.lobo",
+      "examples/transfer.lobo",
+      "examples/v1/README.md",
+      "examples/v1/collections.lobo",
+      "examples/v1/collections_changed.lobo",
+      "examples/v1/document.lobo",
+      "examples/v1/document_transform.lobo",
+      "examples/v1/document_transform_changed.lobo",
+      "examples/v1/document_types.lobo",
+      "examples/v1/document_types_changed.lobo",
+      "examples/v1/document_validate.lobo",
+      "examples/v1/document_validate_changed.lobo",
+      "examples/v1/numerical.lobo",
+      "examples/v1/numerical_changed.lobo",
+      "examples/v1/sequences.lobo",
+      "libraries/native/native.lobo",
+      "src/agent_testing/mod.rs",
+      "src/agent_testing/process.rs",
+      "src/bin/lobo-test.rs",
+      "src/buffers.rs",
+      "src/callbacks.rs",
+      "src/compact.rs",
+      "src/floats.rs",
+      "src/generics.rs",
+      "src/identities.rs",
+      "src/inference.rs",
+      "src/lib.rs",
+      "src/lists.rs",
+      "src/main.rs",
+      "src/modules.rs",
+      "src/native.rs",
+      "src/native_api.c",
+      "src/native_api.h",
+      "src/native_api.rs",
+      "src/native_buffers.c",
+      "src/native_floats.c",
+      "src/native_lists.rs",
+      "src/native_llvm.rs",
+      "src/native_llvm_runtime.c",
+      "src/native_runtime.c",
+      "src/native_sqlite.c",
+      "src/native_windows_snapshot.c",
+      "src/native_windows_tcp.c",
+      "src/operators.rs",
+      "src/propagation.rs",
+      "src/records.rs",
+      "src/sqlite_api.h",
+      "src/sqlite_profile.h",
+      "vendor/sqlite/NOTICE.txt",
+      "vendor/sqlite/README.md",
+      "vendor/sqlite/provenance.json",
+      "vendor/sqlite/sqlite3.c",
+      "vendor/sqlite/sqlite3.h",
+      "verification/native/Authority.tla",
+      "verification/native/Operations.tla",
+      "verification/native/README.md",
+      "verification/native/authority.view.mjs",
+      "verification/native/configs/authority-amplify.cfg",
+      "verification/native/configs/authority-chart.cfg",
+      "verification/native/configs/authority-cleanup.cfg",
+      "verification/native/configs/authority-denied.cfg",
+      "verification/native/configs/authority-kind.cfg",
+      "verification/native/configs/authority-quota.cfg",
+      "verification/native/configs/authority-root.cfg",
+      "verification/native/configs/authority-stale.cfg",
+      "verification/native/configs/authority-wrap.cfg",
+      "verification/native/configs/authority.cfg",
+      "verification/native/configs/operations-chart.cfg",
+      "verification/native/configs/operations-deadline.cfg",
+      "verification/native/configs/operations-publish.cfg",
+      "verification/native/configs/operations-untracked-fault.cfg",
+      "verification/native/configs/operations.cfg",
+      "verification/native/coverage.json",
+      "verification/native/mutations.json",
+      "verification/native/operations.view.mjs",
+      "verification/sqlite/Lifecycle.tla",
+      "verification/sqlite/README.md",
+      "verification/sqlite/configs/amplify.cfg",
+      "verification/sqlite/configs/cleanup.cfg",
+      "verification/sqlite/configs/commit.cfg",
+      "verification/sqlite/configs/none.cfg",
+      "verification/sqlite/configs/persist.cfg",
+      "verification/sqlite/coverage.json",
+      "verification/sqlite/lifecycle.view.mjs"
+    ],
+    "protected_count": 93,
+    "prior_paper_entries": 34,
+    "prior_sidecar_id_values": 163,
+    "all_prior_sidecar_ids_preserved": true,
+    "original_serve_id": "lobo.http.transport.serve",
+    "new_serve_id": "lobo.852b35fdd21c1b3ce25a6ae27fbf6148",
+    "installed_development_tools_unchanged": true,
+    "lock_metadata_repairs": {
+      "status": "repaired",
+      "actual_tool_versions_changed": false,
+      "source": "existing installed npm lock and package metadata",
+      "historical_metadata_repairs": [
+        {
+          "package": "node_modules/@azure/core-client",
+          "field": "dependencies",
+          "locked": {
+            "@azure/abort-controller": "^2.1.2",
+            "@azure/core-auth": "^1.11.0",
+            "@azure/core-rest-pipeline": "^1.22.0",
+            "@azure/core-tracing": "^1.3.0",
+            "@azure/core-util": "^1.13.0",
+            "@azure/logger": "^1.3.0",
+            "tslib": "^2.6.2"
+          },
+          "installed": {
+            "@azure/abort-controller": "^2.1.2",
+            "@azure/core-auth": "^1.10.0",
+            "@azure/core-rest-pipeline": "^1.22.0",
+            "@azure/core-tracing": "^1.3.0",
+            "@azure/core-util": "^1.13.0",
+            "@azure/logger": "^1.3.0",
+            "tslib": "^2.6.2"
+          }
+        },
+        {
+          "package": "node_modules/@azure/core-rest-pipeline",
+          "field": "dependencies",
+          "locked": {
+            "@azure/abort-controller": "^2.1.2",
+            "@azure/core-auth": "^1.11.0",
+            "@azure/core-tracing": "^1.3.0",
+            "@azure/core-util": "^1.13.0",
+            "@azure/logger": "^1.3.0",
+            "@typespec/ts-http-runtime": "^0.3.4",
+            "tslib": "^2.6.2"
+          },
+          "installed": {
+            "@azure/abort-controller": "^2.1.2",
+            "@azure/core-auth": "^1.10.0",
+            "@azure/core-tracing": "^1.3.0",
+            "@azure/core-util": "^1.13.0",
+            "@azure/logger": "^1.3.0",
+            "@typespec/ts-http-runtime": "^0.3.4",
+            "tslib": "^2.6.2"
+          }
+        },
+        {
+          "package": "node_modules/@vscode/vsce",
+          "field": "dependencies",
+          "locked": {
+            "@azure/identity": "^4.13.2",
+            "@napi-rs/keyring": "^1.3.0",
+            "@secretlint/core": "^10.2.2",
+            "@secretlint/secretlint-rule-no-dotenv": "^10.2.2",
+            "@secretlint/secretlint-rule-preset-recommend": "^10.2.2",
+            "@secretlint/source-creator": "^10.2.2",
+            "@secretlint/types": "^10.2.2",
+            "@vscode/vsce-sign": "^2.1.0",
+            "azure-devops-node-api": "^12.5.0",
+            "cockatiel": "^3.2.1",
+            "commander": "^12.1.0",
+            "hosted-git-info": "^4.1.0",
+            "jsonc-parser": "^3.3.1",
+            "marked": "^18.0.11",
+            "mime": "^1.6.0",
+            "minimatch": "^10.2.6",
+            "parse5": "^8.0.1",
+            "proper-lockfile": "^4.1.2",
+            "read": "^1.0.7",
+            "semver": "^7.8.5",
+            "tinyglobby": "^0.2.17",
+            "typed-rest-client": "^1.9.01",
+            "url-join": "^4.0.1",
+            "xml2js": "^0.5.0",
+            "yauzl": "^3.4.0",
+            "yazl": "^2.5.1"
+          },
+          "installed": {
+            "@azure/identity": "^4.13.2",
+            "@napi-rs/keyring": "^1.3.0",
+            "@secretlint/core": "^10.2.2",
+            "@secretlint/secretlint-rule-no-dotenv": "^10.2.2",
+            "@secretlint/secretlint-rule-preset-recommend": "^10.2.2",
+            "@secretlint/source-creator": "^10.2.2",
+            "@secretlint/types": "^10.2.2",
+            "@vscode/vsce-sign": "^2.1.0",
+            "azure-devops-node-api": "^12.5.0",
+            "cockatiel": "^3.2.1",
+            "commander": "^12.1.0",
+            "hosted-git-info": "^4.1.0",
+            "jsonc-parser": "^3.3.1",
+            "marked": "^18.0.11",
+            "mime": "^1.6.0",
+            "minimatch": "^10.2.6",
+            "parse5": "^8.0.1",
+            "proper-lockfile": "^4.1.2",
+            "read": "^1.0.7",
+            "semver": "^7.8.5",
+            "tinyglobby": "^0.2.17",
+            "typed-rest-client": "^1.8.11",
+            "url-join": "^4.0.1",
+            "xml2js": "^0.5.0",
+            "yauzl": "^3.4.0",
+            "yazl": "^2.5.1"
+          }
+        },
+        {
+          "package": "node_modules/typed-rest-client",
+          "field": "version",
+          "locked": "1.9.01",
+          "installed": "1.8.11"
+        },
+        {
+          "package": "node_modules/typed-rest-client",
+          "field": "resolved",
+          "locked": "https://registry.npmjs.org/typed-rest-client/-/typed-rest-client-1.9.01.tgz",
+          "installed": "https://registry.npmjs.org/typed-rest-client/-/typed-rest-client-1.8.11.tgz"
+        }
+      ]
+    }
+  },
+  "gates": {
+    "full_rust": {
+      "command": "cargo test --locked",
+      "log": "cargo-acceptance.log",
+      "status": "pass"
+    },
+    "final_legacy_alias_test": {
+      "command": "cargo test --locked --test http_lifecycle pure_and_context_servers_close_listeners_before_return_and_keep_action_precision",
+      "log": "legacy-id-final.log",
+      "status": "pass",
+      "note": "Test-only alias strengthening after full suite; no production change."
+    },
+    "editor": {
+      "command": "npm --prefix editors/vscode test",
+      "log": "editor-final-2.log",
+      "status": "pass"
+    },
+    "editor_host": {
+      "command": "LOBO_VSCODE_EXECUTABLE=/usr/share/code/code xvfb-run -a npm --prefix editors/vscode run test:host",
+      "log": "host-1.log",
+      "status": "pass"
+    },
+    "clippy": {
+      "command": "cargo clippy --locked --all-targets -- -D warnings",
+      "log": "clippy-final-3.log",
+      "status": "pass"
+    },
+    "format": {
+      "command": "cargo fmt --check",
+      "log": "format-final-3.log",
+      "status": "pass"
+    },
+    "tools": {
+      "command": "node --test scripts/test-http-refactor.mjs scripts/test-modernize-source.mjs",
+      "log": "source-tools.log",
+      "status": "pass"
+    },
+    "scope": {
+      "command": "node scripts/check-http-refactor.cjs --out NEW_JSON_FILE",
+      "log": "scope-final-source.json",
+      "status": "pass"
+    },
+    "skill": {
+      "command": "python3 /home/luis/.codex/skills/.system/skill-creator/scripts/quick_validate.py .agents/skills/lobo-programming",
+      "log": "skill-validation.log",
+      "status": "pass"
+    },
+    "package": {
+      "command": "npm --prefix editors/vscode run package",
+      "log": "vsix-final-2.log",
+      "status": "pass"
+    },
+    "docs": {
+      "command": "bash scripts/check.sh",
+      "log": "docs-final.log",
+      "status": "pass"
+    },
+    "old_compiler_all_sources": {
+      "log": "before-compiler-source-audit/results.json",
+      "status": "pass"
+    },
+    "current_compiler_all_sources": {
+      "log": "current-compiler-source-audit/results.json",
+      "status": "pass"
+    }
+  },
+  "editor_install": {
+    "extension": "1.11.1",
+    "app_window_confirmed": true,
+    "windows": [
+      "0x04a0001e  0 2812911 nbk-alien-linux app.lobo - Rest (Workspace) - Visual Studio Code"
+    ]
+  },
+  "failures_and_corrections": [
+    {
+      "stage": "TDD lifecycle red",
+      "finding": "The original listener-based serve cannot accept a capability/port lifecycle call. Both initial lifecycle groups fail with a type mismatch.",
+      "logs": [
+        "lifecycle-red.log"
+      ]
+    },
+    {
+      "stage": "library authoring",
+      "finding": "A conditional Rejected constructor lacked expected nominal context. Imported RequestResult and annotated the local value using existing syntax. The failed authoring run did not publish new helper IDs.",
+      "logs": [
+        "library-identities.log",
+        "lifecycle-green-1.log",
+        "library-identities-2.log"
+      ]
+    },
+    {
+      "stage": "native harness",
+      "finding": "A one-slot budget ignored the root capability slot. Zero-request listener-reuse probes need two slots; both real apps need four for root capability, restriction, listener and stream.",
+      "logs": [
+        "lifecycle-green-2.log",
+        "lifecycle-green-4.log"
+      ]
+    },
+    {
+      "stage": "structural audit TDD",
+      "finding": "The audit-tool test initially failed because the checker was absent. The implemented checker also rejects the actual preserved baseline for app-owned lifecycle and two accept call sites. Current roles/audit pass.",
+      "logs": [
+        "audit-tool-red.log",
+        "audit-tool-green.log",
+        "scope-before.json",
+        "scope-final-source.json"
+      ]
+    },
+    {
+      "stage": "TCP harness TDD",
+      "finding": "The original TCP driver rejected --native-handles; added the explicit bounded option and ran all current native HTTP routes under four slots.",
+      "logs": [
+        "handle-flag-red.log",
+        "pure-linux-commands.json",
+        "sqlite-linux-commands.json",
+        "windows-commands.json"
+      ]
+    },
+    {
+      "stage": "maintained layout",
+      "finding": "The maintained-source check found one transport layout rewrite. Applied the existing compiler-checked formatter; subsequent audit passes with no semantic rewrites.",
+      "logs": [
+        "nearby-1.log",
+        "layout/results.json",
+        "nearby-3.log"
+      ]
+    },
+    {
+      "stage": "record argument harness",
+      "finding": "The boundary probe omitted its Record:stable-id: argument prefix and read a null value from an invocation error. Added the proper typed argument and an explicit status assertion.",
+      "logs": [
+        "nearby-2.log",
+        "nearby-3.log"
+      ]
+    },
+    {
+      "stage": "version metadata correction",
+      "finding": "A global patch-version replacement changed transitive editor lock entries. The new installed-version regression reproduces that error. Restored root-only version changes, then discovered older corrupted lock metadata in the preserved baseline.",
+      "logs": [
+        "lockfile-red.log",
+        "lockfile-green.log",
+        "editor-final.log",
+        "lockfile-constraints-red.log"
+      ]
+    },
+    {
+      "stage": "historical metadata repair",
+      "finding": "Restored five pre-existing dependency/version/resolution fields from the existing installed package and npm metadata. Actual installed development tool versions remain unchanged. The new version/dependency guard and complete editor suite pass. Prior archives retain the original erroneous metadata for reproducibility review.",
+      "logs": [
+        "installed-lock-differences.json",
+        "installed-tool-metadata.json",
+        "lockfile-metadata-repairs.json",
+        "lockfile-green-2.log",
+        "editor-final-2.log"
+      ]
+    },
+    {
+      "stage": "deliberate defect",
+      "finding": "The 1025-poll source mutant compiles successfully and is rejected by observed accept counts, for both handler adapters in optimized and ASan/UBSan C builds. It is not counted as a product failure or compiler-build failure.",
+      "logs": [
+        "poll-mutant.log",
+        "poll-probe-results.json"
+      ]
+    }
+  ],
+  "artifacts": {
+    "target/release/lobo": {
+      "bytes": 11265728,
+      "sha256": "74b035fca4c7d13529b7342efc5137fb0d50b8da1bf123c11769a00bdab61a60"
+    },
+    "target/release/lobo-test": {
+      "bytes": 11012600,
+      "sha256": "61ddd001395e2a91da6e4202d9236b9cbda9e11bbb755f2bddfe1e2b7e453168"
+    },
+    "dist/lobo-syntax-1.11.1.vsix": {
+      "bytes": 41745,
+      "sha256": "3053150b7dcaece2d3e657e953d00978f623fb4371e66d33f70dd67f06960eb9"
+    },
+    "target/http-refactor/pure-c": {
+      "bytes": 133712,
+      "sha256": "1d6c7e3eed6fa6b0edaaafdfb70a8f48996534c36e7a9d29ee10d47cb650081b"
+    },
+    "target/http-refactor/pure-llvm": {
+      "bytes": 141912,
+      "sha256": "84e26a63b3713b0ac3797b1bc3fa4d6182c861249c206c31fe6c8c2c6b76d61c"
+    },
+    "target/http-refactor/pure-windows/LoboRestApi.exe": {
+      "bytes": 157184,
+      "sha256": "fa51834b5b05803ed0abd62af6841bd120847f719fc58f95aeef4852dee7de83"
+    },
+    "target/http-refactor/sqlite-linux/lobo-sqlite-rest": {
+      "bytes": 1448944,
+      "sha256": "0a7930f85b9a416f4b8830d78744422b92daed72ea42fb1ff6fcd1cbbe816dcd"
+    },
+    "target/http-refactor/sqlite-llvm": {
+      "bytes": 1407992,
+      "sha256": "d81d7200e4029c7fde77ef4f93dbe75fac2e8488b1cb4ace2e6a23d09cbed5ad"
+    },
+    "target/http-refactor/sqlite-windows/LoboSqliteRest.exe": {
+      "bytes": 1414144,
+      "sha256": "d8f670b4bcb281859351187c88882bba90d89afa9bbeb0c48a8c5d51e12c4a68"
+    }
+  },
+  "evidence": {
+    "raw_directory": "target/http-refactor",
+    "private_bundle": "benchmarks/private-evidence/http-refactor-20261123",
+    "runtime_command_receipts": [
+      "pure-linux-commands.json",
+      "sqlite-linux-commands.json",
+      "windows-commands.json"
+    ],
+    "legacy_caller_receipts": [
+      "legacy-caller/compile.json",
+      "legacy-tcp/results.json"
+    ],
+    "installed_tool_metadata": "installed-tool-metadata.json"
+  },
+  "limits": [
+    "No agent construction, comprehension, token-efficiency or runtime-performance experiment.",
+    "The source audit is a structural guard plus reviewed roles, not a universal proof of IO ownership through arbitrary indirection.",
+    "Small typed handler adapters remain because action sets are exact; no action polymorphism or bound widening was added.",
+    "Raw ABI demos and the distinct Rust-host integration retain their reviewed roles; these are not all frozen fixtures.",
+    "No native provider/model/compiler-logic change. Existing C witnesses/source correspondence rerun in Rust tests; full TLC was not rerun.",
+    "Wine execution does not establish actual Windows hardware behavior.",
+    "No new dependency versions installed; historical lock metadata repaired to match installed tools. A fresh offline dependency installation was not performed.",
+    "An ad hoc unknown-entry argument probe and initial preservation-check assertion are retained only in the task tool transcript.",
+    "This is a local dirty-tree milestone; earlier uncommitted work is preserved, not automatically pushed."
+  ],
+  "actual_windows_execution": null
+}

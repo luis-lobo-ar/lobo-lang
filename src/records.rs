@@ -17,7 +17,6 @@ impl<'a> RecordTable<'a> {
     pub fn with_functions(mut self, functions: &[Function]) -> Self {
         self.functions = functions
             .iter()
-            .filter(|f| f.actions.is_empty())
             .map(|f| (f.id.clone(), f.signature_type()))
             .collect();
         self
@@ -180,6 +179,7 @@ impl<'a> RecordTable<'a> {
             self.check_type_names(element, depth + 1)?;
         }
         if let Type::Function(signature) = ty {
+            validate_actions(&signature.actions)?;
             if signature.parameters.len() > 16 {
                 return Err(action_error(
                     "resource.frontend.limit",

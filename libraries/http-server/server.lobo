@@ -97,3 +97,14 @@ fn wire(response:Response,head:Bool)->Bytes {
 fn respond(request:Bytes,handle:Fn(Request)->Response)->Bytes {
   match parse(request) {Rejected(status)=> wire(error_response(status),false),Parsed(value)=> wire(handle(value),value.method=="HEAD")}
 }
+
+// Explicit context keeps application resources outside the callback value.
+fn respond_with<C>(context: C, request: Bytes,
+  handle: Fn(C, Request) actions { db.execute, db.read, db.close } -> Response) -> Bytes
+actions { db.execute, db.read, db.close }
+{
+  match parse(request) {
+    Rejected(status) => wire(error_response(status), false),
+    Parsed(value) => wire(handle(context, value), value.method == "HEAD")
+  }
+}

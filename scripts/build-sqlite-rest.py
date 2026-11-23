@@ -59,7 +59,7 @@ def main():
     for name in ['NOTICE.txt','provenance.json']:
         path=ROOT/'vendor/sqlite'/name
         if path.is_file():shutil.copy2(path,out/('SQLITE-'+name))
-    manifest={'format':'lobo-sqlite-rest-build/0.1','target':args.target,'compiler_sha256':sha(args.compiler),'language':'core/1.9','native_abi':1,'sqlite_extension':1,'sqlite_version':'3.54.1','executable':{'path':exe.name,'bytes':exe.stat().st_size,'sha256':sha(exe)},'dll_imports':imports,'inputs':inputs,'commands':records,'actual_windows_execution':None}
+    manifest={'format':'lobo-sqlite-rest-build/0.1','target':args.target,'compiler_sha256':sha(args.compiler),'language':'core/1.11','native_abi':1,'sqlite_extension':1,'sqlite_version':'3.54.1','executable':{'path':exe.name,'bytes':exe.stat().st_size,'sha256':sha(exe)},'dll_imports':imports,'inputs':inputs,'commands':records,'actual_windows_execution':None}
     (out/'build.json').write_text(json.dumps(manifest,indent=2)+'\n')
     if args.target=='windows':
         with zipfile.ZipFile(out/'LoboSqliteRest-windows-x64.zip','w',zipfile.ZIP_DEFLATED) as archive:

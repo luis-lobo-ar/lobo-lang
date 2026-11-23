@@ -161,3 +161,35 @@ The Rust suite also checks that maintained source has no remaining accepted simp
 Keep frozen fixtures and explicit-syntax compatibility tests. Never refresh
 `scripts/source-migration.json` to accept a difference. See
 [decision 0053](../decisions/0053-maintained-core-1.8-source-modernization.md).
+
+
+## Core 1.10 source conveniences
+
+Record updates and standalone try lower to existing checked nodes. Preserve one base evaluation and
+written override order; generated names must be independent of source byte positions. Run the whitespace
+identity and original-diagnostic-range regressions with native order/quota/propagation checks. Source-only
+update fields must fail checked-artifact admission even when explicitly null. See
+[Core 1.10](../spec/core-v1.10.md) and [decision 0058](../decisions/0058-record-updates-and-standalone-try.md).
+
+## Callback action changes
+
+For Core 1.11, run the callback, inference, HTTP framing and SQLite composition tests before the full suite.
+Check every indirect invocation, including dead branches and contracts. Reload checked artifacts and reject
+old language tags with action-bearing callbacks; test forged function arguments and actual denied native
+grants/quotas. Keep exact action sets in generic substitution, compound values and both native dispatchers.
+Retain old diagnostic ranges and pure callback serialization. HTTP extraction also requires real socket,
+cleanup, SQLite restart and malformed-row checks. Rebuild the extension VSIX after its unit and real host gates.
+
+## Maintained HTTP refactors
+
+Compiler/extension 1.11.1 retain Core 1.11. The maintained-source role manifest must cover every source
+selected by maintainedPath. The HTTP audit is part of cargo tests; use the existing source audit to check
+all closed maintained bundles. Keep raw ABI demonstrations and explicit host integrations distinct from
+frozen fixtures. Refactors preserve source IDs, old imported target meanings, precise pure action bounds
+and resource/error ordering. Run lifecycle tests with minimal handle budgets and the timeout mutant, both
+native HTTP applications over real sockets, C/LLVM/sanitizer checks and Windows PE checks through Wine.
+Record the difference between an injected provider test, real OS execution and actual Windows hardware.
+
+Compiler/extension 1.11.2 add typed permission library sets on Core 1.11. Include libraries/native/permissions.lobo
+with the OS wrapper or HTTP transport. Use named permission helpers in maintained consumers; raw masks remain
+at the explicit ABI adapter and regression boundary. Both HTTP workspace files include the new dependency.

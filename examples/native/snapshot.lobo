@@ -1,4 +1,5 @@
 module native_snapshot;
+use access {Permission,one,allow};
 use os { IoResult, restrict_capability, monotonic_ms, random_bytes };
 
 record Snapshot {
@@ -9,8 +10,8 @@ record Snapshot {
 fn main() -> IoResult<Snapshot>
 actions { native.authorize, clock.read, random.read }
 {
-  // Clock (1) + secure randomness (2); network permissions are excluded.
-  let cap = try os.restrict_capability(Native::capability(), 3);
+  // Request clock and secure randomness without networking.
+  let cap = try os.restrict_capability(Native::capability(), allow(one(ClockRead),RandomRead));
   let now = try os.monotonic_ms(cap);
   let bytes = try os.random_bytes(cap, 16);
   Ok(Snapshot { monotonic_ms: now, random_bytes: bytes })

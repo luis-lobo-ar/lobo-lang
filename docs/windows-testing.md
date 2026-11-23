@@ -51,6 +51,7 @@ cargo build --locked --release --bin lobo
 mkdir -p target/windows-demo
 ./target/release/lobo compile examples/native/snapshot.lobo \
   --source libraries/native/native.lobo \
+  --source libraries/native/permissions.lobo \
   -o target/windows-demo/snapshot
 ./target/windows-demo/snapshot --entry native.snapshot.main \
   --native-clock true --native-random true

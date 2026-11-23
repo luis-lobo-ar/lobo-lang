@@ -1,5 +1,131 @@
 # Lobo change ledger
 
+## 2026-11-23 — Correct Git identity and simplify example commands
+
+Restored the missing per-directory lobo-ar Git config and verified a fresh repository uses the personal
+luis-lobo-ar identity. Repository-local author/committer settings and push credentials use the same account.
+At the user’s explicit request, rewrote the six existing commits across branches and tags while preserving
+trees, messages, dates and all three worktrees. Original history remains in a local backup bundle;
+[the mapping](benchmarks/results/2026-11-23-git-history-map.json) connects frozen checkpoint IDs to new IDs.
+The README examples now use lobo directly. All 20 Lobo commands pass; the two remaining Cargo commands
+are confined to compiler build/test instructions. Earlier changelog entries and pinned evidence remain unchanged.
+See [the identity and example checks](benchmarks/results/2026-11-23-git-identity.json).
+
+## 2026-11-23 — Make the GitHub repository public
+
+Changed luis-lobo-ar/lobo-lang from private to public at the user’s explicit request. Verified the setting
+through the owner account and an anonymous GitHub API request. Existing local work remains unpushed.
+See [the visibility receipt](benchmarks/results/2026-11-23-repository-public.json).
+
+## 2026-11-23 — Implement typed permissions
+
+Compiler/extension 1.11.2 add separate OS/SQL Permission variants and finite Permissions sets on unchanged
+Core 1.11. HTTP apps use server_permissions(); the snapshot names ClockRead/RandomRead; SQL delegates one(Read).
+Old raw helper IDs/signatures remain at restrict_mask. The 46-source role audit rejects raw delegation in
+maintained consumers; build/editor closures, programming skill and guides include the new module.
+The complete suite passes 312 Rust tests and 182 editor tests plus the real host.
+TDD failures, corrections, full verification and preserved evidence are recorded in
+[the result](benchmarks/results/2026-11-23-typed-permissions.md) and [decision 0062](decisions/0062-typed-permissions.md).
+No grammar/provider/model expansion or agent-performance claim is made.
+
+## 2026-11-23 — Propose named capability permissions
+
+Clarified that the HTTP sample's raw mask 5 selects clock=1 plus listen=4 from existing root authority.
+Recommend an existing-variant Permission enum and a typed permission set/library profile, with raw numeric
+conversion confined to the ABI adapter. Capability tokens remain opaque. This is a proposal only; no
+language, library, runtime or test behavior changes. See [decision 0061](decisions/0061-typed-native-permissions-proposal.md).
+
+
+## 2026-11-23 — Complete the maintained HTTP refactor
+
+Compiler/extension 1.11.1 retain Core 1.11. Both native HTTP apps use library-owned listeners; one accept/retry
+state machine and shared preparation/close policies support thin exact-bound callback adapters. The old serve
+ID/signature remain at serve_listener, and all prior IDs/frozen evidence are preserved. The role audit covers
+45 maintained Lobo files and rejects the old scaffolding. 309 Rust/180 editor tests, the real host,
+minimal-handle C/LLVM/Wine HTTP runs and persistence checks pass. A valid 1025-poll mutant is rejected.
+Version verification also catches and repairs current and historical editor lock metadata corruption without
+changing installed dependencies. Old snapshots remain. No language, native provider or model change is made.
+See [decision 0060](decisions/0060-complete-maintained-http-refactor.md),
+[report](benchmarks/results/2026-11-23-maintained-http-refactor.md) and
+[receipt](benchmarks/results/2026-11-23-maintained-http-refactor.json).
+
+
+## 2026-11-23 — Clarify HTTP refactor coverage
+
+A follow-up source audit confirms the SQLite extraction is complete. The original pure REST app still
+owns listener open/close, and the library retains separate pure and DB-bound context drivers over shared
+transport helpers. Low-level native demos and frozen fixtures remain intentional exclusions. No additional
+implementation or language expansion is made. See the [scope audit](benchmarks/results/2026-11-23-http-refactor-scope.json).
+
+
+## 2026-11-23 — Core 1.11 callback actions and HTTP library extraction
+
+Implemented explicit finite action bounds in named callback types, exact signature revalidation and checked
+indirect invocation in compiler/extension 1.11.0. Omitted bounds stay pure. The HTTP library takes explicit
+context for the concrete DB handler bound, owns serving/socket cleanup and preserves the original pure API.
+The SQLite app retains grants, bootstrap and database lifetime; its four extracted helper IDs move unchanged.
+TDD found an old diagnostic-range regression; the maintained-layout gate also caught six formatting changes.
+Both are corrected with original assertions retained. 304 Rust and 178 editor tests, the real host,
+native/sanitizer checks and Linux C/LLVM/Wine HTTP/database gates pass. Prior evidence and provider/model
+inputs remain. No action polymorphism, closures, new native authority or agent-efficiency measurement. See
+[Core 1.11](spec/core-v1.11.md), [decision 0059](decisions/0059-action-bound-callbacks-and-http-library.md),
+[report](benchmarks/results/2026-11-23-action-callbacks.md) and [receipt](benchmarks/results/2026-11-23-action-callbacks.json).
+
+
+## 2026-11-23 — Review the HTTP application/library boundary
+
+Recommend moving repeated connection/dispatch/listener machinery into the existing HTTP server library,
+while application code retains capabilities, database lifetime, bootstrap policy and controller selection.
+The current pure Fn restriction prevents the database handler from using the generic serve loop. A complete
+callback-based API needs a separately selected action-bound callback design. No language or implementation
+change is made. Cleanup/error precedence and existing transport/database behavior remain required regression
+gates. See the [review record](benchmarks/results/2026-11-23-http-library-boundary.json).
+
+
+## 2026-11-23 — Refresh the SQLite MVC sample
+
+Reformatted the model, controller/view and server examples around Core 1.10 syntax and added role comments.
+The before/after checked programs are byte-identical, the existing identity sidecars are unchanged, and all
+12 bundle navigation tests pass. Updated the installed VS Code extension from 0.3.0 to 1.10.0 and confirmed
+the SQLite workspace window with the controller selected. Initial launches lacked DISPLAY; the existing
+user Xorg session accepted the final launch. See the [receipt](benchmarks/results/2026-11-23-mvc-sample-refresh.json).
+
+
+## 2026-11-23 — Core 1.10 record updates and standalone try
+
+Implemented both selected source forms in compiler/extension 1.10.0. Same-type immutable updates evaluate
+one base and source-ordered overrides; standalone try discards success, preserves error propagation and
+requires a final block value. Existing checked operations, ABI and limits remain. Migrated the SQLite
+family with unchanged IDs/cleanup, synchronized editor/skill/docs and retained failures/corrections.
+296 Rust tests, 173 editor tests, the real editor host and C/LLVM/sanitizer/Linux/Wine gates pass.
+Whitespace-generated-name, precise-range, legacy-diagnostic and parser-stack regressions were found
+and fixed without weakening old oracles. Empty values remain values; partial merging is excluded. See
+[Core 1.10](spec/core-v1.10.md), [decision 0058](decisions/0058-record-updates-and-standalone-try.md),
+[report](benchmarks/results/2026-11-23-source-conveniences.md) and
+[receipt](benchmarks/results/2026-11-23-source-conveniences.json). No agent/performance claim.
+
+
+## 2026-11-23 — Compare record-update spellings
+
+Verified Rust struct-update and JavaScript spread documentation. Recommend three-dot, base-first record
+update syntax for Lobo and record the user's preference for standalone try statements. These remain
+proposals; no compiler/editor behavior or performance measurement changed. See
+[decision 0057](decisions/0057-record-update-spelling-proposal.md) and
+[sources](research/record-update-spelling-2026-11-23.json). Earlier pinned evidence remains unchanged.
+
+
+## 2026-11-23 — Review DX and add strict row utilities
+
+Reviewed tracked code across the compiler, libraries, examples, native providers and agent/editor/build
+tools. The baseline inventory covers 263 code/configuration files, including 43 maintained Lobo files
+with 214 functions. Recorded cleanup, state copying, result adaptation, callback, project-selection and
+diagnostic patterns. These static observations are not agent productivity or token measurements. Added
+six pure SQL row helpers, migrated the SQLite controller and corrected stale version guidance. Existing
+IDs, Core 1.9/compiler/extension 1.9.0, native providers and frozen evidence remain. New syntax is proposed
+only. See [review](docs/dx-review-2026-11-23.md), [decision 0056](decisions/0056-dx-review-and-row-utilities.md)
+and [results](benchmarks/results/2026-11-23-dx-review.json).
+
+
 ## 2026-11-23 — First native SQLite driver
 
 Compiler/extension 1.9.0 and Core 1.9 add the closed optional SQLite extension, separate file/role grants,

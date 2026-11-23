@@ -36,3 +36,38 @@ but database calls require a native executable. Launch with an explicit absolute
 Read is the default role. Write requires an existing file; schema permits creating a file and main tables/
 indexes. New files must be in an existing trusted directory. See [the native contract](../../spec/sqlite-interface-v0.1.md)
 for the closed SQL policy, limits, error codes and supported platforms.
+
+
+## Decode owned rows
+
+Use `expect_columns(row, count)` for an exact shape check. Use `integer_at`, `decimal_at`, `text_at` and
+`bytes_at` for strict zero-based cell access. These pure helpers return `SqlResult` and work with `try`.
+They return `Decode` with backend code zero for a missing column, a negative index, a wrong cell class,
+NULL or a width mismatch. They do not coerce integers to decimals or NULL to an empty value.
+`cell_at` preserves the `Cell` variant, including NULL, for an explicit nullable policy. Index lookup
+walks the persistent list; these helpers are intended for the bounded rows returned by this adapter.
+
+```lobo
+fn row_json(row: Row) -> SqlResult<Json> {
+  try expect_columns(row, 2);
+  let id = try integer_at(row, 0);
+  let name = try text_at(row, 1);
+  Ok(json { "id": integer_text(id), "name": name })
+}
+```
+
+The fragment requires the named SQL and JSON imports and identity metadata. The executable version is
+[in the SQLite controller](../../examples/native/sqlite-rest/controller.lobo). The compiler and editor
+already support these ordinary functions. No new syntax or native privilege is required.
+
+## Typed delegation in 1.11.2
+
+The SQL module defines its own `Permission { Read, Write, Schema }` and `Permissions` set.
+Use `none()`, `one(Read)` and `allow(requested, Write)`. Duplicates are idempotent; empty sets are valid.
+These types are distinct from OS permissions. A Schema request alone does not imply Read or Write.
+The launch modes read, write and schema grant the existing ABI profiles 1, 3 and 7 respectively.
+
+`restrict(cap, requested)` returns `SqlResult<Native::SqliteCapability>`.
+`restrict_native(cap, requested)` preserves the native I64 error result for entry code.
+Both delegate to the unchanged provider subset check. `restrict_mask` preserves the old integer helper ID.
+The persistent HTTP app requests `one(Read)` after bootstrap. Permission construction never opens a database.

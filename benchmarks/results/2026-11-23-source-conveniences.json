@@ -1,0 +1,257 @@
+{
+  "format": "lobo-source-conveniences-result/0.1",
+  "date": "2026-11-23",
+  "status": "passed",
+  "compiler": "1.10.0",
+  "extension": "1.10.0",
+  "language": "core/1.10",
+  "checked_format": "lobo-checked/1.0",
+  "native_abi": 1,
+  "sqlite_extension": 1,
+  "features": [
+    "one base-first same-type immutable record update with three dots",
+    "standalone prefix try statements with a final block value"
+  ],
+  "lowering": "ordinary one-iteration Fold and ordered bindings; statements are ordinary unused Unary-try bindings",
+  "limits": "unchanged; canonical expansion charges existing operations",
+  "test_counts": {
+    "rust_full": 296,
+    "rust_convenience_groups": 9,
+    "editor": 173,
+    "execution_modes": 5,
+    "native_single_call_quota_modes": 4,
+    "http_cases_per_linux_c_linux_llvm_wine": 35,
+    "invalid_row_http_cases_per_linux_backend": 4,
+    "sql_operations_per_linux_c_wine": 10,
+    "read_only_restarts_per_linux_c_wine": 2
+  },
+  "preservation": {
+    "status": "pass",
+    "protected_inputs": 87,
+    "unchanged_existing_sidecars": 5,
+    "model_maps": "unchanged reviewed source fingerprints",
+    "failures": [],
+    "prior_paper_entries": 32,
+    "frozen_v1_artifacts": 86
+  },
+  "migration": [
+    {
+      "path": "libraries/sql/sql.lobo",
+      "edits": [
+        {
+          "function": "bind_all",
+          "try_statements": 1
+        },
+        {
+          "function": "run_query",
+          "try_statements": 1
+        },
+        {
+          "function": "query_raw",
+          "try_statements": 1
+        },
+        {
+          "function": "run_execute",
+          "try_statements": 1
+        },
+        {
+          "function": "execute_raw",
+          "try_statements": 1
+        }
+      ]
+    },
+    {
+      "path": "examples/native/sqlite/users.lobo",
+      "edits": [
+        {
+          "function": "setup_data",
+          "try_statements": 4
+        },
+        {
+          "function": "setup",
+          "try_statements": 1
+        },
+        {
+          "function": "save_data",
+          "try_statements": 2
+        },
+        {
+          "function": "save",
+          "try_statements": 1
+        },
+        {
+          "function": "get",
+          "try_statements": 1
+        },
+        {
+          "function": "list",
+          "try_statements": 1
+        },
+        {
+          "function": "undo_data",
+          "try_statements": 2
+        },
+        {
+          "function": "undo",
+          "try_statements": 1
+        },
+        {
+          "function": "typed",
+          "try_statements": 1
+        }
+      ]
+    },
+    {
+      "path": "examples/native/sqlite-rest/app.lobo",
+      "edits": [
+        {
+          "function": "with_database",
+          "try_statements": 1
+        },
+        {
+          "function": "initialize",
+          "try_statements": 1
+        },
+        {
+          "function": "main",
+          "try_statements": 2
+        }
+      ]
+    },
+    {
+      "path": "examples/native/sqlite-rest/controller.lobo",
+      "edits": [
+        {
+          "function": "row_json",
+          "try_statements": 1
+        }
+      ]
+    },
+    {
+      "path": ".agents/skills/lobo-programming/references/sqlite-example.lobo",
+      "edits": [
+        {
+          "function": "read",
+          "try_statements": 1
+        }
+      ]
+    }
+  ],
+  "source_audit": {
+    "files": 44,
+    "rewrites": 0,
+    "compiler_calls": 143
+  },
+  "old_compiler_compatibility": {
+    "status": "pass",
+    "records": [
+      {
+        "command": [
+          "target/release/lobo",
+          "compile",
+          ".agents/skills/lobo-programming/references/conveniences.lobo",
+          "--emit",
+          "checked",
+          "-o",
+          "target/core110/skill.loboc"
+        ],
+        "exit_code": 0,
+        "stdout": "{\"artifact\":\"target/core110/skill.loboc\",\"entries\":[\"lobo.84d39d698c3b6e5bae828f1f125c173d\",\"lobo.89aebc66359ea9778e7685e0abe680f5\"],\"format\":\"checked\",\"status\":\"ok\"}\n",
+        "stderr": ""
+      },
+      {
+        "command": [
+          "target/release/lobo",
+          "eval",
+          "target/core110/skill.loboc",
+          "--entry",
+          "lobo.89aebc66359ea9778e7685e0abe680f5",
+          "--fuel",
+          "100000"
+        ],
+        "exit_code": 0,
+        "stdout": "{\"kind\":\"value\",\"status\":\"ok\",\"value\":{\"type\":\"Variant\",\"value\":{\"case\":\"Ok\",\"id\":\"lobo.generic.type.c2ef4ede82212ecb3fd379b6c809042a\",\"payload\":{\"type\":\"Record\",\"value\":{\"fields\":{\"enabled\":{\"type\":\"Bool\",\"value\":true},\"timeout\":{\"type\":\"I64\",\"value\":\"10\"}},\"id\":\"lobo.db9aa2beefcf0361800cd566013797e5\"}}}}}\n",
+        "stderr": ""
+      },
+      {
+        "command": [
+          "benchmarks/private-evidence/core110-20261123/before-compiler-1.9.0",
+          "eval",
+          "target/core110/skill-core19.loboc",
+          "--entry",
+          "lobo.89aebc66359ea9778e7685e0abe680f5",
+          "--fuel",
+          "100000"
+        ],
+        "exit_code": 0,
+        "stdout": "{\"kind\":\"value\",\"status\":\"ok\",\"value\":{\"type\":\"Variant\",\"value\":{\"case\":\"Ok\",\"id\":\"lobo.generic.type.c2ef4ede82212ecb3fd379b6c809042a\",\"payload\":{\"type\":\"Record\",\"value\":{\"fields\":{\"enabled\":{\"type\":\"Bool\",\"value\":true},\"timeout\":{\"type\":\"I64\",\"value\":\"10\"}},\"id\":\"lobo.db9aa2beefcf0361800cd566013797e5\"}}}}}\n",
+        "stderr": ""
+      }
+    ]
+  },
+  "artifacts": [
+    {
+      "path": "target/release/lobo",
+      "bytes": 11251560,
+      "sha256": "f17bb652292ee4411fd72f5d0a451e3441792a5014ec86875017778201aabf2e"
+    },
+    {
+      "path": "target/release/lobo-test",
+      "bytes": 10994592,
+      "sha256": "8d1ec8f2cd9b1ddca5ea07cd5f26bd5483fe3e1bda4adc5b32021f92c108062e"
+    },
+    {
+      "path": "dist/lobo-syntax-1.10.0.vsix",
+      "bytes": 41227,
+      "sha256": "11e7ffabf95fa7f6d9dbc56bb1c3b6146f97e0039c7935cbbf4ef46b8db76231"
+    },
+    {
+      "path": "target/core110/linux-rest/lobo-sqlite-rest",
+      "bytes": 1444848,
+      "sha256": "5dd307ace5f3bafdfd0214b320aa777b2034cf20fb32120d84b7aac28da11e06"
+    },
+    {
+      "path": "target/core110/sqlite-rest-llvm",
+      "bytes": 1399800,
+      "sha256": "aaec2692f0df03c9286eea2fe8438b46c32dcf4a5e61b47dd411152a250d40fc"
+    },
+    {
+      "path": "target/core110/windows-rest/LoboSqliteRest.exe",
+      "bytes": 1408000,
+      "sha256": "432897a344b72fcff75c6394573da38b6fcbee023c1fe0c272ae85b0e6331368"
+    }
+  ],
+  "verification_commands": [
+    "cargo test --locked --no-fail-fast",
+    "cargo clippy --locked --all-targets -- -D warnings",
+    "cargo fmt --all --check",
+    "npm --prefix editors/vscode test",
+    "env LOBO_VSCODE_EXECUTABLE=/usr/share/code/code xvfb-run -a npm --prefix editors/vscode run test:host",
+    "npm --prefix editors/vscode run package",
+    "node --test scripts/test-modernize-source.mjs scripts/test-migrate-syntax.mjs",
+    "node scripts/modernize-source.cjs --audit --compiler target/release/lobo --out target/core110/release-source-audit",
+    "./scripts/check.sh"
+  ],
+  "raw_evidence": "benchmarks/private-evidence/core110-20261123",
+  "raw_evidence_manifest": {
+    "path": "benchmarks/private-evidence/core110-20261123/manifest.json",
+    "sha256": "defaf0e604ff25ddd46d4c3d631d270fc1df6d38663e6d12b52d75f78d451588",
+    "files": 13,
+    "current_source_files": 588
+  },
+  "actual_windows_execution": null,
+  "agent_outcomes": "Unknown; not measured",
+  "runtime_performance_comparison": null,
+  "residual_limits": [
+    "No automatic cleanup, partial/dynamic object merge, impure Fn, Unit or general expression statements",
+    "Finite native model claims unchanged; no new model proof",
+    "Wine is not actual Windows hardware",
+    "New syntax changes charged operation counts; no optimization claim"
+  ],
+  "migration_summary": {
+    "existing_files": 5,
+    "unused_try_bindings_replaced": 25,
+    "record_updates_in_existing_sources": 6,
+    "new_independent_skill_examples": 1
+  }
+}

@@ -1,0 +1,154 @@
+{
+  "format": "lobo-typed-permissions/0.1",
+  "date": "2026-11-23",
+  "status": "passed",
+  "compiler": "1.11.2",
+  "extension": "1.11.2",
+  "language": "core/1.11",
+  "native_abi": 1,
+  "sqlite_extension": 1,
+  "baseline": {
+    "git_head": "410214d12c11a7f831e6c3dfaeff29e94ec727dc",
+    "dirty_workspace": true,
+    "source_files": 614,
+    "compiler_sha256": "6f5ba570913fff24406ea5cd1fdd0d3bdfc300b7df2dd0c226cefb1e3a702804"
+  },
+  "verification": {
+    "rust_tests_passed": 312,
+    "rust_groups": 59,
+    "rust_failed": 0,
+    "rust_ignored": 0,
+    "typed_targets_final": "passed, including typed IoResult/SqlResult facades",
+    "os_set_count": 16,
+    "os_grant_request_pairs_per_native_route": 256,
+    "sql_set_count": 8,
+    "sql_launch_profiles": 4,
+    "native_routes": [
+      "C",
+      "LLVM",
+      "C ASan/UBSan",
+      "LLVM ASan/UBSan"
+    ],
+    "editor_tests_passed": 182,
+    "editor_host": "passed, including unsaved integer type error and repair",
+    "extension_packaged_and_installed": "1.11.2",
+    "source_tools_tests": 14,
+    "maintained_sources": 46,
+    "source_rewrites_remaining": 0,
+    "compiler_compatibility": {
+      "status": "pass",
+      "sources": 46,
+      "checked_program_fingerprints_equal": true
+    },
+    "raw_id_old_caller_compatibility": "pass",
+    "preservation": {
+      "status": "pass",
+      "stable_ids_before": 371,
+      "old_ids_preserved": true,
+      "unchanged_frozen_provider_compiler_model_and_grammar_files": 110,
+      "prior_paper_entries_preserved": 35,
+      "raw_abi_changed": false,
+      "formal_models_changed": false,
+      "full_tlc_rerun": false
+    },
+    "root_editor_closure_sources": 16,
+    "http": {
+      "pure-c-tcp": {
+        "status": "pass",
+        "cases": 35,
+        "connections": 38,
+        "native_handle_limit": 4
+      },
+      "pure-llvm-tcp": {
+        "status": "pass",
+        "cases": 35,
+        "connections": 38,
+        "native_handle_limit": 4
+      },
+      "pure-wine-tcp": {
+        "status": "pass",
+        "cases": 35,
+        "connections": 38,
+        "native_handle_limit": 4
+      },
+      "sqlite-c-tcp": {
+        "status": "pass",
+        "cases": 35,
+        "connections": 38,
+        "native_handle_limit": 4
+      },
+      "sqlite-llvm-tcp": {
+        "status": "pass",
+        "cases": 35,
+        "connections": 38,
+        "native_handle_limit": 4
+      },
+      "sqlite-wine-tcp": {
+        "status": "pass",
+        "cases": 35,
+        "connections": 38,
+        "native_handle_limit": 4
+      }
+    },
+    "other_executables": {
+      "rows-c": {
+        "status": "pass",
+        "case_count": 4
+      },
+      "rows-llvm": {
+        "status": "pass",
+        "case_count": 4
+      },
+      "sqlite-persistence": {
+        "status": "pass",
+        "case_count": null
+      },
+      "sqlite-wine-persistence": {
+        "status": "pass",
+        "case_count": null
+      },
+      "snapshot-wine": {
+        "status": "pass",
+        "case_count": null,
+        "application_cases": 14,
+        "provider_cases": 10,
+        "permission_pairs": 64,
+        "actual_windows_execution": null
+      }
+    },
+    "clippy": "pass",
+    "format": "pass",
+    "docs": "pass",
+    "skill": "validated; native clock compile/run pass",
+    "full_tlc_rerun": false
+  },
+  "development_failures": [
+    "red API test: missing typed library",
+    "raw delegation audit red: guard absent",
+    "identity sync alias/module binding",
+    "test parameter shadowed function",
+    "test success entry tried to serialize opaque capability",
+    "negative bare case resolved as unknown name; explicitly qualified to assert type mismatch",
+    "intermediate source audit: seven checked-equivalent rewrites in two files",
+    "clippy: useless String conversion"
+  ],
+  "tdd_limits": "SQL coverage followed shared API implementation; baseline replay is retrospective, not a pre-implementation assertion run.",
+  "raw_evidence": "target/typed-permissions",
+  "private_evidence": "benchmarks/private-evidence/typed-permissions-20261123",
+  "artifacts": [
+    "dist/lobo-syntax-1.11.2.vsix",
+    "target/typed-permissions/snapshot-windows/LoboSnapshot-windows-x64.zip",
+    "target/typed-permissions/pure-windows/LoboRestApi-windows-x64.zip",
+    "target/typed-permissions/sqlite-windows/LoboSqliteRest-windows-x64.zip"
+  ],
+  "limits": {
+    "new_grammar": false,
+    "compiler_provider_model_changed": false,
+    "actual_windows_execution": null,
+    "agent_construction_effect": null,
+    "agent_comprehension_effect": null,
+    "agent_token_effect": null,
+    "speed_effect": null,
+    "pushed_or_published": false
+  }
+}

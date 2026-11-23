@@ -1,11 +1,11 @@
 ---
 name: lobo-programming
-description: Write, repair and test .lobo programs using Lobo language 1.9, explicit source bundles and native tools. Use for Lobo application code; compiler implementation in Rust has a separate repository workflow.
+description: Write, repair and test .lobo programs using Lobo language 1.11, explicit source bundles and native tools. Use for Lobo application code; compiler implementation in Rust has a separate repository workflow.
 ---
 
 # Develop Lobo programs
 
-This skill targets Lobo language 1.9 and compiler 1.9.0. Read the project's requirements
+This skill targets Lobo language 1.11 and compiler 1.11.2. Read the project's requirements
 and tool contract first. Treat the compiler and current [specification index](../../../spec/README.md)
 as the language authority. A newer or older compiler requires checking its matching specification.
 
@@ -21,7 +21,7 @@ do not select `object`/`field` just for literals. Compiler 1.6+ binds those buil
 supplied JSON/HTTP library sources. Checked imports expose the dependencies; hidden aliases are not callable.
 The [small JSON example](references/json-example.lobo) demonstrates this without an application solution.
 The older `function` and inline-ID spelling remains deprecated read compatibility for existing code.
-Read [the 1.9 rules](../../../spec/core-v1.9.md) and [native commands](../../../docs/compact-syntax-prototype.md).
+Read [the 1.11 rules](../../../spec/core-v1.11.md) and [native commands](../../../docs/compact-syntax-prototype.md).
 The [small modern example](references/compact-example.lobo) is independent of the MVC comparison workload.
 
 Language 1.0 includes generic records/variants, checks all generic definitions parametrically, and supports
@@ -37,7 +37,7 @@ Named callbacks need no `&` when an exact Fn signature is expected. Generic call
 a complete expected Fn signature. Unresolved outer types need explicit arguments; `apply(identity,42)`
 may require `apply::<I64,I64>(identity,42)`. Language 1.5 infers constructor arguments from members and expected
 nominal types. Generic function calls still do not infer type arguments from an expected result. Constructors
-can use that context. Bare unannotated function bindings still need `&`. Purity and rigid generic checks remain.
+can use that context. Bare unannotated function bindings still need `&`. Exact callback action bounds and rigid generic checks remain.
 When an expected variant identifies the owner, use `Found(value)` or `Missing` without repeating its name.
 For example, a function returning `Lookup<User>` can return `Found(user)` or `Missing`. Qualified constructors
 such as `Lookup::Found(user)` can infer arguments from payloads; generic records infer from fields or expected
@@ -116,10 +116,48 @@ Bind values with no_params/params1/params2 instead of constructing SQL with user
 SqlResult<List<Row>>. Cell distinguishes Null, Integer, Decimal, String and Binary. Validate row shapes and
 storage classes. SqlError carries its kind and original SQLite backend code. Do not retry writes blindly.
 Capture operation results before close/finalize. These teardown calls remain available at exhausted query
-budgets; try alone does not clean up a transaction. Current Fn callbacks remain pure. Use ordinary direct
-functions for actionful controllers, as in the persistent REST example. DB calls cannot run through eval.
+budgets; try alone does not clean up a transaction. Core 1.11 callbacks declare their action bounds and
+receive resources as explicit context, as in the persistent REST example. DB calls cannot run through eval.
 
 SQLite operations select checked sqlite_abi:1 and require Core1.9. No arbitrary driver/FFI, remote database,
 NoSQL interface, SQL portability or native sandbox is implied. Native query work has separate quotas from
 Lobo fuel. Source bundles allow 16,384 aggregate tokens and 64 source nominal declarations. Individual
 source lexing stays at 8,192 tokens, with 16 sources, 1 MiB and the existing type-depth/instance limits.
+
+
+Core 1.10 supports `State { ...state, changed: value }`. Use one base first with the same record and
+matching type arguments. The base runs once, followed by overrides in source order. Unspecified fields
+are retained; duplicate/unknown fields and two dots are errors. Source stays immutable. This is not general
+JavaScript object merging. Generic arguments can be inferred from the base.
+Use `try operation();` to discard its successful payload without an unused let name. Keep a final value
+expression in the block. Errors still propagate with exact payload types, postconditions still run and
+cleanup remains explicit. Save an operation's outcome before closing its resources when close must run
+after a handled error. See [the independent example](references/conveniences.lobo). Source conveniences
+lower to existing checked operations and can change fuel usage; do not claim an optimization.
+
+Core 1.11 supports `Fn(C, T) actions { demo.observe } -> U`. Omitted/empty actions mean pure. Named
+references capture no environment; pass C explicitly. Function signatures include the exact declared action
+set, and an indirect invocation requires that set in the enclosing function. Contracts cannot invoke an
+actionful callback. No closures, action variables or implicit widening are available. Study the small
+[executable callback example](references/callbacks.lobo) and [current rules](../../../spec/core-v1.11.md).
+The HTTP library provides a context-generic serve_with with the concrete db.close/db.execute/db.read bound;
+keep grants, bootstrap policy and database ownership in the application. Preserve captured results before close.
+
+Compiler/extension 1.11.1 complete the maintained HTTP library refactor without changing Core 1.11.
+For pure controllers, call `serve(cap, port, count, handle)`; for the concrete DB-bound context handler,
+call `serve_with(cap, port, count, db, handle)`. Both own listener lifetime. Keep capability selection,
+bootstrap and database ownership in the app. Use serve_listener only when the caller deliberately owns an
+existing listener; its ID and signature are the former listener-based serve API. The library has one accept
+state machine and thin typed callback adapters. Do not add callback action polymorphism to simplify them.
+Check [maintained HTTP roles](../../../scripts/http-refactor-scope.json) when adding an example or library;
+the source audit rejects unreviewed files and application-owned HTTP listener scaffolding.
+
+Compiler/extension 1.11.2 add typed library permissions on unchanged Core 1.11.
+Supply libraries/native/permissions.lobo with native/native.lobo or HTTP transport. OS Permission has
+ClockRead, RandomRead, Listen and Connect. Build sets with none(), one(case) and allow(set, case).
+Use access.restrict(root, permissions) for native results or os.restrict_capability for IoResult.
+HTTP apps request server_permissions(). SQL defines separate Read/Write/Schema permissions and the same
+set helpers; use restrict for SqlResult or restrict_native for native error results. SQL one(Read) replaces
+raw read-only masks. Sets do not grant authority, duplicates are idempotent and none() requests zero rights.
+Do not pass integers or another module's permission type. Raw restrict_mask helpers retain old IDs only
+for explicit ABI compatibility. Keep root acquisition at entry and the explicit closure in editor/build inputs.

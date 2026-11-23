@@ -230,6 +230,7 @@ fn existing(source: &SourceFile, scan: &Header) -> Fallible<Option<Bindings>> {
         depth: 0,
         compact: None,
         managed: None,
+        statement_counter: 0,
     }
     .program()?;
     let mut ids = Bindings::from([("module".into(), program.id)]);

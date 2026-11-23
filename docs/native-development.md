@@ -7,6 +7,8 @@ claiming that two tiny arithmetic benchmarks establish general application perfo
 
 ## Executable algorithms
 
+Use the built `lobo` compiler on your PATH. See [the source-build instructions](../README.md#build-the-compiler-from-source).
+
 The [direct LLVM backend](../spec/native-llvm-v0.1.md) is selectable with `--backend llvm` in compiler 0.11.1.
 Shared fixtures now compare C, LLVM and sanitized LLVM on each native invocation; the independent generated
 oracle corpus runs both native routes too. Sanitizer probes explicitly exercise hand-emitted LLVM stack
@@ -17,7 +19,7 @@ conditionals, recursion, checked I64 arithmetic, and runtime contracts. It is ex
 
 ```sh
 mkdir -p target/native-examples
-cargo run --locked -- compile examples/algorithms.lobo -o target/native-examples/algorithms
+lobo compile examples/algorithms.lobo -o target/native-examples/algorithms
 ./target/native-examples/algorithms --entry example.gcd --arg I64:48 --arg I64:18
 ./target/native-examples/algorithms --entry example.factorial --arg I64:20
 ```
@@ -95,7 +97,7 @@ native helper faults inside a contract now preserve the enclosing phase, matchin
 To build the new example, use a fresh output path:
 
 ```sh
-cargo run --locked -- compile examples/iteration.lobo -o target/native-examples/iteration
+lobo compile examples/iteration.lobo -o target/native-examples/iteration
 ./target/native-examples/iteration --entry example.sum --arg I64:5
 ./target/native-examples/iteration --entry example.factorial.iterative --arg I64:20
 ```

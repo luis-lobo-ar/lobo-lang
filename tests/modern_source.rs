@@ -1,11 +1,5 @@
 #[test]
-fn maintained_native_flows_use_try_without_bypassing_explicit_cleanup() {
-    let app = include_str!("../examples/native/rest/app.lobo");
-    assert!(app.contains("try Native::restrict_capability"));
-    assert!(app.contains("try Native::listen"));
-    let work = app.find("let outcome=serve(").unwrap();
-    let close = app.find("try Native::close_listener").unwrap();
-    assert!(work < close, "cleanup must run after the handled serve result");
+fn raw_loopback_keeps_try_and_explicit_cleanup() {
     let loopback = include_str!("../examples/native/loopback.lobo");
     assert!(loopback.contains("try Native::connect"));
     assert!(loopback.contains("try pair(Native::capability())"));
@@ -41,4 +35,25 @@ fn maintained_sources_have_no_remaining_checked_equivalent_simplifications() {
     assert_eq!(result["changed"], 0, "See {}", out.display());
     assert_eq!(result["rewrites"], 0);
     std::fs::remove_dir_all(out).unwrap();
+}
+
+#[test]
+fn every_maintained_lobo_source_has_a_reviewed_http_library_boundary() {
+    let out = std::env::temp_dir().join(format!(
+        "lobo-http-audit-{}-{}.json",
+        std::process::id(),
+        std::time::SystemTime::now()
+            .duration_since(std::time::UNIX_EPOCH)
+            .unwrap()
+            .as_nanos()
+    ));
+    let output = std::process::Command::new("node")
+        .args(["scripts/check-http-refactor.cjs", "--out", out.to_str().unwrap()])
+        .output()
+        .unwrap();
+    assert!(output.status.success(), "{output:?}; retained {}", out.display());
+    let result: serde_json::Value = serde_json::from_slice(&std::fs::read(&out).unwrap()).unwrap();
+    assert_eq!(result["status"], "pass");
+    assert!(result["errors"].as_array().unwrap().is_empty());
+    std::fs::remove_file(out).unwrap();
 }

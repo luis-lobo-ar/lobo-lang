@@ -1,67 +1,40 @@
 module sqlite_rest;
-use http { parse, wire, error_response };
-use io { ServeState, receive, send_all };
+use access {restrict};
+
+use io { server_permissions, serve_with };
+use http { Request, Response };
 use controller { handle };
 use model { setup_data };
-use sql { error_code };
+use sql { error_code, Permission, one, restrict_native };
 
-fn dispatch(db:Native::Database,request:Bytes)->Bytes actions {db.execute,db.read,db.close} {
-  match parse(request) {
-    Rejected(status)=> wire(error_response(status),false),
-    Parsed(value)=> wire(handle(db,value),value.method=="HEAD")
-  }
-}
-fn serve_one(db:Native::Database,stream:Native::Stream,cap:Native::Capability)->I64 actions {clock.read,net.read,net.write,db.execute,db.read,db.close} {
-  match Native::monotonic_ms(cap) {
-    Err(code)=> code,
-    Ok(start)=> {
-      let request=receive(stream,cap,start+2000);
-      if request.error!=0 {request.error} else {
-        let response=if request.status==0 {dispatch(db,request.data)} else {wire(error_response(request.status),false)};
-        match Native::monotonic_ms(cap) {Err(code)=> code,Ok(now)=> send_all(stream,cap,response,now+2000)}
-      }
-    }
-  }
-}
-fn serve(db:Native::Database,listener:Native::Listener,cap:Native::Capability,count:I64)->Native::I64Result actions {net.accept,net.read,net.write,net.close,clock.read,db.execute,db.read,db.close} {
-  let final=while(state:ServeState=ServeState {handled:0,polls:0,error:0};state.handled<count && state.polls<1024 && state.error==0) {
-    match Native::accept(listener,2000) {
-      Err(code)=> ServeState {handled:state.handled,polls:state.polls+1,error:if code==6 {0} else {code}},
-      Ok(stream)=> {
-        let outcome=serve_one(db,stream,cap);
-        let closed=Native::close_stream(stream);
-        let error=match closed {Err(code)=> code,Ok(done)=> if outcome==11 {11} else {0}};
-        ServeState {handled:state.handled+1,polls:state.polls+1,error:error}
-      }
-    }
-  };
-  if final.error!=0 {Err(final.error)} else {Ok(final.handled)}
-}
-fn with_database(db:Native::Database,cap:Native::Capability,port:I64,count:I64)->Native::I64Result actions {net.listen,net.accept,net.read,net.write,net.close,clock.read,db.execute,db.read,db.close} {
-  let listener=try Native::listen(cap,port);
-  let outcome=serve(db,listener,cap,count);
-  let closed=try Native::close_listener(listener);
-  outcome
-}
-fn initialize(cap:Native::SqliteCapability,enabled:Bool)->Native::BoolResult actions {db.open,db.close,db.execute,db.read,db.transaction} {
-  if !enabled {Ok(true)} else {
-    let db=try Native::sqlite_open(cap);
-    let outcome=setup_data(db);
-    let closed=try Native::sqlite_close(db);
-    match outcome {Ok(done)=> Ok(done),Err(error)=> Err(error_code(error))}
-  }
-}
-fn main(port:I64,max_requests:I64,bootstrap:Bool)->Native::I64Result
-actions {native.authorize,clock.read,net.listen,net.accept,net.read,net.write,net.close,db.open,db.close,db.execute,db.read,db.transaction}
-requires {port>=1 && port<=65535 && max_requests>=1 && max_requests<=128}
+fn initialize(cap: Native::SqliteCapability, enabled: Bool) -> Native::BoolResult
+actions { db.open, db.close, db.execute, db.read, db.transaction }
 {
-  let network_root=Native::capability();
-  let database_root=Native::sqlite_capability();
-  let cap=try Native::restrict_capability(network_root,5);
-  let initialized=try initialize(database_root,bootstrap);
-  let read_cap=try Native::sqlite_restrict(database_root,1);
-  let db=try Native::sqlite_open(read_cap);
-  let outcome=with_database(db,cap,port,max_requests);
-  let closed=try Native::sqlite_close(db);
+  if !enabled {
+    Ok(true)
+  } else {
+    let db = try Native::sqlite_open(cap);
+    let outcome = setup_data(db);
+    try Native::sqlite_close(db);
+    match outcome {
+      Ok(done) => Ok(done),
+      Err(error) => Err(error_code(error))
+    }
+  }
+}
+
+fn main(port: I64, max_requests: I64, bootstrap: Bool) -> Native::I64Result
+actions { native.authorize, clock.read, net.listen, net.accept, net.read, net.write, net.close,
+  db.open, db.close, db.execute, db.read, db.transaction }
+requires { port >= 1 && port <= 65535 && max_requests >= 1 && max_requests <= 128 }
+{
+  let network_root = Native::capability();
+  let database_root = Native::sqlite_capability();
+  let cap = try restrict(network_root, server_permissions());
+  try initialize(database_root, bootstrap);
+  let read_cap = try restrict_native(database_root, one(Read));
+  let db = try Native::sqlite_open(read_cap);
+  let outcome = serve_with(cap, port, max_requests, db, handle);
+  try Native::sqlite_close(db);
   outcome
 }

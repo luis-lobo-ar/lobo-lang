@@ -1,0 +1,46 @@
+{
+  "date": "2026-11-23",
+  "status": "locally_verified_ready_for_publication",
+  "requests": [
+    "Use luis-lobo-ar for commits and authentication",
+    "Push all pending Lobo work",
+    "Rewrite existing history",
+    "Use Lobo CLI in maintained user-facing examples"
+  ],
+  "identity": {
+    "account": "luis-lobo-ar",
+    "author_name": "Luis Lobo Borobia",
+    "email": "182034884+luis-lobo-ar@users.noreply.github.com",
+    "repo_local_identity_configured": true,
+    "git_credential_account_verified": true,
+    "directory_rule": "gitdir:~/dev/lobo-ar/",
+    "broken_include_target_restored": "/home/luis/dotfiles/git/gitconfig-lobo-ar",
+    "fresh_repository_before_after_test": "pass",
+    "global_default_unchanged": true,
+    "signing_configuration_changed": false
+  },
+  "history": {
+    "corrected_commits": 6,
+    "mapping": "benchmarks/results/2026-11-23-git-history-map.json",
+    "original_bundle": "benchmarks/private-evidence/git-identity-20261123/before-history.bundle",
+    "all_trees_messages_dates_preserved": true,
+    "worktrees_preserved": 3
+  },
+  "documentation": {
+    "readme_lobo_commands_checked": 20,
+    "all_exit_codes_zero": true,
+    "readme_cargo_run_commands": 0,
+    "remaining_readme_cargo_commands": 2,
+    "cargo_scope": "one compiler source-build/test section",
+    "changelog_existing_entries_retained": true
+  },
+  "development_corrections": [
+    "Directory identity fixture reproduced the Nubing fallback before restoring the missing include file.",
+    "Built-in gh credential helper did not select the saved owner token; an explicit per-directory/repository token lookup helper verifies the owner without storing token values.",
+    "git-filter-repo is unavailable; bounded commit-object rewriting verifies all original trees and metadata before transactional reference updates.",
+    "Initial README verification harness remapped a relative executable path incorrectly; corrected the harness and retained the failed attempt."
+  ],
+  "raw_evidence": "target/git-identity",
+  "private_evidence": "benchmarks/private-evidence/git-identity-20261123",
+  "publication_receipt": "benchmarks/results/2026-11-23-git-publication.json"
+}

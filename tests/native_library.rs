@@ -29,6 +29,11 @@ fn artifact() -> lobo_core::Artifact {
                 identities: None,
             },
             SourceFile {
+                name: "access".into(),
+                text: include_str!("../libraries/native/permissions.lobo").into(),
+                identities: None,
+            },
+            SourceFile {
                 name: "os".into(),
                 text: library,
                 identities: None,

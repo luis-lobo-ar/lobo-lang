@@ -1,6 +1,10 @@
 # Specifications
 
-The current [language 1.9 specification](core-v1.9.md) adds the closed [SQLite interface](sqlite-interface-v0.1.md) and workload-driven source capacity.
+Compiler/extension 1.11.1 complete the [maintained HTTP refactor](../decisions/0060-complete-maintained-http-refactor.md) without changing Core 1.11.
+
+The current [language 1.11 specification](core-v1.11.md) adds action-bound callbacks and explicit HTTP context.
+It inherits [Core 1.10](core-v1.10.md), immutable record updates and standalone try statements.
+It inherits [Core 1.9](core-v1.9.md), the closed [SQLite interface](sqlite-interface-v0.1.md) and workload-driven source capacity.
 It inherits [Core 1.8](core-v1.8.md) try error propagation.
 It inherits [Core 1.7](core-v1.7.md) and the closed [native OS interface](native-interface-v0.1.md).
 It inherits [1.6 automatic JSON builders](core-v1.6.md).
@@ -56,4 +60,3 @@ Versioning rules:
 - schemas use strict outer objects to catch misspelled or accidental fields;
 - flexible payload positions are validated again using the selected tool's schema;
 - examples are illustrative until an implementation test suite declares them fixtures.
-

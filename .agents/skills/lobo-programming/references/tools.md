@@ -114,3 +114,7 @@ For SQLite, compile with the SQL source supplied, then invoke with --sqlite-file
 REST source list and build command are in [its guide](../../../../examples/native/sqlite-rest/README.md).
 Inspect both transport status and typed SqlResult errors. File/role grants and query quotas are explicit.
 No database access is performed by compiler checks or editor diagnostics.
+
+Compiler/extension 1.11.2 add typed permission library sets on Core 1.11. Include libraries/native/permissions.lobo
+with the OS wrapper or HTTP transport. Use named permission helpers in maintained consumers; raw masks remain
+at the explicit ABI adapter and regression boundary. Both HTTP workspace files include the new dependency.

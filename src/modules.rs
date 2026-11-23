@@ -283,6 +283,7 @@ pub fn compile_bundle(root: &str, sources: &[SourceFile]) -> Fallible<Artifact> 
                 depth: 0,
                 compact: None,
                 managed: source.identities.clone(),
+                statement_counter: 0,
             };
             let program = parser.program().map_err(|e| e.at(Some(parser.span())))?;
             tokens_total += parser

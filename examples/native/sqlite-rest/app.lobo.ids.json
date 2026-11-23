@@ -2,20 +2,18 @@
   "format": "lobo-identities/0.1",
   "identities": {
     "module": "example.sqlite.rest",
-    "dispatch": "example.sqlite.rest.dispatch",
-    "serve_one": "example.sqlite.rest.serve_one",
-    "serve": "example.sqlite.rest.serve",
-    "with_database": "example.sqlite.rest.with_database",
     "initialize": "example.sqlite.rest.initialize",
     "main": "example.sqlite.rest.main",
-    "http.parse": "lobo.http.server.parse",
-    "http.wire": "lobo.http.server.wire",
-    "http.error_response": "lobo.http.server.error_response",
-    "io.ServeState": "lobo.http.transport.ServeState",
-    "io.receive": "lobo.http.transport.receive",
-    "io.send_all": "lobo.http.transport.send_all",
     "controller.handle": "example.sqlite.controller.handle",
     "model.setup_data": "example.sqlite.users.setup_data",
-    "sql.error_code": "lobo.sql.error_code"
+    "sql.error_code": "lobo.sql.error_code",
+    "io.serve_with": "example.sqlite.rest.with_database",
+    "http.Request": "lobo.http.server.Request",
+    "http.Response": "example.web.response",
+    "io.server_permissions": "lobo.0935a528ddd246a79a5f2cd965cced31",
+    "access.restrict": "lobo.permissions.restrict",
+    "sql.Permission": "lobo.5ef1f873f38ab1532a2039039c50d0a0",
+    "sql.one": "lobo.a066d2d1100c7d222d8c4c9a6891123a",
+    "sql.restrict_native": "lobo.886c4b0a3dabfb731412c11d8f6510e9"
   }
 }

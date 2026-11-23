@@ -1,4 +1,20 @@
 module sql;
+variant Permission { Read, Write, Schema }
+record Permissions { read:Bool, write:Bool, schema:Bool }
+
+fn none()->Permissions {Permissions { read:false, write:false, schema:false }}
+fn one(permission:Permission)->Permissions {allow(none(),permission)}
+fn allow(permissions:Permissions,permission:Permission)->Permissions {
+  match permission {
+    Read=> Permissions { ...permissions,read:true },
+    Write=> Permissions { ...permissions,write:true },
+    Schema=> Permissions { ...permissions,schema:true }
+  }
+}
+fn abi_mask(permissions:Permissions)->I64 {
+  if permissions.read { 1 } else { 0 } + if permissions.write { 2 } else { 0 } + if permissions.schema { 4 } else { 0 }
+}
+
 variant Cell { Null, Integer(I64), Decimal(F64), String(Text), Binary(Bytes) }
 record Row { values:List<Cell> }
 variant ErrorKind { Denied, InvalidInput, InvalidHandle, WrongKind, Closed, Busy, Constraint, Decode, Io, Limit, Sql, State }
@@ -23,8 +39,14 @@ fn bool_result(outcome:Native::BoolResult)->SqlResult<Bool> {
 fn open(cap:Native::SqliteCapability)->SqlResult<Native::Database> actions {db.open} {
   match Native::sqlite_open(cap) {Ok(db)=> Ok(db),Err(code)=> Err(error_details(code))}
 }
-fn restrict(cap:Native::SqliteCapability,mask:I64)->SqlResult<Native::SqliteCapability> actions {native.authorize} {
+fn restrict_mask(cap:Native::SqliteCapability,mask:I64)->SqlResult<Native::SqliteCapability> actions {native.authorize} {
   match Native::sqlite_restrict(cap,mask) {Ok(child)=> Ok(child),Err(code)=> Err(error_details(code))}
+}
+fn restrict_native(cap:Native::SqliteCapability,permissions:Permissions)->Native::SqliteCapabilityResult actions {native.authorize} {
+  Native::sqlite_restrict(cap,abi_mask(permissions))
+}
+fn restrict(cap:Native::SqliteCapability,permissions:Permissions)->SqlResult<Native::SqliteCapability> actions {native.authorize} {
+  match restrict_native(cap,permissions) {Ok(child)=> Ok(child),Err(code)=> Err(error_details(code))}
 }
 fn close(db:Native::Database)->SqlResult<Bool> actions {db.close} {bool_result(Native::sqlite_close(db))}
 fn begin(db:Native::Database)->SqlResult<Bool> actions {db.transaction} {bool_result(Native::sqlite_begin(db))}
@@ -50,7 +72,7 @@ fn bind_value(statement:Native::Statement,index:I64,value:Cell)->Native::BoolRes
 }
 fn bind_all(statement:Native::Statement,parameters:List<Cell>,index:I64)->Native::BoolResult actions {db.execute} {
   if List::length(parameters)==0 {Ok(true)} else {
-    let bound=try bind_value(statement,index,List::head(parameters));
+    try bind_value(statement,index,List::head(parameters));
     bind_all(statement,List::tail(parameters),index+1)
   }
 }
@@ -66,7 +88,7 @@ fn read_row(statement:Native::Statement,count:I64)->RawResult<Row> actions {db.r
   let final=fold(i in count,state:Columns=Columns {reversed:List::empty<Cell>(),error:0}) {
     if state.error!=0 {state} else {
       match read_value(statement,i) {
-        Err(code)=> Columns {reversed:state.reversed,error:code},
+        Err(code)=> Columns { ...state,error:code },
         Ok(value)=> Columns {reversed:List::prepend(value,state.reversed),error:0}
       }
     }
@@ -76,10 +98,10 @@ fn read_row(statement:Native::Statement,count:I64)->RawResult<Row> actions {db.r
 fn read_rows(statement:Native::Statement,count:I64)->RawResult<List<Row>> actions {db.execute,db.read} {
   let final=while(state:Rows=Rows {reversed:List::empty<Row>(),error:0,done:false};!state.done) {
     match Native::sqlite_step(statement) {
-      Err(code)=> Rows {reversed:state.reversed,error:code,done:true},
-      Ok(row)=> if !row {Rows {reversed:state.reversed,error:0,done:true}} else {
+      Err(code)=> Rows { ...state,error:code,done:true },
+      Ok(row)=> if !row {Rows { ...state,error:0,done:true }} else {
         match read_row(statement,count) {
-          Err(code)=> Rows {reversed:state.reversed,error:code,done:true},
+          Err(code)=> Rows { ...state,error:code,done:true },
           Ok(value)=> Rows {reversed:List::prepend(value,state.reversed),error:0,done:false}
         }
       }
@@ -88,14 +110,14 @@ fn read_rows(statement:Native::Statement,count:I64)->RawResult<List<Row>> action
   if final.error!=0 {Err(final.error)} else {Ok(reverse(final.reversed))}
 }
 fn run_query(statement:Native::Statement,parameters:List<Cell>)->RawResult<List<Row>> actions {db.execute,db.read} {
-  let bound=try bind_all(statement,parameters,1);
+  try bind_all(statement,parameters,1);
   let columns=try Native::sqlite_column_count(statement);
   if columns==0 {Err(2)} else {read_rows(statement,columns)}
 }
 fn query_raw(db:Native::Database,sql:Text,parameters:List<Cell>)->RawResult<List<Row>> actions {db.execute,db.read,db.close} {
   let statement=try Native::sqlite_prepare(db,sql);
   let outcome=run_query(statement,parameters);
-  let finalized=try Native::sqlite_finalize(statement);
+  try Native::sqlite_finalize(statement);
   outcome
 }
 fn query(db:Native::Database,statement:Text,parameters:List<Cell>)->SqlResult<List<Row>> actions {db.execute,db.read,db.close} {
@@ -104,7 +126,7 @@ fn query(db:Native::Database,statement:Text,parameters:List<Cell>)->SqlResult<Li
 fn run_execute(statement:Native::Statement,parameters:List<Cell>)->Native::BoolResult actions {db.execute,db.read} {
   let columns=try Native::sqlite_column_count(statement);
   if columns!=0 {Err(2)} else {
-    let bound=try bind_all(statement,parameters,1);
+    try bind_all(statement,parameters,1);
     let row=try Native::sqlite_step(statement);
     if row {Err(2)} else {Ok(true)}
   }
@@ -112,7 +134,7 @@ fn run_execute(statement:Native::Statement,parameters:List<Cell>)->Native::BoolR
 fn execute_raw(db:Native::Database,sql:Text,parameters:List<Cell>)->Native::BoolResult actions {db.execute,db.read,db.close} {
   let statement=try Native::sqlite_prepare(db,sql);
   let outcome=run_execute(statement,parameters);
-  let finalized=try Native::sqlite_finalize(statement);
+  try Native::sqlite_finalize(statement);
   outcome
 }
 fn execute(db:Native::Database,statement:Text,parameters:List<Cell>)->SqlResult<Bool> actions {db.execute,db.read,db.close} {
@@ -121,4 +143,38 @@ fn execute(db:Native::Database,statement:Text,parameters:List<Cell>)->SqlResult<
 fn error_code(error:SqlError)->I64 {
   let code=match(error.kind) {Denied=> 1,InvalidInput=> 2,InvalidHandle=> 3,WrongKind=> 4,Closed=> 5,Busy=> 7,Constraint=> 8,Decode=> 9,Io=> 10,Limit=> 11,Sql=> 12,State=> 13};
   error.backend_code*65536+code
+}
+
+fn expect_columns(row:Row,count:I64)->SqlResult<Bool> {
+  if List::length(row.values)==count {Ok(true)} else {Err(error_details(9))}
+}
+fn cell_at(row:Row,index:I64)->SqlResult<Cell> {
+  if index<0 || index>=List::length(row.values) {Err(error_details(9))} else {
+    let remaining=fold(i in index,cells:List<Cell> =row.values) {List::tail(cells)};
+    Ok(List::head(remaining))
+  }
+}
+fn integer_at(row:Row,index:I64)->SqlResult<I64> {
+  match (try cell_at(row,index)) {
+    Integer(value)=> Ok(value),Null=> Err(error_details(9)),Decimal(n)=> Err(error_details(9)),
+    String(t)=> Err(error_details(9)),Binary(b)=> Err(error_details(9))
+  }
+}
+fn decimal_at(row:Row,index:I64)->SqlResult<F64> {
+  match (try cell_at(row,index)) {
+    Decimal(value)=> Ok(value),Null=> Err(error_details(9)),Integer(n)=> Err(error_details(9)),
+    String(t)=> Err(error_details(9)),Binary(b)=> Err(error_details(9))
+  }
+}
+fn text_at(row:Row,index:I64)->SqlResult<Text> {
+  match (try cell_at(row,index)) {
+    String(value)=> Ok(value),Null=> Err(error_details(9)),Integer(n)=> Err(error_details(9)),
+    Decimal(n)=> Err(error_details(9)),Binary(b)=> Err(error_details(9))
+  }
+}
+fn bytes_at(row:Row,index:I64)->SqlResult<Bytes> {
+  match (try cell_at(row,index)) {
+    Binary(value)=> Ok(value),Null=> Err(error_details(9)),Integer(n)=> Err(error_details(9)),
+    Decimal(n)=> Err(error_details(9)),String(t)=> Err(error_details(9))
+  }
 }

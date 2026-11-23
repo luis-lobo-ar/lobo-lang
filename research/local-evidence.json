@@ -881,6 +881,209 @@
         "Engine/OS correctness, crash durability, unbounded refinement or production security",
         "Actual Windows hardware coverage"
       ]
+    },
+    {
+      "id": "local-031",
+      "date": "2026-11-23",
+      "title": "DX review and strict SQL row utilities",
+      "evidence_kind": "static pattern inventory, compiler/editor probes and native implementation validation",
+      "status": "bounded review and implementation checks passed; agent outcomes not measured",
+      "files": [
+        {
+          "path": "docs/dx-review-2026-11-23.md",
+          "sha256": "677227c8681528c4169750e6760ed16756936b499e0547834c2238e8c73b5aae"
+        },
+        {
+          "path": "benchmarks/results/2026-11-23-dx-review.json",
+          "sha256": "82c06c4fa384e03a6728f8a313aa5de388021224b0fdec37a815f94d1d71c2bc"
+        },
+        {
+          "path": "decisions/0056-dx-review-and-row-utilities.md",
+          "sha256": "fa6c44f461aed06539f536e774a55f5a2f86c67f178057f1a887dc8630238804"
+        }
+      ],
+      "supports": [
+        "Reproducible lexical patterns in the stated baseline corpus",
+        "Strict row helpers preserve the stated types, errors and HTTP behavior under recorded tests",
+        "Existing source/action/result contracts constrain proposed library and language alternatives"
+      ],
+      "does_not_establish": [
+        "Complete manual review or security audit of all code/upstream engine",
+        "Measured improvement in agent construction, comprehension, token use or runtime speed",
+        "Implementation of proposed syntax/project/symbol-query features",
+        "Actual Windows hardware compatibility"
+      ]
+    },
+    {
+      "id": "local-032",
+      "date": "2026-11-23",
+      "title": "Record-update spelling comparison",
+      "evidence_kind": "primary-documentation review and language proposal",
+      "status": "three-dot spelling recommended; standalone try preference recorded; neither implemented",
+      "files": [
+        {
+          "path": "decisions/0057-record-update-spelling-proposal.md",
+          "sha256": "69ac53babc6d6e4cda3b3f451f22848b84543dfa2466a97de46dc10e2c60234b"
+        },
+        {
+          "path": "research/record-update-spelling-2026-11-23.json",
+          "sha256": "00f287dad603f68f8ff20aee7b624119be66f3bfc6574be1993d6dbe72b0eeb9"
+        }
+      ],
+      "supports": [
+        "Rust and JavaScript syntax precedents",
+        "Recorded recommendation and user preference"
+      ],
+      "does_not_establish": [
+        "Compiler support or adopted final grammar",
+        "Measured agent/token/comprehension or runtime advantage"
+      ]
+    },
+    {
+      "id": "local-033",
+      "date": "2026-11-23",
+      "title": "Core 1.10 record updates and standalone try",
+      "evidence_kind": "versioned source implementation and native/editor conformance",
+      "status": "bounded acceptance passed; no measured agent outcome",
+      "files": [
+        {
+          "path": "spec/core-v1.10.md",
+          "sha256": "45d45f48a14fda25275c50ea02d6d65854d14e3fb6989ea56ef6d1aba62ec308"
+        },
+        {
+          "path": "decisions/0058-record-updates-and-standalone-try.md",
+          "sha256": "aa3fa0ab2d83e153dc59ff757d730112bba6f2d4496ed178080eaa3a10d4f677"
+        },
+        {
+          "path": "benchmarks/results/2026-11-23-source-conveniences.md",
+          "sha256": "7e6c46992176ea8f47f92b3d80379c3f1aa7ec5b3e7a33ef1bc49026e645e0d6"
+        },
+        {
+          "path": "benchmarks/results/2026-11-23-source-conveniences.json",
+          "sha256": "daf4bc43c367632ebd40c86fdd6d6dbf92c49937b89fa24c34d04f6741483bf6"
+        }
+      ],
+      "supports": [
+        "One-evaluation ordered same-type updates and existing try semantics under the recorded tests",
+        "C/LLVM/sanitizer, actual old-compiler checked execution and editor host behavior",
+        "Preservation of stated source/ABI/model/fixture boundaries"
+      ],
+      "does_not_establish": [
+        "Agent construction, comprehension or token savings",
+        "Runtime speedup or identical fuel to handwritten source",
+        "Partial/dynamic object merging or automatic resource cleanup",
+        "Actual Windows hardware compatibility or new formal refinement proof"
+      ]
+    },
+    {
+      "id": "local-034",
+      "date": "2026-11-23",
+      "title": "Action-bound callbacks and HTTP library extraction",
+      "evidence_kind": "language and library engineering verification",
+      "status": "verified local bounded milestone",
+      "files": [
+        {
+          "path": "benchmarks/results/2026-11-23-action-callbacks.md",
+          "sha256": "0e06d19f70731edb98e3becdeb5a963f563ea80794a079ffd3b81e911229a708"
+        },
+        {
+          "path": "benchmarks/results/2026-11-23-action-callbacks.json",
+          "sha256": "9d9c783f6c980fcdd544e25b6288b373c4bfdebe330d95e09c50a1e7b6d2af39"
+        },
+        {
+          "path": "spec/core-v1.11.md",
+          "sha256": "d13c38830326c983d336c83ab4a398867bd17858ade3c5f8ecc6d088359182aa"
+        },
+        {
+          "path": "decisions/0059-action-bound-callbacks-and-http-library.md",
+          "sha256": "b618dfeb626a390eaf8bfcfe72947fad4546923b23ab2351a43cc059c7a5c859"
+        },
+        {
+          "path": "benchmarks/results/2026-11-23-http-library-boundary.json",
+          "sha256": "644a5f70e1d753dfe1d658d387e59b75f3d376236b945e42a08bedde45f14fb2"
+        },
+        {
+          "path": "benchmarks/results/2026-11-23-mvc-sample-refresh.json",
+          "sha256": "c1c6c4af19cca8b6acdbc225e33e8fcf41d733510163bbf24fb596463f750f1b"
+        }
+      ],
+      "supports": [
+        "Explicit-context callbacks with exact declared action bounds on the recorded source/artifact/invocation tests",
+        "Native C/LLVM/sanitizer and editor-host behavior, with actual Linux/Wine HTTP and persistence checks",
+        "Preservation of stated identities, provider/model/fixture inputs and previous paper reports"
+      ],
+      "does_not_establish": [
+        "Agent construction, comprehension or token-efficiency benefit",
+        "Runtime speedup, identical fuel usage, or general callback action polymorphism",
+        "Actual Windows hardware behavior or a new formal refinement proof"
+      ]
+    },
+    {
+      "id": "local-035",
+      "date": "2026-11-23",
+      "title": "Maintained HTTP refactor and tooling reproducibility correction",
+      "evidence_kind": "library/tooling engineering verification",
+      "status": "verified local bounded refactor",
+      "files": [
+        {
+          "path": "benchmarks/results/2026-11-23-maintained-http-refactor.md",
+          "sha256": "e122a49d726d025f5bf22a21a442a7badf8e1073a7583edc77cbfc099778f8f7"
+        },
+        {
+          "path": "benchmarks/results/2026-11-23-maintained-http-refactor.json",
+          "sha256": "415a7ab61d4d258d9ec93352f2a2711e89fb96c0539a7a9e0b097d99c51306f9"
+        },
+        {
+          "path": "decisions/0060-complete-maintained-http-refactor.md",
+          "sha256": "f244121f4bb09bf24d2ea265216a90cf8199826b57ce2b5014e27f12c0107a95"
+        },
+        {
+          "path": "benchmarks/results/2026-11-23-http-refactor-scope.json",
+          "sha256": "514fbe1565ea79b2bac983c26c8fde429ae440ef9cc725ee63a248f37d0bc4a8"
+        }
+      ],
+      "supports": [
+        "Shared HTTP policy and library-owned listeners under the recorded action/lifetime/IO checks",
+        "Stable ID/old-caller compatibility and old/current compiler agreement on the maintained source set",
+        "A falsifiable poll-limit test and installed-tool metadata guard, with historical metadata corrections retained"
+      ],
+      "does_not_establish": [
+        "Agent construction, comprehension, token savings or runtime speedup",
+        "One arbitrary-action generic callback driver or new language expressiveness",
+        "Actual Windows hardware behavior or a new formal refinement proof",
+        "Fresh offline installation of the historical or repaired toolchain"
+      ]
+    },
+    {
+      "id": "local-036",
+      "date": "2026-11-23",
+      "title": "Typed permissions and maintained capability migration",
+      "evidence_kind": "library and tooling engineering verification",
+      "status": "verified local bounded migration",
+      "files": [
+        {
+          "path": "benchmarks/results/2026-11-23-typed-permissions.md",
+          "sha256": "f61876423e8ac9514c39761aaa668a9e2c7573bf3b13a11650aa96cfd4ef1cc3"
+        },
+        {
+          "path": "benchmarks/results/2026-11-23-typed-permissions.json",
+          "sha256": "a80a84ad5628730cc8869793abd9895208932b812c465037b3c9cd50f01a2938"
+        },
+        {
+          "path": "decisions/0062-typed-permissions.md",
+          "sha256": "c1b1d5c7e92b1a04a60fe8ed5c33393677ae398b30a705b0fd5c7736e8c0909d"
+        }
+      ],
+      "supports": [
+        "Finite typed OS/SQL permission requests and unchanged provider subset/denial semantics under exhaustive bounded cases",
+        "Preserved raw IDs, old-caller/native compiler compatibility and frozen-source/paper-evidence hashes",
+        "Maintained-source raw-call guard and editor navigation/unsaved type diagnostics"
+      ],
+      "does_not_establish": [
+        "Improved agent software construction, comprehension or token efficiency",
+        "A new native sandbox, formal refinement proof, language construct or performance improvement",
+        "Actual Windows hardware behavior for this patch"
+      ]
     }
   ],
   "backend_recommendation": {

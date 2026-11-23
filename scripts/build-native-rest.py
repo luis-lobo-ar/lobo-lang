@@ -3,7 +3,7 @@
 import argparse,hashlib,json,re,shutil,subprocess,zipfile
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1]
-SOURCES=['examples/native/rest/app.lobo','examples/native/rest/controller.lobo','libraries/http-server/transport.lobo','libraries/http-server/server.lobo','libraries/http/http.lobo','libraries/json/json.lobo']
+SOURCES=['examples/native/rest/app.lobo','examples/native/rest/controller.lobo','libraries/http-server/transport.lobo','libraries/http-server/server.lobo','libraries/http/http.lobo','libraries/json/json.lobo','libraries/native/permissions.lobo']
 def sha(p):return hashlib.sha256(p.read_bytes()).hexdigest()
 def main():
     p=argparse.ArgumentParser(description=__doc__);p.add_argument('--toolchain',type=Path,required=True);p.add_argument('--compiler',type=Path,default=ROOT/'target/release/lobo');p.add_argument('--out',type=Path,required=True);a=p.parse_args()

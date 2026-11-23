@@ -5,7 +5,7 @@ and opaque resources. Native built-ins have no source definition; local argument
 navigate normally. Diagnostics check source and never execute IO. Legacy Native user variants retain their
 old navigation semantics. See repository file `spec/native-interface-v0.1.md` for the native contract.
 
-Syntax highlighting and definition navigation for Lobo language 1.8. Opening a `.lobo` file selects **Lobo**
+Syntax highlighting and definition navigation for Lobo language 1.11. Opening a `.lobo` file selects **Lobo**
 automatically. Standard TextMate scopes follow your theme's colors.
 
 Extension 1.6.0 supports JSON literals without selecting `object` or `field`. Generated builder aliases retain
@@ -80,7 +80,7 @@ standalone browser-host navigation is not implemented.
 From the Lobo repository root, after building the package:
 
 ```sh
-code --install-extension dist/lobo-syntax-1.9.0.vsix
+code --install-extension dist/lobo-syntax-1.11.2.vsix
 ```
 
 Or open VS Code's Extensions view, choose **Install from VSIX...** from the menu, and select that file.
@@ -242,3 +242,28 @@ navigation and original-range diagnostics. Bundle navigation admits 16,384 token
 declarations, while individual lexing keeps its existing bound. Open the supplied
 [SQLite REST workspace](../../examples/native/sqlite-rest/SQLiteRest.code-workspace) for its complete
 eight-source context. Compiler checks never open a database. Runtime access still requires explicit grants.
+
+
+Core 1.10 adds one `...` record-update operator and interleaved standalone try statements. Navigation
+resolves update bases, override fields and generic payloads inferred from the base. Compiler diagnostics
+retain the original override expression range. The extension does not execute IO to resolve source.
+
+## Core 1.11 callback actions
+
+The extension highlights `Fn(C, Request) actions { db.read } -> Response`, resolves named and generic
+callbacks and infers fields through their results. Pure callback syntax remains supported. Navigation
+keeps the declared callback action set in its signature model. Compiler diagnostics check indirect-call
+bounds, exact target signatures and contract restrictions against unsaved source. Real host tests remove
+an invocation's declared action, assert the call-range squiggle and repair the document. The SQLite app
+bundle navigates serve_with into the library and handle into the application controller.
+
+## Maintained HTTP library refactor
+
+Extension 1.11.1 accompanies the unchanged Core 1.11 grammar. The stateless Rest.code-workspace and SQLite
+workspace list their complete source closures. Navigation resolves the owning serve/serve_with entries,
+controllers, shared accept helper and Connection fields through stable IDs. The real host tests copy the
+six-source stateless bundle, navigate into the library, remove net.listen in an unsaved app, assert the
+missing-action squiggle on serve(...), then repair it. No new grammar token is introduced.
+
+Compiler/extension 1.11.2 add typed OS and SQLite permission sets without changing Core 1.11.
+The maintained HTTP apps use named permission profiles. See [typed permissions](../../decisions/0062-typed-permissions.md).

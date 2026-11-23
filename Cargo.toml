@@ -1,6 +1,6 @@
 [package]
 name = "lobo-lang"
-version = "1.9.0"
+version = "1.11.2"
 edition = "2021"
 description = "Lobo Core native compiler and reference evaluator"
 publish = false

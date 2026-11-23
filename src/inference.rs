@@ -61,6 +61,7 @@ fn copy_substituted(ty: &Type, bindings: &BTreeMap<String, Type>) -> Type {
                 .collect(),
         },
         Type::Function(signature) => Type::Function(FunctionType {
+            actions: signature.actions.clone(),
             parameters: signature
                 .parameters
                 .iter()
@@ -104,7 +105,9 @@ fn constrain(
             }
             Ok(())
         }
-        (Type::Function(a), Type::Function(b)) if a.parameters.len() == b.parameters.len() => {
+        (Type::Function(a), Type::Function(b))
+            if a.parameters.len() == b.parameters.len() && a.actions == b.actions =>
+        {
             for (x, y) in a.parameters.iter().zip(&b.parameters) {
                 constrain(x, y, parameters, bindings)?;
             }
@@ -115,6 +118,7 @@ fn constrain(
 }
 
 struct Elaborator<'a> {
+    updates: usize,
     source: &'a Program,
     functions: BTreeMap<String, &'a Function>,
     context: &'a modules::Context,
@@ -480,7 +484,14 @@ impl Elaborator<'_> {
                     deferred.push(named_function || actual.is_none());
                     if infer {
                         if let Some(actual) = actual {
-                            constrain(&target.parameters[index].ty, &actual, &parameters, &mut bindings)?;
+                            constrain(&target.parameters[index].ty, &actual, &parameters, &mut bindings)
+                                .map_err(|e| {
+                                    if e.code == "compile.action.reference" {
+                                        e.at(arg.span())
+                                    } else {
+                                        e
+                                    }
+                                })?;
                         }
                     }
                 }
@@ -525,20 +536,50 @@ impl Elaborator<'_> {
                 record,
                 type_arguments,
                 fields,
-                ..
+                base,
+                span,
             } => {
                 let Some(shape) = self.source.records.iter().find(|r| &r.id == record).cloned() else {
                     return Ok(None);
                 };
+                let updating = base.is_some();
+                if updating {
+                    let mut seen = BTreeSet::new();
+                    for field in fields.iter() {
+                        if !shape.fields.iter().any(|member| member.name == field.name)
+                            || !seen.insert(&field.name)
+                        {
+                            return Err(records::field_error(
+                                "record update has an unknown or repeated field",
+                            )
+                            .at(field.value.span()));
+                        }
+                    }
+                }
                 let mut parts = vec![];
-                for field in fields {
+                if let Some(value) = base.as_deref_mut() {
+                    let pattern = if shape.type_parameters.is_empty() {
+                        Type::Record(record.clone())
+                    } else {
+                        Type::Applied {
+                            name: record.clone(),
+                            arguments: shape
+                                .type_parameters
+                                .iter()
+                                .map(|p| Type::Record(format!("@{p}")))
+                                .collect(),
+                        }
+                    };
+                    parts.push((pattern, value));
+                }
+                for field in fields.iter_mut() {
                     if let Some(member) = shape.fields.iter().find(|member| member.name == field.name) {
                         parts.push((member.ty.clone(), &mut field.value));
                     } else {
                         self.expr(&mut field.value, env, None, depth)?;
                     }
                 }
-                self.construct(
+                let output = self.construct(
                     Constructor {
                         name: record,
                         parameters: &shape.type_parameters,
@@ -549,7 +590,77 @@ impl Elaborator<'_> {
                     expected,
                     env,
                     depth,
-                )
+                )?;
+                drop(parts);
+                if !updating {
+                    return Ok(output);
+                }
+                let ty = output.ok_or_else(unresolved)?;
+                let anchor = self.updates;
+                self.updates += 1;
+                let owner = format!("__lobo_update_base_{anchor}");
+                let mut bindings = vec![];
+                let mut replacements = BTreeMap::new();
+                for (index, field) in std::mem::take(fields).into_iter().enumerate() {
+                    let name = format!("__lobo_update_field_{anchor}_{index}");
+                    replacements.insert(field.name, (name.clone(), field.value.span()));
+                    bindings.push(Binding {
+                        name,
+                        annotation: None,
+                        span: field.value.span(),
+                        value: field.value,
+                    });
+                }
+                let members = shape
+                    .fields
+                    .iter()
+                    .map(|field| FieldValue {
+                        name: field.name.clone(),
+                        value: if let Some((name, location)) = replacements.get(&field.name) {
+                            Expr::Name {
+                                name: name.clone(),
+                                span: *location,
+                            }
+                        } else {
+                            Expr::Field {
+                                base: Box::new(Expr::Name {
+                                    name: owner.clone(),
+                                    span: *span,
+                                }),
+                                field: field.name.clone(),
+                                span: *span,
+                            }
+                        },
+                    })
+                    .collect();
+                let value = Expr::Record {
+                    record: record.clone(),
+                    type_arguments: type_arguments.clone(),
+                    fields: members,
+                    base: None,
+                    span: *span,
+                };
+                // One existing fold iteration owns the base; override bindings preserve source order.
+                *expr = Expr::Fold {
+                    index: format!("__lobo_update_index_{anchor}"),
+                    accumulator: Parameter {
+                        name: owner,
+                        ty: ty.clone(),
+                        span: *span,
+                    },
+                    count: Box::new(Expr::Literal {
+                        value: Value::I64(1),
+                        span: *span,
+                    }),
+                    initial: base.take().unwrap(),
+                    body: Block {
+                        bindings,
+                        value: Box::new(value),
+                    },
+                    span: *span,
+                    index_span: None,
+                };
+                Ok(Some(ty))
             }
             Expr::Variant {
                 variant,
@@ -725,6 +836,7 @@ pub(super) fn elaborate(program: &mut Program, enabled: &BTreeSet<String>) -> Fa
             continue;
         }
         let mut elaborator = Elaborator {
+            updates: 0,
             source: &source,
             functions: source.functions.iter().map(|f| (f.id.clone(), f)).collect(),
             context: &contexts[&function.id],

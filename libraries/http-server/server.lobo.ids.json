@@ -28,6 +28,7 @@
     "json_response": "lobo.http.server.json_response",
     "error_response": "lobo.http.server.error_response",
     "wire": "lobo.http.server.wire",
-    "respond": "lobo.http.server.respond"
+    "respond": "lobo.http.server.respond",
+    "respond_with": "example.sqlite.rest.dispatch"
   }
 }

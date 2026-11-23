@@ -312,3 +312,22 @@ test('SQLite native resources and operations use native highlighting',()=>{
   expectScope('fn f(s:Native::Statement)->Native::TextResult {Native::sqlite_column_text(s,0)}','Statement','support.type.lobo')
   expectScope('fn f(s:Native::Statement)->Native::TextResult {Native::sqlite_column_text(s,0)}','TextResult','support.type.lobo')
 })
+
+test('three-dot record update is one operator and standalone try retains its keyword scope',()=>{
+  expectScope('Search { ...state, duplicate: true }','...','keyword.operator.record-update.lobo')
+  expectScope('try begin(db);','try','keyword.control.propagation.lobo')
+})
+
+test('callback action bounds highlight inline before the return arrow', () => {
+  const tokens=tokenize('fn run(callback: Fn(I64) actions { db.read, db.close } -> I64) -> I64 actions { db.read, db.close } { callback(1) }').flat()
+  assert.equal(tokens.filter(t=>t.text==='actions' && t.scopes.includes('keyword.control.action.lobo')).length,2)
+  assert.equal(tokens.filter(t=>t.text==='db.read' && t.scopes.includes('support.constant.action.lobo')).length,2)
+})
+
+
+test('typed permission helpers use existing variant record and function scopes',()=>{
+ const source='variant Permission { ClockRead, RandomRead, Listen, Connect }\nrecord Permissions { clock: Bool }\nfn one(permission: Permission) -> Permissions { Permissions { clock: true } }'
+ expectScope(source,'Permission','entity.name.type.lobo')
+ expectScope(source,'Permissions','entity.name.type.lobo')
+ expectScope(source,'one','entity.name.function.lobo')
+})

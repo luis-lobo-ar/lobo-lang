@@ -1,67 +1,106 @@
 module sqlite_controller;
+
 use http { Request, Response, error_response, json_response };
 use helpers { PathMatch, strip_prefix };
 use model { find, all };
-use sql { Cell, Row, SqlResult };
+use sql { Row, SqlResult, expect_columns, integer_at, text_at };
 use json { Json, JsonArray, array, append, integer_text };
+
 variant ViewResult { Valid(Json), Invalid }
 variant IdResult { Found(I64), Missing }
-record IdState { value:I64, invalid:Bool }
-record RenderState { remaining:List<Row>, values:JsonArray, invalid:Bool }
+record IdState { value: I64, invalid: Bool }
+record RenderState { remaining: List<Row>, values: JsonArray, invalid: Bool }
 
-fn read_id(path:Text)->IdResult {
-  match strip_prefix(path,"/api/users/") {
-    NoMatch=> Missing,
-    Matched(suffix)=> {
-      let data=Text::bytes(suffix);
-      let length=Bytes::length(data);
-      if length==0 || length>19 {Missing} else {
-        let final=fold(i in length,state:IdState=IdState {value:0,invalid:false}) {
-          let digit=Bytes::at(data,i)-48;
-          if state.invalid || digit<0 || digit>9 || state.value>(9223372036854775807-digit)/10 {
-            IdState {value:0,invalid:true}
-          } else {IdState {value:state.value*10+digit,invalid:false}}
+fn read_id(path: Text) -> IdResult {
+  match strip_prefix(path, "/api/users/") {
+    NoMatch => Missing,
+    Matched(suffix) => {
+      let data = Text::bytes(suffix);
+      let length = Bytes::length(data);
+      if length == 0 || length > 19 {
+        Missing
+      } else {
+        let final = fold(i in length, state: IdState = IdState { value: 0, invalid: false }) {
+          let digit = Bytes::at(data, i) - 48;
+          if state.invalid || digit < 0 || digit > 9 || state.value > (9223372036854775807 - digit) / 10 {
+            IdState { value: 0, invalid: true }
+          } else {
+            IdState { value: state.value * 10 + digit, invalid: false }
+          }
         };
-        if final.invalid {Missing} else {Found(final.value)}
+        if final.invalid { Missing } else { Found(final.value) }
       }
     }
   }
 }
-fn render_row(row:Row)->ViewResult {
-  if List::length(row.values)!=2 {Invalid} else {
-    let id=List::head(row.values);
-    let name=List::head(List::tail(row.values));
-    match id {
-      Integer(number)=> match name {String(value)=> Valid(json {"id":integer_text(number),"name":value}),Null=> Invalid,Integer(n)=> Invalid,Decimal(n)=> Invalid,Binary(b)=> Invalid},
-      Null=> Invalid,Decimal(n)=> Invalid,String(t)=> Invalid,Binary(b)=> Invalid
-    }
+
+// View: validate the row, then construct the JSON value.
+fn row_json(row: Row) -> SqlResult<Json> {
+  try expect_columns(row, 2);
+  let id = try integer_at(row, 0);
+  let name = try text_at(row, 1);
+  Ok(json { "id": integer_text(id), "name": name })
+}
+
+fn render_row(row: Row) -> ViewResult {
+  match row_json(row) {
+    Err(error) => Invalid,
+    Ok(value) => Valid(value)
   }
 }
-fn render_rows(rows:List<Row>)->ViewResult {
-  let final=fold(i in List::length(rows),state:RenderState=RenderState {remaining:rows,values:array(),invalid:false}) {
-    if state.invalid {state} else {
+
+fn render_rows(rows: List<Row>) -> ViewResult {
+  let final = fold(i in List::length(rows), state: RenderState = RenderState {
+    remaining: rows, values: array(), invalid: false
+  }) {
+    if state.invalid {
+      state
+    } else {
       match render_row(List::head(state.remaining)) {
-        Invalid=> RenderState {remaining:state.remaining,values:state.values,invalid:true},
-        Valid(value)=> RenderState {remaining:List::tail(state.remaining),values:append(state.values,value),invalid:false}
+        Invalid => RenderState { ...state, invalid: true },
+        Valid(value) => RenderState {
+          remaining: List::tail(state.remaining),
+          values: append(state.values, value),
+          invalid: false
+        }
       }
     }
   };
-  if final.invalid {Invalid} else {Valid(Array(final.values))}
+  if final.invalid { Invalid } else { Valid(Array(final.values)) }
 }
-fn response(found:SqlResult<List<Row>>,one:Bool)->Response {
+
+fn response(found: SqlResult<List<Row>>, one: Bool) -> Response {
   match found {
-    Err(error)=> error_response(500),
-    Ok(rows)=> if one && List::length(rows)==0 {error_response(404)} else {
-      let rendered=if one {render_row(List::head(rows))} else {render_rows(rows)};
-      match rendered {Invalid=> error_response(500),Valid(value)=> json_response(200,value)}
+    Err(error) => error_response(500),
+    Ok(rows) => if one && List::length(rows) == 0 {
+      error_response(404)
+    } else {
+      let rendered = if one { render_row(List::head(rows)) } else { render_rows(rows) };
+      match rendered {
+        Invalid => error_response(500),
+        Valid(value) => json_response(200, value)
+      }
     }
   }
 }
-fn handle(db:Native::Database,request:Request)->Response actions {db.execute,db.read,db.close} {
-  if request.method!="GET" && request.method!="HEAD" {error_response(405)} else {
-    if request.path=="/health" {json_response(200,json {"status":"ok","language":"lobo"})} else {
-      if request.path=="/api/users" {response(all(db),false)} else {
-        match read_id(request.path) {Missing=> error_response(404),Found(id)=> response(find(db,id),true)}
+
+// Controller: select the model operation and turn its result into a response.
+fn handle(db: Native::Database, request: Request) -> Response
+actions { db.execute, db.read, db.close }
+{
+  if request.method != "GET" && request.method != "HEAD" {
+    error_response(405)
+  } else {
+    if request.path == "/health" {
+      json_response(200, json { "status": "ok", "language": "lobo" })
+    } else {
+      if request.path == "/api/users" {
+        response(all(db), false)
+      } else {
+        match read_id(request.path) {
+          Missing => error_response(404),
+          Found(id) => response(find(db, id), true)
+        }
       }
     }
   }

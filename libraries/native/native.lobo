@@ -1,4 +1,5 @@
 module native_io;
+use access {Permissions,restrict};
 
 variant IoError { Denied, InvalidInput, InvalidHandle, WrongKind, Closed, TimedOut, WouldBlock, ConnectionRefused, AddressInUse, OsFailure, LimitExceeded, Unknown(I64) }
 variant IoResult<T> { Ok(T), Err(IoError) }
@@ -24,10 +25,17 @@ fn to_error_code(error:IoError)->I64 {
   }
 }
 
-fn restrict_capability(cap:Native::Capability, mask:I64)->IoResult<Native::Capability> actions {native.authorize} {
+fn restrict_mask(cap:Native::Capability, mask:I64)->IoResult<Native::Capability> actions {native.authorize} {
   match Native::restrict_capability(cap,mask) {
     Ok(value) => Ok(value),
     Err(code) => Err(from_error_code(code))
+  }
+}
+
+fn restrict_capability(cap:Native::Capability, permissions:Permissions)->IoResult<Native::Capability> actions {native.authorize} {
+  match access.restrict(cap,permissions) {
+    Ok(value)=> Ok(value),
+    Err(code)=> Err(from_error_code(code))
   }
 }
 
@@ -114,7 +122,10 @@ identities {
   IoResult: "lobo.os.result",
   from_error_code: "lobo.os.from_error_code",
   to_error_code: "lobo.os.to_error_code",
-  restrict_capability: "lobo.os.restrict_capability",
+  restrict_mask: "lobo.os.restrict_capability",
+  restrict_capability: "lobo.os.restrict_permissions",
+  access.Permissions: "lobo.permissions.Permissions",
+  access.restrict: "lobo.permissions.restrict",
   monotonic_ms: "lobo.os.monotonic_ms",
   random_bytes: "lobo.os.random_bytes",
   listen: "lobo.os.listen",

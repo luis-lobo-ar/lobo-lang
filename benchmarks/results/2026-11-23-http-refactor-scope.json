@@ -1,0 +1,28 @@
+{
+  "date": "2026-11-23",
+  "kind": "refactor-scope-audit",
+  "status": "review-complete",
+  "question": "Did you refactor all?",
+  "completed": [
+    "SQLite REST app delegates serving/listener lifecycle to serve_with",
+    "shared receive/send/close/error helpers in the HTTP library",
+    "callback action bounds, compiler/editor/skill/specification updates"
+  ],
+  "remaining": [
+    "The original pure REST app still opens and closes its own listener around the pure serve API",
+    "The library retains distinct pure-handler and concrete DB-bound context-handler drivers; low-level transport helpers are shared"
+  ],
+  "exclusions": [
+    "Low-level native/loopback demos intentionally exercise raw operations",
+    "Frozen research and release fixtures remain unchanged"
+  ],
+  "interpretation": "The selected SQLite extraction is complete. A repository-wide refactor was not performed. This status question does not authorize further language expansion.",
+  "inputs_sha256": {
+    "examples/native/sqlite-rest/app.lobo": "1161f870b1ae7ebdbd78142d290262c1565605712de600f001901c0da0d426f4",
+    "examples/native/rest/app.lobo": "c54aba3d84d8cf9e2290c7bb42a9e037a7d4959893a764d8723d202058b0afc9",
+    "libraries/http-server/transport.lobo": "64e47ef19dc78dad9bf98755253ee12f23003c29ec32f231ddecf434830b5ac3",
+    "libraries/http-server/server.lobo": "3aeac600d4131e544a7054f0f751efb5945e1616c84b210cfdabf5d936912a1e",
+    "examples/native/loopback.lobo": "474c6031e56d3413a3418f6ad00371169f50158e10838eb60fbb4ee43e76609b"
+  },
+  "verification": "Source inspection and targeted rg search only; no new runtime tests or implementation changes."
+}

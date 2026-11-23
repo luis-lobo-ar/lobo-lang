@@ -6,5 +6,6 @@
   "libraries/http-server/transport.lobo",
   "libraries/http-server/server.lobo",
   "libraries/http/http.lobo",
-  "libraries/json/json.lobo"
+  "libraries/json/json.lobo",
+  "libraries/native/permissions.lobo"
 ]

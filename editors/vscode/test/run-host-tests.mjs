@@ -26,6 +26,19 @@ environment.LOBO_TEST_WORKSPACE = workspace
 await writeFile(join(workspace, 'constructors.lobo'), 'module constructors; record Box<T> {value:T} variant Maybe<T> {None,Some(T)} variant Other<T> {None,Some(T)} fn create(flag:Bool)->Maybe<Box<I64>> {if flag {Some(Box {value:42})} else {None}} fn main()->I64 {match create(true) {None=>0,Some(box)=>box.value}} identities {module:"constructors",Box:"constructors.box",Maybe:"constructors.maybe",Other:"constructors.other",create:"constructors.create",main:"constructors.main"}')
 await writeFile(join(workspace, 'native.lobo'), 'module native_host; record Input {value:I64} fn integer(input:Input)->I64 {Native::roundtrip_i64(input.value)} fn inspect(listener:Native::Listener)->I64 actions {net.inspect} {match Native::port(listener) {Ok(port)=>port,Err(code)=>code}} identities {module:"native.host",Input:"native.host.input",integer:"native.host.integer",inspect:"native.host.inspect"}')
 await writeFile(join(workspace, 'try.lobo'), 'module try_host; record Item {key:I64} variant R<T> {Ok(T),Err(Text)} fn get()->R<Item> {Ok(Item {key:42})} fn main()->R<I64> {let value=try get(); Ok(value.key)} identities {module:"try.host",Item:"try.host.item",R:"try.host.result",get:"try.host.get",main:"try.host.main"}')
+for (const [name, source] of [
+  ['rest-app.lobo','examples/native/rest/app.lobo'],
+  ['rest-controller.lobo','examples/native/rest/controller.lobo'],
+  ['rest-permissions.lobo','libraries/native/permissions.lobo'],
+  ['rest-transport.lobo','libraries/http-server/transport.lobo'],
+  ['rest-parser.lobo','libraries/http-server/server.lobo'],
+  ['rest-response.lobo','libraries/http/http.lobo'],
+  ['rest-json.lobo','libraries/json/json.lobo']
+]) {
+  await writeFile(join(workspace,name),await readFile(resolve(root,'../..',source)))
+  try { await writeFile(join(workspace,name+'.ids.json'),await readFile(resolve(root,'../..',source+'.ids.json'))) }
+  catch(error) { if(error.code!=='ENOENT') throw error }
+}
 delete environment.ELECTRON_RUN_AS_NODE
 const child = spawn(executable, [
   `--user-data-dir=${join(scratch, 'profile')}`,

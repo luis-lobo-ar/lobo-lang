@@ -241,7 +241,7 @@ impl Emitter<'_> {
             Type::Function(signature) => {
                 self.line(format!("switch ({value}) {{"));
                 for (index, target) in self.functions.values().copied().collect::<Vec<_>>() {
-                    if target.actions.is_empty() && target.signature_type() == *signature {
+                    if target.signature_type() == *signature {
                         let wire = serde_json::to_string(&Value::Function(FunctionValue {
                             id: target.id.clone(),
                             signature: signature.clone(),
@@ -292,7 +292,7 @@ impl Emitter<'_> {
                 ));
                 let mut first = true;
                 for (index, target) in self.functions.values().copied().collect::<Vec<_>>() {
-                    if target.actions.is_empty() && target.signature_type() == *signature {
+                    if target.signature_type() == *signature {
                         let token = format!("Function:{}", target.id);
                         self.line(format!("{}if ({atom}_length == {} && memcmp({atom}, \"{token}\", {}) == 0) {value} = {index};", if first { "" } else { "else " },token.len(),token.len()));
                         first = false;
@@ -359,7 +359,7 @@ impl Emitter<'_> {
                     self.ctype(&signature.output)
                 ));
                 for (index, target) in self.functions.values().copied().collect::<Vec<_>>() {
-                    if target.actions.is_empty() && target.signature_type() == signature {
+                    if target.signature_type() == signature {
                         self.line(format!(
                             "case {index}: {name} = lobo_fn_{index}({}); break;",
                             args.join(", ")

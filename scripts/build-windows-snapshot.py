@@ -7,6 +7,7 @@ from pathlib import Path
 import subprocess
 import zipfile
 ROOT=Path(__file__).resolve().parents[1]
+SOURCES=['examples/native/snapshot.lobo','libraries/native/native.lobo','libraries/native/permissions.lobo']
 
 def main():
     parser=argparse.ArgumentParser(description=__doc__)
@@ -23,7 +24,9 @@ def main():
         if result.returncode:raise RuntimeError(record)
         return result.stdout
     generated=out/'snapshot.generated.c';obj=out/'snapshot.o';exe=out/'LoboSnapshot.exe'
-    run([args.compiler.resolve(),'compile',ROOT/'examples/native/snapshot.lobo','--source',ROOT/'libraries/native/native.lobo','--emit','c','-o',generated])
+    command=[args.compiler.resolve(),'compile',ROOT/SOURCES[0]]
+    for source in SOURCES[1:]:command+=['--source',ROOT/source]
+    run(command+['--emit','c','-o',generated])
     flags=['-std=c11','-O3','-g0','-ffunction-sections','-fdata-sections','-D_WIN32_WINNT=0x0A00']
     run([cc,*flags,'-Dmain=lobo_generated_main','-c',generated,'-o',obj])
     run([cc,*flags,ROOT/'examples/native/windows/launcher.c',obj,'-static','-lbcrypt','-Wl,--gc-sections','-Wl,-s','-o',exe])
@@ -43,11 +46,19 @@ def main():
         (notices/license_file.name).write_bytes(license_file.read_bytes())
     (out/'README.txt').write_text('Lobo snapshot demo - Windows 10/11 x64\n\nDouble-click LoboSnapshot.exe. It runs the compiled Lobo program with clock/random\npermission, prints a typed JSON snapshot and waits for Enter in an interactive console.\nNo WSL, Rust, Lobo installation or extra runtime DLL download is needed.\n\nFor automation, --no-pause runs the same demo without waiting.\n\nExplicit native arguments use the normal default-deny invocation policy:\nLoboSnapshot.exe --entry native.snapshot.main --native-clock true --native-random true\n\nThe program body is generated from snapshot.lobo. Networking is unavailable in this\nWindows profile. This local unsigned build is tested under Wine; actual Windows\nvalidation is recorded separately and must not be inferred from Wine.\n',encoding='utf-8')
     for name in ['snapshot.lobo','snapshot.lobo.ids.json']:(out/name).write_bytes((ROOT/'examples/native'/name).read_bytes())
-    manifest={'format':'lobo-windows-snapshot-build/0.1','target':'Windows 10/11 x64','application_source':'examples/native/snapshot.lobo','standalone':True,'default_launch_grants':['clock','random'],'unsupported':['networking','full native Windows compiler distribution'],'dll_imports':dlls,'executable':{'path':str(exe),'bytes':exe.stat().st_size,'sha256':hashlib.sha256(header).hexdigest()},'compiler_sha256':hashlib.sha256(args.compiler.read_bytes()).hexdigest(),'provider_sha256':hashlib.sha256((ROOT/'src/native_windows_snapshot.c').read_bytes()).hexdigest(),'commands':records,'actual_windows_execution':None}
+    inputs={}
+    for source in SOURCES:
+        for item in [ROOT/source,ROOT/(source+'.ids.json')]:
+            if item.is_file():
+                relative=item.relative_to(ROOT);destination=out/'source'/relative;destination.parent.mkdir(parents=True,exist_ok=True);destination.write_bytes(item.read_bytes())
+                inputs[str(relative)]=hashlib.sha256(item.read_bytes()).hexdigest()
+    manifest={'sources':inputs,'format':'lobo-windows-snapshot-build/0.1','target':'Windows 10/11 x64','application_source':'examples/native/snapshot.lobo','standalone':True,'default_launch_grants':['clock','random'],'unsupported':['networking','full native Windows compiler distribution'],'dll_imports':dlls,'executable':{'path':str(exe),'bytes':exe.stat().st_size,'sha256':hashlib.sha256(header).hexdigest()},'compiler_sha256':hashlib.sha256(args.compiler.read_bytes()).hexdigest(),'provider_sha256':hashlib.sha256((ROOT/'src/native_windows_snapshot.c').read_bytes()).hexdigest(),'commands':records,'actual_windows_execution':None}
     (out/'build.json').write_text(json.dumps(manifest,indent=2)+'\n')
     with zipfile.ZipFile(out/'LoboSnapshot-windows-x64.zip','w',zipfile.ZIP_DEFLATED) as archive:
         for name in ['LoboSnapshot.exe','README.txt','TOOLCHAIN-LICENSE.txt','snapshot.lobo','snapshot.lobo.ids.json','build.json']:
             if (out/name).exists():archive.write(out/name,arcname=name)
+        for source in sorted((out/'source').rglob('*')):
+            if source.is_file():archive.write(source,arcname=str(source.relative_to(out)))
         for notice in sorted(notices.iterdir()):archive.write(notice,arcname='notices/'+notice.name)
     print(json.dumps({'status':'built','exe':str(exe),'zip':str(out/'LoboSnapshot-windows-x64.zip'),'bytes':exe.stat().st_size,'dlls':dlls}))
 

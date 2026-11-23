@@ -1,0 +1,24 @@
+{
+  "date": "2026-11-23",
+  "operation": "repository_visibility",
+  "repository": "luis-lobo-ar/lobo-lang",
+  "url": "https://github.com/luis-lobo-ar/lobo-lang",
+  "before": "private",
+  "after": "public",
+  "authorization": "Explicit user request to make lobo lang public",
+  "authenticated_verification": "gh repo view as repository owner: PUBLIC, ADMIN",
+  "anonymous_verification": {
+    "url": "https://api.github.com/repos/luis-lobo-ar/lobo-lang",
+    "status": 200,
+    "private": false,
+    "visibility": "public"
+  },
+  "authentication_notes": [
+    "The initially active CLI account could not resolve this private repository.",
+    "The owner connector returned 404.",
+    "Scoped the CLI invocation to the saved luis-lobo-ar account without changing the global active account."
+  ],
+  "local_changes_present": true,
+  "commits_created": false,
+  "commits_pushed": false
+}

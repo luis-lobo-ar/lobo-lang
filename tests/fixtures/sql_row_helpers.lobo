@@ -1,0 +1,23 @@
+module row_helpers;
+use sql { Cell, Row, SqlResult, expect_columns, cell_at, integer_at, decimal_at, text_at, bytes_at };
+fn sample()->Row {
+  Row {values:List::prepend(Cell::Integer(-9223372036854775808),List::prepend(Cell::Decimal(1.25),List::prepend(Cell::String("🐺"),List::prepend(Cell::Binary(Bytes::empty()),List::prepend(Cell::Null,List::empty<Cell>())))))}
+}
+fn integer()->SqlResult<I64> {let width=try expect_columns(sample(),5); integer_at(sample(),0)}
+fn utf8()->SqlResult<I64> {let value=try text_at(sample(),2); Ok(Bytes::length(Text::bytes(value)))}
+fn empty_bytes()->SqlResult<I64> {let value=try bytes_at(sample(),3); Ok(Bytes::length(value))}
+fn decimal()->SqlResult<I64> {let value=try decimal_at(sample(),1); Ok(if value==1.25 {1} else {0})}
+fn wrong_width()->SqlResult<I64> {let valid=try expect_columns(sample(),2); Ok(0)}
+fn negative_index()->SqlResult<I64> {integer_at(sample(),-1)}
+fn large_index()->SqlResult<I64> {integer_at(sample(),9223372036854775807)}
+fn wrong_integer()->SqlResult<I64> {integer_at(sample(),1)}
+fn null_integer()->SqlResult<I64> {integer_at(sample(),4)}
+fn empty_row()->SqlResult<I64> {integer_at(Row {values:List::empty<Cell>()},0)}
+fn empty_width()->SqlResult<I64> {let valid=try expect_columns(Row {values:List::empty<Cell>()},0); Ok(1)}
+fn null_cell()->SqlResult<I64> {let value=try cell_at(sample(),4); match value {Null=>Ok(1),Integer(n)=>Ok(0),Decimal(n)=>Ok(0),String(t)=>Ok(0),Binary(b)=>Ok(0)}}
+fn wrong_text()->SqlResult<I64> {let value=try text_at(sample(),0); Ok(0)}
+fn wrong_bytes()->SqlResult<I64> {let value=try bytes_at(sample(),2); Ok(0)}
+fn wrong_decimal()->SqlResult<I64> {let value=try decimal_at(sample(),0); Ok(0)}
+fn empty_text()->SqlResult<I64> {let value=try text_at(Row {values:List::prepend(Cell::String(""),List::empty<Cell>())},0); Ok(Bytes::length(Text::bytes(value)))}
+fn negative_width()->SqlResult<I64> {let valid=try expect_columns(sample(),-1); Ok(0)}
+identities {module:"test.sql.rows",sample:"test.sql.rows.sample",integer:"test.sql.rows.integer",utf8:"test.sql.rows.utf8",empty_bytes:"test.sql.rows.empty_bytes",decimal:"test.sql.rows.decimal",wrong_width:"test.sql.rows.wrong_width",negative_index:"test.sql.rows.negative_index",large_index:"test.sql.rows.large_index",wrong_integer:"test.sql.rows.wrong_integer",null_integer:"test.sql.rows.null_integer",empty_row:"test.sql.rows.empty_row",empty_width:"test.sql.rows.empty_width",null_cell:"test.sql.rows.null_cell",wrong_text:"test.sql.rows.wrong_text",wrong_bytes:"test.sql.rows.wrong_bytes",wrong_decimal:"test.sql.rows.wrong_decimal",empty_text:"test.sql.rows.empty_text",negative_width:"test.sql.rows.negative_width",sql.Cell:"lobo.sql.Cell",sql.Row:"lobo.sql.Row",sql.SqlResult:"lobo.sql.SqlResult",sql.expect_columns:"lobo.sql.expect_columns",sql.cell_at:"lobo.sql.cell_at",sql.integer_at:"lobo.sql.integer_at",sql.decimal_at:"lobo.sql.decimal_at",sql.text_at:"lobo.sql.text_at",sql.bytes_at:"lobo.sql.bytes_at"}

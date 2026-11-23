@@ -11,9 +11,9 @@ Lobo explores a specific hypothesis:
 > Agents will produce more reliable software when they can query and change a program through typed,
 > transactional operations instead of reconstructing intent from files and terminal output.
 
-This repository contains a Rust native compiler for Lobo language 1.8. It checks source and emits
+This repository contains a Rust native compiler for Lobo language 1.11. It checks source and emits
 optimized machine-code executables with runtime contracts. A reference evaluator supports correctness testing.
-The [language 1.8 specification](spec/core-v1.8.md) adds explicit `try` error propagation and inherits inferred generic calls and constructors,
+The [language 1.11 specification](spec/core-v1.11.md) adds callbacks with declared action bounds. It inherits immutable record updates, standalone `try` statements, the closed native SQLite extension, `try` error propagation, inferred generic calls and constructors,
 contextual callbacks and case names, automatic JSON builders, typed native OS calls, `fn`, grouped imports, arrow match arms and tracked identity sidecars.
 Authoring tools manage IDs separately from ordinary source. The older spelling remains deprecated read
 compatibility for existing libraries and fixtures. Both spellings use the same checker and native backends.
@@ -42,7 +42,7 @@ arguments remain available when argument-based inference is insufficient.
 The model's declared `Lookup<User>` also lets it return `Found(user)` or `Missing` without repeating the owner or type arguments.
 
 The compiler accepts that file directly, without a marker or projection command. See
-[the native syntax guide](docs/compact-syntax-prototype.md). Extension 1.9.0 highlights and navigates the source
+[the native syntax guide](docs/compact-syntax-prototype.md). Extension 1.11.2 highlights and navigates the source
 and sends original text for diagnostics. The [older MVC spelling](examples/mvc.lobo) remains a comparison fixture.
 
 The [native examples](examples/native/README.md) compile to one executable with typed capabilities, clock,
@@ -61,13 +61,15 @@ spelling. See [the migration record](decisions/0043-maintained-source-migration.
 Code fragments below omit the surrounding module and identity metadata. The MVC keeps its unchanged IDs in
 `examples/mvc.compact.lobo.ids.json`. Other maintained sources can still use inline identity tables.
 
-With Rust, Cargo, and Clang installed, run from this directory:
+With `lobo` on your PATH and Clang installed, run the included Lobo program from this directory.
+To build the compiler from this checkout, follow [Build the compiler from source](#build-the-compiler-from-source) once.
 
 ```sh
-cargo run -- check examples/core.lobo
-cargo run -- compile examples/core.lobo -o core
-./core --entry example.increment --arg I64:41
-./core --entry example.absolute --arg I64:-7
+mkdir -p target/lobo-demo
+lobo check examples/core.lobo
+lobo compile examples/core.lobo -o target/lobo-demo/core
+./target/lobo-demo/core --entry example.increment --arg I64:41
+./target/lobo-demo/core --entry example.absolute --arg I64:-7
 ```
 
 The increment invocation returns `42`; the absolute-value invocation returns `7`. The executable runs directly
@@ -76,15 +78,15 @@ and refuses to overwrite existing files. Arguments use explicit types and functi
 Use `--fuel` to set the native execution budget. `lobo run` compiles to a temporary binary and executes it;
 `lobo eval` explicitly selects the reference evaluator. See the [native backend specification](spec/native-v0.1.md).
 
-Verify with `cargo test --locked` and `./scripts/check.sh`. The transfer example describes later language
-features and is not accepted by the Core compiler.
+Compiler contributors can use the [verification workflow](docs/compiler-development-workflow.md).
+The transfer sketch is illustrative and is not accepted by the Core compiler.
 
 Compiler 0.11.1 also has a direct LLVM backend. With Clang/LLVM 18 installed:
 
 ```sh
-cargo run -- compile examples/generics.lobo --backend llvm -o generics-llvm
-./generics-llvm --entry example.generics.text --arg Text:c3a9
-cargo run -- compile examples/generics.lobo --emit llvm -o generics.ll
+lobo compile examples/generics.lobo --backend llvm -o target/lobo-demo/generics-llvm
+./target/lobo-demo/generics-llvm --entry example.generics.text --arg Text:c3a9
+lobo compile examples/generics.lobo --emit llvm -o target/lobo-demo/generics.ll
 ```
 
 Application functions emit LLVM IR directly; the native runtime and typed layout primitives remain C.
@@ -102,7 +104,7 @@ fold (i in n, total: I64 = 0) { total + i + 1 }
 ```
 
 See the executable [iteration example](examples/iteration.lobo) and [fold specification](spec/core-v0.2.md).
-The compiler now emits `lobo-checked/1.0` and revalidates language 1.0 through 1.9 artifacts.
+The compiler now emits `lobo-checked/1.0` and revalidates language 1.0 through 1.11 artifacts.
 Older `.loboc` formats must be recompiled from source, not retagged.
 Previously generated executables still run independently. `fold` and `in` remain usable as ordinary names.
 
@@ -148,8 +150,8 @@ and record parameters/returns/fold accumulators. See [the executable records exa
 and [Core v0.4](spec/core-v0.4.md). Native and reference modes support record arguments; for example:
 
 ```sh
-cargo run -- run examples/records.lobo --entry example.records.swap --arg Record:example.records.pair:I64:1,I64:2
-cargo run -- run examples/records.lobo --entry example.records.gcd --arg I64:1071 --arg I64:462
+lobo run examples/records.lobo --entry example.records.swap --arg Record:example.records.pair:I64:1,I64:2
+lobo run examples/records.lobo --entry example.records.gcd --arg I64:1071 --arg I64:462
 ```
 
 Record fields are flattened in declaration order for CLI input; output is typed JSON. Layouts and copying
@@ -173,8 +175,8 @@ Variants compose with records, functions, equality, contracts, and folds. Only t
 all cases must be handled and are statically checked. Runtime faults/exhaustion remain diagnostics, not caught values.
 
 ```sh
-cargo run -- run examples/variants.lobo --entry example.variants.divide --arg I64:20 --arg I64:0
-cargo run -- run examples/variants.lobo --entry example.variants.fallback --arg Variant:example.variants.quotient:Case:Ok,I64:5
+lobo run examples/variants.lobo --entry example.variants.divide --arg I64:20 --arg I64:0
+lobo run examples/variants.lobo --entry example.variants.fallback --arg Variant:example.variants.quotient:Case:Ok,I64:5
 ```
 
 ## Growable lists
@@ -188,7 +190,7 @@ The executable [collection workload](examples/collections.lobo) validates input,
 aggregates values, and returns typed failures entirely in Lobo:
 
 ```sh
-cargo run -- run examples/collections.lobo --source examples/sequences.lobo --entry example.collections.select --arg List:Count:3,I64:5,I64:2,I64:8 --arg Bool:true --heap-cells 1000
+lobo run examples/collections.lobo --source examples/sequences.lobo --entry example.collections.select --arg List:Count:3,I64:5,I64:2,I64:8 --arg Bool:true --heap-cells 1000
 ```
 
 This returns selected values `[2,8]`, count 2, sum 10. See [Core v0.6](spec/core-v0.6.md) for lifetime, budgets,
@@ -205,8 +207,8 @@ The executable [text example](examples/text.lobo) frames Unicode text and return
 typed failure. CLI atoms use hex to carry arbitrary bytes without shell/NUL/comma ambiguity:
 
 ```sh
-cargo run -- run examples/text.lobo --entry example.text.frame --arg Text:f09f90ba
-cargo run -- run examples/text.lobo --entry example.text.decode --arg Bytes:ff
+lobo run examples/text.lobo --entry example.text.frame --arg Text:f09f90ba
+lobo run examples/text.lobo --entry example.text.decode --arg Bytes:ff
 ```
 
 These return `[🐺]` and an `Invalid` variant carrying the original `ff` byte, respectively. See
@@ -217,7 +219,7 @@ and folds to scan and evaluate byte input with precedence and parentheses. Inval
 a typed error with its byte offset; resource exhaustion remains a diagnostic. For `12 + 3 * 4`:
 
 ```sh
-cargo run -- run examples/parser.lobo --entry example.parser.evaluate --arg Bytes:3132202b2033202a2034
+lobo run examples/parser.lobo --entry example.parser.evaluate --arg Bytes:3132202b2033202a2034
 ```
 
 This returns `Ok(24)`. The [frozen workloads](spec/language-milestone-workloads.md) and
@@ -227,7 +229,7 @@ The executable [tree example](examples/tree.lobo) constructs a binary search tre
 ignores duplicates, and traverses it in either order without recursive named types or a host sorting shortcut:
 
 ```sh
-cargo run -- run examples/tree.lobo --source examples/sequences.lobo --entry example.tree.summarize --arg List:Count:4,I64:3,I64:1,I64:3,I64:2 --arg Bool:false
+lobo run examples/tree.lobo --source examples/sequences.lobo --entry example.tree.summarize --arg List:Count:4,I64:3,I64:1,I64:3,I64:2 --arg Bool:false
 ```
 
 This returns keys `[1,2,3]`, count 3, height 3. `Bool:true` reverses traversal without changing count/height.
@@ -256,7 +258,7 @@ Collection/tree callers and the [module examples](examples/modules/reverse.lobo)
 [reverse helper and cursor type](examples/sequences.lobo); existing module-example entries delegate through a compatibility wrapper:
 
 ```sh
-cargo run -- run examples/modules/reverse.lobo --source examples/modules/sequences.lobo --source examples/sequences.lobo --entry example.modules.reversed --arg List:Count:3,I64:1,I64:2,I64:3
+lobo run examples/modules/reverse.lobo --source examples/modules/sequences.lobo --source examples/sequences.lobo --entry example.modules.reversed --arg List:Count:3,I64:1,I64:2,I64:3
 ```
 
 This returns `[3,2,1]`. [The other caller](examples/modules/mirror.lobo) reverses twice using the same
@@ -277,7 +279,7 @@ The [AST example](examples/ast.lobo) evaluates nested sums/products and rewrites
 preserving child order. All computation runs in Lobo; no host AST evaluator supplies its implementation.
 
 ```sh
-cargo run -- run examples/ast.lobo --entry example.ast.shifted_value --arg Variant:example.ast.node:Case:Num,I64:7 --arg I64:1
+lobo run examples/ast.lobo --entry example.ast.shifted_value --arg Variant:example.ast.node:Case:Num,I64:7 --arg I64:1
 ```
 
 This returns `8`. Existing lists provide heap indirection, and direct inline cycles remain rejected.
@@ -302,13 +304,13 @@ Generic data and pure function references are supported. See the 1.4 specificati
 See [Core v0.11](spec/core-v0.11.md) and [the public reuse workload](spec/generic-reuse-workload.md).
 
 ```sh
-cargo run -- run examples/generics.lobo --entry example.generics.text --arg Text:c3a9
+lobo run examples/generics.lobo --entry example.generics.text --arg Text:c3a9
 ```
 
 ## Agent programming skill
 
 The repository includes [lobo-programming](.agents/skills/lobo-programming/SKILL.md), targeting
-language 1.9/compiler 1.9.0 with language/tool references and executable examples. In Codex, explicitly
+language 1.11/compiler 1.11.2 with language/tool references and executable examples. In Codex, explicitly
 invoke it with `$lobo-programming` when writing or repairing Lobo programs. The skill supplies
 knowledge; compiler checks, independent tests and host authority remain separate.
 
@@ -318,20 +320,19 @@ consistent efficiency advantage emerged. A plugin and implicit-discovery evaluat
 
 ## VS Code language support
 
-The [Lobo extension](editors/vscode/README.md) recognizes `.lobo` files and highlights language 1.8
+The [Lobo extension](editors/vscode/README.md) recognizes `.lobo` files and highlights language 1.11
 declarations, contracts, types, literals, comments, operators, and counted folds. It also supports line
 commenting and bracket/quote pairing, plus Ctrl-click/F12 definition navigation for functions, parameters,
 local bindings, fold bindings, record fields, variant cases, and match payload bindings. Highlighting/navigation need no compiler; compiler-produced squiggles
 require Lobo 0.2.1+. No runtime npm dependencies are required.
 
-Build and install locally:
+Build and install the extension locally:
 
 ```sh
-cargo test --locked
 cd editors/vscode
 npm ci --ignore-scripts
 npm run package
-code --install-extension ../../dist/lobo-syntax-1.9.0.vsix
+code --install-extension ../../dist/lobo-syntax-1.11.2.vsix
 ```
 
 Navigation follows Core's scope rules within the current file or an explicit source set and reads unsaved edits.
@@ -345,11 +346,15 @@ temporary files. See [source diagnostics](spec/source-diagnostics-v0.1.md). The 
 setting uses `target/release/lobo`; build the release compiler and open the repository as a trusted folder
 for squiggles. Compiler checks are disabled in Restricted Mode, and can be turned off independently.
 
-## Optimized release
+## Build the compiler from source
+
+The compiler is implemented in Rust. This one-time compiler build requires Rust and Cargo; compiling Lobo
+programs uses `lobo` and Clang. Generated programs run directly. From the checkout root:
 
 ```sh
-cargo build --locked --release --bin lobo
-./target/release/lobo run examples/core.lobo --entry example.increment --arg I64:41
+cargo build --locked --release --bins
+export PATH="$PWD/target/release:$PATH"
+lobo run examples/core.lobo --entry example.increment --arg I64:41
 stat -c '%n %s bytes' target/release/lobo
 ```
 
@@ -358,16 +363,18 @@ unit, strips symbols, and omits debug information. Internal Rust panics abort th
 still return structured diagnostics. Runtime contracts and checked arithmetic remain enabled. The native
 executable targets the build host; the current Linux build depends on the system's C runtime.
 
+For compiler development checks, run `cargo test --locked` and `./scripts/check.sh`.
+See the [compiler development workflow](docs/compiler-development-workflow.md).
+
 ## Agent-first testing prototype
 
-`lobo-test` is a native foreground tool for agents testing Lobo programs. It pins requirements/expected
+`lobo-test`, built with the compiler above, is a native foreground tool for agents testing Lobo programs. It pins requirements/expected
 outcomes, verifies explicit candidate snapshots, reuses eligible in-session passing evidence, and returns
 compact differences with exact-source explain/replay. Ordinary Lobo functions can express test laws;
 no test keyword, interpreter dependency, daemon or external library is introduced.
 
 ```sh
-cargo build --locked --release --bin lobo-test
-./target/release/lobo-test --session --clang /usr/bin/clang < examples/testing/agent-session.jsonl
+lobo-test --session --clang /usr/bin/clang < examples/testing/agent-session.jsonl
 ```
 
 The example intentionally introduces a failing increment and replays it; inspect response statuses, not
@@ -502,3 +509,17 @@ The project directory is `lobo-lang`; the language, CLI, and source extension ar
 This is explicit enough for discovery while keeping the eventual command short. The daemon name `lobod` follows
 the usual service convention.
 
+
+Core 1.11 adds [callbacks with declared actions](spec/core-v1.11.md). Their syntax is
+`Fn(Context, Request) actions { db.read } -> Response`; named references take explicit context and exact
+bounds. The [SQLite REST app](examples/native/sqlite-rest/app.lobo) now delegates serving to the
+[HTTP library](libraries/http-server/README.md), while retaining grants, bootstrap policy and database ownership.
+
+Compiler/extension 1.11.1 finish the maintained HTTP library refactor on unchanged Core 1.11. Both native
+REST apps delegate listener lifetime to shared serving entries. One accept state machine and shared
+preparation/cleanup policies support precise pure and DB-bound handlers. The
+[role audit](scripts/http-refactor-scope.json) covers all maintained Lobo examples/libraries and preserves
+explicit raw-ABI/host-demo roles. See [decision 0060](decisions/0060-complete-maintained-http-refactor.md).
+
+Compiler/extension 1.11.2 add typed OS and SQLite permission sets without changing Core 1.11.
+The maintained HTTP apps use named permission profiles. See [typed permissions](./decisions/0062-typed-permissions.md).

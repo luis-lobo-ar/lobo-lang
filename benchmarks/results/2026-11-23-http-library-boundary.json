@@ -1,0 +1,39 @@
+{
+  "date": "2026-11-23",
+  "kind": "architecture-review",
+  "status": "proposal-only",
+  "question": "Should SQLite REST app scaffolding become a library?",
+  "finding": "dispatch, serve_one, serve and listener lifecycle repeat the existing HTTP server machinery because its Fn handler is pure while the database controller performs checked actions.",
+  "sources": [
+    "examples/native/sqlite-rest/app.lobo",
+    "libraries/http-server/server.lobo",
+    "libraries/http-server/transport.lobo",
+    "spec/core-v1.0.md",
+    "spec/core-v1.4.md",
+    "docs/dx-review-2026-11-23.md"
+  ],
+  "recommended_library_ownership": [
+    "listener and stream lifecycle",
+    "bounded accept/read/write loops and deadlines",
+    "HTTP parsing, rejection responses, HEAD and wire encoding"
+  ],
+  "recommended_application_ownership": [
+    "capability selection and restriction",
+    "database ownership and lifetime",
+    "schema/bootstrap policy",
+    "controller selection"
+  ],
+  "proposed_call": "http.serve(cap, port, max_requests, db, handle)",
+  "proposed_call_available_today": false,
+  "language_boundary": "Existing Fn values are pure and noncapturing. A complete generic server with an actionful controller needs explicitly checked callback action bounds and explicit context. This review does not authorize that language milestone.",
+  "current_language_option": "Extract reusable transport/listener operations while retaining the actionful orchestration in the application. Do not couple the HTTP library to a particular controller or SQLite schema.",
+  "required_future_regressions": [
+    "explicit context and handler action checking",
+    "preserved capability restrictions",
+    "operation outcome captured before close; close errors retain precedence",
+    "recoverable connection errors versus fatal quota/close errors",
+    "HTTP protocol, partial IO, deadlines, request/poll bounds",
+    "database cleanup and independent SQLite persistence checks"
+  ],
+  "verification": "Read-only source/specification review with an independent architecture walkthrough. No implementation, new runtime tests, or efficiency measurements."
+}

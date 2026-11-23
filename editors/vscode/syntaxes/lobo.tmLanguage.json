@@ -547,7 +547,7 @@
       }
     },
     "actions": {
-      "begin": "(?:(->)\\s*([A-Za-z_][A-Za-z0-9_]*)\\s+|^\\s*)(actions)\\s*(\\{)",
+      "begin": "(?:(->)\\s*([A-Za-z_][A-Za-z0-9_]*)\\s+|^\\s*|(?<=\\))\\s*)(actions)\\s*(\\{)",
       "end": "\\}",
       "beginCaptures": {
         "1": {
@@ -856,6 +856,10 @@
     },
     "punctuation": {
       "patterns": [
+        {
+          "name": "keyword.operator.record-update.lobo",
+          "match": "\\.\\.\\."
+        },
         {
           "match": "\\{",
           "name": "punctuation.section.block.begin.lobo"

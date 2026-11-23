@@ -1,8 +1,8 @@
 {
   "name": "lobo-syntax",
   "displayName": "Lobo Language Support",
-  "description": "Lobo 1.9 syntax, SQLite resources, definition navigation and compiler diagnostics.",
-  "version": "1.9.0",
+  "description": "Lobo 1.11 action-bound callbacks, definition navigation and compiler diagnostics.",
+  "version": "1.11.2",
   "main": "./src/extension.cjs",
   "publisher": "lobo-lang",
   "private": true,
@@ -81,7 +81,7 @@
     "test": "node --test test/*.test.mjs",
     "test:host": "node test/run-host-tests.mjs",
     "prepackage": "node -e \"require('node:fs').mkdirSync('../../dist', { recursive: true })\"",
-    "package": "npm test && vsce package --no-dependencies --allow-missing-repository --skip-license --out ../../dist/lobo-syntax-1.9.0.vsix"
+    "package": "npm test && vsce package --no-dependencies --allow-missing-repository --skip-license --out ../../dist/lobo-syntax-1.11.2.vsix"
   },
   "devDependencies": {
     "@vscode/vsce": "4.0.0",

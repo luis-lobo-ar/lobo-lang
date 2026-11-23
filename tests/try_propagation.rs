@@ -251,6 +251,11 @@ fn snapshot_uses_try_with_unchanged_identities_and_explicit_grants() {
                 identities: Some(identities),
             },
             lobo_core::SourceFile {
+                name: "access".into(),
+                text: include_str!("../libraries/native/permissions.lobo").into(),
+                identities: None,
+            },
+            lobo_core::SourceFile {
                 name: "os".into(),
                 text: include_str!("../libraries/native/native.lobo").into(),
                 identities: None,

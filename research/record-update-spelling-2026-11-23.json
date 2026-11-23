@@ -1,0 +1,44 @@
+{
+  "format": "lobo-record-update-spelling-review/0.1",
+  "date": "2026-11-23",
+  "status": "recommendation; syntax not implemented",
+  "user_preferences": {
+    "standalone_try_statements": "user likes the second improvement",
+    "record_update_spelling": "user asks whether three dots are preferable; recommendation is three dots"
+  },
+  "recommendation": "Search { ...state, duplicate: true }",
+  "semantics": [
+    "one base record first",
+    "same nominal record type",
+    "evaluate base once",
+    "explicit fields override corresponding base fields",
+    "retain immutability",
+    "reject unknown fields and repeated explicit fields"
+  ],
+  "scope_exclusions": [
+    "arbitrary object merging",
+    "multiple bases",
+    "array spread",
+    "variadic arguments",
+    "implicit error conversion"
+  ],
+  "sources": [
+    {
+      "title": "Rust Reference: functional update syntax",
+      "url": "https://doc.rust-lang.org/reference/expressions/struct-expr.html#functional-update-syntax",
+      "accessed_on": "2026-11-23",
+      "finding": "Rust places ..base last in a struct expression and fills remaining fields by moving or copying from the base."
+    },
+    {
+      "title": "MDN: spread syntax",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax",
+      "accessed_on": "2026-11-23",
+      "finding": "JavaScript supports ...obj in object literals, including a base followed by explicitly written properties."
+    }
+  ],
+  "evidence_limits": [
+    "No compiler, editor grammar or native behavior changed",
+    "No measured agent, tokenizer, comprehension or runtime advantage for either spelling",
+    "Earlier DX review and evidence remain unchanged"
+  ]
+}

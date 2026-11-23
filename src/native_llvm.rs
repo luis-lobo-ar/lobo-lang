@@ -255,7 +255,7 @@ impl Lowering<'_, '_> {
                     .functions
                     .values()
                     .copied()
-                    .filter(|(_, f)| f.actions.is_empty() && f.signature_type() == signature)
+                    .filter(|(_, f)| f.signature_type() == signature)
                     .collect();
                 let cases: Vec<_> = targets.iter().map(|(index, _)| (*index, self.fresh())).collect();
                 self.line(format!(

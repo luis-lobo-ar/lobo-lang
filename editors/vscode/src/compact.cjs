@@ -15,7 +15,7 @@ function fail(message, token) { throw new ProjectionError(message, token) }
 
 function lex(source) {
   if (Buffer.byteLength(source, 'utf8') > 1_048_576) fail('Compact source exceeds 1 MiB')
-  const pattern = /[ \t\r\n]+|\/\/[^\r\n]*|"(?:[^"\\\r\n]|\\[^\r\n])*"|[A-Za-z_][A-Za-z_0-9]*|[0-9]+(?:\.[0-9]+)?(?:[eE][+\-]?[0-9]+)?|::|->|=>|==|!=|<=|>=|&&|\|\||[@();,:{}.+*/%<>=!&\-]/gy
+  const pattern = /[ \t\r\n]+|\/\/[^\r\n]*|"(?:[^"\\\r\n]|\\[^\r\n])*"|[A-Za-z_][A-Za-z_0-9]*|[0-9]+(?:\.[0-9]+)?(?:[eE][+\-]?[0-9]+)?|\.\.\.|::|->|=>|==|!=|<=|>=|&&|\|\||[@();,:{}.+*/%<>=!&\-]/gy
   const tokens = []
   while (pattern.lastIndex < source.length) {
     const start = pattern.lastIndex

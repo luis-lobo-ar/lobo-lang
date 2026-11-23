@@ -1,5 +1,6 @@
 module http_transport;
-use http { Request, Response, header_end, respond, wire, error_response };
+use access {Permission,Permissions,one,allow};
+use http { Request, Response, RequestResult, header_end, parse, wire, error_response };
 record ReceiveState { data:Bytes, status:I64, error:I64, done:Bool }
 record SendState { offset:I64, error:I64 }
 record ServeState { handled:I64, polls:I64, error:I64 }
@@ -38,29 +39,158 @@ fn send_all(stream:Native::Stream,cap:Native::Capability,data:Bytes,deadline:I64
   };
   final_state.error
 }
-fn serve_one(stream:Native::Stream,cap:Native::Capability,handle:Fn(Request)->Response)->I64 actions {clock.read,net.read,net.write} {
+// Both serving APIs share deadlines, framing failures and stream cleanup.
+fn receive_request(stream: Native::Stream, cap: Native::Capability) -> ReceiveState
+actions { clock.read, net.read }
+{
   match Native::monotonic_ms(cap) {
-    Err(code)=> code,
-    Ok(start)=> {
-      let request=receive(stream,cap,start+2000);
-      if request.error!=0 {request.error} else {
-        let response=if request.status==0 {respond(request.data,handle)} else {wire(error_response(request.status),false)};
-        match Native::monotonic_ms(cap) {Err(code)=> code,Ok(now)=> send_all(stream,cap,response,now+2000)}
-      }
+    Err(code) => ReceiveState { data: Bytes::empty(), status: 0, error: code, done: true },
+    Ok(start) => receive(stream, cap, start + 2000)
+  }
+}
+
+fn send_response(stream: Native::Stream, cap: Native::Capability, response: Bytes) -> I64
+actions { clock.read, net.write }
+{
+  match Native::monotonic_ms(cap) {
+    Err(code) => code,
+    Ok(now) => send_all(stream, cap, response, now + 2000)
+  }
+}
+
+fn finish_connection(stream: Native::Stream, outcome: I64, state: ServeState) -> ServeState
+actions { net.close }
+{
+  let closed = Native::close_stream(stream);
+  let error = match closed {
+    Err(code) => code,
+    Ok(done) => if outcome == 11 { 11 } else { 0 }
+  };
+  ServeState { handled: state.handled + 1, polls: state.polls + 1, error: error }
+}
+
+fn accept_error(state: ServeState, code: I64) -> ServeState {
+  ServeState { ...state, polls: state.polls + 1, error: if code == 6 { 0 } else { code } }
+}
+
+record Connection { stream: Native::Stream, state: ServeState }
+variant AcceptState { Retry(ServeState), Accepted(Connection) }
+variant Prepared { Failed(I64), Respond(Bytes), Handle(Request) }
+
+fn serving(state: ServeState, count: I64) -> Bool {
+  state.handled < count && state.polls < 1024 && state.error == 0
+}
+
+fn retrying(next: AcceptState, count: I64) -> Bool {
+  match next { Retry(state) => serving(state, count), Accepted(connection) => false }
+}
+
+// The only accept/retry loop. Callback adapters receive the updated progress.
+fn next_connection(listener: Native::Listener, state: ServeState, count: I64) -> AcceptState
+actions { net.accept }
+{
+  while(next: AcceptState = Retry(state); retrying(next, count)) {
+    match next {
+      Retry(progress) => match Native::accept(listener, 2000) {
+        Err(code) => Retry(accept_error(progress, code)),
+        Ok(stream) => Accepted(Connection { stream: stream, state: progress })
+      },
+      Accepted(connection) => next
     }
   }
 }
-fn serve(listener:Native::Listener,cap:Native::Capability,count:I64,handle:Fn(Request)->Response)->Native::I64Result actions {net.accept,net.read,net.write,net.close,clock.read} {
-  let final_state=while(state:ServeState=ServeState {handled:0,polls:0,error:0};state.handled<count && state.polls<1024 && state.error==0) {
-    match Native::accept(listener,2000) {
-      Err(code)=> ServeState {handled:state.handled,polls:state.polls+1,error:if code==6 {0} else {code}},
-      Ok(stream)=> {
-        let outcome=serve_one(stream,cap,handle);
-        let closed=Native::close_stream(stream);
-        let error=match closed {Err(code)=> code,Ok(done)=> if outcome==11 {11} else {0}};
-        ServeState {handled:state.handled+1,polls:state.polls+1,error:error}
-      }
+
+// Read faults and automatic HTTP responses never invoke application callbacks.
+fn prepare_request(stream: Native::Stream, cap: Native::Capability) -> Prepared
+actions { clock.read, net.read }
+{
+  let request = receive_request(stream, cap);
+  if request.error != 0 {
+    Failed(request.error)
+  } else {
+    let parsed: RequestResult = if request.status == 0 { parse(request.data) }
+    else { Rejected(request.status) };
+    match parsed {
+      Rejected(status) => Respond(wire(error_response(status), false)),
+      Parsed(value) => Handle(value)
+    }
+  }
+}
+
+fn serve_one(stream: Native::Stream, cap: Native::Capability, handle: Fn(Request) -> Response) -> I64
+actions { clock.read, net.read, net.write }
+{
+  match prepare_request(stream, cap) {
+    Failed(code) => code,
+    Respond(bytes) => send_response(stream, cap, bytes),
+    Handle(request) => send_response(stream, cap, wire(handle(request), request.method == "HEAD"))
+  }
+}
+
+fn serve_listener(listener: Native::Listener, cap: Native::Capability, count: I64,
+  handle: Fn(Request) -> Response) -> Native::I64Result
+actions { net.accept, net.read, net.write, net.close, clock.read }
+{
+  let final = while(state: ServeState = ServeState { handled: 0, polls: 0, error: 0 };
+    serving(state, count)) {
+    match next_connection(listener, state, count) {
+      Retry(stopped) => stopped,
+      Accepted(connection) => finish_connection(connection.stream,
+        serve_one(connection.stream, cap, handle), connection.state)
     }
   };
-  if final_state.error!=0 {Err(final_state.error)} else {Ok(final_state.handled)}
+  if final.error != 0 { Err(final.error) } else { Ok(final.handled) }
 }
+
+fn serve_one_with<C>(context: C, stream: Native::Stream, cap: Native::Capability,
+  handle: Fn(C, Request) actions { db.execute, db.read, db.close } -> Response) -> I64
+actions { clock.read, net.read, net.write, db.execute, db.read, db.close }
+{
+  match prepare_request(stream, cap) {
+    Failed(code) => code,
+    Respond(bytes) => send_response(stream, cap, bytes),
+    Handle(request) => send_response(stream, cap, wire(handle(context, request), request.method == "HEAD"))
+  }
+}
+
+fn serve_context<C>(context: C, listener: Native::Listener, cap: Native::Capability, count: I64,
+  handle: Fn(C, Request) actions { db.execute, db.read, db.close } -> Response) -> Native::I64Result
+actions { net.accept, net.read, net.write, net.close, clock.read, db.execute, db.read, db.close }
+{
+  let final = while(state: ServeState = ServeState { handled: 0, polls: 0, error: 0 };
+    serving(state, count)) {
+    match next_connection(listener, state, count) {
+      Retry(stopped) => stopped,
+      Accepted(connection) => finish_connection(connection.stream,
+        serve_one_with(context, connection.stream, cap, handle), connection.state)
+    }
+  };
+  if final.error != 0 { Err(final.error) } else { Ok(final.handled) }
+}
+
+fn finish_listener(listener: Native::Listener, outcome: Native::I64Result) -> Native::I64Result
+actions { net.close }
+{
+  try Native::close_listener(listener);
+  outcome
+}
+
+fn serve(cap: Native::Capability, port: I64, count: I64,
+  handle: Fn(Request) -> Response) -> Native::I64Result
+actions { net.listen, net.accept, net.read, net.write, net.close, clock.read }
+{
+  let listener = try Native::listen(cap, port);
+  let outcome = serve_listener(listener, cap, count, handle);
+  finish_listener(listener, outcome)
+}
+
+fn serve_with<C>(cap: Native::Capability, port: I64, count: I64, context: C,
+  handle: Fn(C, Request) actions { db.execute, db.read, db.close } -> Response) -> Native::I64Result
+actions { net.listen, net.accept, net.read, net.write, net.close, clock.read, db.execute, db.read, db.close }
+{
+  let listener = try Native::listen(cap, port);
+  let outcome = serve_context(context, listener, cap, count, handle);
+  finish_listener(listener, outcome)
+}
+
+fn server_permissions()->Permissions {allow(one(ClockRead),Listen)}
