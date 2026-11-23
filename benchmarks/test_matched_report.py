@@ -16,4 +16,9 @@ class ReportTests(unittest.TestCase):
  def test_result_integrity_rejects_duplicate_assignments(self):
   schedule=[{'index':0},{'index':1}]
   with self.assertRaises(ValueError):m.verify_assignments([{'assignment':{'index':0}},{'assignment':{'index':0}}],schedule)
+ def test_pairing_does_not_turn_unknown_usage_into_a_saving(self):
+  rows=[]
+  for language,value in [('lobo',None),('rust',{'input_tokens':10,'output_tokens':1}),('python',{'input_tokens':20,'output_tokens':1})]:
+   rows.append({'assignment':{'family':'ledger','phase':'construction','repeat':0,'language':language},'usage':value,'agent_wall_s':2,'accepted':True})
+  pair=m.paired(rows)[0];self.assertIsNone(pair['lobo_over_rust_tokens']);self.assertEqual(pair['lobo_over_rust_wall'],1)
 if __name__=='__main__':unittest.main()

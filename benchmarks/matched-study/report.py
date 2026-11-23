@@ -33,6 +33,22 @@ def verify_assignments(rows,schedule):
     if len(rows)!=len(schedule):raise ValueError('incomplete cohort: '+str(len(rows)))
 
 
+
+def paired(rows):
+    groups={}
+    for row in rows:
+        a=row['assignment'];key=(a['family'],a['phase'],a['repeat']);groups.setdefault(key,{})[a['language']]=row
+    result=[]
+    for (family,phase,repeat),arms in sorted(groups.items()):
+        if set(arms)!=set(study.LANGUAGES):raise ValueError('incomplete matched block')
+        tokens={lang:(r['usage']['input_tokens']+r['usage']['output_tokens'] if isinstance(r.get('usage'),dict) else None) for lang,r in arms.items()}
+        value={'family':family,'phase':phase,'repeat':repeat,'accepted':{lang:r['accepted'] for lang,r in arms.items()},'reported_input_plus_output_tokens':tokens,'agent_wall_s':{lang:r.get('agent_wall_s') for lang,r in arms.items()}}
+        for other in ['rust','python']:
+            value['lobo_over_'+other+'_tokens']=tokens['lobo']/tokens[other] if tokens['lobo'] is not None and tokens[other] else None
+            left=arms['lobo'].get('agent_wall_s');right=arms[other].get('agent_wall_s');value['lobo_over_'+other+'_wall']=left/right if left is not None and right else None
+        result.append(value)
+    return result
+
 def normalized(row,folder):
     result={key:row.get(key) for key in ['assignment','status','accepted','agent_wall_s','command_tool_items','check_requests','item_types','usage','started_unix','load_before','load_after','exit_code','reason']}
     grading=row['grading']
@@ -61,6 +77,8 @@ def publish(out,fixtures_out):
     for name in ['transport-canaries-1','transport-canaries-amendment-1','transport-canaries-amendment-2']:
         canaries+=json.loads((study.PRIVATE/name/'results.json').read_text())
     result={'date':'2026-11-23','format':'lobo-matched-agent-study/1','frozen_version':'1.11.2','frozen_source_commit':registration['source_commit'],'model':registration['model'],'reasoning':registration['reasoning'],'limits':{key:registration[key] for key in ['deadline_s','command_tool_items','visible_checks','hard_token_cap']},'registration_sha256':study.digest((study.PRIVATE/'registration-amendment-1/manifest.json').read_bytes()),'primary_cohort':{'scheduled':54,'attempted':len(rows),'accepted':sum(r['accepted'] for r in rows),'accounting':account(rows)},'groups':[],'attempts':[],'original_cohort':{'scheduled':54,'attempted':len(original),'accepted':sum(r['accepted'] for r in original),'unattempted':json.loads((study.PRIVATE/'attempts/stopped.json').read_text())['remaining'],'accounting':account(original),'attempts':[normalized(r,study.PRIVATE/'attempts'/('trial-%02d'%r['assignment']['index'])) for r in original]},'excluded_transport_canaries':canaries,'all_model_calls_accounting':account(rows+original+canaries),'limitations':['One configured model alias, two repetitions per task/phase/language; no immutable model weights','Three small pure-function task families; not repository-scale or ecosystem workloads','Time/tool/check opportunity caps, not a hard token cap','Different language guide/source lengths, idioms and prior familiarity','Provider-managed cache and shared-host load; no billing estimate','One infrastructure restart; original cohort retained separately','No feature or feedback ablations; H1/H2/H3 mechanisms are not causally distinguished','Predictions also have a supplied contract; predicate-location item is cued, not blinded fault localization'],'fixture_manifest':[]}
+    result['matched_blocks']=paired(rows)
+    result['paired_cost_ratios']=[{'phase':phase,'comparator':other,'reported_input_plus_output_ratio':stats([r['lobo_over_'+other+'_tokens'] for r in result['matched_blocks'] if r['phase']==phase and r['lobo_over_'+other+'_tokens'] is not None]),'wall_ratio':stats([r['lobo_over_'+other+'_wall'] for r in result['matched_blocks'] if r['phase']==phase and r['lobo_over_'+other+'_wall'] is not None])} for phase,other in itertools.product(study.PHASES,['rust','python'])]
     for phase,language in itertools.product(study.PHASES,study.LANGUAGES):
         subset=[r for r in rows if r['assignment']['phase']==phase and r['assignment']['language']==language];result['groups'].append({'phase':phase,'language':language}|aggregate(subset))
     for row in rows:
