@@ -1,5 +1,12 @@
 # Lobo research record
 
+## Luna high/low reasoning follow-up
+
+The [completed 108-attempt follow-up](luna-reasoning-study-2026-11-23.md) repeats the frozen tasks with
+GPT-5.6-Luna/high, then Luna/low. Acceptance is 49/54 and 44/54; code-writing is 36/36 and 35/36, while
+source-only comprehension shows more misses. All failures, usage and source bundles are retained.
+Paper entry local-039 preserves the prior 38 entries and 111 pins. No language or runtime change is implied.
+
 ## Frozen matched agent pilot at compiler 1.11.2
 
 The [completed 54-attempt study](matched-agent-study-2026-11-23.md) compares construction, source-only

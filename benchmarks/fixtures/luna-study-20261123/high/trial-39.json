@@ -1,0 +1,20 @@
+{
+  "configuration": {
+    "model": "gpt-5.6-luna",
+    "reasoning": "high",
+    "base_harness_sha256": "1c05a60a0c431a9d9336f7b28c9fcfb9f69446cb24ead52f380d1a5d4c838bf0",
+    "wrapper_sha256": "5c02b9846c7af3211ad70cf212e8f119b3360bce8e29b2c2032a9792b321509c"
+  },
+  "assignment": {
+    "index": 39,
+    "repeat": 0,
+    "family": "frames",
+    "phase": "change",
+    "language": "rust"
+  },
+  "files": {
+    "logic.rs": "use crate::model::Summary;\nfn checksum(data:&[u8])->u8 {data.iter().fold(0u8,|sum,b|sum.wrapping_add(*b))}\npub fn run(data:&[u8],limit:i64)->Summary {\n let mut frames=Vec::new();\n let mut cursor=0;\n let mut error=0;\n while cursor<data.len() && error==0 {\n  let start=cursor;\n  let header=data[start];\n  if header==255 {\n   cursor+=1;\n   continue;\n  }\n  let (length,payload_start)=if header==254 {\n   if data.len()-start<3 {error=1;break;}\n   let length=(data[start+1] as usize)|((data[start+2] as usize)<<8);\n   (length,start+3)\n  } else {\n   (header as usize,start+1)\n  };\n  if length as i64>limit {error=3;break;}\n  if data.len()-payload_start<length+1 {error=1;break;}\n  let payload_end=payload_start+length;\n  let payload=&data[payload_start..payload_end];\n  if checksum(payload)!=data[payload_end] {error=2;break;}\n  frames.push(payload.to_vec());\n  cursor=payload_end+1;\n }\n Summary {frames,consumed:cursor as i64,error}\n}\n",
+    "app.rs": "mod model;mod logic;\nfn main(){let a:Vec<String>=std::env::args().collect();let limit:i64=a[1].parse().unwrap();let data:Vec<u8>=(0..a[2].len()).step_by(2).map(|i|u8::from_str_radix(&a[2][i..i+2],16).unwrap()).collect();\nif a.len()>3 {let repeats:i64=a[4].parse().unwrap();let mut total=0i64;for i in 0..repeats {let v=logic::run(std::hint::black_box(&data),limit+i%3);total+=std::hint::black_box(v.consumed+v.error+v.frames.iter().map(|b|b.len() as i64+b.iter().map(|x|*x as i64).sum::<i64>()).sum::<i64>());}println!(\"{}\",total);} else {let v=logic::run(&data,limit);let strings:Vec<String>=v.frames.iter().map(|b|format!(\"\\\"{}\\\"\",b.iter().map(|x|format!(\"{:02x}\",x)).collect::<String>())).collect();println!(\"{{\\\"frames\\\":[{}],\\\"consumed\\\":{},\\\"error\\\":{}}}\",strings.join(\",\"),v.consumed,v.error);}}\n",
+    "model.rs": "pub struct Summary {pub frames:Vec<Vec<u8>>,pub consumed:i64,pub error:i64}\n"
+  }
+}

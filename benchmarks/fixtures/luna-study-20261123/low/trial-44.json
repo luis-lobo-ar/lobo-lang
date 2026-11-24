@@ -1,0 +1,16 @@
+{
+  "configuration": {
+    "model": "gpt-5.6-luna",
+    "reasoning": "low",
+    "base_harness_sha256": "1c05a60a0c431a9d9336f7b28c9fcfb9f69446cb24ead52f380d1a5d4c838bf0",
+    "wrapper_sha256": "5c02b9846c7af3211ad70cf212e8f119b3360bce8e29b2c2032a9792b321509c"
+  },
+  "assignment": {
+    "index": 44,
+    "repeat": 1,
+    "family": "scheduler",
+    "phase": "comprehension",
+    "language": "lobo"
+  },
+  "answer": "{\"predictions\":[{\"order\":[1,0],\"spent\":3,\"blocked\":0},{\"order\":[1],\"spent\":1,\"blocked\":2},{\"order\":[1],\"spent\":0,\"blocked\":1},{\"order\":[],\"spent\":0,\"blocked\":3},{\"order\":[1],\"spent\":2,\"blocked\":1},{\"order\":[0,1,2],\"spent\":2,\"blocked\":0}],\"witness\":{\"jobs\":[{\"id\":0,\"cost\":2,\"deps\":[1]},{\"id\":1,\"cost\":1,\"deps\":[]}],\"budget\":3},\"direct_calls\":[\"choose\"],\"impacted\":[\"fits\",\"choose\",\"run\"],\"fault_location\":\"fits\",\"counterexample\":{\"jobs\":[{\"id\":0,\"cost\":1,\"deps\":[]}],\"budget\":1}}"
+}

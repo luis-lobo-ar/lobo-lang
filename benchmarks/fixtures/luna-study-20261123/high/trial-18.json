@@ -1,0 +1,20 @@
+{
+  "configuration": {
+    "model": "gpt-5.6-luna",
+    "reasoning": "high",
+    "base_harness_sha256": "1c05a60a0c431a9d9336f7b28c9fcfb9f69446cb24ead52f380d1a5d4c838bf0",
+    "wrapper_sha256": "5c02b9846c7af3211ad70cf212e8f119b3360bce8e29b2c2032a9792b321509c"
+  },
+  "assignment": {
+    "index": 18,
+    "repeat": 1,
+    "family": "frames",
+    "phase": "change",
+    "language": "rust"
+  },
+  "files": {
+    "logic.rs": "use crate::model::Summary;\n\nfn checksum(payload: &[u8]) -> u8 {\n    payload\n        .iter()\n        .fold(0u8, |sum, byte| sum.wrapping_add(*byte))\n}\n\npub fn run(data: &[u8], limit: i64) -> Summary {\n    let mut frames = Vec::new();\n    let mut cursor = 0usize;\n    let mut error = 0i64;\n\n    while cursor < data.len() {\n        let start = cursor;\n        let marker = data[cursor];\n\n        if marker == 255 {\n            cursor += 1;\n            continue;\n        }\n\n        let (length, payload_start) = if marker == 254 {\n            if data.len() - cursor < 3 {\n                error = 1;\n                break;\n            }\n            let length = i64::from(data[cursor + 1])\n                | (i64::from(data[cursor + 2]) << 8);\n            (length, cursor + 3)\n        } else {\n            (i64::from(marker), cursor + 1)\n        };\n\n        if length > limit {\n            error = 3;\n            break;\n        }\n\n        let payload_length = length as usize;\n        if data.len() - payload_start < payload_length + 1 {\n            error = 1;\n            break;\n        }\n\n        let checksum_index = payload_start + payload_length;\n        let payload = &data[payload_start..checksum_index];\n        if checksum(payload) != data[checksum_index] {\n            error = 2;\n            break;\n        }\n\n        frames.push(payload.to_vec());\n        cursor = checksum_index + 1;\n        debug_assert!(cursor > start);\n    }\n\n    Summary {\n        frames,\n        consumed: if error == 0 { data.len() as i64 } else { cursor as i64 },\n        error,\n    }\n}\n",
+    "app.rs": "mod model;mod logic;\nfn main(){let a:Vec<String>=std::env::args().collect();let limit:i64=a[1].parse().unwrap();let data:Vec<u8>=(0..a[2].len()).step_by(2).map(|i|u8::from_str_radix(&a[2][i..i+2],16).unwrap()).collect();\nif a.len()>3 {let repeats:i64=a[4].parse().unwrap();let mut total=0i64;for i in 0..repeats {let v=logic::run(std::hint::black_box(&data),limit+i%3);total+=std::hint::black_box(v.consumed+v.error+v.frames.iter().map(|b|b.len() as i64+b.iter().map(|x|*x as i64).sum::<i64>()).sum::<i64>());}println!(\"{}\",total);} else {let v=logic::run(&data,limit);let strings:Vec<String>=v.frames.iter().map(|b|format!(\"\\\"{}\\\"\",b.iter().map(|x|format!(\"{:02x}\",x)).collect::<String>())).collect();println!(\"{{\\\"frames\\\":[{}],\\\"consumed\\\":{},\\\"error\\\":{}}}\",strings.join(\",\"),v.consumed,v.error);}}\n",
+    "model.rs": "pub struct Summary {pub frames:Vec<Vec<u8>>,pub consumed:i64,pub error:i64}\n"
+  }
+}

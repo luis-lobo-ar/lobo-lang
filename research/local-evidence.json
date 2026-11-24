@@ -1204,6 +1204,58 @@
         "A hard-token-matched experiment, total study-development token cost or billed-dollar saving",
         "A controlled longitudinal improvement over older language iterations or immutable model weights"
       ]
+    },
+    {
+      "id": "local-039",
+      "date": "2026-11-23",
+      "title": "Luna high/low reasoning comparison on frozen 1.11.2 tasks",
+      "evidence_kind": "registered ordered model/reasoning cohorts, independent grading and post-hoc diagnostic replay",
+      "status": "completed; high 49/54 and low 44/54 accepted, all 110 invocations usage-known; failures and prior evidence preserved",
+      "files": [
+        {
+          "path": "research/luna-reasoning-study-2026-11-23.md",
+          "sha256": "049a846a535b3ff18162c5c17bfb44ce29925fd2783a6d5ccd3de209804e6b64"
+        },
+        {
+          "path": "benchmarks/results/2026-11-23-luna-reasoning-study.json",
+          "sha256": "4ffc450b263bb564847e60d6358244419322f8653614ddbe4c3d1c202a476023"
+        },
+        {
+          "path": "benchmarks/results/2026-11-23-luna-study-registration.json",
+          "sha256": "bd4a2eb994484b0c0e4df538a09eaf370260fa473660463c91fa954bba7d4840"
+        },
+        {
+          "path": "benchmarks/results/2026-11-23-luna-study-diagnostics.json",
+          "sha256": "d7b9ee1787e141beda30209b3717ed0d6d718c911db468f8df7ee5425ff60621"
+        },
+        {
+          "path": "benchmarks/results/2026-11-23-luna-study-verification.json",
+          "sha256": "14488766af582ed50ef0e99866c96d9e15e4fd7b9292c486dc7a7a128cbe6878"
+        },
+        {
+          "path": "benchmarks/results/2026-11-23-luna-raw-evidence-manifest.json",
+          "sha256": "e48c89dcefe1c17dbbfd9bc7b1dd39245ccd1329d5fc81941dde7a3324bbd418"
+        },
+        {
+          "path": "research/snapshots/2026-11-23-luna-study/harnesses.json",
+          "sha256": "9649127c4f58acd9c2e60acea8b3185b5ec8209332369e5caa1c174fa80afc4c"
+        }
+      ],
+      "supports": [
+        "108 completed scored assignments under unchanged frozen input bytes, graders and limits",
+        "Luna high 36/36 and low 35/36 construction/change acceptance, including all 12 Lobo code-writing assignments at each setting",
+        "High 13/18 and low 9/18 comprehension acceptance, with 192/198 and 187/198 items correct",
+        "A compiled low-reasoning Rust scheduler failed unordered-ID dependency cases; public replay and minimal counterexample reproduce the defect",
+        "Observed participant time/token reductions at low effort alongside more unsuccessful responses",
+        "Exact input/prompt/command audits, public source bundles and preservation of all previous 38 entries/111 pins"
+      ],
+      "does_not_establish": [
+        "A population language/model ranking or a provably weakest available model",
+        "A causal reasoning/model-size effect independent of chronology, cache, host instructions or provider behavior",
+        "A Lobo quality/token advantage in general software construction or source comprehension",
+        "Equal compute from matching reasoning labels, a hard token cap, billed-dollar savings or total study-development cost",
+        "Correctness beyond the finite observations, or a new runtime speed claim for generated programs"
+      ]
     }
   ],
   "backend_recommendation": {

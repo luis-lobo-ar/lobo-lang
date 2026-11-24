@@ -1,0 +1,1226 @@
+{
+  "date": "2026-11-23",
+  "prediction_reference_audit": [
+    {
+      "family": "ledger",
+      "language": "lobo",
+      "prediction": 0,
+      "actual": {
+        "balance": 4,
+        "rejected": 0,
+        "peak": 5,
+        "audit": [
+          5,
+          3,
+          4
+        ]
+      },
+      "expected": {
+        "balance": 4,
+        "rejected": 0,
+        "peak": 5,
+        "audit": [
+          5,
+          3,
+          4
+        ]
+      },
+      "ok": true
+    },
+    {
+      "family": "ledger",
+      "language": "lobo",
+      "prediction": 1,
+      "actual": {
+        "balance": 0,
+        "rejected": 1,
+        "peak": 5,
+        "audit": [
+          3,
+          3,
+          5,
+          5,
+          0
+        ]
+      },
+      "expected": {
+        "balance": 0,
+        "rejected": 1,
+        "peak": 5,
+        "audit": [
+          3,
+          3,
+          5,
+          5,
+          0
+        ]
+      },
+      "ok": true
+    },
+    {
+      "family": "ledger",
+      "language": "lobo",
+      "prediction": 2,
+      "actual": {
+        "balance": 0,
+        "rejected": 2,
+        "peak": 1,
+        "audit": [
+          1,
+          1,
+          0
+        ]
+      },
+      "expected": {
+        "balance": 0,
+        "rejected": 2,
+        "peak": 1,
+        "audit": [
+          1,
+          1,
+          0
+        ]
+      },
+      "ok": true
+    },
+    {
+      "family": "ledger",
+      "language": "lobo",
+      "prediction": 3,
+      "actual": {
+        "balance": 0,
+        "rejected": 0,
+        "peak": 0,
+        "audit": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "expected": {
+        "balance": 0,
+        "rejected": 0,
+        "peak": 0,
+        "audit": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "ok": true
+    },
+    {
+      "family": "ledger",
+      "language": "lobo",
+      "prediction": 4,
+      "actual": {
+        "balance": 7,
+        "rejected": 1,
+        "peak": 7,
+        "audit": [
+          7,
+          7,
+          7,
+          7
+        ]
+      },
+      "expected": {
+        "balance": 7,
+        "rejected": 1,
+        "peak": 7,
+        "audit": [
+          7,
+          7,
+          7,
+          7
+        ]
+      },
+      "ok": true
+    },
+    {
+      "family": "ledger",
+      "language": "lobo",
+      "prediction": 5,
+      "actual": {
+        "balance": 1000001,
+        "rejected": 1,
+        "peak": 1000001,
+        "audit": [
+          1000000,
+          1000001,
+          1000001
+        ]
+      },
+      "expected": {
+        "balance": 1000001,
+        "rejected": 1,
+        "peak": 1000001,
+        "audit": [
+          1000000,
+          1000001,
+          1000001
+        ]
+      },
+      "ok": true
+    },
+    {
+      "family": "ledger",
+      "language": "rust",
+      "prediction": 0,
+      "actual": {
+        "balance": 4,
+        "rejected": 0,
+        "peak": 5,
+        "audit": [
+          5,
+          3,
+          4
+        ]
+      },
+      "expected": {
+        "balance": 4,
+        "rejected": 0,
+        "peak": 5,
+        "audit": [
+          5,
+          3,
+          4
+        ]
+      },
+      "ok": true
+    },
+    {
+      "family": "ledger",
+      "language": "rust",
+      "prediction": 1,
+      "actual": {
+        "balance": 0,
+        "rejected": 1,
+        "peak": 5,
+        "audit": [
+          3,
+          3,
+          5,
+          5,
+          0
+        ]
+      },
+      "expected": {
+        "balance": 0,
+        "rejected": 1,
+        "peak": 5,
+        "audit": [
+          3,
+          3,
+          5,
+          5,
+          0
+        ]
+      },
+      "ok": true
+    },
+    {
+      "family": "ledger",
+      "language": "rust",
+      "prediction": 2,
+      "actual": {
+        "balance": 0,
+        "rejected": 2,
+        "peak": 1,
+        "audit": [
+          1,
+          1,
+          0
+        ]
+      },
+      "expected": {
+        "balance": 0,
+        "rejected": 2,
+        "peak": 1,
+        "audit": [
+          1,
+          1,
+          0
+        ]
+      },
+      "ok": true
+    },
+    {
+      "family": "ledger",
+      "language": "rust",
+      "prediction": 3,
+      "actual": {
+        "balance": 0,
+        "rejected": 0,
+        "peak": 0,
+        "audit": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "expected": {
+        "balance": 0,
+        "rejected": 0,
+        "peak": 0,
+        "audit": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "ok": true
+    },
+    {
+      "family": "ledger",
+      "language": "rust",
+      "prediction": 4,
+      "actual": {
+        "balance": 7,
+        "rejected": 1,
+        "peak": 7,
+        "audit": [
+          7,
+          7,
+          7,
+          7
+        ]
+      },
+      "expected": {
+        "balance": 7,
+        "rejected": 1,
+        "peak": 7,
+        "audit": [
+          7,
+          7,
+          7,
+          7
+        ]
+      },
+      "ok": true
+    },
+    {
+      "family": "ledger",
+      "language": "rust",
+      "prediction": 5,
+      "actual": {
+        "balance": 1000001,
+        "rejected": 1,
+        "peak": 1000001,
+        "audit": [
+          1000000,
+          1000001,
+          1000001
+        ]
+      },
+      "expected": {
+        "balance": 1000001,
+        "rejected": 1,
+        "peak": 1000001,
+        "audit": [
+          1000000,
+          1000001,
+          1000001
+        ]
+      },
+      "ok": true
+    },
+    {
+      "family": "ledger",
+      "language": "python",
+      "prediction": 0,
+      "actual": {
+        "balance": 4,
+        "rejected": 0,
+        "peak": 5,
+        "audit": [
+          5,
+          3,
+          4
+        ]
+      },
+      "expected": {
+        "balance": 4,
+        "rejected": 0,
+        "peak": 5,
+        "audit": [
+          5,
+          3,
+          4
+        ]
+      },
+      "ok": true
+    },
+    {
+      "family": "ledger",
+      "language": "python",
+      "prediction": 1,
+      "actual": {
+        "balance": 0,
+        "rejected": 1,
+        "peak": 5,
+        "audit": [
+          3,
+          3,
+          5,
+          5,
+          0
+        ]
+      },
+      "expected": {
+        "balance": 0,
+        "rejected": 1,
+        "peak": 5,
+        "audit": [
+          3,
+          3,
+          5,
+          5,
+          0
+        ]
+      },
+      "ok": true
+    },
+    {
+      "family": "ledger",
+      "language": "python",
+      "prediction": 2,
+      "actual": {
+        "balance": 0,
+        "rejected": 2,
+        "peak": 1,
+        "audit": [
+          1,
+          1,
+          0
+        ]
+      },
+      "expected": {
+        "balance": 0,
+        "rejected": 2,
+        "peak": 1,
+        "audit": [
+          1,
+          1,
+          0
+        ]
+      },
+      "ok": true
+    },
+    {
+      "family": "ledger",
+      "language": "python",
+      "prediction": 3,
+      "actual": {
+        "balance": 0,
+        "rejected": 0,
+        "peak": 0,
+        "audit": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "expected": {
+        "balance": 0,
+        "rejected": 0,
+        "peak": 0,
+        "audit": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "ok": true
+    },
+    {
+      "family": "ledger",
+      "language": "python",
+      "prediction": 4,
+      "actual": {
+        "balance": 7,
+        "rejected": 1,
+        "peak": 7,
+        "audit": [
+          7,
+          7,
+          7,
+          7
+        ]
+      },
+      "expected": {
+        "balance": 7,
+        "rejected": 1,
+        "peak": 7,
+        "audit": [
+          7,
+          7,
+          7,
+          7
+        ]
+      },
+      "ok": true
+    },
+    {
+      "family": "ledger",
+      "language": "python",
+      "prediction": 5,
+      "actual": {
+        "balance": 1000001,
+        "rejected": 1,
+        "peak": 1000001,
+        "audit": [
+          1000000,
+          1000001,
+          1000001
+        ]
+      },
+      "expected": {
+        "balance": 1000001,
+        "rejected": 1,
+        "peak": 1000001,
+        "audit": [
+          1000000,
+          1000001,
+          1000001
+        ]
+      },
+      "ok": true
+    },
+    {
+      "family": "scheduler",
+      "language": "lobo",
+      "prediction": 0,
+      "actual": {
+        "order": [
+          1,
+          0
+        ],
+        "spent": 3,
+        "blocked": 0
+      },
+      "expected": {
+        "order": [
+          1,
+          0
+        ],
+        "spent": 3,
+        "blocked": 0
+      },
+      "ok": true
+    },
+    {
+      "family": "scheduler",
+      "language": "lobo",
+      "prediction": 1,
+      "actual": {
+        "order": [
+          0
+        ],
+        "spent": 2,
+        "blocked": 2
+      },
+      "expected": {
+        "order": [
+          0
+        ],
+        "spent": 2,
+        "blocked": 2
+      },
+      "ok": true
+    },
+    {
+      "family": "scheduler",
+      "language": "lobo",
+      "prediction": 2,
+      "actual": {
+        "order": [
+          1
+        ],
+        "spent": 0,
+        "blocked": 1
+      },
+      "expected": {
+        "order": [
+          1
+        ],
+        "spent": 0,
+        "blocked": 1
+      },
+      "ok": true
+    },
+    {
+      "family": "scheduler",
+      "language": "lobo",
+      "prediction": 3,
+      "actual": {
+        "order": [],
+        "spent": 0,
+        "blocked": 3
+      },
+      "expected": {
+        "order": [],
+        "spent": 0,
+        "blocked": 3
+      },
+      "ok": true
+    },
+    {
+      "family": "scheduler",
+      "language": "lobo",
+      "prediction": 4,
+      "actual": {
+        "order": [
+          1
+        ],
+        "spent": 2,
+        "blocked": 1
+      },
+      "expected": {
+        "order": [
+          1
+        ],
+        "spent": 2,
+        "blocked": 1
+      },
+      "ok": true
+    },
+    {
+      "family": "scheduler",
+      "language": "lobo",
+      "prediction": 5,
+      "actual": {
+        "order": [
+          0,
+          1,
+          2
+        ],
+        "spent": 2,
+        "blocked": 0
+      },
+      "expected": {
+        "order": [
+          0,
+          1,
+          2
+        ],
+        "spent": 2,
+        "blocked": 0
+      },
+      "ok": true
+    },
+    {
+      "family": "scheduler",
+      "language": "rust",
+      "prediction": 0,
+      "actual": {
+        "order": [
+          1,
+          0
+        ],
+        "spent": 3,
+        "blocked": 0
+      },
+      "expected": {
+        "order": [
+          1,
+          0
+        ],
+        "spent": 3,
+        "blocked": 0
+      },
+      "ok": true
+    },
+    {
+      "family": "scheduler",
+      "language": "rust",
+      "prediction": 1,
+      "actual": {
+        "order": [
+          0
+        ],
+        "spent": 2,
+        "blocked": 2
+      },
+      "expected": {
+        "order": [
+          0
+        ],
+        "spent": 2,
+        "blocked": 2
+      },
+      "ok": true
+    },
+    {
+      "family": "scheduler",
+      "language": "rust",
+      "prediction": 2,
+      "actual": {
+        "order": [
+          1
+        ],
+        "spent": 0,
+        "blocked": 1
+      },
+      "expected": {
+        "order": [
+          1
+        ],
+        "spent": 0,
+        "blocked": 1
+      },
+      "ok": true
+    },
+    {
+      "family": "scheduler",
+      "language": "rust",
+      "prediction": 3,
+      "actual": {
+        "order": [],
+        "spent": 0,
+        "blocked": 3
+      },
+      "expected": {
+        "order": [],
+        "spent": 0,
+        "blocked": 3
+      },
+      "ok": true
+    },
+    {
+      "family": "scheduler",
+      "language": "rust",
+      "prediction": 4,
+      "actual": {
+        "order": [
+          1
+        ],
+        "spent": 2,
+        "blocked": 1
+      },
+      "expected": {
+        "order": [
+          1
+        ],
+        "spent": 2,
+        "blocked": 1
+      },
+      "ok": true
+    },
+    {
+      "family": "scheduler",
+      "language": "rust",
+      "prediction": 5,
+      "actual": {
+        "order": [
+          0,
+          1,
+          2
+        ],
+        "spent": 2,
+        "blocked": 0
+      },
+      "expected": {
+        "order": [
+          0,
+          1,
+          2
+        ],
+        "spent": 2,
+        "blocked": 0
+      },
+      "ok": true
+    },
+    {
+      "family": "scheduler",
+      "language": "python",
+      "prediction": 0,
+      "actual": {
+        "order": [
+          1,
+          0
+        ],
+        "spent": 3,
+        "blocked": 0
+      },
+      "expected": {
+        "order": [
+          1,
+          0
+        ],
+        "spent": 3,
+        "blocked": 0
+      },
+      "ok": true
+    },
+    {
+      "family": "scheduler",
+      "language": "python",
+      "prediction": 1,
+      "actual": {
+        "order": [
+          0
+        ],
+        "spent": 2,
+        "blocked": 2
+      },
+      "expected": {
+        "order": [
+          0
+        ],
+        "spent": 2,
+        "blocked": 2
+      },
+      "ok": true
+    },
+    {
+      "family": "scheduler",
+      "language": "python",
+      "prediction": 2,
+      "actual": {
+        "order": [
+          1
+        ],
+        "spent": 0,
+        "blocked": 1
+      },
+      "expected": {
+        "order": [
+          1
+        ],
+        "spent": 0,
+        "blocked": 1
+      },
+      "ok": true
+    },
+    {
+      "family": "scheduler",
+      "language": "python",
+      "prediction": 3,
+      "actual": {
+        "order": [],
+        "spent": 0,
+        "blocked": 3
+      },
+      "expected": {
+        "order": [],
+        "spent": 0,
+        "blocked": 3
+      },
+      "ok": true
+    },
+    {
+      "family": "scheduler",
+      "language": "python",
+      "prediction": 4,
+      "actual": {
+        "order": [
+          1
+        ],
+        "spent": 2,
+        "blocked": 1
+      },
+      "expected": {
+        "order": [
+          1
+        ],
+        "spent": 2,
+        "blocked": 1
+      },
+      "ok": true
+    },
+    {
+      "family": "scheduler",
+      "language": "python",
+      "prediction": 5,
+      "actual": {
+        "order": [
+          0,
+          1,
+          2
+        ],
+        "spent": 2,
+        "blocked": 0
+      },
+      "expected": {
+        "order": [
+          0,
+          1,
+          2
+        ],
+        "spent": 2,
+        "blocked": 0
+      },
+      "ok": true
+    },
+    {
+      "family": "frames",
+      "language": "lobo",
+      "prediction": 0,
+      "actual": {
+        "frames": [],
+        "consumed": 0,
+        "error": 0
+      },
+      "expected": {
+        "frames": [],
+        "consumed": 0,
+        "error": 0
+      },
+      "ok": true
+    },
+    {
+      "family": "frames",
+      "language": "lobo",
+      "prediction": 1,
+      "actual": {
+        "frames": [
+          ""
+        ],
+        "consumed": 2,
+        "error": 0
+      },
+      "expected": {
+        "frames": [
+          ""
+        ],
+        "consumed": 2,
+        "error": 0
+      },
+      "ok": true
+    },
+    {
+      "family": "frames",
+      "language": "lobo",
+      "prediction": 2,
+      "actual": {
+        "frames": [
+          "0102"
+        ],
+        "consumed": 4,
+        "error": 0
+      },
+      "expected": {
+        "frames": [
+          "0102"
+        ],
+        "consumed": 4,
+        "error": 0
+      },
+      "ok": true
+    },
+    {
+      "family": "frames",
+      "language": "lobo",
+      "prediction": 3,
+      "actual": {
+        "frames": [],
+        "consumed": 0,
+        "error": 2
+      },
+      "expected": {
+        "frames": [],
+        "consumed": 0,
+        "error": 2
+      },
+      "ok": true
+    },
+    {
+      "family": "frames",
+      "language": "lobo",
+      "prediction": 4,
+      "actual": {
+        "frames": [],
+        "consumed": 0,
+        "error": 3
+      },
+      "expected": {
+        "frames": [],
+        "consumed": 0,
+        "error": 3
+      },
+      "ok": true
+    },
+    {
+      "family": "frames",
+      "language": "lobo",
+      "prediction": 5,
+      "actual": {
+        "frames": [
+          "01"
+        ],
+        "consumed": 3,
+        "error": 1
+      },
+      "expected": {
+        "frames": [
+          "01"
+        ],
+        "consumed": 3,
+        "error": 1
+      },
+      "ok": true
+    },
+    {
+      "family": "frames",
+      "language": "rust",
+      "prediction": 0,
+      "actual": {
+        "frames": [],
+        "consumed": 0,
+        "error": 0
+      },
+      "expected": {
+        "frames": [],
+        "consumed": 0,
+        "error": 0
+      },
+      "ok": true
+    },
+    {
+      "family": "frames",
+      "language": "rust",
+      "prediction": 1,
+      "actual": {
+        "frames": [
+          ""
+        ],
+        "consumed": 2,
+        "error": 0
+      },
+      "expected": {
+        "frames": [
+          ""
+        ],
+        "consumed": 2,
+        "error": 0
+      },
+      "ok": true
+    },
+    {
+      "family": "frames",
+      "language": "rust",
+      "prediction": 2,
+      "actual": {
+        "frames": [
+          "0102"
+        ],
+        "consumed": 4,
+        "error": 0
+      },
+      "expected": {
+        "frames": [
+          "0102"
+        ],
+        "consumed": 4,
+        "error": 0
+      },
+      "ok": true
+    },
+    {
+      "family": "frames",
+      "language": "rust",
+      "prediction": 3,
+      "actual": {
+        "frames": [],
+        "consumed": 0,
+        "error": 2
+      },
+      "expected": {
+        "frames": [],
+        "consumed": 0,
+        "error": 2
+      },
+      "ok": true
+    },
+    {
+      "family": "frames",
+      "language": "rust",
+      "prediction": 4,
+      "actual": {
+        "frames": [],
+        "consumed": 0,
+        "error": 3
+      },
+      "expected": {
+        "frames": [],
+        "consumed": 0,
+        "error": 3
+      },
+      "ok": true
+    },
+    {
+      "family": "frames",
+      "language": "rust",
+      "prediction": 5,
+      "actual": {
+        "frames": [
+          "01"
+        ],
+        "consumed": 3,
+        "error": 1
+      },
+      "expected": {
+        "frames": [
+          "01"
+        ],
+        "consumed": 3,
+        "error": 1
+      },
+      "ok": true
+    },
+    {
+      "family": "frames",
+      "language": "python",
+      "prediction": 0,
+      "actual": {
+        "frames": [],
+        "consumed": 0,
+        "error": 0
+      },
+      "expected": {
+        "frames": [],
+        "consumed": 0,
+        "error": 0
+      },
+      "ok": true
+    },
+    {
+      "family": "frames",
+      "language": "python",
+      "prediction": 1,
+      "actual": {
+        "frames": [
+          ""
+        ],
+        "consumed": 2,
+        "error": 0
+      },
+      "expected": {
+        "frames": [
+          ""
+        ],
+        "consumed": 2,
+        "error": 0
+      },
+      "ok": true
+    },
+    {
+      "family": "frames",
+      "language": "python",
+      "prediction": 2,
+      "actual": {
+        "frames": [
+          "0102"
+        ],
+        "consumed": 4,
+        "error": 0
+      },
+      "expected": {
+        "frames": [
+          "0102"
+        ],
+        "consumed": 4,
+        "error": 0
+      },
+      "ok": true
+    },
+    {
+      "family": "frames",
+      "language": "python",
+      "prediction": 3,
+      "actual": {
+        "frames": [],
+        "consumed": 0,
+        "error": 2
+      },
+      "expected": {
+        "frames": [],
+        "consumed": 0,
+        "error": 2
+      },
+      "ok": true
+    },
+    {
+      "family": "frames",
+      "language": "python",
+      "prediction": 4,
+      "actual": {
+        "frames": [],
+        "consumed": 0,
+        "error": 3
+      },
+      "expected": {
+        "frames": [],
+        "consumed": 0,
+        "error": 3
+      },
+      "ok": true
+    },
+    {
+      "family": "frames",
+      "language": "python",
+      "prediction": 5,
+      "actual": {
+        "frames": [
+          "01"
+        ],
+        "consumed": 3,
+        "error": 1
+      },
+      "expected": {
+        "frames": [
+          "01"
+        ],
+        "consumed": 3,
+        "error": 1
+      },
+      "ok": true
+    }
+  ],
+  "scheduler_minimal_counterexample": {
+    "status": "post-hoc diagnostic only; not added to scored observations or feedback",
+    "trial_index": 9,
+    "configuration": "gpt-5.6-luna low",
+    "input": {
+      "jobs": [
+        {
+          "id": 1,
+          "cost": 1,
+          "deps": []
+        },
+        {
+          "id": 0,
+          "cost": 1,
+          "deps": [
+            0
+          ]
+        }
+      ],
+      "budget": 2
+    },
+    "expected": {
+      "order": [
+        1
+      ],
+      "spent": 1,
+      "blocked": 1
+    },
+    "actual": {
+      "order": [
+        1,
+        0
+      ],
+      "spent": 2,
+      "blocked": 0
+    },
+    "different": true
+  },
+  "interpretation": "Read-only, post-hoc validation. No scored prompts, cases, source programs, thresholds or feedback changed."
+}

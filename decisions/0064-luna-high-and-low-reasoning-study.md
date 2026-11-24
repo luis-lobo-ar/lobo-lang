@@ -1,6 +1,6 @@
 # 0064 — Repeat the frozen pilot with Luna at high and low reasoning
 
-Date: 2026-11-23. Status: user-selected; experiments pending.
+Date: 2026-11-23. Status: completed; both requested cohorts retained without retries.
 
 The user selected both GPT-5.6-Luna configurations: first the same high reasoning used by the
 GPT-6.1-Sol baseline, then the lowest advertised reasoning level, low. Run two separate 54-assignment
@@ -28,3 +28,13 @@ All previous 38 paper entries and 111 file pins remain unchanged. Add results as
 measurements from decision 0063 remain valid for their binaries; this request changes agent configuration,
 not the speed of those same artifacts. Any new runtime comparison of generated programs must be separately
 labelled and must retain unsuccessful-task denominators. Stop at these two cohorts and documentation.
+
+## Completed observations
+
+All 108 scored assignments completed, with no missing terminal usage, budget overruns or infrastructure
+interruptions. Luna/high accepted 49/54 and Luna/low 44/54. Code-writing outcomes were 36/36 and 35/36;
+comprehension accepted 13/18 and 9/18, with 192/198 and 187/198 items. Lobo passed all 12 construction/change
+assignments in both cohorts. Low used less participant time and reported fewer tokens, with more failures.
+A low Rust scheduler has a confirmed storage-index/job-ID mismatch. Preserve its failing code.
+Source/command hash audits and public replays pass. See research/luna-reasoning-study-2026-11-23.md and
+paper entry local-039. These observations select no language feature, further model trial or runtime study.

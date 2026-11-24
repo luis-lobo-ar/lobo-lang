@@ -1,0 +1,20 @@
+{
+  "configuration": {
+    "model": "gpt-5.6-luna",
+    "reasoning": "high",
+    "base_harness_sha256": "1c05a60a0c431a9d9336f7b28c9fcfb9f69446cb24ead52f380d1a5d4c838bf0",
+    "wrapper_sha256": "5c02b9846c7af3211ad70cf212e8f119b3360bce8e29b2c2032a9792b321509c"
+  },
+  "assignment": {
+    "index": 23,
+    "repeat": 0,
+    "family": "ledger",
+    "phase": "construction",
+    "language": "python"
+  },
+  "files": {
+    "app.py": "import sys,json\nfrom dataclasses import asdict\nimport model,logic\na=sys.argv\ninitial=int(a[1]);events=[model.Event(model.Kind(int(s.split(':')[0])),int(s.split(':')[1])) for s in a[2].split(';') if s]\nif len(a)>3:\n total=0\n for i in range(int(a[4])):\n  v=logic.run(events,initial+i%3);total+=v.balance+v.rejected+v.peak+sum(v.audit)\n print(total)\nelse:\n v=logic.run(events,initial);value=asdict(v)\n print(json.dumps(value))\n",
+    "logic.py": "from model import Summary,Event,Kind\n\n\ndef run(events, initial):\n    balance = initial\n    rejected = 0\n    peak = initial\n    audit = []\n    locked = False\n\n    for event in events:\n        if event.kind == Kind.CREDIT:\n            if 0 <= event.amount <= 1000000:\n                balance += event.amount\n            else:\n                rejected += 1\n        elif event.kind == Kind.DEBIT:\n            if not (0 <= event.amount <= 1000000):\n                rejected += 1\n            elif locked or event.amount > balance:\n                rejected += 1\n            else:\n                balance -= event.amount\n        elif event.kind == Kind.LOCK:\n            locked = True\n        elif event.kind == Kind.UNLOCK:\n            locked = False\n\n        peak = max(peak, balance)\n        audit.append(balance)\n\n    return Summary(balance, rejected, peak, audit)\n",
+    "model.py": "from dataclasses import dataclass\nfrom enum import IntEnum\nclass Kind(IntEnum):\n CREDIT=0\n DEBIT=1\n LOCK=2\n UNLOCK=3\n@dataclass(frozen=True)\nclass Event:\n kind:Kind\n amount:int=0\n@dataclass\nclass Summary:\n balance:int\n rejected:int\n peak:int\n audit:list[int]\n"
+  }
+}

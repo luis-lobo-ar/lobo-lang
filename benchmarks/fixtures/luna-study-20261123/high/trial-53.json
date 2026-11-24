@@ -1,0 +1,23 @@
+{
+  "configuration": {
+    "model": "gpt-5.6-luna",
+    "reasoning": "high",
+    "base_harness_sha256": "1c05a60a0c431a9d9336f7b28c9fcfb9f69446cb24ead52f380d1a5d4c838bf0",
+    "wrapper_sha256": "5c02b9846c7af3211ad70cf212e8f119b3360bce8e29b2c2032a9792b321509c"
+  },
+  "assignment": {
+    "index": 53,
+    "repeat": 1,
+    "family": "frames",
+    "phase": "construction",
+    "language": "lobo"
+  },
+  "files": {
+    "app.lobo.ids.json": "{\n  \"format\": \"lobo-identities/0.1\",\n  \"identities\": {\n    \"module\": \"study.frames.app\",\n    \"model.Summary\": \"study.frames.Summary\",\n    \"logic.run\": \"study.frames.run\",\n    \"SumCursor\": \"study.frames.app.SumCursor\",\n    \"FrameCursor\": \"study.frames.app.FrameCursor\",\n    \"sum_list\": \"study.frames.app.sum_list\",\n    \"sum_bytes\": \"study.frames.app.sum_bytes\",\n    \"sum_frames\": \"study.frames.app.sum_frames\",\n    \"digest_summary\": \"study.frames.app.digest_summary\",\n    \"entry\": \"study.frames.entry\",\n    \"bench\": \"study.frames.bench\"\n  }\n}\n",
+    "util.lobo": "module util;\nrecord Reverse<T> { pending:List<T>, output:List<T> }\nfn reverse<T>(items:List<T>)->List<T> {\n let final=fold(i in List::length(items), state:Reverse<T> =Reverse {pending:items,output:List::empty<T>()}) {\n  Reverse {pending:List::tail(state.pending),output:List::prepend(List::head(state.pending),state.output)}\n };\n final.output\n}\nidentities {module:\"study.util\",Reverse:\"study.util.Reverse\",reverse:\"study.util.reverse\"}\n",
+    "logic.lobo.ids.json": "{\n  \"format\": \"lobo-identities/0.1\",\n  \"identities\": {\n    \"Cursor\": \"lobo.10f74e0b9d07e770071b93b1e9747f08\",\n    \"model.Summary\": \"study.frames.Summary\",\n    \"module\": \"study.frames.logic\",\n    \"run\": \"study.frames.run\",\n    \"util.reverse\": \"study.util.reverse\"\n  }\n}",
+    "app.lobo": "module app;\nuse model {Summary};\nuse logic {run};\nrecord SumCursor {pending:List<I64>,total:I64}\nrecord FrameCursor {pending:List<Bytes>,total:I64}\nfn sum_list(items:List<I64>)->I64 {let final=fold(i in List::length(items),state:SumCursor=SumCursor {pending:items,total:0}) {SumCursor {pending:List::tail(state.pending),total:state.total+List::head(state.pending)}}; final.total}\nfn sum_bytes(data:Bytes)->I64 {fold(i in Bytes::length(data),total:I64=0) {total+Bytes::at(data,i)}}\nfn sum_frames(items:List<Bytes>)->I64 {let final=fold(i in List::length(items),state:FrameCursor=FrameCursor {pending:items,total:0}) {FrameCursor {pending:List::tail(state.pending),total:state.total+Bytes::length(List::head(state.pending))+sum_bytes(List::head(state.pending))}}; final.total}\nfn digest_summary(value:Summary)->I64 {value.consumed+value.error+sum_frames(value.frames)}\nfn entry(data:Bytes,limit:I64)->Summary {logic.run(data,limit)}\nfn bench(data:Bytes,limit:I64,repeats:I64)->I64 {fold(i in repeats,total:I64=0) {total+digest_summary(logic.run(data,limit+i%3))}}\n",
+    "logic.lobo": "module logic;\nuse model {Summary};\nuse util {reverse};\nrecord Cursor {pos:I64,frames:List<Bytes>,consumed:I64,error:I64,done:Bool}\nfn run(data:Bytes,limit:I64)->Summary {\n  let initial = Cursor {pos:0,frames:List::empty<Bytes>(),consumed:0,error:0,done:false};\n  let final = while(state:Cursor=initial;state.pos < Bytes::length(data) && !state.done) {\n    let start = state.pos;\n    let n = Bytes::at(data,start);\n    if n > limit {\n      Cursor {...state,consumed:start,error:3,done:true}\n    } else {\n      if start + n + 2 > Bytes::length(data) {\n        Cursor {...state,consumed:start,error:1,done:true}\n      } else {\n        let payload = Bytes::slice(data,start + 1,n);\n        let checksum = Bytes::at(data,start + n + 1);\n        let total = fold(i in n,total:I64=0) {total + Bytes::at(payload,i)};\n        if total % 256 != checksum {\n          Cursor {...state,consumed:start,error:2,done:true}\n        } else {\n          Cursor {...state,pos:start + n + 2,frames:List::prepend(payload,state.frames),consumed:start + n + 2}\n        }\n      }\n    }\n  };\n  Summary {frames:reverse(final.frames),consumed:final.consumed,error:final.error}\n}\n",
+    "model.lobo": "module model;\nrecord Summary {frames:List<Bytes>,consumed:I64,error:I64}\nidentities {module:\"study.frames.model\",Summary:\"study.frames.Summary\"}\n"
+  }
+}

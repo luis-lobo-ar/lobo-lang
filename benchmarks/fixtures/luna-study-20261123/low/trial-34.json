@@ -1,0 +1,20 @@
+{
+  "configuration": {
+    "model": "gpt-5.6-luna",
+    "reasoning": "low",
+    "base_harness_sha256": "1c05a60a0c431a9d9336f7b28c9fcfb9f69446cb24ead52f380d1a5d4c838bf0",
+    "wrapper_sha256": "5c02b9846c7af3211ad70cf212e8f119b3360bce8e29b2c2032a9792b321509c"
+  },
+  "assignment": {
+    "index": 34,
+    "repeat": 1,
+    "family": "scheduler",
+    "phase": "change",
+    "language": "python"
+  },
+  "files": {
+    "app.py": "import sys,json\nfrom dataclasses import asdict\nimport model,logic\na=sys.argv\nbudget=int(a[1]);jobs=[]\nfor s in a[2].split(';'):\n if s:\n  v=s.split(':');jobs.append(model.Job(int(v[0]),int(v[1]),[int(x) for x in v[2].split(',') if x],int(v[3])))\nif len(a)>3:\n total=0\n for i in range(int(a[4])):\n  v=logic.run(jobs,budget+i%3);total+=v.spent+v.blocked+sum(v.order)\n print(total)\nelse:\n v=logic.run(jobs,budget);value=asdict(v)\n print(json.dumps(value))\n",
+    "logic.py": "from model import Job,Summary\n\ndef ready(job,done):\n return all(x in done for x in job.deps)\n\ndef fits(cost,remaining):\n return cost<=remaining\n\ndef choose(jobs,done,remaining):\n best=None\n for item in jobs:\n  if item.id not in done and ready(item,done) and fits(item.cost,remaining):\n   if best is None or item.priority>best.priority or (item.priority==best.priority and item.id<best.id):best=item\n return best\n\ndef run(jobs,budget):\n done=[];remaining=budget\n while True:\n  job=choose(jobs,done,remaining)\n  if job is None:break\n  done.append(job.id);remaining-=job.cost\n return Summary(done,budget-remaining,len(jobs)-len(done))\n",
+    "model.py": "from dataclasses import dataclass\n@dataclass(frozen=True)\nclass Job:\n id:int\n cost:int\n deps:list[int]\n priority:int=0\n@dataclass\nclass Summary:\n order:list[int]\n spent:int\n blocked:int\n"
+  }
+}

@@ -1,5 +1,13 @@
 # Local evidence for the Lobo paper
 
+## Luna reasoning follow-up
+
+Paper local-039 adds [the completed high/low study](luna-reasoning-study-2026-11-23.md),
+[all normalized outcomes](../benchmarks/results/2026-11-23-luna-reasoning-study.json) and
+[diagnostic counterexamples](../benchmarks/results/2026-11-23-luna-study-diagnostics.json). Both 54-assignment
+cohorts finished with known usage; lower reasoning used less time with more failed assignments. All prior
+evidence remains unchanged. The phase/language differences remain descriptive small-pilot observations.
+
 ## Frozen matched construction, comprehension and change study
 
 Paper entry local-038 adds [the completed pilot](matched-agent-study-2026-11-23.md),

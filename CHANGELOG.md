@@ -1,5 +1,15 @@
 # Lobo change ledger
 
+## 2026-11-23 — Compare Luna high and low reasoning
+
+Completed both user-requested 54-assignment cohorts, high before low, using the frozen 1.11.2 controller,
+identical prompts/guides/cases and limits. High accepted 49/54; low 44/54. Lobo passed all 12 code-writing
+assignments at each setting. A low Rust scheduler failed held-out dependency cases; source-only
+comprehension accounts for the other misses. All 110 new participant/access-check invocations retain
+terminal usage. Public source bundles, replays, audits and paper local-039 preserve every result and all
+older evidence. No product change, language unfreeze or new runtime claim. See
+[the report](research/luna-reasoning-study-2026-11-23.md).
+
 ## 2026-11-23 — Freeze 1.11.2 and run matched agent experiments
 
 Frozen Core 1.11/compiler-extension 1.11.2 at tag `research/lobo-1.11.2`, with no product changes.

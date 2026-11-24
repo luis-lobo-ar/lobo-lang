@@ -1,0 +1,57 @@
+{
+  "date": "2026-11-23",
+  "registered_wrapper_and_base_harness_unchanged": true,
+  "frozen_compilers_and_source_archive_unchanged": true,
+  "prior_paper_entries_verified": 38,
+  "prior_paper_pins_verified": 111,
+  "initial_fixture_hashes_verified": 648,
+  "prompt_bytes_match_original_baseline": 108,
+  "commands_match_except_registered_model_reasoning": 108,
+  "high_completed_before_low_access_check": true,
+  "all108_status_completed_and_within_caps": true,
+  "comprehension_no_tools_verified": 36,
+  "public_program_replays": [
+    {
+      "reasoning": "high",
+      "index": 53,
+      "accepted": true,
+      "passed": 96,
+      "total": 96,
+      "matches_original": true
+    },
+    {
+      "reasoning": "low",
+      "index": 51,
+      "accepted": true,
+      "passed": 96,
+      "total": 96,
+      "matches_original": true
+    },
+    {
+      "reasoning": "low",
+      "index": 52,
+      "accepted": true,
+      "passed": 96,
+      "total": 96,
+      "matches_original": true
+    },
+    {
+      "reasoning": "low",
+      "index": 9,
+      "accepted": false,
+      "passed": 71,
+      "total": 94,
+      "matches_original": true
+    }
+  ],
+  "stored_comprehension_regrades_match": 36,
+  "new_harness_tests_passed": 6,
+  "prior_matched_tests_passed": 16,
+  "prior_reassessment_tests_passed": 4,
+  "product_source_changes": [],
+  "public_bundle_hashes_verified": 108,
+  "raw_evidence_files_hashed": 4005,
+  "raw_manifest_sha256": "e48c89dcefe1c17dbbfd9bc7b1dd39245ccd1329d5fc81941dde7a3324bbd418",
+  "all_new_agent_invocations_usage_known": 110,
+  "verification_scope": "Local validation before publication; Git commits and remote refs record publication separately"
+}

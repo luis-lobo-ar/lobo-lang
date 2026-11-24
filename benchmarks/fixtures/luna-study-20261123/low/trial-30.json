@@ -1,0 +1,20 @@
+{
+  "configuration": {
+    "model": "gpt-5.6-luna",
+    "reasoning": "low",
+    "base_harness_sha256": "1c05a60a0c431a9d9336f7b28c9fcfb9f69446cb24ead52f380d1a5d4c838bf0",
+    "wrapper_sha256": "5c02b9846c7af3211ad70cf212e8f119b3360bce8e29b2c2032a9792b321509c"
+  },
+  "assignment": {
+    "index": 30,
+    "repeat": 0,
+    "family": "frames",
+    "phase": "construction",
+    "language": "python"
+  },
+  "files": {
+    "app.py": "import sys,json\nfrom dataclasses import asdict\nimport model,logic\na=sys.argv\nlimit=int(a[1]);data=bytes.fromhex(a[2])\nif len(a)>3:\n total=0\n for i in range(int(a[4])):\n  v=logic.run(data,limit+i%3);total+=v.consumed+v.error+sum(len(b)+sum(b) for b in v.frames)\n print(total)\nelse:\n v=logic.run(data,limit);value=asdict(v)\n value['frames']=[b.hex() for b in v.frames]\n print(json.dumps(value))\n",
+    "logic.py": "from model import Summary\ndef run(data, limit):\n frames = []\n offset = 0\n length = len(data)\n\n while offset < length:\n  start = offset\n  size = data[offset]\n  if size > limit:\n   return Summary(frames, start, 3)\n\n  payload_start = start + 1\n  checksum_offset = payload_start + size\n  if checksum_offset >= length:\n   return Summary(frames, start, 1)\n\n  payload = data[payload_start:checksum_offset]\n  if sum(payload) % 256 != data[checksum_offset]:\n   return Summary(frames, start, 2)\n\n  frames.append(payload)\n  offset = checksum_offset + 1\n\n return Summary(frames, length, 0)\n",
+    "model.py": "from dataclasses import dataclass\n@dataclass\nclass Summary:\n frames:list[bytes]\n consumed:int\n error:int\n"
+  }
+}

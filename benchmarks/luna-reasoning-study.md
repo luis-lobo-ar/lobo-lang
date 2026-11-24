@@ -34,3 +34,10 @@ Only authorized model runs use `python3 benchmarks/matched-study/luna.py run`; u
 stored evidence do not call models. Run with screen so phone/SSH disconnects do not interrupt the study.
 A full run contains 108 scored agent conversations plus two excluded access checks; each conversation may
 contain multiple underlying model requests. Stop after both cohorts and their documented results.
+
+## Completed evidence
+
+See research/luna-reasoning-study-2026-11-23.md, the normalized data in
+benchmarks/results/2026-11-23-luna-reasoning-study.json and paper local-039. Public source/answer bundles
+are in benchmarks/fixtures/luna-study-20261123. Replaying them and the post-hoc diagnostics needs no
+model calls. All prior source, profiles, frozen archives and paper evidence remain unchanged.

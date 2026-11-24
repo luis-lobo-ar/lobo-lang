@@ -1,0 +1,20 @@
+{
+  "configuration": {
+    "model": "gpt-5.6-luna",
+    "reasoning": "high",
+    "base_harness_sha256": "1c05a60a0c431a9d9336f7b28c9fcfb9f69446cb24ead52f380d1a5d4c838bf0",
+    "wrapper_sha256": "5c02b9846c7af3211ad70cf212e8f119b3360bce8e29b2c2032a9792b321509c"
+  },
+  "assignment": {
+    "index": 40,
+    "repeat": 0,
+    "family": "frames",
+    "phase": "change",
+    "language": "python"
+  },
+  "files": {
+    "app.py": "import sys,json\nfrom dataclasses import asdict\nimport model,logic\na=sys.argv\nlimit=int(a[1]);data=bytes.fromhex(a[2])\nif len(a)>3:\n total=0\n for i in range(int(a[4])):\n  v=logic.run(data,limit+i%3);total+=v.consumed+v.error+sum(len(b)+sum(b) for b in v.frames)\n print(total)\nelse:\n v=logic.run(data,limit);value=asdict(v)\n value['frames']=[b.hex() for b in v.frames]\n print(json.dumps(value))\n",
+    "logic.py": "from model import Summary\n\ndef read_header(data,start):\n return data[start],start+1,0\n\ndef fits(length,limit):\n return length<=limit\n\ndef checksum(data):\n return sum(data)%256\n\ndef run(data,limit):\n frames=[];cursor=0;error=0\n while cursor<len(data) and error==0:\n  header=data[cursor]\n  if header==255:\n   cursor+=1\n   continue\n  if header==254:\n   if len(data)-cursor<3:\n    error=1\n    continue\n   length=data[cursor+1]|(data[cursor+2]<<8)\n   payload=cursor+3\n  else:\n   length,payload,header_error=read_header(data,cursor)\n   if header_error:\n    error=header_error\n    continue\n  if not fits(length,limit):\n   error=3\n  elif len(data)-payload<length+1:\n   error=1\n  else:\n   value=data[payload:payload+length]\n   if checksum(value)!=data[payload+length]:\n    error=2\n   else:\n    frames.append(value)\n    cursor=payload+length+1\n return Summary(frames,cursor,error)\n",
+    "model.py": "from dataclasses import dataclass\n@dataclass\nclass Summary:\n frames:list[bytes]\n consumed:int\n error:int\n"
+  }
+}
