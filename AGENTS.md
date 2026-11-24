@@ -5,11 +5,14 @@ Use the GitHub account luis-lobo-ar for this repository. Commit author and commi
 active gh account may belong to another project. Keep user-facing examples on the lobo CLI. Cargo commands
 belong in compiler build/test instructions. Preserve frozen research documents and fixtures.
 
-The user selected decision 0066: isolate prompt deduplication and input-schema documentation in a
-72-assignment, four-arm fresh-question study, Luna/high then low. Use only the additive context driver.
-Keep product 1.11.2, old skill/drivers/fixtures/evidence frozen. The additive semantic reference/map is
-not exposed in these trials. Register after TDD/reference/mutation checks; retain every result and stop
-at this pilot. See decisions/0066-isolate-comprehension-context-treatments.md.
+Decision 0066 is complete: 72 fresh-question attempts, four context arms, Luna/high then low. Each arm
+accepts 12/18; token savings from deduplication are observed, comprehension improvement is not. Read
+research/context-factorial-study-2026-11-23.md before interpreting scores: seven items depend on an
+underspecified closed-input policy. Primary strict and posthoc format-sensitivity results stay separate.
+Keep product 1.11.2, old/new registered drivers, fixtures and evidence frozen. The additive source-pinned
+reference/map was excluded from trials; its learning benefit is unmeasured. No more model trials, response
+schema changes, API changes or language unfreeze without new user selection. Preserve paper local-041
+and all earlier entries/pins. See decisions/0066-isolate-comprehension-context-treatments.md.
 
 Decision 0065 records the requested offline comprehension-failure audit. Read
 research/comprehension-failure-analysis-2026-11-23.md before selecting follow-up work. Prompt cleanup,

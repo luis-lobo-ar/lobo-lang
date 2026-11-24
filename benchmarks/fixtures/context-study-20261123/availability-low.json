@@ -1,0 +1,73 @@
+{
+  "result": {
+    "model": "gpt-5.6-luna",
+    "reasoning": "low",
+    "excluded_from_scored_trials": true,
+    "command": [
+      "codex",
+      "exec",
+      "--ignore-user-config",
+      "--ephemeral",
+      "--json",
+      "--sandbox",
+      "read-only",
+      "--skip-git-repo-check",
+      "--disable",
+      "multi_agent",
+      "--disable",
+      "multi_agent_v2",
+      "--disable",
+      "apps",
+      "--disable",
+      "plugins",
+      "--disable",
+      "memories",
+      "-C",
+      "/tmp/luna-availability-lil71srs",
+      "-m",
+      "gpt-5.6-luna",
+      "-c",
+      "model_reasoning_effort=\"low\"",
+      "-c",
+      "approval_policy=\"never\"",
+      "--output-last-message",
+      "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/context-study-20261123/run/availability-low/last-message.txt",
+      "--disable",
+      "shell_tool",
+      "-"
+    ],
+    "exit_code": 0,
+    "usage": {
+      "input_tokens": 14109,
+      "cached_input_tokens": 0,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 5,
+      "reasoning_output_tokens": 0
+    },
+    "available": true,
+    "last_message": "READY",
+    "wall_s": 2.754235591040924
+  },
+  "raw_evidence_hashes": {
+    "stderr.txt": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "command.json": {
+      "sha256": "bff364fcce4209032a1973847185b61a9991cc32c72c06e3d966c6623a156767",
+      "bytes": 631
+    },
+    "events.jsonl": {
+      "sha256": "d86b4a6a697f62b9478ec06ebb1a73255c9ff54474c5b3a2c38be76da0af022c",
+      "bytes": 344
+    },
+    "result.json": {
+      "sha256": "1e67710ec13772eb78b0162ec5ff3573ce0e3ce3e4ad126961b7efe96f882b1a",
+      "bytes": 1064
+    },
+    "last-message.txt": {
+      "sha256": "c2e3ac47f4a325469c1a2d5f117e463ec943c721986d5d9f09ac4540b7d80526",
+      "bytes": 5
+    }
+  }
+}

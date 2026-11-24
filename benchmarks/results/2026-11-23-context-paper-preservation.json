@@ -1,0 +1,19 @@
+{
+  "date": "2026-11-23",
+  "index_sha256": "9d170993f064acca13f1a65447e65131553132dd89cb294519ab575d3cbfc0e5",
+  "entries": 41,
+  "pins": 131,
+  "prior_entries_equal": true,
+  "all_pins_verified": true,
+  "snapshot_files": 158,
+  "all_snapshot_pins_verified": true,
+  "registered_driver_unchanged": true,
+  "primary_reporter_matches": true,
+  "final_repository_check": {
+    "command": "./scripts/check.sh",
+    "status": "passed",
+    "log": "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/context-study-final-index-check.txt",
+    "sha256": "1f11bb3bb382f1877ffa8eec4eb376db85d0ecfa2e1301289bb91fbd2cc966ae"
+  },
+  "git_diff_check": "passed"
+}

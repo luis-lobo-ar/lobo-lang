@@ -1,0 +1,1 @@
+{"attempted": 72, "accepted": 48, "incorrect_items": 32, "output": "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/results/2026-11-23-context-factorial-study.json"}

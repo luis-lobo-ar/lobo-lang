@@ -1,0 +1,41 @@
+module reading_examples;
+
+record Pair { left: I64, right: I64 }
+variant Result<T> { Ok(T), Err(Text) }
+
+fn bump(input: Result<I64>) -> Result<I64> {
+  let value = try input;
+  Ok(value + 1)
+}
+
+fn slice_count() -> I64 {
+  let data = Text::bytes("ABCDE");
+  Bytes::length(Bytes::slice(data, 1, 3))
+}
+
+fn spread() -> I64 {
+  let original = Pair { left: 2, right: 3 };
+  let updated = Pair { ...original, left: 8 };
+  updated.left + updated.right
+}
+
+fn counted() -> I64 {
+  fold(index in 4, total: I64 = 0) { total + index }
+}
+
+fn stopped() -> I64 {
+  while(state: I64 = 0; state < 4) { state + 1 }
+}
+
+fn list_order() -> I64 {
+  let values = List::prepend(2, List::prepend(9, List::empty<I64>()));
+  List::head(values)
+}
+
+fn propagate() -> I64 {
+  match bump(Ok(8)) { Ok(value) => value, Err(error) => -1 }
+}
+
+fn propagate_error() -> Bool {
+  match bump(Err("example")) { Ok(value) => false, Err(error) => error == "example" }
+}

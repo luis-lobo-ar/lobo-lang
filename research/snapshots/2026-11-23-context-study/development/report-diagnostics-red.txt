@@ -1,0 +1,14 @@
+..E..
+======================================================================
+ERROR: test_item_diagnostics_retain_wrong_answer_and_oracle (test_context_report.ReportingTests.test_item_diagnostics_retain_wrong_answer_and_oracle)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/matched-study/test_context_report.py", line 47, in test_item_diagnostics_retain_wrong_answer_and_oracle
+    values=r.explain(result,answer)
+           ^^^^^^^^^
+AttributeError: module 'context_report' has no attribute 'explain'
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.001s
+
+FAILED (errors=1)

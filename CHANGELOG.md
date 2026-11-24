@@ -1,5 +1,17 @@
 # Lobo change ledger
 
+## 2026-11-23 — Isolate prompt and input-documentation changes
+
+Completed the registered 72-attempt, four-arm fresh-question pilot on frozen 1.11.2. Every arm accepts
+12/18 under the unchanged strict grader. Deduplication lowers median paired reported tokens by about
+6.8%; no comprehension or latency improvement is demonstrated. A top-level input-closure omission in
+the study documentation affects seven items. The separately labeled posthoc sensitivity accepts 52/72
+instead of primary 48/72. Preserve both outcomes, all 32 strict errors, 69 concrete replays and usage for
+all 74 participant/access-check calls. Added a source-pinned 22-concept reference, editable relationship
+map and bounded lookup, excluded from trial prompts. No product or old fixture changes. See
+[the report](research/context-factorial-study-2026-11-23.md), [decision 0066](decisions/0066-isolate-comprehension-context-treatments.md)
+and paper local-041. Stop model runs and retain all prior evidence.
+
 ## 2026-11-23 — Analyze comprehension failures before changing behavior
 
 Completed an offline audit of all 54 comprehension attempts and nine wrong Lobo items. All 54 canonical

@@ -1,0 +1,5964 @@
+{
+  "format": "lobo-context-posthoc-format-sensitivity/1",
+  "date": "2026-11-23",
+  "primary_sha256": "23cf36c5af6ea6ac9ab037f0bef6400f16b862851d834f84f5e028e1a9a775b3",
+  "script_sha256": "f5fbdd41cd2b4416e4cdecb5b083b3f23f0e67bfc3967bb55512a50a451acf6a",
+  "primary_scores_unchanged": true,
+  "preregistered": false,
+  "definition": "For witness/counterexample only, discard unknown top-level keys; preserve all required values and nested structure. Never add missing inputs. Keep every other strict rule.",
+  "reason": "Registered grader closes top-level input maps, but delivered documentation does not explicitly reject unknown top-level properties. Quantify this interface ambiguity without replacing primary scores.",
+  "strict_accepted": 48,
+  "projected_accepted": 52,
+  "strict_passed_items": 760,
+  "projected_passed_items": 767,
+  "metadata_only_item_changes": [
+    {
+      "assignment": {
+        "index": 37,
+        "reasoning": "low",
+        "family": "frames",
+        "language": "python",
+        "arm": "dedup",
+        "phase": "comprehension"
+      },
+      "item": "counterexample"
+    },
+    {
+      "assignment": {
+        "index": 39,
+        "reasoning": "low",
+        "family": "frames",
+        "language": "python",
+        "arm": "schema",
+        "phase": "comprehension"
+      },
+      "item": "witness"
+    },
+    {
+      "assignment": {
+        "index": 40,
+        "reasoning": "low",
+        "family": "frames",
+        "language": "lobo",
+        "arm": "dedup",
+        "phase": "comprehension"
+      },
+      "item": "counterexample"
+    },
+    {
+      "assignment": {
+        "index": 43,
+        "reasoning": "low",
+        "family": "frames",
+        "language": "lobo",
+        "arm": "both",
+        "phase": "comprehension"
+      },
+      "item": "witness"
+    },
+    {
+      "assignment": {
+        "index": 61,
+        "reasoning": "low",
+        "family": "frames",
+        "language": "rust",
+        "arm": "both",
+        "phase": "comprehension"
+      },
+      "item": "witness"
+    },
+    {
+      "assignment": {
+        "index": 63,
+        "reasoning": "low",
+        "family": "frames",
+        "language": "rust",
+        "arm": "original",
+        "phase": "comprehension"
+      },
+      "item": "witness"
+    },
+    {
+      "assignment": {
+        "index": 66,
+        "reasoning": "low",
+        "family": "ledger",
+        "language": "lobo",
+        "arm": "schema",
+        "phase": "comprehension"
+      },
+      "item": "witness"
+    }
+  ],
+  "groups": [
+    {
+      "language": null,
+      "arm": "original",
+      "attempted": 18,
+      "strict_accepted": 12,
+      "projected_accepted": 13,
+      "strict_items": 192,
+      "projected_items": 193
+    },
+    {
+      "language": null,
+      "arm": "dedup",
+      "attempted": 18,
+      "strict_accepted": 12,
+      "projected_accepted": 12,
+      "strict_items": 189,
+      "projected_items": 191
+    },
+    {
+      "language": null,
+      "arm": "schema",
+      "attempted": 18,
+      "strict_accepted": 12,
+      "projected_accepted": 14,
+      "strict_items": 191,
+      "projected_items": 193
+    },
+    {
+      "language": null,
+      "arm": "both",
+      "attempted": 18,
+      "strict_accepted": 12,
+      "projected_accepted": 13,
+      "strict_items": 188,
+      "projected_items": 190
+    },
+    {
+      "language": "lobo",
+      "arm": "original",
+      "attempted": 6,
+      "strict_accepted": 3,
+      "projected_accepted": 3,
+      "strict_items": 63,
+      "projected_items": 63
+    },
+    {
+      "language": "lobo",
+      "arm": "dedup",
+      "attempted": 6,
+      "strict_accepted": 3,
+      "projected_accepted": 3,
+      "strict_items": 62,
+      "projected_items": 63
+    },
+    {
+      "language": "lobo",
+      "arm": "schema",
+      "attempted": 6,
+      "strict_accepted": 3,
+      "projected_accepted": 4,
+      "strict_items": 62,
+      "projected_items": 63
+    },
+    {
+      "language": "lobo",
+      "arm": "both",
+      "attempted": 6,
+      "strict_accepted": 2,
+      "projected_accepted": 2,
+      "strict_items": 58,
+      "projected_items": 59
+    },
+    {
+      "language": "rust",
+      "arm": "original",
+      "attempted": 6,
+      "strict_accepted": 3,
+      "projected_accepted": 4,
+      "strict_items": 63,
+      "projected_items": 64
+    },
+    {
+      "language": "rust",
+      "arm": "dedup",
+      "attempted": 6,
+      "strict_accepted": 5,
+      "projected_accepted": 5,
+      "strict_items": 65,
+      "projected_items": 65
+    },
+    {
+      "language": "rust",
+      "arm": "schema",
+      "attempted": 6,
+      "strict_accepted": 4,
+      "projected_accepted": 4,
+      "strict_items": 64,
+      "projected_items": 64
+    },
+    {
+      "language": "rust",
+      "arm": "both",
+      "attempted": 6,
+      "strict_accepted": 4,
+      "projected_accepted": 5,
+      "strict_items": 64,
+      "projected_items": 65
+    },
+    {
+      "language": "python",
+      "arm": "original",
+      "attempted": 6,
+      "strict_accepted": 6,
+      "projected_accepted": 6,
+      "strict_items": 66,
+      "projected_items": 66
+    },
+    {
+      "language": "python",
+      "arm": "dedup",
+      "attempted": 6,
+      "strict_accepted": 4,
+      "projected_accepted": 4,
+      "strict_items": 62,
+      "projected_items": 63
+    },
+    {
+      "language": "python",
+      "arm": "schema",
+      "attempted": 6,
+      "strict_accepted": 5,
+      "projected_accepted": 6,
+      "strict_items": 65,
+      "projected_items": 66
+    },
+    {
+      "language": "python",
+      "arm": "both",
+      "attempted": 6,
+      "strict_accepted": 6,
+      "projected_accepted": 6,
+      "strict_items": 66,
+      "projected_items": 66
+    }
+  ],
+  "trials": [
+    {
+      "assignment": {
+        "index": 0,
+        "reasoning": "high",
+        "family": "frames",
+        "language": "python",
+        "arm": "original",
+        "phase": "comprehension"
+      },
+      "strict_accepted": true,
+      "strict_passed": 11,
+      "projected_accepted": true,
+      "projected_grade": {
+        "accepted": true,
+        "passed": 11,
+        "total": 11,
+        "checks": {
+          "prediction_0": true,
+          "prediction_1": true,
+          "prediction_2": true,
+          "prediction_3": true,
+          "prediction_4": true,
+          "prediction_5": true,
+          "witness": true,
+          "direct_calls": true,
+          "impacted": true,
+          "fault_location": true,
+          "counterexample": true
+        }
+      }
+    },
+    {
+      "assignment": {
+        "index": 1,
+        "reasoning": "high",
+        "family": "frames",
+        "language": "python",
+        "arm": "dedup",
+        "phase": "comprehension"
+      },
+      "strict_accepted": true,
+      "strict_passed": 11,
+      "projected_accepted": true,
+      "projected_grade": {
+        "accepted": true,
+        "passed": 11,
+        "total": 11,
+        "checks": {
+          "prediction_0": true,
+          "prediction_1": true,
+          "prediction_2": true,
+          "prediction_3": true,
+          "prediction_4": true,
+          "prediction_5": true,
+          "witness": true,
+          "direct_calls": true,
+          "impacted": true,
+          "fault_location": true,
+          "counterexample": true
+        }
+      }
+    },
+    {
+      "assignment": {
+        "index": 2,
+        "reasoning": "high",
+        "family": "frames",
+        "language": "python",
+        "arm": "both",
+        "phase": "comprehension"
+      },
+      "strict_accepted": true,
+      "strict_passed": 11,
+      "projected_accepted": true,
+      "projected_grade": {
+        "accepted": true,
+        "passed": 11,
+        "total": 11,
+        "checks": {
+          "prediction_0": true,
+          "prediction_1": true,
+          "prediction_2": true,
+          "prediction_3": true,
+          "prediction_4": true,
+          "prediction_5": true,
+          "witness": true,
+          "direct_calls": true,
+          "impacted": true,
+          "fault_location": true,
+          "counterexample": true
+        }
+      }
+    },
+    {
+      "assignment": {
+        "index": 3,
+        "reasoning": "high",
+        "family": "frames",
+        "language": "python",
+        "arm": "schema",
+        "phase": "comprehension"
+      },
+      "strict_accepted": true,
+      "strict_passed": 11,
+      "projected_accepted": true,
+      "projected_grade": {
+        "accepted": true,
+        "passed": 11,
+        "total": 11,
+        "checks": {
+          "prediction_0": true,
+          "prediction_1": true,
+          "prediction_2": true,
+          "prediction_3": true,
+          "prediction_4": true,
+          "prediction_5": true,
+          "witness": true,
+          "direct_calls": true,
+          "impacted": true,
+          "fault_location": true,
+          "counterexample": true
+        }
+      }
+    },
+    {
+      "assignment": {
+        "index": 4,
+        "reasoning": "high",
+        "family": "frames",
+        "language": "lobo",
+        "arm": "dedup",
+        "phase": "comprehension"
+      },
+      "strict_accepted": true,
+      "strict_passed": 11,
+      "projected_accepted": true,
+      "projected_grade": {
+        "accepted": true,
+        "passed": 11,
+        "total": 11,
+        "checks": {
+          "prediction_0": true,
+          "prediction_1": true,
+          "prediction_2": true,
+          "prediction_3": true,
+          "prediction_4": true,
+          "prediction_5": true,
+          "witness": true,
+          "direct_calls": true,
+          "impacted": true,
+          "fault_location": true,
+          "counterexample": true
+        }
+      }
+    },
+    {
+      "assignment": {
+        "index": 5,
+        "reasoning": "high",
+        "family": "frames",
+        "language": "lobo",
+        "arm": "schema",
+        "phase": "comprehension"
+      },
+      "strict_accepted": true,
+      "strict_passed": 11,
+      "projected_accepted": true,
+      "projected_grade": {
+        "accepted": true,
+        "passed": 11,
+        "total": 11,
+        "checks": {
+          "prediction_0": true,
+          "prediction_1": true,
+          "prediction_2": true,
+          "prediction_3": true,
+          "prediction_4": true,
+          "prediction_5": true,
+          "witness": true,
+          "direct_calls": true,
+          "impacted": true,
+          "fault_location": true,
+          "counterexample": true
+        }
+      }
+    },
+    {
+      "assignment": {
+        "index": 6,
+        "reasoning": "high",
+        "family": "frames",
+        "language": "lobo",
+        "arm": "original",
+        "phase": "comprehension"
+      },
+      "strict_accepted": true,
+      "strict_passed": 11,
+      "projected_accepted": true,
+      "projected_grade": {
+        "accepted": true,
+        "passed": 11,
+        "total": 11,
+        "checks": {
+          "prediction_0": true,
+          "prediction_1": true,
+          "prediction_2": true,
+          "prediction_3": true,
+          "prediction_4": true,
+          "prediction_5": true,
+          "witness": true,
+          "direct_calls": true,
+          "impacted": true,
+          "fault_location": true,
+          "counterexample": true
+        }
+      }
+    },
+    {
+      "assignment": {
+        "index": 7,
+        "reasoning": "high",
+        "family": "frames",
+        "language": "lobo",
+        "arm": "both",
+        "phase": "comprehension"
+      },
+      "strict_accepted": false,
+      "strict_passed": 10,
+      "projected_accepted": false,
+      "projected_grade": {
+        "accepted": false,
+        "passed": 10,
+        "total": 11,
+        "checks": {
+          "prediction_0": true,
+          "prediction_1": true,
+          "prediction_2": true,
+          "prediction_3": true,
+          "prediction_4": true,
+          "prediction_5": true,
+          "witness": false,
+          "direct_calls": true,
+          "impacted": true,
+          "fault_location": true,
+          "counterexample": true
+        }
+      }
+    },
+    {
+      "assignment": {
+        "index": 8,
+        "reasoning": "high",
+        "family": "scheduler",
+        "language": "rust",
+        "arm": "schema",
+        "phase": "comprehension"
+      },
+      "strict_accepted": true,
+      "strict_passed": 11,
+      "projected_accepted": true,
+      "projected_grade": {
+        "accepted": true,
+        "passed": 11,
+        "total": 11,
+        "checks": {
+          "prediction_0": true,
+          "prediction_1": true,
+          "prediction_2": true,
+          "prediction_3": true,
+          "prediction_4": true,
+          "prediction_5": true,
+          "witness": true,
+          "direct_calls": true,
+          "impacted": true,
+          "fault_location": true,
+          "counterexample": true
+        }
+      }
+    },
+    {
+      "assignment": {
+        "index": 9,
+        "reasoning": "high",
+        "family": "scheduler",
+        "language": "rust",
+        "arm": "both",
+        "phase": "comprehension"
+      },
+      "strict_accepted": true,
+      "strict_passed": 11,
+      "projected_accepted": true,
+      "projected_grade": {
+        "accepted": true,
+        "passed": 11,
+        "total": 11,
+        "checks": {
+          "prediction_0": true,
+          "prediction_1": true,
+          "prediction_2": true,
+          "prediction_3": true,
+          "prediction_4": true,
+          "prediction_5": true,
+          "witness": true,
+          "direct_calls": true,
+          "impacted": true,
+          "fault_location": true,
+          "counterexample": true
+        }
+      }
+    },
+    {
+      "assignment": {
+        "index": 10,
+        "reasoning": "high",
+        "family": "scheduler",
+        "language": "rust",
+        "arm": "dedup",
+        "phase": "comprehension"
+      },
+      "strict_accepted": true,
+      "strict_passed": 11,
+      "projected_accepted": true,
+      "projected_grade": {
+        "accepted": true,
+        "passed": 11,
+        "total": 11,
+        "checks": {
+          "prediction_0": true,
+          "prediction_1": true,
+          "prediction_2": true,
+          "prediction_3": true,
+          "prediction_4": true,
+          "prediction_5": true,
+          "witness": true,
+          "direct_calls": true,
+          "impacted": true,
+          "fault_location": true,
+          "counterexample": true
+        }
+      }
+    },
+    {
+      "assignment": {
+        "index": 11,
+        "reasoning": "high",
+        "family": "scheduler",
+        "language": "rust",
+        "arm": "original",
+        "phase": "comprehension"
+      },
+      "strict_accepted": true,
+      "strict_passed": 11,
+      "projected_accepted": true,
+      "projected_grade": {
+        "accepted": true,
+        "passed": 11,
+        "total": 11,
+        "checks": {
+          "prediction_0": true,
+          "prediction_1": true,
+          "prediction_2": true,
+          "prediction_3": true,
+          "prediction_4": true,
+          "prediction_5": true,
+          "witness": true,
+          "direct_calls": true,
+          "impacted": true,
+          "fault_location": true,
+          "counterexample": true
+        }
+      }
+    },
+    {
+      "assignment": {
+        "index": 12,
+        "reasoning": "high",
+        "family": "scheduler",
+        "language": "lobo",
+        "arm": "both",
+        "phase": "comprehension"
+      },
+      "strict_accepted": true,
+      "strict_passed": 11,
+      "projected_accepted": true,
+      "projected_grade": {
+        "accepted": true,
+        "passed": 11,
+        "total": 11,
+        "checks": {
+          "prediction_0": true,
+          "prediction_1": true,
+          "prediction_2": true,
+          "prediction_3": true,
+          "prediction_4": true,
+          "prediction_5": true,
+          "witness": true,
+          "direct_calls": true,
+          "impacted": true,
+          "fault_location": true,
+          "counterexample": true
+        }
+      }
+    },
+    {
+      "assignment": {
+        "index": 13,
+        "reasoning": "high",
+        "family": "scheduler",
+        "language": "lobo",
+        "arm": "original",
+        "phase": "comprehension"
+      },
+      "strict_accepted": false,
+      "strict_passed": 10,
+      "projected_accepted": false,
+      "projected_grade": {
+        "accepted": false,
+        "passed": 10,
+        "total": 11,
+        "checks": {
+          "prediction_0": true,
+          "prediction_1": true,
+          "prediction_2": true,
+          "prediction_3": true,
+          "prediction_4": true,
+          "prediction_5": false,
+          "witness": true,
+          "direct_calls": true,
+          "impacted": true,
+          "fault_location": true,
+          "counterexample": true
+        }
+      }
+    },
+    {
+      "assignment": {
+        "index": 14,
+        "reasoning": "high",
+        "family": "scheduler",
+        "language": "lobo",
+        "arm": "schema",
+        "phase": "comprehension"
+      },
+      "strict_accepted": true,
+      "strict_passed": 11,
+      "projected_accepted": true,
+      "projected_grade": {
+        "accepted": true,
+        "passed": 11,
+        "total": 11,
+        "checks": {
+          "prediction_0": true,
+          "prediction_1": true,
+          "prediction_2": true,
+          "prediction_3": true,
+          "prediction_4": true,
+          "prediction_5": true,
+          "witness": true,
+          "direct_calls": true,
+          "impacted": true,
+          "fault_location": true,
+          "counterexample": true
+        }
+      }
+    },
+    {
+      "assignment": {
+        "index": 15,
+        "reasoning": "high",
+        "family": "scheduler",
+        "language": "lobo",
+        "arm": "dedup",
+        "phase": "comprehension"
+      },
+      "strict_accepted": true,
+      "strict_passed": 11,
+      "projected_accepted": true,
+      "projected_grade": {
+        "accepted": true,
+        "passed": 11,
+        "total": 11,
+        "checks": {
+          "prediction_0": true,
+          "prediction_1": true,
+          "prediction_2": true,
+          "prediction_3": true,
+          "prediction_4": true,
+          "prediction_5": true,
+          "witness": true,
+          "direct_calls": true,
+          "impacted": true,
+          "fault_location": true,
+          "counterexample": true
+        }
+      }
+    },
+    {
+      "assignment": {
+        "index": 16,
+        "reasoning": "high",
+        "family": "ledger",
+        "language": "rust",
+        "arm": "original",
+        "phase": "comprehension"
+      },
+      "strict_accepted": true,
+      "strict_passed": 11,
+      "projected_accepted": true,
+      "projected_grade": {
+        "accepted": true,
+        "passed": 11,
+        "total": 11,
+        "checks": {
+          "prediction_0": true,
+          "prediction_1": true,
+          "prediction_2": true,
+          "prediction_3": true,
+          "prediction_4": true,
+          "prediction_5": true,
+          "witness": true,
+          "direct_calls": true,
+          "impacted": true,
+          "fault_location": true,
+          "counterexample": true
+        }
+      }
+    },
+    {
+      "assignment": {
+        "index": 17,
+        "reasoning": "high",
+        "family": "ledger",
+        "language": "rust",
+        "arm": "dedup",
+        "phase": "comprehension"
+      },
+      "strict_accepted": true,
+      "strict_passed": 11,
+      "projected_accepted": true,
+      "projected_grade": {
+        "accepted": true,
+        "passed": 11,
+        "total": 11,
+        "checks": {
+          "prediction_0": true,
+          "prediction_1": true,
+          "prediction_2": true,
+          "prediction_3": true,
+          "prediction_4": true,
+          "prediction_5": true,
+          "witness": true,
+          "direct_calls": true,
+          "impacted": true,
+          "fault_location": true,
+          "counterexample": true
+        }
+      }
+    },
+    {
+      "assignment": {
+        "index": 18,
+        "reasoning": "high",
+        "family": "ledger",
+        "language": "rust",
+        "arm": "both",
+        "phase": "comprehension"
+      },
+      "strict_accepted": false,
+      "strict_passed": 10,
+      "projected_accepted": false,
+      "projected_grade": {
+        "accepted": false,
+        "passed": 10,
+        "total": 11,
+        "checks": {
+          "prediction_0": true,
+          "prediction_1": true,
+          "prediction_2": true,
+          "prediction_3": true,
+          "prediction_4": true,
+          "prediction_5": true,
+          "witness": false,
+          "direct_calls": true,
+          "impacted": true,
+          "fault_location": true,
+          "counterexample": true
+        }
+      }
+    },
+    {
+      "assignment": {
+        "index": 19,
+        "reasoning": "high",
+        "family": "ledger",
+        "language": "rust",
+        "arm": "schema",
+        "phase": "comprehension"
+      },
+      "strict_accepted": false,
+      "strict_passed": 10,
+      "projected_accepted": false,
+      "projected_grade": {
+        "accepted": false,
+        "passed": 10,
+        "total": 11,
+        "checks": {
+          "prediction_0": false,
+          "prediction_1": true,
+          "prediction_2": true,
+          "prediction_3": true,
+          "prediction_4": true,
+          "prediction_5": true,
+          "witness": true,
+          "direct_calls": true,
+          "impacted": true,
+          "fault_location": true,
+          "counterexample": true
+        }
+      }
+    },
+    {
+      "assignment": {
+        "index": 20,
+        "reasoning": "high",
+        "family": "scheduler",
+        "language": "python",
+        "arm": "dedup",
+        "phase": "comprehension"
+      },
+      "strict_accepted": true,
+      "strict_passed": 11,
+      "projected_accepted": true,
+      "projected_grade": {
+        "accepted": true,
+        "passed": 11,
+        "total": 11,
+        "checks": {
+          "prediction_0": true,
+          "prediction_1": true,
+          "prediction_2": true,
+          "prediction_3": true,
+          "prediction_4": true,
+          "prediction_5": true,
+          "witness": true,
+          "direct_calls": true,
+          "impacted": true,
+          "fault_location": true,
+          "counterexample": true
+        }
+      }
+    },
+    {
+      "assignment": {
+        "index": 21,
+        "reasoning": "high",
+        "family": "scheduler",
+        "language": "python",
+        "arm": "schema",
+        "phase": "comprehension"
+      },
+      "strict_accepted": true,
+      "strict_passed": 11,
+      "projected_accepted": true,
+      "projected_grade": {
+        "accepted": true,
+        "passed": 11,
+        "total": 11,
+        "checks": {
+          "prediction_0": true,
+          "prediction_1": true,
+          "prediction_2": true,
+          "prediction_3": true,
+          "prediction_4": true,
+          "prediction_5": true,
+          "witness": true,
+          "direct_calls": true,
+          "impacted": true,
+          "fault_location": true,
+          "counterexample": true
+        }
+      }
+    },
+    {
+      "assignment": {
+        "index": 22,
+        "reasoning": "high",
+        "family": "scheduler",
+        "language": "python",
+        "arm": "original",
+        "phase": "comprehension"
+      },
+      "strict_accepted": true,
+      "strict_passed": 11,
+      "projected_accepted": true,
+      "projected_grade": {
+        "accepted": true,
+        "passed": 11,
+        "total": 11,
+        "checks": {
+          "prediction_0": true,
+          "prediction_1": true,
+          "prediction_2": true,
+          "prediction_3": true,
+          "prediction_4": true,
+          "prediction_5": true,
+          "witness": true,
+          "direct_calls": true,
+          "impacted": true,
+          "fault_location": true,
+          "counterexample": true
+        }
+      }
+    },
+    {
+      "assignment": {
+        "index": 23,
+        "reasoning": "high",
+        "family": "scheduler",
+        "language": "python",
+        "arm": "both",
+        "phase": "comprehension"
+      },
+      "strict_accepted": true,
+      "strict_passed": 11,
+      "projected_accepted": true,
+      "projected_grade": {
+        "accepted": true,
+        "passed": 11,
+        "total": 11,
+        "checks": {
+          "prediction_0": true,
+          "prediction_1": true,
+          "prediction_2": true,
+          "prediction_3": true,
+          "prediction_4": true,
+          "prediction_5": true,
+          "witness": true,
+          "direct_calls": true,
+          "impacted": true,
+          "fault_location": true,
+          "counterexample": true
+        }
+      }
+    },
+    {
+      "assignment": {
+        "index": 24,
+        "reasoning": "high",
+        "family": "frames",
+        "language": "rust",
+        "arm": "schema",
+        "phase": "comprehension"
+      },
+      "strict_accepted": true,
+      "strict_passed": 11,
+      "projected_accepted": true,
+      "projected_grade": {
+        "accepted": true,
+        "passed": 11,
+        "total": 11,
+        "checks": {
+          "prediction_0": true,
+          "prediction_1": true,
+          "prediction_2": true,
+          "prediction_3": true,
+          "prediction_4": true,
+          "prediction_5": true,
+          "witness": true,
+          "direct_calls": true,
+          "impacted": true,
+          "fault_location": true,
+          "counterexample": true
+        }
+      }
+    },
+    {
+      "assignment": {
+        "index": 25,
+        "reasoning": "high",
+        "family": "frames",
+        "language": "rust",
+        "arm": "both",
+        "phase": "comprehension"
+      },
+      "strict_accepted": true,
+      "strict_passed": 11,
+      "projected_accepted": true,
+      "projected_grade": {
+        "accepted": true,
+        "passed": 11,
+        "total": 11,
+        "checks": {
+          "prediction_0": true,
+          "prediction_1": true,
+          "prediction_2": true,
+          "prediction_3": true,
+          "prediction_4": true,
+          "prediction_5": true,
+          "witness": true,
+          "direct_calls": true,
+          "impacted": true,
+          "fault_location": true,
+          "counterexample": true
+        }
+      }
+    },
+    {
+      "assignment": {
+        "index": 26,
+        "reasoning": "high",
+        "family": "frames",
+        "language": "rust",
+        "arm": "dedup",
+        "phase": "comprehension"
+      },
+      "strict_accepted": true,
+      "strict_passed": 11,
+      "projected_accepted": true,
+      "projected_grade": {
+        "accepted": true,
+        "passed": 11,
+        "total": 11,
+        "checks": {
+          "prediction_0": true,
+          "prediction_1": true,
+          "prediction_2": true,
+          "prediction_3": true,
+          "prediction_4": true,
+          "prediction_5": true,
+          "witness": true,
+          "direct_calls": true,
+          "impacted": true,
+          "fault_location": true,
+          "counterexample": true
+        }
+      }
+    },
+    {
+      "assignment": {
+        "index": 27,
+        "reasoning": "high",
+        "family": "frames",
+        "language": "rust",
+        "arm": "original",
+        "phase": "comprehension"
+      },
+      "strict_accepted": false,
+      "strict_passed": 10,
+      "projected_accepted": false,
+      "projected_grade": {
+        "accepted": false,
+        "passed": 10,
+        "total": 11,
+        "checks": {
+          "prediction_0": true,
+          "prediction_1": false,
+          "prediction_2": true,
+          "prediction_3": true,
+          "prediction_4": true,
+          "prediction_5": true,
+          "witness": true,
+          "direct_calls": true,
+          "impacted": true,
+          "fault_location": true,
+          "counterexample": true
+        }
+      }
+    },
+    {
+      "assignment": {
+        "index": 28,
+        "reasoning": "high",
+        "family": "ledger",
+        "language": "lobo",
+        "arm": "both",
+        "phase": "comprehension"
+      },
+      "strict_accepted": true,
+      "strict_passed": 11,
+      "projected_accepted": true,
+      "projected_grade": {
+        "accepted": true,
+        "passed": 11,
+        "total": 11,
+        "checks": {
+          "prediction_0": true,
+          "prediction_1": true,
+          "prediction_2": true,
+          "prediction_3": true,
+          "prediction_4": true,
+          "prediction_5": true,
+          "witness": true,
+          "direct_calls": true,
+          "impacted": true,
+          "fault_location": true,
+          "counterexample": true
+        }
+      }
+    },
+    {
+      "assignment": {
+        "index": 29,
+        "reasoning": "high",
+        "family": "ledger",
+        "language": "lobo",
+        "arm": "original",
+        "phase": "comprehension"
+      },
+      "strict_accepted": true,
+      "strict_passed": 11,
+      "projected_accepted": true,
+      "projected_grade": {
+        "accepted": true,
+        "passed": 11,
+        "total": 11,
+        "checks": {
+          "prediction_0": true,
+          "prediction_1": true,
+          "prediction_2": true,
+          "prediction_3": true,
+          "prediction_4": true,
+          "prediction_5": true,
+          "witness": true,
+          "direct_calls": true,
+          "impacted": true,
+          "fault_location": true,
+          "counterexample": true
+        }
+      }
+    },
+    {
+      "assignment": {
+        "index": 30,
+        "reasoning": "high",
+        "family": "ledger",
+        "language": "lobo",
+        "arm": "schema",
+        "phase": "comprehension"
+      },
+      "strict_accepted": true,
+      "strict_passed": 11,
+      "projected_accepted": true,
+      "projected_grade": {
+        "accepted": true,
+        "passed": 11,
+        "total": 11,
+        "checks": {
+          "prediction_0": true,
+          "prediction_1": true,
+          "prediction_2": true,
+          "prediction_3": true,
+          "prediction_4": true,
+          "prediction_5": true,
+          "witness": true,
+          "direct_calls": true,
+          "impacted": true,
+          "fault_location": true,
+          "counterexample": true
+        }
+      }
+    },
+    {
+      "assignment": {
+        "index": 31,
+        "reasoning": "high",
+        "family": "ledger",
+        "language": "lobo",
+        "arm": "dedup",
+        "phase": "comprehension"
+      },
+      "strict_accepted": false,
+      "strict_passed": 10,
+      "projected_accepted": false,
+      "projected_grade": {
+        "accepted": false,
+        "passed": 10,
+        "total": 11,
+        "checks": {
+          "prediction_0": true,
+          "prediction_1": true,
+          "prediction_2": true,
+          "prediction_3": true,
+          "prediction_4": true,
+          "prediction_5": true,
+          "witness": false,
+          "direct_calls": true,
+          "impacted": true,
+          "fault_location": true,
+          "counterexample": true
+        }
+      }
+    },
+    {
+      "assignment": {
+        "index": 32,
+        "reasoning": "high",
+        "family": "ledger",
+        "language": "python",
+        "arm": "original",
+        "phase": "comprehension"
+      },
+      "strict_accepted": true,
+      "strict_passed": 11,
+      "projected_accepted": true,
+      "projected_grade": {
+        "accepted": true,
+        "passed": 11,
+        "total": 11,
+        "checks": {
+          "prediction_0": true,
+          "prediction_1": true,
+          "prediction_2": true,
+          "prediction_3": true,
+          "prediction_4": true,
+          "prediction_5": true,
+          "witness": true,
+          "direct_calls": true,
+          "impacted": true,
+          "fault_location": true,
+          "counterexample": true
+        }
+      }
+    },
+    {
+      "assignment": {
+        "index": 33,
+        "reasoning": "high",
+        "family": "ledger",
+        "language": "python",
+        "arm": "dedup",
+        "phase": "comprehension"
+      },
+      "strict_accepted": true,
+      "strict_passed": 11,
+      "projected_accepted": true,
+      "projected_grade": {
+        "accepted": true,
+        "passed": 11,
+        "total": 11,
+        "checks": {
+          "prediction_0": true,
+          "prediction_1": true,
+          "prediction_2": true,
+          "prediction_3": true,
+          "prediction_4": true,
+          "prediction_5": true,
+          "witness": true,
+          "direct_calls": true,
+          "impacted": true,
+          "fault_location": true,
+          "counterexample": true
+        }
+      }
+    },
+    {
+      "assignment": {
+        "index": 34,
+        "reasoning": "high",
+        "family": "ledger",
+        "language": "python",
+        "arm": "both",
+        "phase": "comprehension"
+      },
+      "strict_accepted": true,
+      "strict_passed": 11,
+      "projected_accepted": true,
+      "projected_grade": {
+        "accepted": true,
+        "passed": 11,
+        "total": 11,
+        "checks": {
+          "prediction_0": true,
+          "prediction_1": true,
+          "prediction_2": true,
+          "prediction_3": true,
+          "prediction_4": true,
+          "prediction_5": true,
+          "witness": true,
+          "direct_calls": true,
+          "impacted": true,
+          "fault_location": true,
+          "counterexample": true
+        }
+      }
+    },
+    {
+      "assignment": {
+        "index": 35,
+        "reasoning": "high",
+        "family": "ledger",
+        "language": "python",
+        "arm": "schema",
+        "phase": "comprehension"
+      },
+      "strict_accepted": true,
+      "strict_passed": 11,
+      "projected_accepted": true,
+      "projected_grade": {
+        "accepted": true,
+        "passed": 11,
+        "total": 11,
+        "checks": {
+          "prediction_0": true,
+          "prediction_1": true,
+          "prediction_2": true,
+          "prediction_3": true,
+          "prediction_4": true,
+          "prediction_5": true,
+          "witness": true,
+          "direct_calls": true,
+          "impacted": true,
+          "fault_location": true,
+          "counterexample": true
+        }
+      }
+    },
+    {
+      "assignment": {
+        "index": 36,
+        "reasoning": "low",
+        "family": "frames",
+        "language": "python",
+        "arm": "original",
+        "phase": "comprehension"
+      },
+      "strict_accepted": true,
+      "strict_passed": 11,
+      "projected_accepted": true,
+      "projected_grade": {
+        "accepted": true,
+        "passed": 11,
+        "total": 11,
+        "checks": {
+          "prediction_0": true,
+          "prediction_1": true,
+          "prediction_2": true,
+          "prediction_3": true,
+          "prediction_4": true,
+          "prediction_5": true,
+          "witness": true,
+          "direct_calls": true,
+          "impacted": true,
+          "fault_location": true,
+          "counterexample": true
+        }
+      }
+    },
+    {
+      "assignment": {
+        "index": 37,
+        "reasoning": "low",
+        "family": "frames",
+        "language": "python",
+        "arm": "dedup",
+        "phase": "comprehension"
+      },
+      "strict_accepted": false,
+      "strict_passed": 9,
+      "projected_accepted": false,
+      "projected_grade": {
+        "accepted": false,
+        "passed": 10,
+        "total": 11,
+        "checks": {
+          "prediction_0": true,
+          "prediction_1": true,
+          "prediction_2": true,
+          "prediction_3": true,
+          "prediction_4": true,
+          "prediction_5": true,
+          "witness": false,
+          "direct_calls": true,
+          "impacted": true,
+          "fault_location": true,
+          "counterexample": true
+        }
+      }
+    },
+    {
+      "assignment": {
+        "index": 38,
+        "reasoning": "low",
+        "family": "frames",
+        "language": "python",
+        "arm": "both",
+        "phase": "comprehension"
+      },
+      "strict_accepted": true,
+      "strict_passed": 11,
+      "projected_accepted": true,
+      "projected_grade": {
+        "accepted": true,
+        "passed": 11,
+        "total": 11,
+        "checks": {
+          "prediction_0": true,
+          "prediction_1": true,
+          "prediction_2": true,
+          "prediction_3": true,
+          "prediction_4": true,
+          "prediction_5": true,
+          "witness": true,
+          "direct_calls": true,
+          "impacted": true,
+          "fault_location": true,
+          "counterexample": true
+        }
+      }
+    },
+    {
+      "assignment": {
+        "index": 39,
+        "reasoning": "low",
+        "family": "frames",
+        "language": "python",
+        "arm": "schema",
+        "phase": "comprehension"
+      },
+      "strict_accepted": false,
+      "strict_passed": 10,
+      "projected_accepted": true,
+      "projected_grade": {
+        "accepted": true,
+        "passed": 11,
+        "total": 11,
+        "checks": {
+          "prediction_0": true,
+          "prediction_1": true,
+          "prediction_2": true,
+          "prediction_3": true,
+          "prediction_4": true,
+          "prediction_5": true,
+          "witness": true,
+          "direct_calls": true,
+          "impacted": true,
+          "fault_location": true,
+          "counterexample": true
+        }
+      }
+    },
+    {
+      "assignment": {
+        "index": 40,
+        "reasoning": "low",
+        "family": "frames",
+        "language": "lobo",
+        "arm": "dedup",
+        "phase": "comprehension"
+      },
+      "strict_accepted": false,
+      "strict_passed": 9,
+      "projected_accepted": false,
+      "projected_grade": {
+        "accepted": false,
+        "passed": 10,
+        "total": 11,
+        "checks": {
+          "prediction_0": true,
+          "prediction_1": true,
+          "prediction_2": true,
+          "prediction_3": true,
+          "prediction_4": true,
+          "prediction_5": true,
+          "witness": false,
+          "direct_calls": true,
+          "impacted": true,
+          "fault_location": true,
+          "counterexample": true
+        }
+      }
+    },
+    {
+      "assignment": {
+        "index": 41,
+        "reasoning": "low",
+        "family": "frames",
+        "language": "lobo",
+        "arm": "schema",
+        "phase": "comprehension"
+      },
+      "strict_accepted": false,
+      "strict_passed": 10,
+      "projected_accepted": false,
+      "projected_grade": {
+        "accepted": false,
+        "passed": 10,
+        "total": 11,
+        "checks": {
+          "prediction_0": true,
+          "prediction_1": true,
+          "prediction_2": true,
+          "prediction_3": true,
+          "prediction_4": true,
+          "prediction_5": true,
+          "witness": false,
+          "direct_calls": true,
+          "impacted": true,
+          "fault_location": true,
+          "counterexample": true
+        }
+      }
+    },
+    {
+      "assignment": {
+        "index": 42,
+        "reasoning": "low",
+        "family": "frames",
+        "language": "lobo",
+        "arm": "original",
+        "phase": "comprehension"
+      },
+      "strict_accepted": false,
+      "strict_passed": 10,
+      "projected_accepted": false,
+      "projected_grade": {
+        "accepted": false,
+        "passed": 10,
+        "total": 11,
+        "checks": {
+          "prediction_0": true,
+          "prediction_1": true,
+          "prediction_2": true,
+          "prediction_3": true,
+          "prediction_4": true,
+          "prediction_5": true,
+          "witness": false,
+          "direct_calls": true,
+          "impacted": true,
+          "fault_location": true,
+          "counterexample": true
+        }
+      }
+    },
+    {
+      "assignment": {
+        "index": 43,
+        "reasoning": "low",
+        "family": "frames",
+        "language": "lobo",
+        "arm": "both",
+        "phase": "comprehension"
+      },
+      "strict_accepted": false,
+      "strict_passed": 9,
+      "projected_accepted": false,
+      "projected_grade": {
+        "accepted": false,
+        "passed": 10,
+        "total": 11,
+        "checks": {
+          "prediction_0": true,
+          "prediction_1": true,
+          "prediction_2": true,
+          "prediction_3": true,
+          "prediction_4": true,
+          "prediction_5": true,
+          "witness": true,
+          "direct_calls": false,
+          "impacted": true,
+          "fault_location": true,
+          "counterexample": true
+        }
+      }
+    },
+    {
+      "assignment": {
+        "index": 44,
+        "reasoning": "low",
+        "family": "scheduler",
+        "language": "rust",
+        "arm": "schema",
+        "phase": "comprehension"
+      },
+      "strict_accepted": true,
+      "strict_passed": 11,
+      "projected_accepted": true,
+      "projected_grade": {
+        "accepted": true,
+        "passed": 11,
+        "total": 11,
+        "checks": {
+          "prediction_0": true,
+          "prediction_1": true,
+          "prediction_2": true,
+          "prediction_3": true,
+          "prediction_4": true,
+          "prediction_5": true,
+          "witness": true,
+          "direct_calls": true,
+          "impacted": true,
+          "fault_location": true,
+          "counterexample": true
+        }
+      }
+    },
+    {
+      "assignment": {
+        "index": 45,
+        "reasoning": "low",
+        "family": "scheduler",
+        "language": "rust",
+        "arm": "both",
+        "phase": "comprehension"
+      },
+      "strict_accepted": true,
+      "strict_passed": 11,
+      "projected_accepted": true,
+      "projected_grade": {
+        "accepted": true,
+        "passed": 11,
+        "total": 11,
+        "checks": {
+          "prediction_0": true,
+          "prediction_1": true,
+          "prediction_2": true,
+          "prediction_3": true,
+          "prediction_4": true,
+          "prediction_5": true,
+          "witness": true,
+          "direct_calls": true,
+          "impacted": true,
+          "fault_location": true,
+          "counterexample": true
+        }
+      }
+    },
+    {
+      "assignment": {
+        "index": 46,
+        "reasoning": "low",
+        "family": "scheduler",
+        "language": "rust",
+        "arm": "dedup",
+        "phase": "comprehension"
+      },
+      "strict_accepted": true,
+      "strict_passed": 11,
+      "projected_accepted": true,
+      "projected_grade": {
+        "accepted": true,
+        "passed": 11,
+        "total": 11,
+        "checks": {
+          "prediction_0": true,
+          "prediction_1": true,
+          "prediction_2": true,
+          "prediction_3": true,
+          "prediction_4": true,
+          "prediction_5": true,
+          "witness": true,
+          "direct_calls": true,
+          "impacted": true,
+          "fault_location": true,
+          "counterexample": true
+        }
+      }
+    },
+    {
+      "assignment": {
+        "index": 47,
+        "reasoning": "low",
+        "family": "scheduler",
+        "language": "rust",
+        "arm": "original",
+        "phase": "comprehension"
+      },
+      "strict_accepted": false,
+      "strict_passed": 10,
+      "projected_accepted": false,
+      "projected_grade": {
+        "accepted": false,
+        "passed": 10,
+        "total": 11,
+        "checks": {
+          "prediction_0": true,
+          "prediction_1": true,
+          "prediction_2": true,
+          "prediction_3": true,
+          "prediction_4": true,
+          "prediction_5": false,
+          "witness": true,
+          "direct_calls": true,
+          "impacted": true,
+          "fault_location": true,
+          "counterexample": true
+        }
+      }
+    },
+    {
+      "assignment": {
+        "index": 48,
+        "reasoning": "low",
+        "family": "scheduler",
+        "language": "lobo",
+        "arm": "both",
+        "phase": "comprehension"
+      },
+      "strict_accepted": false,
+      "strict_passed": 9,
+      "projected_accepted": false,
+      "projected_grade": {
+        "accepted": false,
+        "passed": 9,
+        "total": 11,
+        "checks": {
+          "prediction_0": false,
+          "prediction_1": true,
+          "prediction_2": true,
+          "prediction_3": true,
+          "prediction_4": true,
+          "prediction_5": true,
+          "witness": true,
+          "direct_calls": false,
+          "impacted": true,
+          "fault_location": true,
+          "counterexample": true
+        }
+      }
+    },
+    {
+      "assignment": {
+        "index": 49,
+        "reasoning": "low",
+        "family": "scheduler",
+        "language": "lobo",
+        "arm": "original",
+        "phase": "comprehension"
+      },
+      "strict_accepted": true,
+      "strict_passed": 11,
+      "projected_accepted": true,
+      "projected_grade": {
+        "accepted": true,
+        "passed": 11,
+        "total": 11,
+        "checks": {
+          "prediction_0": true,
+          "prediction_1": true,
+          "prediction_2": true,
+          "prediction_3": true,
+          "prediction_4": true,
+          "prediction_5": true,
+          "witness": true,
+          "direct_calls": true,
+          "impacted": true,
+          "fault_location": true,
+          "counterexample": true
+        }
+      }
+    },
+    {
+      "assignment": {
+        "index": 50,
+        "reasoning": "low",
+        "family": "scheduler",
+        "language": "lobo",
+        "arm": "schema",
+        "phase": "comprehension"
+      },
+      "strict_accepted": false,
+      "strict_passed": 9,
+      "projected_accepted": false,
+      "projected_grade": {
+        "accepted": false,
+        "passed": 9,
+        "total": 11,
+        "checks": {
+          "prediction_0": true,
+          "prediction_1": true,
+          "prediction_2": true,
+          "prediction_3": true,
+          "prediction_4": true,
+          "prediction_5": false,
+          "witness": true,
+          "direct_calls": false,
+          "impacted": true,
+          "fault_location": true,
+          "counterexample": true
+        }
+      }
+    },
+    {
+      "assignment": {
+        "index": 51,
+        "reasoning": "low",
+        "family": "scheduler",
+        "language": "lobo",
+        "arm": "dedup",
+        "phase": "comprehension"
+      },
+      "strict_accepted": true,
+      "strict_passed": 11,
+      "projected_accepted": true,
+      "projected_grade": {
+        "accepted": true,
+        "passed": 11,
+        "total": 11,
+        "checks": {
+          "prediction_0": true,
+          "prediction_1": true,
+          "prediction_2": true,
+          "prediction_3": true,
+          "prediction_4": true,
+          "prediction_5": true,
+          "witness": true,
+          "direct_calls": true,
+          "impacted": true,
+          "fault_location": true,
+          "counterexample": true
+        }
+      }
+    },
+    {
+      "assignment": {
+        "index": 52,
+        "reasoning": "low",
+        "family": "ledger",
+        "language": "rust",
+        "arm": "original",
+        "phase": "comprehension"
+      },
+      "strict_accepted": true,
+      "strict_passed": 11,
+      "projected_accepted": true,
+      "projected_grade": {
+        "accepted": true,
+        "passed": 11,
+        "total": 11,
+        "checks": {
+          "prediction_0": true,
+          "prediction_1": true,
+          "prediction_2": true,
+          "prediction_3": true,
+          "prediction_4": true,
+          "prediction_5": true,
+          "witness": true,
+          "direct_calls": true,
+          "impacted": true,
+          "fault_location": true,
+          "counterexample": true
+        }
+      }
+    },
+    {
+      "assignment": {
+        "index": 53,
+        "reasoning": "low",
+        "family": "ledger",
+        "language": "rust",
+        "arm": "dedup",
+        "phase": "comprehension"
+      },
+      "strict_accepted": true,
+      "strict_passed": 11,
+      "projected_accepted": true,
+      "projected_grade": {
+        "accepted": true,
+        "passed": 11,
+        "total": 11,
+        "checks": {
+          "prediction_0": true,
+          "prediction_1": true,
+          "prediction_2": true,
+          "prediction_3": true,
+          "prediction_4": true,
+          "prediction_5": true,
+          "witness": true,
+          "direct_calls": true,
+          "impacted": true,
+          "fault_location": true,
+          "counterexample": true
+        }
+      }
+    },
+    {
+      "assignment": {
+        "index": 54,
+        "reasoning": "low",
+        "family": "ledger",
+        "language": "rust",
+        "arm": "both",
+        "phase": "comprehension"
+      },
+      "strict_accepted": true,
+      "strict_passed": 11,
+      "projected_accepted": true,
+      "projected_grade": {
+        "accepted": true,
+        "passed": 11,
+        "total": 11,
+        "checks": {
+          "prediction_0": true,
+          "prediction_1": true,
+          "prediction_2": true,
+          "prediction_3": true,
+          "prediction_4": true,
+          "prediction_5": true,
+          "witness": true,
+          "direct_calls": true,
+          "impacted": true,
+          "fault_location": true,
+          "counterexample": true
+        }
+      }
+    },
+    {
+      "assignment": {
+        "index": 55,
+        "reasoning": "low",
+        "family": "ledger",
+        "language": "rust",
+        "arm": "schema",
+        "phase": "comprehension"
+      },
+      "strict_accepted": true,
+      "strict_passed": 11,
+      "projected_accepted": true,
+      "projected_grade": {
+        "accepted": true,
+        "passed": 11,
+        "total": 11,
+        "checks": {
+          "prediction_0": true,
+          "prediction_1": true,
+          "prediction_2": true,
+          "prediction_3": true,
+          "prediction_4": true,
+          "prediction_5": true,
+          "witness": true,
+          "direct_calls": true,
+          "impacted": true,
+          "fault_location": true,
+          "counterexample": true
+        }
+      }
+    },
+    {
+      "assignment": {
+        "index": 56,
+        "reasoning": "low",
+        "family": "scheduler",
+        "language": "python",
+        "arm": "dedup",
+        "phase": "comprehension"
+      },
+      "strict_accepted": true,
+      "strict_passed": 11,
+      "projected_accepted": true,
+      "projected_grade": {
+        "accepted": true,
+        "passed": 11,
+        "total": 11,
+        "checks": {
+          "prediction_0": true,
+          "prediction_1": true,
+          "prediction_2": true,
+          "prediction_3": true,
+          "prediction_4": true,
+          "prediction_5": true,
+          "witness": true,
+          "direct_calls": true,
+          "impacted": true,
+          "fault_location": true,
+          "counterexample": true
+        }
+      }
+    },
+    {
+      "assignment": {
+        "index": 57,
+        "reasoning": "low",
+        "family": "scheduler",
+        "language": "python",
+        "arm": "schema",
+        "phase": "comprehension"
+      },
+      "strict_accepted": true,
+      "strict_passed": 11,
+      "projected_accepted": true,
+      "projected_grade": {
+        "accepted": true,
+        "passed": 11,
+        "total": 11,
+        "checks": {
+          "prediction_0": true,
+          "prediction_1": true,
+          "prediction_2": true,
+          "prediction_3": true,
+          "prediction_4": true,
+          "prediction_5": true,
+          "witness": true,
+          "direct_calls": true,
+          "impacted": true,
+          "fault_location": true,
+          "counterexample": true
+        }
+      }
+    },
+    {
+      "assignment": {
+        "index": 58,
+        "reasoning": "low",
+        "family": "scheduler",
+        "language": "python",
+        "arm": "original",
+        "phase": "comprehension"
+      },
+      "strict_accepted": true,
+      "strict_passed": 11,
+      "projected_accepted": true,
+      "projected_grade": {
+        "accepted": true,
+        "passed": 11,
+        "total": 11,
+        "checks": {
+          "prediction_0": true,
+          "prediction_1": true,
+          "prediction_2": true,
+          "prediction_3": true,
+          "prediction_4": true,
+          "prediction_5": true,
+          "witness": true,
+          "direct_calls": true,
+          "impacted": true,
+          "fault_location": true,
+          "counterexample": true
+        }
+      }
+    },
+    {
+      "assignment": {
+        "index": 59,
+        "reasoning": "low",
+        "family": "scheduler",
+        "language": "python",
+        "arm": "both",
+        "phase": "comprehension"
+      },
+      "strict_accepted": true,
+      "strict_passed": 11,
+      "projected_accepted": true,
+      "projected_grade": {
+        "accepted": true,
+        "passed": 11,
+        "total": 11,
+        "checks": {
+          "prediction_0": true,
+          "prediction_1": true,
+          "prediction_2": true,
+          "prediction_3": true,
+          "prediction_4": true,
+          "prediction_5": true,
+          "witness": true,
+          "direct_calls": true,
+          "impacted": true,
+          "fault_location": true,
+          "counterexample": true
+        }
+      }
+    },
+    {
+      "assignment": {
+        "index": 60,
+        "reasoning": "low",
+        "family": "frames",
+        "language": "rust",
+        "arm": "schema",
+        "phase": "comprehension"
+      },
+      "strict_accepted": false,
+      "strict_passed": 10,
+      "projected_accepted": false,
+      "projected_grade": {
+        "accepted": false,
+        "passed": 10,
+        "total": 11,
+        "checks": {
+          "prediction_0": true,
+          "prediction_1": true,
+          "prediction_2": true,
+          "prediction_3": true,
+          "prediction_4": true,
+          "prediction_5": true,
+          "witness": false,
+          "direct_calls": true,
+          "impacted": true,
+          "fault_location": true,
+          "counterexample": true
+        }
+      }
+    },
+    {
+      "assignment": {
+        "index": 61,
+        "reasoning": "low",
+        "family": "frames",
+        "language": "rust",
+        "arm": "both",
+        "phase": "comprehension"
+      },
+      "strict_accepted": false,
+      "strict_passed": 10,
+      "projected_accepted": true,
+      "projected_grade": {
+        "accepted": true,
+        "passed": 11,
+        "total": 11,
+        "checks": {
+          "prediction_0": true,
+          "prediction_1": true,
+          "prediction_2": true,
+          "prediction_3": true,
+          "prediction_4": true,
+          "prediction_5": true,
+          "witness": true,
+          "direct_calls": true,
+          "impacted": true,
+          "fault_location": true,
+          "counterexample": true
+        }
+      }
+    },
+    {
+      "assignment": {
+        "index": 62,
+        "reasoning": "low",
+        "family": "frames",
+        "language": "rust",
+        "arm": "dedup",
+        "phase": "comprehension"
+      },
+      "strict_accepted": false,
+      "strict_passed": 10,
+      "projected_accepted": false,
+      "projected_grade": {
+        "accepted": false,
+        "passed": 10,
+        "total": 11,
+        "checks": {
+          "prediction_0": true,
+          "prediction_1": true,
+          "prediction_2": true,
+          "prediction_3": true,
+          "prediction_4": true,
+          "prediction_5": true,
+          "witness": false,
+          "direct_calls": true,
+          "impacted": true,
+          "fault_location": true,
+          "counterexample": true
+        }
+      }
+    },
+    {
+      "assignment": {
+        "index": 63,
+        "reasoning": "low",
+        "family": "frames",
+        "language": "rust",
+        "arm": "original",
+        "phase": "comprehension"
+      },
+      "strict_accepted": false,
+      "strict_passed": 10,
+      "projected_accepted": true,
+      "projected_grade": {
+        "accepted": true,
+        "passed": 11,
+        "total": 11,
+        "checks": {
+          "prediction_0": true,
+          "prediction_1": true,
+          "prediction_2": true,
+          "prediction_3": true,
+          "prediction_4": true,
+          "prediction_5": true,
+          "witness": true,
+          "direct_calls": true,
+          "impacted": true,
+          "fault_location": true,
+          "counterexample": true
+        }
+      }
+    },
+    {
+      "assignment": {
+        "index": 64,
+        "reasoning": "low",
+        "family": "ledger",
+        "language": "lobo",
+        "arm": "both",
+        "phase": "comprehension"
+      },
+      "strict_accepted": false,
+      "strict_passed": 8,
+      "projected_accepted": false,
+      "projected_grade": {
+        "accepted": false,
+        "passed": 8,
+        "total": 11,
+        "checks": {
+          "prediction_0": true,
+          "prediction_1": true,
+          "prediction_2": false,
+          "prediction_3": true,
+          "prediction_4": true,
+          "prediction_5": true,
+          "witness": true,
+          "direct_calls": false,
+          "impacted": false,
+          "fault_location": true,
+          "counterexample": true
+        }
+      }
+    },
+    {
+      "assignment": {
+        "index": 65,
+        "reasoning": "low",
+        "family": "ledger",
+        "language": "lobo",
+        "arm": "original",
+        "phase": "comprehension"
+      },
+      "strict_accepted": false,
+      "strict_passed": 10,
+      "projected_accepted": false,
+      "projected_grade": {
+        "accepted": false,
+        "passed": 10,
+        "total": 11,
+        "checks": {
+          "prediction_0": true,
+          "prediction_1": true,
+          "prediction_2": false,
+          "prediction_3": true,
+          "prediction_4": true,
+          "prediction_5": true,
+          "witness": true,
+          "direct_calls": true,
+          "impacted": true,
+          "fault_location": true,
+          "counterexample": true
+        }
+      }
+    },
+    {
+      "assignment": {
+        "index": 66,
+        "reasoning": "low",
+        "family": "ledger",
+        "language": "lobo",
+        "arm": "schema",
+        "phase": "comprehension"
+      },
+      "strict_accepted": false,
+      "strict_passed": 10,
+      "projected_accepted": true,
+      "projected_grade": {
+        "accepted": true,
+        "passed": 11,
+        "total": 11,
+        "checks": {
+          "prediction_0": true,
+          "prediction_1": true,
+          "prediction_2": true,
+          "prediction_3": true,
+          "prediction_4": true,
+          "prediction_5": true,
+          "witness": true,
+          "direct_calls": true,
+          "impacted": true,
+          "fault_location": true,
+          "counterexample": true
+        }
+      }
+    },
+    {
+      "assignment": {
+        "index": 67,
+        "reasoning": "low",
+        "family": "ledger",
+        "language": "lobo",
+        "arm": "dedup",
+        "phase": "comprehension"
+      },
+      "strict_accepted": false,
+      "strict_passed": 10,
+      "projected_accepted": false,
+      "projected_grade": {
+        "accepted": false,
+        "passed": 10,
+        "total": 11,
+        "checks": {
+          "prediction_0": true,
+          "prediction_1": true,
+          "prediction_2": true,
+          "prediction_3": true,
+          "prediction_4": true,
+          "prediction_5": true,
+          "witness": true,
+          "direct_calls": false,
+          "impacted": true,
+          "fault_location": true,
+          "counterexample": true
+        }
+      }
+    },
+    {
+      "assignment": {
+        "index": 68,
+        "reasoning": "low",
+        "family": "ledger",
+        "language": "python",
+        "arm": "original",
+        "phase": "comprehension"
+      },
+      "strict_accepted": true,
+      "strict_passed": 11,
+      "projected_accepted": true,
+      "projected_grade": {
+        "accepted": true,
+        "passed": 11,
+        "total": 11,
+        "checks": {
+          "prediction_0": true,
+          "prediction_1": true,
+          "prediction_2": true,
+          "prediction_3": true,
+          "prediction_4": true,
+          "prediction_5": true,
+          "witness": true,
+          "direct_calls": true,
+          "impacted": true,
+          "fault_location": true,
+          "counterexample": true
+        }
+      }
+    },
+    {
+      "assignment": {
+        "index": 69,
+        "reasoning": "low",
+        "family": "ledger",
+        "language": "python",
+        "arm": "dedup",
+        "phase": "comprehension"
+      },
+      "strict_accepted": false,
+      "strict_passed": 9,
+      "projected_accepted": false,
+      "projected_grade": {
+        "accepted": false,
+        "passed": 9,
+        "total": 11,
+        "checks": {
+          "prediction_0": true,
+          "prediction_1": true,
+          "prediction_2": false,
+          "prediction_3": true,
+          "prediction_4": true,
+          "prediction_5": true,
+          "witness": false,
+          "direct_calls": true,
+          "impacted": true,
+          "fault_location": true,
+          "counterexample": true
+        }
+      }
+    },
+    {
+      "assignment": {
+        "index": 70,
+        "reasoning": "low",
+        "family": "ledger",
+        "language": "python",
+        "arm": "both",
+        "phase": "comprehension"
+      },
+      "strict_accepted": true,
+      "strict_passed": 11,
+      "projected_accepted": true,
+      "projected_grade": {
+        "accepted": true,
+        "passed": 11,
+        "total": 11,
+        "checks": {
+          "prediction_0": true,
+          "prediction_1": true,
+          "prediction_2": true,
+          "prediction_3": true,
+          "prediction_4": true,
+          "prediction_5": true,
+          "witness": true,
+          "direct_calls": true,
+          "impacted": true,
+          "fault_location": true,
+          "counterexample": true
+        }
+      }
+    },
+    {
+      "assignment": {
+        "index": 71,
+        "reasoning": "low",
+        "family": "ledger",
+        "language": "python",
+        "arm": "schema",
+        "phase": "comprehension"
+      },
+      "strict_accepted": true,
+      "strict_passed": 11,
+      "projected_accepted": true,
+      "projected_grade": {
+        "accepted": true,
+        "passed": 11,
+        "total": 11,
+        "checks": {
+          "prediction_0": true,
+          "prediction_1": true,
+          "prediction_2": true,
+          "prediction_3": true,
+          "prediction_4": true,
+          "prediction_5": true,
+          "witness": true,
+          "direct_calls": true,
+          "impacted": true,
+          "fault_location": true,
+          "counterexample": true
+        }
+      }
+    }
+  ],
+  "concrete_replays": [
+    {
+      "assignment": {
+        "index": 7,
+        "reasoning": "high",
+        "family": "frames",
+        "language": "lobo",
+        "arm": "both",
+        "phase": "comprehension"
+      },
+      "item": "witness",
+      "language": "lobo",
+      "mutant": false,
+      "input": {
+        "data": "010a11020b0c1c",
+        "limit": 2
+      },
+      "metadata_was_removed": false,
+      "expected": {
+        "frames": [
+          "0a"
+        ],
+        "consumed": 3,
+        "error": 2
+      },
+      "actual": {
+        "frames": [
+          "0a"
+        ],
+        "consumed": 3,
+        "error": 2
+      },
+      "ok": true,
+      "adapter": "frozen study.execute",
+      "adapter_sha256": "1c05a60a0c431a9d9336f7b28c9fcfb9f69446cb24ead52f380d1a5d4c838bf0",
+      "source_folder": "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/context-study-20261123/validation/frames-lobo",
+      "binary_sha256": "cfa3c40585e1b8eee691fa45bd12e90e585c23237634eebce6f99df242593290"
+    },
+    {
+      "assignment": {
+        "index": 7,
+        "reasoning": "high",
+        "family": "frames",
+        "language": "lobo",
+        "arm": "both",
+        "phase": "comprehension"
+      },
+      "item": "witness",
+      "language": "rust",
+      "mutant": false,
+      "input": {
+        "data": "010a11020b0c1c",
+        "limit": 2
+      },
+      "metadata_was_removed": false,
+      "expected": {
+        "frames": [
+          "0a"
+        ],
+        "consumed": 3,
+        "error": 2
+      },
+      "actual": {
+        "frames": [
+          "0a"
+        ],
+        "consumed": 3,
+        "error": 2
+      },
+      "ok": true,
+      "adapter": "frozen study.execute",
+      "adapter_sha256": "1c05a60a0c431a9d9336f7b28c9fcfb9f69446cb24ead52f380d1a5d4c838bf0",
+      "source_folder": "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/context-study-20261123/validation/frames-rust",
+      "binary_sha256": "0e00ed19b2e6a96017844ed4c284bd75f975e1ffa6568ef6d67657e919c8b22b"
+    },
+    {
+      "assignment": {
+        "index": 7,
+        "reasoning": "high",
+        "family": "frames",
+        "language": "lobo",
+        "arm": "both",
+        "phase": "comprehension"
+      },
+      "item": "witness",
+      "language": "python",
+      "mutant": false,
+      "input": {
+        "data": "010a11020b0c1c",
+        "limit": 2
+      },
+      "metadata_was_removed": false,
+      "expected": {
+        "frames": [
+          "0a"
+        ],
+        "consumed": 3,
+        "error": 2
+      },
+      "actual": {
+        "frames": [
+          "0a"
+        ],
+        "consumed": 3,
+        "error": 2
+      },
+      "ok": true,
+      "adapter": "frozen study.execute",
+      "adapter_sha256": "1c05a60a0c431a9d9336f7b28c9fcfb9f69446cb24ead52f380d1a5d4c838bf0",
+      "source_folder": "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/context-study-20261123/validation/frames-python",
+      "binary_sha256": null
+    },
+    {
+      "assignment": {
+        "index": 13,
+        "reasoning": "high",
+        "family": "scheduler",
+        "language": "lobo",
+        "arm": "original",
+        "phase": "comprehension"
+      },
+      "item": "prediction_5",
+      "language": "lobo",
+      "mutant": false,
+      "input": {
+        "jobs": [
+          {
+            "id": 2,
+            "cost": 2,
+            "deps": []
+          },
+          {
+            "id": 0,
+            "cost": 1,
+            "deps": [
+              2
+            ]
+          },
+          {
+            "id": 1,
+            "cost": 3,
+            "deps": []
+          }
+        ],
+        "budget": 5
+      },
+      "metadata_was_removed": false,
+      "expected": {
+        "order": [
+          2,
+          1
+        ],
+        "spent": 5,
+        "blocked": 1
+      },
+      "actual": {
+        "order": [
+          2,
+          1
+        ],
+        "spent": 5,
+        "blocked": 1
+      },
+      "ok": true,
+      "adapter": "frozen study.execute",
+      "adapter_sha256": "1c05a60a0c431a9d9336f7b28c9fcfb9f69446cb24ead52f380d1a5d4c838bf0",
+      "source_folder": "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/context-study-20261123/validation/scheduler-lobo",
+      "binary_sha256": "38b25fa4f2460c0a98f7c09d6469803ecffa7872aa9b39c3e8939fc91ae9d2ca"
+    },
+    {
+      "assignment": {
+        "index": 13,
+        "reasoning": "high",
+        "family": "scheduler",
+        "language": "lobo",
+        "arm": "original",
+        "phase": "comprehension"
+      },
+      "item": "prediction_5",
+      "language": "rust",
+      "mutant": false,
+      "input": {
+        "jobs": [
+          {
+            "id": 2,
+            "cost": 2,
+            "deps": []
+          },
+          {
+            "id": 0,
+            "cost": 1,
+            "deps": [
+              2
+            ]
+          },
+          {
+            "id": 1,
+            "cost": 3,
+            "deps": []
+          }
+        ],
+        "budget": 5
+      },
+      "metadata_was_removed": false,
+      "expected": {
+        "order": [
+          2,
+          1
+        ],
+        "spent": 5,
+        "blocked": 1
+      },
+      "actual": {
+        "order": [
+          2,
+          1
+        ],
+        "spent": 5,
+        "blocked": 1
+      },
+      "ok": true,
+      "adapter": "frozen study.execute",
+      "adapter_sha256": "1c05a60a0c431a9d9336f7b28c9fcfb9f69446cb24ead52f380d1a5d4c838bf0",
+      "source_folder": "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/context-study-20261123/validation/scheduler-rust",
+      "binary_sha256": "4f382a875415ae6a91a3cd2d1bd1bd083aa3f36fc3835bf73251f3bd2d42a832"
+    },
+    {
+      "assignment": {
+        "index": 13,
+        "reasoning": "high",
+        "family": "scheduler",
+        "language": "lobo",
+        "arm": "original",
+        "phase": "comprehension"
+      },
+      "item": "prediction_5",
+      "language": "python",
+      "mutant": false,
+      "input": {
+        "jobs": [
+          {
+            "id": 2,
+            "cost": 2,
+            "deps": []
+          },
+          {
+            "id": 0,
+            "cost": 1,
+            "deps": [
+              2
+            ]
+          },
+          {
+            "id": 1,
+            "cost": 3,
+            "deps": []
+          }
+        ],
+        "budget": 5
+      },
+      "metadata_was_removed": false,
+      "expected": {
+        "order": [
+          2,
+          1
+        ],
+        "spent": 5,
+        "blocked": 1
+      },
+      "actual": {
+        "order": [
+          2,
+          1
+        ],
+        "spent": 5,
+        "blocked": 1
+      },
+      "ok": true,
+      "adapter": "frozen study.execute",
+      "adapter_sha256": "1c05a60a0c431a9d9336f7b28c9fcfb9f69446cb24ead52f380d1a5d4c838bf0",
+      "source_folder": "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/context-study-20261123/validation/scheduler-python",
+      "binary_sha256": null
+    },
+    {
+      "assignment": {
+        "index": 18,
+        "reasoning": "high",
+        "family": "ledger",
+        "language": "rust",
+        "arm": "both",
+        "phase": "comprehension"
+      },
+      "item": "witness",
+      "language": "lobo",
+      "mutant": false,
+      "input": {
+        "initial": 10,
+        "events": [
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            98
+          ],
+          [
+            0,
+            -1
+          ]
+        ]
+      },
+      "metadata_was_removed": false,
+      "expected": {
+        "balance": 13,
+        "rejected": 2,
+        "peak": 13,
+        "audit": [
+          13,
+          13,
+          13
+        ]
+      },
+      "actual": {
+        "balance": 13,
+        "rejected": 2,
+        "peak": 13,
+        "audit": [
+          13,
+          13,
+          13
+        ]
+      },
+      "ok": true,
+      "adapter": "frozen study.execute",
+      "adapter_sha256": "1c05a60a0c431a9d9336f7b28c9fcfb9f69446cb24ead52f380d1a5d4c838bf0",
+      "source_folder": "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/context-study-20261123/validation/ledger-lobo",
+      "binary_sha256": "3977a9aec8b4e2ab982c63238e9e1596e3e058e37357c4adda45c8761fa866db"
+    },
+    {
+      "assignment": {
+        "index": 18,
+        "reasoning": "high",
+        "family": "ledger",
+        "language": "rust",
+        "arm": "both",
+        "phase": "comprehension"
+      },
+      "item": "witness",
+      "language": "rust",
+      "mutant": false,
+      "input": {
+        "initial": 10,
+        "events": [
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            98
+          ],
+          [
+            0,
+            -1
+          ]
+        ]
+      },
+      "metadata_was_removed": false,
+      "expected": {
+        "balance": 13,
+        "rejected": 2,
+        "peak": 13,
+        "audit": [
+          13,
+          13,
+          13
+        ]
+      },
+      "actual": {
+        "balance": 13,
+        "rejected": 2,
+        "peak": 13,
+        "audit": [
+          13,
+          13,
+          13
+        ]
+      },
+      "ok": true,
+      "adapter": "frozen study.execute",
+      "adapter_sha256": "1c05a60a0c431a9d9336f7b28c9fcfb9f69446cb24ead52f380d1a5d4c838bf0",
+      "source_folder": "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/context-study-20261123/validation/ledger-rust",
+      "binary_sha256": "659fb6f95ef338852ac4ad80fc99ba0511ade02e540049e03c469da8cf528d5a"
+    },
+    {
+      "assignment": {
+        "index": 18,
+        "reasoning": "high",
+        "family": "ledger",
+        "language": "rust",
+        "arm": "both",
+        "phase": "comprehension"
+      },
+      "item": "witness",
+      "language": "python",
+      "mutant": false,
+      "input": {
+        "initial": 10,
+        "events": [
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            98
+          ],
+          [
+            0,
+            -1
+          ]
+        ]
+      },
+      "metadata_was_removed": false,
+      "expected": {
+        "balance": 13,
+        "rejected": 2,
+        "peak": 13,
+        "audit": [
+          13,
+          13,
+          13
+        ]
+      },
+      "actual": {
+        "balance": 13,
+        "rejected": 2,
+        "peak": 13,
+        "audit": [
+          13,
+          13,
+          13
+        ]
+      },
+      "ok": true,
+      "adapter": "frozen study.execute",
+      "adapter_sha256": "1c05a60a0c431a9d9336f7b28c9fcfb9f69446cb24ead52f380d1a5d4c838bf0",
+      "source_folder": "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/context-study-20261123/validation/ledger-python",
+      "binary_sha256": null
+    },
+    {
+      "assignment": {
+        "index": 19,
+        "reasoning": "high",
+        "family": "ledger",
+        "language": "rust",
+        "arm": "schema",
+        "phase": "comprehension"
+      },
+      "item": "prediction_0",
+      "language": "lobo",
+      "mutant": false,
+      "input": {
+        "initial": 8,
+        "events": [
+          [
+            0,
+            4
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            3,
+            0
+          ],
+          [
+            1,
+            2
+          ]
+        ]
+      },
+      "metadata_was_removed": false,
+      "expected": {
+        "balance": 8,
+        "rejected": 1,
+        "peak": 12,
+        "audit": [
+          12,
+          7,
+          7,
+          10,
+          10,
+          10,
+          8
+        ]
+      },
+      "actual": {
+        "balance": 8,
+        "rejected": 1,
+        "peak": 12,
+        "audit": [
+          12,
+          7,
+          7,
+          10,
+          10,
+          10,
+          8
+        ]
+      },
+      "ok": true,
+      "adapter": "frozen study.execute",
+      "adapter_sha256": "1c05a60a0c431a9d9336f7b28c9fcfb9f69446cb24ead52f380d1a5d4c838bf0",
+      "source_folder": "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/context-study-20261123/validation/ledger-lobo",
+      "binary_sha256": "3977a9aec8b4e2ab982c63238e9e1596e3e058e37357c4adda45c8761fa866db"
+    },
+    {
+      "assignment": {
+        "index": 19,
+        "reasoning": "high",
+        "family": "ledger",
+        "language": "rust",
+        "arm": "schema",
+        "phase": "comprehension"
+      },
+      "item": "prediction_0",
+      "language": "rust",
+      "mutant": false,
+      "input": {
+        "initial": 8,
+        "events": [
+          [
+            0,
+            4
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            3,
+            0
+          ],
+          [
+            1,
+            2
+          ]
+        ]
+      },
+      "metadata_was_removed": false,
+      "expected": {
+        "balance": 8,
+        "rejected": 1,
+        "peak": 12,
+        "audit": [
+          12,
+          7,
+          7,
+          10,
+          10,
+          10,
+          8
+        ]
+      },
+      "actual": {
+        "balance": 8,
+        "rejected": 1,
+        "peak": 12,
+        "audit": [
+          12,
+          7,
+          7,
+          10,
+          10,
+          10,
+          8
+        ]
+      },
+      "ok": true,
+      "adapter": "frozen study.execute",
+      "adapter_sha256": "1c05a60a0c431a9d9336f7b28c9fcfb9f69446cb24ead52f380d1a5d4c838bf0",
+      "source_folder": "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/context-study-20261123/validation/ledger-rust",
+      "binary_sha256": "659fb6f95ef338852ac4ad80fc99ba0511ade02e540049e03c469da8cf528d5a"
+    },
+    {
+      "assignment": {
+        "index": 19,
+        "reasoning": "high",
+        "family": "ledger",
+        "language": "rust",
+        "arm": "schema",
+        "phase": "comprehension"
+      },
+      "item": "prediction_0",
+      "language": "python",
+      "mutant": false,
+      "input": {
+        "initial": 8,
+        "events": [
+          [
+            0,
+            4
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            3,
+            0
+          ],
+          [
+            1,
+            2
+          ]
+        ]
+      },
+      "metadata_was_removed": false,
+      "expected": {
+        "balance": 8,
+        "rejected": 1,
+        "peak": 12,
+        "audit": [
+          12,
+          7,
+          7,
+          10,
+          10,
+          10,
+          8
+        ]
+      },
+      "actual": {
+        "balance": 8,
+        "rejected": 1,
+        "peak": 12,
+        "audit": [
+          12,
+          7,
+          7,
+          10,
+          10,
+          10,
+          8
+        ]
+      },
+      "ok": true,
+      "adapter": "frozen study.execute",
+      "adapter_sha256": "1c05a60a0c431a9d9336f7b28c9fcfb9f69446cb24ead52f380d1a5d4c838bf0",
+      "source_folder": "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/context-study-20261123/validation/ledger-python",
+      "binary_sha256": null
+    },
+    {
+      "assignment": {
+        "index": 27,
+        "reasoning": "high",
+        "family": "frames",
+        "language": "rust",
+        "arm": "original",
+        "phase": "comprehension"
+      },
+      "item": "prediction_1",
+      "language": "lobo",
+      "mutant": false,
+      "input": {
+        "data": "02040510",
+        "limit": 3
+      },
+      "metadata_was_removed": false,
+      "expected": {
+        "frames": [
+          "0405"
+        ],
+        "consumed": 4,
+        "error": 0
+      },
+      "actual": {
+        "frames": [
+          "0405"
+        ],
+        "consumed": 4,
+        "error": 0
+      },
+      "ok": true,
+      "adapter": "frozen study.execute",
+      "adapter_sha256": "1c05a60a0c431a9d9336f7b28c9fcfb9f69446cb24ead52f380d1a5d4c838bf0",
+      "source_folder": "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/context-study-20261123/validation/frames-lobo",
+      "binary_sha256": "cfa3c40585e1b8eee691fa45bd12e90e585c23237634eebce6f99df242593290"
+    },
+    {
+      "assignment": {
+        "index": 27,
+        "reasoning": "high",
+        "family": "frames",
+        "language": "rust",
+        "arm": "original",
+        "phase": "comprehension"
+      },
+      "item": "prediction_1",
+      "language": "rust",
+      "mutant": false,
+      "input": {
+        "data": "02040510",
+        "limit": 3
+      },
+      "metadata_was_removed": false,
+      "expected": {
+        "frames": [
+          "0405"
+        ],
+        "consumed": 4,
+        "error": 0
+      },
+      "actual": {
+        "frames": [
+          "0405"
+        ],
+        "consumed": 4,
+        "error": 0
+      },
+      "ok": true,
+      "adapter": "frozen study.execute",
+      "adapter_sha256": "1c05a60a0c431a9d9336f7b28c9fcfb9f69446cb24ead52f380d1a5d4c838bf0",
+      "source_folder": "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/context-study-20261123/validation/frames-rust",
+      "binary_sha256": "0e00ed19b2e6a96017844ed4c284bd75f975e1ffa6568ef6d67657e919c8b22b"
+    },
+    {
+      "assignment": {
+        "index": 27,
+        "reasoning": "high",
+        "family": "frames",
+        "language": "rust",
+        "arm": "original",
+        "phase": "comprehension"
+      },
+      "item": "prediction_1",
+      "language": "python",
+      "mutant": false,
+      "input": {
+        "data": "02040510",
+        "limit": 3
+      },
+      "metadata_was_removed": false,
+      "expected": {
+        "frames": [
+          "0405"
+        ],
+        "consumed": 4,
+        "error": 0
+      },
+      "actual": {
+        "frames": [
+          "0405"
+        ],
+        "consumed": 4,
+        "error": 0
+      },
+      "ok": true,
+      "adapter": "frozen study.execute",
+      "adapter_sha256": "1c05a60a0c431a9d9336f7b28c9fcfb9f69446cb24ead52f380d1a5d4c838bf0",
+      "source_folder": "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/context-study-20261123/validation/frames-python",
+      "binary_sha256": null
+    },
+    {
+      "assignment": {
+        "index": 31,
+        "reasoning": "high",
+        "family": "ledger",
+        "language": "lobo",
+        "arm": "dedup",
+        "phase": "comprehension"
+      },
+      "item": "witness",
+      "language": "lobo",
+      "mutant": false,
+      "input": {
+        "initial": 13,
+        "events": [
+          [
+            1,
+            14
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            1,
+            3
+          ]
+        ]
+      },
+      "metadata_was_removed": false,
+      "expected": {
+        "balance": 13,
+        "rejected": 3,
+        "peak": 13,
+        "audit": [
+          13,
+          13,
+          13,
+          13
+        ]
+      },
+      "actual": {
+        "balance": 13,
+        "rejected": 3,
+        "peak": 13,
+        "audit": [
+          13,
+          13,
+          13,
+          13
+        ]
+      },
+      "ok": true,
+      "adapter": "frozen study.execute",
+      "adapter_sha256": "1c05a60a0c431a9d9336f7b28c9fcfb9f69446cb24ead52f380d1a5d4c838bf0",
+      "source_folder": "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/context-study-20261123/validation/ledger-lobo",
+      "binary_sha256": "3977a9aec8b4e2ab982c63238e9e1596e3e058e37357c4adda45c8761fa866db"
+    },
+    {
+      "assignment": {
+        "index": 31,
+        "reasoning": "high",
+        "family": "ledger",
+        "language": "lobo",
+        "arm": "dedup",
+        "phase": "comprehension"
+      },
+      "item": "witness",
+      "language": "rust",
+      "mutant": false,
+      "input": {
+        "initial": 13,
+        "events": [
+          [
+            1,
+            14
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            1,
+            3
+          ]
+        ]
+      },
+      "metadata_was_removed": false,
+      "expected": {
+        "balance": 13,
+        "rejected": 3,
+        "peak": 13,
+        "audit": [
+          13,
+          13,
+          13,
+          13
+        ]
+      },
+      "actual": {
+        "balance": 13,
+        "rejected": 3,
+        "peak": 13,
+        "audit": [
+          13,
+          13,
+          13,
+          13
+        ]
+      },
+      "ok": true,
+      "adapter": "frozen study.execute",
+      "adapter_sha256": "1c05a60a0c431a9d9336f7b28c9fcfb9f69446cb24ead52f380d1a5d4c838bf0",
+      "source_folder": "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/context-study-20261123/validation/ledger-rust",
+      "binary_sha256": "659fb6f95ef338852ac4ad80fc99ba0511ade02e540049e03c469da8cf528d5a"
+    },
+    {
+      "assignment": {
+        "index": 31,
+        "reasoning": "high",
+        "family": "ledger",
+        "language": "lobo",
+        "arm": "dedup",
+        "phase": "comprehension"
+      },
+      "item": "witness",
+      "language": "python",
+      "mutant": false,
+      "input": {
+        "initial": 13,
+        "events": [
+          [
+            1,
+            14
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            1,
+            3
+          ]
+        ]
+      },
+      "metadata_was_removed": false,
+      "expected": {
+        "balance": 13,
+        "rejected": 3,
+        "peak": 13,
+        "audit": [
+          13,
+          13,
+          13,
+          13
+        ]
+      },
+      "actual": {
+        "balance": 13,
+        "rejected": 3,
+        "peak": 13,
+        "audit": [
+          13,
+          13,
+          13,
+          13
+        ]
+      },
+      "ok": true,
+      "adapter": "frozen study.execute",
+      "adapter_sha256": "1c05a60a0c431a9d9336f7b28c9fcfb9f69446cb24ead52f380d1a5d4c838bf0",
+      "source_folder": "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/context-study-20261123/validation/ledger-python",
+      "binary_sha256": null
+    },
+    {
+      "assignment": {
+        "index": 37,
+        "reasoning": "low",
+        "family": "frames",
+        "language": "python",
+        "arm": "dedup",
+        "phase": "comprehension"
+      },
+      "item": "counterexample",
+      "language": "lobo",
+      "mutant": false,
+      "input": {
+        "data": "02040510",
+        "limit": 3
+      },
+      "metadata_was_removed": true,
+      "expected": {
+        "frames": [
+          "0405"
+        ],
+        "consumed": 4,
+        "error": 0
+      },
+      "actual": {
+        "frames": [
+          "0405"
+        ],
+        "consumed": 4,
+        "error": 0
+      },
+      "ok": true,
+      "adapter": "frozen study.execute",
+      "adapter_sha256": "1c05a60a0c431a9d9336f7b28c9fcfb9f69446cb24ead52f380d1a5d4c838bf0",
+      "source_folder": "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/context-study-20261123/validation/frames-lobo",
+      "binary_sha256": "cfa3c40585e1b8eee691fa45bd12e90e585c23237634eebce6f99df242593290"
+    },
+    {
+      "assignment": {
+        "index": 37,
+        "reasoning": "low",
+        "family": "frames",
+        "language": "python",
+        "arm": "dedup",
+        "phase": "comprehension"
+      },
+      "item": "counterexample",
+      "language": "lobo",
+      "mutant": true,
+      "input": {
+        "data": "02040510",
+        "limit": 3
+      },
+      "metadata_was_removed": true,
+      "expected": {
+        "frames": [],
+        "consumed": 0,
+        "error": 3
+      },
+      "actual": {
+        "frames": [],
+        "consumed": 0,
+        "error": 3
+      },
+      "ok": true,
+      "adapter": "frozen study.execute",
+      "adapter_sha256": "1c05a60a0c431a9d9336f7b28c9fcfb9f69446cb24ead52f380d1a5d4c838bf0",
+      "source_folder": "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/context-study-20261123/validation/frames-lobo-mutant",
+      "binary_sha256": "8ef94d1dbf7340c1db9d526818faa6c100729af23b2da47880e5866b2f092693"
+    },
+    {
+      "assignment": {
+        "index": 37,
+        "reasoning": "low",
+        "family": "frames",
+        "language": "python",
+        "arm": "dedup",
+        "phase": "comprehension"
+      },
+      "item": "counterexample",
+      "language": "rust",
+      "mutant": false,
+      "input": {
+        "data": "02040510",
+        "limit": 3
+      },
+      "metadata_was_removed": true,
+      "expected": {
+        "frames": [
+          "0405"
+        ],
+        "consumed": 4,
+        "error": 0
+      },
+      "actual": {
+        "frames": [
+          "0405"
+        ],
+        "consumed": 4,
+        "error": 0
+      },
+      "ok": true,
+      "adapter": "frozen study.execute",
+      "adapter_sha256": "1c05a60a0c431a9d9336f7b28c9fcfb9f69446cb24ead52f380d1a5d4c838bf0",
+      "source_folder": "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/context-study-20261123/validation/frames-rust",
+      "binary_sha256": "0e00ed19b2e6a96017844ed4c284bd75f975e1ffa6568ef6d67657e919c8b22b"
+    },
+    {
+      "assignment": {
+        "index": 37,
+        "reasoning": "low",
+        "family": "frames",
+        "language": "python",
+        "arm": "dedup",
+        "phase": "comprehension"
+      },
+      "item": "counterexample",
+      "language": "rust",
+      "mutant": true,
+      "input": {
+        "data": "02040510",
+        "limit": 3
+      },
+      "metadata_was_removed": true,
+      "expected": {
+        "frames": [],
+        "consumed": 0,
+        "error": 3
+      },
+      "actual": {
+        "frames": [],
+        "consumed": 0,
+        "error": 3
+      },
+      "ok": true,
+      "adapter": "frozen study.execute",
+      "adapter_sha256": "1c05a60a0c431a9d9336f7b28c9fcfb9f69446cb24ead52f380d1a5d4c838bf0",
+      "source_folder": "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/context-study-20261123/validation/frames-rust-mutant",
+      "binary_sha256": "c00bf7b31630c8dfb5e0f465825777ee8c81119b36fb5762ae72786eaeed1cd5"
+    },
+    {
+      "assignment": {
+        "index": 37,
+        "reasoning": "low",
+        "family": "frames",
+        "language": "python",
+        "arm": "dedup",
+        "phase": "comprehension"
+      },
+      "item": "counterexample",
+      "language": "python",
+      "mutant": false,
+      "input": {
+        "data": "02040510",
+        "limit": 3
+      },
+      "metadata_was_removed": true,
+      "expected": {
+        "frames": [
+          "0405"
+        ],
+        "consumed": 4,
+        "error": 0
+      },
+      "actual": {
+        "frames": [
+          "0405"
+        ],
+        "consumed": 4,
+        "error": 0
+      },
+      "ok": true,
+      "adapter": "frozen study.execute",
+      "adapter_sha256": "1c05a60a0c431a9d9336f7b28c9fcfb9f69446cb24ead52f380d1a5d4c838bf0",
+      "source_folder": "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/context-study-20261123/validation/frames-python",
+      "binary_sha256": null
+    },
+    {
+      "assignment": {
+        "index": 37,
+        "reasoning": "low",
+        "family": "frames",
+        "language": "python",
+        "arm": "dedup",
+        "phase": "comprehension"
+      },
+      "item": "counterexample",
+      "language": "python",
+      "mutant": true,
+      "input": {
+        "data": "02040510",
+        "limit": 3
+      },
+      "metadata_was_removed": true,
+      "expected": {
+        "frames": [],
+        "consumed": 0,
+        "error": 3
+      },
+      "actual": {
+        "frames": [],
+        "consumed": 0,
+        "error": 3
+      },
+      "ok": true,
+      "adapter": "frozen study.execute",
+      "adapter_sha256": "1c05a60a0c431a9d9336f7b28c9fcfb9f69446cb24ead52f380d1a5d4c838bf0",
+      "source_folder": "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/context-study-20261123/validation/frames-python-mutant",
+      "binary_sha256": null
+    },
+    {
+      "assignment": {
+        "index": 39,
+        "reasoning": "low",
+        "family": "frames",
+        "language": "python",
+        "arm": "schema",
+        "phase": "comprehension"
+      },
+      "item": "witness",
+      "language": "lobo",
+      "mutant": false,
+      "input": {
+        "data": "010a11020b0c1e",
+        "limit": 64
+      },
+      "metadata_was_removed": true,
+      "expected": {
+        "frames": [
+          "0a",
+          "0b0c"
+        ],
+        "consumed": 7,
+        "error": 0
+      },
+      "actual": {
+        "frames": [
+          "0a",
+          "0b0c"
+        ],
+        "consumed": 7,
+        "error": 0
+      },
+      "ok": true,
+      "adapter": "frozen study.execute",
+      "adapter_sha256": "1c05a60a0c431a9d9336f7b28c9fcfb9f69446cb24ead52f380d1a5d4c838bf0",
+      "source_folder": "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/context-study-20261123/validation/frames-lobo",
+      "binary_sha256": "cfa3c40585e1b8eee691fa45bd12e90e585c23237634eebce6f99df242593290"
+    },
+    {
+      "assignment": {
+        "index": 39,
+        "reasoning": "low",
+        "family": "frames",
+        "language": "python",
+        "arm": "schema",
+        "phase": "comprehension"
+      },
+      "item": "witness",
+      "language": "rust",
+      "mutant": false,
+      "input": {
+        "data": "010a11020b0c1e",
+        "limit": 64
+      },
+      "metadata_was_removed": true,
+      "expected": {
+        "frames": [
+          "0a",
+          "0b0c"
+        ],
+        "consumed": 7,
+        "error": 0
+      },
+      "actual": {
+        "frames": [
+          "0a",
+          "0b0c"
+        ],
+        "consumed": 7,
+        "error": 0
+      },
+      "ok": true,
+      "adapter": "frozen study.execute",
+      "adapter_sha256": "1c05a60a0c431a9d9336f7b28c9fcfb9f69446cb24ead52f380d1a5d4c838bf0",
+      "source_folder": "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/context-study-20261123/validation/frames-rust",
+      "binary_sha256": "0e00ed19b2e6a96017844ed4c284bd75f975e1ffa6568ef6d67657e919c8b22b"
+    },
+    {
+      "assignment": {
+        "index": 39,
+        "reasoning": "low",
+        "family": "frames",
+        "language": "python",
+        "arm": "schema",
+        "phase": "comprehension"
+      },
+      "item": "witness",
+      "language": "python",
+      "mutant": false,
+      "input": {
+        "data": "010a11020b0c1e",
+        "limit": 64
+      },
+      "metadata_was_removed": true,
+      "expected": {
+        "frames": [
+          "0a",
+          "0b0c"
+        ],
+        "consumed": 7,
+        "error": 0
+      },
+      "actual": {
+        "frames": [
+          "0a",
+          "0b0c"
+        ],
+        "consumed": 7,
+        "error": 0
+      },
+      "ok": true,
+      "adapter": "frozen study.execute",
+      "adapter_sha256": "1c05a60a0c431a9d9336f7b28c9fcfb9f69446cb24ead52f380d1a5d4c838bf0",
+      "source_folder": "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/context-study-20261123/validation/frames-python",
+      "binary_sha256": null
+    },
+    {
+      "assignment": {
+        "index": 40,
+        "reasoning": "low",
+        "family": "frames",
+        "language": "lobo",
+        "arm": "dedup",
+        "phase": "comprehension"
+      },
+      "item": "counterexample",
+      "language": "lobo",
+      "mutant": false,
+      "input": {
+        "data": "02040510",
+        "limit": 3
+      },
+      "metadata_was_removed": true,
+      "expected": {
+        "frames": [
+          "0405"
+        ],
+        "consumed": 4,
+        "error": 0
+      },
+      "actual": {
+        "frames": [
+          "0405"
+        ],
+        "consumed": 4,
+        "error": 0
+      },
+      "ok": true,
+      "adapter": "frozen study.execute",
+      "adapter_sha256": "1c05a60a0c431a9d9336f7b28c9fcfb9f69446cb24ead52f380d1a5d4c838bf0",
+      "source_folder": "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/context-study-20261123/validation/frames-lobo",
+      "binary_sha256": "cfa3c40585e1b8eee691fa45bd12e90e585c23237634eebce6f99df242593290"
+    },
+    {
+      "assignment": {
+        "index": 40,
+        "reasoning": "low",
+        "family": "frames",
+        "language": "lobo",
+        "arm": "dedup",
+        "phase": "comprehension"
+      },
+      "item": "counterexample",
+      "language": "lobo",
+      "mutant": true,
+      "input": {
+        "data": "02040510",
+        "limit": 3
+      },
+      "metadata_was_removed": true,
+      "expected": {
+        "frames": [],
+        "consumed": 0,
+        "error": 3
+      },
+      "actual": {
+        "frames": [],
+        "consumed": 0,
+        "error": 3
+      },
+      "ok": true,
+      "adapter": "frozen study.execute",
+      "adapter_sha256": "1c05a60a0c431a9d9336f7b28c9fcfb9f69446cb24ead52f380d1a5d4c838bf0",
+      "source_folder": "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/context-study-20261123/validation/frames-lobo-mutant",
+      "binary_sha256": "8ef94d1dbf7340c1db9d526818faa6c100729af23b2da47880e5866b2f092693"
+    },
+    {
+      "assignment": {
+        "index": 40,
+        "reasoning": "low",
+        "family": "frames",
+        "language": "lobo",
+        "arm": "dedup",
+        "phase": "comprehension"
+      },
+      "item": "counterexample",
+      "language": "rust",
+      "mutant": false,
+      "input": {
+        "data": "02040510",
+        "limit": 3
+      },
+      "metadata_was_removed": true,
+      "expected": {
+        "frames": [
+          "0405"
+        ],
+        "consumed": 4,
+        "error": 0
+      },
+      "actual": {
+        "frames": [
+          "0405"
+        ],
+        "consumed": 4,
+        "error": 0
+      },
+      "ok": true,
+      "adapter": "frozen study.execute",
+      "adapter_sha256": "1c05a60a0c431a9d9336f7b28c9fcfb9f69446cb24ead52f380d1a5d4c838bf0",
+      "source_folder": "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/context-study-20261123/validation/frames-rust",
+      "binary_sha256": "0e00ed19b2e6a96017844ed4c284bd75f975e1ffa6568ef6d67657e919c8b22b"
+    },
+    {
+      "assignment": {
+        "index": 40,
+        "reasoning": "low",
+        "family": "frames",
+        "language": "lobo",
+        "arm": "dedup",
+        "phase": "comprehension"
+      },
+      "item": "counterexample",
+      "language": "rust",
+      "mutant": true,
+      "input": {
+        "data": "02040510",
+        "limit": 3
+      },
+      "metadata_was_removed": true,
+      "expected": {
+        "frames": [],
+        "consumed": 0,
+        "error": 3
+      },
+      "actual": {
+        "frames": [],
+        "consumed": 0,
+        "error": 3
+      },
+      "ok": true,
+      "adapter": "frozen study.execute",
+      "adapter_sha256": "1c05a60a0c431a9d9336f7b28c9fcfb9f69446cb24ead52f380d1a5d4c838bf0",
+      "source_folder": "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/context-study-20261123/validation/frames-rust-mutant",
+      "binary_sha256": "c00bf7b31630c8dfb5e0f465825777ee8c81119b36fb5762ae72786eaeed1cd5"
+    },
+    {
+      "assignment": {
+        "index": 40,
+        "reasoning": "low",
+        "family": "frames",
+        "language": "lobo",
+        "arm": "dedup",
+        "phase": "comprehension"
+      },
+      "item": "counterexample",
+      "language": "python",
+      "mutant": false,
+      "input": {
+        "data": "02040510",
+        "limit": 3
+      },
+      "metadata_was_removed": true,
+      "expected": {
+        "frames": [
+          "0405"
+        ],
+        "consumed": 4,
+        "error": 0
+      },
+      "actual": {
+        "frames": [
+          "0405"
+        ],
+        "consumed": 4,
+        "error": 0
+      },
+      "ok": true,
+      "adapter": "frozen study.execute",
+      "adapter_sha256": "1c05a60a0c431a9d9336f7b28c9fcfb9f69446cb24ead52f380d1a5d4c838bf0",
+      "source_folder": "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/context-study-20261123/validation/frames-python",
+      "binary_sha256": null
+    },
+    {
+      "assignment": {
+        "index": 40,
+        "reasoning": "low",
+        "family": "frames",
+        "language": "lobo",
+        "arm": "dedup",
+        "phase": "comprehension"
+      },
+      "item": "counterexample",
+      "language": "python",
+      "mutant": true,
+      "input": {
+        "data": "02040510",
+        "limit": 3
+      },
+      "metadata_was_removed": true,
+      "expected": {
+        "frames": [],
+        "consumed": 0,
+        "error": 3
+      },
+      "actual": {
+        "frames": [],
+        "consumed": 0,
+        "error": 3
+      },
+      "ok": true,
+      "adapter": "frozen study.execute",
+      "adapter_sha256": "1c05a60a0c431a9d9336f7b28c9fcfb9f69446cb24ead52f380d1a5d4c838bf0",
+      "source_folder": "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/context-study-20261123/validation/frames-python-mutant",
+      "binary_sha256": null
+    },
+    {
+      "assignment": {
+        "index": 43,
+        "reasoning": "low",
+        "family": "frames",
+        "language": "lobo",
+        "arm": "both",
+        "phase": "comprehension"
+      },
+      "item": "witness",
+      "language": "lobo",
+      "mutant": false,
+      "input": {
+        "data": "010a11020b0c1e",
+        "limit": 64
+      },
+      "metadata_was_removed": true,
+      "expected": {
+        "frames": [
+          "0a",
+          "0b0c"
+        ],
+        "consumed": 7,
+        "error": 0
+      },
+      "actual": {
+        "frames": [
+          "0a",
+          "0b0c"
+        ],
+        "consumed": 7,
+        "error": 0
+      },
+      "ok": true,
+      "adapter": "frozen study.execute",
+      "adapter_sha256": "1c05a60a0c431a9d9336f7b28c9fcfb9f69446cb24ead52f380d1a5d4c838bf0",
+      "source_folder": "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/context-study-20261123/validation/frames-lobo",
+      "binary_sha256": "cfa3c40585e1b8eee691fa45bd12e90e585c23237634eebce6f99df242593290"
+    },
+    {
+      "assignment": {
+        "index": 43,
+        "reasoning": "low",
+        "family": "frames",
+        "language": "lobo",
+        "arm": "both",
+        "phase": "comprehension"
+      },
+      "item": "witness",
+      "language": "rust",
+      "mutant": false,
+      "input": {
+        "data": "010a11020b0c1e",
+        "limit": 64
+      },
+      "metadata_was_removed": true,
+      "expected": {
+        "frames": [
+          "0a",
+          "0b0c"
+        ],
+        "consumed": 7,
+        "error": 0
+      },
+      "actual": {
+        "frames": [
+          "0a",
+          "0b0c"
+        ],
+        "consumed": 7,
+        "error": 0
+      },
+      "ok": true,
+      "adapter": "frozen study.execute",
+      "adapter_sha256": "1c05a60a0c431a9d9336f7b28c9fcfb9f69446cb24ead52f380d1a5d4c838bf0",
+      "source_folder": "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/context-study-20261123/validation/frames-rust",
+      "binary_sha256": "0e00ed19b2e6a96017844ed4c284bd75f975e1ffa6568ef6d67657e919c8b22b"
+    },
+    {
+      "assignment": {
+        "index": 43,
+        "reasoning": "low",
+        "family": "frames",
+        "language": "lobo",
+        "arm": "both",
+        "phase": "comprehension"
+      },
+      "item": "witness",
+      "language": "python",
+      "mutant": false,
+      "input": {
+        "data": "010a11020b0c1e",
+        "limit": 64
+      },
+      "metadata_was_removed": true,
+      "expected": {
+        "frames": [
+          "0a",
+          "0b0c"
+        ],
+        "consumed": 7,
+        "error": 0
+      },
+      "actual": {
+        "frames": [
+          "0a",
+          "0b0c"
+        ],
+        "consumed": 7,
+        "error": 0
+      },
+      "ok": true,
+      "adapter": "frozen study.execute",
+      "adapter_sha256": "1c05a60a0c431a9d9336f7b28c9fcfb9f69446cb24ead52f380d1a5d4c838bf0",
+      "source_folder": "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/context-study-20261123/validation/frames-python",
+      "binary_sha256": null
+    },
+    {
+      "assignment": {
+        "index": 47,
+        "reasoning": "low",
+        "family": "scheduler",
+        "language": "rust",
+        "arm": "original",
+        "phase": "comprehension"
+      },
+      "item": "prediction_5",
+      "language": "lobo",
+      "mutant": false,
+      "input": {
+        "jobs": [
+          {
+            "id": 2,
+            "cost": 2,
+            "deps": []
+          },
+          {
+            "id": 0,
+            "cost": 1,
+            "deps": [
+              2
+            ]
+          },
+          {
+            "id": 1,
+            "cost": 3,
+            "deps": []
+          }
+        ],
+        "budget": 5
+      },
+      "metadata_was_removed": false,
+      "expected": {
+        "order": [
+          2,
+          1
+        ],
+        "spent": 5,
+        "blocked": 1
+      },
+      "actual": {
+        "order": [
+          2,
+          1
+        ],
+        "spent": 5,
+        "blocked": 1
+      },
+      "ok": true,
+      "adapter": "frozen study.execute",
+      "adapter_sha256": "1c05a60a0c431a9d9336f7b28c9fcfb9f69446cb24ead52f380d1a5d4c838bf0",
+      "source_folder": "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/context-study-20261123/validation/scheduler-lobo",
+      "binary_sha256": "38b25fa4f2460c0a98f7c09d6469803ecffa7872aa9b39c3e8939fc91ae9d2ca"
+    },
+    {
+      "assignment": {
+        "index": 47,
+        "reasoning": "low",
+        "family": "scheduler",
+        "language": "rust",
+        "arm": "original",
+        "phase": "comprehension"
+      },
+      "item": "prediction_5",
+      "language": "rust",
+      "mutant": false,
+      "input": {
+        "jobs": [
+          {
+            "id": 2,
+            "cost": 2,
+            "deps": []
+          },
+          {
+            "id": 0,
+            "cost": 1,
+            "deps": [
+              2
+            ]
+          },
+          {
+            "id": 1,
+            "cost": 3,
+            "deps": []
+          }
+        ],
+        "budget": 5
+      },
+      "metadata_was_removed": false,
+      "expected": {
+        "order": [
+          2,
+          1
+        ],
+        "spent": 5,
+        "blocked": 1
+      },
+      "actual": {
+        "order": [
+          2,
+          1
+        ],
+        "spent": 5,
+        "blocked": 1
+      },
+      "ok": true,
+      "adapter": "frozen study.execute",
+      "adapter_sha256": "1c05a60a0c431a9d9336f7b28c9fcfb9f69446cb24ead52f380d1a5d4c838bf0",
+      "source_folder": "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/context-study-20261123/validation/scheduler-rust",
+      "binary_sha256": "4f382a875415ae6a91a3cd2d1bd1bd083aa3f36fc3835bf73251f3bd2d42a832"
+    },
+    {
+      "assignment": {
+        "index": 47,
+        "reasoning": "low",
+        "family": "scheduler",
+        "language": "rust",
+        "arm": "original",
+        "phase": "comprehension"
+      },
+      "item": "prediction_5",
+      "language": "python",
+      "mutant": false,
+      "input": {
+        "jobs": [
+          {
+            "id": 2,
+            "cost": 2,
+            "deps": []
+          },
+          {
+            "id": 0,
+            "cost": 1,
+            "deps": [
+              2
+            ]
+          },
+          {
+            "id": 1,
+            "cost": 3,
+            "deps": []
+          }
+        ],
+        "budget": 5
+      },
+      "metadata_was_removed": false,
+      "expected": {
+        "order": [
+          2,
+          1
+        ],
+        "spent": 5,
+        "blocked": 1
+      },
+      "actual": {
+        "order": [
+          2,
+          1
+        ],
+        "spent": 5,
+        "blocked": 1
+      },
+      "ok": true,
+      "adapter": "frozen study.execute",
+      "adapter_sha256": "1c05a60a0c431a9d9336f7b28c9fcfb9f69446cb24ead52f380d1a5d4c838bf0",
+      "source_folder": "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/context-study-20261123/validation/scheduler-python",
+      "binary_sha256": null
+    },
+    {
+      "assignment": {
+        "index": 48,
+        "reasoning": "low",
+        "family": "scheduler",
+        "language": "lobo",
+        "arm": "both",
+        "phase": "comprehension"
+      },
+      "item": "prediction_0",
+      "language": "lobo",
+      "mutant": false,
+      "input": {
+        "jobs": [
+          {
+            "id": 0,
+            "cost": 2,
+            "deps": []
+          },
+          {
+            "id": 2,
+            "cost": 1,
+            "deps": []
+          },
+          {
+            "id": 1,
+            "cost": 1,
+            "deps": []
+          }
+        ],
+        "budget": 2
+      },
+      "metadata_was_removed": false,
+      "expected": {
+        "order": [
+          2,
+          1
+        ],
+        "spent": 2,
+        "blocked": 1
+      },
+      "actual": {
+        "order": [
+          2,
+          1
+        ],
+        "spent": 2,
+        "blocked": 1
+      },
+      "ok": true,
+      "adapter": "frozen study.execute",
+      "adapter_sha256": "1c05a60a0c431a9d9336f7b28c9fcfb9f69446cb24ead52f380d1a5d4c838bf0",
+      "source_folder": "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/context-study-20261123/validation/scheduler-lobo",
+      "binary_sha256": "38b25fa4f2460c0a98f7c09d6469803ecffa7872aa9b39c3e8939fc91ae9d2ca"
+    },
+    {
+      "assignment": {
+        "index": 48,
+        "reasoning": "low",
+        "family": "scheduler",
+        "language": "lobo",
+        "arm": "both",
+        "phase": "comprehension"
+      },
+      "item": "prediction_0",
+      "language": "rust",
+      "mutant": false,
+      "input": {
+        "jobs": [
+          {
+            "id": 0,
+            "cost": 2,
+            "deps": []
+          },
+          {
+            "id": 2,
+            "cost": 1,
+            "deps": []
+          },
+          {
+            "id": 1,
+            "cost": 1,
+            "deps": []
+          }
+        ],
+        "budget": 2
+      },
+      "metadata_was_removed": false,
+      "expected": {
+        "order": [
+          2,
+          1
+        ],
+        "spent": 2,
+        "blocked": 1
+      },
+      "actual": {
+        "order": [
+          2,
+          1
+        ],
+        "spent": 2,
+        "blocked": 1
+      },
+      "ok": true,
+      "adapter": "frozen study.execute",
+      "adapter_sha256": "1c05a60a0c431a9d9336f7b28c9fcfb9f69446cb24ead52f380d1a5d4c838bf0",
+      "source_folder": "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/context-study-20261123/validation/scheduler-rust",
+      "binary_sha256": "4f382a875415ae6a91a3cd2d1bd1bd083aa3f36fc3835bf73251f3bd2d42a832"
+    },
+    {
+      "assignment": {
+        "index": 48,
+        "reasoning": "low",
+        "family": "scheduler",
+        "language": "lobo",
+        "arm": "both",
+        "phase": "comprehension"
+      },
+      "item": "prediction_0",
+      "language": "python",
+      "mutant": false,
+      "input": {
+        "jobs": [
+          {
+            "id": 0,
+            "cost": 2,
+            "deps": []
+          },
+          {
+            "id": 2,
+            "cost": 1,
+            "deps": []
+          },
+          {
+            "id": 1,
+            "cost": 1,
+            "deps": []
+          }
+        ],
+        "budget": 2
+      },
+      "metadata_was_removed": false,
+      "expected": {
+        "order": [
+          2,
+          1
+        ],
+        "spent": 2,
+        "blocked": 1
+      },
+      "actual": {
+        "order": [
+          2,
+          1
+        ],
+        "spent": 2,
+        "blocked": 1
+      },
+      "ok": true,
+      "adapter": "frozen study.execute",
+      "adapter_sha256": "1c05a60a0c431a9d9336f7b28c9fcfb9f69446cb24ead52f380d1a5d4c838bf0",
+      "source_folder": "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/context-study-20261123/validation/scheduler-python",
+      "binary_sha256": null
+    },
+    {
+      "assignment": {
+        "index": 50,
+        "reasoning": "low",
+        "family": "scheduler",
+        "language": "lobo",
+        "arm": "schema",
+        "phase": "comprehension"
+      },
+      "item": "prediction_5",
+      "language": "lobo",
+      "mutant": false,
+      "input": {
+        "jobs": [
+          {
+            "id": 2,
+            "cost": 2,
+            "deps": []
+          },
+          {
+            "id": 0,
+            "cost": 1,
+            "deps": [
+              2
+            ]
+          },
+          {
+            "id": 1,
+            "cost": 3,
+            "deps": []
+          }
+        ],
+        "budget": 5
+      },
+      "metadata_was_removed": false,
+      "expected": {
+        "order": [
+          2,
+          1
+        ],
+        "spent": 5,
+        "blocked": 1
+      },
+      "actual": {
+        "order": [
+          2,
+          1
+        ],
+        "spent": 5,
+        "blocked": 1
+      },
+      "ok": true,
+      "adapter": "frozen study.execute",
+      "adapter_sha256": "1c05a60a0c431a9d9336f7b28c9fcfb9f69446cb24ead52f380d1a5d4c838bf0",
+      "source_folder": "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/context-study-20261123/validation/scheduler-lobo",
+      "binary_sha256": "38b25fa4f2460c0a98f7c09d6469803ecffa7872aa9b39c3e8939fc91ae9d2ca"
+    },
+    {
+      "assignment": {
+        "index": 50,
+        "reasoning": "low",
+        "family": "scheduler",
+        "language": "lobo",
+        "arm": "schema",
+        "phase": "comprehension"
+      },
+      "item": "prediction_5",
+      "language": "rust",
+      "mutant": false,
+      "input": {
+        "jobs": [
+          {
+            "id": 2,
+            "cost": 2,
+            "deps": []
+          },
+          {
+            "id": 0,
+            "cost": 1,
+            "deps": [
+              2
+            ]
+          },
+          {
+            "id": 1,
+            "cost": 3,
+            "deps": []
+          }
+        ],
+        "budget": 5
+      },
+      "metadata_was_removed": false,
+      "expected": {
+        "order": [
+          2,
+          1
+        ],
+        "spent": 5,
+        "blocked": 1
+      },
+      "actual": {
+        "order": [
+          2,
+          1
+        ],
+        "spent": 5,
+        "blocked": 1
+      },
+      "ok": true,
+      "adapter": "frozen study.execute",
+      "adapter_sha256": "1c05a60a0c431a9d9336f7b28c9fcfb9f69446cb24ead52f380d1a5d4c838bf0",
+      "source_folder": "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/context-study-20261123/validation/scheduler-rust",
+      "binary_sha256": "4f382a875415ae6a91a3cd2d1bd1bd083aa3f36fc3835bf73251f3bd2d42a832"
+    },
+    {
+      "assignment": {
+        "index": 50,
+        "reasoning": "low",
+        "family": "scheduler",
+        "language": "lobo",
+        "arm": "schema",
+        "phase": "comprehension"
+      },
+      "item": "prediction_5",
+      "language": "python",
+      "mutant": false,
+      "input": {
+        "jobs": [
+          {
+            "id": 2,
+            "cost": 2,
+            "deps": []
+          },
+          {
+            "id": 0,
+            "cost": 1,
+            "deps": [
+              2
+            ]
+          },
+          {
+            "id": 1,
+            "cost": 3,
+            "deps": []
+          }
+        ],
+        "budget": 5
+      },
+      "metadata_was_removed": false,
+      "expected": {
+        "order": [
+          2,
+          1
+        ],
+        "spent": 5,
+        "blocked": 1
+      },
+      "actual": {
+        "order": [
+          2,
+          1
+        ],
+        "spent": 5,
+        "blocked": 1
+      },
+      "ok": true,
+      "adapter": "frozen study.execute",
+      "adapter_sha256": "1c05a60a0c431a9d9336f7b28c9fcfb9f69446cb24ead52f380d1a5d4c838bf0",
+      "source_folder": "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/context-study-20261123/validation/scheduler-python",
+      "binary_sha256": null
+    },
+    {
+      "assignment": {
+        "index": 60,
+        "reasoning": "low",
+        "family": "frames",
+        "language": "rust",
+        "arm": "schema",
+        "phase": "comprehension"
+      },
+      "item": "witness",
+      "language": "lobo",
+      "mutant": false,
+      "input": {
+        "data": "010a0b020b0c1e",
+        "limit": 3
+      },
+      "metadata_was_removed": false,
+      "expected": {
+        "frames": [],
+        "consumed": 0,
+        "error": 2
+      },
+      "actual": {
+        "frames": [],
+        "consumed": 0,
+        "error": 2
+      },
+      "ok": true,
+      "adapter": "frozen study.execute",
+      "adapter_sha256": "1c05a60a0c431a9d9336f7b28c9fcfb9f69446cb24ead52f380d1a5d4c838bf0",
+      "source_folder": "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/context-study-20261123/validation/frames-lobo",
+      "binary_sha256": "cfa3c40585e1b8eee691fa45bd12e90e585c23237634eebce6f99df242593290"
+    },
+    {
+      "assignment": {
+        "index": 60,
+        "reasoning": "low",
+        "family": "frames",
+        "language": "rust",
+        "arm": "schema",
+        "phase": "comprehension"
+      },
+      "item": "witness",
+      "language": "rust",
+      "mutant": false,
+      "input": {
+        "data": "010a0b020b0c1e",
+        "limit": 3
+      },
+      "metadata_was_removed": false,
+      "expected": {
+        "frames": [],
+        "consumed": 0,
+        "error": 2
+      },
+      "actual": {
+        "frames": [],
+        "consumed": 0,
+        "error": 2
+      },
+      "ok": true,
+      "adapter": "frozen study.execute",
+      "adapter_sha256": "1c05a60a0c431a9d9336f7b28c9fcfb9f69446cb24ead52f380d1a5d4c838bf0",
+      "source_folder": "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/context-study-20261123/validation/frames-rust",
+      "binary_sha256": "0e00ed19b2e6a96017844ed4c284bd75f975e1ffa6568ef6d67657e919c8b22b"
+    },
+    {
+      "assignment": {
+        "index": 60,
+        "reasoning": "low",
+        "family": "frames",
+        "language": "rust",
+        "arm": "schema",
+        "phase": "comprehension"
+      },
+      "item": "witness",
+      "language": "python",
+      "mutant": false,
+      "input": {
+        "data": "010a0b020b0c1e",
+        "limit": 3
+      },
+      "metadata_was_removed": false,
+      "expected": {
+        "frames": [],
+        "consumed": 0,
+        "error": 2
+      },
+      "actual": {
+        "frames": [],
+        "consumed": 0,
+        "error": 2
+      },
+      "ok": true,
+      "adapter": "frozen study.execute",
+      "adapter_sha256": "1c05a60a0c431a9d9336f7b28c9fcfb9f69446cb24ead52f380d1a5d4c838bf0",
+      "source_folder": "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/context-study-20261123/validation/frames-python",
+      "binary_sha256": null
+    },
+    {
+      "assignment": {
+        "index": 61,
+        "reasoning": "low",
+        "family": "frames",
+        "language": "rust",
+        "arm": "both",
+        "phase": "comprehension"
+      },
+      "item": "witness",
+      "language": "lobo",
+      "mutant": false,
+      "input": {
+        "data": "010a11020b0c1e",
+        "limit": 64
+      },
+      "metadata_was_removed": true,
+      "expected": {
+        "frames": [
+          "0a",
+          "0b0c"
+        ],
+        "consumed": 7,
+        "error": 0
+      },
+      "actual": {
+        "frames": [
+          "0a",
+          "0b0c"
+        ],
+        "consumed": 7,
+        "error": 0
+      },
+      "ok": true,
+      "adapter": "frozen study.execute",
+      "adapter_sha256": "1c05a60a0c431a9d9336f7b28c9fcfb9f69446cb24ead52f380d1a5d4c838bf0",
+      "source_folder": "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/context-study-20261123/validation/frames-lobo",
+      "binary_sha256": "cfa3c40585e1b8eee691fa45bd12e90e585c23237634eebce6f99df242593290"
+    },
+    {
+      "assignment": {
+        "index": 61,
+        "reasoning": "low",
+        "family": "frames",
+        "language": "rust",
+        "arm": "both",
+        "phase": "comprehension"
+      },
+      "item": "witness",
+      "language": "rust",
+      "mutant": false,
+      "input": {
+        "data": "010a11020b0c1e",
+        "limit": 64
+      },
+      "metadata_was_removed": true,
+      "expected": {
+        "frames": [
+          "0a",
+          "0b0c"
+        ],
+        "consumed": 7,
+        "error": 0
+      },
+      "actual": {
+        "frames": [
+          "0a",
+          "0b0c"
+        ],
+        "consumed": 7,
+        "error": 0
+      },
+      "ok": true,
+      "adapter": "frozen study.execute",
+      "adapter_sha256": "1c05a60a0c431a9d9336f7b28c9fcfb9f69446cb24ead52f380d1a5d4c838bf0",
+      "source_folder": "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/context-study-20261123/validation/frames-rust",
+      "binary_sha256": "0e00ed19b2e6a96017844ed4c284bd75f975e1ffa6568ef6d67657e919c8b22b"
+    },
+    {
+      "assignment": {
+        "index": 61,
+        "reasoning": "low",
+        "family": "frames",
+        "language": "rust",
+        "arm": "both",
+        "phase": "comprehension"
+      },
+      "item": "witness",
+      "language": "python",
+      "mutant": false,
+      "input": {
+        "data": "010a11020b0c1e",
+        "limit": 64
+      },
+      "metadata_was_removed": true,
+      "expected": {
+        "frames": [
+          "0a",
+          "0b0c"
+        ],
+        "consumed": 7,
+        "error": 0
+      },
+      "actual": {
+        "frames": [
+          "0a",
+          "0b0c"
+        ],
+        "consumed": 7,
+        "error": 0
+      },
+      "ok": true,
+      "adapter": "frozen study.execute",
+      "adapter_sha256": "1c05a60a0c431a9d9336f7b28c9fcfb9f69446cb24ead52f380d1a5d4c838bf0",
+      "source_folder": "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/context-study-20261123/validation/frames-python",
+      "binary_sha256": null
+    },
+    {
+      "assignment": {
+        "index": 63,
+        "reasoning": "low",
+        "family": "frames",
+        "language": "rust",
+        "arm": "original",
+        "phase": "comprehension"
+      },
+      "item": "witness",
+      "language": "lobo",
+      "mutant": false,
+      "input": {
+        "data": "010a11020b0c1e",
+        "limit": 64
+      },
+      "metadata_was_removed": true,
+      "expected": {
+        "frames": [
+          "0a",
+          "0b0c"
+        ],
+        "consumed": 7,
+        "error": 0
+      },
+      "actual": {
+        "frames": [
+          "0a",
+          "0b0c"
+        ],
+        "consumed": 7,
+        "error": 0
+      },
+      "ok": true,
+      "adapter": "frozen study.execute",
+      "adapter_sha256": "1c05a60a0c431a9d9336f7b28c9fcfb9f69446cb24ead52f380d1a5d4c838bf0",
+      "source_folder": "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/context-study-20261123/validation/frames-lobo",
+      "binary_sha256": "cfa3c40585e1b8eee691fa45bd12e90e585c23237634eebce6f99df242593290"
+    },
+    {
+      "assignment": {
+        "index": 63,
+        "reasoning": "low",
+        "family": "frames",
+        "language": "rust",
+        "arm": "original",
+        "phase": "comprehension"
+      },
+      "item": "witness",
+      "language": "rust",
+      "mutant": false,
+      "input": {
+        "data": "010a11020b0c1e",
+        "limit": 64
+      },
+      "metadata_was_removed": true,
+      "expected": {
+        "frames": [
+          "0a",
+          "0b0c"
+        ],
+        "consumed": 7,
+        "error": 0
+      },
+      "actual": {
+        "frames": [
+          "0a",
+          "0b0c"
+        ],
+        "consumed": 7,
+        "error": 0
+      },
+      "ok": true,
+      "adapter": "frozen study.execute",
+      "adapter_sha256": "1c05a60a0c431a9d9336f7b28c9fcfb9f69446cb24ead52f380d1a5d4c838bf0",
+      "source_folder": "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/context-study-20261123/validation/frames-rust",
+      "binary_sha256": "0e00ed19b2e6a96017844ed4c284bd75f975e1ffa6568ef6d67657e919c8b22b"
+    },
+    {
+      "assignment": {
+        "index": 63,
+        "reasoning": "low",
+        "family": "frames",
+        "language": "rust",
+        "arm": "original",
+        "phase": "comprehension"
+      },
+      "item": "witness",
+      "language": "python",
+      "mutant": false,
+      "input": {
+        "data": "010a11020b0c1e",
+        "limit": 64
+      },
+      "metadata_was_removed": true,
+      "expected": {
+        "frames": [
+          "0a",
+          "0b0c"
+        ],
+        "consumed": 7,
+        "error": 0
+      },
+      "actual": {
+        "frames": [
+          "0a",
+          "0b0c"
+        ],
+        "consumed": 7,
+        "error": 0
+      },
+      "ok": true,
+      "adapter": "frozen study.execute",
+      "adapter_sha256": "1c05a60a0c431a9d9336f7b28c9fcfb9f69446cb24ead52f380d1a5d4c838bf0",
+      "source_folder": "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/context-study-20261123/validation/frames-python",
+      "binary_sha256": null
+    },
+    {
+      "assignment": {
+        "index": 64,
+        "reasoning": "low",
+        "family": "ledger",
+        "language": "lobo",
+        "arm": "both",
+        "phase": "comprehension"
+      },
+      "item": "prediction_2",
+      "language": "lobo",
+      "mutant": false,
+      "input": {
+        "initial": 12,
+        "events": [
+          [
+            2,
+            0
+          ],
+          [
+            2,
+            9
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            3,
+            0
+          ],
+          [
+            1,
+            14
+          ]
+        ]
+      },
+      "metadata_was_removed": false,
+      "expected": {
+        "balance": 0,
+        "rejected": 1,
+        "peak": 14,
+        "audit": [
+          12,
+          12,
+          12,
+          14,
+          14,
+          0
+        ]
+      },
+      "actual": {
+        "balance": 0,
+        "rejected": 1,
+        "peak": 14,
+        "audit": [
+          12,
+          12,
+          12,
+          14,
+          14,
+          0
+        ]
+      },
+      "ok": true,
+      "adapter": "frozen study.execute",
+      "adapter_sha256": "1c05a60a0c431a9d9336f7b28c9fcfb9f69446cb24ead52f380d1a5d4c838bf0",
+      "source_folder": "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/context-study-20261123/validation/ledger-lobo",
+      "binary_sha256": "3977a9aec8b4e2ab982c63238e9e1596e3e058e37357c4adda45c8761fa866db"
+    },
+    {
+      "assignment": {
+        "index": 64,
+        "reasoning": "low",
+        "family": "ledger",
+        "language": "lobo",
+        "arm": "both",
+        "phase": "comprehension"
+      },
+      "item": "prediction_2",
+      "language": "rust",
+      "mutant": false,
+      "input": {
+        "initial": 12,
+        "events": [
+          [
+            2,
+            0
+          ],
+          [
+            2,
+            9
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            3,
+            0
+          ],
+          [
+            1,
+            14
+          ]
+        ]
+      },
+      "metadata_was_removed": false,
+      "expected": {
+        "balance": 0,
+        "rejected": 1,
+        "peak": 14,
+        "audit": [
+          12,
+          12,
+          12,
+          14,
+          14,
+          0
+        ]
+      },
+      "actual": {
+        "balance": 0,
+        "rejected": 1,
+        "peak": 14,
+        "audit": [
+          12,
+          12,
+          12,
+          14,
+          14,
+          0
+        ]
+      },
+      "ok": true,
+      "adapter": "frozen study.execute",
+      "adapter_sha256": "1c05a60a0c431a9d9336f7b28c9fcfb9f69446cb24ead52f380d1a5d4c838bf0",
+      "source_folder": "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/context-study-20261123/validation/ledger-rust",
+      "binary_sha256": "659fb6f95ef338852ac4ad80fc99ba0511ade02e540049e03c469da8cf528d5a"
+    },
+    {
+      "assignment": {
+        "index": 64,
+        "reasoning": "low",
+        "family": "ledger",
+        "language": "lobo",
+        "arm": "both",
+        "phase": "comprehension"
+      },
+      "item": "prediction_2",
+      "language": "python",
+      "mutant": false,
+      "input": {
+        "initial": 12,
+        "events": [
+          [
+            2,
+            0
+          ],
+          [
+            2,
+            9
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            3,
+            0
+          ],
+          [
+            1,
+            14
+          ]
+        ]
+      },
+      "metadata_was_removed": false,
+      "expected": {
+        "balance": 0,
+        "rejected": 1,
+        "peak": 14,
+        "audit": [
+          12,
+          12,
+          12,
+          14,
+          14,
+          0
+        ]
+      },
+      "actual": {
+        "balance": 0,
+        "rejected": 1,
+        "peak": 14,
+        "audit": [
+          12,
+          12,
+          12,
+          14,
+          14,
+          0
+        ]
+      },
+      "ok": true,
+      "adapter": "frozen study.execute",
+      "adapter_sha256": "1c05a60a0c431a9d9336f7b28c9fcfb9f69446cb24ead52f380d1a5d4c838bf0",
+      "source_folder": "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/context-study-20261123/validation/ledger-python",
+      "binary_sha256": null
+    },
+    {
+      "assignment": {
+        "index": 65,
+        "reasoning": "low",
+        "family": "ledger",
+        "language": "lobo",
+        "arm": "original",
+        "phase": "comprehension"
+      },
+      "item": "prediction_2",
+      "language": "lobo",
+      "mutant": false,
+      "input": {
+        "initial": 12,
+        "events": [
+          [
+            2,
+            0
+          ],
+          [
+            2,
+            9
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            3,
+            0
+          ],
+          [
+            1,
+            14
+          ]
+        ]
+      },
+      "metadata_was_removed": false,
+      "expected": {
+        "balance": 0,
+        "rejected": 1,
+        "peak": 14,
+        "audit": [
+          12,
+          12,
+          12,
+          14,
+          14,
+          0
+        ]
+      },
+      "actual": {
+        "balance": 0,
+        "rejected": 1,
+        "peak": 14,
+        "audit": [
+          12,
+          12,
+          12,
+          14,
+          14,
+          0
+        ]
+      },
+      "ok": true,
+      "adapter": "frozen study.execute",
+      "adapter_sha256": "1c05a60a0c431a9d9336f7b28c9fcfb9f69446cb24ead52f380d1a5d4c838bf0",
+      "source_folder": "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/context-study-20261123/validation/ledger-lobo",
+      "binary_sha256": "3977a9aec8b4e2ab982c63238e9e1596e3e058e37357c4adda45c8761fa866db"
+    },
+    {
+      "assignment": {
+        "index": 65,
+        "reasoning": "low",
+        "family": "ledger",
+        "language": "lobo",
+        "arm": "original",
+        "phase": "comprehension"
+      },
+      "item": "prediction_2",
+      "language": "rust",
+      "mutant": false,
+      "input": {
+        "initial": 12,
+        "events": [
+          [
+            2,
+            0
+          ],
+          [
+            2,
+            9
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            3,
+            0
+          ],
+          [
+            1,
+            14
+          ]
+        ]
+      },
+      "metadata_was_removed": false,
+      "expected": {
+        "balance": 0,
+        "rejected": 1,
+        "peak": 14,
+        "audit": [
+          12,
+          12,
+          12,
+          14,
+          14,
+          0
+        ]
+      },
+      "actual": {
+        "balance": 0,
+        "rejected": 1,
+        "peak": 14,
+        "audit": [
+          12,
+          12,
+          12,
+          14,
+          14,
+          0
+        ]
+      },
+      "ok": true,
+      "adapter": "frozen study.execute",
+      "adapter_sha256": "1c05a60a0c431a9d9336f7b28c9fcfb9f69446cb24ead52f380d1a5d4c838bf0",
+      "source_folder": "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/context-study-20261123/validation/ledger-rust",
+      "binary_sha256": "659fb6f95ef338852ac4ad80fc99ba0511ade02e540049e03c469da8cf528d5a"
+    },
+    {
+      "assignment": {
+        "index": 65,
+        "reasoning": "low",
+        "family": "ledger",
+        "language": "lobo",
+        "arm": "original",
+        "phase": "comprehension"
+      },
+      "item": "prediction_2",
+      "language": "python",
+      "mutant": false,
+      "input": {
+        "initial": 12,
+        "events": [
+          [
+            2,
+            0
+          ],
+          [
+            2,
+            9
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            3,
+            0
+          ],
+          [
+            1,
+            14
+          ]
+        ]
+      },
+      "metadata_was_removed": false,
+      "expected": {
+        "balance": 0,
+        "rejected": 1,
+        "peak": 14,
+        "audit": [
+          12,
+          12,
+          12,
+          14,
+          14,
+          0
+        ]
+      },
+      "actual": {
+        "balance": 0,
+        "rejected": 1,
+        "peak": 14,
+        "audit": [
+          12,
+          12,
+          12,
+          14,
+          14,
+          0
+        ]
+      },
+      "ok": true,
+      "adapter": "frozen study.execute",
+      "adapter_sha256": "1c05a60a0c431a9d9336f7b28c9fcfb9f69446cb24ead52f380d1a5d4c838bf0",
+      "source_folder": "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/context-study-20261123/validation/ledger-python",
+      "binary_sha256": null
+    },
+    {
+      "assignment": {
+        "index": 66,
+        "reasoning": "low",
+        "family": "ledger",
+        "language": "lobo",
+        "arm": "schema",
+        "phase": "comprehension"
+      },
+      "item": "witness",
+      "language": "lobo",
+      "mutant": false,
+      "input": {
+        "initial": 13,
+        "events": [
+          [
+            1,
+            3
+          ],
+          [
+            0,
+            -1
+          ],
+          [
+            1,
+            98
+          ]
+        ]
+      },
+      "metadata_was_removed": true,
+      "expected": {
+        "balance": 10,
+        "rejected": 2,
+        "peak": 13,
+        "audit": [
+          10,
+          10,
+          10
+        ]
+      },
+      "actual": {
+        "balance": 10,
+        "rejected": 2,
+        "peak": 13,
+        "audit": [
+          10,
+          10,
+          10
+        ]
+      },
+      "ok": true,
+      "adapter": "frozen study.execute",
+      "adapter_sha256": "1c05a60a0c431a9d9336f7b28c9fcfb9f69446cb24ead52f380d1a5d4c838bf0",
+      "source_folder": "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/context-study-20261123/validation/ledger-lobo",
+      "binary_sha256": "3977a9aec8b4e2ab982c63238e9e1596e3e058e37357c4adda45c8761fa866db"
+    },
+    {
+      "assignment": {
+        "index": 66,
+        "reasoning": "low",
+        "family": "ledger",
+        "language": "lobo",
+        "arm": "schema",
+        "phase": "comprehension"
+      },
+      "item": "witness",
+      "language": "rust",
+      "mutant": false,
+      "input": {
+        "initial": 13,
+        "events": [
+          [
+            1,
+            3
+          ],
+          [
+            0,
+            -1
+          ],
+          [
+            1,
+            98
+          ]
+        ]
+      },
+      "metadata_was_removed": true,
+      "expected": {
+        "balance": 10,
+        "rejected": 2,
+        "peak": 13,
+        "audit": [
+          10,
+          10,
+          10
+        ]
+      },
+      "actual": {
+        "balance": 10,
+        "rejected": 2,
+        "peak": 13,
+        "audit": [
+          10,
+          10,
+          10
+        ]
+      },
+      "ok": true,
+      "adapter": "frozen study.execute",
+      "adapter_sha256": "1c05a60a0c431a9d9336f7b28c9fcfb9f69446cb24ead52f380d1a5d4c838bf0",
+      "source_folder": "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/context-study-20261123/validation/ledger-rust",
+      "binary_sha256": "659fb6f95ef338852ac4ad80fc99ba0511ade02e540049e03c469da8cf528d5a"
+    },
+    {
+      "assignment": {
+        "index": 66,
+        "reasoning": "low",
+        "family": "ledger",
+        "language": "lobo",
+        "arm": "schema",
+        "phase": "comprehension"
+      },
+      "item": "witness",
+      "language": "python",
+      "mutant": false,
+      "input": {
+        "initial": 13,
+        "events": [
+          [
+            1,
+            3
+          ],
+          [
+            0,
+            -1
+          ],
+          [
+            1,
+            98
+          ]
+        ]
+      },
+      "metadata_was_removed": true,
+      "expected": {
+        "balance": 10,
+        "rejected": 2,
+        "peak": 13,
+        "audit": [
+          10,
+          10,
+          10
+        ]
+      },
+      "actual": {
+        "balance": 10,
+        "rejected": 2,
+        "peak": 13,
+        "audit": [
+          10,
+          10,
+          10
+        ]
+      },
+      "ok": true,
+      "adapter": "frozen study.execute",
+      "adapter_sha256": "1c05a60a0c431a9d9336f7b28c9fcfb9f69446cb24ead52f380d1a5d4c838bf0",
+      "source_folder": "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/context-study-20261123/validation/ledger-python",
+      "binary_sha256": null
+    },
+    {
+      "assignment": {
+        "index": 69,
+        "reasoning": "low",
+        "family": "ledger",
+        "language": "python",
+        "arm": "dedup",
+        "phase": "comprehension"
+      },
+      "item": "prediction_2",
+      "language": "lobo",
+      "mutant": false,
+      "input": {
+        "initial": 12,
+        "events": [
+          [
+            2,
+            0
+          ],
+          [
+            2,
+            9
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            3,
+            0
+          ],
+          [
+            1,
+            14
+          ]
+        ]
+      },
+      "metadata_was_removed": false,
+      "expected": {
+        "balance": 0,
+        "rejected": 1,
+        "peak": 14,
+        "audit": [
+          12,
+          12,
+          12,
+          14,
+          14,
+          0
+        ]
+      },
+      "actual": {
+        "balance": 0,
+        "rejected": 1,
+        "peak": 14,
+        "audit": [
+          12,
+          12,
+          12,
+          14,
+          14,
+          0
+        ]
+      },
+      "ok": true,
+      "adapter": "frozen study.execute",
+      "adapter_sha256": "1c05a60a0c431a9d9336f7b28c9fcfb9f69446cb24ead52f380d1a5d4c838bf0",
+      "source_folder": "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/context-study-20261123/validation/ledger-lobo",
+      "binary_sha256": "3977a9aec8b4e2ab982c63238e9e1596e3e058e37357c4adda45c8761fa866db"
+    },
+    {
+      "assignment": {
+        "index": 69,
+        "reasoning": "low",
+        "family": "ledger",
+        "language": "python",
+        "arm": "dedup",
+        "phase": "comprehension"
+      },
+      "item": "prediction_2",
+      "language": "rust",
+      "mutant": false,
+      "input": {
+        "initial": 12,
+        "events": [
+          [
+            2,
+            0
+          ],
+          [
+            2,
+            9
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            3,
+            0
+          ],
+          [
+            1,
+            14
+          ]
+        ]
+      },
+      "metadata_was_removed": false,
+      "expected": {
+        "balance": 0,
+        "rejected": 1,
+        "peak": 14,
+        "audit": [
+          12,
+          12,
+          12,
+          14,
+          14,
+          0
+        ]
+      },
+      "actual": {
+        "balance": 0,
+        "rejected": 1,
+        "peak": 14,
+        "audit": [
+          12,
+          12,
+          12,
+          14,
+          14,
+          0
+        ]
+      },
+      "ok": true,
+      "adapter": "frozen study.execute",
+      "adapter_sha256": "1c05a60a0c431a9d9336f7b28c9fcfb9f69446cb24ead52f380d1a5d4c838bf0",
+      "source_folder": "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/context-study-20261123/validation/ledger-rust",
+      "binary_sha256": "659fb6f95ef338852ac4ad80fc99ba0511ade02e540049e03c469da8cf528d5a"
+    },
+    {
+      "assignment": {
+        "index": 69,
+        "reasoning": "low",
+        "family": "ledger",
+        "language": "python",
+        "arm": "dedup",
+        "phase": "comprehension"
+      },
+      "item": "prediction_2",
+      "language": "python",
+      "mutant": false,
+      "input": {
+        "initial": 12,
+        "events": [
+          [
+            2,
+            0
+          ],
+          [
+            2,
+            9
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            3,
+            0
+          ],
+          [
+            1,
+            14
+          ]
+        ]
+      },
+      "metadata_was_removed": false,
+      "expected": {
+        "balance": 0,
+        "rejected": 1,
+        "peak": 14,
+        "audit": [
+          12,
+          12,
+          12,
+          14,
+          14,
+          0
+        ]
+      },
+      "actual": {
+        "balance": 0,
+        "rejected": 1,
+        "peak": 14,
+        "audit": [
+          12,
+          12,
+          12,
+          14,
+          14,
+          0
+        ]
+      },
+      "ok": true,
+      "adapter": "frozen study.execute",
+      "adapter_sha256": "1c05a60a0c431a9d9336f7b28c9fcfb9f69446cb24ead52f380d1a5d4c838bf0",
+      "source_folder": "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/context-study-20261123/validation/ledger-python",
+      "binary_sha256": null
+    },
+    {
+      "assignment": {
+        "index": 69,
+        "reasoning": "low",
+        "family": "ledger",
+        "language": "python",
+        "arm": "dedup",
+        "phase": "comprehension"
+      },
+      "item": "witness",
+      "language": "lobo",
+      "mutant": false,
+      "input": {
+        "initial": 10,
+        "events": [
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            98
+          ],
+          [
+            1,
+            -1
+          ]
+        ]
+      },
+      "metadata_was_removed": true,
+      "expected": {
+        "balance": 13,
+        "rejected": 2,
+        "peak": 13,
+        "audit": [
+          13,
+          13,
+          13
+        ]
+      },
+      "actual": {
+        "balance": 13,
+        "rejected": 2,
+        "peak": 13,
+        "audit": [
+          13,
+          13,
+          13
+        ]
+      },
+      "ok": true,
+      "adapter": "frozen study.execute",
+      "adapter_sha256": "1c05a60a0c431a9d9336f7b28c9fcfb9f69446cb24ead52f380d1a5d4c838bf0",
+      "source_folder": "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/context-study-20261123/validation/ledger-lobo",
+      "binary_sha256": "3977a9aec8b4e2ab982c63238e9e1596e3e058e37357c4adda45c8761fa866db"
+    },
+    {
+      "assignment": {
+        "index": 69,
+        "reasoning": "low",
+        "family": "ledger",
+        "language": "python",
+        "arm": "dedup",
+        "phase": "comprehension"
+      },
+      "item": "witness",
+      "language": "rust",
+      "mutant": false,
+      "input": {
+        "initial": 10,
+        "events": [
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            98
+          ],
+          [
+            1,
+            -1
+          ]
+        ]
+      },
+      "metadata_was_removed": true,
+      "expected": {
+        "balance": 13,
+        "rejected": 2,
+        "peak": 13,
+        "audit": [
+          13,
+          13,
+          13
+        ]
+      },
+      "actual": {
+        "balance": 13,
+        "rejected": 2,
+        "peak": 13,
+        "audit": [
+          13,
+          13,
+          13
+        ]
+      },
+      "ok": true,
+      "adapter": "frozen study.execute",
+      "adapter_sha256": "1c05a60a0c431a9d9336f7b28c9fcfb9f69446cb24ead52f380d1a5d4c838bf0",
+      "source_folder": "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/context-study-20261123/validation/ledger-rust",
+      "binary_sha256": "659fb6f95ef338852ac4ad80fc99ba0511ade02e540049e03c469da8cf528d5a"
+    },
+    {
+      "assignment": {
+        "index": 69,
+        "reasoning": "low",
+        "family": "ledger",
+        "language": "python",
+        "arm": "dedup",
+        "phase": "comprehension"
+      },
+      "item": "witness",
+      "language": "python",
+      "mutant": false,
+      "input": {
+        "initial": 10,
+        "events": [
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            98
+          ],
+          [
+            1,
+            -1
+          ]
+        ]
+      },
+      "metadata_was_removed": true,
+      "expected": {
+        "balance": 13,
+        "rejected": 2,
+        "peak": 13,
+        "audit": [
+          13,
+          13,
+          13
+        ]
+      },
+      "actual": {
+        "balance": 13,
+        "rejected": 2,
+        "peak": 13,
+        "audit": [
+          13,
+          13,
+          13
+        ]
+      },
+      "ok": true,
+      "adapter": "frozen study.execute",
+      "adapter_sha256": "1c05a60a0c431a9d9336f7b28c9fcfb9f69446cb24ead52f380d1a5d4c838bf0",
+      "source_folder": "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/context-study-20261123/validation/ledger-python",
+      "binary_sha256": null
+    }
+  ],
+  "limitations": [
+    "Posthoc scoring sensitivity, not a new primary outcome or model run",
+    "Projection is not proof that a model understood the input contract",
+    "Missing required inputs, incorrect semantics and explicit instruction errors remain failures",
+    "A future response-schema treatment needs new questions and registration, not edits to this corpus"
+  ]
+}

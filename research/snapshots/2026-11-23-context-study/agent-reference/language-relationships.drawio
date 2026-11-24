@@ -1,0 +1,138 @@
+<mxGraphModel adaptiveColors="auto" dx="1600" dy="1500" grid="1" gridSize="10">
+  <root>
+    <mxCell id="0" />
+    <mxCell id="1" parent="0" />
+    <mxCell id="blocks" value="Blocks and bindings&#10;[language]" vertex="1" parent="1" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#dae8fc;fontSize=14;">
+      <mxGeometry as="geometry" x="70" y="60" width="220" height="70" />
+    </mxCell>
+    <mxCell id="records" value="Nominal records&#10;[language]" vertex="1" parent="1" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#dae8fc;fontSize=14;">
+      <mxGeometry as="geometry" x="70" y="260" width="220" height="70" />
+    </mxCell>
+    <mxCell id="updates" value="Record updates&#10;[language]" vertex="1" parent="1" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#dae8fc;fontSize=14;">
+      <mxGeometry as="geometry" x="70" y="460" width="220" height="70" />
+    </mxCell>
+    <mxCell id="generics" value="Generic inference&#10;[language]" vertex="1" parent="1" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#dae8fc;fontSize=14;">
+      <mxGeometry as="geometry" x="70" y="660" width="220" height="70" />
+    </mxCell>
+    <mxCell id="imports" value="Closed imports&#10;[tooling]" vertex="1" parent="1" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#dae8fc;fontSize=14;">
+      <mxGeometry as="geometry" x="70" y="860" width="220" height="70" />
+    </mxCell>
+    <mxCell id="identities" value="Stable identities&#10;[tooling]" vertex="1" parent="1" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#dae8fc;fontSize=14;">
+      <mxGeometry as="geometry" x="70" y="1060" width="220" height="70" />
+    </mxCell>
+    <mxCell id="json" value="JSON literals&#10;[library]" vertex="1" parent="1" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#dae8fc;fontSize=14;">
+      <mxGeometry as="geometry" x="70" y="1260" width="220" height="70" />
+    </mxCell>
+    <mxCell id="fold" value="Counted fold&#10;[language]" vertex="1" parent="1" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#d5e8d4;fontSize=14;">
+      <mxGeometry as="geometry" x="570" y="60" width="220" height="70" />
+    </mxCell>
+    <mxCell id="while" value="State-driven while&#10;[language]" vertex="1" parent="1" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#d5e8d4;fontSize=14;">
+      <mxGeometry as="geometry" x="570" y="260" width="220" height="70" />
+    </mxCell>
+    <mxCell id="lists" value="Persistent lists&#10;[language]" vertex="1" parent="1" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#d5e8d4;fontSize=14;">
+      <mxGeometry as="geometry" x="570" y="460" width="220" height="70" />
+    </mxCell>
+    <mxCell id="variants" value="Variants&#10;[language]" vertex="1" parent="1" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#d5e8d4;fontSize=14;">
+      <mxGeometry as="geometry" x="570" y="660" width="220" height="70" />
+    </mxCell>
+    <mxCell id="match" value="Exhaustive match&#10;[language]" vertex="1" parent="1" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#d5e8d4;fontSize=14;">
+      <mxGeometry as="geometry" x="570" y="860" width="220" height="70" />
+    </mxCell>
+    <mxCell id="try" value="Result propagation&#10;[language]" vertex="1" parent="1" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#d5e8d4;fontSize=14;">
+      <mxGeometry as="geometry" x="570" y="1060" width="220" height="70" />
+    </mxCell>
+    <mxCell id="wire-input" value="Study input encoding&#10;[experiment]" vertex="1" parent="1" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#d5e8d4;fontSize=14;">
+      <mxGeometry as="geometry" x="570" y="1260" width="220" height="70" />
+    </mxCell>
+    <mxCell id="callbacks" value="Named callbacks&#10;[language]" vertex="1" parent="1" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#ffe6cc;fontSize=14;">
+      <mxGeometry as="geometry" x="1070" y="60" width="220" height="70" />
+    </mxCell>
+    <mxCell id="actions" value="Declared actions&#10;[language]" vertex="1" parent="1" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#ffe6cc;fontSize=14;">
+      <mxGeometry as="geometry" x="1070" y="260" width="220" height="70" />
+    </mxCell>
+    <mxCell id="permissions" value="Typed permissions&#10;[library]" vertex="1" parent="1" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#ffe6cc;fontSize=14;">
+      <mxGeometry as="geometry" x="1070" y="460" width="220" height="70" />
+    </mxCell>
+    <mxCell id="resources" value="Native resource lifetime&#10;[runtime]" vertex="1" parent="1" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#ffe6cc;fontSize=14;">
+      <mxGeometry as="geometry" x="1070" y="660" width="220" height="70" />
+    </mxCell>
+    <mxCell id="limits" value="Execution limits&#10;[runtime]" vertex="1" parent="1" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#ffe6cc;fontSize=14;">
+      <mxGeometry as="geometry" x="1070" y="860" width="220" height="70" />
+    </mxCell>
+    <mxCell id="native" value="Native compilation&#10;[tooling]" vertex="1" parent="1" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#ffe6cc;fontSize=14;">
+      <mxGeometry as="geometry" x="1070" y="1060" width="220" height="70" />
+    </mxCell>
+    <mxCell id="bytes" value="Bytes and byte ranges&#10;[language]" vertex="1" parent="1" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#ffe6cc;fontSize=14;">
+      <mxGeometry as="geometry" x="1070" y="1260" width="220" height="70" />
+    </mxCell>
+    <mxCell id="text" value="UTF-8 text&#10;[language]" vertex="1" parent="1" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#ffe6cc;fontSize=14;">
+      <mxGeometry as="geometry" x="1070" y="1460" width="220" height="70" />
+    </mxCell>
+    <mxCell id="edge-0" value="preserves nominal type" edge="1" parent="1" source="updates" target="records" style="edgeStyle=orthogonalEdgeStyle;rounded=0;jettySize=auto;html=0;endArrow=block;fontSize=11;labelBackgroundColor=default;">
+      <mxGeometry as="geometry" relative="1" />
+    </mxCell>
+    <mxCell id="edge-1" value="handled by" edge="1" parent="1" source="variants" target="match" style="edgeStyle=orthogonalEdgeStyle;rounded=0;jettySize=auto;html=0;endArrow=block;fontSize=11;labelBackgroundColor=default;">
+      <mxGeometry as="geometry" relative="1" />
+    </mxCell>
+    <mxCell id="edge-2" value="propagates result cases" edge="1" parent="1" source="try" target="variants" style="edgeStyle=orthogonalEdgeStyle;rounded=0;jettySize=auto;html=0;endArrow=block;fontSize=11;labelBackgroundColor=default;">
+      <mxGeometry as="geometry" relative="1" />
+    </mxCell>
+    <mxCell id="edge-3" value="does not implicitly close" edge="1" parent="1" source="try" target="resources" style="edgeStyle=orthogonalEdgeStyle;rounded=0;jettySize=auto;html=0;endArrow=block;fontSize=11;labelBackgroundColor=default;">
+      <mxGeometry as="geometry" relative="1" />
+    </mxCell>
+    <mxCell id="edge-4" value="can carry" edge="1" parent="1" source="fold" target="records" style="edgeStyle=orthogonalEdgeStyle;rounded=0;jettySize=auto;html=0;endArrow=block;fontSize=11;labelBackgroundColor=default;">
+      <mxGeometry as="geometry" relative="1" />
+    </mxCell>
+    <mxCell id="edge-5" value="can carry" edge="1" parent="1" source="while" target="records" style="edgeStyle=orthogonalEdgeStyle;rounded=0;jettySize=auto;html=0;endArrow=block;fontSize=11;labelBackgroundColor=default;">
+      <mxGeometry as="geometry" relative="1" />
+    </mxCell>
+    <mxCell id="edge-6" value="can be traversed by" edge="1" parent="1" source="lists" target="fold" style="edgeStyle=orthogonalEdgeStyle;rounded=0;jettySize=auto;html=0;endArrow=block;fontSize=11;labelBackgroundColor=default;">
+      <mxGeometry as="geometry" relative="1" />
+    </mxCell>
+    <mxCell id="edge-7" value="converts explicitly with" edge="1" parent="1" source="bytes" target="text" style="edgeStyle=orthogonalEdgeStyle;rounded=0;jettySize=auto;html=0;endArrow=block;fontSize=11;labelBackgroundColor=default;">
+      <mxGeometry as="geometry" relative="1" />
+    </mxCell>
+    <mxCell id="edge-8" value="infers constructor arguments for" edge="1" parent="1" source="generics" target="records" style="edgeStyle=orthogonalEdgeStyle;rounded=0;jettySize=auto;html=0;endArrow=block;fontSize=11;labelBackgroundColor=default;">
+      <mxGeometry as="geometry" relative="1" />
+    </mxCell>
+    <mxCell id="edge-9" value="infers contextual owners for" edge="1" parent="1" source="generics" target="variants" style="edgeStyle=orthogonalEdgeStyle;rounded=0;jettySize=auto;html=0;endArrow=block;fontSize=11;labelBackgroundColor=default;">
+      <mxGeometry as="geometry" relative="1" />
+    </mxCell>
+    <mxCell id="edge-10" value="declares exact bound of" edge="1" parent="1" source="callbacks" target="actions" style="edgeStyle=orthogonalEdgeStyle;rounded=0;jettySize=auto;html=0;endArrow=block;fontSize=11;labelBackgroundColor=default;">
+      <mxGeometry as="geometry" relative="1" />
+    </mxCell>
+    <mxCell id="edge-11" value="does not grant" edge="1" parent="1" source="actions" target="permissions" style="edgeStyle=orthogonalEdgeStyle;rounded=0;jettySize=auto;html=0;endArrow=block;fontSize=11;labelBackgroundColor=default;">
+      <mxGeometry as="geometry" relative="1" />
+    </mxCell>
+    <mxCell id="edge-12" value="constrained by" edge="1" parent="1" source="permissions" target="limits" style="edgeStyle=orthogonalEdgeStyle;rounded=0;jettySize=auto;html=0;endArrow=block;fontSize=11;labelBackgroundColor=default;">
+      <mxGeometry as="geometry" relative="1" />
+    </mxCell>
+    <mxCell id="edge-13" value="enforces" edge="1" parent="1" source="native" target="limits" style="edgeStyle=orthogonalEdgeStyle;rounded=0;jettySize=auto;html=0;endArrow=block;fontSize=11;labelBackgroundColor=default;">
+      <mxGeometry as="geometry" relative="1" />
+    </mxCell>
+    <mxCell id="edge-14" value="pins targets using" edge="1" parent="1" source="imports" target="identities" style="edgeStyle=orthogonalEdgeStyle;rounded=0;jettySize=auto;html=0;endArrow=block;fontSize=11;labelBackgroundColor=default;">
+      <mxGeometry as="geometry" relative="1" />
+    </mxCell>
+    <mxCell id="edge-15" value="requires supplied sources through" edge="1" parent="1" source="json" target="imports" style="edgeStyle=orthogonalEdgeStyle;rounded=0;jettySize=auto;html=0;endArrow=block;fontSize=11;labelBackgroundColor=default;">
+      <mxGeometry as="geometry" relative="1" />
+    </mxCell>
+    <mxCell id="edge-16" value="adapts external representation to" edge="1" parent="1" source="wire-input" target="bytes" style="edgeStyle=orthogonalEdgeStyle;rounded=0;jettySize=auto;html=0;endArrow=block;fontSize=11;labelBackgroundColor=default;">
+      <mxGeometry as="geometry" relative="1" />
+    </mxCell>
+    <mxCell id="edge-17" value="can invoke" edge="1" parent="1" source="blocks" target="callbacks" style="edgeStyle=orthogonalEdgeStyle;rounded=0;jettySize=auto;html=0;endArrow=block;fontSize=11;labelBackgroundColor=default;">
+      <mxGeometry as="geometry" relative="1" />
+    </mxCell>
+    <mxCell id="edge-18" value="can exit through" edge="1" parent="1" source="try" target="fold" style="edgeStyle=orthogonalEdgeStyle;rounded=0;jettySize=auto;html=0;endArrow=block;fontSize=11;labelBackgroundColor=default;">
+      <mxGeometry as="geometry" relative="1" />
+    </mxCell>
+    <mxCell id="edge-19" value="can exit through" edge="1" parent="1" source="try" target="while" style="edgeStyle=orthogonalEdgeStyle;rounded=0;jettySize=auto;html=0;endArrow=block;fontSize=11;labelBackgroundColor=default;">
+      <mxGeometry as="geometry" relative="1" />
+    </mxCell>
+    <mxCell id="edge-20" value="authorizes operations on" edge="1" parent="1" source="permissions" target="resources" style="edgeStyle=orthogonalEdgeStyle;rounded=0;jettySize=auto;html=0;endArrow=block;fontSize=11;labelBackgroundColor=default;">
+      <mxGeometry as="geometry" relative="1" />
+    </mxCell>
+    <mxCell id="edge-21" value="bounded by" edge="1" parent="1" source="resources" target="limits" style="edgeStyle=orthogonalEdgeStyle;rounded=0;jettySize=auto;html=0;endArrow=block;fontSize=11;labelBackgroundColor=default;">
+      <mxGeometry as="geometry" relative="1" />
+    </mxCell>
+  </root>
+</mxGraphModel>

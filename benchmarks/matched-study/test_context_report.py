@@ -1,4 +1,5 @@
 import importlib.util
+import copy
 from pathlib import Path
 import unittest
 
@@ -37,6 +38,17 @@ class ReportingTests(unittest.TestCase):
         a=r.account(rows)
         self.assertEqual(a['known'],2)
         self.assertEqual(a['reported_input_plus_output_tokens'],200)
+
+    def test_item_diagnostics_retain_wrong_answer_and_oracle(self):
+        answer=copy.deepcopy(r.c.correct('ledger'))
+        expected=answer['predictions'][0]['balance']
+        answer['predictions'][0]['balance']+=1
+        result=row('dedup',False);result['grading']=r.c.grade('ledger',answer)
+        values=r.explain(result,answer)
+        self.assertEqual(len(values),1)
+        self.assertEqual(values[0]['item'],'prediction_0')
+        self.assertEqual(values[0]['actual']['balance'],expected+1)
+        self.assertEqual(values[0]['expected']['balance'],expected)
 
 
 if __name__=='__main__':unittest.main()

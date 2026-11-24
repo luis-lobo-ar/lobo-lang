@@ -405,6 +405,29 @@
           "anchor": "def input_schema"
         }
       ]
+    },
+    {
+      "id": "resources",
+      "title": "Native resource lifetime",
+      "category": "runtime",
+      "status": "implemented",
+      "semantics": "Opaque capability, listener and stream tokens carry generation-checked runtime identity. Explicit close policy and invocation-exit cleanup bound handle lifetime.",
+      "pitfalls": [
+        "Capture an operation result before cleanup",
+        "Prefix try does not close handles when returning an error"
+      ],
+      "source_refs": [
+        {
+          "path": "spec/native-interface-v0.1.md",
+          "sha256": "fc98302a3a5e50c8a87079231b9311954e8351383ba872e4223385ff1770934e",
+          "anchor": "## Authority and resource state"
+        },
+        {
+          "path": "spec/core-v1.8.md",
+          "sha256": "422e050a2b5aa621e9b236f003084fa5398995e3144b3781b998092422255eb6",
+          "anchor": "## Resource ownership"
+        }
+      ]
     }
   ],
   "edges": [
@@ -425,8 +448,8 @@
     },
     {
       "source": "try",
-      "relation": "requires explicit cleanup under",
-      "target": "permissions"
+      "relation": "does not implicitly close",
+      "target": "resources"
     },
     {
       "source": "fold",
@@ -495,7 +518,7 @@
     },
     {
       "source": "blocks",
-      "relation": "is body of",
+      "relation": "can invoke",
       "target": "callbacks"
     },
     {
@@ -507,6 +530,16 @@
       "source": "try",
       "relation": "can exit through",
       "target": "while"
+    },
+    {
+      "source": "permissions",
+      "relation": "authorizes operations on",
+      "target": "resources"
+    },
+    {
+      "source": "resources",
+      "relation": "bounded by",
+      "target": "limits"
     }
   ]
 }

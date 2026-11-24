@@ -53,17 +53,20 @@
     <mxCell id="permissions" value="Typed permissions&#10;[library]" vertex="1" parent="1" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#ffe6cc;fontSize=14;">
       <mxGeometry as="geometry" x="1070" y="460" width="220" height="70" />
     </mxCell>
-    <mxCell id="limits" value="Execution limits&#10;[runtime]" vertex="1" parent="1" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#ffe6cc;fontSize=14;">
+    <mxCell id="resources" value="Native resource lifetime&#10;[runtime]" vertex="1" parent="1" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#ffe6cc;fontSize=14;">
       <mxGeometry as="geometry" x="1070" y="660" width="220" height="70" />
     </mxCell>
-    <mxCell id="native" value="Native compilation&#10;[tooling]" vertex="1" parent="1" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#ffe6cc;fontSize=14;">
+    <mxCell id="limits" value="Execution limits&#10;[runtime]" vertex="1" parent="1" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#ffe6cc;fontSize=14;">
       <mxGeometry as="geometry" x="1070" y="860" width="220" height="70" />
     </mxCell>
-    <mxCell id="bytes" value="Bytes and byte ranges&#10;[language]" vertex="1" parent="1" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#ffe6cc;fontSize=14;">
+    <mxCell id="native" value="Native compilation&#10;[tooling]" vertex="1" parent="1" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#ffe6cc;fontSize=14;">
       <mxGeometry as="geometry" x="1070" y="1060" width="220" height="70" />
     </mxCell>
-    <mxCell id="text" value="UTF-8 text&#10;[language]" vertex="1" parent="1" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#ffe6cc;fontSize=14;">
+    <mxCell id="bytes" value="Bytes and byte ranges&#10;[language]" vertex="1" parent="1" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#ffe6cc;fontSize=14;">
       <mxGeometry as="geometry" x="1070" y="1260" width="220" height="70" />
+    </mxCell>
+    <mxCell id="text" value="UTF-8 text&#10;[language]" vertex="1" parent="1" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#ffe6cc;fontSize=14;">
+      <mxGeometry as="geometry" x="1070" y="1460" width="220" height="70" />
     </mxCell>
     <mxCell id="edge-0" value="preserves nominal type" edge="1" parent="1" source="updates" target="records" style="edgeStyle=orthogonalEdgeStyle;rounded=0;jettySize=auto;html=0;endArrow=block;fontSize=11;labelBackgroundColor=default;">
       <mxGeometry as="geometry" relative="1" />
@@ -74,7 +77,7 @@
     <mxCell id="edge-2" value="propagates result cases" edge="1" parent="1" source="try" target="variants" style="edgeStyle=orthogonalEdgeStyle;rounded=0;jettySize=auto;html=0;endArrow=block;fontSize=11;labelBackgroundColor=default;">
       <mxGeometry as="geometry" relative="1" />
     </mxCell>
-    <mxCell id="edge-3" value="requires explicit cleanup under" edge="1" parent="1" source="try" target="permissions" style="edgeStyle=orthogonalEdgeStyle;rounded=0;jettySize=auto;html=0;endArrow=block;fontSize=11;labelBackgroundColor=default;">
+    <mxCell id="edge-3" value="does not implicitly close" edge="1" parent="1" source="try" target="resources" style="edgeStyle=orthogonalEdgeStyle;rounded=0;jettySize=auto;html=0;endArrow=block;fontSize=11;labelBackgroundColor=default;">
       <mxGeometry as="geometry" relative="1" />
     </mxCell>
     <mxCell id="edge-4" value="can carry" edge="1" parent="1" source="fold" target="records" style="edgeStyle=orthogonalEdgeStyle;rounded=0;jettySize=auto;html=0;endArrow=block;fontSize=11;labelBackgroundColor=default;">
@@ -116,13 +119,19 @@
     <mxCell id="edge-16" value="adapts external representation to" edge="1" parent="1" source="wire-input" target="bytes" style="edgeStyle=orthogonalEdgeStyle;rounded=0;jettySize=auto;html=0;endArrow=block;fontSize=11;labelBackgroundColor=default;">
       <mxGeometry as="geometry" relative="1" />
     </mxCell>
-    <mxCell id="edge-17" value="is body of" edge="1" parent="1" source="blocks" target="callbacks" style="edgeStyle=orthogonalEdgeStyle;rounded=0;jettySize=auto;html=0;endArrow=block;fontSize=11;labelBackgroundColor=default;">
+    <mxCell id="edge-17" value="can invoke" edge="1" parent="1" source="blocks" target="callbacks" style="edgeStyle=orthogonalEdgeStyle;rounded=0;jettySize=auto;html=0;endArrow=block;fontSize=11;labelBackgroundColor=default;">
       <mxGeometry as="geometry" relative="1" />
     </mxCell>
     <mxCell id="edge-18" value="can exit through" edge="1" parent="1" source="try" target="fold" style="edgeStyle=orthogonalEdgeStyle;rounded=0;jettySize=auto;html=0;endArrow=block;fontSize=11;labelBackgroundColor=default;">
       <mxGeometry as="geometry" relative="1" />
     </mxCell>
     <mxCell id="edge-19" value="can exit through" edge="1" parent="1" source="try" target="while" style="edgeStyle=orthogonalEdgeStyle;rounded=0;jettySize=auto;html=0;endArrow=block;fontSize=11;labelBackgroundColor=default;">
+      <mxGeometry as="geometry" relative="1" />
+    </mxCell>
+    <mxCell id="edge-20" value="authorizes operations on" edge="1" parent="1" source="permissions" target="resources" style="edgeStyle=orthogonalEdgeStyle;rounded=0;jettySize=auto;html=0;endArrow=block;fontSize=11;labelBackgroundColor=default;">
+      <mxGeometry as="geometry" relative="1" />
+    </mxCell>
+    <mxCell id="edge-21" value="bounded by" edge="1" parent="1" source="resources" target="limits" style="edgeStyle=orthogonalEdgeStyle;rounded=0;jettySize=auto;html=0;endArrow=block;fontSize=11;labelBackgroundColor=default;">
       <mxGeometry as="geometry" relative="1" />
     </mxCell>
   </root>

@@ -1,0 +1,82 @@
+{
+  "date": "2026-11-23",
+  "format": "lobo-context-study-verification/1",
+  "registered_commit": "a2f5048",
+  "frozen_version": "1.11.2",
+  "product_paths_changed_since_tag": [],
+  "primary": {
+    "scheduled": 72,
+    "attempted": 72,
+    "accepted": 48,
+    "incorrect_items": 32,
+    "prompt_initial_grade_tool_audits": 72,
+    "all_audits_ok": true
+  },
+  "posthoc_sensitivity": {
+    "accepted": 52,
+    "metadata_only_items": 7,
+    "concrete_replays": 69,
+    "all_replays_ok": true,
+    "primary_unchanged": true
+  },
+  "participant_accounting": {
+    "scored": 72,
+    "excluded_canaries": 2,
+    "known_usage": 74,
+    "unknown_usage": 0,
+    "reported_input_plus_output_tokens": 1303230,
+    "billing": null
+  },
+  "checks": {
+    "context_reporting_sensitivity_tests": 18,
+    "research_tests": 15,
+    "cargo": {
+      "suites": 59,
+      "passed": 312,
+      "failed": 0,
+      "ignored": 0
+    },
+    "reference_mutant_builds": 18,
+    "oracle_comparisons": 1908,
+    "compiled_policy_mutants_killed": 9,
+    "native_reading_outputs": 7,
+    "reference_nodes": 22,
+    "reference_edges": 22,
+    "graph_xml_and_sources_verified": true,
+    "diagram_visual_review": "unavailable: no draw.io viewer; xdg-open fell back to text",
+    "repository_links": {
+      "command": "./scripts/check.sh",
+      "status": "passed",
+      "log": "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/context-study-publication-links.txt",
+      "sha256": "1f11bb3bb382f1877ffa8eec4eb376db85d0ecfa2e1301289bb91fbd2cc966ae"
+    },
+    "git_diff_check": "passed"
+  },
+  "raw_archive": {
+    "archive": "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/context-study-20261123-raw.tar.gz",
+    "archive_sha256": "366ff5ee0b7ac252193a4a9e5249bddd06caec66d319ee04d5f25ce8c2022160",
+    "archive_bytes": 1604757,
+    "members": 1416,
+    "all_member_hashes_verified": true,
+    "limits": "Retained prior frozen compiler remains at the path/hash in registration; it is not duplicated in this raw archive. Final public-index/link checks are retained separately after archive closure."
+  },
+  "raw_archive_manifest": {
+    "path": "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/context-study-20261123-raw-manifest.json",
+    "sha256": "d9e813b47a64af5c8d870f803fd9000c811e22126854aa2adbd2e585066f1bb5"
+  },
+  "snapshot_manifest": {
+    "path": "research/snapshots/2026-11-23-context-study/evidence-manifest.json",
+    "sha256": "066a381518a7be147f8c0d4e12614c2547752fa442033d227e513f2bb9b2177b"
+  },
+  "prior_paper": {
+    "entries": 40,
+    "pins": 123,
+    "all_hashes_verified": true
+  },
+  "limitations": [
+    "Primary strict scores and posthoc projection remain separate",
+    "No graph/reference exposure in participant prompts",
+    "Published bundles contain all answers, inputs and usage; raw CLI traces and prior compiler freeze remain at retained local paths",
+    "Parent-agent development usage and actual billing unknown"
+  ]
+}

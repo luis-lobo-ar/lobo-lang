@@ -1,0 +1,1 @@
+{"strict": 48, "projected": 52, "metadata_only_items": 7, "concrete_replays": 69, "all_replays_ok": true}

@@ -1,0 +1,797 @@
+{
+  "date": "2026-11-23",
+  "files": [
+    {
+      "path": "research/snapshots/2026-11-23-context-study/agent-reference/README.md.txt",
+      "sha256": "5d39716639da4851281353a6d73abb74d2dcff26c5ae68addf98160b026fe82b",
+      "bytes": 2852
+    },
+    {
+      "path": "research/snapshots/2026-11-23-context-study/agent-reference/concepts.json",
+      "sha256": "393f075c8bb9db80227461135fa30cfa282de86e39db3f379c841a75dac63f55",
+      "bytes": 18430
+    },
+    {
+      "path": "research/snapshots/2026-11-23-context-study/agent-reference/language-relationships.drawio",
+      "sha256": "3d1f4bd4ddad70da47c9565a9a2140ce7ce48ef8d99e777bd8f185f912b32615",
+      "bytes": 12153
+    },
+    {
+      "path": "research/snapshots/2026-11-23-context-study/agent-reference/reading-examples.lobo",
+      "sha256": "8fa7b6507cab932ef797d068718d7180963baae3c149123bc728346b9bf713b3",
+      "bytes": 925
+    },
+    {
+      "path": "research/snapshots/2026-11-23-context-study/agent-reference/reading-examples.lobo.ids.json",
+      "sha256": "3b5317c43c354dbe80bb29030776e6495423f8a28e36ebff42173f869e408c81",
+      "bytes": 462
+    },
+    {
+      "path": "research/snapshots/2026-11-23-context-study/archive-evidence.py",
+      "sha256": "f78a06373f5eb700905904f9066a60ec58b44760d838344ee8cc5758800d8002",
+      "bytes": 1614
+    },
+    {
+      "path": "research/snapshots/2026-11-23-context-study/code/benchmarks/matched-study/context.py",
+      "sha256": "05e5c702ff967e00e135368d9e00eb3a0296efbcaf028fcf169b0b81da08d156",
+      "bytes": 22350
+    },
+    {
+      "path": "research/snapshots/2026-11-23-context-study/code/benchmarks/matched-study/context_report.py",
+      "sha256": "2ae4867a9db65208da8647fab5e7d235bb5f4aafb61dfd9e6032a381f16c74bb",
+      "bytes": 9181
+    },
+    {
+      "path": "research/snapshots/2026-11-23-context-study/code/benchmarks/matched-study/context_sensitivity.py",
+      "sha256": "f5fbdd41cd2b4416e4cdecb5b083b3f23f0e67bfc3967bb55512a50a451acf6a",
+      "bytes": 4863
+    },
+    {
+      "path": "research/snapshots/2026-11-23-context-study/code/benchmarks/matched-study/test_context.py",
+      "sha256": "a3b70c3a86a5e65aa8e03a8e49e42f714587ffcd4fe2e436666b6c8d2d84c2b4",
+      "bytes": 5395
+    },
+    {
+      "path": "research/snapshots/2026-11-23-context-study/code/benchmarks/matched-study/test_context_report.py",
+      "sha256": "d0ca6424321d40395c95842da7c533d1a672df63073bc2bca073d7f8514922ed",
+      "bytes": 2598
+    },
+    {
+      "path": "research/snapshots/2026-11-23-context-study/code/benchmarks/matched-study/test_context_sensitivity.py",
+      "sha256": "057296fd1a3ea2e6f34f5ddb99c891fec81d3e1ed4ceecab6ff23d9b5edfae5b",
+      "bytes": 1203
+    },
+    {
+      "path": "research/snapshots/2026-11-23-context-study/code/research/language_reference.py",
+      "sha256": "8809a8feb79085560f8e23de576c1eaba4fd25194898dd8ac59d4d5f9c23d290",
+      "bytes": 4196
+    },
+    {
+      "path": "research/snapshots/2026-11-23-context-study/code/research/test_language_reference.py",
+      "sha256": "7443cc190a227a8c8869c9776e4939087ac505ad1efea01f595f27b7eeb05392",
+      "bytes": 4301
+    },
+    {
+      "path": "research/snapshots/2026-11-23-context-study/development/cargo-counts.json",
+      "sha256": "a9b69cd496401586ee11f84d4c457420d39fd0c4e661b9612dc367137905c956",
+      "bytes": 67
+    },
+    {
+      "path": "research/snapshots/2026-11-23-context-study/development/cargo-exit.txt",
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+      "bytes": 2
+    },
+    {
+      "path": "research/snapshots/2026-11-23-context-study/development/cargo-test.txt",
+      "sha256": "df394fad0fdc1d89b8c03d0ccbc39a11bbd76e2ffede81035d83cac0f59177d5",
+      "bytes": 36591
+    },
+    {
+      "path": "research/snapshots/2026-11-23-context-study/development/context-and-report-green.txt",
+      "sha256": "31e6742ae2150dc0f316461dccbcb964de451177aa97b6363a1f9edffac0bdc3",
+      "bytes": 113
+    },
+    {
+      "path": "research/snapshots/2026-11-23-context-study/development/diagram-open.txt",
+      "sha256": "49cf4a3b2e3d924ac2e8d02678dc2dd40a06dba2e3259dc7824440c4e7a1fc53",
+      "bytes": 1611
+    },
+    {
+      "path": "research/snapshots/2026-11-23-context-study/development/final-all-context-tests.txt",
+      "sha256": "020209174ee2f07dda3fabdb7a465a3b9439fddd2fefa0e8ac7b4d881c45849c",
+      "bytes": 117
+    },
+    {
+      "path": "research/snapshots/2026-11-23-context-study/development/final-context-tests.txt",
+      "sha256": "71a2d84d80cbfb2d9d84dbf06d99b7db4c1b706daf150bad7b89a206bb623912",
+      "bytes": 114
+    },
+    {
+      "path": "research/snapshots/2026-11-23-context-study/development/final-research-tests.txt",
+      "sha256": "e50935f824c0bd8de823e9280c8fa1cb99ab519b1aee6320e5cef21f7379a09d",
+      "bytes": 114
+    },
+    {
+      "path": "research/snapshots/2026-11-23-context-study/development/publication.txt",
+      "sha256": "640330457b714badf3bf5ed80d82caee9a63414590f49417e7a53d07b10a0e77",
+      "bytes": 162
+    },
+    {
+      "path": "research/snapshots/2026-11-23-context-study/development/reference-final-green.txt",
+      "sha256": "c8ae829105f2de03c9f5159c108cce04fce3015f866ad75e39f8185de21e3af4",
+      "bytes": 104
+    },
+    {
+      "path": "research/snapshots/2026-11-23-context-study/development/reference-final-integrity.txt",
+      "sha256": "7100047c53b4298dc667498f38c451e9b6f4791e8177e7537865848eee9b638a",
+      "bytes": 61
+    },
+    {
+      "path": "research/snapshots/2026-11-23-context-study/development/reference-green.txt",
+      "sha256": "533131dad8973c589ae697ab1dd346cc55caa134cd1e536cedf26f1b057c0f1f",
+      "bytes": 103
+    },
+    {
+      "path": "research/snapshots/2026-11-23-context-study/development/reference-label-review.txt",
+      "sha256": "910619e97a571d23fbccde54563250b0a96f016076b69890db7d9109d5ce380f",
+      "bytes": 105
+    },
+    {
+      "path": "research/snapshots/2026-11-23-context-study/development/reference-native-first-attempt.txt",
+      "sha256": "1f19d0162223e3d1aa5f1f87fb88c1c19e6ac11bf822ad095de9b882ad4c4c1c",
+      "bytes": 104
+    },
+    {
+      "path": "research/snapshots/2026-11-23-context-study/development/reference-query.json",
+      "sha256": "093826a67c806b55989cb9ffde45d080e27fa86c39b2929a239a42319f35c0ba",
+      "bytes": 2370
+    },
+    {
+      "path": "research/snapshots/2026-11-23-context-study/development/reference-red.txt",
+      "sha256": "27ee211abe93f9760e2348f586322ee2f15f34d100d2e8097fc68f72c235a4a6",
+      "bytes": 1301
+    },
+    {
+      "path": "research/snapshots/2026-11-23-context-study/development/reference-seven-green.txt",
+      "sha256": "e0f674d70f08830deff7cdd4cfe088dfad28268d6dc91ed9f276f012ae030859",
+      "bytes": 105
+    },
+    {
+      "path": "research/snapshots/2026-11-23-context-study/development/registration.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "research/snapshots/2026-11-23-context-study/development/report-diagnostics-green.txt",
+      "sha256": "888a0c0ed615e57d32cf72be501b0c355f33b8613c81dfdaa99db33d7959487e",
+      "bytes": 103
+    },
+    {
+      "path": "research/snapshots/2026-11-23-context-study/development/report-diagnostics-red.txt",
+      "sha256": "90747b91ddce1270ab280bdc77f1e214da3541a7fe180911e8270040ba8c59fc",
+      "bytes": 726
+    },
+    {
+      "path": "research/snapshots/2026-11-23-context-study/development/report-green.txt",
+      "sha256": "e6ec182765cd965f2837d8eeaef5a64af48a104f245cd1a0b7281559194c57c1",
+      "bytes": 102
+    },
+    {
+      "path": "research/snapshots/2026-11-23-context-study/development/report-red.txt",
+      "sha256": "f23ce3d3f5a829ae27bd98e74c11096098bb3e109312d8d47e124386bc269326",
+      "bytes": 1312
+    },
+    {
+      "path": "research/snapshots/2026-11-23-context-study/development/repository-check-first.txt",
+      "sha256": "1f11bb3bb382f1877ffa8eec4eb376db85d0ecfa2e1301289bb91fbd2cc966ae",
+      "bytes": 55
+    },
+    {
+      "path": "research/snapshots/2026-11-23-context-study/development/research-tests.txt",
+      "sha256": "1b579bc003d755f457d6054125d6a70155dceedc3b5dc9122abac0635126ce48",
+      "bytes": 114
+    },
+    {
+      "path": "research/snapshots/2026-11-23-context-study/development/sensitivity-green.txt",
+      "sha256": "33060fd73862c5e1af97335504d5b45211fce6d229657f556d8deceeadc52ce4",
+      "bytes": 101
+    },
+    {
+      "path": "research/snapshots/2026-11-23-context-study/development/sensitivity-red.txt",
+      "sha256": "56d3baad8be9b4f5a635a2f94bacbc796a5194c9b91d0d0fbf6aa8f59e8ac1c1",
+      "bytes": 1337
+    },
+    {
+      "path": "research/snapshots/2026-11-23-context-study/development/sensitivity-result.txt",
+      "sha256": "3b3692538d3fd3cabe87b282a899fee3de5cf6033bb142f25e5906083be3e7e9",
+      "bytes": 106
+    },
+    {
+      "path": "research/snapshots/2026-11-23-context-study/development/tdd-final-green.txt",
+      "sha256": "85bdb3d23316195a7aad16b696a688d839cd6f3a8ddf856daed46f675b993098",
+      "bytes": 109
+    },
+    {
+      "path": "research/snapshots/2026-11-23-context-study/development/tdd-first-green-attempt.txt",
+      "sha256": "6bd04ea676001fe8ae7d02d7dd66d8a6942b24662e4b674913f7be5bd8362e3b",
+      "bytes": 1254
+    },
+    {
+      "path": "research/snapshots/2026-11-23-context-study/development/tdd-green.txt",
+      "sha256": "31fee74ca91764ff428912a09870cbe01b998b86899b47ff32b2bbbf7fdc0d92",
+      "bytes": 107
+    },
+    {
+      "path": "research/snapshots/2026-11-23-context-study/development/tdd-order-red.txt",
+      "sha256": "0834e65bff7996a4ec32a9621f4e5e1088dcccf9fa65aaeb5b19a13deffd11de",
+      "bytes": 628
+    },
+    {
+      "path": "research/snapshots/2026-11-23-context-study/development/tdd-red.txt",
+      "sha256": "5c3575be89059208b53e7d437c9672174e35fee7f10758c71507f21ffa0ae982",
+      "bytes": 1167
+    },
+    {
+      "path": "research/snapshots/2026-11-23-context-study/development/validation.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "research/snapshots/2026-11-23-context-study/reference-native-results.json",
+      "sha256": "27f097b708932925c5a8b0e6eba476c1ae2bfa4935b1f1c9a4d47cc46a9e3f3d",
+      "bytes": 4121
+    },
+    {
+      "path": "research/snapshots/2026-11-23-context-study/registration/inputs/frames/lobo/AGENTS.md",
+      "sha256": "3c8c8fce33c21a65ee4b8a44fe408af1f260accb220adba4fb6a75e331e7ea11",
+      "bytes": 153
+    },
+    {
+      "path": "research/snapshots/2026-11-23-context-study/registration/inputs/frames/lobo/GUIDE.txt",
+      "sha256": "d6770e2f1b55cb966bfaf138608d4c836a43770709d04a63c9acf88b30f43e1c",
+      "bytes": 3443
+    },
+    {
+      "path": "research/snapshots/2026-11-23-context-study/registration/inputs/frames/lobo/TASK.txt",
+      "sha256": "4b693c3ae5610d253a8e09a5799a32d57ab2671a30fe9b043a2f7955fe1c014a",
+      "bytes": 2146
+    },
+    {
+      "path": "research/snapshots/2026-11-23-context-study/registration/inputs/frames/lobo/app.lobo",
+      "sha256": "142bad6701d0bd55f85bab75daca46f781995b191389e76d65706653b59196de",
+      "bytes": 1062
+    },
+    {
+      "path": "research/snapshots/2026-11-23-context-study/registration/inputs/frames/lobo/app.lobo.ids.json",
+      "sha256": "9be6120e78c2604599df4b53da3ef73b62a5050ff036b880d3bcf7303dfb9aeb",
+      "bytes": 542
+    },
+    {
+      "path": "research/snapshots/2026-11-23-context-study/registration/inputs/frames/lobo/check.py",
+      "sha256": "19cfc08bd63439e1487ff9ee80fc4a013b804feb6b424788b2fc62fb63bd278f",
+      "bytes": 385
+    },
+    {
+      "path": "research/snapshots/2026-11-23-context-study/registration/inputs/frames/lobo/logic.lobo",
+      "sha256": "06e0449403d2be2206fb66dd48c99a327f598ca1fd00c80e8eac93ff5cbac3a5",
+      "bytes": 1259
+    },
+    {
+      "path": "research/snapshots/2026-11-23-context-study/registration/inputs/frames/lobo/logic.lobo.ids.json",
+      "sha256": "e7a291235940a99eeda7658a083bf7f1027f6cb308114f1aa8141ce7ceca50cf",
+      "bytes": 421
+    },
+    {
+      "path": "research/snapshots/2026-11-23-context-study/registration/inputs/frames/lobo/model.lobo",
+      "sha256": "8f19009753bcb61cfe9bfffb1b2071a6d3d6dbff5924e07cca55397dc8de7da7",
+      "bytes": 145
+    },
+    {
+      "path": "research/snapshots/2026-11-23-context-study/registration/inputs/frames/lobo/util.lobo",
+      "sha256": "675dff309d63957c2322be1f6b18a39808f1f27ff17a41210d57c8b8bfb9b343",
+      "bytes": 436
+    },
+    {
+      "path": "research/snapshots/2026-11-23-context-study/registration/inputs/frames/python/AGENTS.md",
+      "sha256": "3c8c8fce33c21a65ee4b8a44fe408af1f260accb220adba4fb6a75e331e7ea11",
+      "bytes": 153
+    },
+    {
+      "path": "research/snapshots/2026-11-23-context-study/registration/inputs/frames/python/GUIDE.txt",
+      "sha256": "113a49012b7f55256c365e33a5e367d51b851b09d0114b18e9acd9631a51e93e",
+      "bytes": 1922
+    },
+    {
+      "path": "research/snapshots/2026-11-23-context-study/registration/inputs/frames/python/TASK.txt",
+      "sha256": "31f012248e9da275c590d020423524254e45518f0e25eba373389474a7854a9a",
+      "bytes": 2137
+    },
+    {
+      "path": "research/snapshots/2026-11-23-context-study/registration/inputs/frames/python/app.py",
+      "sha256": "de5f172372195558cf705966b31e12acc4dcee498f5f2da10a58cecb3f94871e",
+      "bytes": 393
+    },
+    {
+      "path": "research/snapshots/2026-11-23-context-study/registration/inputs/frames/python/check.py",
+      "sha256": "19cfc08bd63439e1487ff9ee80fc4a013b804feb6b424788b2fc62fb63bd278f",
+      "bytes": 385
+    },
+    {
+      "path": "research/snapshots/2026-11-23-context-study/registration/inputs/frames/python/logic.py",
+      "sha256": "245918ada55284be5826bb2cd51ca5bc41e4879e51a9b3bd08fb2c757c09269e",
+      "bytes": 656
+    },
+    {
+      "path": "research/snapshots/2026-11-23-context-study/registration/inputs/frames/python/model.py",
+      "sha256": "1835c96386946241180506a20545ca0afc2f04b02b9a58abe7b2df3191a82ed9",
+      "bytes": 105
+    },
+    {
+      "path": "research/snapshots/2026-11-23-context-study/registration/inputs/frames/rust/AGENTS.md",
+      "sha256": "3c8c8fce33c21a65ee4b8a44fe408af1f260accb220adba4fb6a75e331e7ea11",
+      "bytes": 153
+    },
+    {
+      "path": "research/snapshots/2026-11-23-context-study/registration/inputs/frames/rust/GUIDE.txt",
+      "sha256": "dc0cdfda459eaa4953793c7f471da101b61d779627c1083a30ebaf20cb1c2f95",
+      "bytes": 1986
+    },
+    {
+      "path": "research/snapshots/2026-11-23-context-study/registration/inputs/frames/rust/TASK.txt",
+      "sha256": "3c21c90679666dd955d7508cc169baee14d6e176d8020ba3ad03ac0778124d1a",
+      "bytes": 2146
+    },
+    {
+      "path": "research/snapshots/2026-11-23-context-study/registration/inputs/frames/rust/app.rs",
+      "sha256": "1276b1f5e67b8b0b9447fcbf21afdf713253c68ae63174910db8284a603261e9",
+      "bytes": 803
+    },
+    {
+      "path": "research/snapshots/2026-11-23-context-study/registration/inputs/frames/rust/check.py",
+      "sha256": "19cfc08bd63439e1487ff9ee80fc4a013b804feb6b424788b2fc62fb63bd278f",
+      "bytes": 385
+    },
+    {
+      "path": "research/snapshots/2026-11-23-context-study/registration/inputs/frames/rust/logic.rs",
+      "sha256": "d8ac21b05ddd5c501a5d616e1384104f7e5edce29c4ed494498aedb566d77b24",
+      "bytes": 939
+    },
+    {
+      "path": "research/snapshots/2026-11-23-context-study/registration/inputs/frames/rust/model.rs",
+      "sha256": "ef1a9c3bd9c4ed9639bc4144520853a9f46a4324c7a5f0cec5d6a69901269e6b",
+      "bytes": 76
+    },
+    {
+      "path": "research/snapshots/2026-11-23-context-study/registration/inputs/ledger/lobo/AGENTS.md",
+      "sha256": "3c8c8fce33c21a65ee4b8a44fe408af1f260accb220adba4fb6a75e331e7ea11",
+      "bytes": 153
+    },
+    {
+      "path": "research/snapshots/2026-11-23-context-study/registration/inputs/ledger/lobo/GUIDE.txt",
+      "sha256": "d6770e2f1b55cb966bfaf138608d4c836a43770709d04a63c9acf88b30f43e1c",
+      "bytes": 3443
+    },
+    {
+      "path": "research/snapshots/2026-11-23-context-study/registration/inputs/ledger/lobo/TASK.txt",
+      "sha256": "fb148340a27a5785a4c939ac45b94c018d500695253251d48cf800e757b1c79a",
+      "bytes": 2474
+    },
+    {
+      "path": "research/snapshots/2026-11-23-context-study/registration/inputs/ledger/lobo/app.lobo",
+      "sha256": "25516b5a2114f47b7445df0fab47d7ca40a484e7b6cb10c5916f28334d5e26d0",
+      "bytes": 1106
+    },
+    {
+      "path": "research/snapshots/2026-11-23-context-study/registration/inputs/ledger/lobo/app.lobo.ids.json",
+      "sha256": "f27c6fd2b22eef6a0627f811c4585e65da786e6057fb715fedc89b941e0f9261",
+      "bytes": 583
+    },
+    {
+      "path": "research/snapshots/2026-11-23-context-study/registration/inputs/ledger/lobo/check.py",
+      "sha256": "19cfc08bd63439e1487ff9ee80fc4a013b804feb6b424788b2fc62fb63bd278f",
+      "bytes": 385
+    },
+    {
+      "path": "research/snapshots/2026-11-23-context-study/registration/inputs/ledger/lobo/logic.lobo",
+      "sha256": "ec21e24bc3dfa0fd11ca0c7a5450a8a29469a2e75c2f0ce1b68cbe812e7845ad",
+      "bytes": 1320
+    },
+    {
+      "path": "research/snapshots/2026-11-23-context-study/registration/inputs/ledger/lobo/logic.lobo.ids.json",
+      "sha256": "bc2b53158b6974497887a33cd2e7b9fe8140c7eaec0d0b1767e6e25c3b22f598",
+      "bytes": 418
+    },
+    {
+      "path": "research/snapshots/2026-11-23-context-study/registration/inputs/ledger/lobo/model.lobo",
+      "sha256": "bca415f8fe0bfc4f054a028de3ca80e745554dcddb4d3c3d94f4abd8031009b3",
+      "bytes": 238
+    },
+    {
+      "path": "research/snapshots/2026-11-23-context-study/registration/inputs/ledger/lobo/util.lobo",
+      "sha256": "675dff309d63957c2322be1f6b18a39808f1f27ff17a41210d57c8b8bfb9b343",
+      "bytes": 436
+    },
+    {
+      "path": "research/snapshots/2026-11-23-context-study/registration/inputs/ledger/python/AGENTS.md",
+      "sha256": "3c8c8fce33c21a65ee4b8a44fe408af1f260accb220adba4fb6a75e331e7ea11",
+      "bytes": 153
+    },
+    {
+      "path": "research/snapshots/2026-11-23-context-study/registration/inputs/ledger/python/GUIDE.txt",
+      "sha256": "113a49012b7f55256c365e33a5e367d51b851b09d0114b18e9acd9631a51e93e",
+      "bytes": 1922
+    },
+    {
+      "path": "research/snapshots/2026-11-23-context-study/registration/inputs/ledger/python/TASK.txt",
+      "sha256": "49b7dc06f6cf06894d0fc64443bcfbbd2a23e93714ded377bf79753524fa61d7",
+      "bytes": 2459
+    },
+    {
+      "path": "research/snapshots/2026-11-23-context-study/registration/inputs/ledger/python/app.py",
+      "sha256": "4bbf65c5a0ae432105fd2cbcf4e56150189b12966d6162feea32bea59665618a",
+      "bytes": 424
+    },
+    {
+      "path": "research/snapshots/2026-11-23-context-study/registration/inputs/ledger/python/check.py",
+      "sha256": "19cfc08bd63439e1487ff9ee80fc4a013b804feb6b424788b2fc62fb63bd278f",
+      "bytes": 385
+    },
+    {
+      "path": "research/snapshots/2026-11-23-context-study/registration/inputs/ledger/python/logic.py",
+      "sha256": "14814e0b68830e8171d0dbfd252f6db68d26f94bdccf650d15a7c9af62ebfdb3",
+      "bytes": 717
+    },
+    {
+      "path": "research/snapshots/2026-11-23-context-study/registration/inputs/ledger/python/model.py",
+      "sha256": "ca98ab244630880f729f90ff991001bc78c080002efca722b1c3d337bd56d9f8",
+      "bytes": 259
+    },
+    {
+      "path": "research/snapshots/2026-11-23-context-study/registration/inputs/ledger/rust/AGENTS.md",
+      "sha256": "3c8c8fce33c21a65ee4b8a44fe408af1f260accb220adba4fb6a75e331e7ea11",
+      "bytes": 153
+    },
+    {
+      "path": "research/snapshots/2026-11-23-context-study/registration/inputs/ledger/rust/GUIDE.txt",
+      "sha256": "dc0cdfda459eaa4953793c7f471da101b61d779627c1083a30ebaf20cb1c2f95",
+      "bytes": 1986
+    },
+    {
+      "path": "research/snapshots/2026-11-23-context-study/registration/inputs/ledger/rust/TASK.txt",
+      "sha256": "7485566cc4590a5a73b28b378d6a342c61ae4b191ca69fb6eb00d15666480489",
+      "bytes": 2471
+    },
+    {
+      "path": "research/snapshots/2026-11-23-context-study/registration/inputs/ledger/rust/app.rs",
+      "sha256": "db38bbbeac6cea46002f6fc5c4583a93e38d515a5fedb11d65a7797de92989bc",
+      "bytes": 832
+    },
+    {
+      "path": "research/snapshots/2026-11-23-context-study/registration/inputs/ledger/rust/check.py",
+      "sha256": "19cfc08bd63439e1487ff9ee80fc4a013b804feb6b424788b2fc62fb63bd278f",
+      "bytes": 385
+    },
+    {
+      "path": "research/snapshots/2026-11-23-context-study/registration/inputs/ledger/rust/logic.rs",
+      "sha256": "19072404b07e19f1bd6cc9da6208d5407e340b73022f4a51bfcdd4ed02c2c64f",
+      "bytes": 946
+    },
+    {
+      "path": "research/snapshots/2026-11-23-context-study/registration/inputs/ledger/rust/model.rs",
+      "sha256": "1bbbcc6cf0c2cdb47a17953ed582e6c4f8bbf350e54575fb26a088226b5d7167",
+      "bytes": 155
+    },
+    {
+      "path": "research/snapshots/2026-11-23-context-study/registration/inputs/scheduler/lobo/AGENTS.md",
+      "sha256": "3c8c8fce33c21a65ee4b8a44fe408af1f260accb220adba4fb6a75e331e7ea11",
+      "bytes": 153
+    },
+    {
+      "path": "research/snapshots/2026-11-23-context-study/registration/inputs/scheduler/lobo/GUIDE.txt",
+      "sha256": "d6770e2f1b55cb966bfaf138608d4c836a43770709d04a63c9acf88b30f43e1c",
+      "bytes": 3443
+    },
+    {
+      "path": "research/snapshots/2026-11-23-context-study/registration/inputs/scheduler/lobo/TASK.txt",
+      "sha256": "830c163eca776a13376973e2aefa365d7d8e388ea2d4e0bd36cce295af10488c",
+      "bytes": 2700
+    },
+    {
+      "path": "research/snapshots/2026-11-23-context-study/registration/inputs/scheduler/lobo/app.lobo",
+      "sha256": "3450bad45b8b2ae8054b409f8f8d4a1a12886c540a04d45ce20f4c24d9867508",
+      "bytes": 1074
+    },
+    {
+      "path": "research/snapshots/2026-11-23-context-study/registration/inputs/scheduler/lobo/app.lobo.ids.json",
+      "sha256": "9a638f1b71bc04afcf7a001121fc0d08b629c3823afa3dad6e19c42f89cf2ed3",
+      "bytes": 615
+    },
+    {
+      "path": "research/snapshots/2026-11-23-context-study/registration/inputs/scheduler/lobo/check.py",
+      "sha256": "19cfc08bd63439e1487ff9ee80fc4a013b804feb6b424788b2fc62fb63bd278f",
+      "bytes": 385
+    },
+    {
+      "path": "research/snapshots/2026-11-23-context-study/registration/inputs/scheduler/lobo/logic.lobo",
+      "sha256": "5b710fb7a876fef8ede1d59c5ed41a4325f2a4f5a290b46ec1218309a6250311",
+      "bytes": 1780
+    },
+    {
+      "path": "research/snapshots/2026-11-23-context-study/registration/inputs/scheduler/lobo/logic.lobo.ids.json",
+      "sha256": "552a8458be898cd03afe7ae56e9fd175463941a8bd5045ef8509278577774ac3",
+      "bytes": 590
+    },
+    {
+      "path": "research/snapshots/2026-11-23-context-study/registration/inputs/scheduler/lobo/model.lobo",
+      "sha256": "2f57c6917dce5820d78292bdbaa7fba639b9c1b0e6a01a80a3cfcba0a78662b1",
+      "bytes": 219
+    },
+    {
+      "path": "research/snapshots/2026-11-23-context-study/registration/inputs/scheduler/lobo/util.lobo",
+      "sha256": "675dff309d63957c2322be1f6b18a39808f1f27ff17a41210d57c8b8bfb9b343",
+      "bytes": 436
+    },
+    {
+      "path": "research/snapshots/2026-11-23-context-study/registration/inputs/scheduler/python/AGENTS.md",
+      "sha256": "3c8c8fce33c21a65ee4b8a44fe408af1f260accb220adba4fb6a75e331e7ea11",
+      "bytes": 153
+    },
+    {
+      "path": "research/snapshots/2026-11-23-context-study/registration/inputs/scheduler/python/GUIDE.txt",
+      "sha256": "113a49012b7f55256c365e33a5e367d51b851b09d0114b18e9acd9631a51e93e",
+      "bytes": 1922
+    },
+    {
+      "path": "research/snapshots/2026-11-23-context-study/registration/inputs/scheduler/python/TASK.txt",
+      "sha256": "8942c6b03933a496bda20addaa4595e0f720184abe75d4a6e5592d9ed3587df4",
+      "bytes": 2687
+    },
+    {
+      "path": "research/snapshots/2026-11-23-context-study/registration/inputs/scheduler/python/app.py",
+      "sha256": "31b7c9febf46f8ed62ffb7833acbb2872fbf3051b69de20e52a579b836a8e138",
+      "bytes": 442
+    },
+    {
+      "path": "research/snapshots/2026-11-23-context-study/registration/inputs/scheduler/python/check.py",
+      "sha256": "19cfc08bd63439e1487ff9ee80fc4a013b804feb6b424788b2fc62fb63bd278f",
+      "bytes": 385
+    },
+    {
+      "path": "research/snapshots/2026-11-23-context-study/registration/inputs/scheduler/python/logic.py",
+      "sha256": "b7c61e5d000b6b18e2ab7bc39d646cdc2d8ffb4597f24f2b368d4e0d6636eef1",
+      "bytes": 604
+    },
+    {
+      "path": "research/snapshots/2026-11-23-context-study/registration/inputs/scheduler/python/model.py",
+      "sha256": "958517ea6bd2485371eee3f1675bc0be7407bf72d43394983c065ae480ff3c20",
+      "bytes": 170
+    },
+    {
+      "path": "research/snapshots/2026-11-23-context-study/registration/inputs/scheduler/rust/AGENTS.md",
+      "sha256": "3c8c8fce33c21a65ee4b8a44fe408af1f260accb220adba4fb6a75e331e7ea11",
+      "bytes": 153
+    },
+    {
+      "path": "research/snapshots/2026-11-23-context-study/registration/inputs/scheduler/rust/GUIDE.txt",
+      "sha256": "dc0cdfda459eaa4953793c7f471da101b61d779627c1083a30ebaf20cb1c2f95",
+      "bytes": 1986
+    },
+    {
+      "path": "research/snapshots/2026-11-23-context-study/registration/inputs/scheduler/rust/TASK.txt",
+      "sha256": "b2ec04864b145a474f262f39e421044e5656ffc95c6eb98322c31d6dd7bdbe76",
+      "bytes": 2697
+    },
+    {
+      "path": "research/snapshots/2026-11-23-context-study/registration/inputs/scheduler/rust/app.rs",
+      "sha256": "672e9d2caa1392c5dd959e8cc52e9f96620c66a45df4aea7fdd8a30751d46745",
+      "bytes": 759
+    },
+    {
+      "path": "research/snapshots/2026-11-23-context-study/registration/inputs/scheduler/rust/check.py",
+      "sha256": "19cfc08bd63439e1487ff9ee80fc4a013b804feb6b424788b2fc62fb63bd278f",
+      "bytes": 385
+    },
+    {
+      "path": "research/snapshots/2026-11-23-context-study/registration/inputs/scheduler/rust/logic.rs",
+      "sha256": "9820d2d8adf392488a94ffb73f6bb89c3ba37be43511579d04acee4d32ed3ed2",
+      "bytes": 766
+    },
+    {
+      "path": "research/snapshots/2026-11-23-context-study/registration/inputs/scheduler/rust/model.rs",
+      "sha256": "be414e39c3949e839a6cfe140b281b4d508d0c255e31276173a4e8fc1d5ba392",
+      "bytes": 146
+    },
+    {
+      "path": "research/snapshots/2026-11-23-context-study/registration/manifest.json",
+      "sha256": "1af7d0e1b672be5d0d17bab48051442984632475c259a740538aa3056a10ab35",
+      "bytes": 47919
+    },
+    {
+      "path": "research/snapshots/2026-11-23-context-study/registration/prompts/frames-lobo-both.txt",
+      "sha256": "c49399c00610335bc94188eeeb08ede8d25b93b51605dacee533287585a1ed76",
+      "bytes": 8772
+    },
+    {
+      "path": "research/snapshots/2026-11-23-context-study/registration/prompts/frames-lobo-dedup.txt",
+      "sha256": "0f2c46504183dedf597ed1793d9e57426f5d93313a25b1f28d20bc451dfc2317",
+      "bytes": 8094
+    },
+    {
+      "path": "research/snapshots/2026-11-23-context-study/registration/prompts/frames-lobo-original.txt",
+      "sha256": "db5093676424c54e5fd199e866421a532ef5cef79a069a2129a4245396bbe84b",
+      "bytes": 13714
+    },
+    {
+      "path": "research/snapshots/2026-11-23-context-study/registration/prompts/frames-lobo-schema.txt",
+      "sha256": "3a9d313b6d1e1b10dd335241b5056fd9c17592f3df568a33aef25c0b59c8b4e9",
+      "bytes": 14392
+    },
+    {
+      "path": "research/snapshots/2026-11-23-context-study/registration/prompts/frames-python-both.txt",
+      "sha256": "4f020ad1064ac3f1c3e39b476f586bb30a18d04af3e5c88c3d81eb985e0f7402",
+      "bytes": 6143
+    },
+    {
+      "path": "research/snapshots/2026-11-23-context-study/registration/prompts/frames-python-dedup.txt",
+      "sha256": "1861f3a9c5949afb11525afbc57c7e5841b3947d45662cd5e7ad8f96c47a0553",
+      "bytes": 5465
+    },
+    {
+      "path": "research/snapshots/2026-11-23-context-study/registration/prompts/frames-python-original.txt",
+      "sha256": "57752df84918a7e9271a7afeb886f4676d50a1847a39ebc34737f77177f238e9",
+      "bytes": 9555
+    },
+    {
+      "path": "research/snapshots/2026-11-23-context-study/registration/prompts/frames-python-schema.txt",
+      "sha256": "d1b69b175ed4f5945800caba64dcd76589cfd21bb952be33759139d804ca24b9",
+      "bytes": 10233
+    },
+    {
+      "path": "research/snapshots/2026-11-23-context-study/registration/prompts/frames-rust-both.txt",
+      "sha256": "0a18c4f5beb631471ec0e565f57356a1e16e5a0c3a5831f80005521f57b8254f",
+      "bytes": 6470
+    },
+    {
+      "path": "research/snapshots/2026-11-23-context-study/registration/prompts/frames-rust-dedup.txt",
+      "sha256": "7967efe98e1b8a7cb5ae85298876b69b631bf668eb3a8ad72a485c54f5378105",
+      "bytes": 5792
+    },
+    {
+      "path": "research/snapshots/2026-11-23-context-study/registration/prompts/frames-rust-original.txt",
+      "sha256": "d4e1a4dbbbf103af73879b2be9eb84bb6a6f201e0652db64964bea01e09c60a2",
+      "bytes": 9955
+    },
+    {
+      "path": "research/snapshots/2026-11-23-context-study/registration/prompts/frames-rust-schema.txt",
+      "sha256": "77577661d484416821b88f8ad51f905d4ad5f20b7387b72181fbacd4fc5a60f6",
+      "bytes": 10633
+    },
+    {
+      "path": "research/snapshots/2026-11-23-context-study/registration/prompts/ledger-lobo-both.txt",
+      "sha256": "2371d27204dcb4c4a9923a5138059800f7748fd849608897c8ee4d6513a046cb",
+      "bytes": 9174
+    },
+    {
+      "path": "research/snapshots/2026-11-23-context-study/registration/prompts/ledger-lobo-dedup.txt",
+      "sha256": "45ffd1a0535b0fb7718fdfbf3c7072439ce4e3eef1550624ba2131bcba697834",
+      "bytes": 8576
+    },
+    {
+      "path": "research/snapshots/2026-11-23-context-study/registration/prompts/ledger-lobo-original.txt",
+      "sha256": "ebd10366b4e5de7e97a068b8c84a1c52b03b378de5ac95543a59818bc93b6dd3",
+      "bytes": 14524
+    },
+    {
+      "path": "research/snapshots/2026-11-23-context-study/registration/prompts/ledger-lobo-schema.txt",
+      "sha256": "a29f85359b0d912839b54876aef9c0dc2399dab7b24c29760f01bed6dbb14815",
+      "bytes": 15122
+    },
+    {
+      "path": "research/snapshots/2026-11-23-context-study/registration/prompts/ledger-python-both.txt",
+      "sha256": "fa2b517a186056a894dadef50212c5789b5fa447f5afd5df2bdab079403e71f2",
+      "bytes": 6600
+    },
+    {
+      "path": "research/snapshots/2026-11-23-context-study/registration/prompts/ledger-python-dedup.txt",
+      "sha256": "26599c471f68b47057191bd6a38b4df3414d5f6f49534db883c5ac5594aa4f87",
+      "bytes": 6002
+    },
+    {
+      "path": "research/snapshots/2026-11-23-context-study/registration/prompts/ledger-python-original.txt",
+      "sha256": "27abdf9cc202d66c123b26f0aba9ce1221724a1ca37c29e2a4a76d2363db830e",
+      "bytes": 10414
+    },
+    {
+      "path": "research/snapshots/2026-11-23-context-study/registration/prompts/ledger-python-schema.txt",
+      "sha256": "2b5b6f10fab7453c2745ca74282102e22daa9cff9179338ab48ad192fbb5b3b1",
+      "bytes": 11012
+    },
+    {
+      "path": "research/snapshots/2026-11-23-context-study/registration/prompts/ledger-rust-both.txt",
+      "sha256": "98979596ce674dd31313a3facf0e897977ba6a52037a8143db51a0f51204243c",
+      "bytes": 6801
+    },
+    {
+      "path": "research/snapshots/2026-11-23-context-study/registration/prompts/ledger-rust-dedup.txt",
+      "sha256": "022cb2f3c73c33057f52298bb2f526636199cd80c1bc962c576fa2b26b7b6b6c",
+      "bytes": 6203
+    },
+    {
+      "path": "research/snapshots/2026-11-23-context-study/registration/prompts/ledger-rust-original.txt",
+      "sha256": "8fcdb28c8cdb1a92f67e015e0ea0ae3f0fd8ba30308105c8733643b6fa054266",
+      "bytes": 10691
+    },
+    {
+      "path": "research/snapshots/2026-11-23-context-study/registration/prompts/ledger-rust-schema.txt",
+      "sha256": "724ac3e567f972c5279271a61081e748e67365c1614cf19801388532a675b8cc",
+      "bytes": 11289
+    },
+    {
+      "path": "research/snapshots/2026-11-23-context-study/registration/prompts/scheduler-lobo-both.txt",
+      "sha256": "493f155233c01135e1ba26283523f0996cc22b5d71af3bdaa1bf6bf40411df7c",
+      "bytes": 9832
+    },
+    {
+      "path": "research/snapshots/2026-11-23-context-study/registration/prompts/scheduler-lobo-dedup.txt",
+      "sha256": "1b4395ab1037a49c0dfdbc6d0f1a119da5f1749ed6625673181a21f2c352c7cc",
+      "bytes": 9243
+    },
+    {
+      "path": "research/snapshots/2026-11-23-context-study/registration/prompts/scheduler-lobo-original.txt",
+      "sha256": "a32fb8e022d9a7e28996ad0f9ad2149c4902daf1fddbf95070d488f9dcceac70",
+      "bytes": 15417
+    },
+    {
+      "path": "research/snapshots/2026-11-23-context-study/registration/prompts/scheduler-lobo-schema.txt",
+      "sha256": "340519dd5ebe13e1c03ccd079e143fefb2585409184dd7f28ad3fe5a377c7d57",
+      "bytes": 16006
+    },
+    {
+      "path": "research/snapshots/2026-11-23-context-study/registration/prompts/scheduler-python-both.txt",
+      "sha256": "02028bdfdc4a6bbd13f2def16e413ee0f0bba9ac703b0b519bf97c3d79059d47",
+      "bytes": 6617
+    },
+    {
+      "path": "research/snapshots/2026-11-23-context-study/registration/prompts/scheduler-python-dedup.txt",
+      "sha256": "087ecd7cd415d83a1f760dcf02bc47b5b5e2cb6597e21d905b73b00734804abc",
+      "bytes": 6028
+    },
+    {
+      "path": "research/snapshots/2026-11-23-context-study/registration/prompts/scheduler-python-original.txt",
+      "sha256": "e6bcdcad5945b13e3958a0228037790a876c684303243a1fb314b1c8e268f7ce",
+      "bytes": 10668
+    },
+    {
+      "path": "research/snapshots/2026-11-23-context-study/registration/prompts/scheduler-python-schema.txt",
+      "sha256": "47119cce96f0b2bc97cee835015eed2d9c6be6ec548ffd3be64be51a85b9450c",
+      "bytes": 11257
+    },
+    {
+      "path": "research/snapshots/2026-11-23-context-study/registration/prompts/scheduler-rust-both.txt",
+      "sha256": "1de634d4f88e38b9fa4a629734d4f90238b66017a63cbc1b501b5c54e1614852",
+      "bytes": 6829
+    },
+    {
+      "path": "research/snapshots/2026-11-23-context-study/registration/prompts/scheduler-rust-dedup.txt",
+      "sha256": "9e5a60c1a63920e711d4daf88bb8bb889a0de993d765e876a8e82f7619446191",
+      "bytes": 6240
+    },
+    {
+      "path": "research/snapshots/2026-11-23-context-study/registration/prompts/scheduler-rust-original.txt",
+      "sha256": "ffcbfd413349d83fc1e2d0de7bb14f7a0edb75eff63c3fef6c3ec37873368399",
+      "bytes": 10954
+    },
+    {
+      "path": "research/snapshots/2026-11-23-context-study/registration/prompts/scheduler-rust-schema.txt",
+      "sha256": "4d2a6c66f49fc6f3bcbcf20666953f4452c5be24d0d3553436efae9e8003111d",
+      "bytes": 11543
+    },
+    {
+      "path": "research/snapshots/2026-11-23-context-study/results-before-command-metadata-correction.json",
+      "sha256": "cec3caa4e6b9ae12551b83ddb30c6b79fef3daa32b013d2093f26ae79eee534c",
+      "bytes": 3745
+    }
+  ],
+  "self_excluded": true,
+  "note": "Registration and development history remain unchanged. Code/reference snapshots capture the published analysis; they are excluded from all participant prompts."
+}

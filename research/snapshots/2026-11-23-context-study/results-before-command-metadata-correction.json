@@ -1,0 +1,101 @@
+{
+  "compiler_sha256": "8d9f84530b8d34a6a72597d25befc249a604430a6569656b4184721e1e444d9d",
+  "source_sha256": "8fa7b6507cab932ef797d068718d7180963baae3c149123bc728346b9bf713b3",
+  "native_binary_sha256": "aeb4bfbccd85dd1f74d349e8c097556d3d062f90a613fee7d1e45a144f98606a",
+  "build": {
+    "command": [
+      "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/context-study-20261123/reference-verification/program",
+      "--entry",
+      "agentref.propagate_error"
+    ],
+    "exit_code": 0,
+    "stdout": "{\"artifact\":\"/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/context-study-20261123/reference-verification/program\",\"entries\":[\"agentref.bump\",\"agentref.slice_count\",\"agentref.spread\",\"agentref.counted\",\"agentref.stopped\",\"agentref.list_order\",\"agentref.propagate\",\"agentref.propagate_error\"],\"format\":\"native\",\"status\":\"ok\"}\n",
+    "stderr": ""
+  },
+  "observations": [
+    {
+      "command": [
+        "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/context-study-20261123/reference-verification/program",
+        "--entry",
+        "agentref.slice_count"
+      ],
+      "exit_code": 0,
+      "stdout": "{\"status\":\"ok\",\"kind\":\"value\",\"value\":{\"type\":\"I64\",\"value\":\"3\"}}\n",
+      "stderr": "",
+      "expected": 3,
+      "ok": true
+    },
+    {
+      "command": [
+        "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/context-study-20261123/reference-verification/program",
+        "--entry",
+        "agentref.spread"
+      ],
+      "exit_code": 0,
+      "stdout": "{\"status\":\"ok\",\"kind\":\"value\",\"value\":{\"type\":\"I64\",\"value\":\"11\"}}\n",
+      "stderr": "",
+      "expected": 11,
+      "ok": true
+    },
+    {
+      "command": [
+        "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/context-study-20261123/reference-verification/program",
+        "--entry",
+        "agentref.counted"
+      ],
+      "exit_code": 0,
+      "stdout": "{\"status\":\"ok\",\"kind\":\"value\",\"value\":{\"type\":\"I64\",\"value\":\"6\"}}\n",
+      "stderr": "",
+      "expected": 6,
+      "ok": true
+    },
+    {
+      "command": [
+        "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/context-study-20261123/reference-verification/program",
+        "--entry",
+        "agentref.stopped"
+      ],
+      "exit_code": 0,
+      "stdout": "{\"status\":\"ok\",\"kind\":\"value\",\"value\":{\"type\":\"I64\",\"value\":\"4\"}}\n",
+      "stderr": "",
+      "expected": 4,
+      "ok": true
+    },
+    {
+      "command": [
+        "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/context-study-20261123/reference-verification/program",
+        "--entry",
+        "agentref.list_order"
+      ],
+      "exit_code": 0,
+      "stdout": "{\"status\":\"ok\",\"kind\":\"value\",\"value\":{\"type\":\"I64\",\"value\":\"2\"}}\n",
+      "stderr": "",
+      "expected": 2,
+      "ok": true
+    },
+    {
+      "command": [
+        "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/context-study-20261123/reference-verification/program",
+        "--entry",
+        "agentref.propagate"
+      ],
+      "exit_code": 0,
+      "stdout": "{\"status\":\"ok\",\"kind\":\"value\",\"value\":{\"type\":\"I64\",\"value\":\"9\"}}\n",
+      "stderr": "",
+      "expected": 9,
+      "ok": true
+    },
+    {
+      "command": [
+        "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/context-study-20261123/reference-verification/program",
+        "--entry",
+        "agentref.propagate_error"
+      ],
+      "exit_code": 0,
+      "stdout": "{\"status\":\"ok\",\"kind\":\"value\",\"value\":{\"type\":\"Bool\",\"value\":true}}\n",
+      "stderr": "",
+      "expected": true,
+      "ok": true
+    }
+  ]
+}

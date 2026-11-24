@@ -1298,6 +1298,64 @@
         "Improved comprehension or token savings from the proposed prompt/documentation/API changes",
         "A new model trial, rescored outcome, human-comprehension result or population ranking"
       ]
+    },
+    {
+      "id": "local-041",
+      "date": "2026-11-23",
+      "title": "Isolated prompt and input-documentation treatments with a separate language reference",
+      "evidence_kind": "Registered source-only model pilot; separately labeled posthoc response-format sensitivity and reference validation",
+      "status": "72 attempts completed; no primary acceptance improvement established; product frozen",
+      "files": [
+        {
+          "path": "research/context-factorial-study-2026-11-23.md",
+          "sha256": "7febf4b53969063d776053c5f5a4d33bd5ddd39aca6e6712e1b3721d53e87cd7"
+        },
+        {
+          "path": "benchmarks/results/2026-11-23-context-factorial-study.json",
+          "sha256": "23cf36c5af6ea6ac9ab037f0bef6400f16b862851d834f84f5e028e1a9a775b3"
+        },
+        {
+          "path": "benchmarks/results/2026-11-23-context-format-sensitivity.json",
+          "sha256": "795e0e261adfb24eb9a230dc54e5773b4e9f50838e3545628bac9f8bcc0dc9ce"
+        },
+        {
+          "path": "benchmarks/results/2026-11-23-context-study-verification.json",
+          "sha256": "bd9727462ef52b20de3de75c7e375c500fe84928c3c093a336eb21e79633e4c0"
+        },
+        {
+          "path": "benchmarks/results/2026-11-23-context-reference-validation.json",
+          "sha256": "82be3f8e905554116ec8575cc88bf6c0f43b9f8e185487023efe7041472d14f9"
+        },
+        {
+          "path": "docs/agent-reference/1.11.2/concepts.json",
+          "sha256": "393f075c8bb9db80227461135fa30cfa282de86e39db3f379c841a75dac63f55"
+        },
+        {
+          "path": "research/snapshots/2026-11-23-context-study/registration/manifest.json",
+          "sha256": "1af7d0e1b672be5d0d17bab48051442984632475c259a740538aa3056a10ab35"
+        },
+        {
+          "path": "research/snapshots/2026-11-23-context-study/evidence-manifest.json",
+          "sha256": "066a381518a7be147f8c0d4e12614c2547752fa442033d227e513f2bb9b2177b"
+        }
+      ],
+      "supports": [
+        "All four arms accept12/18 under the unchanged registered strict grader; every outcome is retained",
+        "Deduplication reduces median paired reported input-plus-output tokens about6.8% across18 pairs",
+        "A documented closed-input policy omission affects seven items; secondary projection accepts52/72 versus primary48/72",
+        "Every delivered prompt, initial input, grade and no-tool condition replays; all74 invocations have terminal usage",
+        "Eighteen reference/mutant builds agree with1908 oracle comparisons; nine compiled policy mutants are killed;69 concrete failure replays agree",
+        "An additive22-concept,22-relationship source-pinned reading reference, editable map and bounded lookup are validated separately",
+        "All40 earlier entries and123 pins are preserved"
+      ],
+      "does_not_establish": [
+        "Improved comprehension, quality equivalence/noninferiority or a general language/model ranking",
+        "A graph/retrieval/reference benefit; those materials were excluded from trial prompts",
+        "A causal reasoning-level comparison or immutable model identity",
+        "Billing savings, parent-agent usage, inference-speed improvement or runtime performance",
+        "A compiler defect, a new language construct or authorization for additional trials",
+        "That secondary metadata projection replaces the preregistered primary scores"
+      ]
     }
   ],
   "backend_recommendation": {

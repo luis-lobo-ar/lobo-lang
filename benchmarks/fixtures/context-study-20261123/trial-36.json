@@ -1,0 +1,138 @@
+{
+  "assignment": {
+    "index": 36,
+    "reasoning": "low",
+    "family": "frames",
+    "language": "python",
+    "arm": "original",
+    "phase": "comprehension"
+  },
+  "result": {
+    "assignment": {
+      "index": 36,
+      "reasoning": "low",
+      "family": "frames",
+      "language": "python",
+      "arm": "original",
+      "phase": "comprehension"
+    },
+    "command": [
+      "codex",
+      "exec",
+      "--ignore-user-config",
+      "--ephemeral",
+      "--json",
+      "--sandbox",
+      "read-only",
+      "--skip-git-repo-check",
+      "--disable",
+      "multi_agent",
+      "--disable",
+      "multi_agent_v2",
+      "--disable",
+      "apps",
+      "--disable",
+      "plugins",
+      "--disable",
+      "memories",
+      "-C",
+      "/tmp/lobo-context-b2mqkcqq",
+      "-m",
+      "gpt-5.6-luna",
+      "-c",
+      "model_reasoning_effort=\"low\"",
+      "-c",
+      "approval_policy=\"never\"",
+      "--output-last-message",
+      "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/context-study-20261123/run/trial-36/last-message.txt",
+      "--disable",
+      "shell_tool",
+      "-"
+    ],
+    "started_unix": 1795496949.5058668,
+    "load_before": [
+      3.74755859375,
+      3.9150390625,
+      3.20458984375
+    ],
+    "workspace": "/tmp/lobo-context-b2mqkcqq",
+    "status": "completed",
+    "exit_code": 0,
+    "agent_wall_s": 14.341929343994707,
+    "load_after": [
+      4.1796875,
+      4.00146484375,
+      3.24462890625
+    ],
+    "usage": {
+      "input_tokens": 16219,
+      "cached_input_tokens": 13696,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 660,
+      "reasoning_output_tokens": 503
+    },
+    "item_types": [
+      "agent_message"
+    ],
+    "grading": {
+      "accepted": true,
+      "passed": 11,
+      "total": 11,
+      "checks": {
+        "prediction_0": true,
+        "prediction_1": true,
+        "prediction_2": true,
+        "prediction_3": true,
+        "prediction_4": true,
+        "prediction_5": true,
+        "witness": true,
+        "direct_calls": true,
+        "impacted": true,
+        "fault_location": true,
+        "counterexample": true
+      }
+    },
+    "accepted": true
+  },
+  "initial_files": {
+    "check.py": "import json,time,uuid\nfrom pathlib import Path\nroot=Path('.check-io');root.mkdir(exist_ok=True)\nkey=uuid.uuid4().hex\n(root/(key+'.request.json')).write_text('{}')\nresponse=root/(key+'.response.json')\nend=time.monotonic()+40\nwhile not response.exists() and time.monotonic()<end:time.sleep(.05)\nif not response.exists():raise SystemExit('controller timeout')\nprint(response.read_text())\n",
+    "app.py": "import sys,json\nfrom dataclasses import asdict\nimport model,logic\na=sys.argv\nlimit=int(a[1]);data=bytes.fromhex(a[2])\nif len(a)>3:\n total=0\n for i in range(int(a[4])):\n  v=logic.run(data,limit+i%3);total+=v.consumed+v.error+sum(len(b)+sum(b) for b in v.frames)\n print(total)\nelse:\n v=logic.run(data,limit);value=asdict(v)\n value['frames']=[b.hex() for b in v.frames]\n print(json.dumps(value))\n",
+    "AGENTS.md": "This is an isolated matched experiment. Follow TASK.txt and GUIDE.txt. Only the declared algorithm files are editable. Do not inspect other directories.\n",
+    "logic.py": "from model import Summary\n\ndef read_size(data,start):\n return data[start],start+1,0\n\ndef size_allowed(length,limit):\n return length<=limit\n\ndef payload_checksum(data):\n return (7+sum(data))%256\n\ndef run(data,limit):\n frames=[];cursor=0;error=0\n while cursor<len(data) and error==0:\n  length,payload,header_error=read_size(data,cursor)\n  if header_error:error=header_error\n  elif not size_allowed(length,limit):error=3\n  elif len(data)-payload<length+1:error=1\n  else:\n   value=data[payload:payload+length]\n   if payload_checksum(value)!=data[payload+length]:error=2\n   else:frames.append(value);cursor=payload+length+1\n return Summary(frames,cursor,error)\n",
+    "model.py": "from dataclasses import dataclass\n@dataclass\nclass Summary:\n frames:list[bytes]\n consumed:int\n error:int\n",
+    "GUIDE.txt": "Use only the supplied task directory. Read TASK.txt, GUIDE.txt and the model/algorithm files. Change only the listed editable files. The app and models are trusted read-only adapters. No dependencies, network, file IO, subprocesses or unsafe code in the algorithm. Standard in-memory collections are allowed. Host-injected instruction/skill reads are permitted when required, but other trials, repository code, private graders and reference solutions are outside scope. Do not inspect the compiler binary or its parent directory. Use python3 check.py to submit a visible check; the host compiles and grades a snapshot, at most six submissions. No direct compiler/test invocation is needed. Initial stubs may compile but are deliberately incorrect. Use checks before and after editing. Build artifacts belong to the host. End with a concise result. All inputs and arithmetic fit signed 64-bit values under the stated bounds; results must preserve exact integers. No output or external side effects in run().\n\nPython 3.12, standard library only. logic.py exports run with the signature in TASK.txt; app.py and model.py are fixed. Import DTOs from model. Ledger uses Event(kind:Kind,amount:int), with Kind.CREDIT/DEBIT/LOCK/UNLOCK (and UNDO in the change model). Scheduler uses Job(id:int,cost:int,deps:list[int]) and change adds priority:int. Summary dataclasses and their field order are in model.py. Input bytes are bytes objects, not strings; the trusted wrapper handles hexadecimal input/output. Use in-memory lists, tuples, sets, dictionaries and ordinary helpers as needed. Keep exact integer results; no float conversion. Imports from model, dataclasses, enum, typing, collections, functools, itertools and math are allowed. No imports for file/network/process IO, open/eval/exec or dynamic import. The host py-compiles and executes the program. Submit with python3 check.py; no application prints or wrapper changes.",
+    "TASK.txt": "Task family: frames. Phase: comprehension.\nImplement run(data,limit)->Summary(frames,consumed,error). data is bytes of length<=512;0<=limit<=64. Each frame is one unsigned length byte n, followed by n payload bytes, followed by one checksum byte equal to (7+sum(payload))%256. Empty payload is valid and needs checksum7. Parse from left to right, retaining payloads in input order. At a frame start: first reject n>limit with error3 EVEN IF payload/checksum is missing; otherwise missing payload/checksum is error1; otherwise wrong checksum is error2. Stop on the first error. consumed is the offending frame's START offset; retain only earlier valid frames. With no error, consumed=len(data),error=0. Empty input succeeds. frames is a list of bytes values, not decoded text.\n\nRequired signature: run(data, limit).\n\nAnalyze the supplied program without executing it. Return ONE JSON object with keys: predictions (the SIX full normalized Summary objects for the inputs below, in order); witness (any valid input yielding {\"frames\": [\"0a\", \"0b0c\"], \"consumed\": 7, \"error\": 0}; unspecified Summary fields can have any value); direct_calls (names of application functions directly invoked by run, ignoring constructors/builtins/standard-library methods and util.reverse); impacted (names of functions in logic whose return values can change for identical direct arguments if size_allowed additionally rejects length==2, retaining the inclusive upper limit; include the edited predicate itself, ignore reachability alone); fault_location (the predicate function responsible for that policy); counterexample (any valid input distinguishing the original program from that mutant). Bytes in answers are lowercase hexadecimal strings. Use plain function names without module prefixes. No tools/target execution. Inputs:\n[{\"data\": \"0007\", \"limit\": 1}, {\"data\": \"02040510\", \"limit\": 3}, {\"data\": \"0109100203040e\", \"limit\": 3}, {\"data\": \"0109100203040f\", \"limit\": 3}, {\"data\": \"0401\", \"limit\": 3}, {\"data\": \"0109100203\", \"limit\": 3}]\nUse NO tools or execution; reason from the supplied source. End with ONLY the requested JSON object, no Markdown.\n"
+  },
+  "prompt": "Source-only comprehension. Do not use tools.\nTask family: frames. Phase: comprehension.\nImplement run(data,limit)->Summary(frames,consumed,error). data is bytes of length<=512;0<=limit<=64. Each frame is one unsigned length byte n, followed by n payload bytes, followed by one checksum byte equal to (7+sum(payload))%256. Empty payload is valid and needs checksum7. Parse from left to right, retaining payloads in input order. At a frame start: first reject n>limit with error3 EVEN IF payload/checksum is missing; otherwise missing payload/checksum is error1; otherwise wrong checksum is error2. Stop on the first error. consumed is the offending frame's START offset; retain only earlier valid frames. With no error, consumed=len(data),error=0. Empty input succeeds. frames is a list of bytes values, not decoded text.\n\nRequired signature: run(data, limit).\n\nAnalyze the supplied program without executing it. Return ONE JSON object with keys: predictions (the SIX full normalized Summary objects for the inputs below, in order); witness (any valid input yielding {\"frames\": [\"0a\", \"0b0c\"], \"consumed\": 7, \"error\": 0}; unspecified Summary fields can have any value); direct_calls (names of application functions directly invoked by run, ignoring constructors/builtins/standard-library methods and util.reverse); impacted (names of functions in logic whose return values can change for identical direct arguments if size_allowed additionally rejects length==2, retaining the inclusive upper limit; include the edited predicate itself, ignore reachability alone); fault_location (the predicate function responsible for that policy); counterexample (any valid input distinguishing the original program from that mutant). Bytes in answers are lowercase hexadecimal strings. Use plain function names without module prefixes. No tools/target execution. Inputs:\n[{\"data\": \"0007\", \"limit\": 1}, {\"data\": \"02040510\", \"limit\": 3}, {\"data\": \"0109100203040e\", \"limit\": 3}, {\"data\": \"0109100203040f\", \"limit\": 3}, {\"data\": \"0401\", \"limit\": 3}, {\"data\": \"0109100203\", \"limit\": 3}]\nUse NO tools or execution; reason from the supplied source. End with ONLY the requested JSON object, no Markdown.\n\nUse only the supplied task directory. Read TASK.txt, GUIDE.txt and the model/algorithm files. Change only the listed editable files. The app and models are trusted read-only adapters. No dependencies, network, file IO, subprocesses or unsafe code in the algorithm. Standard in-memory collections are allowed. Host-injected instruction/skill reads are permitted when required, but other trials, repository code, private graders and reference solutions are outside scope. Do not inspect the compiler binary or its parent directory. Use python3 check.py to submit a visible check; the host compiles and grades a snapshot, at most six submissions. No direct compiler/test invocation is needed. Initial stubs may compile but are deliberately incorrect. Use checks before and after editing. Build artifacts belong to the host. End with a concise result. All inputs and arithmetic fit signed 64-bit values under the stated bounds; results must preserve exact integers. No output or external side effects in run().\n\nPython 3.12, standard library only. logic.py exports run with the signature in TASK.txt; app.py and model.py are fixed. Import DTOs from model. Ledger uses Event(kind:Kind,amount:int), with Kind.CREDIT/DEBIT/LOCK/UNLOCK (and UNDO in the change model). Scheduler uses Job(id:int,cost:int,deps:list[int]) and change adds priority:int. Summary dataclasses and their field order are in model.py. Input bytes are bytes objects, not strings; the trusted wrapper handles hexadecimal input/output. Use in-memory lists, tuples, sets, dictionaries and ordinary helpers as needed. Keep exact integer results; no float conversion. Imports from model, dataclasses, enum, typing, collections, functools, itertools and math are allowed. No imports for file/network/process IO, open/eval/exec or dynamic import. The host py-compiles and executes the program. Submit with python3 check.py; no application prints or wrapper changes.\nFILE model.py\nfrom dataclasses import dataclass\n@dataclass\nclass Summary:\n frames:list[bytes]\n consumed:int\n error:int\n\nFILE logic.py\nfrom model import Summary\n\ndef read_size(data,start):\n return data[start],start+1,0\n\ndef size_allowed(length,limit):\n return length<=limit\n\ndef payload_checksum(data):\n return (7+sum(data))%256\n\ndef run(data,limit):\n frames=[];cursor=0;error=0\n while cursor<len(data) and error==0:\n  length,payload,header_error=read_size(data,cursor)\n  if header_error:error=header_error\n  elif not size_allowed(length,limit):error=3\n  elif len(data)-payload<length+1:error=1\n  else:\n   value=data[payload:payload+length]\n   if payload_checksum(value)!=data[payload+length]:error=2\n   else:frames.append(value);cursor=payload+length+1\n return Summary(frames,cursor,error)\n\nFILE TASK.txt\nTask family: frames. Phase: comprehension.\nImplement run(data,limit)->Summary(frames,consumed,error). data is bytes of length<=512;0<=limit<=64. Each frame is one unsigned length byte n, followed by n payload bytes, followed by one checksum byte equal to (7+sum(payload))%256. Empty payload is valid and needs checksum7. Parse from left to right, retaining payloads in input order. At a frame start: first reject n>limit with error3 EVEN IF payload/checksum is missing; otherwise missing payload/checksum is error1; otherwise wrong checksum is error2. Stop on the first error. consumed is the offending frame's START offset; retain only earlier valid frames. With no error, consumed=len(data),error=0. Empty input succeeds. frames is a list of bytes values, not decoded text.\n\nRequired signature: run(data, limit).\n\nAnalyze the supplied program without executing it. Return ONE JSON object with keys: predictions (the SIX full normalized Summary objects for the inputs below, in order); witness (any valid input yielding {\"frames\": [\"0a\", \"0b0c\"], \"consumed\": 7, \"error\": 0}; unspecified Summary fields can have any value); direct_calls (names of application functions directly invoked by run, ignoring constructors/builtins/standard-library methods and util.reverse); impacted (names of functions in logic whose return values can change for identical direct arguments if size_allowed additionally rejects length==2, retaining the inclusive upper limit; include the edited predicate itself, ignore reachability alone); fault_location (the predicate function responsible for that policy); counterexample (any valid input distinguishing the original program from that mutant). Bytes in answers are lowercase hexadecimal strings. Use plain function names without module prefixes. No tools/target execution. Inputs:\n[{\"data\": \"0007\", \"limit\": 1}, {\"data\": \"02040510\", \"limit\": 3}, {\"data\": \"0109100203040e\", \"limit\": 3}, {\"data\": \"0109100203040f\", \"limit\": 3}, {\"data\": \"0401\", \"limit\": 3}, {\"data\": \"0109100203\", \"limit\": 3}]\nUse NO tools or execution; reason from the supplied source. End with ONLY the requested JSON object, no Markdown.\n\nFILE GUIDE.txt\nUse only the supplied task directory. Read TASK.txt, GUIDE.txt and the model/algorithm files. Change only the listed editable files. The app and models are trusted read-only adapters. No dependencies, network, file IO, subprocesses or unsafe code in the algorithm. Standard in-memory collections are allowed. Host-injected instruction/skill reads are permitted when required, but other trials, repository code, private graders and reference solutions are outside scope. Do not inspect the compiler binary or its parent directory. Use python3 check.py to submit a visible check; the host compiles and grades a snapshot, at most six submissions. No direct compiler/test invocation is needed. Initial stubs may compile but are deliberately incorrect. Use checks before and after editing. Build artifacts belong to the host. End with a concise result. All inputs and arithmetic fit signed 64-bit values under the stated bounds; results must preserve exact integers. No output or external side effects in run().\n\nPython 3.12, standard library only. logic.py exports run with the signature in TASK.txt; app.py and model.py are fixed. Import DTOs from model. Ledger uses Event(kind:Kind,amount:int), with Kind.CREDIT/DEBIT/LOCK/UNLOCK (and UNDO in the change model). Scheduler uses Job(id:int,cost:int,deps:list[int]) and change adds priority:int. Summary dataclasses and their field order are in model.py. Input bytes are bytes objects, not strings; the trusted wrapper handles hexadecimal input/output. Use in-memory lists, tuples, sets, dictionaries and ordinary helpers as needed. Keep exact integer results; no float conversion. Imports from model, dataclasses, enum, typing, collections, functools, itertools and math are allowed. No imports for file/network/process IO, open/eval/exec or dynamic import. The host py-compiles and executes the program. Submit with python3 check.py; no application prints or wrapper changes.\nFILE check.py\nimport json,time,uuid\nfrom pathlib import Path\nroot=Path('.check-io');root.mkdir(exist_ok=True)\nkey=uuid.uuid4().hex\n(root/(key+'.request.json')).write_text('{}')\nresponse=root/(key+'.response.json')\nend=time.monotonic()+40\nwhile not response.exists() and time.monotonic()<end:time.sleep(.05)\nif not response.exists():raise SystemExit('controller timeout')\nprint(response.read_text())\n\nFILE AGENTS.md\nThis is an isolated matched experiment. Follow TASK.txt and GUIDE.txt. Only the declared algorithm files are editable. Do not inspect other directories.\n",
+  "last_message": "{\"predictions\":[{\"frames\":[\"\"],\"consumed\":2,\"error\":0},{\"frames\":[\"0405\"],\"consumed\":4,\"error\":0},{\"frames\":[\"09\",\"0304\"],\"consumed\":7,\"error\":0},{\"frames\":[\"09\"],\"consumed\":3,\"error\":2},{\"frames\":[],\"consumed\":0,\"error\":3},{\"frames\":[\"09\"],\"consumed\":3,\"error\":1}],\"witness\":{\"data\":\"010a11020b0c1e\",\"limit\":3},\"direct_calls\":[\"read_size\",\"size_allowed\",\"payload_checksum\"],\"impacted\":[\"size_allowed\",\"run\"],\"fault_location\":\"size_allowed\",\"counterexample\":{\"data\":\"02040510\",\"limit\":3}}",
+  "raw_evidence_hashes": {
+    "assignment.json": {
+      "sha256": "4241aa664520e6c6566bc81abd2df7fe2e37f1bc2376c32d239e7cc0f2da5005",
+      "bytes": 135
+    },
+    "stderr.txt": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "command.json": {
+      "sha256": "ab0fbc102dd307b0072db23b4c934d5bacce1e13557ed51abd461dc76f604be0",
+      "bytes": 618
+    },
+    "prompt.txt": {
+      "sha256": "57752df84918a7e9271a7afeb886f4676d50a1847a39ebc34737f77177f238e9",
+      "bytes": 9555
+    },
+    "events.jsonl": {
+      "sha256": "8c0a599db4d91a86269a47c2368f26ab2736eeb164c19627ed38d3a7a166d351",
+      "bytes": 919
+    },
+    "result.json": {
+      "sha256": "0c2493419661c6f0898ed7a6da2eea60c7a75b63c4efedf5fff6e0a36820b988",
+      "bytes": 1822
+    },
+    "last-message.txt": {
+      "sha256": "a6fce032074e8b062c178275da461c246b1037bd232da150a99738e268fb8c2b",
+      "bytes": 488
+    }
+  }
+}

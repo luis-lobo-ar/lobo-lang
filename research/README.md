@@ -2,8 +2,10 @@
 
 ## Context treatments and language reading reference
 
-Decision [0066](../decisions/0066-isolate-comprehension-context-treatments.md) selects the four-arm,
-fresh-question prompt/input-documentation pilot. Its
+The [completed four-arm pilot](context-factorial-study-2026-11-23.md), decision
+[0066](../decisions/0066-isolate-comprehension-context-treatments.md), accepts 12/18 per arm under the
+strict grader. Deduplication saves reported tokens without a demonstrated accuracy gain. A response-format
+documentation gap has a separately retained posthoc sensitivity. Its
 [registration](snapshots/2026-11-23-context-study/registration/manifest.json) pins all 72 assignments
 before participant calls. Product 1.11.2 and earlier evidence remain frozen.
 The separate [agent reading reference](../docs/agent-reference/1.11.2/README.md) has a source-pinned concept
@@ -14,7 +16,8 @@ graph and bounded topic lookup. It is excluded from these trial prompts; its lea
 The [offline failure analysis](comprehension-failure-analysis-2026-11-23.md) examines every Lobo miss,
 compares other languages, replays predictions and audits the delivered prompts. It finds model/configuration
 sensitivity, definite duplicated and irrelevant context, and plausible API/presentation risks. Causal shares
-are unknown. Improvements remain proposals: no guide, language or grader change, and no new model trial.
+are unknown. Improvements were proposals at that checkpoint: the audit changed no guide, language or
+grader and made no new model call. The later selected study above keeps that evidence unchanged.
 See paper local-040 and [the audit data](../benchmarks/results/2026-11-23-comprehension-failure-audit.json).
 
 ## Luna high/low reasoning follow-up

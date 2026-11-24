@@ -42,6 +42,25 @@ def paired(rows,before,after):
     return dict(before=before,after=after,pairs=len(pairs),pass_to_fail=sum(x['accepted'] and not y['accepted'] for x,y in pairs),fail_to_pass=sum(not x['accepted'] and y['accepted'] for x,y in pairs),item_difference=sum(y['grading']['passed']-x['grading']['passed'] for x,y in pairs),token_ratio=stats([total(y)/total(x) for x,y in pairs if total(x) not in (None,0) and total(y) is not None]),wall_ratio=stats([y['agent_wall_s']/x['agent_wall_s'] for x,y in pairs if x['agent_wall_s']>0]),pair_outcomes=[dict(reasoning=x['assignment']['reasoning'],family=x['assignment']['family'],language=x['assignment']['language'],before_accepted=x['accepted'],after_accepted=y['accepted'],item_difference=y['grading']['passed']-x['grading']['passed'],before_index=x['assignment']['index'],after_index=y['assignment']['index']) for x,y in pairs])
 
 
+def explain(row,answer):
+    family=row['assignment']['family'];answer=answer if isinstance(answer,dict) else {};items=[]
+    for key,ok in row['grading']['checks'].items():
+        if ok:continue
+        entry=dict(assignment=row['assignment'],item=key)
+        if key.startswith('prediction_'):
+            i=int(key.split('_')[-1]);args=c.inputs(family)[i];pred=answer.get('predictions')
+            entry.update(input=args,expected=c.oracle(family,args),actual=pred[i] if isinstance(pred,list) and i<len(pred) else None)
+        elif key=='witness':
+            args=answer.get(key);valid=c.BASE.valid_input(family,args)
+            entry.update(input=args,input_valid=valid,expected=c.target(family),actual=c.oracle(family,args) if valid else None)
+        elif key=='counterexample':
+            args=answer.get(key);valid=c.BASE.valid_input(family,args)
+            entry.update(input=args,input_valid=valid,expected='different original and mutant summaries',original=c.oracle(family,args) if valid else None,mutant=c.oracle(family,args,True) if valid else None)
+        else:entry.update(expected=c.correct(family)[key],actual=answer.get(key))
+        items.append(entry)
+    return items
+
+
 def publish():
     private=c.PRIVATE;run=private/'run';registration=json.loads((private/'registration/manifest.json').read_text())
     if not (run/'environment-after.json').exists():raise ValueError('run not finished')
@@ -74,8 +93,8 @@ def publish():
             for a,b in contrasts:pairs.append(dict(reasoning=effort,language=language,**paired(selected,a,b)))
     failures=[]
     for row in rows:
-        for key,ok in row['grading']['checks'].items():
-            if not ok:failures.append(dict(assignment=row['assignment'],item=key))
+        last=run/('trial-%02d'%row['assignment']['index'])/'last-message.txt'
+        failures+=explain(row,c.BASE.parse_answer(last.read_text()) if last.exists() else None)
     prior=json.loads((private/'prior-paper-pins.json').read_text());preserved=all(c.sha(c.ROOT/p['path'])==p['sha256'] for p in prior['pins'])
     if not preserved:raise ValueError('old paper evidence drift')
     freeze=json.loads((c.BASE.PRIVATE/'freeze/manifest.json').read_text())

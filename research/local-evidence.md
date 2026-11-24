@@ -1,5 +1,16 @@
 # Local evidence for the Lobo paper
 
+## Isolated context treatments and language reference
+
+Paper local-041 adds [the 72-attempt pilot](context-factorial-study-2026-11-23.md),
+[all strict outcomes](../benchmarks/results/2026-11-23-context-factorial-study.json) and
+[the posthoc format sensitivity](../benchmarks/results/2026-11-23-context-format-sensitivity.json).
+Every arm accepts 12/18 under the registered grader. Deduplication reduces median paired reported tokens
+about 6.8%, without a demonstrated comprehension improvement. Seven items depend on an underspecified
+closed-input policy; the separate projection accepts 52/72 rather than primary 48/72. All 74 usage records,
+32 wrong items and 69 concrete replays are retained. The source-pinned concept reference/map is excluded
+from trials, so its learning benefit remains unmeasured. All previous 40 entries and 123 pins are preserved.
+
 ## Comprehension failure audit
 
 Paper local-040 adds [the failure analysis](comprehension-failure-analysis-2026-11-23.md),

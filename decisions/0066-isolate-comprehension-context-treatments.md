@@ -1,6 +1,6 @@
 # 0066 — Isolate comprehension context treatments
 
-Date: 2026-11-23. Status: selected by the user; registered pilot follows validation.
+Date: 2026-11-23. Status: completed; product remains frozen.
 
 The user selected prompt deduplication and standardized input documentation after decision 0065.
 Keep compiler/extension 1.11.2, libraries, old skill, drivers, questions and evidence frozen. Add a
@@ -39,3 +39,12 @@ prompts. A map's comprehension benefit remains a separate hypothesis requiring a
 Report per-arm acceptance and item errors, matched discordances, actual reported token usage and wall
 time. Prompt bytes are not tokens or billing. Provider caching, model aliases, task reuse and high-before-low
 time order limit interpretation. Preserve every prior paper entry/pin and append the new evidence.
+
+Completion: all 72 attempts finish, each arm accepts 12/18. Deduplication reduces median paired reported
+tokens about 6.8%, without a demonstrated accuracy or latency improvement. A newly documented protocol
+gap concerns unknown top-level input properties: the grader rejects them but prompts do not explicitly
+say so. Keep primary strict 48/72 separate from posthoc format-sensitivity 52/72. All 32 wrong items,
+74 usage records, 69 concrete replays and prior evidence are retained. See
+[the completed report](../research/context-factorial-study-2026-11-23.md). Stop here. Response-envelope
+fixes, call-filter changes, graph-benefit trials and tool-assisted trials remain proposals requiring new
+selection and fresh questions. Do not amend the registered prompts or primary scores after outcomes.

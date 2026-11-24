@@ -44,7 +44,7 @@ def diagram(data):
     graph=ET.Element('mxGraphModel',adaptiveColors='auto',dx='1600',dy='1500',grid='1',gridSize='10')
     root=ET.SubElement(graph,'root');ET.SubElement(root,'mxCell',id='0');ET.SubElement(root,'mxCell',id='1',parent='0')
     # Topic lanes keep common dependencies nearby. The JSON remains the machine-facing graph.
-    lanes=[['blocks','records','updates','generics','imports','identities','json'],['fold','while','lists','variants','match','try','wire-input'],['callbacks','actions','permissions','limits','native','bytes','text']]
+    lanes=[['blocks','records','updates','generics','imports','identities','json'],['fold','while','lists','variants','match','try','wire-input'],['callbacks','actions','permissions','resources','limits','native','bytes','text']]
     colors=['#dae8fc','#d5e8d4','#ffe6cc']
     by_id={n['id']:n for n in data['nodes']}
     for col,lane in enumerate(lanes):
