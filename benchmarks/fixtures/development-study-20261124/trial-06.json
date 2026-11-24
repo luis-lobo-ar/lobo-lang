@@ -1,0 +1,2139 @@
+{
+  "result": {
+    "assignment": {
+      "index": 6,
+      "repeat": 1,
+      "family": "splice",
+      "arm": "skill",
+      "language": "lobo",
+      "reasoning": "high",
+      "phase": "construction"
+    },
+    "command": [
+      "codex",
+      "exec",
+      "--ignore-user-config",
+      "--ephemeral",
+      "--json",
+      "--sandbox",
+      "workspace-write",
+      "--skip-git-repo-check",
+      "--disable",
+      "multi_agent",
+      "--disable",
+      "multi_agent_v2",
+      "--disable",
+      "apps",
+      "--disable",
+      "plugins",
+      "--disable",
+      "memories",
+      "-C",
+      "/tmp/lobo-matched-6pxzotvs",
+      "-m",
+      "gpt-5.6-luna",
+      "-c",
+      "model_reasoning_effort=\"high\"",
+      "-c",
+      "approval_policy=\"never\"",
+      "--output-last-message",
+      "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/development-study-20261124/run/trial-06/last-message.txt",
+      "-"
+    ],
+    "deadline_s": 120,
+    "tool_limit": 16,
+    "check_limit": 6,
+    "started_unix": 1795557479.5522804,
+    "load_before": [
+      1.2197265625,
+      1.81640625,
+      3.974609375
+    ],
+    "status": "completed",
+    "exit_code": 0,
+    "agent_wall_s": 72.81361927301623,
+    "usage": {
+      "input_tokens": 257027,
+      "cached_input_tokens": 240128,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 3273,
+      "reasoning_output_tokens": 1368
+    },
+    "command_tool_items": 8,
+    "check_requests": 3,
+    "checks": [
+      {
+        "index": 0,
+        "start_s": 31.749230727087706,
+        "end_s": 31.75974671705626,
+        "feedback": {
+          "status": "compile_error",
+          "diagnostic": "{\"diagnostic\":{\"code\":\"compile.syntax.invalid\",\"message\":\"expected {, got Word(\\\"if\\\")\",\"phase\":\"parse\",\"range\":{\"end\":{\"byte\":211,\"character\":10,\"line\":7},\"start\":{\"byte\":209,\"character\":8,\"line\":7}},\"source\":\"/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/development-study-20261124/run/trial-06/check-00/source/logic.lobo\"},\"kind\":\"compile_error\",\"status\":\"error\"}\n"
+        }
+      },
+      {
+        "index": 1,
+        "start_s": 44.703953583026305,
+        "end_s": 44.71445475611836,
+        "feedback": {
+          "status": "compile_error",
+          "diagnostic": "{\"diagnostic\":{\"code\":\"compile.name.reserved\",\"message\":\"reserved name: result\",\"phase\":\"resolve\",\"range\":{\"end\":{\"byte\":433,\"character\":13,\"line\":14},\"start\":{\"byte\":427,\"character\":7,\"line\":14}},\"source\":\"/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/development-study-20261124/run/trial-06/check-01/source/logic.lobo\"},\"kind\":\"compile_error\",\"status\":\"error\"}\n"
+        }
+      },
+      {
+        "index": 2,
+        "start_s": 50.58843092620373,
+        "end_s": 50.83816750207916,
+        "feedback": {
+          "status": "pass",
+          "passed": 5,
+          "total": 5,
+          "failures": []
+        }
+      }
+    ],
+    "item_types": [
+      "agent_message",
+      "command_execution",
+      "command_execution",
+      "agent_message",
+      "command_execution",
+      "file_change",
+      "command_execution",
+      "agent_message",
+      "file_change",
+      "command_execution",
+      "file_change",
+      "command_execution",
+      "agent_message",
+      "command_execution",
+      "command_execution",
+      "agent_message"
+    ],
+    "load_after": [
+      1.40185546875,
+      1.73876953125,
+      3.77685546875
+    ],
+    "grading": {
+      "issues": [],
+      "build": {
+        "ok": true,
+        "command": [
+          "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/matched-study-20261123/freeze/lobo",
+          "compile",
+          "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/development-study-20261124/run/trial-06/heldout/source/logic.lobo",
+          "--source",
+          "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/development-study-20261124/run/trial-06/heldout/source/model.lobo",
+          "--source",
+          "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/development-study-20261124/run/trial-06/heldout/source/util.lobo",
+          "-o",
+          "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/development-study-20261124/run/trial-06/heldout/program"
+        ],
+        "exit_code": 0,
+        "stdout": "{\"artifact\":\"/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/development-study-20261124/run/trial-06/heldout/program\",\"entries\":[\"skilldev.splice.run\"],\"format\":\"native\",\"status\":\"ok\"}\n",
+        "stderr": ""
+      },
+      "cases": [
+        {
+          "input": {
+            "text": "K\u00e9\ud83d\udc3aZ",
+            "start": 1,
+            "count": 2,
+            "replacement": "\u03bb"
+          },
+          "expected": {
+            "case": "Ok",
+            "payload": {
+              "text": "K\u03bbZ",
+              "removed": "\u00e9\ud83d\udc3a",
+              "scalar_delta": -1,
+              "byte_delta": -4
+            }
+          },
+          "actual": {
+            "case": "Ok",
+            "payload": {
+              "text": "K\u03bbZ",
+              "removed": "\u00e9\ud83d\udc3a",
+              "scalar_delta": -1,
+              "byte_delta": -4
+            }
+          },
+          "error": null,
+          "ok": true
+        },
+        {
+          "input": {
+            "text": "",
+            "start": 0,
+            "count": 0,
+            "replacement": "x"
+          },
+          "expected": {
+            "case": "Ok",
+            "payload": {
+              "text": "x",
+              "removed": "",
+              "scalar_delta": 1,
+              "byte_delta": 1
+            }
+          },
+          "actual": {
+            "case": "Ok",
+            "payload": {
+              "text": "x",
+              "removed": "",
+              "scalar_delta": 1,
+              "byte_delta": 1
+            }
+          },
+          "error": null,
+          "ok": true
+        },
+        {
+          "input": {
+            "text": "hi",
+            "start": -1,
+            "count": -1,
+            "replacement": ""
+          },
+          "expected": {
+            "case": "Err",
+            "payload": 1
+          },
+          "actual": {
+            "case": "Err",
+            "payload": 1
+          },
+          "error": null,
+          "ok": true
+        },
+        {
+          "input": {
+            "text": "hi",
+            "start": 1,
+            "count": 2,
+            "replacement": ""
+          },
+          "expected": {
+            "case": "Err",
+            "payload": 2
+          },
+          "actual": {
+            "case": "Err",
+            "payload": 2
+          },
+          "error": null,
+          "ok": true
+        },
+        {
+          "input": {
+            "text": "ab",
+            "start": 2,
+            "count": 0,
+            "replacement": "!"
+          },
+          "expected": {
+            "case": "Ok",
+            "payload": {
+              "text": "ab!",
+              "removed": "",
+              "scalar_delta": 1,
+              "byte_delta": 1
+            }
+          },
+          "actual": {
+            "case": "Ok",
+            "payload": {
+              "text": "ab!",
+              "removed": "",
+              "scalar_delta": 1,
+              "byte_delta": 1
+            }
+          },
+          "error": null,
+          "ok": true
+        },
+        {
+          "input": {
+            "text": "\u0301a\u0000\u03a9a\ud83d\udc3a\ud83d\udc3a",
+            "start": 9223372036854775807,
+            "count": 0,
+            "replacement": "\ud83d\udc3a\u00e9"
+          },
+          "expected": {
+            "case": "Err",
+            "payload": 1
+          },
+          "actual": {
+            "case": "Err",
+            "payload": 1
+          },
+          "error": null,
+          "ok": true
+        },
+        {
+          "input": {
+            "text": "\u0301",
+            "start": 1,
+            "count": 0,
+            "replacement": "Q"
+          },
+          "expected": {
+            "case": "Ok",
+            "payload": {
+              "text": "\u0301Q",
+              "removed": "",
+              "scalar_delta": 1,
+              "byte_delta": 1
+            }
+          },
+          "actual": {
+            "case": "Ok",
+            "payload": {
+              "text": "\u0301Q",
+              "removed": "",
+              "scalar_delta": 1,
+              "byte_delta": 1
+            }
+          },
+          "error": null,
+          "ok": true
+        },
+        {
+          "input": {
+            "text": "\u03a9\u0000\u0301\u0301\u03a9\ud83d\udc3a\ud83d\udc3a\u00e9",
+            "start": 8,
+            "count": -1,
+            "replacement": "Q"
+          },
+          "expected": {
+            "case": "Err",
+            "payload": 2
+          },
+          "actual": {
+            "case": "Err",
+            "payload": 2
+          },
+          "error": null,
+          "ok": true
+        },
+        {
+          "input": {
+            "text": "\ud83d\udc3a",
+            "start": 2,
+            "count": 2,
+            "replacement": "\ud83d\udc3a\u00e9"
+          },
+          "expected": {
+            "case": "Err",
+            "payload": 1
+          },
+          "actual": {
+            "case": "Err",
+            "payload": 1
+          },
+          "error": null,
+          "ok": true
+        },
+        {
+          "input": {
+            "text": "\ud83d\udc3a\ud83d\udc3aa\u0301\ud83d\udc3aa\u00e9\u0301",
+            "start": 1,
+            "count": 0,
+            "replacement": "Q"
+          },
+          "expected": {
+            "case": "Ok",
+            "payload": {
+              "text": "\ud83d\udc3aQ\ud83d\udc3aa\u0301\ud83d\udc3aa\u00e9\u0301",
+              "removed": "",
+              "scalar_delta": 1,
+              "byte_delta": 1
+            }
+          },
+          "actual": {
+            "case": "Ok",
+            "payload": {
+              "text": "\ud83d\udc3aQ\ud83d\udc3aa\u0301\ud83d\udc3aa\u00e9\u0301",
+              "removed": "",
+              "scalar_delta": 1,
+              "byte_delta": 1
+            }
+          },
+          "error": null,
+          "ok": true
+        },
+        {
+          "input": {
+            "text": "\u00e9\u0000",
+            "start": 1,
+            "count": 2,
+            "replacement": "\ud83d\udc3a\u00e9"
+          },
+          "expected": {
+            "case": "Err",
+            "payload": 2
+          },
+          "actual": {
+            "case": "Err",
+            "payload": 2
+          },
+          "error": null,
+          "ok": true
+        },
+        {
+          "input": {
+            "text": "\u0000\u0000\u0301\u0301a\u0301",
+            "start": 9223372036854775807,
+            "count": 6,
+            "replacement": ""
+          },
+          "expected": {
+            "case": "Err",
+            "payload": 1
+          },
+          "actual": {
+            "case": "Err",
+            "payload": 1
+          },
+          "error": null,
+          "ok": true
+        },
+        {
+          "input": {
+            "text": "\u00e9\u0000\u03a9\u0000a\u0000\u00e9",
+            "start": 8,
+            "count": 7,
+            "replacement": ""
+          },
+          "expected": {
+            "case": "Err",
+            "payload": 1
+          },
+          "actual": {
+            "case": "Err",
+            "payload": 1
+          },
+          "error": null,
+          "ok": true
+        },
+        {
+          "input": {
+            "text": "\u03a9\ud83d\udc3a\u03a9\u0000\u03a9\u0301",
+            "start": -2,
+            "count": 2,
+            "replacement": "\u0000"
+          },
+          "expected": {
+            "case": "Err",
+            "payload": 1
+          },
+          "actual": {
+            "case": "Err",
+            "payload": 1
+          },
+          "error": null,
+          "ok": true
+        },
+        {
+          "input": {
+            "text": "\u0301\u0000\u03a9a\ud83d\udc3a",
+            "start": 1,
+            "count": 1,
+            "replacement": "Q"
+          },
+          "expected": {
+            "case": "Ok",
+            "payload": {
+              "text": "\u0301Q\u03a9a\ud83d\udc3a",
+              "removed": "\u0000",
+              "scalar_delta": 0,
+              "byte_delta": 0
+            }
+          },
+          "actual": {
+            "case": "Ok",
+            "payload": {
+              "text": "\u0301Q\u03a9a\ud83d\udc3a",
+              "removed": "\u0000",
+              "scalar_delta": 0,
+              "byte_delta": 0
+            }
+          },
+          "error": null,
+          "ok": true
+        },
+        {
+          "input": {
+            "text": "\u03a9\ud83d\udc3a\u0000\u0000\u03a9",
+            "start": 6,
+            "count": 0,
+            "replacement": "Q"
+          },
+          "expected": {
+            "case": "Err",
+            "payload": 1
+          },
+          "actual": {
+            "case": "Err",
+            "payload": 1
+          },
+          "error": null,
+          "ok": true
+        },
+        {
+          "input": {
+            "text": "\u00e9\u0000\u0000\u0000\u00e9",
+            "start": 5,
+            "count": 1,
+            "replacement": ""
+          },
+          "expected": {
+            "case": "Err",
+            "payload": 2
+          },
+          "actual": {
+            "case": "Err",
+            "payload": 2
+          },
+          "error": null,
+          "ok": true
+        },
+        {
+          "input": {
+            "text": "\u00e9\u0301\ud83d\udc3a\u0301\u0000\u03a9\u0301",
+            "start": 1,
+            "count": 9223372036854775807,
+            "replacement": ""
+          },
+          "expected": {
+            "case": "Err",
+            "payload": 2
+          },
+          "actual": {
+            "case": "Err",
+            "payload": 2
+          },
+          "error": null,
+          "ok": true
+        },
+        {
+          "input": {
+            "text": "",
+            "start": 0,
+            "count": 0,
+            "replacement": ""
+          },
+          "expected": {
+            "case": "Ok",
+            "payload": {
+              "text": "",
+              "removed": "",
+              "scalar_delta": 0,
+              "byte_delta": 0
+            }
+          },
+          "actual": {
+            "case": "Ok",
+            "payload": {
+              "text": "",
+              "removed": "",
+              "scalar_delta": 0,
+              "byte_delta": 0
+            }
+          },
+          "error": null,
+          "ok": true
+        },
+        {
+          "input": {
+            "text": "\ud83d\udc3a\u00e9\u0301\u03a9\u00e9\u0301\u00e9a",
+            "start": -2,
+            "count": 0,
+            "replacement": "\ud83d\udc3a\u00e9"
+          },
+          "expected": {
+            "case": "Err",
+            "payload": 1
+          },
+          "actual": {
+            "case": "Err",
+            "payload": 1
+          },
+          "error": null,
+          "ok": true
+        },
+        {
+          "input": {
+            "text": "",
+            "start": -2,
+            "count": 9223372036854775807,
+            "replacement": ""
+          },
+          "expected": {
+            "case": "Err",
+            "payload": 1
+          },
+          "actual": {
+            "case": "Err",
+            "payload": 1
+          },
+          "error": null,
+          "ok": true
+        },
+        {
+          "input": {
+            "text": "\u03a9a\u0000a\u00e9\ud83d\udc3a\u00e9",
+            "start": 9223372036854775807,
+            "count": 9223372036854775807,
+            "replacement": "Q"
+          },
+          "expected": {
+            "case": "Err",
+            "payload": 1
+          },
+          "actual": {
+            "case": "Err",
+            "payload": 1
+          },
+          "error": null,
+          "ok": true
+        },
+        {
+          "input": {
+            "text": "\u00e9a\u0301\u0301\ud83d\udc3a\ud83d\udc3a\ud83d\udc3aa",
+            "start": -2,
+            "count": 1,
+            "replacement": "\ud83d\udc3a\u00e9"
+          },
+          "expected": {
+            "case": "Err",
+            "payload": 1
+          },
+          "actual": {
+            "case": "Err",
+            "payload": 1
+          },
+          "error": null,
+          "ok": true
+        },
+        {
+          "input": {
+            "text": "",
+            "start": 1,
+            "count": 2,
+            "replacement": "\ud83d\udc3a\u00e9"
+          },
+          "expected": {
+            "case": "Err",
+            "payload": 1
+          },
+          "actual": {
+            "case": "Err",
+            "payload": 1
+          },
+          "error": null,
+          "ok": true
+        },
+        {
+          "input": {
+            "text": "\u03a9a\ud83d\udc3aa",
+            "start": 1,
+            "count": 9223372036854775807,
+            "replacement": "\u0000"
+          },
+          "expected": {
+            "case": "Err",
+            "payload": 2
+          },
+          "actual": {
+            "case": "Err",
+            "payload": 2
+          },
+          "error": null,
+          "ok": true
+        },
+        {
+          "input": {
+            "text": "\u00e9a\ud83d\udc3aa\u0301\u0000\u0000",
+            "start": 0,
+            "count": 9223372036854775807,
+            "replacement": ""
+          },
+          "expected": {
+            "case": "Err",
+            "payload": 2
+          },
+          "actual": {
+            "case": "Err",
+            "payload": 2
+          },
+          "error": null,
+          "ok": true
+        },
+        {
+          "input": {
+            "text": "",
+            "start": 1,
+            "count": 0,
+            "replacement": ""
+          },
+          "expected": {
+            "case": "Err",
+            "payload": 1
+          },
+          "actual": {
+            "case": "Err",
+            "payload": 1
+          },
+          "error": null,
+          "ok": true
+        },
+        {
+          "input": {
+            "text": "\u03a9\u00e9\u03a9\u03a9\u0000\u0000\u0301",
+            "start": -9223372036854775808,
+            "count": 9223372036854775807,
+            "replacement": ""
+          },
+          "expected": {
+            "case": "Err",
+            "payload": 1
+          },
+          "actual": {
+            "case": "Err",
+            "payload": 1
+          },
+          "error": null,
+          "ok": true
+        },
+        {
+          "input": {
+            "text": "\u0301\u00e9\u0301",
+            "start": 1,
+            "count": 3,
+            "replacement": "Q"
+          },
+          "expected": {
+            "case": "Err",
+            "payload": 2
+          },
+          "actual": {
+            "case": "Err",
+            "payload": 2
+          },
+          "error": null,
+          "ok": true
+        },
+        {
+          "input": {
+            "text": "\u03a9\u00e9\ud83d\udc3a\u0301\u03a9\u0301\ud83d\udc3a\u00e9",
+            "start": 9,
+            "count": 1,
+            "replacement": "Q"
+          },
+          "expected": {
+            "case": "Err",
+            "payload": 1
+          },
+          "actual": {
+            "case": "Err",
+            "payload": 1
+          },
+          "error": null,
+          "ok": true
+        },
+        {
+          "input": {
+            "text": "\ud83d\udc3a\ud83d\udc3a\u00e9",
+            "start": 0,
+            "count": 3,
+            "replacement": "\ud83d\udc3a\u00e9"
+          },
+          "expected": {
+            "case": "Ok",
+            "payload": {
+              "text": "\ud83d\udc3a\u00e9",
+              "removed": "\ud83d\udc3a\ud83d\udc3a\u00e9",
+              "scalar_delta": -1,
+              "byte_delta": -4
+            }
+          },
+          "actual": {
+            "case": "Ok",
+            "payload": {
+              "text": "\ud83d\udc3a\u00e9",
+              "removed": "\ud83d\udc3a\ud83d\udc3a\u00e9",
+              "scalar_delta": -1,
+              "byte_delta": -4
+            }
+          },
+          "error": null,
+          "ok": true
+        },
+        {
+          "input": {
+            "text": "\u0301\u00e9\ud83d\udc3a\u0000\u00e9\u03a9\u0301",
+            "start": -9223372036854775808,
+            "count": 0,
+            "replacement": "Q"
+          },
+          "expected": {
+            "case": "Err",
+            "payload": 1
+          },
+          "actual": {
+            "case": "Err",
+            "payload": 1
+          },
+          "error": null,
+          "ok": true
+        },
+        {
+          "input": {
+            "text": "",
+            "start": 1,
+            "count": 1,
+            "replacement": "\u0000"
+          },
+          "expected": {
+            "case": "Err",
+            "payload": 1
+          },
+          "actual": {
+            "case": "Err",
+            "payload": 1
+          },
+          "error": null,
+          "ok": true
+        },
+        {
+          "input": {
+            "text": "\u00e9\u0301\u00e9aa",
+            "start": 9223372036854775807,
+            "count": 2,
+            "replacement": ""
+          },
+          "expected": {
+            "case": "Err",
+            "payload": 1
+          },
+          "actual": {
+            "case": "Err",
+            "payload": 1
+          },
+          "error": null,
+          "ok": true
+        },
+        {
+          "input": {
+            "text": "",
+            "start": 9223372036854775807,
+            "count": 2,
+            "replacement": "Q"
+          },
+          "expected": {
+            "case": "Err",
+            "payload": 1
+          },
+          "actual": {
+            "case": "Err",
+            "payload": 1
+          },
+          "error": null,
+          "ok": true
+        },
+        {
+          "input": {
+            "text": "\u0301",
+            "start": -2,
+            "count": 1,
+            "replacement": "\u0000"
+          },
+          "expected": {
+            "case": "Err",
+            "payload": 1
+          },
+          "actual": {
+            "case": "Err",
+            "payload": 1
+          },
+          "error": null,
+          "ok": true
+        },
+        {
+          "input": {
+            "text": "\u0301\u00e9\u03a9\u03a9\u00e9\u03a9",
+            "start": -2,
+            "count": -1,
+            "replacement": "Q"
+          },
+          "expected": {
+            "case": "Err",
+            "payload": 1
+          },
+          "actual": {
+            "case": "Err",
+            "payload": 1
+          },
+          "error": null,
+          "ok": true
+        },
+        {
+          "input": {
+            "text": "\u0301\u03a9\u03a9\u00e9a\u03a9\u0000\u0301",
+            "start": 9223372036854775807,
+            "count": 9223372036854775807,
+            "replacement": ""
+          },
+          "expected": {
+            "case": "Err",
+            "payload": 1
+          },
+          "actual": {
+            "case": "Err",
+            "payload": 1
+          },
+          "error": null,
+          "ok": true
+        },
+        {
+          "input": {
+            "text": "\u0000\u0000\u03a9\u0301\u0000",
+            "start": 9223372036854775807,
+            "count": 5,
+            "replacement": "Q"
+          },
+          "expected": {
+            "case": "Err",
+            "payload": 1
+          },
+          "actual": {
+            "case": "Err",
+            "payload": 1
+          },
+          "error": null,
+          "ok": true
+        },
+        {
+          "input": {
+            "text": "\u0301\u0000\u03a9\u0000\u0301\u0301",
+            "start": 9223372036854775807,
+            "count": 9223372036854775807,
+            "replacement": "\ud83d\udc3a\u00e9"
+          },
+          "expected": {
+            "case": "Err",
+            "payload": 1
+          },
+          "actual": {
+            "case": "Err",
+            "payload": 1
+          },
+          "error": null,
+          "ok": true
+        },
+        {
+          "input": {
+            "text": "aa\u03a9\u00e9\u00e9\ud83d\udc3a\u03a9",
+            "start": -9223372036854775808,
+            "count": 9223372036854775807,
+            "replacement": "\u0000"
+          },
+          "expected": {
+            "case": "Err",
+            "payload": 1
+          },
+          "actual": {
+            "case": "Err",
+            "payload": 1
+          },
+          "error": null,
+          "ok": true
+        },
+        {
+          "input": {
+            "text": "\u0000",
+            "start": -2,
+            "count": 0,
+            "replacement": ""
+          },
+          "expected": {
+            "case": "Err",
+            "payload": 1
+          },
+          "actual": {
+            "case": "Err",
+            "payload": 1
+          },
+          "error": null,
+          "ok": true
+        },
+        {
+          "input": {
+            "text": "a\u0301\u03a9\ud83d\udc3a",
+            "start": 0,
+            "count": 0,
+            "replacement": "\ud83d\udc3a\u00e9"
+          },
+          "expected": {
+            "case": "Ok",
+            "payload": {
+              "text": "\ud83d\udc3a\u00e9a\u0301\u03a9\ud83d\udc3a",
+              "removed": "",
+              "scalar_delta": 2,
+              "byte_delta": 6
+            }
+          },
+          "actual": {
+            "case": "Ok",
+            "payload": {
+              "text": "\ud83d\udc3a\u00e9a\u0301\u03a9\ud83d\udc3a",
+              "removed": "",
+              "scalar_delta": 2,
+              "byte_delta": 6
+            }
+          },
+          "error": null,
+          "ok": true
+        },
+        {
+          "input": {
+            "text": "\ud83d\udc3a\u0301\u03a9\u00e9\u03a9\ud83d\udc3a",
+            "start": -2,
+            "count": 1,
+            "replacement": "\u0000"
+          },
+          "expected": {
+            "case": "Err",
+            "payload": 1
+          },
+          "actual": {
+            "case": "Err",
+            "payload": 1
+          },
+          "error": null,
+          "ok": true
+        },
+        {
+          "input": {
+            "text": "\ud83d\udc3a",
+            "start": -2,
+            "count": -1,
+            "replacement": "\ud83d\udc3a\u00e9"
+          },
+          "expected": {
+            "case": "Err",
+            "payload": 1
+          },
+          "actual": {
+            "case": "Err",
+            "payload": 1
+          },
+          "error": null,
+          "ok": true
+        },
+        {
+          "input": {
+            "text": "\u0000\u0301\u0301\ud83d\udc3a\u0000a\u0301a",
+            "start": 0,
+            "count": 9223372036854775807,
+            "replacement": ""
+          },
+          "expected": {
+            "case": "Err",
+            "payload": 2
+          },
+          "actual": {
+            "case": "Err",
+            "payload": 2
+          },
+          "error": null,
+          "ok": true
+        },
+        {
+          "input": {
+            "text": "\u00e9\u03a9\u00e9\ud83d\udc3a\u0301\u00e9a\u0000",
+            "start": -2,
+            "count": -1,
+            "replacement": ""
+          },
+          "expected": {
+            "case": "Err",
+            "payload": 1
+          },
+          "actual": {
+            "case": "Err",
+            "payload": 1
+          },
+          "error": null,
+          "ok": true
+        },
+        {
+          "input": {
+            "text": "\u0000\u03a9\u0000\u0000\u03a9a\u0000",
+            "start": 8,
+            "count": 9223372036854775807,
+            "replacement": "\ud83d\udc3a\u00e9"
+          },
+          "expected": {
+            "case": "Err",
+            "payload": 1
+          },
+          "actual": {
+            "case": "Err",
+            "payload": 1
+          },
+          "error": null,
+          "ok": true
+        },
+        {
+          "input": {
+            "text": "\u0000\ud83d\udc3a\ud83d\udc3a\u03a9",
+            "start": 4,
+            "count": 0,
+            "replacement": "\u0000"
+          },
+          "expected": {
+            "case": "Ok",
+            "payload": {
+              "text": "\u0000\ud83d\udc3a\ud83d\udc3a\u03a9\u0000",
+              "removed": "",
+              "scalar_delta": 1,
+              "byte_delta": 1
+            }
+          },
+          "actual": {
+            "case": "Ok",
+            "payload": {
+              "text": "\u0000\ud83d\udc3a\ud83d\udc3a\u03a9\u0000",
+              "removed": "",
+              "scalar_delta": 1,
+              "byte_delta": 1
+            }
+          },
+          "error": null,
+          "ok": true
+        },
+        {
+          "input": {
+            "text": "\u0000\ud83d\udc3a\u0301\u00e9\u03a9\u0301\u0000a",
+            "start": 0,
+            "count": 2,
+            "replacement": ""
+          },
+          "expected": {
+            "case": "Ok",
+            "payload": {
+              "text": "\u0301\u00e9\u03a9\u0301\u0000a",
+              "removed": "\u0000\ud83d\udc3a",
+              "scalar_delta": -2,
+              "byte_delta": -5
+            }
+          },
+          "actual": {
+            "case": "Ok",
+            "payload": {
+              "text": "\u0301\u00e9\u03a9\u0301\u0000a",
+              "removed": "\u0000\ud83d\udc3a",
+              "scalar_delta": -2,
+              "byte_delta": -5
+            }
+          },
+          "error": null,
+          "ok": true
+        },
+        {
+          "input": {
+            "text": "a\u03a9\u03a9\u03a9a\u0000\u0000\u0000",
+            "start": 9,
+            "count": 2,
+            "replacement": ""
+          },
+          "expected": {
+            "case": "Err",
+            "payload": 1
+          },
+          "actual": {
+            "case": "Err",
+            "payload": 1
+          },
+          "error": null,
+          "ok": true
+        },
+        {
+          "input": {
+            "text": "\ud83d\udc3a\u0000",
+            "start": 1,
+            "count": 9223372036854775807,
+            "replacement": "\u0000"
+          },
+          "expected": {
+            "case": "Err",
+            "payload": 2
+          },
+          "actual": {
+            "case": "Err",
+            "payload": 2
+          },
+          "error": null,
+          "ok": true
+        },
+        {
+          "input": {
+            "text": "\u03a9\u03a9\u03a9\u0301\ud83d\udc3a",
+            "start": 1,
+            "count": 2,
+            "replacement": "\ud83d\udc3a\u00e9"
+          },
+          "expected": {
+            "case": "Ok",
+            "payload": {
+              "text": "\u03a9\ud83d\udc3a\u00e9\u0301\ud83d\udc3a",
+              "removed": "\u03a9\u03a9",
+              "scalar_delta": 0,
+              "byte_delta": 2
+            }
+          },
+          "actual": {
+            "case": "Ok",
+            "payload": {
+              "text": "\u03a9\ud83d\udc3a\u00e9\u0301\ud83d\udc3a",
+              "removed": "\u03a9\u03a9",
+              "scalar_delta": 0,
+              "byte_delta": 2
+            }
+          },
+          "error": null,
+          "ok": true
+        },
+        {
+          "input": {
+            "text": "a",
+            "start": 9223372036854775807,
+            "count": 1,
+            "replacement": ""
+          },
+          "expected": {
+            "case": "Err",
+            "payload": 1
+          },
+          "actual": {
+            "case": "Err",
+            "payload": 1
+          },
+          "error": null,
+          "ok": true
+        },
+        {
+          "input": {
+            "text": "\u0301\u0000\u0000\ud83d\udc3a\ud83d\udc3a\u00e9\u00e9a",
+            "start": 1,
+            "count": 9223372036854775807,
+            "replacement": "\u0000"
+          },
+          "expected": {
+            "case": "Err",
+            "payload": 2
+          },
+          "actual": {
+            "case": "Err",
+            "payload": 2
+          },
+          "error": null,
+          "ok": true
+        },
+        {
+          "input": {
+            "text": "\u0301\u0301\u0301",
+            "start": -2,
+            "count": 2,
+            "replacement": "Q"
+          },
+          "expected": {
+            "case": "Err",
+            "payload": 1
+          },
+          "actual": {
+            "case": "Err",
+            "payload": 1
+          },
+          "error": null,
+          "ok": true
+        },
+        {
+          "input": {
+            "text": "",
+            "start": -2,
+            "count": 1,
+            "replacement": "\u0000"
+          },
+          "expected": {
+            "case": "Err",
+            "payload": 1
+          },
+          "actual": {
+            "case": "Err",
+            "payload": 1
+          },
+          "error": null,
+          "ok": true
+        },
+        {
+          "input": {
+            "text": "\ud83d\udc3a",
+            "start": 1,
+            "count": 1,
+            "replacement": ""
+          },
+          "expected": {
+            "case": "Err",
+            "payload": 2
+          },
+          "actual": {
+            "case": "Err",
+            "payload": 2
+          },
+          "error": null,
+          "ok": true
+        },
+        {
+          "input": {
+            "text": "\u03a9\u00e9\u00e9\ud83d\udc3a\u00e9\u0301\u0000",
+            "start": 9223372036854775807,
+            "count": 7,
+            "replacement": "\u0000"
+          },
+          "expected": {
+            "case": "Err",
+            "payload": 1
+          },
+          "actual": {
+            "case": "Err",
+            "payload": 1
+          },
+          "error": null,
+          "ok": true
+        },
+        {
+          "input": {
+            "text": "a\u0301\u03a9\ud83d\udc3a\ud83d\udc3a",
+            "start": 5,
+            "count": 5,
+            "replacement": ""
+          },
+          "expected": {
+            "case": "Err",
+            "payload": 2
+          },
+          "actual": {
+            "case": "Err",
+            "payload": 2
+          },
+          "error": null,
+          "ok": true
+        },
+        {
+          "input": {
+            "text": "\u0301\ud83d\udc3a",
+            "start": 0,
+            "count": -1,
+            "replacement": "\u0000"
+          },
+          "expected": {
+            "case": "Err",
+            "payload": 2
+          },
+          "actual": {
+            "case": "Err",
+            "payload": 2
+          },
+          "error": null,
+          "ok": true
+        },
+        {
+          "input": {
+            "text": "\u00e9\u03a9",
+            "start": -9223372036854775808,
+            "count": 2,
+            "replacement": "\u0000"
+          },
+          "expected": {
+            "case": "Err",
+            "payload": 1
+          },
+          "actual": {
+            "case": "Err",
+            "payload": 1
+          },
+          "error": null,
+          "ok": true
+        },
+        {
+          "input": {
+            "text": "",
+            "start": 1,
+            "count": 0,
+            "replacement": "Q"
+          },
+          "expected": {
+            "case": "Err",
+            "payload": 1
+          },
+          "actual": {
+            "case": "Err",
+            "payload": 1
+          },
+          "error": null,
+          "ok": true
+        },
+        {
+          "input": {
+            "text": "\u0301\ud83d\udc3a",
+            "start": -9223372036854775808,
+            "count": 9223372036854775807,
+            "replacement": ""
+          },
+          "expected": {
+            "case": "Err",
+            "payload": 1
+          },
+          "actual": {
+            "case": "Err",
+            "payload": 1
+          },
+          "error": null,
+          "ok": true
+        },
+        {
+          "input": {
+            "text": "a\u0000\u0000\u0000\u0000\u0000",
+            "start": 7,
+            "count": 1,
+            "replacement": ""
+          },
+          "expected": {
+            "case": "Err",
+            "payload": 1
+          },
+          "actual": {
+            "case": "Err",
+            "payload": 1
+          },
+          "error": null,
+          "ok": true
+        },
+        {
+          "input": {
+            "text": "",
+            "start": 1,
+            "count": 0,
+            "replacement": "\u0000"
+          },
+          "expected": {
+            "case": "Err",
+            "payload": 1
+          },
+          "actual": {
+            "case": "Err",
+            "payload": 1
+          },
+          "error": null,
+          "ok": true
+        },
+        {
+          "input": {
+            "text": "\u0000\u0000\u0000aa\u00e9",
+            "start": 0,
+            "count": 9223372036854775807,
+            "replacement": "\ud83d\udc3a\u00e9"
+          },
+          "expected": {
+            "case": "Err",
+            "payload": 2
+          },
+          "actual": {
+            "case": "Err",
+            "payload": 2
+          },
+          "error": null,
+          "ok": true
+        },
+        {
+          "input": {
+            "text": "a\ud83d\udc3a\u0301\ud83d\udc3a",
+            "start": 4,
+            "count": 0,
+            "replacement": "\ud83d\udc3a\u00e9"
+          },
+          "expected": {
+            "case": "Ok",
+            "payload": {
+              "text": "a\ud83d\udc3a\u0301\ud83d\udc3a\ud83d\udc3a\u00e9",
+              "removed": "",
+              "scalar_delta": 2,
+              "byte_delta": 6
+            }
+          },
+          "actual": {
+            "case": "Ok",
+            "payload": {
+              "text": "a\ud83d\udc3a\u0301\ud83d\udc3a\ud83d\udc3a\u00e9",
+              "removed": "",
+              "scalar_delta": 2,
+              "byte_delta": 6
+            }
+          },
+          "error": null,
+          "ok": true
+        },
+        {
+          "input": {
+            "text": "a\u00e9\u0000\u0301\u03a9\ud83d\udc3a\u03a9a",
+            "start": 9,
+            "count": 0,
+            "replacement": "Q"
+          },
+          "expected": {
+            "case": "Err",
+            "payload": 1
+          },
+          "actual": {
+            "case": "Err",
+            "payload": 1
+          },
+          "error": null,
+          "ok": true
+        },
+        {
+          "input": {
+            "text": "\u00e9\ud83d\udc3aa\u0301\ud83d\udc3a\u0301",
+            "start": 9223372036854775807,
+            "count": 9223372036854775807,
+            "replacement": ""
+          },
+          "expected": {
+            "case": "Err",
+            "payload": 1
+          },
+          "actual": {
+            "case": "Err",
+            "payload": 1
+          },
+          "error": null,
+          "ok": true
+        }
+      ],
+      "accepted": true,
+      "passed": 70,
+      "total": 70
+    },
+    "accepted": true,
+    "workspace": "/tmp/lobo-matched-6pxzotvs"
+  },
+  "prompt": "Complete TASK.txt following GUIDE.txt. The limits are 120 seconds, 16 command-execution tool items and 6 visible check submissions. All build/check work counts in wall time. Do not delegate.\nUse $lobo-development at .agents/skills/lobo-development/SKILL.md.\n",
+  "last_message": "Implemented `run` in [logic.lobo](/tmp/lobo-matched-6pxzotvs/logic.lobo).\n\n- Validates `start` before `count`\n- Replaces Unicode scalar windows safely\n- Preserves exact text contents\n- Computes scalar and UTF-8 byte deltas\n- Preserves existing IDs in `logic.lobo.ids.json`\n\nVerification: `python3 check.py` passed all 5 visible checks.",
+  "final_sources": {
+    "util.lobo": "module util;\nrecord Reverse<T> {pending:List<T>,output:List<T>}\nfn reverse<T>(items:List<T>)->List<T> {\n let final=fold(i in List::length(items),state:Reverse<T>=Reverse {pending:items,output:List::empty<T>()}) {\n  Reverse {pending:List::tail(state.pending),output:List::prepend(List::head(state.pending),state.output)}\n };final.output\n}\n",
+    "logic.lobo.ids.json": "{\n  \"format\": \"lobo-identities/0.1\",\n  \"identities\": {\n    \"module\": \"skilldev.splice.module\",\n    \"run\": \"skilldev.splice.run\",\n    \"model.Change\": \"skilldev.splice.model.Change\",\n    \"model.Edit\": \"skilldev.splice.model.Edit\",\n    \"util.reverse\": \"skilldev.util.reverse\"\n  }\n}\n",
+    "util.lobo.ids.json": "{\n  \"format\": \"lobo-identities/0.1\",\n  \"identities\": {\n    \"module\": \"skilldev.util.module\",\n    \"Reverse\": \"skilldev.util.Reverse\",\n    \"reverse\": \"skilldev.util.reverse\"\n  }\n}\n",
+    "logic.lobo": "module logic;\nuse model {Change,Edit};\nuse util {reverse};\nfn run(text:Text,start:I64,count:I64,replacement:Text)->Edit<Change> {\n let length=Text::length(text);\n if start<0 || start>length {\n  Err(1)\n } else {\n  if count<0 || count>length-start {\n   Err(2)\n  } else {\n   let prefix=Text::slice(text,0,start);\n   let removed=Text::slice(text,start,count);\n   let suffix=Text::slice(text,start+count,length-start-count);\n   let combined=Text::concat(Text::concat(prefix,replacement),suffix);\n   Ok(Change {\n    text:combined,\n    removed:removed,\n    scalar_delta:Text::length(replacement)-count,\n    byte_delta:Bytes::length(Text::bytes(combined))-Bytes::length(Text::bytes(text))\n   })\n  }\n }\n}\n",
+    "model.lobo": "module model;\nrecord Change {text:Text,removed:Text,scalar_delta:I64,byte_delta:I64}\nvariant Edit<T> {Ok(T),Err(I64)}\n",
+    "model.lobo.ids.json": "{\n  \"format\": \"lobo-identities/0.1\",\n  \"identities\": {\n    \"module\": \"skilldev.splice.model.module\",\n    \"Change\": \"skilldev.splice.model.Change\",\n    \"Edit\": \"skilldev.splice.model.Edit\"\n  }\n}\n"
+  },
+  "detail": {
+    "assignment": {
+      "index": 6,
+      "repeat": 1,
+      "family": "splice",
+      "arm": "skill",
+      "language": "lobo",
+      "reasoning": "high",
+      "phase": "construction"
+    },
+    "skill_file_present": true,
+    "skill_path_in_commands": true,
+    "external_skill_path_commands": [],
+    "first_visible_edited_pass_s": 50.83816750207916,
+    "visible_compile_errors": 2,
+    "visible_behavior_failures": 0,
+    "visible": [
+      {
+        "index": 0,
+        "edited": true,
+        "feedback": {
+          "status": "compile_error",
+          "diagnostic": "{\"diagnostic\":{\"code\":\"compile.syntax.invalid\",\"message\":\"expected {, got Word(\\\"if\\\")\",\"phase\":\"parse\",\"range\":{\"end\":{\"byte\":211,\"character\":10,\"line\":7},\"start\":{\"byte\":209,\"character\":8,\"line\":7}},\"source\":\"/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/development-study-20261124/run/trial-06/check-00/source/logic.lobo\"},\"kind\":\"compile_error\",\"status\":\"error\"}\n"
+        }
+      },
+      {
+        "index": 1,
+        "edited": true,
+        "feedback": {
+          "status": "compile_error",
+          "diagnostic": "{\"diagnostic\":{\"code\":\"compile.name.reserved\",\"message\":\"reserved name: result\",\"phase\":\"resolve\",\"range\":{\"end\":{\"byte\":433,\"character\":13,\"line\":14},\"start\":{\"byte\":427,\"character\":7,\"line\":14}},\"source\":\"/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/development-study-20261124/run/trial-06/check-01/source/logic.lobo\"},\"kind\":\"compile_error\",\"status\":\"error\"}\n"
+        }
+      },
+      {
+        "index": 2,
+        "edited": true,
+        "feedback": {
+          "status": "pass",
+          "passed": 5,
+          "total": 5,
+          "failures": []
+        }
+      }
+    ],
+    "commands": [
+      "/usr/bin/zsh -lc \"sed -n '1,240p' .agents/skills/lobo-development/SKILL.md && echo '---TASK---' && sed -n '1,240p' TASK.txt && echo '---GUIDE---' && sed -n '1,260p' GUIDE.txt && echo '---FILES---' && rg --files -g '\"'! .git'\"' -g '\"'! .agents/skills/lobo-development/SKILL.md'\"' | sort\"",
+      "/usr/bin/zsh -lc \"sed -n '1,260p' logic.lobo\nsed -n '1,260p' model.lobo\nsed -n '1,260p' util.lobo\nsed -n '1,240p' VISIBLE.json\nsed -n '1,260p' check.py\"",
+      "/usr/bin/zsh -lc \"sed -n '1,280p' docs/agent-reference/compact-pilot-2026-11-24/ranges.txt\nsed -n '1,240p' spec/core-v1.11.md\nsed -n '1,220p' spec/agent-testing-v0.1.md\nsed -n '1,220p' spec/compact-source-v0.1.md\"",
+      "/usr/bin/zsh -lc 'python3 check.py'",
+      "/usr/bin/zsh -lc 'python3 check.py'",
+      "/usr/bin/zsh -lc 'python3 check.py'",
+      "/usr/bin/zsh -lc \"sed -n '1,220p' logic.lobo\nsed -n '1,220p' logic.lobo.ids.json\ngit diff -- logic.lobo logic.lobo.ids.json\"",
+      "/usr/bin/zsh -lc \"git status --short -- logic.lobo logic.lobo.ids.json\nsha256sum logic.lobo.ids.json\nsed -n '1,80p' logic.lobo.ids.json\""
+    ]
+  },
+  "raw_file_hashes": {
+    "assignment.json": {
+      "sha256": "248f11bfdbc12e199aea3fe08facbb5ce6a17a8e2bad1d0f70be5cdc497703a2",
+      "bytes": 144
+    },
+    "stderr.txt": {
+      "sha256": "00c28c77300a6bdbe9cea0aeed843acd16686e34d6d2b84eeee7773517b454a5",
+      "bytes": 209
+    },
+    "command.json": {
+      "sha256": "b34928044516db69b980d3a8c6086d34d11d17bc74117c70520603426821c58b",
+      "bytes": 598
+    },
+    "prompt.txt": {
+      "sha256": "f450adb0abf3e7888fa9c6c60126001e7b42718422108f507537d920ab2fd9c4",
+      "bytes": 258
+    },
+    "events.jsonl": {
+      "sha256": "ad390b05c5088007150288a6c978985faba08a15e122b67dc02ab225162d87cf",
+      "bytes": 47144
+    },
+    "result.json": {
+      "sha256": "9723c716a82ef0bb5193300529736b2bc85665044855f1d42849c5335e53141c",
+      "bytes": 35332
+    },
+    "last-message.txt": {
+      "sha256": "c7531122aec5f732ab25be04bfeeabdec9369c6b2cf82a1e6b00a868d4b5f05f",
+      "bytes": 335
+    },
+    "heldout/program": {
+      "sha256": "cb2dea7e28e8dea91e2a25321018498d532f027f363c03a084a0d350608369ae",
+      "bytes": 22904
+    },
+    "heldout/result.json": {
+      "sha256": "53d0fac951a82d93cc6d41376af8274e69305ee210abb049863e7fa6a3dbe0b3",
+      "bytes": 29157
+    },
+    "check-01/result.json": {
+      "sha256": "b254420f95439907218a164f4333dcfc50d577dc2e45cb322d4fbeb0a008c425",
+      "bytes": 1327
+    },
+    "check-02/program": {
+      "sha256": "cb2dea7e28e8dea91e2a25321018498d532f027f363c03a084a0d350608369ae",
+      "bytes": 22904
+    },
+    "check-02/result.json": {
+      "sha256": "aab8661c12be6f6fbc9988ef89e16ac3a8ed559623e3991742e59636a6bec272",
+      "bytes": 3421
+    },
+    "initial/util.lobo": {
+      "sha256": "c43f8e6085a7f03acbc1dac3e872ffe5ebdf8f86133519b5ce286a08e7d2055c",
+      "bytes": 338
+    },
+    "initial/logic.lobo.ids.json": {
+      "sha256": "3199a7891bec1170abb281e0a5d8dc74a1e53cd46f839cb97ddbd18f06c7098c",
+      "bytes": 279
+    },
+    "initial/check.py": {
+      "sha256": "19cfc08bd63439e1487ff9ee80fc4a013b804feb6b424788b2fc62fb63bd278f",
+      "bytes": 385
+    },
+    "initial/AGENTS.md": {
+      "sha256": "3c8c8fce33c21a65ee4b8a44fe408af1f260accb220adba4fb6a75e331e7ea11",
+      "bytes": 153
+    },
+    "initial/util.lobo.ids.json": {
+      "sha256": "e19f179ed53b0319c39febce4e46eb462845e30547177c99a14aac27ed6ad174",
+      "bytes": 178
+    },
+    "initial/logic.lobo": {
+      "sha256": "5bc5a2dd211ca07f4f29088accc2f091b1812884d1c1f385ae8d33c31a68c20c",
+      "bytes": 137
+    },
+    "initial/VISIBLE.json": {
+      "sha256": "b30f62ca7959cea8b619f3dbf076321ee8d086b6301861ae98fd31a980db24d2",
+      "bytes": 1239
+    },
+    "initial/GUIDE.txt": {
+      "sha256": "6e9c2fab00d1f5598b5ed5bea09375bb4ef6eb01822bec32d4575f99017b5f77",
+      "bytes": 3027
+    },
+    "initial/model.lobo": {
+      "sha256": "c5172e6d928c827568e55248f277ececa3f2a0db0ba00c0b0fb2ca4f00c8c4bf",
+      "bytes": 118
+    },
+    "initial/model.lobo.ids.json": {
+      "sha256": "3d878fdc7d111506d04e652e8e2e8a151bbe347154a52c5bc0ea9be4b45e9b80",
+      "bytes": 194
+    },
+    "initial/TASK.txt": {
+      "sha256": "764cbaeb4056c29c9e669372c8fcc78ffdbef7b0a4831eeab9914c0ee2e089f4",
+      "bytes": 1036
+    },
+    "candidate-final/logic.lobo": {
+      "sha256": "5bb71bf53689d1dbde30210b3350f999757c317c5c6bc0a7d52f10f301774c52",
+      "bytes": 696
+    },
+    "check-00/result.json": {
+      "sha256": "413b753e821c6a759b224fb5f6b3fc2737a6af7498e7408068f885b0ecdaebf7",
+      "bytes": 1335
+    },
+    "heldout/source/util.lobo": {
+      "sha256": "c43f8e6085a7f03acbc1dac3e872ffe5ebdf8f86133519b5ce286a08e7d2055c",
+      "bytes": 338
+    },
+    "heldout/source/logic.lobo.ids.json": {
+      "sha256": "3199a7891bec1170abb281e0a5d8dc74a1e53cd46f839cb97ddbd18f06c7098c",
+      "bytes": 279
+    },
+    "heldout/source/util.lobo.ids.json": {
+      "sha256": "e19f179ed53b0319c39febce4e46eb462845e30547177c99a14aac27ed6ad174",
+      "bytes": 178
+    },
+    "heldout/source/logic.lobo": {
+      "sha256": "5bb71bf53689d1dbde30210b3350f999757c317c5c6bc0a7d52f10f301774c52",
+      "bytes": 696
+    },
+    "heldout/source/model.lobo": {
+      "sha256": "c5172e6d928c827568e55248f277ececa3f2a0db0ba00c0b0fb2ca4f00c8c4bf",
+      "bytes": 118
+    },
+    "heldout/source/model.lobo.ids.json": {
+      "sha256": "3d878fdc7d111506d04e652e8e2e8a151bbe347154a52c5bc0ea9be4b45e9b80",
+      "bytes": 194
+    },
+    "check-01/source/util.lobo": {
+      "sha256": "c43f8e6085a7f03acbc1dac3e872ffe5ebdf8f86133519b5ce286a08e7d2055c",
+      "bytes": 338
+    },
+    "check-01/source/logic.lobo.ids.json": {
+      "sha256": "3199a7891bec1170abb281e0a5d8dc74a1e53cd46f839cb97ddbd18f06c7098c",
+      "bytes": 279
+    },
+    "check-01/source/util.lobo.ids.json": {
+      "sha256": "e19f179ed53b0319c39febce4e46eb462845e30547177c99a14aac27ed6ad174",
+      "bytes": 178
+    },
+    "check-01/source/logic.lobo": {
+      "sha256": "cca71324bce6880fc74db840c0ab1c8c4aa0bc8048b00235722be99ccae81c8b",
+      "bytes": 690
+    },
+    "check-01/source/model.lobo": {
+      "sha256": "c5172e6d928c827568e55248f277ececa3f2a0db0ba00c0b0fb2ca4f00c8c4bf",
+      "bytes": 118
+    },
+    "check-01/source/model.lobo.ids.json": {
+      "sha256": "3d878fdc7d111506d04e652e8e2e8a151bbe347154a52c5bc0ea9be4b45e9b80",
+      "bytes": 194
+    },
+    "check-02/source/util.lobo": {
+      "sha256": "c43f8e6085a7f03acbc1dac3e872ffe5ebdf8f86133519b5ce286a08e7d2055c",
+      "bytes": 338
+    },
+    "check-02/source/logic.lobo.ids.json": {
+      "sha256": "3199a7891bec1170abb281e0a5d8dc74a1e53cd46f839cb97ddbd18f06c7098c",
+      "bytes": 279
+    },
+    "check-02/source/util.lobo.ids.json": {
+      "sha256": "e19f179ed53b0319c39febce4e46eb462845e30547177c99a14aac27ed6ad174",
+      "bytes": 178
+    },
+    "check-02/source/logic.lobo": {
+      "sha256": "5bb71bf53689d1dbde30210b3350f999757c317c5c6bc0a7d52f10f301774c52",
+      "bytes": 696
+    },
+    "check-02/source/model.lobo": {
+      "sha256": "c5172e6d928c827568e55248f277ececa3f2a0db0ba00c0b0fb2ca4f00c8c4bf",
+      "bytes": 118
+    },
+    "check-02/source/model.lobo.ids.json": {
+      "sha256": "3d878fdc7d111506d04e652e8e2e8a151bbe347154a52c5bc0ea9be4b45e9b80",
+      "bytes": 194
+    },
+    "initial/spec/core-v1.1.md": {
+      "sha256": "98c9b16d2bd72229464751f1d6c03790efde00a234bf7d2add2306f30b785361",
+      "bytes": 4694
+    },
+    "initial/spec/language-milestone-workloads.md": {
+      "sha256": "f0be02538657fc901e9241049314b75d03b0472bc776ad3748d63c5c847a2b4d",
+      "bytes": 6656
+    },
+    "initial/spec/core-v1.4.md": {
+      "sha256": "01b365a0c8874db2ad9982e1e85dc036cf22cf31521c2b28c943c08888edf9b2",
+      "bytes": 5603
+    },
+    "initial/spec/core-v0.7.md": {
+      "sha256": "0111fcfce8f7ba3ca9abfa027282113dcb6c31df7fb2d946847260f392efb221",
+      "bytes": 7169
+    },
+    "initial/spec/checked-artifact-v0.2.md": {
+      "sha256": "b13203846b1eb62eeb73445ef422cb526f7ae33d1e6804ecdef20e33c6365ff7",
+      "bytes": 1413
+    },
+    "initial/spec/core-v0.10.md": {
+      "sha256": "2ca585067a2c5113ce335847f433489c79a71d63471c2443786157038b60953e",
+      "bytes": 3093
+    },
+    "initial/spec/native-v0.1.md": {
+      "sha256": "befed14019840eea1988bf6ff982d531df105bb0d1b057e765e820ed72cdc0b6",
+      "bytes": 6568
+    },
+    "initial/spec/core-v0.8.md": {
+      "sha256": "790cfe562577be3dafa5ca3d2028e34d8782cbb36731fe45c29560a4badc6887",
+      "bytes": 5329
+    },
+    "initial/spec/core-v1.0.md": {
+      "sha256": "8dbc2ca888f49b84125a8faedf39160bb1eab27e0f25b336b1ef8f87f14f3b2b",
+      "bytes": 5242
+    },
+    "initial/spec/core-v1.11.md": {
+      "sha256": "d13c38830326c983d336c83ab4a398867bd17858ade3c5f8ecc6d088359182aa",
+      "bytes": 2968
+    },
+    "initial/spec/agent-testing-v0.1.md": {
+      "sha256": "dc9c1fb4b7f3aca5cc70a2cb844139190ec16218ee3ddb7759653f2d0fc4ab0e",
+      "bytes": 11933
+    },
+    "initial/spec/compact-source-v0.1.md": {
+      "sha256": "d7035fbf81ff5c83f84a34dd5c73a1617f1a49176019a2693ba56c501955a94f",
+      "bytes": 5994
+    },
+    "initial/spec/core-v1.8.md": {
+      "sha256": "422e050a2b5aa621e9b236f003084fa5398995e3144b3781b998092422255eb6",
+      "bytes": 5772
+    },
+    "initial/spec/core-v1.2.md": {
+      "sha256": "7d0f42dd9d1bd99b860af5045c960fa82ffc96511d8f6397fefa381964c5b363",
+      "bytes": 5534
+    },
+    "initial/spec/core-v1.7.md": {
+      "sha256": "2123fbea05d172cf4723e683afc4216c64e9bc0a62495f25e06b7ebc83311ed3",
+      "bytes": 3510
+    },
+    "initial/spec/generic-reuse-workload.md": {
+      "sha256": "53e5d3097494f3deb5379c77a343997dfa52f47edb6c3915006dac05082b244f",
+      "bytes": 2596
+    },
+    "initial/spec/core-v0.6.md": {
+      "sha256": "3d8737fe0d67ef67916ba63fc6d91386d9ff983c9148d2b2c671048a0cf35245",
+      "bytes": 7076
+    },
+    "initial/spec/core-v1.6.md": {
+      "sha256": "71967bd60313ce04cabdf740863eb2f1c73c49ecb1f22ea58ed6e9abbcd9c886",
+      "bytes": 4447
+    },
+    "initial/spec/core-v0.12.md": {
+      "sha256": "f02ddafe0a6196c15671a51e08aa12105ce216df1edb1a8354f54cfccc9e15c4",
+      "bytes": 7895
+    },
+    "initial/spec/recursive-ast-workload.md": {
+      "sha256": "3138f238b71d5d12001391dc3d2f8cf054a1a59622608699732bcc05441c7a3a",
+      "bytes": 1600
+    },
+    "initial/spec/README.md": {
+      "sha256": "e8b911e1997d93f0ede12e14c97851f8e08843ca19e84a1eb5a4319108e82653",
+      "bytes": 4757
+    },
+    "initial/spec/language-v1-acceptance.md": {
+      "sha256": "33e7c84c36db6bcf74059f57e08e3eaa550e1235955d77eae4e6ca4afbed5f33",
+      "bytes": 6645
+    },
+    "initial/spec/core-v0.2.md": {
+      "sha256": "9cbdbe1ddd2a55ce69b3333d5984a12d437ed225d856668c69edfbfd2a4b1ad2",
+      "bytes": 6391
+    },
+    "initial/spec/core-v1.5.md": {
+      "sha256": "dac4877adab3d738fb05fc57c37436106a22206a3069446a00c47de65c1abdda",
+      "bytes": 4557
+    },
+    "initial/spec/core-v0.11.md": {
+      "sha256": "275105a2b66f5f0f6ddb12828d3e30db47f8603933654ea92b6bb3d5597ba8f9",
+      "bytes": 6042
+    },
+    "initial/spec/core-v0.4.md": {
+      "sha256": "84828c9c83b0c0b70d278e2458d77e01231bfd75899a99193b80a762b78ede83",
+      "bytes": 5039
+    },
+    "initial/spec/native-llvm-v0.1.md": {
+      "sha256": "580611e7fc27523e4aed69b9064a7c688096c8254eecf9a53541f93994045b21",
+      "bytes": 5632
+    },
+    "initial/spec/native-interface-v0.1.md": {
+      "sha256": "fc98302a3a5e50c8a87079231b9311954e8351383ba872e4223385ff1770934e",
+      "bytes": 10000
+    },
+    "initial/spec/checked-artifact-v0.3.md": {
+      "sha256": "4874fc7ba430389d8d3bf4df3c6fc34b2b5bb949ecfe646383e3f6fc04652b15",
+      "bytes": 1147
+    },
+    "initial/spec/core-v0.3.md": {
+      "sha256": "96e39f958c14b082ad0f3a0c72dc0b3318a7c1c442812b35c338d35b00759543",
+      "bytes": 4396
+    },
+    "initial/spec/core-v1.9.md": {
+      "sha256": "c84dc7e6b555fc92458d632c0b92fb31052abd023e58b0201c735c6019ec225b",
+      "bytes": 2560
+    },
+    "initial/spec/checked-artifact-v0.1.md": {
+      "sha256": "8e85e37b7a89812f135ccb796e083ea95771032d267e55bc9c0d18f53fa56cdf",
+      "bytes": 4094
+    },
+    "initial/spec/core-v1.10.md": {
+      "sha256": "45d45f48a14fda25275c50ea02d6d65854d14e3fb6989ea56ef6d1aba62ec308",
+      "bytes": 4925
+    },
+    "initial/spec/source-diagnostics-v0.1.md": {
+      "sha256": "d531df2c57fdd4ec2917fb029a8fc54f441f6632fbfb7c2b4cfe3b8168e6eb3b",
+      "bytes": 3894
+    },
+    "initial/spec/core-v0.9.md": {
+      "sha256": "4bc8977f5151c72df856a06da8cc1ff136a9fb355681b47075bbd17d570d5379",
+      "bytes": 7360
+    },
+    "initial/spec/core-v0.1.md": {
+      "sha256": "c3fe3c05e21bd22c9df8f9ff78c65f3c645f127b10350c93a888c5f133f16854",
+      "bytes": 13060
+    },
+    "initial/spec/core-v1.3.md": {
+      "sha256": "2ea91b7b4d4c7716a593ceafcfff42227f05f94e45d8500e9ed04e0c956a9118",
+      "bytes": 6183
+    },
+    "initial/spec/core-v0.5.md": {
+      "sha256": "02ad206aa3cf73c38a8c13d082cdd7d0ea61c45a4dd2ab304497df2cc7c326cc",
+      "bytes": 6607
+    },
+    "initial/spec/sqlite-interface-v0.1.md": {
+      "sha256": "19de3da7153b874edc5518ded812515c2ce32dc67a4d1226307c7a0c8b612bdf",
+      "bytes": 9003
+    },
+    "initial/research/compact-pilot-2026-11-24.md": {
+      "sha256": "761a1fc994e8bdf6865f293fc37728aab95932c49d67a9ea23907a1de352ef25",
+      "bytes": 9416
+    },
+    "initial/spec/schemas/request-envelope.schema.json": {
+      "sha256": "2abad3a1e8bbbb980cfa0fbe2c9c38a789ba94215bd6481f677d15cfe7c24409",
+      "bytes": 1964
+    },
+    "initial/spec/schemas/tool-descriptor.schema.json": {
+      "sha256": "2e375db03b357fee59094e46252dcd847a3adf3fc04fae39457bf98a62bc17ef",
+      "bytes": 1727
+    },
+    "initial/spec/schemas/response-envelope.schema.json": {
+      "sha256": "a4e7d16a8bc25e06d5a571259df750f7c024319922e419bae57a8d66c64e7ca4",
+      "bytes": 3614
+    },
+    "initial/spec/schemas/conformance-case.schema.json": {
+      "sha256": "ef3a27dd2a0caa8249c1f1439eb0abf96983350456db4efaabfdd2e2cc24c443",
+      "bytes": 2269
+    },
+    "initial/spec/conformance/core-cases.json": {
+      "sha256": "076f50cc9a45b7588eed4d150bb289fcdf04b0dcc7435dd871e71ef388cf71df",
+      "bytes": 4968
+    },
+    "initial/docs/agent-reference/compact-pilot-2026-11-24/nominal.txt": {
+      "sha256": "9810070ea2f016955293106bc0f7bf2f9fbb718619ad5b8372f34fbc380a0510",
+      "bytes": 819
+    },
+    "initial/docs/agent-reference/compact-pilot-2026-11-24/contracts.txt": {
+      "sha256": "86a129a75ffba8cb447f0a97b513cc92abb806b932609fc253273909aae868aa",
+      "bytes": 796
+    },
+    "initial/docs/agent-reference/compact-pilot-2026-11-24/ranges.txt": {
+      "sha256": "633eac0a1b432389d842277929b485519962a646c07bbe97a69a403b5d217478",
+      "bytes": 934
+    },
+    "initial/docs/agent-reference/compact-pilot-2026-11-24/propagation.txt": {
+      "sha256": "d204f387ce82c1a0c1106ec337db631c06ec084c51f7b583f7eb9b45fb38c43f",
+      "bytes": 744
+    },
+    "initial/.agents/skills/lobo-development/SKILL.md": {
+      "sha256": "804a12e43f79bef059243f88e474266890c785d02df034645cbab88da50a52b5",
+      "bytes": 4799
+    },
+    "initial/.agents/skills/lobo-programming/references/conveniences.lobo": {
+      "sha256": "ffb3bcfaa7fa99fca865d6498238b4c81b857a01e2744d46d5a6f0308765e9c9",
+      "bytes": 301
+    },
+    "initial/.agents/skills/lobo-programming/references/compact-example.lobo": {
+      "sha256": "d2376c69b774da83073a98883e91794750d59f99ed3fa380d9aaa673d1950954",
+      "bytes": 231
+    },
+    "initial/.agents/skills/lobo-programming/references/try-example.lobo": {
+      "sha256": "2f6b5750d060c929eae94cb9b001b3ea9154f9ddaa369c0934c1953cce21770a",
+      "bytes": 412
+    },
+    "initial/.agents/skills/lobo-programming/references/sqlite-example.lobo": {
+      "sha256": "855f210acb18bc4568aad97373a8633cd9b7053d368980172317c76fab74927a",
+      "bytes": 303
+    },
+    "initial/.agents/skills/lobo-programming/references/compact-example.lobo.ids.json": {
+      "sha256": "2dbc359fba6b65d4fa0667b91bd80e8c4f150b38ecb26c00c21e743332906d0e",
+      "bytes": 298
+    },
+    "initial/.agents/skills/lobo-programming/references/json-example.lobo": {
+      "sha256": "e45bbda6b893e09f021821bd500195c4e27a827e81edcc249458cef53c3cc712",
+      "bytes": 269
+    },
+    "initial/.agents/skills/lobo-programming/references/tools.md": {
+      "sha256": "1913a1fceffba4c09f72625d9bc1e8d8104e35025ad674988a73405ba8eb8429",
+      "bytes": 8694
+    },
+    "initial/.agents/skills/lobo-programming/references/callbacks.lobo": {
+      "sha256": "a106cf1e51354df3296e755d882d6f0fc6ce7690b761914cca0f76cc0c0bf63e",
+      "bytes": 406
+    },
+    "initial/.agents/skills/lobo-programming/references/sqlite-example.lobo.ids.json": {
+      "sha256": "18ae22c6bf9c71e6b1f7633bd7fcd847883b919ab27f7b34d18feca3f455a2e6",
+      "bytes": 343
+    },
+    "initial/.agents/skills/lobo-programming/references/conveniences.lobo.ids.json": {
+      "sha256": "eb25455ebf8d705ecd0d1d2261623cb5930cd4ea9bb3bf04de2d2e7bb0921817",
+      "bytes": 337
+    },
+    "initial/.agents/skills/lobo-programming/references/language.md": {
+      "sha256": "f007469320ec5054db07dac9302f8b6ac9a9dc976099ffd566c1ea963ab36562",
+      "bytes": 12554
+    },
+    "initial/.agents/skills/lobo-programming/references/examples.lobo": {
+      "sha256": "cf65d2cdc47a1bb15e154f94fe2e70d92e58eb15d405c8a2fb68261c294a1b3c",
+      "bytes": 2028
+    },
+    "initial/.agents/skills/lobo-programming/references/native-example.lobo": {
+      "sha256": "79c44e86db8aa77322b4d99a424a25a0b2d37ced37e3e65af344c6a02d03737c",
+      "bytes": 300
+    },
+    "initial/.agents/skills/lobo-programming/references/callbacks.lobo.ids.json": {
+      "sha256": "7cf6c0e2a287692417905cb0fb94a3ab5f04cb517695ad597f2404e5888b11cc",
+      "bytes": 334
+    },
+    "initial/libraries/json/README.md": {
+      "sha256": "fcc2d6742f11f4a53fbe1f26ce7a390e477e0de88a983e4a348884f6983d4959",
+      "bytes": 5305
+    },
+    "initial/libraries/json/json.lobo": {
+      "sha256": "3ed68fee975a46affca613dd6da60fbe6ea297fc447b8c91a76fbe7b2406ac39",
+      "bytes": 8228
+    },
+    "initial/libraries/native/README.md": {
+      "sha256": "4de8dd7276b56d529c96f909ba6e4903fda299e255394e1e8e4bef094d104eea",
+      "bytes": 3872
+    },
+    "initial/libraries/native/native.lobo": {
+      "sha256": "ee7ba249a414ff9421cc36d3373f412b6ce63e62d696d1bdd0f9ce111e9027d1",
+      "bytes": 4649
+    },
+    "initial/libraries/native/permissions.lobo": {
+      "sha256": "c3148d6d50d3d8e2f326b771b76353fed490ba06cfd8cad21deb5d7f8f070e12",
+      "bytes": 1347
+    },
+    "initial/libraries/sql/sql.lobo.ids.json": {
+      "sha256": "67fc9cd6d80fed595e0efdffeb36b7153d865236ab188d2da776ed8effd643d4",
+      "bytes": 2033
+    },
+    "initial/libraries/sql/sql.lobo": {
+      "sha256": "5704a8abcf1e1d0ee435b09aa7219c9c809bc1aaa304f3fe61b3de41d903a133",
+      "bytes": 9348
+    },
+    "initial/libraries/sql/README.md": {
+      "sha256": "85f5ec08131d902d2ed64014ebd687462def277aa5f0876599c1058cfd71fad5",
+      "bytes": 4514
+    },
+    "initial/libraries/http/http.lobo": {
+      "sha256": "ea9b9d87e15321e06ca67932258b60451c3da04a815e97d234ef2b36a91dba9f",
+      "bytes": 2787
+    },
+    "initial/libraries/http/README.md": {
+      "sha256": "c4dd34349e63538c79fe003c6cff87c3e4d27a624bc2d3146ed4fe08c4626774",
+      "bytes": 4399
+    },
+    "initial/libraries/http-server/server.lobo": {
+      "sha256": "3aeac600d4131e544a7054f0f751efb5945e1616c84b210cfdabf5d936912a1e",
+      "bytes": 6880
+    },
+    "initial/libraries/http-server/transport.lobo.ids.json": {
+      "sha256": "9163bf4fbd4215230030857e386d89b9a38843f233d4ca357e119f93779cc68d",
+      "bytes": 2021
+    },
+    "initial/libraries/http-server/README.md": {
+      "sha256": "7f695c6966c1a31adf74d2d620760857a07ac28c0763a65fc8a6001800b6bde2",
+      "bytes": 7886
+    },
+    "initial/libraries/http-server/server.lobo.ids.json": {
+      "sha256": "27cc7a4a712b98b29bd3fbae6e38616ed1713fb9cf07cc4e6c371d0823f3e640",
+      "bytes": 1408
+    },
+    "initial/libraries/http-server/transport.lobo": {
+      "sha256": "ac5af9a0ceed5f7a446450c0248c7b6c284931908dc27b25ea1a69cb6517a52b",
+      "bytes": 8145
+    },
+    "candidate-final/.check-io/b47379de5d544819ac985e6a1665b8dd.request.json": {
+      "sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+      "bytes": 2
+    },
+    "candidate-final/.check-io/38375f2e75e0487e8fcdb7d2daf4ad44.request.json": {
+      "sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+      "bytes": 2
+    },
+    "candidate-final/.check-io/96f05f0b2bd9475984967f93312b0c3f.response.json": {
+      "sha256": "4977fdd1e57dc8e4b43e8dd0bcd7df83d7a090a82a6f815dfaf222a174eb1466",
+      "bytes": 483
+    },
+    "candidate-final/.check-io/38375f2e75e0487e8fcdb7d2daf4ad44.response.json": {
+      "sha256": "c2b1c773368cc75a5f07fb87c45ed2cb3b3b9f77b2e46f687a4b57d0325e1571",
+      "bytes": 475
+    },
+    "candidate-final/.check-io/b47379de5d544819ac985e6a1665b8dd.response.json": {
+      "sha256": "60a602d00feeb3d46f3379852326cb88933d020ac5f380409c02c66ffa68f323",
+      "bytes": 70
+    },
+    "candidate-final/.check-io/96f05f0b2bd9475984967f93312b0c3f.request.json": {
+      "sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+      "bytes": 2
+    },
+    "check-00/source/util.lobo": {
+      "sha256": "c43f8e6085a7f03acbc1dac3e872ffe5ebdf8f86133519b5ce286a08e7d2055c",
+      "bytes": 338
+    },
+    "check-00/source/logic.lobo.ids.json": {
+      "sha256": "3199a7891bec1170abb281e0a5d8dc74a1e53cd46f839cb97ddbd18f06c7098c",
+      "bytes": 279
+    },
+    "check-00/source/util.lobo.ids.json": {
+      "sha256": "e19f179ed53b0319c39febce4e46eb462845e30547177c99a14aac27ed6ad174",
+      "bytes": 178
+    },
+    "check-00/source/logic.lobo": {
+      "sha256": "5a515ec5f8e2b2e2dec3210869aef2d4428db8b9c227d7428a928d3a0665fe40",
+      "bytes": 670
+    },
+    "check-00/source/model.lobo": {
+      "sha256": "c5172e6d928c827568e55248f277ececa3f2a0db0ba00c0b0fb2ca4f00c8c4bf",
+      "bytes": 118
+    },
+    "check-00/source/model.lobo.ids.json": {
+      "sha256": "3d878fdc7d111506d04e652e8e2e8a151bbe347154a52c5bc0ea9be4b45e9b80",
+      "bytes": 194
+    }
+  }
+}

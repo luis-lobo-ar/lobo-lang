@@ -1,0 +1,26 @@
+CANARY True
+START {'index': 0, 'repeat': 0, 'family': 'splice', 'arm': 'control', 'language': 'lobo', 'reasoning': 'high', 'phase': 'construction'}
+END 0 completed True 70 {'input_tokens': 182608, 'cached_input_tokens': 160896, 'cache_write_input_tokens': 0, 'output_tokens': 2594, 'reasoning_output_tokens': 1312}
+START {'index': 1, 'repeat': 0, 'family': 'splice', 'arm': 'skill', 'language': 'lobo', 'reasoning': 'high', 'phase': 'construction'}
+END 1 completed True 70 {'input_tokens': 209993, 'cached_input_tokens': 193152, 'cache_write_input_tokens': 0, 'output_tokens': 3707, 'reasoning_output_tokens': 2087}
+START {'index': 2, 'repeat': 0, 'family': 'batch', 'arm': 'skill', 'language': 'lobo', 'reasoning': 'high', 'phase': 'construction'}
+END 2 wall_limit False 0 None
+START {'index': 3, 'repeat': 0, 'family': 'batch', 'arm': 'control', 'language': 'lobo', 'reasoning': 'high', 'phase': 'construction'}
+END 3 completed True 70 {'input_tokens': 203573, 'cached_input_tokens': 191360, 'cache_write_input_tokens': 0, 'output_tokens': 4736, 'reasoning_output_tokens': 2663}
+START {'index': 4, 'repeat': 0, 'family': 'dispatch', 'arm': 'control', 'language': 'lobo', 'reasoning': 'high', 'phase': 'change'}
+END 4 completed True 70 {'input_tokens': 154992, 'cached_input_tokens': 144896, 'cache_write_input_tokens': 0, 'output_tokens': 3942, 'reasoning_output_tokens': 2641}
+START {'index': 5, 'repeat': 0, 'family': 'dispatch', 'arm': 'skill', 'language': 'lobo', 'reasoning': 'high', 'phase': 'change'}
+END 5 completed True 70 {'input_tokens': 220530, 'cached_input_tokens': 207616, 'cache_write_input_tokens': 0, 'output_tokens': 3866, 'reasoning_output_tokens': 2177}
+START {'index': 6, 'repeat': 1, 'family': 'splice', 'arm': 'skill', 'language': 'lobo', 'reasoning': 'high', 'phase': 'construction'}
+END 6 completed True 70 {'input_tokens': 257027, 'cached_input_tokens': 240128, 'cache_write_input_tokens': 0, 'output_tokens': 3273, 'reasoning_output_tokens': 1368}
+START {'index': 7, 'repeat': 1, 'family': 'splice', 'arm': 'control', 'language': 'lobo', 'reasoning': 'high', 'phase': 'construction'}
+END 7 completed True 70 {'input_tokens': 174241, 'cached_input_tokens': 158592, 'cache_write_input_tokens': 0, 'output_tokens': 2464, 'reasoning_output_tokens': 1101}
+START {'index': 8, 'repeat': 1, 'family': 'batch', 'arm': 'control', 'language': 'lobo', 'reasoning': 'high', 'phase': 'construction'}
+END 8 completed True 70 {'input_tokens': 270408, 'cached_input_tokens': 252800, 'cache_write_input_tokens': 0, 'output_tokens': 5871, 'reasoning_output_tokens': 3490}
+START {'index': 9, 'repeat': 1, 'family': 'batch', 'arm': 'skill', 'language': 'lobo', 'reasoning': 'high', 'phase': 'construction'}
+END 9 completed True 70 {'input_tokens': 351603, 'cached_input_tokens': 316544, 'cache_write_input_tokens': 0, 'output_tokens': 4202, 'reasoning_output_tokens': 1932}
+START {'index': 10, 'repeat': 1, 'family': 'dispatch', 'arm': 'skill', 'language': 'lobo', 'reasoning': 'high', 'phase': 'change'}
+END 10 completed True 70 {'input_tokens': 200722, 'cached_input_tokens': 178176, 'cache_write_input_tokens': 0, 'output_tokens': 3514, 'reasoning_output_tokens': 1703}
+START {'index': 11, 'repeat': 1, 'family': 'dispatch', 'arm': 'control', 'language': 'lobo', 'reasoning': 'high', 'phase': 'change'}
+END 11 completed True 70 {'input_tokens': 130811, 'cached_input_tokens': 120192, 'cache_write_input_tokens': 0, 'output_tokens': 3943, 'reasoning_output_tokens': 2457}
+FINISHED 12

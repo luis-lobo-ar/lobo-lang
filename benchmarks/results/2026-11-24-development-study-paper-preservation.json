@@ -1,0 +1,14 @@
+{
+  "format": "lobo-paper-preservation/1",
+  "date": "2026-11-24",
+  "new_entry": "local-045",
+  "prior_entries": 44,
+  "prior_pins": 153,
+  "all_prior_entry_objects_unchanged": true,
+  "all_prior_pins_unchanged": true,
+  "entries": 45,
+  "pins": 160,
+  "all_current_file_hashes_verified": true,
+  "index_sha256": "0460f4611995bcf3b90d8def660cf86dcc7a8518f7a5d24f42bc3b4d03711158",
+  "limits": "Original primary scores and unknown usage preserved. Raw Markdown presentation uses a byte-verified logical-path map; original input layout remains in preregistration commit/archive."
+}

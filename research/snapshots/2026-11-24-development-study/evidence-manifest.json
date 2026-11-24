@@ -1,0 +1,3596 @@
+{
+  "date": "2026-11-24",
+  "files": [
+    {
+      "path": "research/snapshots/2026-11-24-development-study/.gitattributes",
+      "sha256": "69033b947c408536f037706b57673120904e3effc0e5fdba0221c4cf95c7a100",
+      "bytes": 102
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/README.md",
+      "sha256": "329c873f7267f5974af6e819420915a07df5d31c744b779fef1800e0ed1c50d2",
+      "bytes": 1639
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/archive-evidence.py",
+      "sha256": "d642e5615459df71eee4990ea519e135fd1842a8db70b5e80bc60735f087f6e2",
+      "bytes": 1488
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/calibration/batch-mutant/logic.lobo",
+      "sha256": "0b628f152aa2deaeccf7eecda0403d1e96c2a9c96491254c0fee86ae40c13c7a",
+      "bytes": 780
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/calibration/batch-mutant/logic.lobo.ids.json",
+      "sha256": "5c7ac1fa3a2b63bc7439cbb17c27882306c2e114e6f94af81e8dba18b1cb6b0b",
+      "bytes": 414
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/calibration/batch-mutant/model.lobo",
+      "sha256": "f09f82502ce9b55ae6a0444d309745c8c22a19ca07aad5bea3d5dd87876fdfc2",
+      "bytes": 140
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/calibration/batch-mutant/model.lobo.ids.json",
+      "sha256": "558abb1cf76cec313f51b42b5d4f8d850362a59f0714c4911f95280695589c05",
+      "bytes": 244
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/calibration/batch-mutant/util.lobo",
+      "sha256": "c43f8e6085a7f03acbc1dac3e872ffe5ebdf8f86133519b5ce286a08e7d2055c",
+      "bytes": 338
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/calibration/batch-mutant/util.lobo.ids.json",
+      "sha256": "e19f179ed53b0319c39febce4e46eb462845e30547177c99a14aac27ed6ad174",
+      "bytes": 178
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/calibration/batch-mutant-check/result.json",
+      "sha256": "28415bb3f13b23b2dbc0e986940d346ebca727304621454016b9da5ee3fc8390",
+      "bytes": 51676
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/calibration/batch-mutant-check/source/logic.lobo",
+      "sha256": "0b628f152aa2deaeccf7eecda0403d1e96c2a9c96491254c0fee86ae40c13c7a",
+      "bytes": 780
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/calibration/batch-mutant-check/source/logic.lobo.ids.json",
+      "sha256": "5c7ac1fa3a2b63bc7439cbb17c27882306c2e114e6f94af81e8dba18b1cb6b0b",
+      "bytes": 414
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/calibration/batch-mutant-check/source/model.lobo",
+      "sha256": "f09f82502ce9b55ae6a0444d309745c8c22a19ca07aad5bea3d5dd87876fdfc2",
+      "bytes": 140
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/calibration/batch-mutant-check/source/model.lobo.ids.json",
+      "sha256": "558abb1cf76cec313f51b42b5d4f8d850362a59f0714c4911f95280695589c05",
+      "bytes": 244
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/calibration/batch-mutant-check/source/util.lobo",
+      "sha256": "c43f8e6085a7f03acbc1dac3e872ffe5ebdf8f86133519b5ce286a08e7d2055c",
+      "bytes": 338
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/calibration/batch-mutant-check/source/util.lobo.ids.json",
+      "sha256": "e19f179ed53b0319c39febce4e46eb462845e30547177c99a14aac27ed6ad174",
+      "bytes": 178
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/calibration/batch-reference/logic.lobo",
+      "sha256": "a58d62443a0a9f1cbf940b1c5c7513b9e3c5de1cff7a5ee5e35217adca86b088",
+      "bytes": 789
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/calibration/batch-reference/logic.lobo.ids.json",
+      "sha256": "5c7ac1fa3a2b63bc7439cbb17c27882306c2e114e6f94af81e8dba18b1cb6b0b",
+      "bytes": 414
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/calibration/batch-reference/model.lobo",
+      "sha256": "f09f82502ce9b55ae6a0444d309745c8c22a19ca07aad5bea3d5dd87876fdfc2",
+      "bytes": 140
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/calibration/batch-reference/model.lobo.ids.json",
+      "sha256": "558abb1cf76cec313f51b42b5d4f8d850362a59f0714c4911f95280695589c05",
+      "bytes": 244
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/calibration/batch-reference/util.lobo",
+      "sha256": "c43f8e6085a7f03acbc1dac3e872ffe5ebdf8f86133519b5ce286a08e7d2055c",
+      "bytes": 338
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/calibration/batch-reference/util.lobo.ids.json",
+      "sha256": "e19f179ed53b0319c39febce4e46eb462845e30547177c99a14aac27ed6ad174",
+      "bytes": 178
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/calibration/batch-reference-check/result.json",
+      "sha256": "abe4e022a27bfaf0fd07806a916b33b6f826f1671ce1f812413c7095e60a3c87",
+      "bytes": 51709
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/calibration/batch-reference-check/source/logic.lobo",
+      "sha256": "a58d62443a0a9f1cbf940b1c5c7513b9e3c5de1cff7a5ee5e35217adca86b088",
+      "bytes": 789
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/calibration/batch-reference-check/source/logic.lobo.ids.json",
+      "sha256": "5c7ac1fa3a2b63bc7439cbb17c27882306c2e114e6f94af81e8dba18b1cb6b0b",
+      "bytes": 414
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/calibration/batch-reference-check/source/model.lobo",
+      "sha256": "f09f82502ce9b55ae6a0444d309745c8c22a19ca07aad5bea3d5dd87876fdfc2",
+      "bytes": 140
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/calibration/batch-reference-check/source/model.lobo.ids.json",
+      "sha256": "558abb1cf76cec313f51b42b5d4f8d850362a59f0714c4911f95280695589c05",
+      "bytes": 244
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/calibration/batch-reference-check/source/util.lobo",
+      "sha256": "c43f8e6085a7f03acbc1dac3e872ffe5ebdf8f86133519b5ce286a08e7d2055c",
+      "bytes": 338
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/calibration/batch-reference-check/source/util.lobo.ids.json",
+      "sha256": "e19f179ed53b0319c39febce4e46eb462845e30547177c99a14aac27ed6ad174",
+      "bytes": 178
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/calibration/batch-starter/logic.lobo",
+      "sha256": "66e1fbbda097ee4a2c6af49782ca420d81212661f559160a2f1db3e3cf44cc49",
+      "bytes": 234
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/calibration/batch-starter/logic.lobo.ids.json",
+      "sha256": "a71c36cb1b5a0c3de10ddf814c9ab6d5e547c02a00cfbd7f4499d71deece96d7",
+      "bytes": 375
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/calibration/batch-starter/model.lobo",
+      "sha256": "f09f82502ce9b55ae6a0444d309745c8c22a19ca07aad5bea3d5dd87876fdfc2",
+      "bytes": 140
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/calibration/batch-starter/model.lobo.ids.json",
+      "sha256": "558abb1cf76cec313f51b42b5d4f8d850362a59f0714c4911f95280695589c05",
+      "bytes": 244
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/calibration/batch-starter/util.lobo",
+      "sha256": "c43f8e6085a7f03acbc1dac3e872ffe5ebdf8f86133519b5ce286a08e7d2055c",
+      "bytes": 338
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/calibration/batch-starter/util.lobo.ids.json",
+      "sha256": "e19f179ed53b0319c39febce4e46eb462845e30547177c99a14aac27ed6ad174",
+      "bytes": 178
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/calibration/batch-starter-check/result.json",
+      "sha256": "14f25ecb85935372a98359a68420f4d046e0bba5be18eeadf5ae1f2ac118c492",
+      "bytes": 50503
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/calibration/batch-starter-check/source/logic.lobo",
+      "sha256": "66e1fbbda097ee4a2c6af49782ca420d81212661f559160a2f1db3e3cf44cc49",
+      "bytes": 234
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/calibration/batch-starter-check/source/logic.lobo.ids.json",
+      "sha256": "a71c36cb1b5a0c3de10ddf814c9ab6d5e547c02a00cfbd7f4499d71deece96d7",
+      "bytes": 375
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/calibration/batch-starter-check/source/model.lobo",
+      "sha256": "f09f82502ce9b55ae6a0444d309745c8c22a19ca07aad5bea3d5dd87876fdfc2",
+      "bytes": 140
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/calibration/batch-starter-check/source/model.lobo.ids.json",
+      "sha256": "558abb1cf76cec313f51b42b5d4f8d850362a59f0714c4911f95280695589c05",
+      "bytes": 244
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/calibration/batch-starter-check/source/util.lobo",
+      "sha256": "c43f8e6085a7f03acbc1dac3e872ffe5ebdf8f86133519b5ce286a08e7d2055c",
+      "bytes": 338
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/calibration/batch-starter-check/source/util.lobo.ids.json",
+      "sha256": "e19f179ed53b0319c39febce4e46eb462845e30547177c99a14aac27ed6ad174",
+      "bytes": 178
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/calibration/dispatch-mutant/logic.lobo",
+      "sha256": "6871b30ab575f7282583e77f0cf9e83862efa48bae2c041eb6ea699ef4389278",
+      "bytes": 786
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/calibration/dispatch-mutant/logic.lobo.ids.json",
+      "sha256": "9c2e015919310c3893ad5db2d0a0a6bd3810c8106a0c9dbcafb413ce433d4191",
+      "bytes": 371
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/calibration/dispatch-mutant/model.lobo",
+      "sha256": "0564c8a0bb310404a39acbae6f0ed185f4bb75a3475ab52c8b0f5ea164297035",
+      "bytes": 105
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/calibration/dispatch-mutant/model.lobo.ids.json",
+      "sha256": "68a595791eb57a91ddd59116d2ef8b25d8550869f59d5260db58d9f4ad9a1897",
+      "bytes": 204
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/calibration/dispatch-mutant/util.lobo",
+      "sha256": "c43f8e6085a7f03acbc1dac3e872ffe5ebdf8f86133519b5ce286a08e7d2055c",
+      "bytes": 338
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/calibration/dispatch-mutant/util.lobo.ids.json",
+      "sha256": "e19f179ed53b0319c39febce4e46eb462845e30547177c99a14aac27ed6ad174",
+      "bytes": 178
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/calibration/dispatch-mutant-check/result.json",
+      "sha256": "54e7464ce37469bd3bede8c9bf48f5737c39024f4042ab27b2d072e9cbb0b086",
+      "bytes": 108299
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/calibration/dispatch-mutant-check/source/logic.lobo",
+      "sha256": "6871b30ab575f7282583e77f0cf9e83862efa48bae2c041eb6ea699ef4389278",
+      "bytes": 786
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/calibration/dispatch-mutant-check/source/logic.lobo.ids.json",
+      "sha256": "9c2e015919310c3893ad5db2d0a0a6bd3810c8106a0c9dbcafb413ce433d4191",
+      "bytes": 371
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/calibration/dispatch-mutant-check/source/model.lobo",
+      "sha256": "0564c8a0bb310404a39acbae6f0ed185f4bb75a3475ab52c8b0f5ea164297035",
+      "bytes": 105
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/calibration/dispatch-mutant-check/source/model.lobo.ids.json",
+      "sha256": "68a595791eb57a91ddd59116d2ef8b25d8550869f59d5260db58d9f4ad9a1897",
+      "bytes": 204
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/calibration/dispatch-mutant-check/source/util.lobo",
+      "sha256": "c43f8e6085a7f03acbc1dac3e872ffe5ebdf8f86133519b5ce286a08e7d2055c",
+      "bytes": 338
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/calibration/dispatch-mutant-check/source/util.lobo.ids.json",
+      "sha256": "e19f179ed53b0319c39febce4e46eb462845e30547177c99a14aac27ed6ad174",
+      "bytes": 178
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/calibration/dispatch-reference/logic.lobo",
+      "sha256": "78b8dd4fb84cbe35c4ee33fbfb0fcebdea325cf4d162c68c99f2dc66d2b590db",
+      "bytes": 804
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/calibration/dispatch-reference/logic.lobo.ids.json",
+      "sha256": "9c2e015919310c3893ad5db2d0a0a6bd3810c8106a0c9dbcafb413ce433d4191",
+      "bytes": 371
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/calibration/dispatch-reference/model.lobo",
+      "sha256": "0564c8a0bb310404a39acbae6f0ed185f4bb75a3475ab52c8b0f5ea164297035",
+      "bytes": 105
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/calibration/dispatch-reference/model.lobo.ids.json",
+      "sha256": "68a595791eb57a91ddd59116d2ef8b25d8550869f59d5260db58d9f4ad9a1897",
+      "bytes": 204
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/calibration/dispatch-reference/util.lobo",
+      "sha256": "c43f8e6085a7f03acbc1dac3e872ffe5ebdf8f86133519b5ce286a08e7d2055c",
+      "bytes": 338
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/calibration/dispatch-reference/util.lobo.ids.json",
+      "sha256": "e19f179ed53b0319c39febce4e46eb462845e30547177c99a14aac27ed6ad174",
+      "bytes": 178
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/calibration/dispatch-reference-check/result.json",
+      "sha256": "7003021f0aa62504c57e4667ddecd1ddc598778b1b1e3175225cd57988939a88",
+      "bytes": 95322
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/calibration/dispatch-reference-check/source/logic.lobo",
+      "sha256": "78b8dd4fb84cbe35c4ee33fbfb0fcebdea325cf4d162c68c99f2dc66d2b590db",
+      "bytes": 804
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/calibration/dispatch-reference-check/source/logic.lobo.ids.json",
+      "sha256": "9c2e015919310c3893ad5db2d0a0a6bd3810c8106a0c9dbcafb413ce433d4191",
+      "bytes": 371
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/calibration/dispatch-reference-check/source/model.lobo",
+      "sha256": "0564c8a0bb310404a39acbae6f0ed185f4bb75a3475ab52c8b0f5ea164297035",
+      "bytes": 105
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/calibration/dispatch-reference-check/source/model.lobo.ids.json",
+      "sha256": "68a595791eb57a91ddd59116d2ef8b25d8550869f59d5260db58d9f4ad9a1897",
+      "bytes": 204
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/calibration/dispatch-reference-check/source/util.lobo",
+      "sha256": "c43f8e6085a7f03acbc1dac3e872ffe5ebdf8f86133519b5ce286a08e7d2055c",
+      "bytes": 338
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/calibration/dispatch-reference-check/source/util.lobo.ids.json",
+      "sha256": "e19f179ed53b0319c39febce4e46eb462845e30547177c99a14aac27ed6ad174",
+      "bytes": 178
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/calibration/dispatch-starter/logic.lobo",
+      "sha256": "1f563412293d55b23b8fd7449cbaa132e429697f56e76e78a20fde8d4f1aa978",
+      "bytes": 517
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/calibration/dispatch-starter/logic.lobo.ids.json",
+      "sha256": "a26bb9fc14b3a1622a344921475125578ab1e23075cdd0c4d71effc681cb0417",
+      "bytes": 333
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/calibration/dispatch-starter/model.lobo",
+      "sha256": "0564c8a0bb310404a39acbae6f0ed185f4bb75a3475ab52c8b0f5ea164297035",
+      "bytes": 105
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/calibration/dispatch-starter/model.lobo.ids.json",
+      "sha256": "68a595791eb57a91ddd59116d2ef8b25d8550869f59d5260db58d9f4ad9a1897",
+      "bytes": 204
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/calibration/dispatch-starter/util.lobo",
+      "sha256": "c43f8e6085a7f03acbc1dac3e872ffe5ebdf8f86133519b5ce286a08e7d2055c",
+      "bytes": 338
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/calibration/dispatch-starter/util.lobo.ids.json",
+      "sha256": "e19f179ed53b0319c39febce4e46eb462845e30547177c99a14aac27ed6ad174",
+      "bytes": 178
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/calibration/dispatch-starter-check/result.json",
+      "sha256": "e6be7205e1613a9480961e7c7812aa003d827195625cf3172cdba30b99bc0ca1",
+      "bytes": 108304
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/calibration/dispatch-starter-check/source/logic.lobo",
+      "sha256": "1f563412293d55b23b8fd7449cbaa132e429697f56e76e78a20fde8d4f1aa978",
+      "bytes": 517
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/calibration/dispatch-starter-check/source/logic.lobo.ids.json",
+      "sha256": "a26bb9fc14b3a1622a344921475125578ab1e23075cdd0c4d71effc681cb0417",
+      "bytes": 333
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/calibration/dispatch-starter-check/source/model.lobo",
+      "sha256": "0564c8a0bb310404a39acbae6f0ed185f4bb75a3475ab52c8b0f5ea164297035",
+      "bytes": 105
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/calibration/dispatch-starter-check/source/model.lobo.ids.json",
+      "sha256": "68a595791eb57a91ddd59116d2ef8b25d8550869f59d5260db58d9f4ad9a1897",
+      "bytes": 204
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/calibration/dispatch-starter-check/source/util.lobo",
+      "sha256": "c43f8e6085a7f03acbc1dac3e872ffe5ebdf8f86133519b5ce286a08e7d2055c",
+      "bytes": 338
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/calibration/dispatch-starter-check/source/util.lobo.ids.json",
+      "sha256": "e19f179ed53b0319c39febce4e46eb462845e30547177c99a14aac27ed6ad174",
+      "bytes": 178
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/calibration/results.json",
+      "sha256": "28d66d04013ed149e2024b3c8577abe2add6fc6a248e38db68956fde168aa4ab",
+      "bytes": 682321
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/calibration/splice-mutant/logic.lobo",
+      "sha256": "a02a42b201cdbb99c4b870e278cf9fb364035cfbfdf3dd0401b3845839ae1008",
+      "bytes": 579
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/calibration/splice-mutant/logic.lobo.ids.json",
+      "sha256": "3199a7891bec1170abb281e0a5d8dc74a1e53cd46f839cb97ddbd18f06c7098c",
+      "bytes": 279
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/calibration/splice-mutant/model.lobo",
+      "sha256": "c5172e6d928c827568e55248f277ececa3f2a0db0ba00c0b0fb2ca4f00c8c4bf",
+      "bytes": 118
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/calibration/splice-mutant/model.lobo.ids.json",
+      "sha256": "3d878fdc7d111506d04e652e8e2e8a151bbe347154a52c5bc0ea9be4b45e9b80",
+      "bytes": 194
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/calibration/splice-mutant/util.lobo",
+      "sha256": "c43f8e6085a7f03acbc1dac3e872ffe5ebdf8f86133519b5ce286a08e7d2055c",
+      "bytes": 338
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/calibration/splice-mutant/util.lobo.ids.json",
+      "sha256": "e19f179ed53b0319c39febce4e46eb462845e30547177c99a14aac27ed6ad174",
+      "bytes": 178
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/calibration/splice-mutant-check/result.json",
+      "sha256": "46fc1a11a778ea59ac895c21bf308f438c669536e753f64690085457462fd034",
+      "bytes": 28316
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/calibration/splice-mutant-check/source/logic.lobo",
+      "sha256": "a02a42b201cdbb99c4b870e278cf9fb364035cfbfdf3dd0401b3845839ae1008",
+      "bytes": 579
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/calibration/splice-mutant-check/source/logic.lobo.ids.json",
+      "sha256": "3199a7891bec1170abb281e0a5d8dc74a1e53cd46f839cb97ddbd18f06c7098c",
+      "bytes": 279
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/calibration/splice-mutant-check/source/model.lobo",
+      "sha256": "c5172e6d928c827568e55248f277ececa3f2a0db0ba00c0b0fb2ca4f00c8c4bf",
+      "bytes": 118
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/calibration/splice-mutant-check/source/model.lobo.ids.json",
+      "sha256": "3d878fdc7d111506d04e652e8e2e8a151bbe347154a52c5bc0ea9be4b45e9b80",
+      "bytes": 194
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/calibration/splice-mutant-check/source/util.lobo",
+      "sha256": "c43f8e6085a7f03acbc1dac3e872ffe5ebdf8f86133519b5ce286a08e7d2055c",
+      "bytes": 338
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/calibration/splice-mutant-check/source/util.lobo.ids.json",
+      "sha256": "e19f179ed53b0319c39febce4e46eb462845e30547177c99a14aac27ed6ad174",
+      "bytes": 178
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/calibration/splice-reference/logic.lobo",
+      "sha256": "ae2a003ec40438db0c54d265537880752692eec37a17dc0893c3d486946c6b48",
+      "bytes": 578
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/calibration/splice-reference/logic.lobo.ids.json",
+      "sha256": "3199a7891bec1170abb281e0a5d8dc74a1e53cd46f839cb97ddbd18f06c7098c",
+      "bytes": 279
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/calibration/splice-reference/model.lobo",
+      "sha256": "c5172e6d928c827568e55248f277ececa3f2a0db0ba00c0b0fb2ca4f00c8c4bf",
+      "bytes": 118
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/calibration/splice-reference/model.lobo.ids.json",
+      "sha256": "3d878fdc7d111506d04e652e8e2e8a151bbe347154a52c5bc0ea9be4b45e9b80",
+      "bytes": 194
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/calibration/splice-reference/util.lobo",
+      "sha256": "c43f8e6085a7f03acbc1dac3e872ffe5ebdf8f86133519b5ce286a08e7d2055c",
+      "bytes": 338
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/calibration/splice-reference/util.lobo.ids.json",
+      "sha256": "e19f179ed53b0319c39febce4e46eb462845e30547177c99a14aac27ed6ad174",
+      "bytes": 178
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/calibration/splice-reference-check/result.json",
+      "sha256": "d7a7470cef35d9fc7c840fce595fe939204658c795ddafa709f463297bf741cc",
+      "bytes": 29252
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/calibration/splice-reference-check/source/logic.lobo",
+      "sha256": "ae2a003ec40438db0c54d265537880752692eec37a17dc0893c3d486946c6b48",
+      "bytes": 578
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/calibration/splice-reference-check/source/logic.lobo.ids.json",
+      "sha256": "3199a7891bec1170abb281e0a5d8dc74a1e53cd46f839cb97ddbd18f06c7098c",
+      "bytes": 279
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/calibration/splice-reference-check/source/model.lobo",
+      "sha256": "c5172e6d928c827568e55248f277ececa3f2a0db0ba00c0b0fb2ca4f00c8c4bf",
+      "bytes": 118
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/calibration/splice-reference-check/source/model.lobo.ids.json",
+      "sha256": "3d878fdc7d111506d04e652e8e2e8a151bbe347154a52c5bc0ea9be4b45e9b80",
+      "bytes": 194
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/calibration/splice-reference-check/source/util.lobo",
+      "sha256": "c43f8e6085a7f03acbc1dac3e872ffe5ebdf8f86133519b5ce286a08e7d2055c",
+      "bytes": 338
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/calibration/splice-reference-check/source/util.lobo.ids.json",
+      "sha256": "e19f179ed53b0319c39febce4e46eb462845e30547177c99a14aac27ed6ad174",
+      "bytes": 178
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/calibration/splice-starter/logic.lobo",
+      "sha256": "5bc5a2dd211ca07f4f29088accc2f091b1812884d1c1f385ae8d33c31a68c20c",
+      "bytes": 137
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/calibration/splice-starter/logic.lobo.ids.json",
+      "sha256": "3199a7891bec1170abb281e0a5d8dc74a1e53cd46f839cb97ddbd18f06c7098c",
+      "bytes": 279
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/calibration/splice-starter/model.lobo",
+      "sha256": "c5172e6d928c827568e55248f277ececa3f2a0db0ba00c0b0fb2ca4f00c8c4bf",
+      "bytes": 118
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/calibration/splice-starter/model.lobo.ids.json",
+      "sha256": "3d878fdc7d111506d04e652e8e2e8a151bbe347154a52c5bc0ea9be4b45e9b80",
+      "bytes": 194
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/calibration/splice-starter/util.lobo",
+      "sha256": "c43f8e6085a7f03acbc1dac3e872ffe5ebdf8f86133519b5ce286a08e7d2055c",
+      "bytes": 338
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/calibration/splice-starter/util.lobo.ids.json",
+      "sha256": "e19f179ed53b0319c39febce4e46eb462845e30547177c99a14aac27ed6ad174",
+      "bytes": 178
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/calibration/splice-starter-check/result.json",
+      "sha256": "9f572357114e45cd81decdd29c6ba8edf9fb8097cac6216c09d613ce69ef755d",
+      "bytes": 27411
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/calibration/splice-starter-check/source/logic.lobo",
+      "sha256": "5bc5a2dd211ca07f4f29088accc2f091b1812884d1c1f385ae8d33c31a68c20c",
+      "bytes": 137
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/calibration/splice-starter-check/source/logic.lobo.ids.json",
+      "sha256": "3199a7891bec1170abb281e0a5d8dc74a1e53cd46f839cb97ddbd18f06c7098c",
+      "bytes": 279
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/calibration/splice-starter-check/source/model.lobo",
+      "sha256": "c5172e6d928c827568e55248f277ececa3f2a0db0ba00c0b0fb2ca4f00c8c4bf",
+      "bytes": 118
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/calibration/splice-starter-check/source/model.lobo.ids.json",
+      "sha256": "3d878fdc7d111506d04e652e8e2e8a151bbe347154a52c5bc0ea9be4b45e9b80",
+      "bytes": 194
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/calibration/splice-starter-check/source/util.lobo",
+      "sha256": "c43f8e6085a7f03acbc1dac3e872ffe5ebdf8f86133519b5ce286a08e7d2055c",
+      "bytes": 338
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/calibration/splice-starter-check/source/util.lobo.ids.json",
+      "sha256": "e19f179ed53b0319c39febce4e46eb462845e30547177c99a14aac27ed6ad174",
+      "bytes": 178
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/code/.agents/skills/lobo-development/SKILL.md.txt",
+      "sha256": "804a12e43f79bef059243f88e474266890c785d02df034645cbab88da50a52b5",
+      "bytes": 4799
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/code/.agents/skills/lobo-development/agents/openai.yaml",
+      "sha256": "42d8438407a32ea294d1f3a783b3d5a72db270f56a97ef7f4e797b85701aca44",
+      "bytes": 257
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/code/benchmarks/matched-study/context_report.py",
+      "sha256": "2ae4867a9db65208da8647fab5e7d235bb5f4aafb61dfd9e6032a381f16c74bb",
+      "bytes": 9181
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/code/benchmarks/matched-study/development.py",
+      "sha256": "567021ff5c5362ad899765630460388e8ff9d9b0dae72361fe47060779400225",
+      "bytes": 15438
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/code/benchmarks/matched-study/development_corpus.py",
+      "sha256": "4dac8841c205c568b07ae9725c40175f85c19fecd17948207e90f2a3bacefacc",
+      "bytes": 10291
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/code/benchmarks/matched-study/development_report.py",
+      "sha256": "9c4798ec08c270c97ff8d9940c1f0cf35472226b08887a9f178b3702a36124b3",
+      "bytes": 6403
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/code/benchmarks/matched-study/luna.py",
+      "sha256": "5c02b9846c7af3211ad70cf212e8f119b3360bce8e29b2c2032a9792b321509c",
+      "bytes": 9748
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/code/benchmarks/matched-study/study.py",
+      "sha256": "1c05a60a0c431a9d9336f7b28c9fcfb9f69446cb24ead52f380d1a5d4c838bf0",
+      "bytes": 69354
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/code/benchmarks/matched-study/test_development.py",
+      "sha256": "d2311224ef260794a895c89ac0a1c0fddab9eafed466e9f7c80ee01f1fd2f522",
+      "bytes": 3470
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/code/benchmarks/matched-study/test_development_report.py",
+      "sha256": "206ee64936e39562e462f6801383b3c12f9b00c13a7064bb1c0cca230da4e742",
+      "bytes": 1219
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/development/all-new-tests-green.txt",
+      "sha256": "2d6603fa9f5000144e76e400c77dd7540642ffd9e3ba07e69618a92fee4d406c",
+      "bytes": 109
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/development/all-new-tests.txt",
+      "sha256": "e8797a0c5084a3f2a17a481b78af5a227f520cd9597c37d7d37070ed9d638e4e",
+      "bytes": 2126
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/development/final-harness-tests.txt",
+      "sha256": "afb85343992d4bfe6ebe6d13e0020bdcfa4dc27ec6d9d687c6cec2251f1cdb56",
+      "bytes": 149
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/development/final-new-tests.txt",
+      "sha256": "a212702e8df4bf9d111bb18e41011ce2cd88af93561ff43571cdaac3ad64b539",
+      "bytes": 109
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/development/final-registration.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/development/final-research-tests.txt",
+      "sha256": "f3a5fd733956adc09fca475fdfb611a19b5639b2978321ea0c53db513f87a865",
+      "bytes": 114
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/development/pre-registration-adjustment.txt",
+      "sha256": "69412e4030fad5e95033d41943d84ba91c994f9cfa8bb946254e609b9d3aed69",
+      "bytes": 350
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/development/publication-ignore-attempt-failure.txt",
+      "sha256": "7e5598043d42de54b954826906e4d8e437633bf744a933a055c4896a17255408",
+      "bytes": 78394
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/development/publication-links-failure.txt",
+      "sha256": "ec49ad3e0e6a2b2173687144174b19e5a4f2cbd06fd8f93035a2ecd803642f7d",
+      "bytes": 78394
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/development/publication.txt",
+      "sha256": "f9aeba6684c062028b59db627981d79e7da8c53d2f897ffe05e1b36f11ab41f3",
+      "bytes": 447
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/development/registration.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/development/report-red.txt",
+      "sha256": "546a2997e6a7451b0cf674e45616a8da79f9ddf8512ea2c8ddfd95a8d3bf1a6e",
+      "bytes": 1332
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/development/tdd-first-green.txt",
+      "sha256": "3425bc2ff877403ae3302f702d20de8b1e9bfc0c58390f6ce9b2eec395526954",
+      "bytes": 1432
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/development/tdd-green.txt",
+      "sha256": "bb316c7043f91838b0d7f3837cc759bc00c2edf9029f2eb64aa89243bf50c5ef",
+      "bytes": 105
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/development/tdd-red.txt",
+      "sha256": "ca8837ec6f578b9f884ecf5e8944736148cade893a329a3e52206fe6090aef74",
+      "bytes": 1297
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/development/validation-final.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/development/validation.txt",
+      "sha256": "6ac317278db978f709060d9d35a8331365d759401dc42036adb93575c933d6c5",
+      "bytes": 23082
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/document-path-map.json",
+      "sha256": "3b355b20ca9930df315ad15e4b89f2dec59deab9577c1b0244c3c07b3e9a6f76",
+      "bytes": 113413
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/environment-after.json",
+      "sha256": "e71865678a88274ab5b58e917ed5daf41c4614911d682d01a202db91f148d4b7",
+      "bytes": 1397
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/environment-before.json",
+      "sha256": "6eeaccd4297634d9793386a9c03ed68a0ba3ec8e244540cd85bc82cb8e6c2116",
+      "bytes": 1400
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/postchecks.json",
+      "sha256": "fab58582c5ac17e2b59f1a288f24b5977557fdfa412f6857fd3edf10f7f171bc",
+      "bytes": 23540
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/postchecks.py",
+      "sha256": "88f96ef94528f7c52b711c6bd211bb1de8829e5c38897025e077e2c877187bae",
+      "bytes": 4114
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/raw-archive-manifest.json",
+      "sha256": "f175b96f8c36f67e9e18119f7d3b3abbe54d02c00fcba4f578a17680bb8250eb",
+      "bytes": 541451
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/batch/control/.agents/skills/lobo-programming/references/callbacks.lobo",
+      "sha256": "a106cf1e51354df3296e755d882d6f0fc6ce7690b761914cca0f76cc0c0bf63e",
+      "bytes": 406
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/batch/control/.agents/skills/lobo-programming/references/callbacks.lobo.ids.json",
+      "sha256": "7cf6c0e2a287692417905cb0fb94a3ab5f04cb517695ad597f2404e5888b11cc",
+      "bytes": 334
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/batch/control/.agents/skills/lobo-programming/references/compact-example.lobo",
+      "sha256": "d2376c69b774da83073a98883e91794750d59f99ed3fa380d9aaa673d1950954",
+      "bytes": 231
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/batch/control/.agents/skills/lobo-programming/references/compact-example.lobo.ids.json",
+      "sha256": "2dbc359fba6b65d4fa0667b91bd80e8c4f150b38ecb26c00c21e743332906d0e",
+      "bytes": 298
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/batch/control/.agents/skills/lobo-programming/references/conveniences.lobo",
+      "sha256": "ffb3bcfaa7fa99fca865d6498238b4c81b857a01e2744d46d5a6f0308765e9c9",
+      "bytes": 301
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/batch/control/.agents/skills/lobo-programming/references/conveniences.lobo.ids.json",
+      "sha256": "eb25455ebf8d705ecd0d1d2261623cb5930cd4ea9bb3bf04de2d2e7bb0921817",
+      "bytes": 337
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/batch/control/.agents/skills/lobo-programming/references/examples.lobo",
+      "sha256": "cf65d2cdc47a1bb15e154f94fe2e70d92e58eb15d405c8a2fb68261c294a1b3c",
+      "bytes": 2028
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/batch/control/.agents/skills/lobo-programming/references/json-example.lobo",
+      "sha256": "e45bbda6b893e09f021821bd500195c4e27a827e81edcc249458cef53c3cc712",
+      "bytes": 269
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/batch/control/.agents/skills/lobo-programming/references/language.md.txt",
+      "sha256": "f007469320ec5054db07dac9302f8b6ac9a9dc976099ffd566c1ea963ab36562",
+      "bytes": 12554
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/batch/control/.agents/skills/lobo-programming/references/native-example.lobo",
+      "sha256": "79c44e86db8aa77322b4d99a424a25a0b2d37ced37e3e65af344c6a02d03737c",
+      "bytes": 300
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/batch/control/.agents/skills/lobo-programming/references/sqlite-example.lobo",
+      "sha256": "855f210acb18bc4568aad97373a8633cd9b7053d368980172317c76fab74927a",
+      "bytes": 303
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/batch/control/.agents/skills/lobo-programming/references/sqlite-example.lobo.ids.json",
+      "sha256": "18ae22c6bf9c71e6b1f7633bd7fcd847883b919ab27f7b34d18feca3f455a2e6",
+      "bytes": 343
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/batch/control/.agents/skills/lobo-programming/references/tools.md.txt",
+      "sha256": "1913a1fceffba4c09f72625d9bc1e8d8104e35025ad674988a73405ba8eb8429",
+      "bytes": 8694
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/batch/control/.agents/skills/lobo-programming/references/try-example.lobo",
+      "sha256": "2f6b5750d060c929eae94cb9b001b3ea9154f9ddaa369c0934c1953cce21770a",
+      "bytes": 412
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/batch/control/AGENTS.md.txt",
+      "sha256": "3c8c8fce33c21a65ee4b8a44fe408af1f260accb220adba4fb6a75e331e7ea11",
+      "bytes": 153
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/batch/control/GUIDE.txt",
+      "sha256": "6e9c2fab00d1f5598b5ed5bea09375bb4ef6eb01822bec32d4575f99017b5f77",
+      "bytes": 3027
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/batch/control/TASK.txt",
+      "sha256": "9abe465b8c7f8f7b0563e5b4257afa199ceec17b0c979d160e8e7f03fadeaaf3",
+      "bytes": 885
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/batch/control/VISIBLE.json",
+      "sha256": "48d062aa79b1b19d95c8f45f81abd858a3d84e6a2980c2ec9b1c5bdae0d96d5d",
+      "bytes": 1266
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/batch/control/check.py",
+      "sha256": "19cfc08bd63439e1487ff9ee80fc4a013b804feb6b424788b2fc62fb63bd278f",
+      "bytes": 385
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/batch/control/docs/agent-reference/compact-pilot-2026-11-24/contracts.txt",
+      "sha256": "86a129a75ffba8cb447f0a97b513cc92abb806b932609fc253273909aae868aa",
+      "bytes": 796
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/batch/control/docs/agent-reference/compact-pilot-2026-11-24/nominal.txt",
+      "sha256": "9810070ea2f016955293106bc0f7bf2f9fbb718619ad5b8372f34fbc380a0510",
+      "bytes": 819
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/batch/control/docs/agent-reference/compact-pilot-2026-11-24/propagation.txt",
+      "sha256": "d204f387ce82c1a0c1106ec337db631c06ec084c51f7b583f7eb9b45fb38c43f",
+      "bytes": 744
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/batch/control/docs/agent-reference/compact-pilot-2026-11-24/ranges.txt",
+      "sha256": "633eac0a1b432389d842277929b485519962a646c07bbe97a69a403b5d217478",
+      "bytes": 934
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/batch/control/libraries/http/README.md.txt",
+      "sha256": "c4dd34349e63538c79fe003c6cff87c3e4d27a624bc2d3146ed4fe08c4626774",
+      "bytes": 4399
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/batch/control/libraries/http/http.lobo",
+      "sha256": "ea9b9d87e15321e06ca67932258b60451c3da04a815e97d234ef2b36a91dba9f",
+      "bytes": 2787
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/batch/control/libraries/http-server/README.md.txt",
+      "sha256": "7f695c6966c1a31adf74d2d620760857a07ac28c0763a65fc8a6001800b6bde2",
+      "bytes": 7886
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/batch/control/libraries/http-server/server.lobo",
+      "sha256": "3aeac600d4131e544a7054f0f751efb5945e1616c84b210cfdabf5d936912a1e",
+      "bytes": 6880
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/batch/control/libraries/http-server/server.lobo.ids.json",
+      "sha256": "27cc7a4a712b98b29bd3fbae6e38616ed1713fb9cf07cc4e6c371d0823f3e640",
+      "bytes": 1408
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/batch/control/libraries/http-server/transport.lobo",
+      "sha256": "ac5af9a0ceed5f7a446450c0248c7b6c284931908dc27b25ea1a69cb6517a52b",
+      "bytes": 8145
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/batch/control/libraries/http-server/transport.lobo.ids.json",
+      "sha256": "9163bf4fbd4215230030857e386d89b9a38843f233d4ca357e119f93779cc68d",
+      "bytes": 2021
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/batch/control/libraries/json/README.md.txt",
+      "sha256": "fcc2d6742f11f4a53fbe1f26ce7a390e477e0de88a983e4a348884f6983d4959",
+      "bytes": 5305
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/batch/control/libraries/json/json.lobo",
+      "sha256": "3ed68fee975a46affca613dd6da60fbe6ea297fc447b8c91a76fbe7b2406ac39",
+      "bytes": 8228
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/batch/control/libraries/native/README.md.txt",
+      "sha256": "4de8dd7276b56d529c96f909ba6e4903fda299e255394e1e8e4bef094d104eea",
+      "bytes": 3872
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/batch/control/libraries/native/native.lobo",
+      "sha256": "ee7ba249a414ff9421cc36d3373f412b6ce63e62d696d1bdd0f9ce111e9027d1",
+      "bytes": 4649
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/batch/control/libraries/native/permissions.lobo",
+      "sha256": "c3148d6d50d3d8e2f326b771b76353fed490ba06cfd8cad21deb5d7f8f070e12",
+      "bytes": 1347
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/batch/control/libraries/sql/README.md.txt",
+      "sha256": "85f5ec08131d902d2ed64014ebd687462def277aa5f0876599c1058cfd71fad5",
+      "bytes": 4514
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/batch/control/libraries/sql/sql.lobo",
+      "sha256": "5704a8abcf1e1d0ee435b09aa7219c9c809bc1aaa304f3fe61b3de41d903a133",
+      "bytes": 9348
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/batch/control/libraries/sql/sql.lobo.ids.json",
+      "sha256": "67fc9cd6d80fed595e0efdffeb36b7153d865236ab188d2da776ed8effd643d4",
+      "bytes": 2033
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/batch/control/logic.lobo",
+      "sha256": "66e1fbbda097ee4a2c6af49782ca420d81212661f559160a2f1db3e3cf44cc49",
+      "bytes": 234
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/batch/control/logic.lobo.ids.json",
+      "sha256": "a71c36cb1b5a0c3de10ddf814c9ab6d5e547c02a00cfbd7f4499d71deece96d7",
+      "bytes": 375
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/batch/control/model.lobo",
+      "sha256": "f09f82502ce9b55ae6a0444d309745c8c22a19ca07aad5bea3d5dd87876fdfc2",
+      "bytes": 140
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/batch/control/model.lobo.ids.json",
+      "sha256": "558abb1cf76cec313f51b42b5d4f8d850362a59f0714c4911f95280695589c05",
+      "bytes": 244
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/batch/control/research/compact-pilot-2026-11-24.md.txt",
+      "sha256": "761a1fc994e8bdf6865f293fc37728aab95932c49d67a9ea23907a1de352ef25",
+      "bytes": 9416
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/batch/control/spec/README.md.txt",
+      "sha256": "e8b911e1997d93f0ede12e14c97851f8e08843ca19e84a1eb5a4319108e82653",
+      "bytes": 4757
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/batch/control/spec/agent-testing-v0.1.md.txt",
+      "sha256": "dc9c1fb4b7f3aca5cc70a2cb844139190ec16218ee3ddb7759653f2d0fc4ab0e",
+      "bytes": 11933
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/batch/control/spec/checked-artifact-v0.1.md.txt",
+      "sha256": "8e85e37b7a89812f135ccb796e083ea95771032d267e55bc9c0d18f53fa56cdf",
+      "bytes": 4094
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/batch/control/spec/checked-artifact-v0.2.md.txt",
+      "sha256": "b13203846b1eb62eeb73445ef422cb526f7ae33d1e6804ecdef20e33c6365ff7",
+      "bytes": 1413
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/batch/control/spec/checked-artifact-v0.3.md.txt",
+      "sha256": "4874fc7ba430389d8d3bf4df3c6fc34b2b5bb949ecfe646383e3f6fc04652b15",
+      "bytes": 1147
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/batch/control/spec/compact-source-v0.1.md.txt",
+      "sha256": "d7035fbf81ff5c83f84a34dd5c73a1617f1a49176019a2693ba56c501955a94f",
+      "bytes": 5994
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/batch/control/spec/conformance/core-cases.json",
+      "sha256": "076f50cc9a45b7588eed4d150bb289fcdf04b0dcc7435dd871e71ef388cf71df",
+      "bytes": 4968
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/batch/control/spec/core-v0.1.md.txt",
+      "sha256": "c3fe3c05e21bd22c9df8f9ff78c65f3c645f127b10350c93a888c5f133f16854",
+      "bytes": 13060
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/batch/control/spec/core-v0.10.md.txt",
+      "sha256": "2ca585067a2c5113ce335847f433489c79a71d63471c2443786157038b60953e",
+      "bytes": 3093
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/batch/control/spec/core-v0.11.md.txt",
+      "sha256": "275105a2b66f5f0f6ddb12828d3e30db47f8603933654ea92b6bb3d5597ba8f9",
+      "bytes": 6042
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/batch/control/spec/core-v0.12.md.txt",
+      "sha256": "f02ddafe0a6196c15671a51e08aa12105ce216df1edb1a8354f54cfccc9e15c4",
+      "bytes": 7895
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/batch/control/spec/core-v0.2.md.txt",
+      "sha256": "9cbdbe1ddd2a55ce69b3333d5984a12d437ed225d856668c69edfbfd2a4b1ad2",
+      "bytes": 6391
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/batch/control/spec/core-v0.3.md.txt",
+      "sha256": "96e39f958c14b082ad0f3a0c72dc0b3318a7c1c442812b35c338d35b00759543",
+      "bytes": 4396
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/batch/control/spec/core-v0.4.md.txt",
+      "sha256": "84828c9c83b0c0b70d278e2458d77e01231bfd75899a99193b80a762b78ede83",
+      "bytes": 5039
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/batch/control/spec/core-v0.5.md.txt",
+      "sha256": "02ad206aa3cf73c38a8c13d082cdd7d0ea61c45a4dd2ab304497df2cc7c326cc",
+      "bytes": 6607
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/batch/control/spec/core-v0.6.md.txt",
+      "sha256": "3d8737fe0d67ef67916ba63fc6d91386d9ff983c9148d2b2c671048a0cf35245",
+      "bytes": 7076
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/batch/control/spec/core-v0.7.md.txt",
+      "sha256": "0111fcfce8f7ba3ca9abfa027282113dcb6c31df7fb2d946847260f392efb221",
+      "bytes": 7169
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/batch/control/spec/core-v0.8.md.txt",
+      "sha256": "790cfe562577be3dafa5ca3d2028e34d8782cbb36731fe45c29560a4badc6887",
+      "bytes": 5329
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/batch/control/spec/core-v0.9.md.txt",
+      "sha256": "4bc8977f5151c72df856a06da8cc1ff136a9fb355681b47075bbd17d570d5379",
+      "bytes": 7360
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/batch/control/spec/core-v1.0.md.txt",
+      "sha256": "8dbc2ca888f49b84125a8faedf39160bb1eab27e0f25b336b1ef8f87f14f3b2b",
+      "bytes": 5242
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/batch/control/spec/core-v1.1.md.txt",
+      "sha256": "98c9b16d2bd72229464751f1d6c03790efde00a234bf7d2add2306f30b785361",
+      "bytes": 4694
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/batch/control/spec/core-v1.10.md.txt",
+      "sha256": "45d45f48a14fda25275c50ea02d6d65854d14e3fb6989ea56ef6d1aba62ec308",
+      "bytes": 4925
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/batch/control/spec/core-v1.11.md.txt",
+      "sha256": "d13c38830326c983d336c83ab4a398867bd17858ade3c5f8ecc6d088359182aa",
+      "bytes": 2968
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/batch/control/spec/core-v1.2.md.txt",
+      "sha256": "7d0f42dd9d1bd99b860af5045c960fa82ffc96511d8f6397fefa381964c5b363",
+      "bytes": 5534
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/batch/control/spec/core-v1.3.md.txt",
+      "sha256": "2ea91b7b4d4c7716a593ceafcfff42227f05f94e45d8500e9ed04e0c956a9118",
+      "bytes": 6183
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/batch/control/spec/core-v1.4.md.txt",
+      "sha256": "01b365a0c8874db2ad9982e1e85dc036cf22cf31521c2b28c943c08888edf9b2",
+      "bytes": 5603
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/batch/control/spec/core-v1.5.md.txt",
+      "sha256": "dac4877adab3d738fb05fc57c37436106a22206a3069446a00c47de65c1abdda",
+      "bytes": 4557
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/batch/control/spec/core-v1.6.md.txt",
+      "sha256": "71967bd60313ce04cabdf740863eb2f1c73c49ecb1f22ea58ed6e9abbcd9c886",
+      "bytes": 4447
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/batch/control/spec/core-v1.7.md.txt",
+      "sha256": "2123fbea05d172cf4723e683afc4216c64e9bc0a62495f25e06b7ebc83311ed3",
+      "bytes": 3510
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/batch/control/spec/core-v1.8.md.txt",
+      "sha256": "422e050a2b5aa621e9b236f003084fa5398995e3144b3781b998092422255eb6",
+      "bytes": 5772
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/batch/control/spec/core-v1.9.md.txt",
+      "sha256": "c84dc7e6b555fc92458d632c0b92fb31052abd023e58b0201c735c6019ec225b",
+      "bytes": 2560
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/batch/control/spec/generic-reuse-workload.md.txt",
+      "sha256": "53e5d3097494f3deb5379c77a343997dfa52f47edb6c3915006dac05082b244f",
+      "bytes": 2596
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/batch/control/spec/language-milestone-workloads.md.txt",
+      "sha256": "f0be02538657fc901e9241049314b75d03b0472bc776ad3748d63c5c847a2b4d",
+      "bytes": 6656
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/batch/control/spec/language-v1-acceptance.md.txt",
+      "sha256": "33e7c84c36db6bcf74059f57e08e3eaa550e1235955d77eae4e6ca4afbed5f33",
+      "bytes": 6645
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/batch/control/spec/native-interface-v0.1.md.txt",
+      "sha256": "fc98302a3a5e50c8a87079231b9311954e8351383ba872e4223385ff1770934e",
+      "bytes": 10000
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/batch/control/spec/native-llvm-v0.1.md.txt",
+      "sha256": "580611e7fc27523e4aed69b9064a7c688096c8254eecf9a53541f93994045b21",
+      "bytes": 5632
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/batch/control/spec/native-v0.1.md.txt",
+      "sha256": "befed14019840eea1988bf6ff982d531df105bb0d1b057e765e820ed72cdc0b6",
+      "bytes": 6568
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/batch/control/spec/recursive-ast-workload.md.txt",
+      "sha256": "3138f238b71d5d12001391dc3d2f8cf054a1a59622608699732bcc05441c7a3a",
+      "bytes": 1600
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/batch/control/spec/schemas/conformance-case.schema.json",
+      "sha256": "ef3a27dd2a0caa8249c1f1439eb0abf96983350456db4efaabfdd2e2cc24c443",
+      "bytes": 2269
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/batch/control/spec/schemas/request-envelope.schema.json",
+      "sha256": "2abad3a1e8bbbb980cfa0fbe2c9c38a789ba94215bd6481f677d15cfe7c24409",
+      "bytes": 1964
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/batch/control/spec/schemas/response-envelope.schema.json",
+      "sha256": "a4e7d16a8bc25e06d5a571259df750f7c024319922e419bae57a8d66c64e7ca4",
+      "bytes": 3614
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/batch/control/spec/schemas/tool-descriptor.schema.json",
+      "sha256": "2e375db03b357fee59094e46252dcd847a3adf3fc04fae39457bf98a62bc17ef",
+      "bytes": 1727
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/batch/control/spec/source-diagnostics-v0.1.md.txt",
+      "sha256": "d531df2c57fdd4ec2917fb029a8fc54f441f6632fbfb7c2b4cfe3b8168e6eb3b",
+      "bytes": 3894
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/batch/control/spec/sqlite-interface-v0.1.md.txt",
+      "sha256": "19de3da7153b874edc5518ded812515c2ce32dc67a4d1226307c7a0c8b612bdf",
+      "bytes": 9003
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/batch/control/util.lobo",
+      "sha256": "c43f8e6085a7f03acbc1dac3e872ffe5ebdf8f86133519b5ce286a08e7d2055c",
+      "bytes": 338
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/batch/control/util.lobo.ids.json",
+      "sha256": "e19f179ed53b0319c39febce4e46eb462845e30547177c99a14aac27ed6ad174",
+      "bytes": 178
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/batch/skill/.agents/skills/lobo-development/SKILL.md.txt",
+      "sha256": "804a12e43f79bef059243f88e474266890c785d02df034645cbab88da50a52b5",
+      "bytes": 4799
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/batch/skill/.agents/skills/lobo-programming/references/callbacks.lobo",
+      "sha256": "a106cf1e51354df3296e755d882d6f0fc6ce7690b761914cca0f76cc0c0bf63e",
+      "bytes": 406
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/batch/skill/.agents/skills/lobo-programming/references/callbacks.lobo.ids.json",
+      "sha256": "7cf6c0e2a287692417905cb0fb94a3ab5f04cb517695ad597f2404e5888b11cc",
+      "bytes": 334
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/batch/skill/.agents/skills/lobo-programming/references/compact-example.lobo",
+      "sha256": "d2376c69b774da83073a98883e91794750d59f99ed3fa380d9aaa673d1950954",
+      "bytes": 231
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/batch/skill/.agents/skills/lobo-programming/references/compact-example.lobo.ids.json",
+      "sha256": "2dbc359fba6b65d4fa0667b91bd80e8c4f150b38ecb26c00c21e743332906d0e",
+      "bytes": 298
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/batch/skill/.agents/skills/lobo-programming/references/conveniences.lobo",
+      "sha256": "ffb3bcfaa7fa99fca865d6498238b4c81b857a01e2744d46d5a6f0308765e9c9",
+      "bytes": 301
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/batch/skill/.agents/skills/lobo-programming/references/conveniences.lobo.ids.json",
+      "sha256": "eb25455ebf8d705ecd0d1d2261623cb5930cd4ea9bb3bf04de2d2e7bb0921817",
+      "bytes": 337
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/batch/skill/.agents/skills/lobo-programming/references/examples.lobo",
+      "sha256": "cf65d2cdc47a1bb15e154f94fe2e70d92e58eb15d405c8a2fb68261c294a1b3c",
+      "bytes": 2028
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/batch/skill/.agents/skills/lobo-programming/references/json-example.lobo",
+      "sha256": "e45bbda6b893e09f021821bd500195c4e27a827e81edcc249458cef53c3cc712",
+      "bytes": 269
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/batch/skill/.agents/skills/lobo-programming/references/language.md.txt",
+      "sha256": "f007469320ec5054db07dac9302f8b6ac9a9dc976099ffd566c1ea963ab36562",
+      "bytes": 12554
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/batch/skill/.agents/skills/lobo-programming/references/native-example.lobo",
+      "sha256": "79c44e86db8aa77322b4d99a424a25a0b2d37ced37e3e65af344c6a02d03737c",
+      "bytes": 300
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/batch/skill/.agents/skills/lobo-programming/references/sqlite-example.lobo",
+      "sha256": "855f210acb18bc4568aad97373a8633cd9b7053d368980172317c76fab74927a",
+      "bytes": 303
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/batch/skill/.agents/skills/lobo-programming/references/sqlite-example.lobo.ids.json",
+      "sha256": "18ae22c6bf9c71e6b1f7633bd7fcd847883b919ab27f7b34d18feca3f455a2e6",
+      "bytes": 343
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/batch/skill/.agents/skills/lobo-programming/references/tools.md.txt",
+      "sha256": "1913a1fceffba4c09f72625d9bc1e8d8104e35025ad674988a73405ba8eb8429",
+      "bytes": 8694
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/batch/skill/.agents/skills/lobo-programming/references/try-example.lobo",
+      "sha256": "2f6b5750d060c929eae94cb9b001b3ea9154f9ddaa369c0934c1953cce21770a",
+      "bytes": 412
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/batch/skill/AGENTS.md.txt",
+      "sha256": "3c8c8fce33c21a65ee4b8a44fe408af1f260accb220adba4fb6a75e331e7ea11",
+      "bytes": 153
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/batch/skill/GUIDE.txt",
+      "sha256": "6e9c2fab00d1f5598b5ed5bea09375bb4ef6eb01822bec32d4575f99017b5f77",
+      "bytes": 3027
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/batch/skill/TASK.txt",
+      "sha256": "9abe465b8c7f8f7b0563e5b4257afa199ceec17b0c979d160e8e7f03fadeaaf3",
+      "bytes": 885
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/batch/skill/VISIBLE.json",
+      "sha256": "48d062aa79b1b19d95c8f45f81abd858a3d84e6a2980c2ec9b1c5bdae0d96d5d",
+      "bytes": 1266
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/batch/skill/check.py",
+      "sha256": "19cfc08bd63439e1487ff9ee80fc4a013b804feb6b424788b2fc62fb63bd278f",
+      "bytes": 385
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/batch/skill/docs/agent-reference/compact-pilot-2026-11-24/contracts.txt",
+      "sha256": "86a129a75ffba8cb447f0a97b513cc92abb806b932609fc253273909aae868aa",
+      "bytes": 796
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/batch/skill/docs/agent-reference/compact-pilot-2026-11-24/nominal.txt",
+      "sha256": "9810070ea2f016955293106bc0f7bf2f9fbb718619ad5b8372f34fbc380a0510",
+      "bytes": 819
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/batch/skill/docs/agent-reference/compact-pilot-2026-11-24/propagation.txt",
+      "sha256": "d204f387ce82c1a0c1106ec337db631c06ec084c51f7b583f7eb9b45fb38c43f",
+      "bytes": 744
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/batch/skill/docs/agent-reference/compact-pilot-2026-11-24/ranges.txt",
+      "sha256": "633eac0a1b432389d842277929b485519962a646c07bbe97a69a403b5d217478",
+      "bytes": 934
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/batch/skill/libraries/http/README.md.txt",
+      "sha256": "c4dd34349e63538c79fe003c6cff87c3e4d27a624bc2d3146ed4fe08c4626774",
+      "bytes": 4399
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/batch/skill/libraries/http/http.lobo",
+      "sha256": "ea9b9d87e15321e06ca67932258b60451c3da04a815e97d234ef2b36a91dba9f",
+      "bytes": 2787
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/batch/skill/libraries/http-server/README.md.txt",
+      "sha256": "7f695c6966c1a31adf74d2d620760857a07ac28c0763a65fc8a6001800b6bde2",
+      "bytes": 7886
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/batch/skill/libraries/http-server/server.lobo",
+      "sha256": "3aeac600d4131e544a7054f0f751efb5945e1616c84b210cfdabf5d936912a1e",
+      "bytes": 6880
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/batch/skill/libraries/http-server/server.lobo.ids.json",
+      "sha256": "27cc7a4a712b98b29bd3fbae6e38616ed1713fb9cf07cc4e6c371d0823f3e640",
+      "bytes": 1408
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/batch/skill/libraries/http-server/transport.lobo",
+      "sha256": "ac5af9a0ceed5f7a446450c0248c7b6c284931908dc27b25ea1a69cb6517a52b",
+      "bytes": 8145
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/batch/skill/libraries/http-server/transport.lobo.ids.json",
+      "sha256": "9163bf4fbd4215230030857e386d89b9a38843f233d4ca357e119f93779cc68d",
+      "bytes": 2021
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/batch/skill/libraries/json/README.md.txt",
+      "sha256": "fcc2d6742f11f4a53fbe1f26ce7a390e477e0de88a983e4a348884f6983d4959",
+      "bytes": 5305
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/batch/skill/libraries/json/json.lobo",
+      "sha256": "3ed68fee975a46affca613dd6da60fbe6ea297fc447b8c91a76fbe7b2406ac39",
+      "bytes": 8228
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/batch/skill/libraries/native/README.md.txt",
+      "sha256": "4de8dd7276b56d529c96f909ba6e4903fda299e255394e1e8e4bef094d104eea",
+      "bytes": 3872
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/batch/skill/libraries/native/native.lobo",
+      "sha256": "ee7ba249a414ff9421cc36d3373f412b6ce63e62d696d1bdd0f9ce111e9027d1",
+      "bytes": 4649
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/batch/skill/libraries/native/permissions.lobo",
+      "sha256": "c3148d6d50d3d8e2f326b771b76353fed490ba06cfd8cad21deb5d7f8f070e12",
+      "bytes": 1347
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/batch/skill/libraries/sql/README.md.txt",
+      "sha256": "85f5ec08131d902d2ed64014ebd687462def277aa5f0876599c1058cfd71fad5",
+      "bytes": 4514
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/batch/skill/libraries/sql/sql.lobo",
+      "sha256": "5704a8abcf1e1d0ee435b09aa7219c9c809bc1aaa304f3fe61b3de41d903a133",
+      "bytes": 9348
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/batch/skill/libraries/sql/sql.lobo.ids.json",
+      "sha256": "67fc9cd6d80fed595e0efdffeb36b7153d865236ab188d2da776ed8effd643d4",
+      "bytes": 2033
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/batch/skill/logic.lobo",
+      "sha256": "66e1fbbda097ee4a2c6af49782ca420d81212661f559160a2f1db3e3cf44cc49",
+      "bytes": 234
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/batch/skill/logic.lobo.ids.json",
+      "sha256": "a71c36cb1b5a0c3de10ddf814c9ab6d5e547c02a00cfbd7f4499d71deece96d7",
+      "bytes": 375
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/batch/skill/model.lobo",
+      "sha256": "f09f82502ce9b55ae6a0444d309745c8c22a19ca07aad5bea3d5dd87876fdfc2",
+      "bytes": 140
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/batch/skill/model.lobo.ids.json",
+      "sha256": "558abb1cf76cec313f51b42b5d4f8d850362a59f0714c4911f95280695589c05",
+      "bytes": 244
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/batch/skill/research/compact-pilot-2026-11-24.md.txt",
+      "sha256": "761a1fc994e8bdf6865f293fc37728aab95932c49d67a9ea23907a1de352ef25",
+      "bytes": 9416
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/batch/skill/spec/README.md.txt",
+      "sha256": "e8b911e1997d93f0ede12e14c97851f8e08843ca19e84a1eb5a4319108e82653",
+      "bytes": 4757
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/batch/skill/spec/agent-testing-v0.1.md.txt",
+      "sha256": "dc9c1fb4b7f3aca5cc70a2cb844139190ec16218ee3ddb7759653f2d0fc4ab0e",
+      "bytes": 11933
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/batch/skill/spec/checked-artifact-v0.1.md.txt",
+      "sha256": "8e85e37b7a89812f135ccb796e083ea95771032d267e55bc9c0d18f53fa56cdf",
+      "bytes": 4094
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/batch/skill/spec/checked-artifact-v0.2.md.txt",
+      "sha256": "b13203846b1eb62eeb73445ef422cb526f7ae33d1e6804ecdef20e33c6365ff7",
+      "bytes": 1413
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/batch/skill/spec/checked-artifact-v0.3.md.txt",
+      "sha256": "4874fc7ba430389d8d3bf4df3c6fc34b2b5bb949ecfe646383e3f6fc04652b15",
+      "bytes": 1147
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/batch/skill/spec/compact-source-v0.1.md.txt",
+      "sha256": "d7035fbf81ff5c83f84a34dd5c73a1617f1a49176019a2693ba56c501955a94f",
+      "bytes": 5994
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/batch/skill/spec/conformance/core-cases.json",
+      "sha256": "076f50cc9a45b7588eed4d150bb289fcdf04b0dcc7435dd871e71ef388cf71df",
+      "bytes": 4968
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/batch/skill/spec/core-v0.1.md.txt",
+      "sha256": "c3fe3c05e21bd22c9df8f9ff78c65f3c645f127b10350c93a888c5f133f16854",
+      "bytes": 13060
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/batch/skill/spec/core-v0.10.md.txt",
+      "sha256": "2ca585067a2c5113ce335847f433489c79a71d63471c2443786157038b60953e",
+      "bytes": 3093
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/batch/skill/spec/core-v0.11.md.txt",
+      "sha256": "275105a2b66f5f0f6ddb12828d3e30db47f8603933654ea92b6bb3d5597ba8f9",
+      "bytes": 6042
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/batch/skill/spec/core-v0.12.md.txt",
+      "sha256": "f02ddafe0a6196c15671a51e08aa12105ce216df1edb1a8354f54cfccc9e15c4",
+      "bytes": 7895
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/batch/skill/spec/core-v0.2.md.txt",
+      "sha256": "9cbdbe1ddd2a55ce69b3333d5984a12d437ed225d856668c69edfbfd2a4b1ad2",
+      "bytes": 6391
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/batch/skill/spec/core-v0.3.md.txt",
+      "sha256": "96e39f958c14b082ad0f3a0c72dc0b3318a7c1c442812b35c338d35b00759543",
+      "bytes": 4396
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/batch/skill/spec/core-v0.4.md.txt",
+      "sha256": "84828c9c83b0c0b70d278e2458d77e01231bfd75899a99193b80a762b78ede83",
+      "bytes": 5039
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/batch/skill/spec/core-v0.5.md.txt",
+      "sha256": "02ad206aa3cf73c38a8c13d082cdd7d0ea61c45a4dd2ab304497df2cc7c326cc",
+      "bytes": 6607
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/batch/skill/spec/core-v0.6.md.txt",
+      "sha256": "3d8737fe0d67ef67916ba63fc6d91386d9ff983c9148d2b2c671048a0cf35245",
+      "bytes": 7076
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/batch/skill/spec/core-v0.7.md.txt",
+      "sha256": "0111fcfce8f7ba3ca9abfa027282113dcb6c31df7fb2d946847260f392efb221",
+      "bytes": 7169
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/batch/skill/spec/core-v0.8.md.txt",
+      "sha256": "790cfe562577be3dafa5ca3d2028e34d8782cbb36731fe45c29560a4badc6887",
+      "bytes": 5329
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/batch/skill/spec/core-v0.9.md.txt",
+      "sha256": "4bc8977f5151c72df856a06da8cc1ff136a9fb355681b47075bbd17d570d5379",
+      "bytes": 7360
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/batch/skill/spec/core-v1.0.md.txt",
+      "sha256": "8dbc2ca888f49b84125a8faedf39160bb1eab27e0f25b336b1ef8f87f14f3b2b",
+      "bytes": 5242
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/batch/skill/spec/core-v1.1.md.txt",
+      "sha256": "98c9b16d2bd72229464751f1d6c03790efde00a234bf7d2add2306f30b785361",
+      "bytes": 4694
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/batch/skill/spec/core-v1.10.md.txt",
+      "sha256": "45d45f48a14fda25275c50ea02d6d65854d14e3fb6989ea56ef6d1aba62ec308",
+      "bytes": 4925
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/batch/skill/spec/core-v1.11.md.txt",
+      "sha256": "d13c38830326c983d336c83ab4a398867bd17858ade3c5f8ecc6d088359182aa",
+      "bytes": 2968
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/batch/skill/spec/core-v1.2.md.txt",
+      "sha256": "7d0f42dd9d1bd99b860af5045c960fa82ffc96511d8f6397fefa381964c5b363",
+      "bytes": 5534
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/batch/skill/spec/core-v1.3.md.txt",
+      "sha256": "2ea91b7b4d4c7716a593ceafcfff42227f05f94e45d8500e9ed04e0c956a9118",
+      "bytes": 6183
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/batch/skill/spec/core-v1.4.md.txt",
+      "sha256": "01b365a0c8874db2ad9982e1e85dc036cf22cf31521c2b28c943c08888edf9b2",
+      "bytes": 5603
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/batch/skill/spec/core-v1.5.md.txt",
+      "sha256": "dac4877adab3d738fb05fc57c37436106a22206a3069446a00c47de65c1abdda",
+      "bytes": 4557
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/batch/skill/spec/core-v1.6.md.txt",
+      "sha256": "71967bd60313ce04cabdf740863eb2f1c73c49ecb1f22ea58ed6e9abbcd9c886",
+      "bytes": 4447
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/batch/skill/spec/core-v1.7.md.txt",
+      "sha256": "2123fbea05d172cf4723e683afc4216c64e9bc0a62495f25e06b7ebc83311ed3",
+      "bytes": 3510
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/batch/skill/spec/core-v1.8.md.txt",
+      "sha256": "422e050a2b5aa621e9b236f003084fa5398995e3144b3781b998092422255eb6",
+      "bytes": 5772
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/batch/skill/spec/core-v1.9.md.txt",
+      "sha256": "c84dc7e6b555fc92458d632c0b92fb31052abd023e58b0201c735c6019ec225b",
+      "bytes": 2560
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/batch/skill/spec/generic-reuse-workload.md.txt",
+      "sha256": "53e5d3097494f3deb5379c77a343997dfa52f47edb6c3915006dac05082b244f",
+      "bytes": 2596
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/batch/skill/spec/language-milestone-workloads.md.txt",
+      "sha256": "f0be02538657fc901e9241049314b75d03b0472bc776ad3748d63c5c847a2b4d",
+      "bytes": 6656
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/batch/skill/spec/language-v1-acceptance.md.txt",
+      "sha256": "33e7c84c36db6bcf74059f57e08e3eaa550e1235955d77eae4e6ca4afbed5f33",
+      "bytes": 6645
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/batch/skill/spec/native-interface-v0.1.md.txt",
+      "sha256": "fc98302a3a5e50c8a87079231b9311954e8351383ba872e4223385ff1770934e",
+      "bytes": 10000
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/batch/skill/spec/native-llvm-v0.1.md.txt",
+      "sha256": "580611e7fc27523e4aed69b9064a7c688096c8254eecf9a53541f93994045b21",
+      "bytes": 5632
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/batch/skill/spec/native-v0.1.md.txt",
+      "sha256": "befed14019840eea1988bf6ff982d531df105bb0d1b057e765e820ed72cdc0b6",
+      "bytes": 6568
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/batch/skill/spec/recursive-ast-workload.md.txt",
+      "sha256": "3138f238b71d5d12001391dc3d2f8cf054a1a59622608699732bcc05441c7a3a",
+      "bytes": 1600
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/batch/skill/spec/schemas/conformance-case.schema.json",
+      "sha256": "ef3a27dd2a0caa8249c1f1439eb0abf96983350456db4efaabfdd2e2cc24c443",
+      "bytes": 2269
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/batch/skill/spec/schemas/request-envelope.schema.json",
+      "sha256": "2abad3a1e8bbbb980cfa0fbe2c9c38a789ba94215bd6481f677d15cfe7c24409",
+      "bytes": 1964
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/batch/skill/spec/schemas/response-envelope.schema.json",
+      "sha256": "a4e7d16a8bc25e06d5a571259df750f7c024319922e419bae57a8d66c64e7ca4",
+      "bytes": 3614
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/batch/skill/spec/schemas/tool-descriptor.schema.json",
+      "sha256": "2e375db03b357fee59094e46252dcd847a3adf3fc04fae39457bf98a62bc17ef",
+      "bytes": 1727
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/batch/skill/spec/source-diagnostics-v0.1.md.txt",
+      "sha256": "d531df2c57fdd4ec2917fb029a8fc54f441f6632fbfb7c2b4cfe3b8168e6eb3b",
+      "bytes": 3894
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/batch/skill/spec/sqlite-interface-v0.1.md.txt",
+      "sha256": "19de3da7153b874edc5518ded812515c2ce32dc67a4d1226307c7a0c8b612bdf",
+      "bytes": 9003
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/batch/skill/util.lobo",
+      "sha256": "c43f8e6085a7f03acbc1dac3e872ffe5ebdf8f86133519b5ce286a08e7d2055c",
+      "bytes": 338
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/batch/skill/util.lobo.ids.json",
+      "sha256": "e19f179ed53b0319c39febce4e46eb462845e30547177c99a14aac27ed6ad174",
+      "bytes": 178
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/dispatch/control/.agents/skills/lobo-programming/references/callbacks.lobo",
+      "sha256": "a106cf1e51354df3296e755d882d6f0fc6ce7690b761914cca0f76cc0c0bf63e",
+      "bytes": 406
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/dispatch/control/.agents/skills/lobo-programming/references/callbacks.lobo.ids.json",
+      "sha256": "7cf6c0e2a287692417905cb0fb94a3ab5f04cb517695ad597f2404e5888b11cc",
+      "bytes": 334
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/dispatch/control/.agents/skills/lobo-programming/references/compact-example.lobo",
+      "sha256": "d2376c69b774da83073a98883e91794750d59f99ed3fa380d9aaa673d1950954",
+      "bytes": 231
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/dispatch/control/.agents/skills/lobo-programming/references/compact-example.lobo.ids.json",
+      "sha256": "2dbc359fba6b65d4fa0667b91bd80e8c4f150b38ecb26c00c21e743332906d0e",
+      "bytes": 298
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/dispatch/control/.agents/skills/lobo-programming/references/conveniences.lobo",
+      "sha256": "ffb3bcfaa7fa99fca865d6498238b4c81b857a01e2744d46d5a6f0308765e9c9",
+      "bytes": 301
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/dispatch/control/.agents/skills/lobo-programming/references/conveniences.lobo.ids.json",
+      "sha256": "eb25455ebf8d705ecd0d1d2261623cb5930cd4ea9bb3bf04de2d2e7bb0921817",
+      "bytes": 337
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/dispatch/control/.agents/skills/lobo-programming/references/examples.lobo",
+      "sha256": "cf65d2cdc47a1bb15e154f94fe2e70d92e58eb15d405c8a2fb68261c294a1b3c",
+      "bytes": 2028
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/dispatch/control/.agents/skills/lobo-programming/references/json-example.lobo",
+      "sha256": "e45bbda6b893e09f021821bd500195c4e27a827e81edcc249458cef53c3cc712",
+      "bytes": 269
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/dispatch/control/.agents/skills/lobo-programming/references/language.md.txt",
+      "sha256": "f007469320ec5054db07dac9302f8b6ac9a9dc976099ffd566c1ea963ab36562",
+      "bytes": 12554
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/dispatch/control/.agents/skills/lobo-programming/references/native-example.lobo",
+      "sha256": "79c44e86db8aa77322b4d99a424a25a0b2d37ced37e3e65af344c6a02d03737c",
+      "bytes": 300
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/dispatch/control/.agents/skills/lobo-programming/references/sqlite-example.lobo",
+      "sha256": "855f210acb18bc4568aad97373a8633cd9b7053d368980172317c76fab74927a",
+      "bytes": 303
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/dispatch/control/.agents/skills/lobo-programming/references/sqlite-example.lobo.ids.json",
+      "sha256": "18ae22c6bf9c71e6b1f7633bd7fcd847883b919ab27f7b34d18feca3f455a2e6",
+      "bytes": 343
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/dispatch/control/.agents/skills/lobo-programming/references/tools.md.txt",
+      "sha256": "1913a1fceffba4c09f72625d9bc1e8d8104e35025ad674988a73405ba8eb8429",
+      "bytes": 8694
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/dispatch/control/.agents/skills/lobo-programming/references/try-example.lobo",
+      "sha256": "2f6b5750d060c929eae94cb9b001b3ea9154f9ddaa369c0934c1953cce21770a",
+      "bytes": 412
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/dispatch/control/AGENTS.md.txt",
+      "sha256": "3c8c8fce33c21a65ee4b8a44fe408af1f260accb220adba4fb6a75e331e7ea11",
+      "bytes": 153
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/dispatch/control/GUIDE.txt",
+      "sha256": "6e9c2fab00d1f5598b5ed5bea09375bb4ef6eb01822bec32d4575f99017b5f77",
+      "bytes": 3027
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/dispatch/control/TASK.txt",
+      "sha256": "3873cc5372219db9d9e7ca42c8540d025d935e7e3171c9a30556551589cb049a",
+      "bytes": 908
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/dispatch/control/VISIBLE.json",
+      "sha256": "189d0521a519df938dc253115a40795b029180f7ee9d52a3aae84a83ea13141f",
+      "bytes": 1673
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/dispatch/control/check.py",
+      "sha256": "19cfc08bd63439e1487ff9ee80fc4a013b804feb6b424788b2fc62fb63bd278f",
+      "bytes": 385
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/dispatch/control/docs/agent-reference/compact-pilot-2026-11-24/contracts.txt",
+      "sha256": "86a129a75ffba8cb447f0a97b513cc92abb806b932609fc253273909aae868aa",
+      "bytes": 796
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/dispatch/control/docs/agent-reference/compact-pilot-2026-11-24/nominal.txt",
+      "sha256": "9810070ea2f016955293106bc0f7bf2f9fbb718619ad5b8372f34fbc380a0510",
+      "bytes": 819
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/dispatch/control/docs/agent-reference/compact-pilot-2026-11-24/propagation.txt",
+      "sha256": "d204f387ce82c1a0c1106ec337db631c06ec084c51f7b583f7eb9b45fb38c43f",
+      "bytes": 744
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/dispatch/control/docs/agent-reference/compact-pilot-2026-11-24/ranges.txt",
+      "sha256": "633eac0a1b432389d842277929b485519962a646c07bbe97a69a403b5d217478",
+      "bytes": 934
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/dispatch/control/libraries/http/README.md.txt",
+      "sha256": "c4dd34349e63538c79fe003c6cff87c3e4d27a624bc2d3146ed4fe08c4626774",
+      "bytes": 4399
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/dispatch/control/libraries/http/http.lobo",
+      "sha256": "ea9b9d87e15321e06ca67932258b60451c3da04a815e97d234ef2b36a91dba9f",
+      "bytes": 2787
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/dispatch/control/libraries/http-server/README.md.txt",
+      "sha256": "7f695c6966c1a31adf74d2d620760857a07ac28c0763a65fc8a6001800b6bde2",
+      "bytes": 7886
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/dispatch/control/libraries/http-server/server.lobo",
+      "sha256": "3aeac600d4131e544a7054f0f751efb5945e1616c84b210cfdabf5d936912a1e",
+      "bytes": 6880
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/dispatch/control/libraries/http-server/server.lobo.ids.json",
+      "sha256": "27cc7a4a712b98b29bd3fbae6e38616ed1713fb9cf07cc4e6c371d0823f3e640",
+      "bytes": 1408
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/dispatch/control/libraries/http-server/transport.lobo",
+      "sha256": "ac5af9a0ceed5f7a446450c0248c7b6c284931908dc27b25ea1a69cb6517a52b",
+      "bytes": 8145
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/dispatch/control/libraries/http-server/transport.lobo.ids.json",
+      "sha256": "9163bf4fbd4215230030857e386d89b9a38843f233d4ca357e119f93779cc68d",
+      "bytes": 2021
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/dispatch/control/libraries/json/README.md.txt",
+      "sha256": "fcc2d6742f11f4a53fbe1f26ce7a390e477e0de88a983e4a348884f6983d4959",
+      "bytes": 5305
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/dispatch/control/libraries/json/json.lobo",
+      "sha256": "3ed68fee975a46affca613dd6da60fbe6ea297fc447b8c91a76fbe7b2406ac39",
+      "bytes": 8228
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/dispatch/control/libraries/native/README.md.txt",
+      "sha256": "4de8dd7276b56d529c96f909ba6e4903fda299e255394e1e8e4bef094d104eea",
+      "bytes": 3872
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/dispatch/control/libraries/native/native.lobo",
+      "sha256": "ee7ba249a414ff9421cc36d3373f412b6ce63e62d696d1bdd0f9ce111e9027d1",
+      "bytes": 4649
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/dispatch/control/libraries/native/permissions.lobo",
+      "sha256": "c3148d6d50d3d8e2f326b771b76353fed490ba06cfd8cad21deb5d7f8f070e12",
+      "bytes": 1347
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/dispatch/control/libraries/sql/README.md.txt",
+      "sha256": "85f5ec08131d902d2ed64014ebd687462def277aa5f0876599c1058cfd71fad5",
+      "bytes": 4514
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/dispatch/control/libraries/sql/sql.lobo",
+      "sha256": "5704a8abcf1e1d0ee435b09aa7219c9c809bc1aaa304f3fe61b3de41d903a133",
+      "bytes": 9348
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/dispatch/control/libraries/sql/sql.lobo.ids.json",
+      "sha256": "67fc9cd6d80fed595e0efdffeb36b7153d865236ab188d2da776ed8effd643d4",
+      "bytes": 2033
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/dispatch/control/logic.lobo",
+      "sha256": "1f563412293d55b23b8fd7449cbaa132e429697f56e76e78a20fde8d4f1aa978",
+      "bytes": 517
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/dispatch/control/logic.lobo.ids.json",
+      "sha256": "a26bb9fc14b3a1622a344921475125578ab1e23075cdd0c4d71effc681cb0417",
+      "bytes": 333
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/dispatch/control/model.lobo",
+      "sha256": "0564c8a0bb310404a39acbae6f0ed185f4bb75a3475ab52c8b0f5ea164297035",
+      "bytes": 105
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/dispatch/control/model.lobo.ids.json",
+      "sha256": "68a595791eb57a91ddd59116d2ef8b25d8550869f59d5260db58d9f4ad9a1897",
+      "bytes": 204
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/dispatch/control/research/compact-pilot-2026-11-24.md.txt",
+      "sha256": "761a1fc994e8bdf6865f293fc37728aab95932c49d67a9ea23907a1de352ef25",
+      "bytes": 9416
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/dispatch/control/spec/README.md.txt",
+      "sha256": "e8b911e1997d93f0ede12e14c97851f8e08843ca19e84a1eb5a4319108e82653",
+      "bytes": 4757
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/dispatch/control/spec/agent-testing-v0.1.md.txt",
+      "sha256": "dc9c1fb4b7f3aca5cc70a2cb844139190ec16218ee3ddb7759653f2d0fc4ab0e",
+      "bytes": 11933
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/dispatch/control/spec/checked-artifact-v0.1.md.txt",
+      "sha256": "8e85e37b7a89812f135ccb796e083ea95771032d267e55bc9c0d18f53fa56cdf",
+      "bytes": 4094
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/dispatch/control/spec/checked-artifact-v0.2.md.txt",
+      "sha256": "b13203846b1eb62eeb73445ef422cb526f7ae33d1e6804ecdef20e33c6365ff7",
+      "bytes": 1413
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/dispatch/control/spec/checked-artifact-v0.3.md.txt",
+      "sha256": "4874fc7ba430389d8d3bf4df3c6fc34b2b5bb949ecfe646383e3f6fc04652b15",
+      "bytes": 1147
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/dispatch/control/spec/compact-source-v0.1.md.txt",
+      "sha256": "d7035fbf81ff5c83f84a34dd5c73a1617f1a49176019a2693ba56c501955a94f",
+      "bytes": 5994
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/dispatch/control/spec/conformance/core-cases.json",
+      "sha256": "076f50cc9a45b7588eed4d150bb289fcdf04b0dcc7435dd871e71ef388cf71df",
+      "bytes": 4968
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/dispatch/control/spec/core-v0.1.md.txt",
+      "sha256": "c3fe3c05e21bd22c9df8f9ff78c65f3c645f127b10350c93a888c5f133f16854",
+      "bytes": 13060
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/dispatch/control/spec/core-v0.10.md.txt",
+      "sha256": "2ca585067a2c5113ce335847f433489c79a71d63471c2443786157038b60953e",
+      "bytes": 3093
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/dispatch/control/spec/core-v0.11.md.txt",
+      "sha256": "275105a2b66f5f0f6ddb12828d3e30db47f8603933654ea92b6bb3d5597ba8f9",
+      "bytes": 6042
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/dispatch/control/spec/core-v0.12.md.txt",
+      "sha256": "f02ddafe0a6196c15671a51e08aa12105ce216df1edb1a8354f54cfccc9e15c4",
+      "bytes": 7895
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/dispatch/control/spec/core-v0.2.md.txt",
+      "sha256": "9cbdbe1ddd2a55ce69b3333d5984a12d437ed225d856668c69edfbfd2a4b1ad2",
+      "bytes": 6391
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/dispatch/control/spec/core-v0.3.md.txt",
+      "sha256": "96e39f958c14b082ad0f3a0c72dc0b3318a7c1c442812b35c338d35b00759543",
+      "bytes": 4396
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/dispatch/control/spec/core-v0.4.md.txt",
+      "sha256": "84828c9c83b0c0b70d278e2458d77e01231bfd75899a99193b80a762b78ede83",
+      "bytes": 5039
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/dispatch/control/spec/core-v0.5.md.txt",
+      "sha256": "02ad206aa3cf73c38a8c13d082cdd7d0ea61c45a4dd2ab304497df2cc7c326cc",
+      "bytes": 6607
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/dispatch/control/spec/core-v0.6.md.txt",
+      "sha256": "3d8737fe0d67ef67916ba63fc6d91386d9ff983c9148d2b2c671048a0cf35245",
+      "bytes": 7076
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/dispatch/control/spec/core-v0.7.md.txt",
+      "sha256": "0111fcfce8f7ba3ca9abfa027282113dcb6c31df7fb2d946847260f392efb221",
+      "bytes": 7169
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/dispatch/control/spec/core-v0.8.md.txt",
+      "sha256": "790cfe562577be3dafa5ca3d2028e34d8782cbb36731fe45c29560a4badc6887",
+      "bytes": 5329
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/dispatch/control/spec/core-v0.9.md.txt",
+      "sha256": "4bc8977f5151c72df856a06da8cc1ff136a9fb355681b47075bbd17d570d5379",
+      "bytes": 7360
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/dispatch/control/spec/core-v1.0.md.txt",
+      "sha256": "8dbc2ca888f49b84125a8faedf39160bb1eab27e0f25b336b1ef8f87f14f3b2b",
+      "bytes": 5242
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/dispatch/control/spec/core-v1.1.md.txt",
+      "sha256": "98c9b16d2bd72229464751f1d6c03790efde00a234bf7d2add2306f30b785361",
+      "bytes": 4694
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/dispatch/control/spec/core-v1.10.md.txt",
+      "sha256": "45d45f48a14fda25275c50ea02d6d65854d14e3fb6989ea56ef6d1aba62ec308",
+      "bytes": 4925
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/dispatch/control/spec/core-v1.11.md.txt",
+      "sha256": "d13c38830326c983d336c83ab4a398867bd17858ade3c5f8ecc6d088359182aa",
+      "bytes": 2968
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/dispatch/control/spec/core-v1.2.md.txt",
+      "sha256": "7d0f42dd9d1bd99b860af5045c960fa82ffc96511d8f6397fefa381964c5b363",
+      "bytes": 5534
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/dispatch/control/spec/core-v1.3.md.txt",
+      "sha256": "2ea91b7b4d4c7716a593ceafcfff42227f05f94e45d8500e9ed04e0c956a9118",
+      "bytes": 6183
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/dispatch/control/spec/core-v1.4.md.txt",
+      "sha256": "01b365a0c8874db2ad9982e1e85dc036cf22cf31521c2b28c943c08888edf9b2",
+      "bytes": 5603
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/dispatch/control/spec/core-v1.5.md.txt",
+      "sha256": "dac4877adab3d738fb05fc57c37436106a22206a3069446a00c47de65c1abdda",
+      "bytes": 4557
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/dispatch/control/spec/core-v1.6.md.txt",
+      "sha256": "71967bd60313ce04cabdf740863eb2f1c73c49ecb1f22ea58ed6e9abbcd9c886",
+      "bytes": 4447
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/dispatch/control/spec/core-v1.7.md.txt",
+      "sha256": "2123fbea05d172cf4723e683afc4216c64e9bc0a62495f25e06b7ebc83311ed3",
+      "bytes": 3510
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/dispatch/control/spec/core-v1.8.md.txt",
+      "sha256": "422e050a2b5aa621e9b236f003084fa5398995e3144b3781b998092422255eb6",
+      "bytes": 5772
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/dispatch/control/spec/core-v1.9.md.txt",
+      "sha256": "c84dc7e6b555fc92458d632c0b92fb31052abd023e58b0201c735c6019ec225b",
+      "bytes": 2560
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/dispatch/control/spec/generic-reuse-workload.md.txt",
+      "sha256": "53e5d3097494f3deb5379c77a343997dfa52f47edb6c3915006dac05082b244f",
+      "bytes": 2596
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/dispatch/control/spec/language-milestone-workloads.md.txt",
+      "sha256": "f0be02538657fc901e9241049314b75d03b0472bc776ad3748d63c5c847a2b4d",
+      "bytes": 6656
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/dispatch/control/spec/language-v1-acceptance.md.txt",
+      "sha256": "33e7c84c36db6bcf74059f57e08e3eaa550e1235955d77eae4e6ca4afbed5f33",
+      "bytes": 6645
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/dispatch/control/spec/native-interface-v0.1.md.txt",
+      "sha256": "fc98302a3a5e50c8a87079231b9311954e8351383ba872e4223385ff1770934e",
+      "bytes": 10000
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/dispatch/control/spec/native-llvm-v0.1.md.txt",
+      "sha256": "580611e7fc27523e4aed69b9064a7c688096c8254eecf9a53541f93994045b21",
+      "bytes": 5632
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/dispatch/control/spec/native-v0.1.md.txt",
+      "sha256": "befed14019840eea1988bf6ff982d531df105bb0d1b057e765e820ed72cdc0b6",
+      "bytes": 6568
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/dispatch/control/spec/recursive-ast-workload.md.txt",
+      "sha256": "3138f238b71d5d12001391dc3d2f8cf054a1a59622608699732bcc05441c7a3a",
+      "bytes": 1600
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/dispatch/control/spec/schemas/conformance-case.schema.json",
+      "sha256": "ef3a27dd2a0caa8249c1f1439eb0abf96983350456db4efaabfdd2e2cc24c443",
+      "bytes": 2269
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/dispatch/control/spec/schemas/request-envelope.schema.json",
+      "sha256": "2abad3a1e8bbbb980cfa0fbe2c9c38a789ba94215bd6481f677d15cfe7c24409",
+      "bytes": 1964
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/dispatch/control/spec/schemas/response-envelope.schema.json",
+      "sha256": "a4e7d16a8bc25e06d5a571259df750f7c024319922e419bae57a8d66c64e7ca4",
+      "bytes": 3614
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/dispatch/control/spec/schemas/tool-descriptor.schema.json",
+      "sha256": "2e375db03b357fee59094e46252dcd847a3adf3fc04fae39457bf98a62bc17ef",
+      "bytes": 1727
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/dispatch/control/spec/source-diagnostics-v0.1.md.txt",
+      "sha256": "d531df2c57fdd4ec2917fb029a8fc54f441f6632fbfb7c2b4cfe3b8168e6eb3b",
+      "bytes": 3894
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/dispatch/control/spec/sqlite-interface-v0.1.md.txt",
+      "sha256": "19de3da7153b874edc5518ded812515c2ce32dc67a4d1226307c7a0c8b612bdf",
+      "bytes": 9003
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/dispatch/control/util.lobo",
+      "sha256": "c43f8e6085a7f03acbc1dac3e872ffe5ebdf8f86133519b5ce286a08e7d2055c",
+      "bytes": 338
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/dispatch/control/util.lobo.ids.json",
+      "sha256": "e19f179ed53b0319c39febce4e46eb462845e30547177c99a14aac27ed6ad174",
+      "bytes": 178
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/dispatch/skill/.agents/skills/lobo-development/SKILL.md.txt",
+      "sha256": "804a12e43f79bef059243f88e474266890c785d02df034645cbab88da50a52b5",
+      "bytes": 4799
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/dispatch/skill/.agents/skills/lobo-programming/references/callbacks.lobo",
+      "sha256": "a106cf1e51354df3296e755d882d6f0fc6ce7690b761914cca0f76cc0c0bf63e",
+      "bytes": 406
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/dispatch/skill/.agents/skills/lobo-programming/references/callbacks.lobo.ids.json",
+      "sha256": "7cf6c0e2a287692417905cb0fb94a3ab5f04cb517695ad597f2404e5888b11cc",
+      "bytes": 334
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/dispatch/skill/.agents/skills/lobo-programming/references/compact-example.lobo",
+      "sha256": "d2376c69b774da83073a98883e91794750d59f99ed3fa380d9aaa673d1950954",
+      "bytes": 231
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/dispatch/skill/.agents/skills/lobo-programming/references/compact-example.lobo.ids.json",
+      "sha256": "2dbc359fba6b65d4fa0667b91bd80e8c4f150b38ecb26c00c21e743332906d0e",
+      "bytes": 298
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/dispatch/skill/.agents/skills/lobo-programming/references/conveniences.lobo",
+      "sha256": "ffb3bcfaa7fa99fca865d6498238b4c81b857a01e2744d46d5a6f0308765e9c9",
+      "bytes": 301
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/dispatch/skill/.agents/skills/lobo-programming/references/conveniences.lobo.ids.json",
+      "sha256": "eb25455ebf8d705ecd0d1d2261623cb5930cd4ea9bb3bf04de2d2e7bb0921817",
+      "bytes": 337
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/dispatch/skill/.agents/skills/lobo-programming/references/examples.lobo",
+      "sha256": "cf65d2cdc47a1bb15e154f94fe2e70d92e58eb15d405c8a2fb68261c294a1b3c",
+      "bytes": 2028
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/dispatch/skill/.agents/skills/lobo-programming/references/json-example.lobo",
+      "sha256": "e45bbda6b893e09f021821bd500195c4e27a827e81edcc249458cef53c3cc712",
+      "bytes": 269
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/dispatch/skill/.agents/skills/lobo-programming/references/language.md.txt",
+      "sha256": "f007469320ec5054db07dac9302f8b6ac9a9dc976099ffd566c1ea963ab36562",
+      "bytes": 12554
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/dispatch/skill/.agents/skills/lobo-programming/references/native-example.lobo",
+      "sha256": "79c44e86db8aa77322b4d99a424a25a0b2d37ced37e3e65af344c6a02d03737c",
+      "bytes": 300
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/dispatch/skill/.agents/skills/lobo-programming/references/sqlite-example.lobo",
+      "sha256": "855f210acb18bc4568aad97373a8633cd9b7053d368980172317c76fab74927a",
+      "bytes": 303
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/dispatch/skill/.agents/skills/lobo-programming/references/sqlite-example.lobo.ids.json",
+      "sha256": "18ae22c6bf9c71e6b1f7633bd7fcd847883b919ab27f7b34d18feca3f455a2e6",
+      "bytes": 343
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/dispatch/skill/.agents/skills/lobo-programming/references/tools.md.txt",
+      "sha256": "1913a1fceffba4c09f72625d9bc1e8d8104e35025ad674988a73405ba8eb8429",
+      "bytes": 8694
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/dispatch/skill/.agents/skills/lobo-programming/references/try-example.lobo",
+      "sha256": "2f6b5750d060c929eae94cb9b001b3ea9154f9ddaa369c0934c1953cce21770a",
+      "bytes": 412
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/dispatch/skill/AGENTS.md.txt",
+      "sha256": "3c8c8fce33c21a65ee4b8a44fe408af1f260accb220adba4fb6a75e331e7ea11",
+      "bytes": 153
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/dispatch/skill/GUIDE.txt",
+      "sha256": "6e9c2fab00d1f5598b5ed5bea09375bb4ef6eb01822bec32d4575f99017b5f77",
+      "bytes": 3027
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/dispatch/skill/TASK.txt",
+      "sha256": "3873cc5372219db9d9e7ca42c8540d025d935e7e3171c9a30556551589cb049a",
+      "bytes": 908
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/dispatch/skill/VISIBLE.json",
+      "sha256": "189d0521a519df938dc253115a40795b029180f7ee9d52a3aae84a83ea13141f",
+      "bytes": 1673
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/dispatch/skill/check.py",
+      "sha256": "19cfc08bd63439e1487ff9ee80fc4a013b804feb6b424788b2fc62fb63bd278f",
+      "bytes": 385
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/dispatch/skill/docs/agent-reference/compact-pilot-2026-11-24/contracts.txt",
+      "sha256": "86a129a75ffba8cb447f0a97b513cc92abb806b932609fc253273909aae868aa",
+      "bytes": 796
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/dispatch/skill/docs/agent-reference/compact-pilot-2026-11-24/nominal.txt",
+      "sha256": "9810070ea2f016955293106bc0f7bf2f9fbb718619ad5b8372f34fbc380a0510",
+      "bytes": 819
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/dispatch/skill/docs/agent-reference/compact-pilot-2026-11-24/propagation.txt",
+      "sha256": "d204f387ce82c1a0c1106ec337db631c06ec084c51f7b583f7eb9b45fb38c43f",
+      "bytes": 744
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/dispatch/skill/docs/agent-reference/compact-pilot-2026-11-24/ranges.txt",
+      "sha256": "633eac0a1b432389d842277929b485519962a646c07bbe97a69a403b5d217478",
+      "bytes": 934
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/dispatch/skill/libraries/http/README.md.txt",
+      "sha256": "c4dd34349e63538c79fe003c6cff87c3e4d27a624bc2d3146ed4fe08c4626774",
+      "bytes": 4399
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/dispatch/skill/libraries/http/http.lobo",
+      "sha256": "ea9b9d87e15321e06ca67932258b60451c3da04a815e97d234ef2b36a91dba9f",
+      "bytes": 2787
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/dispatch/skill/libraries/http-server/README.md.txt",
+      "sha256": "7f695c6966c1a31adf74d2d620760857a07ac28c0763a65fc8a6001800b6bde2",
+      "bytes": 7886
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/dispatch/skill/libraries/http-server/server.lobo",
+      "sha256": "3aeac600d4131e544a7054f0f751efb5945e1616c84b210cfdabf5d936912a1e",
+      "bytes": 6880
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/dispatch/skill/libraries/http-server/server.lobo.ids.json",
+      "sha256": "27cc7a4a712b98b29bd3fbae6e38616ed1713fb9cf07cc4e6c371d0823f3e640",
+      "bytes": 1408
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/dispatch/skill/libraries/http-server/transport.lobo",
+      "sha256": "ac5af9a0ceed5f7a446450c0248c7b6c284931908dc27b25ea1a69cb6517a52b",
+      "bytes": 8145
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/dispatch/skill/libraries/http-server/transport.lobo.ids.json",
+      "sha256": "9163bf4fbd4215230030857e386d89b9a38843f233d4ca357e119f93779cc68d",
+      "bytes": 2021
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/dispatch/skill/libraries/json/README.md.txt",
+      "sha256": "fcc2d6742f11f4a53fbe1f26ce7a390e477e0de88a983e4a348884f6983d4959",
+      "bytes": 5305
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/dispatch/skill/libraries/json/json.lobo",
+      "sha256": "3ed68fee975a46affca613dd6da60fbe6ea297fc447b8c91a76fbe7b2406ac39",
+      "bytes": 8228
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/dispatch/skill/libraries/native/README.md.txt",
+      "sha256": "4de8dd7276b56d529c96f909ba6e4903fda299e255394e1e8e4bef094d104eea",
+      "bytes": 3872
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/dispatch/skill/libraries/native/native.lobo",
+      "sha256": "ee7ba249a414ff9421cc36d3373f412b6ce63e62d696d1bdd0f9ce111e9027d1",
+      "bytes": 4649
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/dispatch/skill/libraries/native/permissions.lobo",
+      "sha256": "c3148d6d50d3d8e2f326b771b76353fed490ba06cfd8cad21deb5d7f8f070e12",
+      "bytes": 1347
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/dispatch/skill/libraries/sql/README.md.txt",
+      "sha256": "85f5ec08131d902d2ed64014ebd687462def277aa5f0876599c1058cfd71fad5",
+      "bytes": 4514
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/dispatch/skill/libraries/sql/sql.lobo",
+      "sha256": "5704a8abcf1e1d0ee435b09aa7219c9c809bc1aaa304f3fe61b3de41d903a133",
+      "bytes": 9348
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/dispatch/skill/libraries/sql/sql.lobo.ids.json",
+      "sha256": "67fc9cd6d80fed595e0efdffeb36b7153d865236ab188d2da776ed8effd643d4",
+      "bytes": 2033
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/dispatch/skill/logic.lobo",
+      "sha256": "1f563412293d55b23b8fd7449cbaa132e429697f56e76e78a20fde8d4f1aa978",
+      "bytes": 517
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/dispatch/skill/logic.lobo.ids.json",
+      "sha256": "a26bb9fc14b3a1622a344921475125578ab1e23075cdd0c4d71effc681cb0417",
+      "bytes": 333
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/dispatch/skill/model.lobo",
+      "sha256": "0564c8a0bb310404a39acbae6f0ed185f4bb75a3475ab52c8b0f5ea164297035",
+      "bytes": 105
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/dispatch/skill/model.lobo.ids.json",
+      "sha256": "68a595791eb57a91ddd59116d2ef8b25d8550869f59d5260db58d9f4ad9a1897",
+      "bytes": 204
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/dispatch/skill/research/compact-pilot-2026-11-24.md.txt",
+      "sha256": "761a1fc994e8bdf6865f293fc37728aab95932c49d67a9ea23907a1de352ef25",
+      "bytes": 9416
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/dispatch/skill/spec/README.md.txt",
+      "sha256": "e8b911e1997d93f0ede12e14c97851f8e08843ca19e84a1eb5a4319108e82653",
+      "bytes": 4757
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/dispatch/skill/spec/agent-testing-v0.1.md.txt",
+      "sha256": "dc9c1fb4b7f3aca5cc70a2cb844139190ec16218ee3ddb7759653f2d0fc4ab0e",
+      "bytes": 11933
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/dispatch/skill/spec/checked-artifact-v0.1.md.txt",
+      "sha256": "8e85e37b7a89812f135ccb796e083ea95771032d267e55bc9c0d18f53fa56cdf",
+      "bytes": 4094
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/dispatch/skill/spec/checked-artifact-v0.2.md.txt",
+      "sha256": "b13203846b1eb62eeb73445ef422cb526f7ae33d1e6804ecdef20e33c6365ff7",
+      "bytes": 1413
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/dispatch/skill/spec/checked-artifact-v0.3.md.txt",
+      "sha256": "4874fc7ba430389d8d3bf4df3c6fc34b2b5bb949ecfe646383e3f6fc04652b15",
+      "bytes": 1147
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/dispatch/skill/spec/compact-source-v0.1.md.txt",
+      "sha256": "d7035fbf81ff5c83f84a34dd5c73a1617f1a49176019a2693ba56c501955a94f",
+      "bytes": 5994
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/dispatch/skill/spec/conformance/core-cases.json",
+      "sha256": "076f50cc9a45b7588eed4d150bb289fcdf04b0dcc7435dd871e71ef388cf71df",
+      "bytes": 4968
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/dispatch/skill/spec/core-v0.1.md.txt",
+      "sha256": "c3fe3c05e21bd22c9df8f9ff78c65f3c645f127b10350c93a888c5f133f16854",
+      "bytes": 13060
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/dispatch/skill/spec/core-v0.10.md.txt",
+      "sha256": "2ca585067a2c5113ce335847f433489c79a71d63471c2443786157038b60953e",
+      "bytes": 3093
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/dispatch/skill/spec/core-v0.11.md.txt",
+      "sha256": "275105a2b66f5f0f6ddb12828d3e30db47f8603933654ea92b6bb3d5597ba8f9",
+      "bytes": 6042
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/dispatch/skill/spec/core-v0.12.md.txt",
+      "sha256": "f02ddafe0a6196c15671a51e08aa12105ce216df1edb1a8354f54cfccc9e15c4",
+      "bytes": 7895
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/dispatch/skill/spec/core-v0.2.md.txt",
+      "sha256": "9cbdbe1ddd2a55ce69b3333d5984a12d437ed225d856668c69edfbfd2a4b1ad2",
+      "bytes": 6391
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/dispatch/skill/spec/core-v0.3.md.txt",
+      "sha256": "96e39f958c14b082ad0f3a0c72dc0b3318a7c1c442812b35c338d35b00759543",
+      "bytes": 4396
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/dispatch/skill/spec/core-v0.4.md.txt",
+      "sha256": "84828c9c83b0c0b70d278e2458d77e01231bfd75899a99193b80a762b78ede83",
+      "bytes": 5039
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/dispatch/skill/spec/core-v0.5.md.txt",
+      "sha256": "02ad206aa3cf73c38a8c13d082cdd7d0ea61c45a4dd2ab304497df2cc7c326cc",
+      "bytes": 6607
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/dispatch/skill/spec/core-v0.6.md.txt",
+      "sha256": "3d8737fe0d67ef67916ba63fc6d91386d9ff983c9148d2b2c671048a0cf35245",
+      "bytes": 7076
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/dispatch/skill/spec/core-v0.7.md.txt",
+      "sha256": "0111fcfce8f7ba3ca9abfa027282113dcb6c31df7fb2d946847260f392efb221",
+      "bytes": 7169
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/dispatch/skill/spec/core-v0.8.md.txt",
+      "sha256": "790cfe562577be3dafa5ca3d2028e34d8782cbb36731fe45c29560a4badc6887",
+      "bytes": 5329
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/dispatch/skill/spec/core-v0.9.md.txt",
+      "sha256": "4bc8977f5151c72df856a06da8cc1ff136a9fb355681b47075bbd17d570d5379",
+      "bytes": 7360
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/dispatch/skill/spec/core-v1.0.md.txt",
+      "sha256": "8dbc2ca888f49b84125a8faedf39160bb1eab27e0f25b336b1ef8f87f14f3b2b",
+      "bytes": 5242
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/dispatch/skill/spec/core-v1.1.md.txt",
+      "sha256": "98c9b16d2bd72229464751f1d6c03790efde00a234bf7d2add2306f30b785361",
+      "bytes": 4694
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/dispatch/skill/spec/core-v1.10.md.txt",
+      "sha256": "45d45f48a14fda25275c50ea02d6d65854d14e3fb6989ea56ef6d1aba62ec308",
+      "bytes": 4925
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/dispatch/skill/spec/core-v1.11.md.txt",
+      "sha256": "d13c38830326c983d336c83ab4a398867bd17858ade3c5f8ecc6d088359182aa",
+      "bytes": 2968
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/dispatch/skill/spec/core-v1.2.md.txt",
+      "sha256": "7d0f42dd9d1bd99b860af5045c960fa82ffc96511d8f6397fefa381964c5b363",
+      "bytes": 5534
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/dispatch/skill/spec/core-v1.3.md.txt",
+      "sha256": "2ea91b7b4d4c7716a593ceafcfff42227f05f94e45d8500e9ed04e0c956a9118",
+      "bytes": 6183
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/dispatch/skill/spec/core-v1.4.md.txt",
+      "sha256": "01b365a0c8874db2ad9982e1e85dc036cf22cf31521c2b28c943c08888edf9b2",
+      "bytes": 5603
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/dispatch/skill/spec/core-v1.5.md.txt",
+      "sha256": "dac4877adab3d738fb05fc57c37436106a22206a3069446a00c47de65c1abdda",
+      "bytes": 4557
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/dispatch/skill/spec/core-v1.6.md.txt",
+      "sha256": "71967bd60313ce04cabdf740863eb2f1c73c49ecb1f22ea58ed6e9abbcd9c886",
+      "bytes": 4447
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/dispatch/skill/spec/core-v1.7.md.txt",
+      "sha256": "2123fbea05d172cf4723e683afc4216c64e9bc0a62495f25e06b7ebc83311ed3",
+      "bytes": 3510
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/dispatch/skill/spec/core-v1.8.md.txt",
+      "sha256": "422e050a2b5aa621e9b236f003084fa5398995e3144b3781b998092422255eb6",
+      "bytes": 5772
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/dispatch/skill/spec/core-v1.9.md.txt",
+      "sha256": "c84dc7e6b555fc92458d632c0b92fb31052abd023e58b0201c735c6019ec225b",
+      "bytes": 2560
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/dispatch/skill/spec/generic-reuse-workload.md.txt",
+      "sha256": "53e5d3097494f3deb5379c77a343997dfa52f47edb6c3915006dac05082b244f",
+      "bytes": 2596
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/dispatch/skill/spec/language-milestone-workloads.md.txt",
+      "sha256": "f0be02538657fc901e9241049314b75d03b0472bc776ad3748d63c5c847a2b4d",
+      "bytes": 6656
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/dispatch/skill/spec/language-v1-acceptance.md.txt",
+      "sha256": "33e7c84c36db6bcf74059f57e08e3eaa550e1235955d77eae4e6ca4afbed5f33",
+      "bytes": 6645
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/dispatch/skill/spec/native-interface-v0.1.md.txt",
+      "sha256": "fc98302a3a5e50c8a87079231b9311954e8351383ba872e4223385ff1770934e",
+      "bytes": 10000
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/dispatch/skill/spec/native-llvm-v0.1.md.txt",
+      "sha256": "580611e7fc27523e4aed69b9064a7c688096c8254eecf9a53541f93994045b21",
+      "bytes": 5632
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/dispatch/skill/spec/native-v0.1.md.txt",
+      "sha256": "befed14019840eea1988bf6ff982d531df105bb0d1b057e765e820ed72cdc0b6",
+      "bytes": 6568
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/dispatch/skill/spec/recursive-ast-workload.md.txt",
+      "sha256": "3138f238b71d5d12001391dc3d2f8cf054a1a59622608699732bcc05441c7a3a",
+      "bytes": 1600
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/dispatch/skill/spec/schemas/conformance-case.schema.json",
+      "sha256": "ef3a27dd2a0caa8249c1f1439eb0abf96983350456db4efaabfdd2e2cc24c443",
+      "bytes": 2269
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/dispatch/skill/spec/schemas/request-envelope.schema.json",
+      "sha256": "2abad3a1e8bbbb980cfa0fbe2c9c38a789ba94215bd6481f677d15cfe7c24409",
+      "bytes": 1964
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/dispatch/skill/spec/schemas/response-envelope.schema.json",
+      "sha256": "a4e7d16a8bc25e06d5a571259df750f7c024319922e419bae57a8d66c64e7ca4",
+      "bytes": 3614
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/dispatch/skill/spec/schemas/tool-descriptor.schema.json",
+      "sha256": "2e375db03b357fee59094e46252dcd847a3adf3fc04fae39457bf98a62bc17ef",
+      "bytes": 1727
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/dispatch/skill/spec/source-diagnostics-v0.1.md.txt",
+      "sha256": "d531df2c57fdd4ec2917fb029a8fc54f441f6632fbfb7c2b4cfe3b8168e6eb3b",
+      "bytes": 3894
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/dispatch/skill/spec/sqlite-interface-v0.1.md.txt",
+      "sha256": "19de3da7153b874edc5518ded812515c2ce32dc67a4d1226307c7a0c8b612bdf",
+      "bytes": 9003
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/dispatch/skill/util.lobo",
+      "sha256": "c43f8e6085a7f03acbc1dac3e872ffe5ebdf8f86133519b5ce286a08e7d2055c",
+      "bytes": 338
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/dispatch/skill/util.lobo.ids.json",
+      "sha256": "e19f179ed53b0319c39febce4e46eb462845e30547177c99a14aac27ed6ad174",
+      "bytes": 178
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/splice/control/.agents/skills/lobo-programming/references/callbacks.lobo",
+      "sha256": "a106cf1e51354df3296e755d882d6f0fc6ce7690b761914cca0f76cc0c0bf63e",
+      "bytes": 406
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/splice/control/.agents/skills/lobo-programming/references/callbacks.lobo.ids.json",
+      "sha256": "7cf6c0e2a287692417905cb0fb94a3ab5f04cb517695ad597f2404e5888b11cc",
+      "bytes": 334
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/splice/control/.agents/skills/lobo-programming/references/compact-example.lobo",
+      "sha256": "d2376c69b774da83073a98883e91794750d59f99ed3fa380d9aaa673d1950954",
+      "bytes": 231
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/splice/control/.agents/skills/lobo-programming/references/compact-example.lobo.ids.json",
+      "sha256": "2dbc359fba6b65d4fa0667b91bd80e8c4f150b38ecb26c00c21e743332906d0e",
+      "bytes": 298
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/splice/control/.agents/skills/lobo-programming/references/conveniences.lobo",
+      "sha256": "ffb3bcfaa7fa99fca865d6498238b4c81b857a01e2744d46d5a6f0308765e9c9",
+      "bytes": 301
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/splice/control/.agents/skills/lobo-programming/references/conveniences.lobo.ids.json",
+      "sha256": "eb25455ebf8d705ecd0d1d2261623cb5930cd4ea9bb3bf04de2d2e7bb0921817",
+      "bytes": 337
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/splice/control/.agents/skills/lobo-programming/references/examples.lobo",
+      "sha256": "cf65d2cdc47a1bb15e154f94fe2e70d92e58eb15d405c8a2fb68261c294a1b3c",
+      "bytes": 2028
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/splice/control/.agents/skills/lobo-programming/references/json-example.lobo",
+      "sha256": "e45bbda6b893e09f021821bd500195c4e27a827e81edcc249458cef53c3cc712",
+      "bytes": 269
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/splice/control/.agents/skills/lobo-programming/references/language.md.txt",
+      "sha256": "f007469320ec5054db07dac9302f8b6ac9a9dc976099ffd566c1ea963ab36562",
+      "bytes": 12554
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/splice/control/.agents/skills/lobo-programming/references/native-example.lobo",
+      "sha256": "79c44e86db8aa77322b4d99a424a25a0b2d37ced37e3e65af344c6a02d03737c",
+      "bytes": 300
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/splice/control/.agents/skills/lobo-programming/references/sqlite-example.lobo",
+      "sha256": "855f210acb18bc4568aad97373a8633cd9b7053d368980172317c76fab74927a",
+      "bytes": 303
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/splice/control/.agents/skills/lobo-programming/references/sqlite-example.lobo.ids.json",
+      "sha256": "18ae22c6bf9c71e6b1f7633bd7fcd847883b919ab27f7b34d18feca3f455a2e6",
+      "bytes": 343
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/splice/control/.agents/skills/lobo-programming/references/tools.md.txt",
+      "sha256": "1913a1fceffba4c09f72625d9bc1e8d8104e35025ad674988a73405ba8eb8429",
+      "bytes": 8694
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/splice/control/.agents/skills/lobo-programming/references/try-example.lobo",
+      "sha256": "2f6b5750d060c929eae94cb9b001b3ea9154f9ddaa369c0934c1953cce21770a",
+      "bytes": 412
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/splice/control/AGENTS.md.txt",
+      "sha256": "3c8c8fce33c21a65ee4b8a44fe408af1f260accb220adba4fb6a75e331e7ea11",
+      "bytes": 153
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/splice/control/GUIDE.txt",
+      "sha256": "6e9c2fab00d1f5598b5ed5bea09375bb4ef6eb01822bec32d4575f99017b5f77",
+      "bytes": 3027
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/splice/control/TASK.txt",
+      "sha256": "764cbaeb4056c29c9e669372c8fcc78ffdbef7b0a4831eeab9914c0ee2e089f4",
+      "bytes": 1036
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/splice/control/VISIBLE.json",
+      "sha256": "b30f62ca7959cea8b619f3dbf076321ee8d086b6301861ae98fd31a980db24d2",
+      "bytes": 1239
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/splice/control/check.py",
+      "sha256": "19cfc08bd63439e1487ff9ee80fc4a013b804feb6b424788b2fc62fb63bd278f",
+      "bytes": 385
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/splice/control/docs/agent-reference/compact-pilot-2026-11-24/contracts.txt",
+      "sha256": "86a129a75ffba8cb447f0a97b513cc92abb806b932609fc253273909aae868aa",
+      "bytes": 796
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/splice/control/docs/agent-reference/compact-pilot-2026-11-24/nominal.txt",
+      "sha256": "9810070ea2f016955293106bc0f7bf2f9fbb718619ad5b8372f34fbc380a0510",
+      "bytes": 819
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/splice/control/docs/agent-reference/compact-pilot-2026-11-24/propagation.txt",
+      "sha256": "d204f387ce82c1a0c1106ec337db631c06ec084c51f7b583f7eb9b45fb38c43f",
+      "bytes": 744
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/splice/control/docs/agent-reference/compact-pilot-2026-11-24/ranges.txt",
+      "sha256": "633eac0a1b432389d842277929b485519962a646c07bbe97a69a403b5d217478",
+      "bytes": 934
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/splice/control/libraries/http/README.md.txt",
+      "sha256": "c4dd34349e63538c79fe003c6cff87c3e4d27a624bc2d3146ed4fe08c4626774",
+      "bytes": 4399
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/splice/control/libraries/http/http.lobo",
+      "sha256": "ea9b9d87e15321e06ca67932258b60451c3da04a815e97d234ef2b36a91dba9f",
+      "bytes": 2787
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/splice/control/libraries/http-server/README.md.txt",
+      "sha256": "7f695c6966c1a31adf74d2d620760857a07ac28c0763a65fc8a6001800b6bde2",
+      "bytes": 7886
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/splice/control/libraries/http-server/server.lobo",
+      "sha256": "3aeac600d4131e544a7054f0f751efb5945e1616c84b210cfdabf5d936912a1e",
+      "bytes": 6880
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/splice/control/libraries/http-server/server.lobo.ids.json",
+      "sha256": "27cc7a4a712b98b29bd3fbae6e38616ed1713fb9cf07cc4e6c371d0823f3e640",
+      "bytes": 1408
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/splice/control/libraries/http-server/transport.lobo",
+      "sha256": "ac5af9a0ceed5f7a446450c0248c7b6c284931908dc27b25ea1a69cb6517a52b",
+      "bytes": 8145
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/splice/control/libraries/http-server/transport.lobo.ids.json",
+      "sha256": "9163bf4fbd4215230030857e386d89b9a38843f233d4ca357e119f93779cc68d",
+      "bytes": 2021
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/splice/control/libraries/json/README.md.txt",
+      "sha256": "fcc2d6742f11f4a53fbe1f26ce7a390e477e0de88a983e4a348884f6983d4959",
+      "bytes": 5305
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/splice/control/libraries/json/json.lobo",
+      "sha256": "3ed68fee975a46affca613dd6da60fbe6ea297fc447b8c91a76fbe7b2406ac39",
+      "bytes": 8228
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/splice/control/libraries/native/README.md.txt",
+      "sha256": "4de8dd7276b56d529c96f909ba6e4903fda299e255394e1e8e4bef094d104eea",
+      "bytes": 3872
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/splice/control/libraries/native/native.lobo",
+      "sha256": "ee7ba249a414ff9421cc36d3373f412b6ce63e62d696d1bdd0f9ce111e9027d1",
+      "bytes": 4649
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/splice/control/libraries/native/permissions.lobo",
+      "sha256": "c3148d6d50d3d8e2f326b771b76353fed490ba06cfd8cad21deb5d7f8f070e12",
+      "bytes": 1347
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/splice/control/libraries/sql/README.md.txt",
+      "sha256": "85f5ec08131d902d2ed64014ebd687462def277aa5f0876599c1058cfd71fad5",
+      "bytes": 4514
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/splice/control/libraries/sql/sql.lobo",
+      "sha256": "5704a8abcf1e1d0ee435b09aa7219c9c809bc1aaa304f3fe61b3de41d903a133",
+      "bytes": 9348
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/splice/control/libraries/sql/sql.lobo.ids.json",
+      "sha256": "67fc9cd6d80fed595e0efdffeb36b7153d865236ab188d2da776ed8effd643d4",
+      "bytes": 2033
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/splice/control/logic.lobo",
+      "sha256": "5bc5a2dd211ca07f4f29088accc2f091b1812884d1c1f385ae8d33c31a68c20c",
+      "bytes": 137
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/splice/control/logic.lobo.ids.json",
+      "sha256": "3199a7891bec1170abb281e0a5d8dc74a1e53cd46f839cb97ddbd18f06c7098c",
+      "bytes": 279
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/splice/control/model.lobo",
+      "sha256": "c5172e6d928c827568e55248f277ececa3f2a0db0ba00c0b0fb2ca4f00c8c4bf",
+      "bytes": 118
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/splice/control/model.lobo.ids.json",
+      "sha256": "3d878fdc7d111506d04e652e8e2e8a151bbe347154a52c5bc0ea9be4b45e9b80",
+      "bytes": 194
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/splice/control/research/compact-pilot-2026-11-24.md.txt",
+      "sha256": "761a1fc994e8bdf6865f293fc37728aab95932c49d67a9ea23907a1de352ef25",
+      "bytes": 9416
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/splice/control/spec/README.md.txt",
+      "sha256": "e8b911e1997d93f0ede12e14c97851f8e08843ca19e84a1eb5a4319108e82653",
+      "bytes": 4757
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/splice/control/spec/agent-testing-v0.1.md.txt",
+      "sha256": "dc9c1fb4b7f3aca5cc70a2cb844139190ec16218ee3ddb7759653f2d0fc4ab0e",
+      "bytes": 11933
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/splice/control/spec/checked-artifact-v0.1.md.txt",
+      "sha256": "8e85e37b7a89812f135ccb796e083ea95771032d267e55bc9c0d18f53fa56cdf",
+      "bytes": 4094
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/splice/control/spec/checked-artifact-v0.2.md.txt",
+      "sha256": "b13203846b1eb62eeb73445ef422cb526f7ae33d1e6804ecdef20e33c6365ff7",
+      "bytes": 1413
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/splice/control/spec/checked-artifact-v0.3.md.txt",
+      "sha256": "4874fc7ba430389d8d3bf4df3c6fc34b2b5bb949ecfe646383e3f6fc04652b15",
+      "bytes": 1147
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/splice/control/spec/compact-source-v0.1.md.txt",
+      "sha256": "d7035fbf81ff5c83f84a34dd5c73a1617f1a49176019a2693ba56c501955a94f",
+      "bytes": 5994
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/splice/control/spec/conformance/core-cases.json",
+      "sha256": "076f50cc9a45b7588eed4d150bb289fcdf04b0dcc7435dd871e71ef388cf71df",
+      "bytes": 4968
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/splice/control/spec/core-v0.1.md.txt",
+      "sha256": "c3fe3c05e21bd22c9df8f9ff78c65f3c645f127b10350c93a888c5f133f16854",
+      "bytes": 13060
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/splice/control/spec/core-v0.10.md.txt",
+      "sha256": "2ca585067a2c5113ce335847f433489c79a71d63471c2443786157038b60953e",
+      "bytes": 3093
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/splice/control/spec/core-v0.11.md.txt",
+      "sha256": "275105a2b66f5f0f6ddb12828d3e30db47f8603933654ea92b6bb3d5597ba8f9",
+      "bytes": 6042
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/splice/control/spec/core-v0.12.md.txt",
+      "sha256": "f02ddafe0a6196c15671a51e08aa12105ce216df1edb1a8354f54cfccc9e15c4",
+      "bytes": 7895
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/splice/control/spec/core-v0.2.md.txt",
+      "sha256": "9cbdbe1ddd2a55ce69b3333d5984a12d437ed225d856668c69edfbfd2a4b1ad2",
+      "bytes": 6391
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/splice/control/spec/core-v0.3.md.txt",
+      "sha256": "96e39f958c14b082ad0f3a0c72dc0b3318a7c1c442812b35c338d35b00759543",
+      "bytes": 4396
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/splice/control/spec/core-v0.4.md.txt",
+      "sha256": "84828c9c83b0c0b70d278e2458d77e01231bfd75899a99193b80a762b78ede83",
+      "bytes": 5039
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/splice/control/spec/core-v0.5.md.txt",
+      "sha256": "02ad206aa3cf73c38a8c13d082cdd7d0ea61c45a4dd2ab304497df2cc7c326cc",
+      "bytes": 6607
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/splice/control/spec/core-v0.6.md.txt",
+      "sha256": "3d8737fe0d67ef67916ba63fc6d91386d9ff983c9148d2b2c671048a0cf35245",
+      "bytes": 7076
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/splice/control/spec/core-v0.7.md.txt",
+      "sha256": "0111fcfce8f7ba3ca9abfa027282113dcb6c31df7fb2d946847260f392efb221",
+      "bytes": 7169
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/splice/control/spec/core-v0.8.md.txt",
+      "sha256": "790cfe562577be3dafa5ca3d2028e34d8782cbb36731fe45c29560a4badc6887",
+      "bytes": 5329
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/splice/control/spec/core-v0.9.md.txt",
+      "sha256": "4bc8977f5151c72df856a06da8cc1ff136a9fb355681b47075bbd17d570d5379",
+      "bytes": 7360
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/splice/control/spec/core-v1.0.md.txt",
+      "sha256": "8dbc2ca888f49b84125a8faedf39160bb1eab27e0f25b336b1ef8f87f14f3b2b",
+      "bytes": 5242
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/splice/control/spec/core-v1.1.md.txt",
+      "sha256": "98c9b16d2bd72229464751f1d6c03790efde00a234bf7d2add2306f30b785361",
+      "bytes": 4694
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/splice/control/spec/core-v1.10.md.txt",
+      "sha256": "45d45f48a14fda25275c50ea02d6d65854d14e3fb6989ea56ef6d1aba62ec308",
+      "bytes": 4925
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/splice/control/spec/core-v1.11.md.txt",
+      "sha256": "d13c38830326c983d336c83ab4a398867bd17858ade3c5f8ecc6d088359182aa",
+      "bytes": 2968
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/splice/control/spec/core-v1.2.md.txt",
+      "sha256": "7d0f42dd9d1bd99b860af5045c960fa82ffc96511d8f6397fefa381964c5b363",
+      "bytes": 5534
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/splice/control/spec/core-v1.3.md.txt",
+      "sha256": "2ea91b7b4d4c7716a593ceafcfff42227f05f94e45d8500e9ed04e0c956a9118",
+      "bytes": 6183
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/splice/control/spec/core-v1.4.md.txt",
+      "sha256": "01b365a0c8874db2ad9982e1e85dc036cf22cf31521c2b28c943c08888edf9b2",
+      "bytes": 5603
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/splice/control/spec/core-v1.5.md.txt",
+      "sha256": "dac4877adab3d738fb05fc57c37436106a22206a3069446a00c47de65c1abdda",
+      "bytes": 4557
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/splice/control/spec/core-v1.6.md.txt",
+      "sha256": "71967bd60313ce04cabdf740863eb2f1c73c49ecb1f22ea58ed6e9abbcd9c886",
+      "bytes": 4447
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/splice/control/spec/core-v1.7.md.txt",
+      "sha256": "2123fbea05d172cf4723e683afc4216c64e9bc0a62495f25e06b7ebc83311ed3",
+      "bytes": 3510
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/splice/control/spec/core-v1.8.md.txt",
+      "sha256": "422e050a2b5aa621e9b236f003084fa5398995e3144b3781b998092422255eb6",
+      "bytes": 5772
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/splice/control/spec/core-v1.9.md.txt",
+      "sha256": "c84dc7e6b555fc92458d632c0b92fb31052abd023e58b0201c735c6019ec225b",
+      "bytes": 2560
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/splice/control/spec/generic-reuse-workload.md.txt",
+      "sha256": "53e5d3097494f3deb5379c77a343997dfa52f47edb6c3915006dac05082b244f",
+      "bytes": 2596
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/splice/control/spec/language-milestone-workloads.md.txt",
+      "sha256": "f0be02538657fc901e9241049314b75d03b0472bc776ad3748d63c5c847a2b4d",
+      "bytes": 6656
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/splice/control/spec/language-v1-acceptance.md.txt",
+      "sha256": "33e7c84c36db6bcf74059f57e08e3eaa550e1235955d77eae4e6ca4afbed5f33",
+      "bytes": 6645
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/splice/control/spec/native-interface-v0.1.md.txt",
+      "sha256": "fc98302a3a5e50c8a87079231b9311954e8351383ba872e4223385ff1770934e",
+      "bytes": 10000
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/splice/control/spec/native-llvm-v0.1.md.txt",
+      "sha256": "580611e7fc27523e4aed69b9064a7c688096c8254eecf9a53541f93994045b21",
+      "bytes": 5632
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/splice/control/spec/native-v0.1.md.txt",
+      "sha256": "befed14019840eea1988bf6ff982d531df105bb0d1b057e765e820ed72cdc0b6",
+      "bytes": 6568
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/splice/control/spec/recursive-ast-workload.md.txt",
+      "sha256": "3138f238b71d5d12001391dc3d2f8cf054a1a59622608699732bcc05441c7a3a",
+      "bytes": 1600
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/splice/control/spec/schemas/conformance-case.schema.json",
+      "sha256": "ef3a27dd2a0caa8249c1f1439eb0abf96983350456db4efaabfdd2e2cc24c443",
+      "bytes": 2269
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/splice/control/spec/schemas/request-envelope.schema.json",
+      "sha256": "2abad3a1e8bbbb980cfa0fbe2c9c38a789ba94215bd6481f677d15cfe7c24409",
+      "bytes": 1964
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/splice/control/spec/schemas/response-envelope.schema.json",
+      "sha256": "a4e7d16a8bc25e06d5a571259df750f7c024319922e419bae57a8d66c64e7ca4",
+      "bytes": 3614
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/splice/control/spec/schemas/tool-descriptor.schema.json",
+      "sha256": "2e375db03b357fee59094e46252dcd847a3adf3fc04fae39457bf98a62bc17ef",
+      "bytes": 1727
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/splice/control/spec/source-diagnostics-v0.1.md.txt",
+      "sha256": "d531df2c57fdd4ec2917fb029a8fc54f441f6632fbfb7c2b4cfe3b8168e6eb3b",
+      "bytes": 3894
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/splice/control/spec/sqlite-interface-v0.1.md.txt",
+      "sha256": "19de3da7153b874edc5518ded812515c2ce32dc67a4d1226307c7a0c8b612bdf",
+      "bytes": 9003
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/splice/control/util.lobo",
+      "sha256": "c43f8e6085a7f03acbc1dac3e872ffe5ebdf8f86133519b5ce286a08e7d2055c",
+      "bytes": 338
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/splice/control/util.lobo.ids.json",
+      "sha256": "e19f179ed53b0319c39febce4e46eb462845e30547177c99a14aac27ed6ad174",
+      "bytes": 178
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/splice/skill/.agents/skills/lobo-development/SKILL.md.txt",
+      "sha256": "804a12e43f79bef059243f88e474266890c785d02df034645cbab88da50a52b5",
+      "bytes": 4799
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/splice/skill/.agents/skills/lobo-programming/references/callbacks.lobo",
+      "sha256": "a106cf1e51354df3296e755d882d6f0fc6ce7690b761914cca0f76cc0c0bf63e",
+      "bytes": 406
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/splice/skill/.agents/skills/lobo-programming/references/callbacks.lobo.ids.json",
+      "sha256": "7cf6c0e2a287692417905cb0fb94a3ab5f04cb517695ad597f2404e5888b11cc",
+      "bytes": 334
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/splice/skill/.agents/skills/lobo-programming/references/compact-example.lobo",
+      "sha256": "d2376c69b774da83073a98883e91794750d59f99ed3fa380d9aaa673d1950954",
+      "bytes": 231
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/splice/skill/.agents/skills/lobo-programming/references/compact-example.lobo.ids.json",
+      "sha256": "2dbc359fba6b65d4fa0667b91bd80e8c4f150b38ecb26c00c21e743332906d0e",
+      "bytes": 298
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/splice/skill/.agents/skills/lobo-programming/references/conveniences.lobo",
+      "sha256": "ffb3bcfaa7fa99fca865d6498238b4c81b857a01e2744d46d5a6f0308765e9c9",
+      "bytes": 301
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/splice/skill/.agents/skills/lobo-programming/references/conveniences.lobo.ids.json",
+      "sha256": "eb25455ebf8d705ecd0d1d2261623cb5930cd4ea9bb3bf04de2d2e7bb0921817",
+      "bytes": 337
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/splice/skill/.agents/skills/lobo-programming/references/examples.lobo",
+      "sha256": "cf65d2cdc47a1bb15e154f94fe2e70d92e58eb15d405c8a2fb68261c294a1b3c",
+      "bytes": 2028
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/splice/skill/.agents/skills/lobo-programming/references/json-example.lobo",
+      "sha256": "e45bbda6b893e09f021821bd500195c4e27a827e81edcc249458cef53c3cc712",
+      "bytes": 269
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/splice/skill/.agents/skills/lobo-programming/references/language.md.txt",
+      "sha256": "f007469320ec5054db07dac9302f8b6ac9a9dc976099ffd566c1ea963ab36562",
+      "bytes": 12554
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/splice/skill/.agents/skills/lobo-programming/references/native-example.lobo",
+      "sha256": "79c44e86db8aa77322b4d99a424a25a0b2d37ced37e3e65af344c6a02d03737c",
+      "bytes": 300
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/splice/skill/.agents/skills/lobo-programming/references/sqlite-example.lobo",
+      "sha256": "855f210acb18bc4568aad97373a8633cd9b7053d368980172317c76fab74927a",
+      "bytes": 303
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/splice/skill/.agents/skills/lobo-programming/references/sqlite-example.lobo.ids.json",
+      "sha256": "18ae22c6bf9c71e6b1f7633bd7fcd847883b919ab27f7b34d18feca3f455a2e6",
+      "bytes": 343
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/splice/skill/.agents/skills/lobo-programming/references/tools.md.txt",
+      "sha256": "1913a1fceffba4c09f72625d9bc1e8d8104e35025ad674988a73405ba8eb8429",
+      "bytes": 8694
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/splice/skill/.agents/skills/lobo-programming/references/try-example.lobo",
+      "sha256": "2f6b5750d060c929eae94cb9b001b3ea9154f9ddaa369c0934c1953cce21770a",
+      "bytes": 412
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/splice/skill/AGENTS.md.txt",
+      "sha256": "3c8c8fce33c21a65ee4b8a44fe408af1f260accb220adba4fb6a75e331e7ea11",
+      "bytes": 153
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/splice/skill/GUIDE.txt",
+      "sha256": "6e9c2fab00d1f5598b5ed5bea09375bb4ef6eb01822bec32d4575f99017b5f77",
+      "bytes": 3027
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/splice/skill/TASK.txt",
+      "sha256": "764cbaeb4056c29c9e669372c8fcc78ffdbef7b0a4831eeab9914c0ee2e089f4",
+      "bytes": 1036
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/splice/skill/VISIBLE.json",
+      "sha256": "b30f62ca7959cea8b619f3dbf076321ee8d086b6301861ae98fd31a980db24d2",
+      "bytes": 1239
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/splice/skill/check.py",
+      "sha256": "19cfc08bd63439e1487ff9ee80fc4a013b804feb6b424788b2fc62fb63bd278f",
+      "bytes": 385
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/splice/skill/docs/agent-reference/compact-pilot-2026-11-24/contracts.txt",
+      "sha256": "86a129a75ffba8cb447f0a97b513cc92abb806b932609fc253273909aae868aa",
+      "bytes": 796
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/splice/skill/docs/agent-reference/compact-pilot-2026-11-24/nominal.txt",
+      "sha256": "9810070ea2f016955293106bc0f7bf2f9fbb718619ad5b8372f34fbc380a0510",
+      "bytes": 819
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/splice/skill/docs/agent-reference/compact-pilot-2026-11-24/propagation.txt",
+      "sha256": "d204f387ce82c1a0c1106ec337db631c06ec084c51f7b583f7eb9b45fb38c43f",
+      "bytes": 744
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/splice/skill/docs/agent-reference/compact-pilot-2026-11-24/ranges.txt",
+      "sha256": "633eac0a1b432389d842277929b485519962a646c07bbe97a69a403b5d217478",
+      "bytes": 934
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/splice/skill/libraries/http/README.md.txt",
+      "sha256": "c4dd34349e63538c79fe003c6cff87c3e4d27a624bc2d3146ed4fe08c4626774",
+      "bytes": 4399
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/splice/skill/libraries/http/http.lobo",
+      "sha256": "ea9b9d87e15321e06ca67932258b60451c3da04a815e97d234ef2b36a91dba9f",
+      "bytes": 2787
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/splice/skill/libraries/http-server/README.md.txt",
+      "sha256": "7f695c6966c1a31adf74d2d620760857a07ac28c0763a65fc8a6001800b6bde2",
+      "bytes": 7886
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/splice/skill/libraries/http-server/server.lobo",
+      "sha256": "3aeac600d4131e544a7054f0f751efb5945e1616c84b210cfdabf5d936912a1e",
+      "bytes": 6880
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/splice/skill/libraries/http-server/server.lobo.ids.json",
+      "sha256": "27cc7a4a712b98b29bd3fbae6e38616ed1713fb9cf07cc4e6c371d0823f3e640",
+      "bytes": 1408
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/splice/skill/libraries/http-server/transport.lobo",
+      "sha256": "ac5af9a0ceed5f7a446450c0248c7b6c284931908dc27b25ea1a69cb6517a52b",
+      "bytes": 8145
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/splice/skill/libraries/http-server/transport.lobo.ids.json",
+      "sha256": "9163bf4fbd4215230030857e386d89b9a38843f233d4ca357e119f93779cc68d",
+      "bytes": 2021
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/splice/skill/libraries/json/README.md.txt",
+      "sha256": "fcc2d6742f11f4a53fbe1f26ce7a390e477e0de88a983e4a348884f6983d4959",
+      "bytes": 5305
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/splice/skill/libraries/json/json.lobo",
+      "sha256": "3ed68fee975a46affca613dd6da60fbe6ea297fc447b8c91a76fbe7b2406ac39",
+      "bytes": 8228
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/splice/skill/libraries/native/README.md.txt",
+      "sha256": "4de8dd7276b56d529c96f909ba6e4903fda299e255394e1e8e4bef094d104eea",
+      "bytes": 3872
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/splice/skill/libraries/native/native.lobo",
+      "sha256": "ee7ba249a414ff9421cc36d3373f412b6ce63e62d696d1bdd0f9ce111e9027d1",
+      "bytes": 4649
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/splice/skill/libraries/native/permissions.lobo",
+      "sha256": "c3148d6d50d3d8e2f326b771b76353fed490ba06cfd8cad21deb5d7f8f070e12",
+      "bytes": 1347
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/splice/skill/libraries/sql/README.md.txt",
+      "sha256": "85f5ec08131d902d2ed64014ebd687462def277aa5f0876599c1058cfd71fad5",
+      "bytes": 4514
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/splice/skill/libraries/sql/sql.lobo",
+      "sha256": "5704a8abcf1e1d0ee435b09aa7219c9c809bc1aaa304f3fe61b3de41d903a133",
+      "bytes": 9348
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/splice/skill/libraries/sql/sql.lobo.ids.json",
+      "sha256": "67fc9cd6d80fed595e0efdffeb36b7153d865236ab188d2da776ed8effd643d4",
+      "bytes": 2033
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/splice/skill/logic.lobo",
+      "sha256": "5bc5a2dd211ca07f4f29088accc2f091b1812884d1c1f385ae8d33c31a68c20c",
+      "bytes": 137
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/splice/skill/logic.lobo.ids.json",
+      "sha256": "3199a7891bec1170abb281e0a5d8dc74a1e53cd46f839cb97ddbd18f06c7098c",
+      "bytes": 279
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/splice/skill/model.lobo",
+      "sha256": "c5172e6d928c827568e55248f277ececa3f2a0db0ba00c0b0fb2ca4f00c8c4bf",
+      "bytes": 118
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/splice/skill/model.lobo.ids.json",
+      "sha256": "3d878fdc7d111506d04e652e8e2e8a151bbe347154a52c5bc0ea9be4b45e9b80",
+      "bytes": 194
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/splice/skill/research/compact-pilot-2026-11-24.md.txt",
+      "sha256": "761a1fc994e8bdf6865f293fc37728aab95932c49d67a9ea23907a1de352ef25",
+      "bytes": 9416
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/splice/skill/spec/README.md.txt",
+      "sha256": "e8b911e1997d93f0ede12e14c97851f8e08843ca19e84a1eb5a4319108e82653",
+      "bytes": 4757
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/splice/skill/spec/agent-testing-v0.1.md.txt",
+      "sha256": "dc9c1fb4b7f3aca5cc70a2cb844139190ec16218ee3ddb7759653f2d0fc4ab0e",
+      "bytes": 11933
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/splice/skill/spec/checked-artifact-v0.1.md.txt",
+      "sha256": "8e85e37b7a89812f135ccb796e083ea95771032d267e55bc9c0d18f53fa56cdf",
+      "bytes": 4094
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/splice/skill/spec/checked-artifact-v0.2.md.txt",
+      "sha256": "b13203846b1eb62eeb73445ef422cb526f7ae33d1e6804ecdef20e33c6365ff7",
+      "bytes": 1413
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/splice/skill/spec/checked-artifact-v0.3.md.txt",
+      "sha256": "4874fc7ba430389d8d3bf4df3c6fc34b2b5bb949ecfe646383e3f6fc04652b15",
+      "bytes": 1147
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/splice/skill/spec/compact-source-v0.1.md.txt",
+      "sha256": "d7035fbf81ff5c83f84a34dd5c73a1617f1a49176019a2693ba56c501955a94f",
+      "bytes": 5994
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/splice/skill/spec/conformance/core-cases.json",
+      "sha256": "076f50cc9a45b7588eed4d150bb289fcdf04b0dcc7435dd871e71ef388cf71df",
+      "bytes": 4968
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/splice/skill/spec/core-v0.1.md.txt",
+      "sha256": "c3fe3c05e21bd22c9df8f9ff78c65f3c645f127b10350c93a888c5f133f16854",
+      "bytes": 13060
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/splice/skill/spec/core-v0.10.md.txt",
+      "sha256": "2ca585067a2c5113ce335847f433489c79a71d63471c2443786157038b60953e",
+      "bytes": 3093
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/splice/skill/spec/core-v0.11.md.txt",
+      "sha256": "275105a2b66f5f0f6ddb12828d3e30db47f8603933654ea92b6bb3d5597ba8f9",
+      "bytes": 6042
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/splice/skill/spec/core-v0.12.md.txt",
+      "sha256": "f02ddafe0a6196c15671a51e08aa12105ce216df1edb1a8354f54cfccc9e15c4",
+      "bytes": 7895
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/splice/skill/spec/core-v0.2.md.txt",
+      "sha256": "9cbdbe1ddd2a55ce69b3333d5984a12d437ed225d856668c69edfbfd2a4b1ad2",
+      "bytes": 6391
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/splice/skill/spec/core-v0.3.md.txt",
+      "sha256": "96e39f958c14b082ad0f3a0c72dc0b3318a7c1c442812b35c338d35b00759543",
+      "bytes": 4396
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/splice/skill/spec/core-v0.4.md.txt",
+      "sha256": "84828c9c83b0c0b70d278e2458d77e01231bfd75899a99193b80a762b78ede83",
+      "bytes": 5039
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/splice/skill/spec/core-v0.5.md.txt",
+      "sha256": "02ad206aa3cf73c38a8c13d082cdd7d0ea61c45a4dd2ab304497df2cc7c326cc",
+      "bytes": 6607
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/splice/skill/spec/core-v0.6.md.txt",
+      "sha256": "3d8737fe0d67ef67916ba63fc6d91386d9ff983c9148d2b2c671048a0cf35245",
+      "bytes": 7076
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/splice/skill/spec/core-v0.7.md.txt",
+      "sha256": "0111fcfce8f7ba3ca9abfa027282113dcb6c31df7fb2d946847260f392efb221",
+      "bytes": 7169
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/splice/skill/spec/core-v0.8.md.txt",
+      "sha256": "790cfe562577be3dafa5ca3d2028e34d8782cbb36731fe45c29560a4badc6887",
+      "bytes": 5329
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/splice/skill/spec/core-v0.9.md.txt",
+      "sha256": "4bc8977f5151c72df856a06da8cc1ff136a9fb355681b47075bbd17d570d5379",
+      "bytes": 7360
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/splice/skill/spec/core-v1.0.md.txt",
+      "sha256": "8dbc2ca888f49b84125a8faedf39160bb1eab27e0f25b336b1ef8f87f14f3b2b",
+      "bytes": 5242
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/splice/skill/spec/core-v1.1.md.txt",
+      "sha256": "98c9b16d2bd72229464751f1d6c03790efde00a234bf7d2add2306f30b785361",
+      "bytes": 4694
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/splice/skill/spec/core-v1.10.md.txt",
+      "sha256": "45d45f48a14fda25275c50ea02d6d65854d14e3fb6989ea56ef6d1aba62ec308",
+      "bytes": 4925
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/splice/skill/spec/core-v1.11.md.txt",
+      "sha256": "d13c38830326c983d336c83ab4a398867bd17858ade3c5f8ecc6d088359182aa",
+      "bytes": 2968
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/splice/skill/spec/core-v1.2.md.txt",
+      "sha256": "7d0f42dd9d1bd99b860af5045c960fa82ffc96511d8f6397fefa381964c5b363",
+      "bytes": 5534
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/splice/skill/spec/core-v1.3.md.txt",
+      "sha256": "2ea91b7b4d4c7716a593ceafcfff42227f05f94e45d8500e9ed04e0c956a9118",
+      "bytes": 6183
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/splice/skill/spec/core-v1.4.md.txt",
+      "sha256": "01b365a0c8874db2ad9982e1e85dc036cf22cf31521c2b28c943c08888edf9b2",
+      "bytes": 5603
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/splice/skill/spec/core-v1.5.md.txt",
+      "sha256": "dac4877adab3d738fb05fc57c37436106a22206a3069446a00c47de65c1abdda",
+      "bytes": 4557
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/splice/skill/spec/core-v1.6.md.txt",
+      "sha256": "71967bd60313ce04cabdf740863eb2f1c73c49ecb1f22ea58ed6e9abbcd9c886",
+      "bytes": 4447
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/splice/skill/spec/core-v1.7.md.txt",
+      "sha256": "2123fbea05d172cf4723e683afc4216c64e9bc0a62495f25e06b7ebc83311ed3",
+      "bytes": 3510
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/splice/skill/spec/core-v1.8.md.txt",
+      "sha256": "422e050a2b5aa621e9b236f003084fa5398995e3144b3781b998092422255eb6",
+      "bytes": 5772
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/splice/skill/spec/core-v1.9.md.txt",
+      "sha256": "c84dc7e6b555fc92458d632c0b92fb31052abd023e58b0201c735c6019ec225b",
+      "bytes": 2560
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/splice/skill/spec/generic-reuse-workload.md.txt",
+      "sha256": "53e5d3097494f3deb5379c77a343997dfa52f47edb6c3915006dac05082b244f",
+      "bytes": 2596
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/splice/skill/spec/language-milestone-workloads.md.txt",
+      "sha256": "f0be02538657fc901e9241049314b75d03b0472bc776ad3748d63c5c847a2b4d",
+      "bytes": 6656
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/splice/skill/spec/language-v1-acceptance.md.txt",
+      "sha256": "33e7c84c36db6bcf74059f57e08e3eaa550e1235955d77eae4e6ca4afbed5f33",
+      "bytes": 6645
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/splice/skill/spec/native-interface-v0.1.md.txt",
+      "sha256": "fc98302a3a5e50c8a87079231b9311954e8351383ba872e4223385ff1770934e",
+      "bytes": 10000
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/splice/skill/spec/native-llvm-v0.1.md.txt",
+      "sha256": "580611e7fc27523e4aed69b9064a7c688096c8254eecf9a53541f93994045b21",
+      "bytes": 5632
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/splice/skill/spec/native-v0.1.md.txt",
+      "sha256": "befed14019840eea1988bf6ff982d531df105bb0d1b057e765e820ed72cdc0b6",
+      "bytes": 6568
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/splice/skill/spec/recursive-ast-workload.md.txt",
+      "sha256": "3138f238b71d5d12001391dc3d2f8cf054a1a59622608699732bcc05441c7a3a",
+      "bytes": 1600
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/splice/skill/spec/schemas/conformance-case.schema.json",
+      "sha256": "ef3a27dd2a0caa8249c1f1439eb0abf96983350456db4efaabfdd2e2cc24c443",
+      "bytes": 2269
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/splice/skill/spec/schemas/request-envelope.schema.json",
+      "sha256": "2abad3a1e8bbbb980cfa0fbe2c9c38a789ba94215bd6481f677d15cfe7c24409",
+      "bytes": 1964
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/splice/skill/spec/schemas/response-envelope.schema.json",
+      "sha256": "a4e7d16a8bc25e06d5a571259df750f7c024319922e419bae57a8d66c64e7ca4",
+      "bytes": 3614
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/splice/skill/spec/schemas/tool-descriptor.schema.json",
+      "sha256": "2e375db03b357fee59094e46252dcd847a3adf3fc04fae39457bf98a62bc17ef",
+      "bytes": 1727
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/splice/skill/spec/source-diagnostics-v0.1.md.txt",
+      "sha256": "d531df2c57fdd4ec2917fb029a8fc54f441f6632fbfb7c2b4cfe3b8168e6eb3b",
+      "bytes": 3894
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/splice/skill/spec/sqlite-interface-v0.1.md.txt",
+      "sha256": "19de3da7153b874edc5518ded812515c2ce32dc67a4d1226307c7a0c8b612bdf",
+      "bytes": 9003
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/splice/skill/util.lobo",
+      "sha256": "c43f8e6085a7f03acbc1dac3e872ffe5ebdf8f86133519b5ce286a08e7d2055c",
+      "bytes": 338
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/inputs/splice/skill/util.lobo.ids.json",
+      "sha256": "e19f179ed53b0319c39febce4e46eb462845e30547177c99a14aac27ed6ad174",
+      "bytes": 178
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/manifest.json",
+      "sha256": "1ae5142e7033776847296199845cbf7a976e37188efd4f3ed1f8206c6b3f9f8b",
+      "bytes": 76133
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/prompt-00.txt",
+      "sha256": "8b1c09bfc6b2642d237a8cc652ac42bf0e729c9fe0d2c22cadd3c1c91d6bdedf",
+      "bytes": 191
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/prompt-01.txt",
+      "sha256": "f450adb0abf3e7888fa9c6c60126001e7b42718422108f507537d920ab2fd9c4",
+      "bytes": 258
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/prompt-02.txt",
+      "sha256": "f450adb0abf3e7888fa9c6c60126001e7b42718422108f507537d920ab2fd9c4",
+      "bytes": 258
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/prompt-03.txt",
+      "sha256": "8b1c09bfc6b2642d237a8cc652ac42bf0e729c9fe0d2c22cadd3c1c91d6bdedf",
+      "bytes": 191
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/prompt-04.txt",
+      "sha256": "8b1c09bfc6b2642d237a8cc652ac42bf0e729c9fe0d2c22cadd3c1c91d6bdedf",
+      "bytes": 191
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/prompt-05.txt",
+      "sha256": "f450adb0abf3e7888fa9c6c60126001e7b42718422108f507537d920ab2fd9c4",
+      "bytes": 258
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/prompt-06.txt",
+      "sha256": "f450adb0abf3e7888fa9c6c60126001e7b42718422108f507537d920ab2fd9c4",
+      "bytes": 258
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/prompt-07.txt",
+      "sha256": "8b1c09bfc6b2642d237a8cc652ac42bf0e729c9fe0d2c22cadd3c1c91d6bdedf",
+      "bytes": 191
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/prompt-08.txt",
+      "sha256": "8b1c09bfc6b2642d237a8cc652ac42bf0e729c9fe0d2c22cadd3c1c91d6bdedf",
+      "bytes": 191
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/prompt-09.txt",
+      "sha256": "f450adb0abf3e7888fa9c6c60126001e7b42718422108f507537d920ab2fd9c4",
+      "bytes": 258
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/prompt-10.txt",
+      "sha256": "f450adb0abf3e7888fa9c6c60126001e7b42718422108f507537d920ab2fd9c4",
+      "bytes": 258
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/registration/prompt-11.txt",
+      "sha256": "8b1c09bfc6b2642d237a8cc652ac42bf0e729c9fe0d2c22cadd3c1c91d6bdedf",
+      "bytes": 191
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-study/run.log",
+      "sha256": "4d0e5eaab484cb6d887915791f569d7bc2cebd8e59dd2a8118d0a69eb7e7c3cf",
+      "bytes": 3495
+    },
+    {
+      "path": "benchmarks/fixtures/development-study-20261124/availability.json",
+      "sha256": "f1db74c467b7f94e3147a70969c992007a2aa09592d4e8022285d57e366c6be5",
+      "bytes": 1069
+    },
+    {
+      "path": "benchmarks/fixtures/development-study-20261124/trial-00.json",
+      "sha256": "860cf6ceed1e5265818df2523f38133c07e8c7d6fe4d9ac7e75d21e576534f0a",
+      "bytes": 61799
+    },
+    {
+      "path": "benchmarks/fixtures/development-study-20261124/trial-01.json",
+      "sha256": "599714e37fa86ae3649b6c973c1a24a0daa7e3885ae020cc9455bc7bbc9a8f05",
+      "bytes": 62809
+    },
+    {
+      "path": "benchmarks/fixtures/development-study-20261124/trial-02.json",
+      "sha256": "19fdbf6ab9f5706470b1cd37c997efcceebcf80c9a80c1c6a002b4a0a4497eb0",
+      "bytes": 31295
+    },
+    {
+      "path": "benchmarks/fixtures/development-study-20261124/trial-03.json",
+      "sha256": "cedf5059c95fd85489afb9251afadc4cb90e8d0e68007dd01e133fcc414cf64e",
+      "bytes": 91162
+    },
+    {
+      "path": "benchmarks/fixtures/development-study-20261124/trial-04.json",
+      "sha256": "7685dbf196b647f9a9dea47468ac775d3019e865baf2ec68a6d85d26e1c0ff19",
+      "bytes": 143028
+    },
+    {
+      "path": "benchmarks/fixtures/development-study-20261124/trial-05.json",
+      "sha256": "5b92183b10cf00833e8effa9466aa95ef2f6ce4c1bef67ab862a20e2bcab9840",
+      "bytes": 156002
+    },
+    {
+      "path": "benchmarks/fixtures/development-study-20261124/trial-06.json",
+      "sha256": "136229e54f55470d7d34d81ccd31eb6027a4499fdfd37ac8a6d7482c9c3fd134",
+      "bytes": 65175
+    },
+    {
+      "path": "benchmarks/fixtures/development-study-20261124/trial-07.json",
+      "sha256": "4d4cad4393e13e149269971148378cebb2448a49cfd12d997a0ce1f4c6f03a79",
+      "bytes": 61948
+    },
+    {
+      "path": "benchmarks/fixtures/development-study-20261124/trial-08.json",
+      "sha256": "51d1ac571b7af178729364c995615690a5244c6dca334d55d0090c5eab82d813",
+      "bytes": 91417
+    },
+    {
+      "path": "benchmarks/fixtures/development-study-20261124/trial-09.json",
+      "sha256": "006b0ffa97edd081e8c6e8a9dc1cee19a0bc45393d3b335bb4aad01fbd824a17",
+      "bytes": 94027
+    },
+    {
+      "path": "benchmarks/fixtures/development-study-20261124/trial-10.json",
+      "sha256": "3a7794223af07b7502d80b5b1f7c6dc767533f6ab6168bb8fcd726b5b9862044",
+      "bytes": 158544
+    },
+    {
+      "path": "benchmarks/fixtures/development-study-20261124/trial-11.json",
+      "sha256": "bfe9f72944ff9d72b6f63b19f48c6f2074208b6e8af70437ce5c98899f01a805",
+      "bytes": 144194
+    }
+  ],
+  "all_hashes_verified": true
+}

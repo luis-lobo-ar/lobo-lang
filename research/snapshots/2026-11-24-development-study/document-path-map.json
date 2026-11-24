@@ -1,0 +1,2341 @@
+{
+  "format": "lobo-raw-document-exports/1",
+  "date": "2026-11-24",
+  "original_layout_commit": "4e8fd802294d565df291b3010646e3de7ade4278",
+  "files": [
+    {
+      "original_snapshot_path": "registration/inputs/batch/control/.agents/skills/lobo-programming/references/language.md",
+      "stored_snapshot_path": "registration/inputs/batch/control/.agents/skills/lobo-programming/references/language.md.txt",
+      "task": "batch",
+      "arm": "control",
+      "trial_logical_name": ".agents/skills/lobo-programming/references/language.md",
+      "sha256": "f007469320ec5054db07dac9302f8b6ac9a9dc976099ffd566c1ea963ab36562"
+    },
+    {
+      "original_snapshot_path": "registration/inputs/batch/control/.agents/skills/lobo-programming/references/tools.md",
+      "stored_snapshot_path": "registration/inputs/batch/control/.agents/skills/lobo-programming/references/tools.md.txt",
+      "task": "batch",
+      "arm": "control",
+      "trial_logical_name": ".agents/skills/lobo-programming/references/tools.md",
+      "sha256": "1913a1fceffba4c09f72625d9bc1e8d8104e35025ad674988a73405ba8eb8429"
+    },
+    {
+      "original_snapshot_path": "registration/inputs/batch/control/AGENTS.md",
+      "stored_snapshot_path": "registration/inputs/batch/control/AGENTS.md.txt",
+      "task": "batch",
+      "arm": "control",
+      "trial_logical_name": "AGENTS.md",
+      "sha256": "3c8c8fce33c21a65ee4b8a44fe408af1f260accb220adba4fb6a75e331e7ea11"
+    },
+    {
+      "original_snapshot_path": "registration/inputs/batch/control/libraries/http/README.md",
+      "stored_snapshot_path": "registration/inputs/batch/control/libraries/http/README.md.txt",
+      "task": "batch",
+      "arm": "control",
+      "trial_logical_name": "libraries/http/README.md",
+      "sha256": "c4dd34349e63538c79fe003c6cff87c3e4d27a624bc2d3146ed4fe08c4626774"
+    },
+    {
+      "original_snapshot_path": "registration/inputs/batch/control/libraries/http-server/README.md",
+      "stored_snapshot_path": "registration/inputs/batch/control/libraries/http-server/README.md.txt",
+      "task": "batch",
+      "arm": "control",
+      "trial_logical_name": "libraries/http-server/README.md",
+      "sha256": "7f695c6966c1a31adf74d2d620760857a07ac28c0763a65fc8a6001800b6bde2"
+    },
+    {
+      "original_snapshot_path": "registration/inputs/batch/control/libraries/json/README.md",
+      "stored_snapshot_path": "registration/inputs/batch/control/libraries/json/README.md.txt",
+      "task": "batch",
+      "arm": "control",
+      "trial_logical_name": "libraries/json/README.md",
+      "sha256": "fcc2d6742f11f4a53fbe1f26ce7a390e477e0de88a983e4a348884f6983d4959"
+    },
+    {
+      "original_snapshot_path": "registration/inputs/batch/control/libraries/native/README.md",
+      "stored_snapshot_path": "registration/inputs/batch/control/libraries/native/README.md.txt",
+      "task": "batch",
+      "arm": "control",
+      "trial_logical_name": "libraries/native/README.md",
+      "sha256": "4de8dd7276b56d529c96f909ba6e4903fda299e255394e1e8e4bef094d104eea"
+    },
+    {
+      "original_snapshot_path": "registration/inputs/batch/control/libraries/sql/README.md",
+      "stored_snapshot_path": "registration/inputs/batch/control/libraries/sql/README.md.txt",
+      "task": "batch",
+      "arm": "control",
+      "trial_logical_name": "libraries/sql/README.md",
+      "sha256": "85f5ec08131d902d2ed64014ebd687462def277aa5f0876599c1058cfd71fad5"
+    },
+    {
+      "original_snapshot_path": "registration/inputs/batch/control/research/compact-pilot-2026-11-24.md",
+      "stored_snapshot_path": "registration/inputs/batch/control/research/compact-pilot-2026-11-24.md.txt",
+      "task": "batch",
+      "arm": "control",
+      "trial_logical_name": "research/compact-pilot-2026-11-24.md",
+      "sha256": "761a1fc994e8bdf6865f293fc37728aab95932c49d67a9ea23907a1de352ef25"
+    },
+    {
+      "original_snapshot_path": "registration/inputs/batch/control/spec/README.md",
+      "stored_snapshot_path": "registration/inputs/batch/control/spec/README.md.txt",
+      "task": "batch",
+      "arm": "control",
+      "trial_logical_name": "spec/README.md",
+      "sha256": "e8b911e1997d93f0ede12e14c97851f8e08843ca19e84a1eb5a4319108e82653"
+    },
+    {
+      "original_snapshot_path": "registration/inputs/batch/control/spec/agent-testing-v0.1.md",
+      "stored_snapshot_path": "registration/inputs/batch/control/spec/agent-testing-v0.1.md.txt",
+      "task": "batch",
+      "arm": "control",
+      "trial_logical_name": "spec/agent-testing-v0.1.md",
+      "sha256": "dc9c1fb4b7f3aca5cc70a2cb844139190ec16218ee3ddb7759653f2d0fc4ab0e"
+    },
+    {
+      "original_snapshot_path": "registration/inputs/batch/control/spec/checked-artifact-v0.1.md",
+      "stored_snapshot_path": "registration/inputs/batch/control/spec/checked-artifact-v0.1.md.txt",
+      "task": "batch",
+      "arm": "control",
+      "trial_logical_name": "spec/checked-artifact-v0.1.md",
+      "sha256": "8e85e37b7a89812f135ccb796e083ea95771032d267e55bc9c0d18f53fa56cdf"
+    },
+    {
+      "original_snapshot_path": "registration/inputs/batch/control/spec/checked-artifact-v0.2.md",
+      "stored_snapshot_path": "registration/inputs/batch/control/spec/checked-artifact-v0.2.md.txt",
+      "task": "batch",
+      "arm": "control",
+      "trial_logical_name": "spec/checked-artifact-v0.2.md",
+      "sha256": "b13203846b1eb62eeb73445ef422cb526f7ae33d1e6804ecdef20e33c6365ff7"
+    },
+    {
+      "original_snapshot_path": "registration/inputs/batch/control/spec/checked-artifact-v0.3.md",
+      "stored_snapshot_path": "registration/inputs/batch/control/spec/checked-artifact-v0.3.md.txt",
+      "task": "batch",
+      "arm": "control",
+      "trial_logical_name": "spec/checked-artifact-v0.3.md",
+      "sha256": "4874fc7ba430389d8d3bf4df3c6fc34b2b5bb949ecfe646383e3f6fc04652b15"
+    },
+    {
+      "original_snapshot_path": "registration/inputs/batch/control/spec/compact-source-v0.1.md",
+      "stored_snapshot_path": "registration/inputs/batch/control/spec/compact-source-v0.1.md.txt",
+      "task": "batch",
+      "arm": "control",
+      "trial_logical_name": "spec/compact-source-v0.1.md",
+      "sha256": "d7035fbf81ff5c83f84a34dd5c73a1617f1a49176019a2693ba56c501955a94f"
+    },
+    {
+      "original_snapshot_path": "registration/inputs/batch/control/spec/core-v0.1.md",
+      "stored_snapshot_path": "registration/inputs/batch/control/spec/core-v0.1.md.txt",
+      "task": "batch",
+      "arm": "control",
+      "trial_logical_name": "spec/core-v0.1.md",
+      "sha256": "c3fe3c05e21bd22c9df8f9ff78c65f3c645f127b10350c93a888c5f133f16854"
+    },
+    {
+      "original_snapshot_path": "registration/inputs/batch/control/spec/core-v0.10.md",
+      "stored_snapshot_path": "registration/inputs/batch/control/spec/core-v0.10.md.txt",
+      "task": "batch",
+      "arm": "control",
+      "trial_logical_name": "spec/core-v0.10.md",
+      "sha256": "2ca585067a2c5113ce335847f433489c79a71d63471c2443786157038b60953e"
+    },
+    {
+      "original_snapshot_path": "registration/inputs/batch/control/spec/core-v0.11.md",
+      "stored_snapshot_path": "registration/inputs/batch/control/spec/core-v0.11.md.txt",
+      "task": "batch",
+      "arm": "control",
+      "trial_logical_name": "spec/core-v0.11.md",
+      "sha256": "275105a2b66f5f0f6ddb12828d3e30db47f8603933654ea92b6bb3d5597ba8f9"
+    },
+    {
+      "original_snapshot_path": "registration/inputs/batch/control/spec/core-v0.12.md",
+      "stored_snapshot_path": "registration/inputs/batch/control/spec/core-v0.12.md.txt",
+      "task": "batch",
+      "arm": "control",
+      "trial_logical_name": "spec/core-v0.12.md",
+      "sha256": "f02ddafe0a6196c15671a51e08aa12105ce216df1edb1a8354f54cfccc9e15c4"
+    },
+    {
+      "original_snapshot_path": "registration/inputs/batch/control/spec/core-v0.2.md",
+      "stored_snapshot_path": "registration/inputs/batch/control/spec/core-v0.2.md.txt",
+      "task": "batch",
+      "arm": "control",
+      "trial_logical_name": "spec/core-v0.2.md",
+      "sha256": "9cbdbe1ddd2a55ce69b3333d5984a12d437ed225d856668c69edfbfd2a4b1ad2"
+    },
+    {
+      "original_snapshot_path": "registration/inputs/batch/control/spec/core-v0.3.md",
+      "stored_snapshot_path": "registration/inputs/batch/control/spec/core-v0.3.md.txt",
+      "task": "batch",
+      "arm": "control",
+      "trial_logical_name": "spec/core-v0.3.md",
+      "sha256": "96e39f958c14b082ad0f3a0c72dc0b3318a7c1c442812b35c338d35b00759543"
+    },
+    {
+      "original_snapshot_path": "registration/inputs/batch/control/spec/core-v0.4.md",
+      "stored_snapshot_path": "registration/inputs/batch/control/spec/core-v0.4.md.txt",
+      "task": "batch",
+      "arm": "control",
+      "trial_logical_name": "spec/core-v0.4.md",
+      "sha256": "84828c9c83b0c0b70d278e2458d77e01231bfd75899a99193b80a762b78ede83"
+    },
+    {
+      "original_snapshot_path": "registration/inputs/batch/control/spec/core-v0.5.md",
+      "stored_snapshot_path": "registration/inputs/batch/control/spec/core-v0.5.md.txt",
+      "task": "batch",
+      "arm": "control",
+      "trial_logical_name": "spec/core-v0.5.md",
+      "sha256": "02ad206aa3cf73c38a8c13d082cdd7d0ea61c45a4dd2ab304497df2cc7c326cc"
+    },
+    {
+      "original_snapshot_path": "registration/inputs/batch/control/spec/core-v0.6.md",
+      "stored_snapshot_path": "registration/inputs/batch/control/spec/core-v0.6.md.txt",
+      "task": "batch",
+      "arm": "control",
+      "trial_logical_name": "spec/core-v0.6.md",
+      "sha256": "3d8737fe0d67ef67916ba63fc6d91386d9ff983c9148d2b2c671048a0cf35245"
+    },
+    {
+      "original_snapshot_path": "registration/inputs/batch/control/spec/core-v0.7.md",
+      "stored_snapshot_path": "registration/inputs/batch/control/spec/core-v0.7.md.txt",
+      "task": "batch",
+      "arm": "control",
+      "trial_logical_name": "spec/core-v0.7.md",
+      "sha256": "0111fcfce8f7ba3ca9abfa027282113dcb6c31df7fb2d946847260f392efb221"
+    },
+    {
+      "original_snapshot_path": "registration/inputs/batch/control/spec/core-v0.8.md",
+      "stored_snapshot_path": "registration/inputs/batch/control/spec/core-v0.8.md.txt",
+      "task": "batch",
+      "arm": "control",
+      "trial_logical_name": "spec/core-v0.8.md",
+      "sha256": "790cfe562577be3dafa5ca3d2028e34d8782cbb36731fe45c29560a4badc6887"
+    },
+    {
+      "original_snapshot_path": "registration/inputs/batch/control/spec/core-v0.9.md",
+      "stored_snapshot_path": "registration/inputs/batch/control/spec/core-v0.9.md.txt",
+      "task": "batch",
+      "arm": "control",
+      "trial_logical_name": "spec/core-v0.9.md",
+      "sha256": "4bc8977f5151c72df856a06da8cc1ff136a9fb355681b47075bbd17d570d5379"
+    },
+    {
+      "original_snapshot_path": "registration/inputs/batch/control/spec/core-v1.0.md",
+      "stored_snapshot_path": "registration/inputs/batch/control/spec/core-v1.0.md.txt",
+      "task": "batch",
+      "arm": "control",
+      "trial_logical_name": "spec/core-v1.0.md",
+      "sha256": "8dbc2ca888f49b84125a8faedf39160bb1eab27e0f25b336b1ef8f87f14f3b2b"
+    },
+    {
+      "original_snapshot_path": "registration/inputs/batch/control/spec/core-v1.1.md",
+      "stored_snapshot_path": "registration/inputs/batch/control/spec/core-v1.1.md.txt",
+      "task": "batch",
+      "arm": "control",
+      "trial_logical_name": "spec/core-v1.1.md",
+      "sha256": "98c9b16d2bd72229464751f1d6c03790efde00a234bf7d2add2306f30b785361"
+    },
+    {
+      "original_snapshot_path": "registration/inputs/batch/control/spec/core-v1.10.md",
+      "stored_snapshot_path": "registration/inputs/batch/control/spec/core-v1.10.md.txt",
+      "task": "batch",
+      "arm": "control",
+      "trial_logical_name": "spec/core-v1.10.md",
+      "sha256": "45d45f48a14fda25275c50ea02d6d65854d14e3fb6989ea56ef6d1aba62ec308"
+    },
+    {
+      "original_snapshot_path": "registration/inputs/batch/control/spec/core-v1.11.md",
+      "stored_snapshot_path": "registration/inputs/batch/control/spec/core-v1.11.md.txt",
+      "task": "batch",
+      "arm": "control",
+      "trial_logical_name": "spec/core-v1.11.md",
+      "sha256": "d13c38830326c983d336c83ab4a398867bd17858ade3c5f8ecc6d088359182aa"
+    },
+    {
+      "original_snapshot_path": "registration/inputs/batch/control/spec/core-v1.2.md",
+      "stored_snapshot_path": "registration/inputs/batch/control/spec/core-v1.2.md.txt",
+      "task": "batch",
+      "arm": "control",
+      "trial_logical_name": "spec/core-v1.2.md",
+      "sha256": "7d0f42dd9d1bd99b860af5045c960fa82ffc96511d8f6397fefa381964c5b363"
+    },
+    {
+      "original_snapshot_path": "registration/inputs/batch/control/spec/core-v1.3.md",
+      "stored_snapshot_path": "registration/inputs/batch/control/spec/core-v1.3.md.txt",
+      "task": "batch",
+      "arm": "control",
+      "trial_logical_name": "spec/core-v1.3.md",
+      "sha256": "2ea91b7b4d4c7716a593ceafcfff42227f05f94e45d8500e9ed04e0c956a9118"
+    },
+    {
+      "original_snapshot_path": "registration/inputs/batch/control/spec/core-v1.4.md",
+      "stored_snapshot_path": "registration/inputs/batch/control/spec/core-v1.4.md.txt",
+      "task": "batch",
+      "arm": "control",
+      "trial_logical_name": "spec/core-v1.4.md",
+      "sha256": "01b365a0c8874db2ad9982e1e85dc036cf22cf31521c2b28c943c08888edf9b2"
+    },
+    {
+      "original_snapshot_path": "registration/inputs/batch/control/spec/core-v1.5.md",
+      "stored_snapshot_path": "registration/inputs/batch/control/spec/core-v1.5.md.txt",
+      "task": "batch",
+      "arm": "control",
+      "trial_logical_name": "spec/core-v1.5.md",
+      "sha256": "dac4877adab3d738fb05fc57c37436106a22206a3069446a00c47de65c1abdda"
+    },
+    {
+      "original_snapshot_path": "registration/inputs/batch/control/spec/core-v1.6.md",
+      "stored_snapshot_path": "registration/inputs/batch/control/spec/core-v1.6.md.txt",
+      "task": "batch",
+      "arm": "control",
+      "trial_logical_name": "spec/core-v1.6.md",
+      "sha256": "71967bd60313ce04cabdf740863eb2f1c73c49ecb1f22ea58ed6e9abbcd9c886"
+    },
+    {
+      "original_snapshot_path": "registration/inputs/batch/control/spec/core-v1.7.md",
+      "stored_snapshot_path": "registration/inputs/batch/control/spec/core-v1.7.md.txt",
+      "task": "batch",
+      "arm": "control",
+      "trial_logical_name": "spec/core-v1.7.md",
+      "sha256": "2123fbea05d172cf4723e683afc4216c64e9bc0a62495f25e06b7ebc83311ed3"
+    },
+    {
+      "original_snapshot_path": "registration/inputs/batch/control/spec/core-v1.8.md",
+      "stored_snapshot_path": "registration/inputs/batch/control/spec/core-v1.8.md.txt",
+      "task": "batch",
+      "arm": "control",
+      "trial_logical_name": "spec/core-v1.8.md",
+      "sha256": "422e050a2b5aa621e9b236f003084fa5398995e3144b3781b998092422255eb6"
+    },
+    {
+      "original_snapshot_path": "registration/inputs/batch/control/spec/core-v1.9.md",
+      "stored_snapshot_path": "registration/inputs/batch/control/spec/core-v1.9.md.txt",
+      "task": "batch",
+      "arm": "control",
+      "trial_logical_name": "spec/core-v1.9.md",
+      "sha256": "c84dc7e6b555fc92458d632c0b92fb31052abd023e58b0201c735c6019ec225b"
+    },
+    {
+      "original_snapshot_path": "registration/inputs/batch/control/spec/generic-reuse-workload.md",
+      "stored_snapshot_path": "registration/inputs/batch/control/spec/generic-reuse-workload.md.txt",
+      "task": "batch",
+      "arm": "control",
+      "trial_logical_name": "spec/generic-reuse-workload.md",
+      "sha256": "53e5d3097494f3deb5379c77a343997dfa52f47edb6c3915006dac05082b244f"
+    },
+    {
+      "original_snapshot_path": "registration/inputs/batch/control/spec/language-milestone-workloads.md",
+      "stored_snapshot_path": "registration/inputs/batch/control/spec/language-milestone-workloads.md.txt",
+      "task": "batch",
+      "arm": "control",
+      "trial_logical_name": "spec/language-milestone-workloads.md",
+      "sha256": "f0be02538657fc901e9241049314b75d03b0472bc776ad3748d63c5c847a2b4d"
+    },
+    {
+      "original_snapshot_path": "registration/inputs/batch/control/spec/language-v1-acceptance.md",
+      "stored_snapshot_path": "registration/inputs/batch/control/spec/language-v1-acceptance.md.txt",
+      "task": "batch",
+      "arm": "control",
+      "trial_logical_name": "spec/language-v1-acceptance.md",
+      "sha256": "33e7c84c36db6bcf74059f57e08e3eaa550e1235955d77eae4e6ca4afbed5f33"
+    },
+    {
+      "original_snapshot_path": "registration/inputs/batch/control/spec/native-interface-v0.1.md",
+      "stored_snapshot_path": "registration/inputs/batch/control/spec/native-interface-v0.1.md.txt",
+      "task": "batch",
+      "arm": "control",
+      "trial_logical_name": "spec/native-interface-v0.1.md",
+      "sha256": "fc98302a3a5e50c8a87079231b9311954e8351383ba872e4223385ff1770934e"
+    },
+    {
+      "original_snapshot_path": "registration/inputs/batch/control/spec/native-llvm-v0.1.md",
+      "stored_snapshot_path": "registration/inputs/batch/control/spec/native-llvm-v0.1.md.txt",
+      "task": "batch",
+      "arm": "control",
+      "trial_logical_name": "spec/native-llvm-v0.1.md",
+      "sha256": "580611e7fc27523e4aed69b9064a7c688096c8254eecf9a53541f93994045b21"
+    },
+    {
+      "original_snapshot_path": "registration/inputs/batch/control/spec/native-v0.1.md",
+      "stored_snapshot_path": "registration/inputs/batch/control/spec/native-v0.1.md.txt",
+      "task": "batch",
+      "arm": "control",
+      "trial_logical_name": "spec/native-v0.1.md",
+      "sha256": "befed14019840eea1988bf6ff982d531df105bb0d1b057e765e820ed72cdc0b6"
+    },
+    {
+      "original_snapshot_path": "registration/inputs/batch/control/spec/recursive-ast-workload.md",
+      "stored_snapshot_path": "registration/inputs/batch/control/spec/recursive-ast-workload.md.txt",
+      "task": "batch",
+      "arm": "control",
+      "trial_logical_name": "spec/recursive-ast-workload.md",
+      "sha256": "3138f238b71d5d12001391dc3d2f8cf054a1a59622608699732bcc05441c7a3a"
+    },
+    {
+      "original_snapshot_path": "registration/inputs/batch/control/spec/source-diagnostics-v0.1.md",
+      "stored_snapshot_path": "registration/inputs/batch/control/spec/source-diagnostics-v0.1.md.txt",
+      "task": "batch",
+      "arm": "control",
+      "trial_logical_name": "spec/source-diagnostics-v0.1.md",
+      "sha256": "d531df2c57fdd4ec2917fb029a8fc54f441f6632fbfb7c2b4cfe3b8168e6eb3b"
+    },
+    {
+      "original_snapshot_path": "registration/inputs/batch/control/spec/sqlite-interface-v0.1.md",
+      "stored_snapshot_path": "registration/inputs/batch/control/spec/sqlite-interface-v0.1.md.txt",
+      "task": "batch",
+      "arm": "control",
+      "trial_logical_name": "spec/sqlite-interface-v0.1.md",
+      "sha256": "19de3da7153b874edc5518ded812515c2ce32dc67a4d1226307c7a0c8b612bdf"
+    },
+    {
+      "original_snapshot_path": "registration/inputs/batch/skill/.agents/skills/lobo-development/SKILL.md",
+      "stored_snapshot_path": "registration/inputs/batch/skill/.agents/skills/lobo-development/SKILL.md.txt",
+      "task": "batch",
+      "arm": "skill",
+      "trial_logical_name": ".agents/skills/lobo-development/SKILL.md",
+      "sha256": "804a12e43f79bef059243f88e474266890c785d02df034645cbab88da50a52b5"
+    },
+    {
+      "original_snapshot_path": "registration/inputs/batch/skill/.agents/skills/lobo-programming/references/language.md",
+      "stored_snapshot_path": "registration/inputs/batch/skill/.agents/skills/lobo-programming/references/language.md.txt",
+      "task": "batch",
+      "arm": "skill",
+      "trial_logical_name": ".agents/skills/lobo-programming/references/language.md",
+      "sha256": "f007469320ec5054db07dac9302f8b6ac9a9dc976099ffd566c1ea963ab36562"
+    },
+    {
+      "original_snapshot_path": "registration/inputs/batch/skill/.agents/skills/lobo-programming/references/tools.md",
+      "stored_snapshot_path": "registration/inputs/batch/skill/.agents/skills/lobo-programming/references/tools.md.txt",
+      "task": "batch",
+      "arm": "skill",
+      "trial_logical_name": ".agents/skills/lobo-programming/references/tools.md",
+      "sha256": "1913a1fceffba4c09f72625d9bc1e8d8104e35025ad674988a73405ba8eb8429"
+    },
+    {
+      "original_snapshot_path": "registration/inputs/batch/skill/AGENTS.md",
+      "stored_snapshot_path": "registration/inputs/batch/skill/AGENTS.md.txt",
+      "task": "batch",
+      "arm": "skill",
+      "trial_logical_name": "AGENTS.md",
+      "sha256": "3c8c8fce33c21a65ee4b8a44fe408af1f260accb220adba4fb6a75e331e7ea11"
+    },
+    {
+      "original_snapshot_path": "registration/inputs/batch/skill/libraries/http/README.md",
+      "stored_snapshot_path": "registration/inputs/batch/skill/libraries/http/README.md.txt",
+      "task": "batch",
+      "arm": "skill",
+      "trial_logical_name": "libraries/http/README.md",
+      "sha256": "c4dd34349e63538c79fe003c6cff87c3e4d27a624bc2d3146ed4fe08c4626774"
+    },
+    {
+      "original_snapshot_path": "registration/inputs/batch/skill/libraries/http-server/README.md",
+      "stored_snapshot_path": "registration/inputs/batch/skill/libraries/http-server/README.md.txt",
+      "task": "batch",
+      "arm": "skill",
+      "trial_logical_name": "libraries/http-server/README.md",
+      "sha256": "7f695c6966c1a31adf74d2d620760857a07ac28c0763a65fc8a6001800b6bde2"
+    },
+    {
+      "original_snapshot_path": "registration/inputs/batch/skill/libraries/json/README.md",
+      "stored_snapshot_path": "registration/inputs/batch/skill/libraries/json/README.md.txt",
+      "task": "batch",
+      "arm": "skill",
+      "trial_logical_name": "libraries/json/README.md",
+      "sha256": "fcc2d6742f11f4a53fbe1f26ce7a390e477e0de88a983e4a348884f6983d4959"
+    },
+    {
+      "original_snapshot_path": "registration/inputs/batch/skill/libraries/native/README.md",
+      "stored_snapshot_path": "registration/inputs/batch/skill/libraries/native/README.md.txt",
+      "task": "batch",
+      "arm": "skill",
+      "trial_logical_name": "libraries/native/README.md",
+      "sha256": "4de8dd7276b56d529c96f909ba6e4903fda299e255394e1e8e4bef094d104eea"
+    },
+    {
+      "original_snapshot_path": "registration/inputs/batch/skill/libraries/sql/README.md",
+      "stored_snapshot_path": "registration/inputs/batch/skill/libraries/sql/README.md.txt",
+      "task": "batch",
+      "arm": "skill",
+      "trial_logical_name": "libraries/sql/README.md",
+      "sha256": "85f5ec08131d902d2ed64014ebd687462def277aa5f0876599c1058cfd71fad5"
+    },
+    {
+      "original_snapshot_path": "registration/inputs/batch/skill/research/compact-pilot-2026-11-24.md",
+      "stored_snapshot_path": "registration/inputs/batch/skill/research/compact-pilot-2026-11-24.md.txt",
+      "task": "batch",
+      "arm": "skill",
+      "trial_logical_name": "research/compact-pilot-2026-11-24.md",
+      "sha256": "761a1fc994e8bdf6865f293fc37728aab95932c49d67a9ea23907a1de352ef25"
+    },
+    {
+      "original_snapshot_path": "registration/inputs/batch/skill/spec/README.md",
+      "stored_snapshot_path": "registration/inputs/batch/skill/spec/README.md.txt",
+      "task": "batch",
+      "arm": "skill",
+      "trial_logical_name": "spec/README.md",
+      "sha256": "e8b911e1997d93f0ede12e14c97851f8e08843ca19e84a1eb5a4319108e82653"
+    },
+    {
+      "original_snapshot_path": "registration/inputs/batch/skill/spec/agent-testing-v0.1.md",
+      "stored_snapshot_path": "registration/inputs/batch/skill/spec/agent-testing-v0.1.md.txt",
+      "task": "batch",
+      "arm": "skill",
+      "trial_logical_name": "spec/agent-testing-v0.1.md",
+      "sha256": "dc9c1fb4b7f3aca5cc70a2cb844139190ec16218ee3ddb7759653f2d0fc4ab0e"
+    },
+    {
+      "original_snapshot_path": "registration/inputs/batch/skill/spec/checked-artifact-v0.1.md",
+      "stored_snapshot_path": "registration/inputs/batch/skill/spec/checked-artifact-v0.1.md.txt",
+      "task": "batch",
+      "arm": "skill",
+      "trial_logical_name": "spec/checked-artifact-v0.1.md",
+      "sha256": "8e85e37b7a89812f135ccb796e083ea95771032d267e55bc9c0d18f53fa56cdf"
+    },
+    {
+      "original_snapshot_path": "registration/inputs/batch/skill/spec/checked-artifact-v0.2.md",
+      "stored_snapshot_path": "registration/inputs/batch/skill/spec/checked-artifact-v0.2.md.txt",
+      "task": "batch",
+      "arm": "skill",
+      "trial_logical_name": "spec/checked-artifact-v0.2.md",
+      "sha256": "b13203846b1eb62eeb73445ef422cb526f7ae33d1e6804ecdef20e33c6365ff7"
+    },
+    {
+      "original_snapshot_path": "registration/inputs/batch/skill/spec/checked-artifact-v0.3.md",
+      "stored_snapshot_path": "registration/inputs/batch/skill/spec/checked-artifact-v0.3.md.txt",
+      "task": "batch",
+      "arm": "skill",
+      "trial_logical_name": "spec/checked-artifact-v0.3.md",
+      "sha256": "4874fc7ba430389d8d3bf4df3c6fc34b2b5bb949ecfe646383e3f6fc04652b15"
+    },
+    {
+      "original_snapshot_path": "registration/inputs/batch/skill/spec/compact-source-v0.1.md",
+      "stored_snapshot_path": "registration/inputs/batch/skill/spec/compact-source-v0.1.md.txt",
+      "task": "batch",
+      "arm": "skill",
+      "trial_logical_name": "spec/compact-source-v0.1.md",
+      "sha256": "d7035fbf81ff5c83f84a34dd5c73a1617f1a49176019a2693ba56c501955a94f"
+    },
+    {
+      "original_snapshot_path": "registration/inputs/batch/skill/spec/core-v0.1.md",
+      "stored_snapshot_path": "registration/inputs/batch/skill/spec/core-v0.1.md.txt",
+      "task": "batch",
+      "arm": "skill",
+      "trial_logical_name": "spec/core-v0.1.md",
+      "sha256": "c3fe3c05e21bd22c9df8f9ff78c65f3c645f127b10350c93a888c5f133f16854"
+    },
+    {
+      "original_snapshot_path": "registration/inputs/batch/skill/spec/core-v0.10.md",
+      "stored_snapshot_path": "registration/inputs/batch/skill/spec/core-v0.10.md.txt",
+      "task": "batch",
+      "arm": "skill",
+      "trial_logical_name": "spec/core-v0.10.md",
+      "sha256": "2ca585067a2c5113ce335847f433489c79a71d63471c2443786157038b60953e"
+    },
+    {
+      "original_snapshot_path": "registration/inputs/batch/skill/spec/core-v0.11.md",
+      "stored_snapshot_path": "registration/inputs/batch/skill/spec/core-v0.11.md.txt",
+      "task": "batch",
+      "arm": "skill",
+      "trial_logical_name": "spec/core-v0.11.md",
+      "sha256": "275105a2b66f5f0f6ddb12828d3e30db47f8603933654ea92b6bb3d5597ba8f9"
+    },
+    {
+      "original_snapshot_path": "registration/inputs/batch/skill/spec/core-v0.12.md",
+      "stored_snapshot_path": "registration/inputs/batch/skill/spec/core-v0.12.md.txt",
+      "task": "batch",
+      "arm": "skill",
+      "trial_logical_name": "spec/core-v0.12.md",
+      "sha256": "f02ddafe0a6196c15671a51e08aa12105ce216df1edb1a8354f54cfccc9e15c4"
+    },
+    {
+      "original_snapshot_path": "registration/inputs/batch/skill/spec/core-v0.2.md",
+      "stored_snapshot_path": "registration/inputs/batch/skill/spec/core-v0.2.md.txt",
+      "task": "batch",
+      "arm": "skill",
+      "trial_logical_name": "spec/core-v0.2.md",
+      "sha256": "9cbdbe1ddd2a55ce69b3333d5984a12d437ed225d856668c69edfbfd2a4b1ad2"
+    },
+    {
+      "original_snapshot_path": "registration/inputs/batch/skill/spec/core-v0.3.md",
+      "stored_snapshot_path": "registration/inputs/batch/skill/spec/core-v0.3.md.txt",
+      "task": "batch",
+      "arm": "skill",
+      "trial_logical_name": "spec/core-v0.3.md",
+      "sha256": "96e39f958c14b082ad0f3a0c72dc0b3318a7c1c442812b35c338d35b00759543"
+    },
+    {
+      "original_snapshot_path": "registration/inputs/batch/skill/spec/core-v0.4.md",
+      "stored_snapshot_path": "registration/inputs/batch/skill/spec/core-v0.4.md.txt",
+      "task": "batch",
+      "arm": "skill",
+      "trial_logical_name": "spec/core-v0.4.md",
+      "sha256": "84828c9c83b0c0b70d278e2458d77e01231bfd75899a99193b80a762b78ede83"
+    },
+    {
+      "original_snapshot_path": "registration/inputs/batch/skill/spec/core-v0.5.md",
+      "stored_snapshot_path": "registration/inputs/batch/skill/spec/core-v0.5.md.txt",
+      "task": "batch",
+      "arm": "skill",
+      "trial_logical_name": "spec/core-v0.5.md",
+      "sha256": "02ad206aa3cf73c38a8c13d082cdd7d0ea61c45a4dd2ab304497df2cc7c326cc"
+    },
+    {
+      "original_snapshot_path": "registration/inputs/batch/skill/spec/core-v0.6.md",
+      "stored_snapshot_path": "registration/inputs/batch/skill/spec/core-v0.6.md.txt",
+      "task": "batch",
+      "arm": "skill",
+      "trial_logical_name": "spec/core-v0.6.md",
+      "sha256": "3d8737fe0d67ef67916ba63fc6d91386d9ff983c9148d2b2c671048a0cf35245"
+    },
+    {
+      "original_snapshot_path": "registration/inputs/batch/skill/spec/core-v0.7.md",
+      "stored_snapshot_path": "registration/inputs/batch/skill/spec/core-v0.7.md.txt",
+      "task": "batch",
+      "arm": "skill",
+      "trial_logical_name": "spec/core-v0.7.md",
+      "sha256": "0111fcfce8f7ba3ca9abfa027282113dcb6c31df7fb2d946847260f392efb221"
+    },
+    {
+      "original_snapshot_path": "registration/inputs/batch/skill/spec/core-v0.8.md",
+      "stored_snapshot_path": "registration/inputs/batch/skill/spec/core-v0.8.md.txt",
+      "task": "batch",
+      "arm": "skill",
+      "trial_logical_name": "spec/core-v0.8.md",
+      "sha256": "790cfe562577be3dafa5ca3d2028e34d8782cbb36731fe45c29560a4badc6887"
+    },
+    {
+      "original_snapshot_path": "registration/inputs/batch/skill/spec/core-v0.9.md",
+      "stored_snapshot_path": "registration/inputs/batch/skill/spec/core-v0.9.md.txt",
+      "task": "batch",
+      "arm": "skill",
+      "trial_logical_name": "spec/core-v0.9.md",
+      "sha256": "4bc8977f5151c72df856a06da8cc1ff136a9fb355681b47075bbd17d570d5379"
+    },
+    {
+      "original_snapshot_path": "registration/inputs/batch/skill/spec/core-v1.0.md",
+      "stored_snapshot_path": "registration/inputs/batch/skill/spec/core-v1.0.md.txt",
+      "task": "batch",
+      "arm": "skill",
+      "trial_logical_name": "spec/core-v1.0.md",
+      "sha256": "8dbc2ca888f49b84125a8faedf39160bb1eab27e0f25b336b1ef8f87f14f3b2b"
+    },
+    {
+      "original_snapshot_path": "registration/inputs/batch/skill/spec/core-v1.1.md",
+      "stored_snapshot_path": "registration/inputs/batch/skill/spec/core-v1.1.md.txt",
+      "task": "batch",
+      "arm": "skill",
+      "trial_logical_name": "spec/core-v1.1.md",
+      "sha256": "98c9b16d2bd72229464751f1d6c03790efde00a234bf7d2add2306f30b785361"
+    },
+    {
+      "original_snapshot_path": "registration/inputs/batch/skill/spec/core-v1.10.md",
+      "stored_snapshot_path": "registration/inputs/batch/skill/spec/core-v1.10.md.txt",
+      "task": "batch",
+      "arm": "skill",
+      "trial_logical_name": "spec/core-v1.10.md",
+      "sha256": "45d45f48a14fda25275c50ea02d6d65854d14e3fb6989ea56ef6d1aba62ec308"
+    },
+    {
+      "original_snapshot_path": "registration/inputs/batch/skill/spec/core-v1.11.md",
+      "stored_snapshot_path": "registration/inputs/batch/skill/spec/core-v1.11.md.txt",
+      "task": "batch",
+      "arm": "skill",
+      "trial_logical_name": "spec/core-v1.11.md",
+      "sha256": "d13c38830326c983d336c83ab4a398867bd17858ade3c5f8ecc6d088359182aa"
+    },
+    {
+      "original_snapshot_path": "registration/inputs/batch/skill/spec/core-v1.2.md",
+      "stored_snapshot_path": "registration/inputs/batch/skill/spec/core-v1.2.md.txt",
+      "task": "batch",
+      "arm": "skill",
+      "trial_logical_name": "spec/core-v1.2.md",
+      "sha256": "7d0f42dd9d1bd99b860af5045c960fa82ffc96511d8f6397fefa381964c5b363"
+    },
+    {
+      "original_snapshot_path": "registration/inputs/batch/skill/spec/core-v1.3.md",
+      "stored_snapshot_path": "registration/inputs/batch/skill/spec/core-v1.3.md.txt",
+      "task": "batch",
+      "arm": "skill",
+      "trial_logical_name": "spec/core-v1.3.md",
+      "sha256": "2ea91b7b4d4c7716a593ceafcfff42227f05f94e45d8500e9ed04e0c956a9118"
+    },
+    {
+      "original_snapshot_path": "registration/inputs/batch/skill/spec/core-v1.4.md",
+      "stored_snapshot_path": "registration/inputs/batch/skill/spec/core-v1.4.md.txt",
+      "task": "batch",
+      "arm": "skill",
+      "trial_logical_name": "spec/core-v1.4.md",
+      "sha256": "01b365a0c8874db2ad9982e1e85dc036cf22cf31521c2b28c943c08888edf9b2"
+    },
+    {
+      "original_snapshot_path": "registration/inputs/batch/skill/spec/core-v1.5.md",
+      "stored_snapshot_path": "registration/inputs/batch/skill/spec/core-v1.5.md.txt",
+      "task": "batch",
+      "arm": "skill",
+      "trial_logical_name": "spec/core-v1.5.md",
+      "sha256": "dac4877adab3d738fb05fc57c37436106a22206a3069446a00c47de65c1abdda"
+    },
+    {
+      "original_snapshot_path": "registration/inputs/batch/skill/spec/core-v1.6.md",
+      "stored_snapshot_path": "registration/inputs/batch/skill/spec/core-v1.6.md.txt",
+      "task": "batch",
+      "arm": "skill",
+      "trial_logical_name": "spec/core-v1.6.md",
+      "sha256": "71967bd60313ce04cabdf740863eb2f1c73c49ecb1f22ea58ed6e9abbcd9c886"
+    },
+    {
+      "original_snapshot_path": "registration/inputs/batch/skill/spec/core-v1.7.md",
+      "stored_snapshot_path": "registration/inputs/batch/skill/spec/core-v1.7.md.txt",
+      "task": "batch",
+      "arm": "skill",
+      "trial_logical_name": "spec/core-v1.7.md",
+      "sha256": "2123fbea05d172cf4723e683afc4216c64e9bc0a62495f25e06b7ebc83311ed3"
+    },
+    {
+      "original_snapshot_path": "registration/inputs/batch/skill/spec/core-v1.8.md",
+      "stored_snapshot_path": "registration/inputs/batch/skill/spec/core-v1.8.md.txt",
+      "task": "batch",
+      "arm": "skill",
+      "trial_logical_name": "spec/core-v1.8.md",
+      "sha256": "422e050a2b5aa621e9b236f003084fa5398995e3144b3781b998092422255eb6"
+    },
+    {
+      "original_snapshot_path": "registration/inputs/batch/skill/spec/core-v1.9.md",
+      "stored_snapshot_path": "registration/inputs/batch/skill/spec/core-v1.9.md.txt",
+      "task": "batch",
+      "arm": "skill",
+      "trial_logical_name": "spec/core-v1.9.md",
+      "sha256": "c84dc7e6b555fc92458d632c0b92fb31052abd023e58b0201c735c6019ec225b"
+    },
+    {
+      "original_snapshot_path": "registration/inputs/batch/skill/spec/generic-reuse-workload.md",
+      "stored_snapshot_path": "registration/inputs/batch/skill/spec/generic-reuse-workload.md.txt",
+      "task": "batch",
+      "arm": "skill",
+      "trial_logical_name": "spec/generic-reuse-workload.md",
+      "sha256": "53e5d3097494f3deb5379c77a343997dfa52f47edb6c3915006dac05082b244f"
+    },
+    {
+      "original_snapshot_path": "registration/inputs/batch/skill/spec/language-milestone-workloads.md",
+      "stored_snapshot_path": "registration/inputs/batch/skill/spec/language-milestone-workloads.md.txt",
+      "task": "batch",
+      "arm": "skill",
+      "trial_logical_name": "spec/language-milestone-workloads.md",
+      "sha256": "f0be02538657fc901e9241049314b75d03b0472bc776ad3748d63c5c847a2b4d"
+    },
+    {
+      "original_snapshot_path": "registration/inputs/batch/skill/spec/language-v1-acceptance.md",
+      "stored_snapshot_path": "registration/inputs/batch/skill/spec/language-v1-acceptance.md.txt",
+      "task": "batch",
+      "arm": "skill",
+      "trial_logical_name": "spec/language-v1-acceptance.md",
+      "sha256": "33e7c84c36db6bcf74059f57e08e3eaa550e1235955d77eae4e6ca4afbed5f33"
+    },
+    {
+      "original_snapshot_path": "registration/inputs/batch/skill/spec/native-interface-v0.1.md",
+      "stored_snapshot_path": "registration/inputs/batch/skill/spec/native-interface-v0.1.md.txt",
+      "task": "batch",
+      "arm": "skill",
+      "trial_logical_name": "spec/native-interface-v0.1.md",
+      "sha256": "fc98302a3a5e50c8a87079231b9311954e8351383ba872e4223385ff1770934e"
+    },
+    {
+      "original_snapshot_path": "registration/inputs/batch/skill/spec/native-llvm-v0.1.md",
+      "stored_snapshot_path": "registration/inputs/batch/skill/spec/native-llvm-v0.1.md.txt",
+      "task": "batch",
+      "arm": "skill",
+      "trial_logical_name": "spec/native-llvm-v0.1.md",
+      "sha256": "580611e7fc27523e4aed69b9064a7c688096c8254eecf9a53541f93994045b21"
+    },
+    {
+      "original_snapshot_path": "registration/inputs/batch/skill/spec/native-v0.1.md",
+      "stored_snapshot_path": "registration/inputs/batch/skill/spec/native-v0.1.md.txt",
+      "task": "batch",
+      "arm": "skill",
+      "trial_logical_name": "spec/native-v0.1.md",
+      "sha256": "befed14019840eea1988bf6ff982d531df105bb0d1b057e765e820ed72cdc0b6"
+    },
+    {
+      "original_snapshot_path": "registration/inputs/batch/skill/spec/recursive-ast-workload.md",
+      "stored_snapshot_path": "registration/inputs/batch/skill/spec/recursive-ast-workload.md.txt",
+      "task": "batch",
+      "arm": "skill",
+      "trial_logical_name": "spec/recursive-ast-workload.md",
+      "sha256": "3138f238b71d5d12001391dc3d2f8cf054a1a59622608699732bcc05441c7a3a"
+    },
+    {
+      "original_snapshot_path": "registration/inputs/batch/skill/spec/source-diagnostics-v0.1.md",
+      "stored_snapshot_path": "registration/inputs/batch/skill/spec/source-diagnostics-v0.1.md.txt",
+      "task": "batch",
+      "arm": "skill",
+      "trial_logical_name": "spec/source-diagnostics-v0.1.md",
+      "sha256": "d531df2c57fdd4ec2917fb029a8fc54f441f6632fbfb7c2b4cfe3b8168e6eb3b"
+    },
+    {
+      "original_snapshot_path": "registration/inputs/batch/skill/spec/sqlite-interface-v0.1.md",
+      "stored_snapshot_path": "registration/inputs/batch/skill/spec/sqlite-interface-v0.1.md.txt",
+      "task": "batch",
+      "arm": "skill",
+      "trial_logical_name": "spec/sqlite-interface-v0.1.md",
+      "sha256": "19de3da7153b874edc5518ded812515c2ce32dc67a4d1226307c7a0c8b612bdf"
+    },
+    {
+      "original_snapshot_path": "registration/inputs/dispatch/control/.agents/skills/lobo-programming/references/language.md",
+      "stored_snapshot_path": "registration/inputs/dispatch/control/.agents/skills/lobo-programming/references/language.md.txt",
+      "task": "dispatch",
+      "arm": "control",
+      "trial_logical_name": ".agents/skills/lobo-programming/references/language.md",
+      "sha256": "f007469320ec5054db07dac9302f8b6ac9a9dc976099ffd566c1ea963ab36562"
+    },
+    {
+      "original_snapshot_path": "registration/inputs/dispatch/control/.agents/skills/lobo-programming/references/tools.md",
+      "stored_snapshot_path": "registration/inputs/dispatch/control/.agents/skills/lobo-programming/references/tools.md.txt",
+      "task": "dispatch",
+      "arm": "control",
+      "trial_logical_name": ".agents/skills/lobo-programming/references/tools.md",
+      "sha256": "1913a1fceffba4c09f72625d9bc1e8d8104e35025ad674988a73405ba8eb8429"
+    },
+    {
+      "original_snapshot_path": "registration/inputs/dispatch/control/AGENTS.md",
+      "stored_snapshot_path": "registration/inputs/dispatch/control/AGENTS.md.txt",
+      "task": "dispatch",
+      "arm": "control",
+      "trial_logical_name": "AGENTS.md",
+      "sha256": "3c8c8fce33c21a65ee4b8a44fe408af1f260accb220adba4fb6a75e331e7ea11"
+    },
+    {
+      "original_snapshot_path": "registration/inputs/dispatch/control/libraries/http/README.md",
+      "stored_snapshot_path": "registration/inputs/dispatch/control/libraries/http/README.md.txt",
+      "task": "dispatch",
+      "arm": "control",
+      "trial_logical_name": "libraries/http/README.md",
+      "sha256": "c4dd34349e63538c79fe003c6cff87c3e4d27a624bc2d3146ed4fe08c4626774"
+    },
+    {
+      "original_snapshot_path": "registration/inputs/dispatch/control/libraries/http-server/README.md",
+      "stored_snapshot_path": "registration/inputs/dispatch/control/libraries/http-server/README.md.txt",
+      "task": "dispatch",
+      "arm": "control",
+      "trial_logical_name": "libraries/http-server/README.md",
+      "sha256": "7f695c6966c1a31adf74d2d620760857a07ac28c0763a65fc8a6001800b6bde2"
+    },
+    {
+      "original_snapshot_path": "registration/inputs/dispatch/control/libraries/json/README.md",
+      "stored_snapshot_path": "registration/inputs/dispatch/control/libraries/json/README.md.txt",
+      "task": "dispatch",
+      "arm": "control",
+      "trial_logical_name": "libraries/json/README.md",
+      "sha256": "fcc2d6742f11f4a53fbe1f26ce7a390e477e0de88a983e4a348884f6983d4959"
+    },
+    {
+      "original_snapshot_path": "registration/inputs/dispatch/control/libraries/native/README.md",
+      "stored_snapshot_path": "registration/inputs/dispatch/control/libraries/native/README.md.txt",
+      "task": "dispatch",
+      "arm": "control",
+      "trial_logical_name": "libraries/native/README.md",
+      "sha256": "4de8dd7276b56d529c96f909ba6e4903fda299e255394e1e8e4bef094d104eea"
+    },
+    {
+      "original_snapshot_path": "registration/inputs/dispatch/control/libraries/sql/README.md",
+      "stored_snapshot_path": "registration/inputs/dispatch/control/libraries/sql/README.md.txt",
+      "task": "dispatch",
+      "arm": "control",
+      "trial_logical_name": "libraries/sql/README.md",
+      "sha256": "85f5ec08131d902d2ed64014ebd687462def277aa5f0876599c1058cfd71fad5"
+    },
+    {
+      "original_snapshot_path": "registration/inputs/dispatch/control/research/compact-pilot-2026-11-24.md",
+      "stored_snapshot_path": "registration/inputs/dispatch/control/research/compact-pilot-2026-11-24.md.txt",
+      "task": "dispatch",
+      "arm": "control",
+      "trial_logical_name": "research/compact-pilot-2026-11-24.md",
+      "sha256": "761a1fc994e8bdf6865f293fc37728aab95932c49d67a9ea23907a1de352ef25"
+    },
+    {
+      "original_snapshot_path": "registration/inputs/dispatch/control/spec/README.md",
+      "stored_snapshot_path": "registration/inputs/dispatch/control/spec/README.md.txt",
+      "task": "dispatch",
+      "arm": "control",
+      "trial_logical_name": "spec/README.md",
+      "sha256": "e8b911e1997d93f0ede12e14c97851f8e08843ca19e84a1eb5a4319108e82653"
+    },
+    {
+      "original_snapshot_path": "registration/inputs/dispatch/control/spec/agent-testing-v0.1.md",
+      "stored_snapshot_path": "registration/inputs/dispatch/control/spec/agent-testing-v0.1.md.txt",
+      "task": "dispatch",
+      "arm": "control",
+      "trial_logical_name": "spec/agent-testing-v0.1.md",
+      "sha256": "dc9c1fb4b7f3aca5cc70a2cb844139190ec16218ee3ddb7759653f2d0fc4ab0e"
+    },
+    {
+      "original_snapshot_path": "registration/inputs/dispatch/control/spec/checked-artifact-v0.1.md",
+      "stored_snapshot_path": "registration/inputs/dispatch/control/spec/checked-artifact-v0.1.md.txt",
+      "task": "dispatch",
+      "arm": "control",
+      "trial_logical_name": "spec/checked-artifact-v0.1.md",
+      "sha256": "8e85e37b7a89812f135ccb796e083ea95771032d267e55bc9c0d18f53fa56cdf"
+    },
+    {
+      "original_snapshot_path": "registration/inputs/dispatch/control/spec/checked-artifact-v0.2.md",
+      "stored_snapshot_path": "registration/inputs/dispatch/control/spec/checked-artifact-v0.2.md.txt",
+      "task": "dispatch",
+      "arm": "control",
+      "trial_logical_name": "spec/checked-artifact-v0.2.md",
+      "sha256": "b13203846b1eb62eeb73445ef422cb526f7ae33d1e6804ecdef20e33c6365ff7"
+    },
+    {
+      "original_snapshot_path": "registration/inputs/dispatch/control/spec/checked-artifact-v0.3.md",
+      "stored_snapshot_path": "registration/inputs/dispatch/control/spec/checked-artifact-v0.3.md.txt",
+      "task": "dispatch",
+      "arm": "control",
+      "trial_logical_name": "spec/checked-artifact-v0.3.md",
+      "sha256": "4874fc7ba430389d8d3bf4df3c6fc34b2b5bb949ecfe646383e3f6fc04652b15"
+    },
+    {
+      "original_snapshot_path": "registration/inputs/dispatch/control/spec/compact-source-v0.1.md",
+      "stored_snapshot_path": "registration/inputs/dispatch/control/spec/compact-source-v0.1.md.txt",
+      "task": "dispatch",
+      "arm": "control",
+      "trial_logical_name": "spec/compact-source-v0.1.md",
+      "sha256": "d7035fbf81ff5c83f84a34dd5c73a1617f1a49176019a2693ba56c501955a94f"
+    },
+    {
+      "original_snapshot_path": "registration/inputs/dispatch/control/spec/core-v0.1.md",
+      "stored_snapshot_path": "registration/inputs/dispatch/control/spec/core-v0.1.md.txt",
+      "task": "dispatch",
+      "arm": "control",
+      "trial_logical_name": "spec/core-v0.1.md",
+      "sha256": "c3fe3c05e21bd22c9df8f9ff78c65f3c645f127b10350c93a888c5f133f16854"
+    },
+    {
+      "original_snapshot_path": "registration/inputs/dispatch/control/spec/core-v0.10.md",
+      "stored_snapshot_path": "registration/inputs/dispatch/control/spec/core-v0.10.md.txt",
+      "task": "dispatch",
+      "arm": "control",
+      "trial_logical_name": "spec/core-v0.10.md",
+      "sha256": "2ca585067a2c5113ce335847f433489c79a71d63471c2443786157038b60953e"
+    },
+    {
+      "original_snapshot_path": "registration/inputs/dispatch/control/spec/core-v0.11.md",
+      "stored_snapshot_path": "registration/inputs/dispatch/control/spec/core-v0.11.md.txt",
+      "task": "dispatch",
+      "arm": "control",
+      "trial_logical_name": "spec/core-v0.11.md",
+      "sha256": "275105a2b66f5f0f6ddb12828d3e30db47f8603933654ea92b6bb3d5597ba8f9"
+    },
+    {
+      "original_snapshot_path": "registration/inputs/dispatch/control/spec/core-v0.12.md",
+      "stored_snapshot_path": "registration/inputs/dispatch/control/spec/core-v0.12.md.txt",
+      "task": "dispatch",
+      "arm": "control",
+      "trial_logical_name": "spec/core-v0.12.md",
+      "sha256": "f02ddafe0a6196c15671a51e08aa12105ce216df1edb1a8354f54cfccc9e15c4"
+    },
+    {
+      "original_snapshot_path": "registration/inputs/dispatch/control/spec/core-v0.2.md",
+      "stored_snapshot_path": "registration/inputs/dispatch/control/spec/core-v0.2.md.txt",
+      "task": "dispatch",
+      "arm": "control",
+      "trial_logical_name": "spec/core-v0.2.md",
+      "sha256": "9cbdbe1ddd2a55ce69b3333d5984a12d437ed225d856668c69edfbfd2a4b1ad2"
+    },
+    {
+      "original_snapshot_path": "registration/inputs/dispatch/control/spec/core-v0.3.md",
+      "stored_snapshot_path": "registration/inputs/dispatch/control/spec/core-v0.3.md.txt",
+      "task": "dispatch",
+      "arm": "control",
+      "trial_logical_name": "spec/core-v0.3.md",
+      "sha256": "96e39f958c14b082ad0f3a0c72dc0b3318a7c1c442812b35c338d35b00759543"
+    },
+    {
+      "original_snapshot_path": "registration/inputs/dispatch/control/spec/core-v0.4.md",
+      "stored_snapshot_path": "registration/inputs/dispatch/control/spec/core-v0.4.md.txt",
+      "task": "dispatch",
+      "arm": "control",
+      "trial_logical_name": "spec/core-v0.4.md",
+      "sha256": "84828c9c83b0c0b70d278e2458d77e01231bfd75899a99193b80a762b78ede83"
+    },
+    {
+      "original_snapshot_path": "registration/inputs/dispatch/control/spec/core-v0.5.md",
+      "stored_snapshot_path": "registration/inputs/dispatch/control/spec/core-v0.5.md.txt",
+      "task": "dispatch",
+      "arm": "control",
+      "trial_logical_name": "spec/core-v0.5.md",
+      "sha256": "02ad206aa3cf73c38a8c13d082cdd7d0ea61c45a4dd2ab304497df2cc7c326cc"
+    },
+    {
+      "original_snapshot_path": "registration/inputs/dispatch/control/spec/core-v0.6.md",
+      "stored_snapshot_path": "registration/inputs/dispatch/control/spec/core-v0.6.md.txt",
+      "task": "dispatch",
+      "arm": "control",
+      "trial_logical_name": "spec/core-v0.6.md",
+      "sha256": "3d8737fe0d67ef67916ba63fc6d91386d9ff983c9148d2b2c671048a0cf35245"
+    },
+    {
+      "original_snapshot_path": "registration/inputs/dispatch/control/spec/core-v0.7.md",
+      "stored_snapshot_path": "registration/inputs/dispatch/control/spec/core-v0.7.md.txt",
+      "task": "dispatch",
+      "arm": "control",
+      "trial_logical_name": "spec/core-v0.7.md",
+      "sha256": "0111fcfce8f7ba3ca9abfa027282113dcb6c31df7fb2d946847260f392efb221"
+    },
+    {
+      "original_snapshot_path": "registration/inputs/dispatch/control/spec/core-v0.8.md",
+      "stored_snapshot_path": "registration/inputs/dispatch/control/spec/core-v0.8.md.txt",
+      "task": "dispatch",
+      "arm": "control",
+      "trial_logical_name": "spec/core-v0.8.md",
+      "sha256": "790cfe562577be3dafa5ca3d2028e34d8782cbb36731fe45c29560a4badc6887"
+    },
+    {
+      "original_snapshot_path": "registration/inputs/dispatch/control/spec/core-v0.9.md",
+      "stored_snapshot_path": "registration/inputs/dispatch/control/spec/core-v0.9.md.txt",
+      "task": "dispatch",
+      "arm": "control",
+      "trial_logical_name": "spec/core-v0.9.md",
+      "sha256": "4bc8977f5151c72df856a06da8cc1ff136a9fb355681b47075bbd17d570d5379"
+    },
+    {
+      "original_snapshot_path": "registration/inputs/dispatch/control/spec/core-v1.0.md",
+      "stored_snapshot_path": "registration/inputs/dispatch/control/spec/core-v1.0.md.txt",
+      "task": "dispatch",
+      "arm": "control",
+      "trial_logical_name": "spec/core-v1.0.md",
+      "sha256": "8dbc2ca888f49b84125a8faedf39160bb1eab27e0f25b336b1ef8f87f14f3b2b"
+    },
+    {
+      "original_snapshot_path": "registration/inputs/dispatch/control/spec/core-v1.1.md",
+      "stored_snapshot_path": "registration/inputs/dispatch/control/spec/core-v1.1.md.txt",
+      "task": "dispatch",
+      "arm": "control",
+      "trial_logical_name": "spec/core-v1.1.md",
+      "sha256": "98c9b16d2bd72229464751f1d6c03790efde00a234bf7d2add2306f30b785361"
+    },
+    {
+      "original_snapshot_path": "registration/inputs/dispatch/control/spec/core-v1.10.md",
+      "stored_snapshot_path": "registration/inputs/dispatch/control/spec/core-v1.10.md.txt",
+      "task": "dispatch",
+      "arm": "control",
+      "trial_logical_name": "spec/core-v1.10.md",
+      "sha256": "45d45f48a14fda25275c50ea02d6d65854d14e3fb6989ea56ef6d1aba62ec308"
+    },
+    {
+      "original_snapshot_path": "registration/inputs/dispatch/control/spec/core-v1.11.md",
+      "stored_snapshot_path": "registration/inputs/dispatch/control/spec/core-v1.11.md.txt",
+      "task": "dispatch",
+      "arm": "control",
+      "trial_logical_name": "spec/core-v1.11.md",
+      "sha256": "d13c38830326c983d336c83ab4a398867bd17858ade3c5f8ecc6d088359182aa"
+    },
+    {
+      "original_snapshot_path": "registration/inputs/dispatch/control/spec/core-v1.2.md",
+      "stored_snapshot_path": "registration/inputs/dispatch/control/spec/core-v1.2.md.txt",
+      "task": "dispatch",
+      "arm": "control",
+      "trial_logical_name": "spec/core-v1.2.md",
+      "sha256": "7d0f42dd9d1bd99b860af5045c960fa82ffc96511d8f6397fefa381964c5b363"
+    },
+    {
+      "original_snapshot_path": "registration/inputs/dispatch/control/spec/core-v1.3.md",
+      "stored_snapshot_path": "registration/inputs/dispatch/control/spec/core-v1.3.md.txt",
+      "task": "dispatch",
+      "arm": "control",
+      "trial_logical_name": "spec/core-v1.3.md",
+      "sha256": "2ea91b7b4d4c7716a593ceafcfff42227f05f94e45d8500e9ed04e0c956a9118"
+    },
+    {
+      "original_snapshot_path": "registration/inputs/dispatch/control/spec/core-v1.4.md",
+      "stored_snapshot_path": "registration/inputs/dispatch/control/spec/core-v1.4.md.txt",
+      "task": "dispatch",
+      "arm": "control",
+      "trial_logical_name": "spec/core-v1.4.md",
+      "sha256": "01b365a0c8874db2ad9982e1e85dc036cf22cf31521c2b28c943c08888edf9b2"
+    },
+    {
+      "original_snapshot_path": "registration/inputs/dispatch/control/spec/core-v1.5.md",
+      "stored_snapshot_path": "registration/inputs/dispatch/control/spec/core-v1.5.md.txt",
+      "task": "dispatch",
+      "arm": "control",
+      "trial_logical_name": "spec/core-v1.5.md",
+      "sha256": "dac4877adab3d738fb05fc57c37436106a22206a3069446a00c47de65c1abdda"
+    },
+    {
+      "original_snapshot_path": "registration/inputs/dispatch/control/spec/core-v1.6.md",
+      "stored_snapshot_path": "registration/inputs/dispatch/control/spec/core-v1.6.md.txt",
+      "task": "dispatch",
+      "arm": "control",
+      "trial_logical_name": "spec/core-v1.6.md",
+      "sha256": "71967bd60313ce04cabdf740863eb2f1c73c49ecb1f22ea58ed6e9abbcd9c886"
+    },
+    {
+      "original_snapshot_path": "registration/inputs/dispatch/control/spec/core-v1.7.md",
+      "stored_snapshot_path": "registration/inputs/dispatch/control/spec/core-v1.7.md.txt",
+      "task": "dispatch",
+      "arm": "control",
+      "trial_logical_name": "spec/core-v1.7.md",
+      "sha256": "2123fbea05d172cf4723e683afc4216c64e9bc0a62495f25e06b7ebc83311ed3"
+    },
+    {
+      "original_snapshot_path": "registration/inputs/dispatch/control/spec/core-v1.8.md",
+      "stored_snapshot_path": "registration/inputs/dispatch/control/spec/core-v1.8.md.txt",
+      "task": "dispatch",
+      "arm": "control",
+      "trial_logical_name": "spec/core-v1.8.md",
+      "sha256": "422e050a2b5aa621e9b236f003084fa5398995e3144b3781b998092422255eb6"
+    },
+    {
+      "original_snapshot_path": "registration/inputs/dispatch/control/spec/core-v1.9.md",
+      "stored_snapshot_path": "registration/inputs/dispatch/control/spec/core-v1.9.md.txt",
+      "task": "dispatch",
+      "arm": "control",
+      "trial_logical_name": "spec/core-v1.9.md",
+      "sha256": "c84dc7e6b555fc92458d632c0b92fb31052abd023e58b0201c735c6019ec225b"
+    },
+    {
+      "original_snapshot_path": "registration/inputs/dispatch/control/spec/generic-reuse-workload.md",
+      "stored_snapshot_path": "registration/inputs/dispatch/control/spec/generic-reuse-workload.md.txt",
+      "task": "dispatch",
+      "arm": "control",
+      "trial_logical_name": "spec/generic-reuse-workload.md",
+      "sha256": "53e5d3097494f3deb5379c77a343997dfa52f47edb6c3915006dac05082b244f"
+    },
+    {
+      "original_snapshot_path": "registration/inputs/dispatch/control/spec/language-milestone-workloads.md",
+      "stored_snapshot_path": "registration/inputs/dispatch/control/spec/language-milestone-workloads.md.txt",
+      "task": "dispatch",
+      "arm": "control",
+      "trial_logical_name": "spec/language-milestone-workloads.md",
+      "sha256": "f0be02538657fc901e9241049314b75d03b0472bc776ad3748d63c5c847a2b4d"
+    },
+    {
+      "original_snapshot_path": "registration/inputs/dispatch/control/spec/language-v1-acceptance.md",
+      "stored_snapshot_path": "registration/inputs/dispatch/control/spec/language-v1-acceptance.md.txt",
+      "task": "dispatch",
+      "arm": "control",
+      "trial_logical_name": "spec/language-v1-acceptance.md",
+      "sha256": "33e7c84c36db6bcf74059f57e08e3eaa550e1235955d77eae4e6ca4afbed5f33"
+    },
+    {
+      "original_snapshot_path": "registration/inputs/dispatch/control/spec/native-interface-v0.1.md",
+      "stored_snapshot_path": "registration/inputs/dispatch/control/spec/native-interface-v0.1.md.txt",
+      "task": "dispatch",
+      "arm": "control",
+      "trial_logical_name": "spec/native-interface-v0.1.md",
+      "sha256": "fc98302a3a5e50c8a87079231b9311954e8351383ba872e4223385ff1770934e"
+    },
+    {
+      "original_snapshot_path": "registration/inputs/dispatch/control/spec/native-llvm-v0.1.md",
+      "stored_snapshot_path": "registration/inputs/dispatch/control/spec/native-llvm-v0.1.md.txt",
+      "task": "dispatch",
+      "arm": "control",
+      "trial_logical_name": "spec/native-llvm-v0.1.md",
+      "sha256": "580611e7fc27523e4aed69b9064a7c688096c8254eecf9a53541f93994045b21"
+    },
+    {
+      "original_snapshot_path": "registration/inputs/dispatch/control/spec/native-v0.1.md",
+      "stored_snapshot_path": "registration/inputs/dispatch/control/spec/native-v0.1.md.txt",
+      "task": "dispatch",
+      "arm": "control",
+      "trial_logical_name": "spec/native-v0.1.md",
+      "sha256": "befed14019840eea1988bf6ff982d531df105bb0d1b057e765e820ed72cdc0b6"
+    },
+    {
+      "original_snapshot_path": "registration/inputs/dispatch/control/spec/recursive-ast-workload.md",
+      "stored_snapshot_path": "registration/inputs/dispatch/control/spec/recursive-ast-workload.md.txt",
+      "task": "dispatch",
+      "arm": "control",
+      "trial_logical_name": "spec/recursive-ast-workload.md",
+      "sha256": "3138f238b71d5d12001391dc3d2f8cf054a1a59622608699732bcc05441c7a3a"
+    },
+    {
+      "original_snapshot_path": "registration/inputs/dispatch/control/spec/source-diagnostics-v0.1.md",
+      "stored_snapshot_path": "registration/inputs/dispatch/control/spec/source-diagnostics-v0.1.md.txt",
+      "task": "dispatch",
+      "arm": "control",
+      "trial_logical_name": "spec/source-diagnostics-v0.1.md",
+      "sha256": "d531df2c57fdd4ec2917fb029a8fc54f441f6632fbfb7c2b4cfe3b8168e6eb3b"
+    },
+    {
+      "original_snapshot_path": "registration/inputs/dispatch/control/spec/sqlite-interface-v0.1.md",
+      "stored_snapshot_path": "registration/inputs/dispatch/control/spec/sqlite-interface-v0.1.md.txt",
+      "task": "dispatch",
+      "arm": "control",
+      "trial_logical_name": "spec/sqlite-interface-v0.1.md",
+      "sha256": "19de3da7153b874edc5518ded812515c2ce32dc67a4d1226307c7a0c8b612bdf"
+    },
+    {
+      "original_snapshot_path": "registration/inputs/dispatch/skill/.agents/skills/lobo-development/SKILL.md",
+      "stored_snapshot_path": "registration/inputs/dispatch/skill/.agents/skills/lobo-development/SKILL.md.txt",
+      "task": "dispatch",
+      "arm": "skill",
+      "trial_logical_name": ".agents/skills/lobo-development/SKILL.md",
+      "sha256": "804a12e43f79bef059243f88e474266890c785d02df034645cbab88da50a52b5"
+    },
+    {
+      "original_snapshot_path": "registration/inputs/dispatch/skill/.agents/skills/lobo-programming/references/language.md",
+      "stored_snapshot_path": "registration/inputs/dispatch/skill/.agents/skills/lobo-programming/references/language.md.txt",
+      "task": "dispatch",
+      "arm": "skill",
+      "trial_logical_name": ".agents/skills/lobo-programming/references/language.md",
+      "sha256": "f007469320ec5054db07dac9302f8b6ac9a9dc976099ffd566c1ea963ab36562"
+    },
+    {
+      "original_snapshot_path": "registration/inputs/dispatch/skill/.agents/skills/lobo-programming/references/tools.md",
+      "stored_snapshot_path": "registration/inputs/dispatch/skill/.agents/skills/lobo-programming/references/tools.md.txt",
+      "task": "dispatch",
+      "arm": "skill",
+      "trial_logical_name": ".agents/skills/lobo-programming/references/tools.md",
+      "sha256": "1913a1fceffba4c09f72625d9bc1e8d8104e35025ad674988a73405ba8eb8429"
+    },
+    {
+      "original_snapshot_path": "registration/inputs/dispatch/skill/AGENTS.md",
+      "stored_snapshot_path": "registration/inputs/dispatch/skill/AGENTS.md.txt",
+      "task": "dispatch",
+      "arm": "skill",
+      "trial_logical_name": "AGENTS.md",
+      "sha256": "3c8c8fce33c21a65ee4b8a44fe408af1f260accb220adba4fb6a75e331e7ea11"
+    },
+    {
+      "original_snapshot_path": "registration/inputs/dispatch/skill/libraries/http/README.md",
+      "stored_snapshot_path": "registration/inputs/dispatch/skill/libraries/http/README.md.txt",
+      "task": "dispatch",
+      "arm": "skill",
+      "trial_logical_name": "libraries/http/README.md",
+      "sha256": "c4dd34349e63538c79fe003c6cff87c3e4d27a624bc2d3146ed4fe08c4626774"
+    },
+    {
+      "original_snapshot_path": "registration/inputs/dispatch/skill/libraries/http-server/README.md",
+      "stored_snapshot_path": "registration/inputs/dispatch/skill/libraries/http-server/README.md.txt",
+      "task": "dispatch",
+      "arm": "skill",
+      "trial_logical_name": "libraries/http-server/README.md",
+      "sha256": "7f695c6966c1a31adf74d2d620760857a07ac28c0763a65fc8a6001800b6bde2"
+    },
+    {
+      "original_snapshot_path": "registration/inputs/dispatch/skill/libraries/json/README.md",
+      "stored_snapshot_path": "registration/inputs/dispatch/skill/libraries/json/README.md.txt",
+      "task": "dispatch",
+      "arm": "skill",
+      "trial_logical_name": "libraries/json/README.md",
+      "sha256": "fcc2d6742f11f4a53fbe1f26ce7a390e477e0de88a983e4a348884f6983d4959"
+    },
+    {
+      "original_snapshot_path": "registration/inputs/dispatch/skill/libraries/native/README.md",
+      "stored_snapshot_path": "registration/inputs/dispatch/skill/libraries/native/README.md.txt",
+      "task": "dispatch",
+      "arm": "skill",
+      "trial_logical_name": "libraries/native/README.md",
+      "sha256": "4de8dd7276b56d529c96f909ba6e4903fda299e255394e1e8e4bef094d104eea"
+    },
+    {
+      "original_snapshot_path": "registration/inputs/dispatch/skill/libraries/sql/README.md",
+      "stored_snapshot_path": "registration/inputs/dispatch/skill/libraries/sql/README.md.txt",
+      "task": "dispatch",
+      "arm": "skill",
+      "trial_logical_name": "libraries/sql/README.md",
+      "sha256": "85f5ec08131d902d2ed64014ebd687462def277aa5f0876599c1058cfd71fad5"
+    },
+    {
+      "original_snapshot_path": "registration/inputs/dispatch/skill/research/compact-pilot-2026-11-24.md",
+      "stored_snapshot_path": "registration/inputs/dispatch/skill/research/compact-pilot-2026-11-24.md.txt",
+      "task": "dispatch",
+      "arm": "skill",
+      "trial_logical_name": "research/compact-pilot-2026-11-24.md",
+      "sha256": "761a1fc994e8bdf6865f293fc37728aab95932c49d67a9ea23907a1de352ef25"
+    },
+    {
+      "original_snapshot_path": "registration/inputs/dispatch/skill/spec/README.md",
+      "stored_snapshot_path": "registration/inputs/dispatch/skill/spec/README.md.txt",
+      "task": "dispatch",
+      "arm": "skill",
+      "trial_logical_name": "spec/README.md",
+      "sha256": "e8b911e1997d93f0ede12e14c97851f8e08843ca19e84a1eb5a4319108e82653"
+    },
+    {
+      "original_snapshot_path": "registration/inputs/dispatch/skill/spec/agent-testing-v0.1.md",
+      "stored_snapshot_path": "registration/inputs/dispatch/skill/spec/agent-testing-v0.1.md.txt",
+      "task": "dispatch",
+      "arm": "skill",
+      "trial_logical_name": "spec/agent-testing-v0.1.md",
+      "sha256": "dc9c1fb4b7f3aca5cc70a2cb844139190ec16218ee3ddb7759653f2d0fc4ab0e"
+    },
+    {
+      "original_snapshot_path": "registration/inputs/dispatch/skill/spec/checked-artifact-v0.1.md",
+      "stored_snapshot_path": "registration/inputs/dispatch/skill/spec/checked-artifact-v0.1.md.txt",
+      "task": "dispatch",
+      "arm": "skill",
+      "trial_logical_name": "spec/checked-artifact-v0.1.md",
+      "sha256": "8e85e37b7a89812f135ccb796e083ea95771032d267e55bc9c0d18f53fa56cdf"
+    },
+    {
+      "original_snapshot_path": "registration/inputs/dispatch/skill/spec/checked-artifact-v0.2.md",
+      "stored_snapshot_path": "registration/inputs/dispatch/skill/spec/checked-artifact-v0.2.md.txt",
+      "task": "dispatch",
+      "arm": "skill",
+      "trial_logical_name": "spec/checked-artifact-v0.2.md",
+      "sha256": "b13203846b1eb62eeb73445ef422cb526f7ae33d1e6804ecdef20e33c6365ff7"
+    },
+    {
+      "original_snapshot_path": "registration/inputs/dispatch/skill/spec/checked-artifact-v0.3.md",
+      "stored_snapshot_path": "registration/inputs/dispatch/skill/spec/checked-artifact-v0.3.md.txt",
+      "task": "dispatch",
+      "arm": "skill",
+      "trial_logical_name": "spec/checked-artifact-v0.3.md",
+      "sha256": "4874fc7ba430389d8d3bf4df3c6fc34b2b5bb949ecfe646383e3f6fc04652b15"
+    },
+    {
+      "original_snapshot_path": "registration/inputs/dispatch/skill/spec/compact-source-v0.1.md",
+      "stored_snapshot_path": "registration/inputs/dispatch/skill/spec/compact-source-v0.1.md.txt",
+      "task": "dispatch",
+      "arm": "skill",
+      "trial_logical_name": "spec/compact-source-v0.1.md",
+      "sha256": "d7035fbf81ff5c83f84a34dd5c73a1617f1a49176019a2693ba56c501955a94f"
+    },
+    {
+      "original_snapshot_path": "registration/inputs/dispatch/skill/spec/core-v0.1.md",
+      "stored_snapshot_path": "registration/inputs/dispatch/skill/spec/core-v0.1.md.txt",
+      "task": "dispatch",
+      "arm": "skill",
+      "trial_logical_name": "spec/core-v0.1.md",
+      "sha256": "c3fe3c05e21bd22c9df8f9ff78c65f3c645f127b10350c93a888c5f133f16854"
+    },
+    {
+      "original_snapshot_path": "registration/inputs/dispatch/skill/spec/core-v0.10.md",
+      "stored_snapshot_path": "registration/inputs/dispatch/skill/spec/core-v0.10.md.txt",
+      "task": "dispatch",
+      "arm": "skill",
+      "trial_logical_name": "spec/core-v0.10.md",
+      "sha256": "2ca585067a2c5113ce335847f433489c79a71d63471c2443786157038b60953e"
+    },
+    {
+      "original_snapshot_path": "registration/inputs/dispatch/skill/spec/core-v0.11.md",
+      "stored_snapshot_path": "registration/inputs/dispatch/skill/spec/core-v0.11.md.txt",
+      "task": "dispatch",
+      "arm": "skill",
+      "trial_logical_name": "spec/core-v0.11.md",
+      "sha256": "275105a2b66f5f0f6ddb12828d3e30db47f8603933654ea92b6bb3d5597ba8f9"
+    },
+    {
+      "original_snapshot_path": "registration/inputs/dispatch/skill/spec/core-v0.12.md",
+      "stored_snapshot_path": "registration/inputs/dispatch/skill/spec/core-v0.12.md.txt",
+      "task": "dispatch",
+      "arm": "skill",
+      "trial_logical_name": "spec/core-v0.12.md",
+      "sha256": "f02ddafe0a6196c15671a51e08aa12105ce216df1edb1a8354f54cfccc9e15c4"
+    },
+    {
+      "original_snapshot_path": "registration/inputs/dispatch/skill/spec/core-v0.2.md",
+      "stored_snapshot_path": "registration/inputs/dispatch/skill/spec/core-v0.2.md.txt",
+      "task": "dispatch",
+      "arm": "skill",
+      "trial_logical_name": "spec/core-v0.2.md",
+      "sha256": "9cbdbe1ddd2a55ce69b3333d5984a12d437ed225d856668c69edfbfd2a4b1ad2"
+    },
+    {
+      "original_snapshot_path": "registration/inputs/dispatch/skill/spec/core-v0.3.md",
+      "stored_snapshot_path": "registration/inputs/dispatch/skill/spec/core-v0.3.md.txt",
+      "task": "dispatch",
+      "arm": "skill",
+      "trial_logical_name": "spec/core-v0.3.md",
+      "sha256": "96e39f958c14b082ad0f3a0c72dc0b3318a7c1c442812b35c338d35b00759543"
+    },
+    {
+      "original_snapshot_path": "registration/inputs/dispatch/skill/spec/core-v0.4.md",
+      "stored_snapshot_path": "registration/inputs/dispatch/skill/spec/core-v0.4.md.txt",
+      "task": "dispatch",
+      "arm": "skill",
+      "trial_logical_name": "spec/core-v0.4.md",
+      "sha256": "84828c9c83b0c0b70d278e2458d77e01231bfd75899a99193b80a762b78ede83"
+    },
+    {
+      "original_snapshot_path": "registration/inputs/dispatch/skill/spec/core-v0.5.md",
+      "stored_snapshot_path": "registration/inputs/dispatch/skill/spec/core-v0.5.md.txt",
+      "task": "dispatch",
+      "arm": "skill",
+      "trial_logical_name": "spec/core-v0.5.md",
+      "sha256": "02ad206aa3cf73c38a8c13d082cdd7d0ea61c45a4dd2ab304497df2cc7c326cc"
+    },
+    {
+      "original_snapshot_path": "registration/inputs/dispatch/skill/spec/core-v0.6.md",
+      "stored_snapshot_path": "registration/inputs/dispatch/skill/spec/core-v0.6.md.txt",
+      "task": "dispatch",
+      "arm": "skill",
+      "trial_logical_name": "spec/core-v0.6.md",
+      "sha256": "3d8737fe0d67ef67916ba63fc6d91386d9ff983c9148d2b2c671048a0cf35245"
+    },
+    {
+      "original_snapshot_path": "registration/inputs/dispatch/skill/spec/core-v0.7.md",
+      "stored_snapshot_path": "registration/inputs/dispatch/skill/spec/core-v0.7.md.txt",
+      "task": "dispatch",
+      "arm": "skill",
+      "trial_logical_name": "spec/core-v0.7.md",
+      "sha256": "0111fcfce8f7ba3ca9abfa027282113dcb6c31df7fb2d946847260f392efb221"
+    },
+    {
+      "original_snapshot_path": "registration/inputs/dispatch/skill/spec/core-v0.8.md",
+      "stored_snapshot_path": "registration/inputs/dispatch/skill/spec/core-v0.8.md.txt",
+      "task": "dispatch",
+      "arm": "skill",
+      "trial_logical_name": "spec/core-v0.8.md",
+      "sha256": "790cfe562577be3dafa5ca3d2028e34d8782cbb36731fe45c29560a4badc6887"
+    },
+    {
+      "original_snapshot_path": "registration/inputs/dispatch/skill/spec/core-v0.9.md",
+      "stored_snapshot_path": "registration/inputs/dispatch/skill/spec/core-v0.9.md.txt",
+      "task": "dispatch",
+      "arm": "skill",
+      "trial_logical_name": "spec/core-v0.9.md",
+      "sha256": "4bc8977f5151c72df856a06da8cc1ff136a9fb355681b47075bbd17d570d5379"
+    },
+    {
+      "original_snapshot_path": "registration/inputs/dispatch/skill/spec/core-v1.0.md",
+      "stored_snapshot_path": "registration/inputs/dispatch/skill/spec/core-v1.0.md.txt",
+      "task": "dispatch",
+      "arm": "skill",
+      "trial_logical_name": "spec/core-v1.0.md",
+      "sha256": "8dbc2ca888f49b84125a8faedf39160bb1eab27e0f25b336b1ef8f87f14f3b2b"
+    },
+    {
+      "original_snapshot_path": "registration/inputs/dispatch/skill/spec/core-v1.1.md",
+      "stored_snapshot_path": "registration/inputs/dispatch/skill/spec/core-v1.1.md.txt",
+      "task": "dispatch",
+      "arm": "skill",
+      "trial_logical_name": "spec/core-v1.1.md",
+      "sha256": "98c9b16d2bd72229464751f1d6c03790efde00a234bf7d2add2306f30b785361"
+    },
+    {
+      "original_snapshot_path": "registration/inputs/dispatch/skill/spec/core-v1.10.md",
+      "stored_snapshot_path": "registration/inputs/dispatch/skill/spec/core-v1.10.md.txt",
+      "task": "dispatch",
+      "arm": "skill",
+      "trial_logical_name": "spec/core-v1.10.md",
+      "sha256": "45d45f48a14fda25275c50ea02d6d65854d14e3fb6989ea56ef6d1aba62ec308"
+    },
+    {
+      "original_snapshot_path": "registration/inputs/dispatch/skill/spec/core-v1.11.md",
+      "stored_snapshot_path": "registration/inputs/dispatch/skill/spec/core-v1.11.md.txt",
+      "task": "dispatch",
+      "arm": "skill",
+      "trial_logical_name": "spec/core-v1.11.md",
+      "sha256": "d13c38830326c983d336c83ab4a398867bd17858ade3c5f8ecc6d088359182aa"
+    },
+    {
+      "original_snapshot_path": "registration/inputs/dispatch/skill/spec/core-v1.2.md",
+      "stored_snapshot_path": "registration/inputs/dispatch/skill/spec/core-v1.2.md.txt",
+      "task": "dispatch",
+      "arm": "skill",
+      "trial_logical_name": "spec/core-v1.2.md",
+      "sha256": "7d0f42dd9d1bd99b860af5045c960fa82ffc96511d8f6397fefa381964c5b363"
+    },
+    {
+      "original_snapshot_path": "registration/inputs/dispatch/skill/spec/core-v1.3.md",
+      "stored_snapshot_path": "registration/inputs/dispatch/skill/spec/core-v1.3.md.txt",
+      "task": "dispatch",
+      "arm": "skill",
+      "trial_logical_name": "spec/core-v1.3.md",
+      "sha256": "2ea91b7b4d4c7716a593ceafcfff42227f05f94e45d8500e9ed04e0c956a9118"
+    },
+    {
+      "original_snapshot_path": "registration/inputs/dispatch/skill/spec/core-v1.4.md",
+      "stored_snapshot_path": "registration/inputs/dispatch/skill/spec/core-v1.4.md.txt",
+      "task": "dispatch",
+      "arm": "skill",
+      "trial_logical_name": "spec/core-v1.4.md",
+      "sha256": "01b365a0c8874db2ad9982e1e85dc036cf22cf31521c2b28c943c08888edf9b2"
+    },
+    {
+      "original_snapshot_path": "registration/inputs/dispatch/skill/spec/core-v1.5.md",
+      "stored_snapshot_path": "registration/inputs/dispatch/skill/spec/core-v1.5.md.txt",
+      "task": "dispatch",
+      "arm": "skill",
+      "trial_logical_name": "spec/core-v1.5.md",
+      "sha256": "dac4877adab3d738fb05fc57c37436106a22206a3069446a00c47de65c1abdda"
+    },
+    {
+      "original_snapshot_path": "registration/inputs/dispatch/skill/spec/core-v1.6.md",
+      "stored_snapshot_path": "registration/inputs/dispatch/skill/spec/core-v1.6.md.txt",
+      "task": "dispatch",
+      "arm": "skill",
+      "trial_logical_name": "spec/core-v1.6.md",
+      "sha256": "71967bd60313ce04cabdf740863eb2f1c73c49ecb1f22ea58ed6e9abbcd9c886"
+    },
+    {
+      "original_snapshot_path": "registration/inputs/dispatch/skill/spec/core-v1.7.md",
+      "stored_snapshot_path": "registration/inputs/dispatch/skill/spec/core-v1.7.md.txt",
+      "task": "dispatch",
+      "arm": "skill",
+      "trial_logical_name": "spec/core-v1.7.md",
+      "sha256": "2123fbea05d172cf4723e683afc4216c64e9bc0a62495f25e06b7ebc83311ed3"
+    },
+    {
+      "original_snapshot_path": "registration/inputs/dispatch/skill/spec/core-v1.8.md",
+      "stored_snapshot_path": "registration/inputs/dispatch/skill/spec/core-v1.8.md.txt",
+      "task": "dispatch",
+      "arm": "skill",
+      "trial_logical_name": "spec/core-v1.8.md",
+      "sha256": "422e050a2b5aa621e9b236f003084fa5398995e3144b3781b998092422255eb6"
+    },
+    {
+      "original_snapshot_path": "registration/inputs/dispatch/skill/spec/core-v1.9.md",
+      "stored_snapshot_path": "registration/inputs/dispatch/skill/spec/core-v1.9.md.txt",
+      "task": "dispatch",
+      "arm": "skill",
+      "trial_logical_name": "spec/core-v1.9.md",
+      "sha256": "c84dc7e6b555fc92458d632c0b92fb31052abd023e58b0201c735c6019ec225b"
+    },
+    {
+      "original_snapshot_path": "registration/inputs/dispatch/skill/spec/generic-reuse-workload.md",
+      "stored_snapshot_path": "registration/inputs/dispatch/skill/spec/generic-reuse-workload.md.txt",
+      "task": "dispatch",
+      "arm": "skill",
+      "trial_logical_name": "spec/generic-reuse-workload.md",
+      "sha256": "53e5d3097494f3deb5379c77a343997dfa52f47edb6c3915006dac05082b244f"
+    },
+    {
+      "original_snapshot_path": "registration/inputs/dispatch/skill/spec/language-milestone-workloads.md",
+      "stored_snapshot_path": "registration/inputs/dispatch/skill/spec/language-milestone-workloads.md.txt",
+      "task": "dispatch",
+      "arm": "skill",
+      "trial_logical_name": "spec/language-milestone-workloads.md",
+      "sha256": "f0be02538657fc901e9241049314b75d03b0472bc776ad3748d63c5c847a2b4d"
+    },
+    {
+      "original_snapshot_path": "registration/inputs/dispatch/skill/spec/language-v1-acceptance.md",
+      "stored_snapshot_path": "registration/inputs/dispatch/skill/spec/language-v1-acceptance.md.txt",
+      "task": "dispatch",
+      "arm": "skill",
+      "trial_logical_name": "spec/language-v1-acceptance.md",
+      "sha256": "33e7c84c36db6bcf74059f57e08e3eaa550e1235955d77eae4e6ca4afbed5f33"
+    },
+    {
+      "original_snapshot_path": "registration/inputs/dispatch/skill/spec/native-interface-v0.1.md",
+      "stored_snapshot_path": "registration/inputs/dispatch/skill/spec/native-interface-v0.1.md.txt",
+      "task": "dispatch",
+      "arm": "skill",
+      "trial_logical_name": "spec/native-interface-v0.1.md",
+      "sha256": "fc98302a3a5e50c8a87079231b9311954e8351383ba872e4223385ff1770934e"
+    },
+    {
+      "original_snapshot_path": "registration/inputs/dispatch/skill/spec/native-llvm-v0.1.md",
+      "stored_snapshot_path": "registration/inputs/dispatch/skill/spec/native-llvm-v0.1.md.txt",
+      "task": "dispatch",
+      "arm": "skill",
+      "trial_logical_name": "spec/native-llvm-v0.1.md",
+      "sha256": "580611e7fc27523e4aed69b9064a7c688096c8254eecf9a53541f93994045b21"
+    },
+    {
+      "original_snapshot_path": "registration/inputs/dispatch/skill/spec/native-v0.1.md",
+      "stored_snapshot_path": "registration/inputs/dispatch/skill/spec/native-v0.1.md.txt",
+      "task": "dispatch",
+      "arm": "skill",
+      "trial_logical_name": "spec/native-v0.1.md",
+      "sha256": "befed14019840eea1988bf6ff982d531df105bb0d1b057e765e820ed72cdc0b6"
+    },
+    {
+      "original_snapshot_path": "registration/inputs/dispatch/skill/spec/recursive-ast-workload.md",
+      "stored_snapshot_path": "registration/inputs/dispatch/skill/spec/recursive-ast-workload.md.txt",
+      "task": "dispatch",
+      "arm": "skill",
+      "trial_logical_name": "spec/recursive-ast-workload.md",
+      "sha256": "3138f238b71d5d12001391dc3d2f8cf054a1a59622608699732bcc05441c7a3a"
+    },
+    {
+      "original_snapshot_path": "registration/inputs/dispatch/skill/spec/source-diagnostics-v0.1.md",
+      "stored_snapshot_path": "registration/inputs/dispatch/skill/spec/source-diagnostics-v0.1.md.txt",
+      "task": "dispatch",
+      "arm": "skill",
+      "trial_logical_name": "spec/source-diagnostics-v0.1.md",
+      "sha256": "d531df2c57fdd4ec2917fb029a8fc54f441f6632fbfb7c2b4cfe3b8168e6eb3b"
+    },
+    {
+      "original_snapshot_path": "registration/inputs/dispatch/skill/spec/sqlite-interface-v0.1.md",
+      "stored_snapshot_path": "registration/inputs/dispatch/skill/spec/sqlite-interface-v0.1.md.txt",
+      "task": "dispatch",
+      "arm": "skill",
+      "trial_logical_name": "spec/sqlite-interface-v0.1.md",
+      "sha256": "19de3da7153b874edc5518ded812515c2ce32dc67a4d1226307c7a0c8b612bdf"
+    },
+    {
+      "original_snapshot_path": "registration/inputs/splice/control/.agents/skills/lobo-programming/references/language.md",
+      "stored_snapshot_path": "registration/inputs/splice/control/.agents/skills/lobo-programming/references/language.md.txt",
+      "task": "splice",
+      "arm": "control",
+      "trial_logical_name": ".agents/skills/lobo-programming/references/language.md",
+      "sha256": "f007469320ec5054db07dac9302f8b6ac9a9dc976099ffd566c1ea963ab36562"
+    },
+    {
+      "original_snapshot_path": "registration/inputs/splice/control/.agents/skills/lobo-programming/references/tools.md",
+      "stored_snapshot_path": "registration/inputs/splice/control/.agents/skills/lobo-programming/references/tools.md.txt",
+      "task": "splice",
+      "arm": "control",
+      "trial_logical_name": ".agents/skills/lobo-programming/references/tools.md",
+      "sha256": "1913a1fceffba4c09f72625d9bc1e8d8104e35025ad674988a73405ba8eb8429"
+    },
+    {
+      "original_snapshot_path": "registration/inputs/splice/control/AGENTS.md",
+      "stored_snapshot_path": "registration/inputs/splice/control/AGENTS.md.txt",
+      "task": "splice",
+      "arm": "control",
+      "trial_logical_name": "AGENTS.md",
+      "sha256": "3c8c8fce33c21a65ee4b8a44fe408af1f260accb220adba4fb6a75e331e7ea11"
+    },
+    {
+      "original_snapshot_path": "registration/inputs/splice/control/libraries/http/README.md",
+      "stored_snapshot_path": "registration/inputs/splice/control/libraries/http/README.md.txt",
+      "task": "splice",
+      "arm": "control",
+      "trial_logical_name": "libraries/http/README.md",
+      "sha256": "c4dd34349e63538c79fe003c6cff87c3e4d27a624bc2d3146ed4fe08c4626774"
+    },
+    {
+      "original_snapshot_path": "registration/inputs/splice/control/libraries/http-server/README.md",
+      "stored_snapshot_path": "registration/inputs/splice/control/libraries/http-server/README.md.txt",
+      "task": "splice",
+      "arm": "control",
+      "trial_logical_name": "libraries/http-server/README.md",
+      "sha256": "7f695c6966c1a31adf74d2d620760857a07ac28c0763a65fc8a6001800b6bde2"
+    },
+    {
+      "original_snapshot_path": "registration/inputs/splice/control/libraries/json/README.md",
+      "stored_snapshot_path": "registration/inputs/splice/control/libraries/json/README.md.txt",
+      "task": "splice",
+      "arm": "control",
+      "trial_logical_name": "libraries/json/README.md",
+      "sha256": "fcc2d6742f11f4a53fbe1f26ce7a390e477e0de88a983e4a348884f6983d4959"
+    },
+    {
+      "original_snapshot_path": "registration/inputs/splice/control/libraries/native/README.md",
+      "stored_snapshot_path": "registration/inputs/splice/control/libraries/native/README.md.txt",
+      "task": "splice",
+      "arm": "control",
+      "trial_logical_name": "libraries/native/README.md",
+      "sha256": "4de8dd7276b56d529c96f909ba6e4903fda299e255394e1e8e4bef094d104eea"
+    },
+    {
+      "original_snapshot_path": "registration/inputs/splice/control/libraries/sql/README.md",
+      "stored_snapshot_path": "registration/inputs/splice/control/libraries/sql/README.md.txt",
+      "task": "splice",
+      "arm": "control",
+      "trial_logical_name": "libraries/sql/README.md",
+      "sha256": "85f5ec08131d902d2ed64014ebd687462def277aa5f0876599c1058cfd71fad5"
+    },
+    {
+      "original_snapshot_path": "registration/inputs/splice/control/research/compact-pilot-2026-11-24.md",
+      "stored_snapshot_path": "registration/inputs/splice/control/research/compact-pilot-2026-11-24.md.txt",
+      "task": "splice",
+      "arm": "control",
+      "trial_logical_name": "research/compact-pilot-2026-11-24.md",
+      "sha256": "761a1fc994e8bdf6865f293fc37728aab95932c49d67a9ea23907a1de352ef25"
+    },
+    {
+      "original_snapshot_path": "registration/inputs/splice/control/spec/README.md",
+      "stored_snapshot_path": "registration/inputs/splice/control/spec/README.md.txt",
+      "task": "splice",
+      "arm": "control",
+      "trial_logical_name": "spec/README.md",
+      "sha256": "e8b911e1997d93f0ede12e14c97851f8e08843ca19e84a1eb5a4319108e82653"
+    },
+    {
+      "original_snapshot_path": "registration/inputs/splice/control/spec/agent-testing-v0.1.md",
+      "stored_snapshot_path": "registration/inputs/splice/control/spec/agent-testing-v0.1.md.txt",
+      "task": "splice",
+      "arm": "control",
+      "trial_logical_name": "spec/agent-testing-v0.1.md",
+      "sha256": "dc9c1fb4b7f3aca5cc70a2cb844139190ec16218ee3ddb7759653f2d0fc4ab0e"
+    },
+    {
+      "original_snapshot_path": "registration/inputs/splice/control/spec/checked-artifact-v0.1.md",
+      "stored_snapshot_path": "registration/inputs/splice/control/spec/checked-artifact-v0.1.md.txt",
+      "task": "splice",
+      "arm": "control",
+      "trial_logical_name": "spec/checked-artifact-v0.1.md",
+      "sha256": "8e85e37b7a89812f135ccb796e083ea95771032d267e55bc9c0d18f53fa56cdf"
+    },
+    {
+      "original_snapshot_path": "registration/inputs/splice/control/spec/checked-artifact-v0.2.md",
+      "stored_snapshot_path": "registration/inputs/splice/control/spec/checked-artifact-v0.2.md.txt",
+      "task": "splice",
+      "arm": "control",
+      "trial_logical_name": "spec/checked-artifact-v0.2.md",
+      "sha256": "b13203846b1eb62eeb73445ef422cb526f7ae33d1e6804ecdef20e33c6365ff7"
+    },
+    {
+      "original_snapshot_path": "registration/inputs/splice/control/spec/checked-artifact-v0.3.md",
+      "stored_snapshot_path": "registration/inputs/splice/control/spec/checked-artifact-v0.3.md.txt",
+      "task": "splice",
+      "arm": "control",
+      "trial_logical_name": "spec/checked-artifact-v0.3.md",
+      "sha256": "4874fc7ba430389d8d3bf4df3c6fc34b2b5bb949ecfe646383e3f6fc04652b15"
+    },
+    {
+      "original_snapshot_path": "registration/inputs/splice/control/spec/compact-source-v0.1.md",
+      "stored_snapshot_path": "registration/inputs/splice/control/spec/compact-source-v0.1.md.txt",
+      "task": "splice",
+      "arm": "control",
+      "trial_logical_name": "spec/compact-source-v0.1.md",
+      "sha256": "d7035fbf81ff5c83f84a34dd5c73a1617f1a49176019a2693ba56c501955a94f"
+    },
+    {
+      "original_snapshot_path": "registration/inputs/splice/control/spec/core-v0.1.md",
+      "stored_snapshot_path": "registration/inputs/splice/control/spec/core-v0.1.md.txt",
+      "task": "splice",
+      "arm": "control",
+      "trial_logical_name": "spec/core-v0.1.md",
+      "sha256": "c3fe3c05e21bd22c9df8f9ff78c65f3c645f127b10350c93a888c5f133f16854"
+    },
+    {
+      "original_snapshot_path": "registration/inputs/splice/control/spec/core-v0.10.md",
+      "stored_snapshot_path": "registration/inputs/splice/control/spec/core-v0.10.md.txt",
+      "task": "splice",
+      "arm": "control",
+      "trial_logical_name": "spec/core-v0.10.md",
+      "sha256": "2ca585067a2c5113ce335847f433489c79a71d63471c2443786157038b60953e"
+    },
+    {
+      "original_snapshot_path": "registration/inputs/splice/control/spec/core-v0.11.md",
+      "stored_snapshot_path": "registration/inputs/splice/control/spec/core-v0.11.md.txt",
+      "task": "splice",
+      "arm": "control",
+      "trial_logical_name": "spec/core-v0.11.md",
+      "sha256": "275105a2b66f5f0f6ddb12828d3e30db47f8603933654ea92b6bb3d5597ba8f9"
+    },
+    {
+      "original_snapshot_path": "registration/inputs/splice/control/spec/core-v0.12.md",
+      "stored_snapshot_path": "registration/inputs/splice/control/spec/core-v0.12.md.txt",
+      "task": "splice",
+      "arm": "control",
+      "trial_logical_name": "spec/core-v0.12.md",
+      "sha256": "f02ddafe0a6196c15671a51e08aa12105ce216df1edb1a8354f54cfccc9e15c4"
+    },
+    {
+      "original_snapshot_path": "registration/inputs/splice/control/spec/core-v0.2.md",
+      "stored_snapshot_path": "registration/inputs/splice/control/spec/core-v0.2.md.txt",
+      "task": "splice",
+      "arm": "control",
+      "trial_logical_name": "spec/core-v0.2.md",
+      "sha256": "9cbdbe1ddd2a55ce69b3333d5984a12d437ed225d856668c69edfbfd2a4b1ad2"
+    },
+    {
+      "original_snapshot_path": "registration/inputs/splice/control/spec/core-v0.3.md",
+      "stored_snapshot_path": "registration/inputs/splice/control/spec/core-v0.3.md.txt",
+      "task": "splice",
+      "arm": "control",
+      "trial_logical_name": "spec/core-v0.3.md",
+      "sha256": "96e39f958c14b082ad0f3a0c72dc0b3318a7c1c442812b35c338d35b00759543"
+    },
+    {
+      "original_snapshot_path": "registration/inputs/splice/control/spec/core-v0.4.md",
+      "stored_snapshot_path": "registration/inputs/splice/control/spec/core-v0.4.md.txt",
+      "task": "splice",
+      "arm": "control",
+      "trial_logical_name": "spec/core-v0.4.md",
+      "sha256": "84828c9c83b0c0b70d278e2458d77e01231bfd75899a99193b80a762b78ede83"
+    },
+    {
+      "original_snapshot_path": "registration/inputs/splice/control/spec/core-v0.5.md",
+      "stored_snapshot_path": "registration/inputs/splice/control/spec/core-v0.5.md.txt",
+      "task": "splice",
+      "arm": "control",
+      "trial_logical_name": "spec/core-v0.5.md",
+      "sha256": "02ad206aa3cf73c38a8c13d082cdd7d0ea61c45a4dd2ab304497df2cc7c326cc"
+    },
+    {
+      "original_snapshot_path": "registration/inputs/splice/control/spec/core-v0.6.md",
+      "stored_snapshot_path": "registration/inputs/splice/control/spec/core-v0.6.md.txt",
+      "task": "splice",
+      "arm": "control",
+      "trial_logical_name": "spec/core-v0.6.md",
+      "sha256": "3d8737fe0d67ef67916ba63fc6d91386d9ff983c9148d2b2c671048a0cf35245"
+    },
+    {
+      "original_snapshot_path": "registration/inputs/splice/control/spec/core-v0.7.md",
+      "stored_snapshot_path": "registration/inputs/splice/control/spec/core-v0.7.md.txt",
+      "task": "splice",
+      "arm": "control",
+      "trial_logical_name": "spec/core-v0.7.md",
+      "sha256": "0111fcfce8f7ba3ca9abfa027282113dcb6c31df7fb2d946847260f392efb221"
+    },
+    {
+      "original_snapshot_path": "registration/inputs/splice/control/spec/core-v0.8.md",
+      "stored_snapshot_path": "registration/inputs/splice/control/spec/core-v0.8.md.txt",
+      "task": "splice",
+      "arm": "control",
+      "trial_logical_name": "spec/core-v0.8.md",
+      "sha256": "790cfe562577be3dafa5ca3d2028e34d8782cbb36731fe45c29560a4badc6887"
+    },
+    {
+      "original_snapshot_path": "registration/inputs/splice/control/spec/core-v0.9.md",
+      "stored_snapshot_path": "registration/inputs/splice/control/spec/core-v0.9.md.txt",
+      "task": "splice",
+      "arm": "control",
+      "trial_logical_name": "spec/core-v0.9.md",
+      "sha256": "4bc8977f5151c72df856a06da8cc1ff136a9fb355681b47075bbd17d570d5379"
+    },
+    {
+      "original_snapshot_path": "registration/inputs/splice/control/spec/core-v1.0.md",
+      "stored_snapshot_path": "registration/inputs/splice/control/spec/core-v1.0.md.txt",
+      "task": "splice",
+      "arm": "control",
+      "trial_logical_name": "spec/core-v1.0.md",
+      "sha256": "8dbc2ca888f49b84125a8faedf39160bb1eab27e0f25b336b1ef8f87f14f3b2b"
+    },
+    {
+      "original_snapshot_path": "registration/inputs/splice/control/spec/core-v1.1.md",
+      "stored_snapshot_path": "registration/inputs/splice/control/spec/core-v1.1.md.txt",
+      "task": "splice",
+      "arm": "control",
+      "trial_logical_name": "spec/core-v1.1.md",
+      "sha256": "98c9b16d2bd72229464751f1d6c03790efde00a234bf7d2add2306f30b785361"
+    },
+    {
+      "original_snapshot_path": "registration/inputs/splice/control/spec/core-v1.10.md",
+      "stored_snapshot_path": "registration/inputs/splice/control/spec/core-v1.10.md.txt",
+      "task": "splice",
+      "arm": "control",
+      "trial_logical_name": "spec/core-v1.10.md",
+      "sha256": "45d45f48a14fda25275c50ea02d6d65854d14e3fb6989ea56ef6d1aba62ec308"
+    },
+    {
+      "original_snapshot_path": "registration/inputs/splice/control/spec/core-v1.11.md",
+      "stored_snapshot_path": "registration/inputs/splice/control/spec/core-v1.11.md.txt",
+      "task": "splice",
+      "arm": "control",
+      "trial_logical_name": "spec/core-v1.11.md",
+      "sha256": "d13c38830326c983d336c83ab4a398867bd17858ade3c5f8ecc6d088359182aa"
+    },
+    {
+      "original_snapshot_path": "registration/inputs/splice/control/spec/core-v1.2.md",
+      "stored_snapshot_path": "registration/inputs/splice/control/spec/core-v1.2.md.txt",
+      "task": "splice",
+      "arm": "control",
+      "trial_logical_name": "spec/core-v1.2.md",
+      "sha256": "7d0f42dd9d1bd99b860af5045c960fa82ffc96511d8f6397fefa381964c5b363"
+    },
+    {
+      "original_snapshot_path": "registration/inputs/splice/control/spec/core-v1.3.md",
+      "stored_snapshot_path": "registration/inputs/splice/control/spec/core-v1.3.md.txt",
+      "task": "splice",
+      "arm": "control",
+      "trial_logical_name": "spec/core-v1.3.md",
+      "sha256": "2ea91b7b4d4c7716a593ceafcfff42227f05f94e45d8500e9ed04e0c956a9118"
+    },
+    {
+      "original_snapshot_path": "registration/inputs/splice/control/spec/core-v1.4.md",
+      "stored_snapshot_path": "registration/inputs/splice/control/spec/core-v1.4.md.txt",
+      "task": "splice",
+      "arm": "control",
+      "trial_logical_name": "spec/core-v1.4.md",
+      "sha256": "01b365a0c8874db2ad9982e1e85dc036cf22cf31521c2b28c943c08888edf9b2"
+    },
+    {
+      "original_snapshot_path": "registration/inputs/splice/control/spec/core-v1.5.md",
+      "stored_snapshot_path": "registration/inputs/splice/control/spec/core-v1.5.md.txt",
+      "task": "splice",
+      "arm": "control",
+      "trial_logical_name": "spec/core-v1.5.md",
+      "sha256": "dac4877adab3d738fb05fc57c37436106a22206a3069446a00c47de65c1abdda"
+    },
+    {
+      "original_snapshot_path": "registration/inputs/splice/control/spec/core-v1.6.md",
+      "stored_snapshot_path": "registration/inputs/splice/control/spec/core-v1.6.md.txt",
+      "task": "splice",
+      "arm": "control",
+      "trial_logical_name": "spec/core-v1.6.md",
+      "sha256": "71967bd60313ce04cabdf740863eb2f1c73c49ecb1f22ea58ed6e9abbcd9c886"
+    },
+    {
+      "original_snapshot_path": "registration/inputs/splice/control/spec/core-v1.7.md",
+      "stored_snapshot_path": "registration/inputs/splice/control/spec/core-v1.7.md.txt",
+      "task": "splice",
+      "arm": "control",
+      "trial_logical_name": "spec/core-v1.7.md",
+      "sha256": "2123fbea05d172cf4723e683afc4216c64e9bc0a62495f25e06b7ebc83311ed3"
+    },
+    {
+      "original_snapshot_path": "registration/inputs/splice/control/spec/core-v1.8.md",
+      "stored_snapshot_path": "registration/inputs/splice/control/spec/core-v1.8.md.txt",
+      "task": "splice",
+      "arm": "control",
+      "trial_logical_name": "spec/core-v1.8.md",
+      "sha256": "422e050a2b5aa621e9b236f003084fa5398995e3144b3781b998092422255eb6"
+    },
+    {
+      "original_snapshot_path": "registration/inputs/splice/control/spec/core-v1.9.md",
+      "stored_snapshot_path": "registration/inputs/splice/control/spec/core-v1.9.md.txt",
+      "task": "splice",
+      "arm": "control",
+      "trial_logical_name": "spec/core-v1.9.md",
+      "sha256": "c84dc7e6b555fc92458d632c0b92fb31052abd023e58b0201c735c6019ec225b"
+    },
+    {
+      "original_snapshot_path": "registration/inputs/splice/control/spec/generic-reuse-workload.md",
+      "stored_snapshot_path": "registration/inputs/splice/control/spec/generic-reuse-workload.md.txt",
+      "task": "splice",
+      "arm": "control",
+      "trial_logical_name": "spec/generic-reuse-workload.md",
+      "sha256": "53e5d3097494f3deb5379c77a343997dfa52f47edb6c3915006dac05082b244f"
+    },
+    {
+      "original_snapshot_path": "registration/inputs/splice/control/spec/language-milestone-workloads.md",
+      "stored_snapshot_path": "registration/inputs/splice/control/spec/language-milestone-workloads.md.txt",
+      "task": "splice",
+      "arm": "control",
+      "trial_logical_name": "spec/language-milestone-workloads.md",
+      "sha256": "f0be02538657fc901e9241049314b75d03b0472bc776ad3748d63c5c847a2b4d"
+    },
+    {
+      "original_snapshot_path": "registration/inputs/splice/control/spec/language-v1-acceptance.md",
+      "stored_snapshot_path": "registration/inputs/splice/control/spec/language-v1-acceptance.md.txt",
+      "task": "splice",
+      "arm": "control",
+      "trial_logical_name": "spec/language-v1-acceptance.md",
+      "sha256": "33e7c84c36db6bcf74059f57e08e3eaa550e1235955d77eae4e6ca4afbed5f33"
+    },
+    {
+      "original_snapshot_path": "registration/inputs/splice/control/spec/native-interface-v0.1.md",
+      "stored_snapshot_path": "registration/inputs/splice/control/spec/native-interface-v0.1.md.txt",
+      "task": "splice",
+      "arm": "control",
+      "trial_logical_name": "spec/native-interface-v0.1.md",
+      "sha256": "fc98302a3a5e50c8a87079231b9311954e8351383ba872e4223385ff1770934e"
+    },
+    {
+      "original_snapshot_path": "registration/inputs/splice/control/spec/native-llvm-v0.1.md",
+      "stored_snapshot_path": "registration/inputs/splice/control/spec/native-llvm-v0.1.md.txt",
+      "task": "splice",
+      "arm": "control",
+      "trial_logical_name": "spec/native-llvm-v0.1.md",
+      "sha256": "580611e7fc27523e4aed69b9064a7c688096c8254eecf9a53541f93994045b21"
+    },
+    {
+      "original_snapshot_path": "registration/inputs/splice/control/spec/native-v0.1.md",
+      "stored_snapshot_path": "registration/inputs/splice/control/spec/native-v0.1.md.txt",
+      "task": "splice",
+      "arm": "control",
+      "trial_logical_name": "spec/native-v0.1.md",
+      "sha256": "befed14019840eea1988bf6ff982d531df105bb0d1b057e765e820ed72cdc0b6"
+    },
+    {
+      "original_snapshot_path": "registration/inputs/splice/control/spec/recursive-ast-workload.md",
+      "stored_snapshot_path": "registration/inputs/splice/control/spec/recursive-ast-workload.md.txt",
+      "task": "splice",
+      "arm": "control",
+      "trial_logical_name": "spec/recursive-ast-workload.md",
+      "sha256": "3138f238b71d5d12001391dc3d2f8cf054a1a59622608699732bcc05441c7a3a"
+    },
+    {
+      "original_snapshot_path": "registration/inputs/splice/control/spec/source-diagnostics-v0.1.md",
+      "stored_snapshot_path": "registration/inputs/splice/control/spec/source-diagnostics-v0.1.md.txt",
+      "task": "splice",
+      "arm": "control",
+      "trial_logical_name": "spec/source-diagnostics-v0.1.md",
+      "sha256": "d531df2c57fdd4ec2917fb029a8fc54f441f6632fbfb7c2b4cfe3b8168e6eb3b"
+    },
+    {
+      "original_snapshot_path": "registration/inputs/splice/control/spec/sqlite-interface-v0.1.md",
+      "stored_snapshot_path": "registration/inputs/splice/control/spec/sqlite-interface-v0.1.md.txt",
+      "task": "splice",
+      "arm": "control",
+      "trial_logical_name": "spec/sqlite-interface-v0.1.md",
+      "sha256": "19de3da7153b874edc5518ded812515c2ce32dc67a4d1226307c7a0c8b612bdf"
+    },
+    {
+      "original_snapshot_path": "registration/inputs/splice/skill/.agents/skills/lobo-development/SKILL.md",
+      "stored_snapshot_path": "registration/inputs/splice/skill/.agents/skills/lobo-development/SKILL.md.txt",
+      "task": "splice",
+      "arm": "skill",
+      "trial_logical_name": ".agents/skills/lobo-development/SKILL.md",
+      "sha256": "804a12e43f79bef059243f88e474266890c785d02df034645cbab88da50a52b5"
+    },
+    {
+      "original_snapshot_path": "registration/inputs/splice/skill/.agents/skills/lobo-programming/references/language.md",
+      "stored_snapshot_path": "registration/inputs/splice/skill/.agents/skills/lobo-programming/references/language.md.txt",
+      "task": "splice",
+      "arm": "skill",
+      "trial_logical_name": ".agents/skills/lobo-programming/references/language.md",
+      "sha256": "f007469320ec5054db07dac9302f8b6ac9a9dc976099ffd566c1ea963ab36562"
+    },
+    {
+      "original_snapshot_path": "registration/inputs/splice/skill/.agents/skills/lobo-programming/references/tools.md",
+      "stored_snapshot_path": "registration/inputs/splice/skill/.agents/skills/lobo-programming/references/tools.md.txt",
+      "task": "splice",
+      "arm": "skill",
+      "trial_logical_name": ".agents/skills/lobo-programming/references/tools.md",
+      "sha256": "1913a1fceffba4c09f72625d9bc1e8d8104e35025ad674988a73405ba8eb8429"
+    },
+    {
+      "original_snapshot_path": "registration/inputs/splice/skill/AGENTS.md",
+      "stored_snapshot_path": "registration/inputs/splice/skill/AGENTS.md.txt",
+      "task": "splice",
+      "arm": "skill",
+      "trial_logical_name": "AGENTS.md",
+      "sha256": "3c8c8fce33c21a65ee4b8a44fe408af1f260accb220adba4fb6a75e331e7ea11"
+    },
+    {
+      "original_snapshot_path": "registration/inputs/splice/skill/libraries/http/README.md",
+      "stored_snapshot_path": "registration/inputs/splice/skill/libraries/http/README.md.txt",
+      "task": "splice",
+      "arm": "skill",
+      "trial_logical_name": "libraries/http/README.md",
+      "sha256": "c4dd34349e63538c79fe003c6cff87c3e4d27a624bc2d3146ed4fe08c4626774"
+    },
+    {
+      "original_snapshot_path": "registration/inputs/splice/skill/libraries/http-server/README.md",
+      "stored_snapshot_path": "registration/inputs/splice/skill/libraries/http-server/README.md.txt",
+      "task": "splice",
+      "arm": "skill",
+      "trial_logical_name": "libraries/http-server/README.md",
+      "sha256": "7f695c6966c1a31adf74d2d620760857a07ac28c0763a65fc8a6001800b6bde2"
+    },
+    {
+      "original_snapshot_path": "registration/inputs/splice/skill/libraries/json/README.md",
+      "stored_snapshot_path": "registration/inputs/splice/skill/libraries/json/README.md.txt",
+      "task": "splice",
+      "arm": "skill",
+      "trial_logical_name": "libraries/json/README.md",
+      "sha256": "fcc2d6742f11f4a53fbe1f26ce7a390e477e0de88a983e4a348884f6983d4959"
+    },
+    {
+      "original_snapshot_path": "registration/inputs/splice/skill/libraries/native/README.md",
+      "stored_snapshot_path": "registration/inputs/splice/skill/libraries/native/README.md.txt",
+      "task": "splice",
+      "arm": "skill",
+      "trial_logical_name": "libraries/native/README.md",
+      "sha256": "4de8dd7276b56d529c96f909ba6e4903fda299e255394e1e8e4bef094d104eea"
+    },
+    {
+      "original_snapshot_path": "registration/inputs/splice/skill/libraries/sql/README.md",
+      "stored_snapshot_path": "registration/inputs/splice/skill/libraries/sql/README.md.txt",
+      "task": "splice",
+      "arm": "skill",
+      "trial_logical_name": "libraries/sql/README.md",
+      "sha256": "85f5ec08131d902d2ed64014ebd687462def277aa5f0876599c1058cfd71fad5"
+    },
+    {
+      "original_snapshot_path": "registration/inputs/splice/skill/research/compact-pilot-2026-11-24.md",
+      "stored_snapshot_path": "registration/inputs/splice/skill/research/compact-pilot-2026-11-24.md.txt",
+      "task": "splice",
+      "arm": "skill",
+      "trial_logical_name": "research/compact-pilot-2026-11-24.md",
+      "sha256": "761a1fc994e8bdf6865f293fc37728aab95932c49d67a9ea23907a1de352ef25"
+    },
+    {
+      "original_snapshot_path": "registration/inputs/splice/skill/spec/README.md",
+      "stored_snapshot_path": "registration/inputs/splice/skill/spec/README.md.txt",
+      "task": "splice",
+      "arm": "skill",
+      "trial_logical_name": "spec/README.md",
+      "sha256": "e8b911e1997d93f0ede12e14c97851f8e08843ca19e84a1eb5a4319108e82653"
+    },
+    {
+      "original_snapshot_path": "registration/inputs/splice/skill/spec/agent-testing-v0.1.md",
+      "stored_snapshot_path": "registration/inputs/splice/skill/spec/agent-testing-v0.1.md.txt",
+      "task": "splice",
+      "arm": "skill",
+      "trial_logical_name": "spec/agent-testing-v0.1.md",
+      "sha256": "dc9c1fb4b7f3aca5cc70a2cb844139190ec16218ee3ddb7759653f2d0fc4ab0e"
+    },
+    {
+      "original_snapshot_path": "registration/inputs/splice/skill/spec/checked-artifact-v0.1.md",
+      "stored_snapshot_path": "registration/inputs/splice/skill/spec/checked-artifact-v0.1.md.txt",
+      "task": "splice",
+      "arm": "skill",
+      "trial_logical_name": "spec/checked-artifact-v0.1.md",
+      "sha256": "8e85e37b7a89812f135ccb796e083ea95771032d267e55bc9c0d18f53fa56cdf"
+    },
+    {
+      "original_snapshot_path": "registration/inputs/splice/skill/spec/checked-artifact-v0.2.md",
+      "stored_snapshot_path": "registration/inputs/splice/skill/spec/checked-artifact-v0.2.md.txt",
+      "task": "splice",
+      "arm": "skill",
+      "trial_logical_name": "spec/checked-artifact-v0.2.md",
+      "sha256": "b13203846b1eb62eeb73445ef422cb526f7ae33d1e6804ecdef20e33c6365ff7"
+    },
+    {
+      "original_snapshot_path": "registration/inputs/splice/skill/spec/checked-artifact-v0.3.md",
+      "stored_snapshot_path": "registration/inputs/splice/skill/spec/checked-artifact-v0.3.md.txt",
+      "task": "splice",
+      "arm": "skill",
+      "trial_logical_name": "spec/checked-artifact-v0.3.md",
+      "sha256": "4874fc7ba430389d8d3bf4df3c6fc34b2b5bb949ecfe646383e3f6fc04652b15"
+    },
+    {
+      "original_snapshot_path": "registration/inputs/splice/skill/spec/compact-source-v0.1.md",
+      "stored_snapshot_path": "registration/inputs/splice/skill/spec/compact-source-v0.1.md.txt",
+      "task": "splice",
+      "arm": "skill",
+      "trial_logical_name": "spec/compact-source-v0.1.md",
+      "sha256": "d7035fbf81ff5c83f84a34dd5c73a1617f1a49176019a2693ba56c501955a94f"
+    },
+    {
+      "original_snapshot_path": "registration/inputs/splice/skill/spec/core-v0.1.md",
+      "stored_snapshot_path": "registration/inputs/splice/skill/spec/core-v0.1.md.txt",
+      "task": "splice",
+      "arm": "skill",
+      "trial_logical_name": "spec/core-v0.1.md",
+      "sha256": "c3fe3c05e21bd22c9df8f9ff78c65f3c645f127b10350c93a888c5f133f16854"
+    },
+    {
+      "original_snapshot_path": "registration/inputs/splice/skill/spec/core-v0.10.md",
+      "stored_snapshot_path": "registration/inputs/splice/skill/spec/core-v0.10.md.txt",
+      "task": "splice",
+      "arm": "skill",
+      "trial_logical_name": "spec/core-v0.10.md",
+      "sha256": "2ca585067a2c5113ce335847f433489c79a71d63471c2443786157038b60953e"
+    },
+    {
+      "original_snapshot_path": "registration/inputs/splice/skill/spec/core-v0.11.md",
+      "stored_snapshot_path": "registration/inputs/splice/skill/spec/core-v0.11.md.txt",
+      "task": "splice",
+      "arm": "skill",
+      "trial_logical_name": "spec/core-v0.11.md",
+      "sha256": "275105a2b66f5f0f6ddb12828d3e30db47f8603933654ea92b6bb3d5597ba8f9"
+    },
+    {
+      "original_snapshot_path": "registration/inputs/splice/skill/spec/core-v0.12.md",
+      "stored_snapshot_path": "registration/inputs/splice/skill/spec/core-v0.12.md.txt",
+      "task": "splice",
+      "arm": "skill",
+      "trial_logical_name": "spec/core-v0.12.md",
+      "sha256": "f02ddafe0a6196c15671a51e08aa12105ce216df1edb1a8354f54cfccc9e15c4"
+    },
+    {
+      "original_snapshot_path": "registration/inputs/splice/skill/spec/core-v0.2.md",
+      "stored_snapshot_path": "registration/inputs/splice/skill/spec/core-v0.2.md.txt",
+      "task": "splice",
+      "arm": "skill",
+      "trial_logical_name": "spec/core-v0.2.md",
+      "sha256": "9cbdbe1ddd2a55ce69b3333d5984a12d437ed225d856668c69edfbfd2a4b1ad2"
+    },
+    {
+      "original_snapshot_path": "registration/inputs/splice/skill/spec/core-v0.3.md",
+      "stored_snapshot_path": "registration/inputs/splice/skill/spec/core-v0.3.md.txt",
+      "task": "splice",
+      "arm": "skill",
+      "trial_logical_name": "spec/core-v0.3.md",
+      "sha256": "96e39f958c14b082ad0f3a0c72dc0b3318a7c1c442812b35c338d35b00759543"
+    },
+    {
+      "original_snapshot_path": "registration/inputs/splice/skill/spec/core-v0.4.md",
+      "stored_snapshot_path": "registration/inputs/splice/skill/spec/core-v0.4.md.txt",
+      "task": "splice",
+      "arm": "skill",
+      "trial_logical_name": "spec/core-v0.4.md",
+      "sha256": "84828c9c83b0c0b70d278e2458d77e01231bfd75899a99193b80a762b78ede83"
+    },
+    {
+      "original_snapshot_path": "registration/inputs/splice/skill/spec/core-v0.5.md",
+      "stored_snapshot_path": "registration/inputs/splice/skill/spec/core-v0.5.md.txt",
+      "task": "splice",
+      "arm": "skill",
+      "trial_logical_name": "spec/core-v0.5.md",
+      "sha256": "02ad206aa3cf73c38a8c13d082cdd7d0ea61c45a4dd2ab304497df2cc7c326cc"
+    },
+    {
+      "original_snapshot_path": "registration/inputs/splice/skill/spec/core-v0.6.md",
+      "stored_snapshot_path": "registration/inputs/splice/skill/spec/core-v0.6.md.txt",
+      "task": "splice",
+      "arm": "skill",
+      "trial_logical_name": "spec/core-v0.6.md",
+      "sha256": "3d8737fe0d67ef67916ba63fc6d91386d9ff983c9148d2b2c671048a0cf35245"
+    },
+    {
+      "original_snapshot_path": "registration/inputs/splice/skill/spec/core-v0.7.md",
+      "stored_snapshot_path": "registration/inputs/splice/skill/spec/core-v0.7.md.txt",
+      "task": "splice",
+      "arm": "skill",
+      "trial_logical_name": "spec/core-v0.7.md",
+      "sha256": "0111fcfce8f7ba3ca9abfa027282113dcb6c31df7fb2d946847260f392efb221"
+    },
+    {
+      "original_snapshot_path": "registration/inputs/splice/skill/spec/core-v0.8.md",
+      "stored_snapshot_path": "registration/inputs/splice/skill/spec/core-v0.8.md.txt",
+      "task": "splice",
+      "arm": "skill",
+      "trial_logical_name": "spec/core-v0.8.md",
+      "sha256": "790cfe562577be3dafa5ca3d2028e34d8782cbb36731fe45c29560a4badc6887"
+    },
+    {
+      "original_snapshot_path": "registration/inputs/splice/skill/spec/core-v0.9.md",
+      "stored_snapshot_path": "registration/inputs/splice/skill/spec/core-v0.9.md.txt",
+      "task": "splice",
+      "arm": "skill",
+      "trial_logical_name": "spec/core-v0.9.md",
+      "sha256": "4bc8977f5151c72df856a06da8cc1ff136a9fb355681b47075bbd17d570d5379"
+    },
+    {
+      "original_snapshot_path": "registration/inputs/splice/skill/spec/core-v1.0.md",
+      "stored_snapshot_path": "registration/inputs/splice/skill/spec/core-v1.0.md.txt",
+      "task": "splice",
+      "arm": "skill",
+      "trial_logical_name": "spec/core-v1.0.md",
+      "sha256": "8dbc2ca888f49b84125a8faedf39160bb1eab27e0f25b336b1ef8f87f14f3b2b"
+    },
+    {
+      "original_snapshot_path": "registration/inputs/splice/skill/spec/core-v1.1.md",
+      "stored_snapshot_path": "registration/inputs/splice/skill/spec/core-v1.1.md.txt",
+      "task": "splice",
+      "arm": "skill",
+      "trial_logical_name": "spec/core-v1.1.md",
+      "sha256": "98c9b16d2bd72229464751f1d6c03790efde00a234bf7d2add2306f30b785361"
+    },
+    {
+      "original_snapshot_path": "registration/inputs/splice/skill/spec/core-v1.10.md",
+      "stored_snapshot_path": "registration/inputs/splice/skill/spec/core-v1.10.md.txt",
+      "task": "splice",
+      "arm": "skill",
+      "trial_logical_name": "spec/core-v1.10.md",
+      "sha256": "45d45f48a14fda25275c50ea02d6d65854d14e3fb6989ea56ef6d1aba62ec308"
+    },
+    {
+      "original_snapshot_path": "registration/inputs/splice/skill/spec/core-v1.11.md",
+      "stored_snapshot_path": "registration/inputs/splice/skill/spec/core-v1.11.md.txt",
+      "task": "splice",
+      "arm": "skill",
+      "trial_logical_name": "spec/core-v1.11.md",
+      "sha256": "d13c38830326c983d336c83ab4a398867bd17858ade3c5f8ecc6d088359182aa"
+    },
+    {
+      "original_snapshot_path": "registration/inputs/splice/skill/spec/core-v1.2.md",
+      "stored_snapshot_path": "registration/inputs/splice/skill/spec/core-v1.2.md.txt",
+      "task": "splice",
+      "arm": "skill",
+      "trial_logical_name": "spec/core-v1.2.md",
+      "sha256": "7d0f42dd9d1bd99b860af5045c960fa82ffc96511d8f6397fefa381964c5b363"
+    },
+    {
+      "original_snapshot_path": "registration/inputs/splice/skill/spec/core-v1.3.md",
+      "stored_snapshot_path": "registration/inputs/splice/skill/spec/core-v1.3.md.txt",
+      "task": "splice",
+      "arm": "skill",
+      "trial_logical_name": "spec/core-v1.3.md",
+      "sha256": "2ea91b7b4d4c7716a593ceafcfff42227f05f94e45d8500e9ed04e0c956a9118"
+    },
+    {
+      "original_snapshot_path": "registration/inputs/splice/skill/spec/core-v1.4.md",
+      "stored_snapshot_path": "registration/inputs/splice/skill/spec/core-v1.4.md.txt",
+      "task": "splice",
+      "arm": "skill",
+      "trial_logical_name": "spec/core-v1.4.md",
+      "sha256": "01b365a0c8874db2ad9982e1e85dc036cf22cf31521c2b28c943c08888edf9b2"
+    },
+    {
+      "original_snapshot_path": "registration/inputs/splice/skill/spec/core-v1.5.md",
+      "stored_snapshot_path": "registration/inputs/splice/skill/spec/core-v1.5.md.txt",
+      "task": "splice",
+      "arm": "skill",
+      "trial_logical_name": "spec/core-v1.5.md",
+      "sha256": "dac4877adab3d738fb05fc57c37436106a22206a3069446a00c47de65c1abdda"
+    },
+    {
+      "original_snapshot_path": "registration/inputs/splice/skill/spec/core-v1.6.md",
+      "stored_snapshot_path": "registration/inputs/splice/skill/spec/core-v1.6.md.txt",
+      "task": "splice",
+      "arm": "skill",
+      "trial_logical_name": "spec/core-v1.6.md",
+      "sha256": "71967bd60313ce04cabdf740863eb2f1c73c49ecb1f22ea58ed6e9abbcd9c886"
+    },
+    {
+      "original_snapshot_path": "registration/inputs/splice/skill/spec/core-v1.7.md",
+      "stored_snapshot_path": "registration/inputs/splice/skill/spec/core-v1.7.md.txt",
+      "task": "splice",
+      "arm": "skill",
+      "trial_logical_name": "spec/core-v1.7.md",
+      "sha256": "2123fbea05d172cf4723e683afc4216c64e9bc0a62495f25e06b7ebc83311ed3"
+    },
+    {
+      "original_snapshot_path": "registration/inputs/splice/skill/spec/core-v1.8.md",
+      "stored_snapshot_path": "registration/inputs/splice/skill/spec/core-v1.8.md.txt",
+      "task": "splice",
+      "arm": "skill",
+      "trial_logical_name": "spec/core-v1.8.md",
+      "sha256": "422e050a2b5aa621e9b236f003084fa5398995e3144b3781b998092422255eb6"
+    },
+    {
+      "original_snapshot_path": "registration/inputs/splice/skill/spec/core-v1.9.md",
+      "stored_snapshot_path": "registration/inputs/splice/skill/spec/core-v1.9.md.txt",
+      "task": "splice",
+      "arm": "skill",
+      "trial_logical_name": "spec/core-v1.9.md",
+      "sha256": "c84dc7e6b555fc92458d632c0b92fb31052abd023e58b0201c735c6019ec225b"
+    },
+    {
+      "original_snapshot_path": "registration/inputs/splice/skill/spec/generic-reuse-workload.md",
+      "stored_snapshot_path": "registration/inputs/splice/skill/spec/generic-reuse-workload.md.txt",
+      "task": "splice",
+      "arm": "skill",
+      "trial_logical_name": "spec/generic-reuse-workload.md",
+      "sha256": "53e5d3097494f3deb5379c77a343997dfa52f47edb6c3915006dac05082b244f"
+    },
+    {
+      "original_snapshot_path": "registration/inputs/splice/skill/spec/language-milestone-workloads.md",
+      "stored_snapshot_path": "registration/inputs/splice/skill/spec/language-milestone-workloads.md.txt",
+      "task": "splice",
+      "arm": "skill",
+      "trial_logical_name": "spec/language-milestone-workloads.md",
+      "sha256": "f0be02538657fc901e9241049314b75d03b0472bc776ad3748d63c5c847a2b4d"
+    },
+    {
+      "original_snapshot_path": "registration/inputs/splice/skill/spec/language-v1-acceptance.md",
+      "stored_snapshot_path": "registration/inputs/splice/skill/spec/language-v1-acceptance.md.txt",
+      "task": "splice",
+      "arm": "skill",
+      "trial_logical_name": "spec/language-v1-acceptance.md",
+      "sha256": "33e7c84c36db6bcf74059f57e08e3eaa550e1235955d77eae4e6ca4afbed5f33"
+    },
+    {
+      "original_snapshot_path": "registration/inputs/splice/skill/spec/native-interface-v0.1.md",
+      "stored_snapshot_path": "registration/inputs/splice/skill/spec/native-interface-v0.1.md.txt",
+      "task": "splice",
+      "arm": "skill",
+      "trial_logical_name": "spec/native-interface-v0.1.md",
+      "sha256": "fc98302a3a5e50c8a87079231b9311954e8351383ba872e4223385ff1770934e"
+    },
+    {
+      "original_snapshot_path": "registration/inputs/splice/skill/spec/native-llvm-v0.1.md",
+      "stored_snapshot_path": "registration/inputs/splice/skill/spec/native-llvm-v0.1.md.txt",
+      "task": "splice",
+      "arm": "skill",
+      "trial_logical_name": "spec/native-llvm-v0.1.md",
+      "sha256": "580611e7fc27523e4aed69b9064a7c688096c8254eecf9a53541f93994045b21"
+    },
+    {
+      "original_snapshot_path": "registration/inputs/splice/skill/spec/native-v0.1.md",
+      "stored_snapshot_path": "registration/inputs/splice/skill/spec/native-v0.1.md.txt",
+      "task": "splice",
+      "arm": "skill",
+      "trial_logical_name": "spec/native-v0.1.md",
+      "sha256": "befed14019840eea1988bf6ff982d531df105bb0d1b057e765e820ed72cdc0b6"
+    },
+    {
+      "original_snapshot_path": "registration/inputs/splice/skill/spec/recursive-ast-workload.md",
+      "stored_snapshot_path": "registration/inputs/splice/skill/spec/recursive-ast-workload.md.txt",
+      "task": "splice",
+      "arm": "skill",
+      "trial_logical_name": "spec/recursive-ast-workload.md",
+      "sha256": "3138f238b71d5d12001391dc3d2f8cf054a1a59622608699732bcc05441c7a3a"
+    },
+    {
+      "original_snapshot_path": "registration/inputs/splice/skill/spec/source-diagnostics-v0.1.md",
+      "stored_snapshot_path": "registration/inputs/splice/skill/spec/source-diagnostics-v0.1.md.txt",
+      "task": "splice",
+      "arm": "skill",
+      "trial_logical_name": "spec/source-diagnostics-v0.1.md",
+      "sha256": "d531df2c57fdd4ec2917fb029a8fc54f441f6632fbfb7c2b4cfe3b8168e6eb3b"
+    },
+    {
+      "original_snapshot_path": "registration/inputs/splice/skill/spec/sqlite-interface-v0.1.md",
+      "stored_snapshot_path": "registration/inputs/splice/skill/spec/sqlite-interface-v0.1.md.txt",
+      "task": "splice",
+      "arm": "skill",
+      "trial_logical_name": "spec/sqlite-interface-v0.1.md",
+      "sha256": "19de3da7153b874edc5518ded812515c2ce32dc67a4d1226307c7a0c8b612bdf"
+    },
+    {
+      "original_snapshot_path": "code/.agents/skills/lobo-development/SKILL.md",
+      "stored_snapshot_path": "code/.agents/skills/lobo-development/SKILL.md.txt",
+      "sha256": "804a12e43f79bef059243f88e474266890c785d02df034645cbab88da50a52b5"
+    }
+  ],
+  "limits": "Publication representation only. Logical trial filenames and document bytes remain those pinned by registration. Reconstruct original filenames using this map; original tree is retained in the registration commit and local raw archive."
+}

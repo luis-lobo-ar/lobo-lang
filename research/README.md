@@ -1,5 +1,14 @@
 # Lobo research record
 
+## New skill versus control on fresh development tasks
+
+The [completed 12-attempt comparison](development-skill-study-2026-11-24.md) gives control 6/6 tasks
+and skill 5/6, with one timeout and unknown usage. Five complete token pairs use a median 41.2% more
+with the skill. Both arms have the same references and native feedback. The earlier comprehension
+card gain does not establish development benefit; this new pilot demonstrates none. All traces, failures,
+case distinctions and limitations are preserved in paper local-045, without changing tested materials.
+
+
 ## Focused Lobo development skill
 
 The [new development skill](../docs/lobo-development-skill.md) packages task-relevant rule retrieval,

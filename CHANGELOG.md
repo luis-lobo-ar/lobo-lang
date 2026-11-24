@@ -1,5 +1,16 @@
 # Lobo change ledger
 
+## 2026-11-24 — Matched development skill comparison
+
+Completed 12 preregistered fresh Lobo attempts with identical Luna/high and 120s/16-command/6-check
+limits. Control passes 6/6 tasks; skill 5/6 with one timeout and unknown usage. Five known token pairs
+use a median 41.2% more with the skill; no development gain is demonstrated. All outcomes, initial
+harness/calibration mistakes, traces and candidate changes remain preserved. Full final suites contain
+five public plus 65 private cases. Frozen compiler, skills/cards and earlier evidence stay unchanged;
+the previous 312-pass compiler receipt is reused. See [the report](research/development-skill-study-2026-11-24.md),
+[decision 0070](decisions/0070-matched-development-skill-pilot.md) and paper local-045.
+
+
 ## 2026-11-24 — Focused Lobo development skill
 
 Added [lobo-development](.agents/skills/lobo-development/SKILL.md) with task-relevant reference routing,

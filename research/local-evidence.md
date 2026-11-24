@@ -1,5 +1,15 @@
 # Local evidence for the Lobo paper
 
+## Matched development skill pilot
+
+Paper local-045 adds [the 12-attempt comparison](development-skill-study-2026-11-24.md),
+[all outcomes](../benchmarks/results/2026-11-24-development-study.json) and
+[the audit](../benchmarks/results/2026-11-24-development-study-audit.json). Control accepts 6/6;
+skill 5/6 with one timeout, unknown usage and syntax/name failures. Five known token pairs use a
+median 41.2% more with skill. This supplies no new development benefit or general model/language
+ranking. All 44 previous entry objects and 153 pins remain unchanged.
+
+
 ## Focused development skill
 
 Paper local-044 records [the development skill](../docs/lobo-development-skill.md) and its

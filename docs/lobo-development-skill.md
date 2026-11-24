@@ -20,3 +20,11 @@ The filesystem installation is checked; separate UI-discovery and agent-invocati
 The existing reading guide remains a comprehension-only artifact. The development skill instead authorizes
 the use of edits/tools within the task's already approved scope and retrieves individual relevant cards.
 No source-only experiment instruction is pasted into its development workflow.
+
+## Subsequent comparison, 2026-11-24
+
+The creation-time checks above did not measure development benefit. The later
+[matched pilot](../research/development-skill-study-2026-11-24.md) now records 12 fresh attempts:
+control passes 6/6 tasks, skill 5/6 with one timeout. Five known token pairs use a median 41.2% more
+with the skill; the timeout's usage is unknown. No development advantage is demonstrated. The tested
+skill text remains unchanged; proposed revisions require a new selected scope and comparison.

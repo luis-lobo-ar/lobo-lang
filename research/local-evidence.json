@@ -1518,6 +1518,63 @@
         "Standalone packaging, installation on another host, or availability without the accompanying checkout",
         "New compiler/editor regression runs, product evolution or authorization for more model trials"
       ]
+    },
+    {
+      "id": "local-045",
+      "date": "2026-11-24",
+      "title": "Matched new-skill/control development pilot",
+      "evidence_kind": "Preregistered tool-assisted native development comparison; same model/reasoning/budgets",
+      "status": "All12 scheduled attempts retained;11 normal completions and one timeout",
+      "files": [
+        {
+          "path": "research/development-skill-study-2026-11-24.md",
+          "sha256": "7ff2b5fd751dbfe755549a2494be8b1edc47948ee8ca22e9e545f99b3b77bc4a"
+        },
+        {
+          "path": "benchmarks/results/2026-11-24-development-study.json",
+          "sha256": "84042ad547847830977460b12471231cb246362c6c4c50eca2b26d1137b05475"
+        },
+        {
+          "path": "benchmarks/results/2026-11-24-development-study-audit.json",
+          "sha256": "fab58582c5ac17e2b59f1a288f24b5977557fdfa412f6857fd3edf10f7f171bc"
+        },
+        {
+          "path": "benchmarks/results/2026-11-24-development-study-verification.json",
+          "sha256": "bfda8c23d270b8ff6bc8111d6b9c0186729c406ee3a1661b14ba3389059a688e"
+        },
+        {
+          "path": "benchmarks/results/2026-11-24-development-study-validation.json",
+          "sha256": "28d66d04013ed149e2024b3c8577abe2add6fc6a248e38db68956fde168aa4ab"
+        },
+        {
+          "path": "research/snapshots/2026-11-24-development-study/registration/manifest.json",
+          "sha256": "1ae5142e7033776847296199845cbf7a976e37188efd4f3ed1f8206c6b3f9f8b"
+        },
+        {
+          "path": "research/snapshots/2026-11-24-development-study/evidence-manifest.json",
+          "sha256": "4172857a8fd2ce186d963b7b7260850ec2289a6db847f1b3e6e7679d8a7e288f"
+        }
+      ],
+      "supports": [
+        "Control6/6 and skill5/6 accepted across3 fresh tasks with2 repetitions; no development-quality gain demonstrated",
+        "All complete known token pairs cost more with skill: median reported skill/control1.4119 across5 pairs; sixth skill usage unknown",
+        "Six wall pairs have median ratio1.1136 and mixed individual outcomes; no reliable latency ranking",
+        "One skill batch attempt times out after nested-if/reserved-name authoring errors prevent ID synchronization; no retry or score repair",
+        "Both arms share78 reference files and native feedback; only treatment entrypoint/invocation differ; all6 skill traces and0 control traces reference new skill path",
+        "Skill attempts show more checking, including3 untouched-starter checks versus0 controls; this does not improve primary acceptance",
+        "Final suites5 public+65 private cases: control420/420 full or390/390 private; skill350/420 full or325/390 private, with one uncompiled suite rather than70 runtime mistakes",
+        "All770 final executed native observations and required source signatures audited;50 harness and15 research checks pass; calibration630 observations catches3 compiled defects",
+        "Reference packet has incomplete transitive links; raw exports preserve registered bytes/logical paths and initial publication failures",
+        "All44 prior entries and153 pins remain unchanged; product,skills,cards and old drivers stay frozen"
+      ],
+      "does_not_establish": [
+        "A general skill disadvantage, language/model superiority, population success rate or statistically reliable speed difference",
+        "Causal contributions of particular workflow sentences, documentation, model reasoning or language design",
+        "Complete reference-chain availability, fully observed host instructions, OS read isolation or implicit discovery behavior",
+        "Full participant token total, billing or parent development usage; missing timeout usage is unknown",
+        "Fresh full compiler/editor regression runs, production correctness or native program runtime advantages",
+        "Permission for more trials, skill repair or language unfreeze"
+      ]
     }
   ],
   "backend_recommendation": {

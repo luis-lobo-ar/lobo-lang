@@ -1,6 +1,6 @@
 # 0070 — Matched development comparison with and without the new skill
 
-Date: 2026-11-24. Status: selected; register before participant calls.
+Date: 2026-11-24. Status: complete; all12 attempts preserved.
 
 The user requests a small fresh-task comparison with equal model/reasoning/budgets, frozen Lobo and
 complete documentation. Run exactly12 attempts: three fresh task instances × two repetitions × two arms.
@@ -42,3 +42,14 @@ harness/research tests, native calibration and repository checks. Keep compiler/
 files, old/new skills, cards, studies, primary scores and prior paper entries/pins unchanged. Append results.
 The host has other load; alternate pair order and treat latency descriptively. Two repetitions per task
 are insufficient for a reproducible speed ranking or population-level advantage. Stop after these12 attempts.
+
+## Observed outcome
+
+Registration `4e8fd80` preceded calls. All12 attempts ran: control6/6 accepted, skill5/6 with one
+120-second timeout leaving an uncompiled candidate. The timeout has unknown terminal usage. Five
+complete matched token pairs have median skill/control1.4119; all known pairs use more with skill.
+No construction/change-quality or token gain is demonstrated on this small sample. Skill attempts do
+more visible checking but only three check the untouched starter before editing. Preserve the skill
+as tested, all negative/unknown outcomes and all old evidence. Final suites have5 public plus65 private
+cases; report the distinction without changing scores. See [the report](../research/development-skill-study-2026-11-24.md).
+No further calls, skill changes or language evolution follow automatically.

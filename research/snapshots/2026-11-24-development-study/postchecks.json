@@ -1,0 +1,668 @@
+{
+  "date": "2026-11-24",
+  "prior_entries": 44,
+  "prior_pins": 153,
+  "all_prior_entries_pins_unchanged": true,
+  "registered_code_pins": 10,
+  "all_registered_code_material_hashes_match": true,
+  "compiler_sha256": "8d9f84530b8d34a6a72597d25befc249a604430a6569656b4184721e1e444d9d",
+  "audits": [
+    {
+      "index": 0,
+      "case_labels_recomputed": true,
+      "required_source_signatures_preserved": true,
+      "native_observations": 70,
+      "candidate_changes_preserved": [
+        {
+          "path": "logic.lobo",
+          "sha256": "791075a294d392d7c1a3b848562942d90dde54dcb9fbf4f7f3d6087f80426862",
+          "bytes": 645
+        },
+        {
+          "path": ".check-io/ad919b1f75da4bdf86f122b339480c62.response.json",
+          "sha256": "17632b3f85da37039af1537425c2e0ca27f60ffed1496088001ffd032964aba5",
+          "bytes": 473
+        },
+        {
+          "path": ".check-io/34eeff205ac9476dbeb79b124d3250fc.response.json",
+          "sha256": "60a602d00feeb3d46f3379852326cb88933d020ac5f380409c02c66ffa68f323",
+          "bytes": 70
+        },
+        {
+          "path": ".check-io/ad919b1f75da4bdf86f122b339480c62.request.json",
+          "sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+          "bytes": 2
+        },
+        {
+          "path": ".check-io/34eeff205ac9476dbeb79b124d3250fc.request.json",
+          "sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+          "bytes": 2
+        }
+      ],
+      "nonzero_command_exits": 1,
+      "authoring_diagnostic_errors": []
+    },
+    {
+      "index": 1,
+      "case_labels_recomputed": true,
+      "required_source_signatures_preserved": true,
+      "native_observations": 70,
+      "candidate_changes_preserved": [
+        {
+          "path": "logic.lobo",
+          "sha256": "5c0e461926c5335fead7264e30ca71909955ccd711559752a1023edf98070685",
+          "bytes": 722
+        },
+        {
+          "path": ".check-io/3bbbcf4b5b844bf7b2395398094cbd18.request.json",
+          "sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+          "bytes": 2
+        },
+        {
+          "path": ".check-io/3bbbcf4b5b844bf7b2395398094cbd18.response.json",
+          "sha256": "60a602d00feeb3d46f3379852326cb88933d020ac5f380409c02c66ffa68f323",
+          "bytes": 70
+        },
+        {
+          "path": ".check-io/19e5ad4bd15c4b988072eb06baa5ccfb.response.json",
+          "sha256": "ae159c40f9ba4783b2ff3f19ee3a0602d2b5075e642f2669079f495b789fc7e6",
+          "bytes": 475
+        },
+        {
+          "path": ".check-io/19e5ad4bd15c4b988072eb06baa5ccfb.request.json",
+          "sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+          "bytes": 2
+        }
+      ],
+      "nonzero_command_exits": 2,
+      "authoring_diagnostic_errors": []
+    },
+    {
+      "index": 2,
+      "case_labels_recomputed": true,
+      "required_source_signatures_preserved": true,
+      "native_observations": 0,
+      "candidate_changes_preserved": [
+        {
+          "path": "logic.lobo",
+          "sha256": "a3cbeb7660642f7adc4eaccd2a0854415e497645bf5095b84f3403970be8cee2",
+          "bytes": 1171
+        },
+        {
+          "path": ".check-io/2d5ccdcbf95d4c2e999eaa3ee5ab385d.request.json",
+          "sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+          "bytes": 2
+        },
+        {
+          "path": ".check-io/2d5ccdcbf95d4c2e999eaa3ee5ab385d.response.json",
+          "sha256": "703b83ee1fad340017911ba9208dd771beeddac800b00f55ca595980e11f1446",
+          "bytes": 1524
+        }
+      ],
+      "nonzero_command_exits": 4,
+      "authoring_diagnostic_errors": [
+        {
+          "command": "/usr/bin/zsh -lc '/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/matched-study-20261123/freeze/lobo identities sync logic.lobo --source model.lobo --source util.lobo'",
+          "exit_code": 1,
+          "diagnostic": {
+            "code": "compile.syntax.invalid",
+            "message": "expected {, got Word(\"if\")",
+            "phase": "parse",
+            "range": {
+              "end": {
+                "byte": 248,
+                "character": 36,
+                "line": 5
+              },
+              "start": {
+                "byte": 246,
+                "character": 34,
+                "line": 5
+              }
+            },
+            "source": "logic.lobo"
+          }
+        },
+        {
+          "command": "/usr/bin/zsh -lc '/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/matched-study-20261123/freeze/lobo identities sync logic.lobo --source model.lobo --source util.lobo'",
+          "exit_code": 1,
+          "diagnostic": {
+            "code": "compile.syntax.invalid",
+            "message": "expected {, got Word(\"if\")",
+            "phase": "parse",
+            "range": {
+              "end": {
+                "byte": 324,
+                "character": 36,
+                "line": 6
+              },
+              "start": {
+                "byte": 322,
+                "character": 34,
+                "line": 6
+              }
+            },
+            "source": "logic.lobo"
+          }
+        },
+        {
+          "command": "/usr/bin/zsh -lc '/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/matched-study-20261123/freeze/lobo identities sync logic.lobo --source model.lobo --source util.lobo'",
+          "exit_code": 1,
+          "diagnostic": {
+            "code": "compile.name.reserved",
+            "message": "reserved name: result",
+            "phase": "resolve",
+            "range": {
+              "end": {
+                "byte": 221,
+                "character": 11,
+                "line": 5
+              },
+              "start": {
+                "byte": 215,
+                "character": 5,
+                "line": 5
+              }
+            },
+            "source": "logic.lobo"
+          }
+        },
+        {
+          "command": "/usr/bin/zsh -lc '/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/matched-study-20261123/freeze/lobo identities sync logic.lobo --source model.lobo --source util.lobo'",
+          "exit_code": 1,
+          "diagnostic": {
+            "code": "compile.syntax.invalid",
+            "message": "expected {, got Word(\"if\")",
+            "phase": "parse",
+            "range": {
+              "end": {
+                "byte": 356,
+                "character": 47,
+                "line": 8
+              },
+              "start": {
+                "byte": 354,
+                "character": 45,
+                "line": 8
+              }
+            },
+            "source": "logic.lobo"
+          }
+        }
+      ]
+    },
+    {
+      "index": 3,
+      "case_labels_recomputed": true,
+      "required_source_signatures_preserved": true,
+      "native_observations": 70,
+      "candidate_changes_preserved": [
+        {
+          "path": "logic.lobo.ids.json",
+          "sha256": "59e701cbe4955dd7ffa6d4120c6b9684ca7a80d39a345d3332d184c04f9f534e",
+          "bytes": 431
+        },
+        {
+          "path": "logic.lobo",
+          "sha256": "9c8ca4eac27ef6385ca8bd5ac7be7183b7e908f8d7000125bf11b09b6e7cb329",
+          "bytes": 1263
+        },
+        {
+          "path": ".check-io/ef0fe568fa1a4d459350a2ac50d16647.request.json",
+          "sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+          "bytes": 2
+        },
+        {
+          "path": ".check-io/ef0fe568fa1a4d459350a2ac50d16647.response.json",
+          "sha256": "60a602d00feeb3d46f3379852326cb88933d020ac5f380409c02c66ffa68f323",
+          "bytes": 70
+        }
+      ],
+      "nonzero_command_exits": 3,
+      "authoring_diagnostic_errors": [
+        {
+          "command": "/usr/bin/zsh -lc '/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/matched-study-20261123/freeze/lobo identities sync logic.lobo --source model.lobo --source util.lobo'",
+          "exit_code": 1,
+          "diagnostic": {
+            "code": "compile.name.reserved",
+            "message": "reserved name: result",
+            "phase": "resolve",
+            "range": {
+              "end": {
+                "byte": 114,
+                "character": 44,
+                "line": 3
+              },
+              "start": {
+                "byte": 108,
+                "character": 38,
+                "line": 3
+              }
+            },
+            "source": "logic.lobo"
+          }
+        }
+      ]
+    },
+    {
+      "index": 4,
+      "case_labels_recomputed": true,
+      "required_source_signatures_preserved": true,
+      "native_observations": 70,
+      "candidate_changes_preserved": [
+        {
+          "path": "logic.lobo",
+          "sha256": "0cb39f3a3e5bae7c4ef318b7dc5618773b9efbbfcb98e4b65dbd29feb7fa4929",
+          "bytes": 1133
+        },
+        {
+          "path": ".check-io/60d79dabfd4b4922982c2c7a43c96162.response.json",
+          "sha256": "60a602d00feeb3d46f3379852326cb88933d020ac5f380409c02c66ffa68f323",
+          "bytes": 70
+        },
+        {
+          "path": ".check-io/60d79dabfd4b4922982c2c7a43c96162.request.json",
+          "sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+          "bytes": 2
+        }
+      ],
+      "nonzero_command_exits": 2,
+      "authoring_diagnostic_errors": []
+    },
+    {
+      "index": 5,
+      "case_labels_recomputed": true,
+      "required_source_signatures_preserved": true,
+      "native_observations": 70,
+      "candidate_changes_preserved": [
+        {
+          "path": "logic.lobo.ids.json",
+          "sha256": "87598f70f6d53b7ca7e2208e46185e1c22b27a2029a90a14611f6e464e80231f",
+          "bytes": 392
+        },
+        {
+          "path": "logic.lobo",
+          "sha256": "9ffed64b26772c7beaa2978549f96b0bd4a01cdc37b4ce6aee40d2201af9ddd9",
+          "bytes": 908
+        },
+        {
+          "path": ".check-io/0323b9219b174618843d4ace8834bacf.request.json",
+          "sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+          "bytes": 2
+        },
+        {
+          "path": ".check-io/85650ddcebee48f39c895b16720b35ea.response.json",
+          "sha256": "60a602d00feeb3d46f3379852326cb88933d020ac5f380409c02c66ffa68f323",
+          "bytes": 70
+        },
+        {
+          "path": ".check-io/85650ddcebee48f39c895b16720b35ea.request.json",
+          "sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+          "bytes": 2
+        },
+        {
+          "path": ".check-io/0323b9219b174618843d4ace8834bacf.response.json",
+          "sha256": "15705bbb10e3f8a98c36a33991f7946428bcc039d08aacfa60a8a15bd413525d",
+          "bytes": 2513
+        },
+        {
+          "path": ".check-io/eb81b2a85540450e96d0a20a3ffa90ed.request.json",
+          "sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+          "bytes": 2
+        },
+        {
+          "path": ".check-io/eb81b2a85540450e96d0a20a3ffa90ed.response.json",
+          "sha256": "60a602d00feeb3d46f3379852326cb88933d020ac5f380409c02c66ffa68f323",
+          "bytes": 70
+        }
+      ],
+      "nonzero_command_exits": 2,
+      "authoring_diagnostic_errors": []
+    },
+    {
+      "index": 6,
+      "case_labels_recomputed": true,
+      "required_source_signatures_preserved": true,
+      "native_observations": 70,
+      "candidate_changes_preserved": [
+        {
+          "path": "logic.lobo",
+          "sha256": "5bb71bf53689d1dbde30210b3350f999757c317c5c6bc0a7d52f10f301774c52",
+          "bytes": 696
+        },
+        {
+          "path": ".check-io/b47379de5d544819ac985e6a1665b8dd.request.json",
+          "sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+          "bytes": 2
+        },
+        {
+          "path": ".check-io/38375f2e75e0487e8fcdb7d2daf4ad44.request.json",
+          "sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+          "bytes": 2
+        },
+        {
+          "path": ".check-io/96f05f0b2bd9475984967f93312b0c3f.response.json",
+          "sha256": "4977fdd1e57dc8e4b43e8dd0bcd7df83d7a090a82a6f815dfaf222a174eb1466",
+          "bytes": 483
+        },
+        {
+          "path": ".check-io/38375f2e75e0487e8fcdb7d2daf4ad44.response.json",
+          "sha256": "c2b1c773368cc75a5f07fb87c45ed2cb3b3b9f77b2e46f687a4b57d0325e1571",
+          "bytes": 475
+        },
+        {
+          "path": ".check-io/b47379de5d544819ac985e6a1665b8dd.response.json",
+          "sha256": "60a602d00feeb3d46f3379852326cb88933d020ac5f380409c02c66ffa68f323",
+          "bytes": 70
+        },
+        {
+          "path": ".check-io/96f05f0b2bd9475984967f93312b0c3f.request.json",
+          "sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+          "bytes": 2
+        }
+      ],
+      "nonzero_command_exits": 1,
+      "authoring_diagnostic_errors": []
+    },
+    {
+      "index": 7,
+      "case_labels_recomputed": true,
+      "required_source_signatures_preserved": true,
+      "native_observations": 70,
+      "candidate_changes_preserved": [
+        {
+          "path": "logic.lobo",
+          "sha256": "53b58e77aef7df8974a1b5161a3414a4a064f8f8477720bc48925c18d47fe9d4",
+          "bytes": 656
+        },
+        {
+          "path": ".check-io/c4c88522065a47dc9b4b5e5eeee91ba6.response.json",
+          "sha256": "74ec0993699aa2153b9dec71bd0c467d4f6bbe9fe7b208297017c2c36e63bfe5",
+          "bytes": 475
+        },
+        {
+          "path": ".check-io/98a17111b39a4ca4954ac3ede213146f.request.json",
+          "sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+          "bytes": 2
+        },
+        {
+          "path": ".check-io/c4c88522065a47dc9b4b5e5eeee91ba6.request.json",
+          "sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+          "bytes": 2
+        },
+        {
+          "path": ".check-io/98a17111b39a4ca4954ac3ede213146f.response.json",
+          "sha256": "60a602d00feeb3d46f3379852326cb88933d020ac5f380409c02c66ffa68f323",
+          "bytes": 70
+        }
+      ],
+      "nonzero_command_exits": 1,
+      "authoring_diagnostic_errors": []
+    },
+    {
+      "index": 8,
+      "case_labels_recomputed": true,
+      "required_source_signatures_preserved": true,
+      "native_observations": 70,
+      "candidate_changes_preserved": [
+        {
+          "path": "logic.lobo.ids.json",
+          "sha256": "935032d135437441574ce722c4a9967e20e3eff023edbcdcbddb6122edee59a7",
+          "bytes": 431
+        },
+        {
+          "path": "logic.lobo",
+          "sha256": "8a0baf3848bcafdedc6b4ffc4d10fcd5ef915f48d1caf610e73e904f72f3e494",
+          "bytes": 1201
+        },
+        {
+          "path": ".check-io/3c35daf0883a46f4911ab549818c0102.request.json",
+          "sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+          "bytes": 2
+        },
+        {
+          "path": ".check-io/3c35daf0883a46f4911ab549818c0102.response.json",
+          "sha256": "60a602d00feeb3d46f3379852326cb88933d020ac5f380409c02c66ffa68f323",
+          "bytes": 70
+        }
+      ],
+      "nonzero_command_exits": 4,
+      "authoring_diagnostic_errors": [
+        {
+          "command": "/usr/bin/zsh -lc '/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/matched-study-20261123/freeze/lobo identities sync logic.lobo --source model.lobo --source util.lobo'",
+          "exit_code": 1,
+          "diagnostic": {
+            "code": "compile.syntax.invalid",
+            "message": "expected {, got Word(\"if\")",
+            "phase": "parse",
+            "range": {
+              "end": {
+                "byte": 213,
+                "character": 8,
+                "line": 6
+              },
+              "start": {
+                "byte": 211,
+                "character": 6,
+                "line": 6
+              }
+            },
+            "source": "logic.lobo"
+          }
+        },
+        {
+          "command": "/usr/bin/zsh -lc '/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/matched-study-20261123/freeze/lobo identities sync logic.lobo --source model.lobo --source util.lobo'",
+          "exit_code": 1,
+          "diagnostic": {
+            "code": "compile.syntax.invalid",
+            "message": "complex match subjects require parentheses",
+            "phase": "parse",
+            "range": {
+              "end": {
+                "byte": 635,
+                "character": 19,
+                "line": 16
+              },
+              "start": {
+                "byte": 630,
+                "character": 14,
+                "line": 16
+              }
+            },
+            "source": "logic.lobo"
+          }
+        },
+        {
+          "command": "/usr/bin/zsh -lc '/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/matched-study-20261123/freeze/lobo identities sync logic.lobo --source model.lobo --source util.lobo'",
+          "exit_code": 1,
+          "diagnostic": {
+            "code": "compile.name.unresolved",
+            "message": "unknown value: Err",
+            "phase": "resolve",
+            "range": {
+              "end": {
+                "byte": 671,
+                "character": 17,
+                "line": 17
+              },
+              "start": {
+                "byte": 668,
+                "character": 14,
+                "line": 17
+              }
+            },
+            "source": "logic.lobo",
+            "subject": "skilldev.batch.run"
+          }
+        }
+      ]
+    },
+    {
+      "index": 9,
+      "case_labels_recomputed": true,
+      "required_source_signatures_preserved": true,
+      "native_observations": 70,
+      "candidate_changes_preserved": [
+        {
+          "path": "logic.lobo.ids.json",
+          "sha256": "a37610b16731bc873f5133b9e3ebdb57f52f568d401ccbfe9986033e0c05238a",
+          "bytes": 431
+        },
+        {
+          "path": "logic.lobo",
+          "sha256": "ec6816b0c958e61751b25b263762ae0a3b38ef97f620fed6680c8b7696c6baad",
+          "bytes": 1089
+        },
+        {
+          "path": ".check-io/80ae31dce4d543b98f2cb601a2693a30.request.json",
+          "sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+          "bytes": 2
+        },
+        {
+          "path": ".check-io/d2780e9ee7b3483b870505270e1d641a.response.json",
+          "sha256": "60a602d00feeb3d46f3379852326cb88933d020ac5f380409c02c66ffa68f323",
+          "bytes": 70
+        },
+        {
+          "path": ".check-io/80ae31dce4d543b98f2cb601a2693a30.response.json",
+          "sha256": "60a602d00feeb3d46f3379852326cb88933d020ac5f380409c02c66ffa68f323",
+          "bytes": 70
+        },
+        {
+          "path": ".check-io/d2780e9ee7b3483b870505270e1d641a.request.json",
+          "sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+          "bytes": 2
+        }
+      ],
+      "nonzero_command_exits": 3,
+      "authoring_diagnostic_errors": [
+        {
+          "command": "/usr/bin/zsh -lc '/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/matched-study-20261123/freeze/lobo identities sync logic.lobo --source model.lobo --source util.lobo'",
+          "exit_code": 1,
+          "diagnostic": {
+            "code": "compile.syntax.invalid",
+            "message": "expected {, got Word(\"if\")",
+            "phase": "parse",
+            "range": {
+              "end": {
+                "byte": 212,
+                "character": 36,
+                "line": 5
+              },
+              "start": {
+                "byte": 210,
+                "character": 34,
+                "line": 5
+              }
+            },
+            "source": "logic.lobo"
+          }
+        },
+        {
+          "command": "/usr/bin/zsh -lc '/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/matched-study-20261123/freeze/lobo identities sync logic.lobo --source model.lobo --source util.lobo'",
+          "exit_code": 1,
+          "diagnostic": {
+            "code": "compile.syntax.invalid",
+            "message": "complex match subjects require parentheses",
+            "phase": "parse",
+            "range": {
+              "end": {
+                "byte": 512,
+                "character": 7,
+                "line": 10
+              },
+              "start": {
+                "byte": 507,
+                "character": 2,
+                "line": 10
+              }
+            },
+            "source": "logic.lobo"
+          }
+        }
+      ]
+    },
+    {
+      "index": 10,
+      "case_labels_recomputed": true,
+      "required_source_signatures_preserved": true,
+      "native_observations": 70,
+      "candidate_changes_preserved": [
+        {
+          "path": "logic.lobo.ids.json",
+          "sha256": "45cf8978c6a12689af2d20bea64390ba698f94ab82e35f73e1cdccc497821a77",
+          "bytes": 444
+        },
+        {
+          "path": "logic.lobo",
+          "sha256": "b4d54aee46e1119c6e1659192cb1841320e4e21911a31b19ff6c50b963f1905d",
+          "bytes": 999
+        },
+        {
+          "path": ".check-io/f349008257fc49e7a8129652189b507b.response.json",
+          "sha256": "60a602d00feeb3d46f3379852326cb88933d020ac5f380409c02c66ffa68f323",
+          "bytes": 70
+        },
+        {
+          "path": ".check-io/bc77cce6b6844c279b9ebbf2a9b79867.request.json",
+          "sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+          "bytes": 2
+        },
+        {
+          "path": ".check-io/1cbdb4f428864e988da7c327fd15fb00.request.json",
+          "sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+          "bytes": 2
+        },
+        {
+          "path": ".check-io/f349008257fc49e7a8129652189b507b.request.json",
+          "sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+          "bytes": 2
+        },
+        {
+          "path": ".check-io/1cbdb4f428864e988da7c327fd15fb00.response.json",
+          "sha256": "3130ba6e2a7954dcbd146f444b67d03f0dd0a15fd4e4258a13684c1746d4be20",
+          "bytes": 942
+        },
+        {
+          "path": ".check-io/bc77cce6b6844c279b9ebbf2a9b79867.response.json",
+          "sha256": "15705bbb10e3f8a98c36a33991f7946428bcc039d08aacfa60a8a15bd413525d",
+          "bytes": 2513
+        }
+      ],
+      "nonzero_command_exits": 1,
+      "authoring_diagnostic_errors": []
+    },
+    {
+      "index": 11,
+      "case_labels_recomputed": true,
+      "required_source_signatures_preserved": true,
+      "native_observations": 70,
+      "candidate_changes_preserved": [
+        {
+          "path": "logic.lobo.ids.json",
+          "sha256": "1f761fa1b77d934ef6f30c24dac7d204d5b86625f95e78ebdace91ade06d871e",
+          "bytes": 563
+        },
+        {
+          "path": "logic.lobo",
+          "sha256": "bfb0cd655f0ed8f8670d777e2a78a79a7e16326922b469aac2102ad1f0f6ba38",
+          "bytes": 1315
+        },
+        {
+          "path": ".check-io/a7fa2966f68c48b0a10b82c95679b688.request.json",
+          "sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+          "bytes": 2
+        },
+        {
+          "path": ".check-io/a7fa2966f68c48b0a10b82c95679b688.response.json",
+          "sha256": "60a602d00feeb3d46f3379852326cb88933d020ac5f380409c02c66ffa68f323",
+          "bytes": 70
+        }
+      ],
+      "nonzero_command_exits": 1,
+      "authoring_diagnostic_errors": []
+    }
+  ],
+  "credentials_present_in_evidence": false,
+  "limits": "Recomputes labels from captured native outputs and Python oracles; does not rerun native execution or models."
+}

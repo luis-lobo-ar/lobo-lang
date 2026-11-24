@@ -1,0 +1,102 @@
+{
+  "format": "lobo-development-study-verification/1",
+  "date": "2026-11-24",
+  "registration_commit": "4e8fd802294d565df291b3010646e3de7ade4278",
+  "frozen_version": "1.11.2",
+  "product_skills_cards_old_studies_changed": false,
+  "registered_code_pins": 10,
+  "common_reference_files": 78,
+  "all_registered_hashes_match": true,
+  "compiler_sha256": "8d9f84530b8d34a6a72597d25befc249a604430a6569656b4184721e1e444d9d",
+  "scheduled": 12,
+  "attempted": 12,
+  "unattempted": 0,
+  "completed": 11,
+  "wall_limit": 1,
+  "availability_checks": 1,
+  "checks": {
+    "harness_tests": 50,
+    "new_harness_tests": 10,
+    "research_tests": 15,
+    "calibration_reference_values": 210,
+    "calibration_starter_values": 210,
+    "calibration_compiled_mutant_values": 210,
+    "killed_compiled_mutations": 3,
+    "all_initial_prompt_acceptance_usage_audits_match": true,
+    "all_captured_native_labels_recomputed": true,
+    "required_source_signatures_preserved": true,
+    "credentials_in_evidence": false,
+    "compiler_regression": {
+      "status": "prior receipt reused; not rerun",
+      "path": "benchmarks/results/2026-11-24-learning-verification.json",
+      "sha256": "1634de4dc7092742c16ebdc06a11a6d59e3542461482802197f41ea0893100b4",
+      "passed": 312,
+      "failed": 0
+    },
+    "repository_json_links": {
+      "status": "passed",
+      "command": "./scripts/check.sh",
+      "log": "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/development-study-final-links-2.txt",
+      "sha256": "1f11bb3bb382f1877ffa8eec4eb376db85d0ecfa2e1301289bb91fbd2cc966ae",
+      "scope": "Canonical navigable docs; raw registered Markdown exported as .md.txt with a verified logical path/hash map. Transitive packet links remain incomplete."
+    },
+    "git_diff_check": "passed",
+    "final_native_observations": 770,
+    "final_private_case_observations": 715,
+    "final_public_case_repetitions": 55,
+    "per_candidate_suite": {
+      "public": 5,
+      "private": 65,
+      "total": 70
+    },
+    "raw_document_path_exports": {
+      "files": 292,
+      "all_registered_bytes_match": true,
+      "path_map": "research/snapshots/2026-11-24-development-study/document-path-map.json",
+      "sha256": "3b355b20ca9930df315ad15e4b89f2dec59deab9577c1b0244c3c07b3e9a6f76"
+    },
+    "all_13_direct_skill_links_present_in_each_treatment_input": true,
+    "all_18_previous_material_code_pins_match": true
+  },
+  "usage": {
+    "known": 12,
+    "unknown": 1,
+    "known_reported_token_subtotal": 2409806,
+    "full_total": null,
+    "billing": null,
+    "parent_development_usage": null
+  },
+  "raw_archive": {
+    "format": "lobo-development-study-raw/1",
+    "archive": "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/development-study-20261124-raw.tar.gz",
+    "sha256": "433c26faf0c89e2fdffb60c9146c8551082e5cac36955424312157070c32d8c2",
+    "bytes": 3771611,
+    "members": 2819,
+    "all_member_hashes_verified": true,
+    "limits": "Local ignored archive, not an off-device backup. Authentication home was outside evidence and removed. Frozen compiler is separately retained by its registered path/hash. Final link/index checks are retained outside the closed raw directory."
+  },
+  "raw_archive_manifest": {
+    "path": "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/development-study-20261124-raw-manifest.json",
+    "sha256": "f175b96f8c36f67e9e18119f7d3b3abbe54d02c00fcba4f578a17680bb8250eb"
+  },
+  "snapshot_manifest": {
+    "path": "research/snapshots/2026-11-24-development-study/evidence-manifest.json",
+    "sha256": "4172857a8fd2ce186d963b7b7260850ec2289a6db847f1b3e6e7679d8a7e288f",
+    "files": 718
+  },
+  "prior_paper": {
+    "entries": 44,
+    "pins": 153,
+    "all_unchanged": true
+  },
+  "limitations": [
+    "Exploratory3 task instances x2 repeats: six matched pairs, not powered or independently blinded",
+    "New requirements were authored after reviewing prior errors; different tasks from older studies, not comparable absolute scores",
+    "Explicit skill activation and selective retrieval together; no equal-text placebo or isolated workflow/fact effect",
+    "Global skill files excluded using temporary CODEX_HOME; host/provider instructions and immutable weights remain unknown",
+    "Provider caching, session overhead and host load confound latency; reported tokens are not billing or parent development costs",
+    "Direct compiler/probe commands share16 command budget; visible mailbox checks capped6; no hard token cap",
+    "Common references are a selected normative/spec/library snapshot, not the full repository",
+    "Selected packet has incomplete transitive links. Raw Markdown exports use .md.txt with a verified logical-path/hash map; delivered bytes/filenames unchanged and original tree retained in registration commit/archive. Publication link-check failures retained."
+  ]
+}

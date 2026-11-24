@@ -1,0 +1,822 @@
+{
+  "result": {
+    "assignment": {
+      "index": 2,
+      "repeat": 0,
+      "family": "batch",
+      "arm": "skill",
+      "language": "lobo",
+      "reasoning": "high",
+      "phase": "construction"
+    },
+    "command": [
+      "codex",
+      "exec",
+      "--ignore-user-config",
+      "--ephemeral",
+      "--json",
+      "--sandbox",
+      "workspace-write",
+      "--skip-git-repo-check",
+      "--disable",
+      "multi_agent",
+      "--disable",
+      "multi_agent_v2",
+      "--disable",
+      "apps",
+      "--disable",
+      "plugins",
+      "--disable",
+      "memories",
+      "-C",
+      "/tmp/lobo-matched-mwegpm_k",
+      "-m",
+      "gpt-5.6-luna",
+      "-c",
+      "model_reasoning_effort=\"high\"",
+      "-c",
+      "approval_policy=\"never\"",
+      "--output-last-message",
+      "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/development-study-20261124/run/trial-02/last-message.txt",
+      "-"
+    ],
+    "deadline_s": 120,
+    "tool_limit": 16,
+    "check_limit": 6,
+    "started_unix": 1795557097.7761905,
+    "load_before": [
+      0.94970703125,
+      3.7021484375,
+      5.48583984375
+    ],
+    "status": "wall_limit",
+    "exit_code": -15,
+    "agent_wall_s": 120.07803372992203,
+    "usage": null,
+    "command_tool_items": 10,
+    "check_requests": 1,
+    "checks": [
+      {
+        "index": 0,
+        "start_s": 42.028606886044145,
+        "end_s": 42.21969698695466,
+        "feedback": {
+          "status": "fail",
+          "passed": 1,
+          "total": 5,
+          "failures": [
+            {
+              "input": {
+                "samples": [
+                  [
+                    2,
+                    3
+                  ],
+                  [
+                    1,
+                    4
+                  ],
+                  [
+                    0,
+                    8
+                  ]
+                ]
+              },
+              "expected": {
+                "case": "Ok",
+                "payload": {
+                  "values": [
+                    6,
+                    4,
+                    0
+                  ],
+                  "total": 10,
+                  "maximum": 6
+                }
+              },
+              "actual": {
+                "case": "Ok",
+                "payload": {
+                  "values": [],
+                  "total": 0,
+                  "maximum": 0
+                }
+              },
+              "error": null,
+              "ok": false
+            },
+            {
+              "input": {
+                "samples": [
+                  [
+                    -1,
+                    0
+                  ]
+                ]
+              },
+              "expected": {
+                "case": "Err",
+                "payload": 11
+              },
+              "actual": {
+                "case": "Ok",
+                "payload": {
+                  "values": [],
+                  "total": 0,
+                  "maximum": 0
+                }
+              },
+              "error": null,
+              "ok": false
+            },
+            {
+              "input": {
+                "samples": [
+                  [
+                    2,
+                    0
+                  ],
+                  [
+                    -1,
+                    2
+                  ]
+                ]
+              },
+              "expected": {
+                "case": "Err",
+                "payload": 12
+              },
+              "actual": {
+                "case": "Ok",
+                "payload": {
+                  "values": [],
+                  "total": 0,
+                  "maximum": 0
+                }
+              },
+              "error": null,
+              "ok": false
+            }
+          ]
+        }
+      }
+    ],
+    "item_types": [
+      "agent_message",
+      "command_execution",
+      "command_execution",
+      "command_execution",
+      "agent_message",
+      "command_execution",
+      "file_change",
+      "command_execution",
+      "agent_message",
+      "file_change",
+      "command_execution",
+      "command_execution",
+      "file_change",
+      "command_execution",
+      "file_change",
+      "command_execution",
+      "agent_message",
+      "command_execution"
+    ],
+    "load_after": [
+      0.44287109375,
+      2.62939453125,
+      4.87451171875
+    ],
+    "grading": {
+      "issues": [],
+      "build": {
+        "ok": false,
+        "command": [
+          "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/matched-study-20261123/freeze/lobo",
+          "compile",
+          "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/development-study-20261124/run/trial-02/heldout/source/logic.lobo",
+          "--source",
+          "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/development-study-20261124/run/trial-02/heldout/source/model.lobo",
+          "--source",
+          "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/development-study-20261124/run/trial-02/heldout/source/util.lobo",
+          "-o",
+          "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/development-study-20261124/run/trial-02/heldout/program"
+        ],
+        "exit_code": 1,
+        "stdout": "{\"diagnostic\":{\"code\":\"compile.syntax.invalid\",\"message\":\"missing persistent identity for RunState\",\"phase\":\"parse\",\"range\":{\"end\":{\"byte\":87,\"character\":17,\"line\":3},\"start\":{\"byte\":86,\"character\":16,\"line\":3}},\"source\":\"/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/development-study-20261124/run/trial-02/heldout/source/logic.lobo\"},\"kind\":\"compile_error\",\"status\":\"error\"}\n",
+        "stderr": ""
+      },
+      "cases": [],
+      "accepted": false,
+      "passed": 0,
+      "total": 70
+    },
+    "accepted": false,
+    "workspace": "/tmp/lobo-matched-mwegpm_k"
+  },
+  "prompt": "Complete TASK.txt following GUIDE.txt. The limits are 120 seconds, 16 command-execution tool items and 6 visible check submissions. All build/check work counts in wall time. Do not delegate.\nUse $lobo-development at .agents/skills/lobo-development/SKILL.md.\n",
+  "last_message": "",
+  "final_sources": {
+    "util.lobo": "module util;\nrecord Reverse<T> {pending:List<T>,output:List<T>}\nfn reverse<T>(items:List<T>)->List<T> {\n let final=fold(i in List::length(items),state:Reverse<T>=Reverse {pending:items,output:List::empty<T>()}) {\n  Reverse {pending:List::tail(state.pending),output:List::prepend(List::head(state.pending),state.output)}\n };final.output\n}\n",
+    "logic.lobo.ids.json": "{\n  \"format\": \"lobo-identities/0.1\",\n  \"identities\": {\n    \"module\": \"skilldev.batch.module\",\n    \"convert\": \"skilldev.batch.convert\",\n    \"run\": \"skilldev.batch.run\",\n    \"model.Sample\": \"skilldev.batch.model.Sample\",\n    \"model.Summary\": \"skilldev.batch.model.Summary\",\n    \"model.Outcome\": \"skilldev.batch.model.Outcome\",\n    \"util.reverse\": \"skilldev.util.reverse\"\n  }\n}\n",
+    "util.lobo.ids.json": "{\n  \"format\": \"lobo-identities/0.1\",\n  \"identities\": {\n    \"module\": \"skilldev.util.module\",\n    \"Reverse\": \"skilldev.util.Reverse\",\n    \"reverse\": \"skilldev.util.reverse\"\n  }\n}\n",
+    "logic.lobo": "module logic;\nuse model {Sample,Summary,Outcome};\nuse util {reverse};\nrecord RunState {pending:List<Sample>,values:List<I64>,total:I64,maximum:I64,failed:Bool,error:I64}\nfn max_value(left:I64,right:I64)->I64 {\n let choice=if left > right {left} else {right};choice\n}\nfn convert(sample:Sample)->Outcome<I64> {\n let choice=if sample.raw < 0 {Err(11)} else if sample.scale <= 0 {Err(12)} else {Ok(sample.raw*sample.scale)};choice\n}\nfn run(samples:List<Sample>)->Outcome<Summary> {\n let final=while(state:RunState=RunState {pending:samples,values:List::empty<I64>(),total:0,maximum:0,failed:false,error:0}; List::length(state.pending) > 0 && !state.failed) {\n  match convert(List::head(state.pending)) {\n   Ok(value)=>RunState {pending:List::tail(state.pending),values:List::prepend(value,state.values),total:state.total+value,maximum:max_value(state.maximum,value),failed:false,error:state.error},\n   Err(code)=>RunState {pending:List::tail(state.pending),values:state.values,total:state.total,maximum:state.maximum,failed:true,error:code}\n  }\n };if final.failed {Err(final.error)} else {Ok(Summary {values:reverse(final.values),total:final.total,maximum:final.maximum})}\n}\n",
+    "model.lobo": "module model;\nrecord Sample {raw:I64,scale:I64}\nrecord Summary {values:List<I64>,total:I64,maximum:I64}\nvariant Outcome<T> {Ok(T),Err(I64)}\n",
+    "model.lobo.ids.json": "{\n  \"format\": \"lobo-identities/0.1\",\n  \"identities\": {\n    \"module\": \"skilldev.batch.model.module\",\n    \"Sample\": \"skilldev.batch.model.Sample\",\n    \"Summary\": \"skilldev.batch.model.Summary\",\n    \"Outcome\": \"skilldev.batch.model.Outcome\"\n  }\n}\n"
+  },
+  "detail": {
+    "assignment": {
+      "index": 2,
+      "repeat": 0,
+      "family": "batch",
+      "arm": "skill",
+      "language": "lobo",
+      "reasoning": "high",
+      "phase": "construction"
+    },
+    "skill_file_present": true,
+    "skill_path_in_commands": true,
+    "external_skill_path_commands": [],
+    "first_visible_edited_pass_s": null,
+    "visible_compile_errors": 0,
+    "visible_behavior_failures": 1,
+    "visible": [
+      {
+        "index": 0,
+        "edited": false,
+        "feedback": {
+          "status": "fail",
+          "passed": 1,
+          "total": 5,
+          "failures": [
+            {
+              "input": {
+                "samples": [
+                  [
+                    2,
+                    3
+                  ],
+                  [
+                    1,
+                    4
+                  ],
+                  [
+                    0,
+                    8
+                  ]
+                ]
+              },
+              "expected": {
+                "case": "Ok",
+                "payload": {
+                  "values": [
+                    6,
+                    4,
+                    0
+                  ],
+                  "total": 10,
+                  "maximum": 6
+                }
+              },
+              "actual": {
+                "case": "Ok",
+                "payload": {
+                  "values": [],
+                  "total": 0,
+                  "maximum": 0
+                }
+              },
+              "error": null,
+              "ok": false
+            },
+            {
+              "input": {
+                "samples": [
+                  [
+                    -1,
+                    0
+                  ]
+                ]
+              },
+              "expected": {
+                "case": "Err",
+                "payload": 11
+              },
+              "actual": {
+                "case": "Ok",
+                "payload": {
+                  "values": [],
+                  "total": 0,
+                  "maximum": 0
+                }
+              },
+              "error": null,
+              "ok": false
+            },
+            {
+              "input": {
+                "samples": [
+                  [
+                    2,
+                    0
+                  ],
+                  [
+                    -1,
+                    2
+                  ]
+                ]
+              },
+              "expected": {
+                "case": "Err",
+                "payload": 12
+              },
+              "actual": {
+                "case": "Ok",
+                "payload": {
+                  "values": [],
+                  "total": 0,
+                  "maximum": 0
+                }
+              },
+              "error": null,
+              "ok": false
+            }
+          ]
+        }
+      }
+    ],
+    "commands": [
+      "/usr/bin/zsh -lc \"pwd\nrg --files -g 'TASK.txt' -g 'GUIDE.txt' -g 'AGENTS.md' -g '*.lobo' -g '.agents/skills/lobo-development/SKILL.md'\"",
+      "/usr/bin/zsh -lc \"sed -n '1,240p' TASK.txt\nsed -n '1,280p' GUIDE.txt\nsed -n '1,320p' .agents/skills/lobo-development/SKILL.md\"",
+      "/usr/bin/zsh -lc \"sed -n '1,260p' logic.lobo\nsed -n '1,260p' model.lobo\nsed -n '1,260p' util.lobo\nsed -n '1,260p' logic.lobo.ids.json\nsed -n '1,260p' VISIBLE.json\nsed -n '1,320p' check.py\"",
+      "/usr/bin/zsh -lc 'python3 check.py'",
+      "/usr/bin/zsh -lc '/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/matched-study-20261123/freeze/lobo identities sync logic.lobo --source model.lobo --source util.lobo'",
+      "/usr/bin/zsh -lc '/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/matched-study-20261123/freeze/lobo identities sync logic.lobo --source model.lobo --source util.lobo'",
+      "/usr/bin/zsh -lc \"nl -ba logic.lobo | sed -n '1,24p'\"",
+      "/usr/bin/zsh -lc '/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/matched-study-20261123/freeze/lobo identities sync logic.lobo --source model.lobo --source util.lobo'",
+      "/usr/bin/zsh -lc '/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/matched-study-20261123/freeze/lobo identities sync logic.lobo --source model.lobo --source util.lobo'",
+      "/usr/bin/zsh -lc \"sed -n '1,280p' .agents/skills/lobo-programming/references/language.md\""
+    ]
+  },
+  "raw_file_hashes": {
+    "assignment.json": {
+      "sha256": "4c296aeb8cf94d7bfb820f1eb42b7aac743776680e36d2932c27cd6de5e4c5c2",
+      "bytes": 143
+    },
+    "stderr.txt": {
+      "sha256": "00c28c77300a6bdbe9cea0aeed843acd16686e34d6d2b84eeee7773517b454a5",
+      "bytes": 209
+    },
+    "command.json": {
+      "sha256": "bb772525f336ff3ea43959b0c82da1282ba663415b2d1130a9d11421114a097c",
+      "bytes": 598
+    },
+    "prompt.txt": {
+      "sha256": "f450adb0abf3e7888fa9c6c60126001e7b42718422108f507537d920ab2fd9c4",
+      "bytes": 258
+    },
+    "events.jsonl": {
+      "sha256": "1ef2f33fb183c73beb888a8dbbf2f51516fef634956a41132fffe1f4514cb6be",
+      "bytes": 37805
+    },
+    "result.json": {
+      "sha256": "88cd77be8358c40f38ebb9869360c2a10fec32fc0526ddc1ea1d12d206c7d052",
+      "bytes": 5406
+    },
+    "last-message.txt": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "heldout/result.json": {
+      "sha256": "9141055fa0f90276aad43f82f53f757aa870a393c2e09b9208597158e9396fef",
+      "bytes": 1338
+    },
+    "initial/util.lobo": {
+      "sha256": "c43f8e6085a7f03acbc1dac3e872ffe5ebdf8f86133519b5ce286a08e7d2055c",
+      "bytes": 338
+    },
+    "initial/logic.lobo.ids.json": {
+      "sha256": "a71c36cb1b5a0c3de10ddf814c9ab6d5e547c02a00cfbd7f4499d71deece96d7",
+      "bytes": 375
+    },
+    "initial/check.py": {
+      "sha256": "19cfc08bd63439e1487ff9ee80fc4a013b804feb6b424788b2fc62fb63bd278f",
+      "bytes": 385
+    },
+    "initial/AGENTS.md": {
+      "sha256": "3c8c8fce33c21a65ee4b8a44fe408af1f260accb220adba4fb6a75e331e7ea11",
+      "bytes": 153
+    },
+    "initial/util.lobo.ids.json": {
+      "sha256": "e19f179ed53b0319c39febce4e46eb462845e30547177c99a14aac27ed6ad174",
+      "bytes": 178
+    },
+    "initial/logic.lobo": {
+      "sha256": "66e1fbbda097ee4a2c6af49782ca420d81212661f559160a2f1db3e3cf44cc49",
+      "bytes": 234
+    },
+    "initial/VISIBLE.json": {
+      "sha256": "48d062aa79b1b19d95c8f45f81abd858a3d84e6a2980c2ec9b1c5bdae0d96d5d",
+      "bytes": 1266
+    },
+    "initial/GUIDE.txt": {
+      "sha256": "6e9c2fab00d1f5598b5ed5bea09375bb4ef6eb01822bec32d4575f99017b5f77",
+      "bytes": 3027
+    },
+    "initial/model.lobo": {
+      "sha256": "f09f82502ce9b55ae6a0444d309745c8c22a19ca07aad5bea3d5dd87876fdfc2",
+      "bytes": 140
+    },
+    "initial/model.lobo.ids.json": {
+      "sha256": "558abb1cf76cec313f51b42b5d4f8d850362a59f0714c4911f95280695589c05",
+      "bytes": 244
+    },
+    "initial/TASK.txt": {
+      "sha256": "9abe465b8c7f8f7b0563e5b4257afa199ceec17b0c979d160e8e7f03fadeaaf3",
+      "bytes": 885
+    },
+    "candidate-final/logic.lobo": {
+      "sha256": "a3cbeb7660642f7adc4eaccd2a0854415e497645bf5095b84f3403970be8cee2",
+      "bytes": 1171
+    },
+    "check-00/program": {
+      "sha256": "3e9a8dc670f9601c8639c4bff6cd3907da4155744a63216c26b90cdd401f9789",
+      "bytes": 18784
+    },
+    "check-00/result.json": {
+      "sha256": "a543082a27aa7996b0bc428d82fc18aa42a2ec38fde60d8cc5b60ae4284c66ff",
+      "bytes": 3554
+    },
+    "heldout/source/util.lobo": {
+      "sha256": "c43f8e6085a7f03acbc1dac3e872ffe5ebdf8f86133519b5ce286a08e7d2055c",
+      "bytes": 338
+    },
+    "heldout/source/logic.lobo.ids.json": {
+      "sha256": "a71c36cb1b5a0c3de10ddf814c9ab6d5e547c02a00cfbd7f4499d71deece96d7",
+      "bytes": 375
+    },
+    "heldout/source/util.lobo.ids.json": {
+      "sha256": "e19f179ed53b0319c39febce4e46eb462845e30547177c99a14aac27ed6ad174",
+      "bytes": 178
+    },
+    "heldout/source/logic.lobo": {
+      "sha256": "a3cbeb7660642f7adc4eaccd2a0854415e497645bf5095b84f3403970be8cee2",
+      "bytes": 1171
+    },
+    "heldout/source/model.lobo": {
+      "sha256": "f09f82502ce9b55ae6a0444d309745c8c22a19ca07aad5bea3d5dd87876fdfc2",
+      "bytes": 140
+    },
+    "heldout/source/model.lobo.ids.json": {
+      "sha256": "558abb1cf76cec313f51b42b5d4f8d850362a59f0714c4911f95280695589c05",
+      "bytes": 244
+    },
+    "initial/spec/core-v1.1.md": {
+      "sha256": "98c9b16d2bd72229464751f1d6c03790efde00a234bf7d2add2306f30b785361",
+      "bytes": 4694
+    },
+    "initial/spec/language-milestone-workloads.md": {
+      "sha256": "f0be02538657fc901e9241049314b75d03b0472bc776ad3748d63c5c847a2b4d",
+      "bytes": 6656
+    },
+    "initial/spec/core-v1.4.md": {
+      "sha256": "01b365a0c8874db2ad9982e1e85dc036cf22cf31521c2b28c943c08888edf9b2",
+      "bytes": 5603
+    },
+    "initial/spec/core-v0.7.md": {
+      "sha256": "0111fcfce8f7ba3ca9abfa027282113dcb6c31df7fb2d946847260f392efb221",
+      "bytes": 7169
+    },
+    "initial/spec/checked-artifact-v0.2.md": {
+      "sha256": "b13203846b1eb62eeb73445ef422cb526f7ae33d1e6804ecdef20e33c6365ff7",
+      "bytes": 1413
+    },
+    "initial/spec/core-v0.10.md": {
+      "sha256": "2ca585067a2c5113ce335847f433489c79a71d63471c2443786157038b60953e",
+      "bytes": 3093
+    },
+    "initial/spec/native-v0.1.md": {
+      "sha256": "befed14019840eea1988bf6ff982d531df105bb0d1b057e765e820ed72cdc0b6",
+      "bytes": 6568
+    },
+    "initial/spec/core-v0.8.md": {
+      "sha256": "790cfe562577be3dafa5ca3d2028e34d8782cbb36731fe45c29560a4badc6887",
+      "bytes": 5329
+    },
+    "initial/spec/core-v1.0.md": {
+      "sha256": "8dbc2ca888f49b84125a8faedf39160bb1eab27e0f25b336b1ef8f87f14f3b2b",
+      "bytes": 5242
+    },
+    "initial/spec/core-v1.11.md": {
+      "sha256": "d13c38830326c983d336c83ab4a398867bd17858ade3c5f8ecc6d088359182aa",
+      "bytes": 2968
+    },
+    "initial/spec/agent-testing-v0.1.md": {
+      "sha256": "dc9c1fb4b7f3aca5cc70a2cb844139190ec16218ee3ddb7759653f2d0fc4ab0e",
+      "bytes": 11933
+    },
+    "initial/spec/compact-source-v0.1.md": {
+      "sha256": "d7035fbf81ff5c83f84a34dd5c73a1617f1a49176019a2693ba56c501955a94f",
+      "bytes": 5994
+    },
+    "initial/spec/core-v1.8.md": {
+      "sha256": "422e050a2b5aa621e9b236f003084fa5398995e3144b3781b998092422255eb6",
+      "bytes": 5772
+    },
+    "initial/spec/core-v1.2.md": {
+      "sha256": "7d0f42dd9d1bd99b860af5045c960fa82ffc96511d8f6397fefa381964c5b363",
+      "bytes": 5534
+    },
+    "initial/spec/core-v1.7.md": {
+      "sha256": "2123fbea05d172cf4723e683afc4216c64e9bc0a62495f25e06b7ebc83311ed3",
+      "bytes": 3510
+    },
+    "initial/spec/generic-reuse-workload.md": {
+      "sha256": "53e5d3097494f3deb5379c77a343997dfa52f47edb6c3915006dac05082b244f",
+      "bytes": 2596
+    },
+    "initial/spec/core-v0.6.md": {
+      "sha256": "3d8737fe0d67ef67916ba63fc6d91386d9ff983c9148d2b2c671048a0cf35245",
+      "bytes": 7076
+    },
+    "initial/spec/core-v1.6.md": {
+      "sha256": "71967bd60313ce04cabdf740863eb2f1c73c49ecb1f22ea58ed6e9abbcd9c886",
+      "bytes": 4447
+    },
+    "initial/spec/core-v0.12.md": {
+      "sha256": "f02ddafe0a6196c15671a51e08aa12105ce216df1edb1a8354f54cfccc9e15c4",
+      "bytes": 7895
+    },
+    "initial/spec/recursive-ast-workload.md": {
+      "sha256": "3138f238b71d5d12001391dc3d2f8cf054a1a59622608699732bcc05441c7a3a",
+      "bytes": 1600
+    },
+    "initial/spec/README.md": {
+      "sha256": "e8b911e1997d93f0ede12e14c97851f8e08843ca19e84a1eb5a4319108e82653",
+      "bytes": 4757
+    },
+    "initial/spec/language-v1-acceptance.md": {
+      "sha256": "33e7c84c36db6bcf74059f57e08e3eaa550e1235955d77eae4e6ca4afbed5f33",
+      "bytes": 6645
+    },
+    "initial/spec/core-v0.2.md": {
+      "sha256": "9cbdbe1ddd2a55ce69b3333d5984a12d437ed225d856668c69edfbfd2a4b1ad2",
+      "bytes": 6391
+    },
+    "initial/spec/core-v1.5.md": {
+      "sha256": "dac4877adab3d738fb05fc57c37436106a22206a3069446a00c47de65c1abdda",
+      "bytes": 4557
+    },
+    "initial/spec/core-v0.11.md": {
+      "sha256": "275105a2b66f5f0f6ddb12828d3e30db47f8603933654ea92b6bb3d5597ba8f9",
+      "bytes": 6042
+    },
+    "initial/spec/core-v0.4.md": {
+      "sha256": "84828c9c83b0c0b70d278e2458d77e01231bfd75899a99193b80a762b78ede83",
+      "bytes": 5039
+    },
+    "initial/spec/native-llvm-v0.1.md": {
+      "sha256": "580611e7fc27523e4aed69b9064a7c688096c8254eecf9a53541f93994045b21",
+      "bytes": 5632
+    },
+    "initial/spec/native-interface-v0.1.md": {
+      "sha256": "fc98302a3a5e50c8a87079231b9311954e8351383ba872e4223385ff1770934e",
+      "bytes": 10000
+    },
+    "initial/spec/checked-artifact-v0.3.md": {
+      "sha256": "4874fc7ba430389d8d3bf4df3c6fc34b2b5bb949ecfe646383e3f6fc04652b15",
+      "bytes": 1147
+    },
+    "initial/spec/core-v0.3.md": {
+      "sha256": "96e39f958c14b082ad0f3a0c72dc0b3318a7c1c442812b35c338d35b00759543",
+      "bytes": 4396
+    },
+    "initial/spec/core-v1.9.md": {
+      "sha256": "c84dc7e6b555fc92458d632c0b92fb31052abd023e58b0201c735c6019ec225b",
+      "bytes": 2560
+    },
+    "initial/spec/checked-artifact-v0.1.md": {
+      "sha256": "8e85e37b7a89812f135ccb796e083ea95771032d267e55bc9c0d18f53fa56cdf",
+      "bytes": 4094
+    },
+    "initial/spec/core-v1.10.md": {
+      "sha256": "45d45f48a14fda25275c50ea02d6d65854d14e3fb6989ea56ef6d1aba62ec308",
+      "bytes": 4925
+    },
+    "initial/spec/source-diagnostics-v0.1.md": {
+      "sha256": "d531df2c57fdd4ec2917fb029a8fc54f441f6632fbfb7c2b4cfe3b8168e6eb3b",
+      "bytes": 3894
+    },
+    "initial/spec/core-v0.9.md": {
+      "sha256": "4bc8977f5151c72df856a06da8cc1ff136a9fb355681b47075bbd17d570d5379",
+      "bytes": 7360
+    },
+    "initial/spec/core-v0.1.md": {
+      "sha256": "c3fe3c05e21bd22c9df8f9ff78c65f3c645f127b10350c93a888c5f133f16854",
+      "bytes": 13060
+    },
+    "initial/spec/core-v1.3.md": {
+      "sha256": "2ea91b7b4d4c7716a593ceafcfff42227f05f94e45d8500e9ed04e0c956a9118",
+      "bytes": 6183
+    },
+    "initial/spec/core-v0.5.md": {
+      "sha256": "02ad206aa3cf73c38a8c13d082cdd7d0ea61c45a4dd2ab304497df2cc7c326cc",
+      "bytes": 6607
+    },
+    "initial/spec/sqlite-interface-v0.1.md": {
+      "sha256": "19de3da7153b874edc5518ded812515c2ce32dc67a4d1226307c7a0c8b612bdf",
+      "bytes": 9003
+    },
+    "initial/research/compact-pilot-2026-11-24.md": {
+      "sha256": "761a1fc994e8bdf6865f293fc37728aab95932c49d67a9ea23907a1de352ef25",
+      "bytes": 9416
+    },
+    "initial/spec/schemas/request-envelope.schema.json": {
+      "sha256": "2abad3a1e8bbbb980cfa0fbe2c9c38a789ba94215bd6481f677d15cfe7c24409",
+      "bytes": 1964
+    },
+    "initial/spec/schemas/tool-descriptor.schema.json": {
+      "sha256": "2e375db03b357fee59094e46252dcd847a3adf3fc04fae39457bf98a62bc17ef",
+      "bytes": 1727
+    },
+    "initial/spec/schemas/response-envelope.schema.json": {
+      "sha256": "a4e7d16a8bc25e06d5a571259df750f7c024319922e419bae57a8d66c64e7ca4",
+      "bytes": 3614
+    },
+    "initial/spec/schemas/conformance-case.schema.json": {
+      "sha256": "ef3a27dd2a0caa8249c1f1439eb0abf96983350456db4efaabfdd2e2cc24c443",
+      "bytes": 2269
+    },
+    "initial/spec/conformance/core-cases.json": {
+      "sha256": "076f50cc9a45b7588eed4d150bb289fcdf04b0dcc7435dd871e71ef388cf71df",
+      "bytes": 4968
+    },
+    "initial/docs/agent-reference/compact-pilot-2026-11-24/nominal.txt": {
+      "sha256": "9810070ea2f016955293106bc0f7bf2f9fbb718619ad5b8372f34fbc380a0510",
+      "bytes": 819
+    },
+    "initial/docs/agent-reference/compact-pilot-2026-11-24/contracts.txt": {
+      "sha256": "86a129a75ffba8cb447f0a97b513cc92abb806b932609fc253273909aae868aa",
+      "bytes": 796
+    },
+    "initial/docs/agent-reference/compact-pilot-2026-11-24/ranges.txt": {
+      "sha256": "633eac0a1b432389d842277929b485519962a646c07bbe97a69a403b5d217478",
+      "bytes": 934
+    },
+    "initial/docs/agent-reference/compact-pilot-2026-11-24/propagation.txt": {
+      "sha256": "d204f387ce82c1a0c1106ec337db631c06ec084c51f7b583f7eb9b45fb38c43f",
+      "bytes": 744
+    },
+    "initial/.agents/skills/lobo-development/SKILL.md": {
+      "sha256": "804a12e43f79bef059243f88e474266890c785d02df034645cbab88da50a52b5",
+      "bytes": 4799
+    },
+    "initial/.agents/skills/lobo-programming/references/conveniences.lobo": {
+      "sha256": "ffb3bcfaa7fa99fca865d6498238b4c81b857a01e2744d46d5a6f0308765e9c9",
+      "bytes": 301
+    },
+    "initial/.agents/skills/lobo-programming/references/compact-example.lobo": {
+      "sha256": "d2376c69b774da83073a98883e91794750d59f99ed3fa380d9aaa673d1950954",
+      "bytes": 231
+    },
+    "initial/.agents/skills/lobo-programming/references/try-example.lobo": {
+      "sha256": "2f6b5750d060c929eae94cb9b001b3ea9154f9ddaa369c0934c1953cce21770a",
+      "bytes": 412
+    },
+    "initial/.agents/skills/lobo-programming/references/sqlite-example.lobo": {
+      "sha256": "855f210acb18bc4568aad97373a8633cd9b7053d368980172317c76fab74927a",
+      "bytes": 303
+    },
+    "initial/.agents/skills/lobo-programming/references/compact-example.lobo.ids.json": {
+      "sha256": "2dbc359fba6b65d4fa0667b91bd80e8c4f150b38ecb26c00c21e743332906d0e",
+      "bytes": 298
+    },
+    "initial/.agents/skills/lobo-programming/references/json-example.lobo": {
+      "sha256": "e45bbda6b893e09f021821bd500195c4e27a827e81edcc249458cef53c3cc712",
+      "bytes": 269
+    },
+    "initial/.agents/skills/lobo-programming/references/tools.md": {
+      "sha256": "1913a1fceffba4c09f72625d9bc1e8d8104e35025ad674988a73405ba8eb8429",
+      "bytes": 8694
+    },
+    "initial/.agents/skills/lobo-programming/references/callbacks.lobo": {
+      "sha256": "a106cf1e51354df3296e755d882d6f0fc6ce7690b761914cca0f76cc0c0bf63e",
+      "bytes": 406
+    },
+    "initial/.agents/skills/lobo-programming/references/sqlite-example.lobo.ids.json": {
+      "sha256": "18ae22c6bf9c71e6b1f7633bd7fcd847883b919ab27f7b34d18feca3f455a2e6",
+      "bytes": 343
+    },
+    "initial/.agents/skills/lobo-programming/references/conveniences.lobo.ids.json": {
+      "sha256": "eb25455ebf8d705ecd0d1d2261623cb5930cd4ea9bb3bf04de2d2e7bb0921817",
+      "bytes": 337
+    },
+    "initial/.agents/skills/lobo-programming/references/language.md": {
+      "sha256": "f007469320ec5054db07dac9302f8b6ac9a9dc976099ffd566c1ea963ab36562",
+      "bytes": 12554
+    },
+    "initial/.agents/skills/lobo-programming/references/examples.lobo": {
+      "sha256": "cf65d2cdc47a1bb15e154f94fe2e70d92e58eb15d405c8a2fb68261c294a1b3c",
+      "bytes": 2028
+    },
+    "initial/.agents/skills/lobo-programming/references/native-example.lobo": {
+      "sha256": "79c44e86db8aa77322b4d99a424a25a0b2d37ced37e3e65af344c6a02d03737c",
+      "bytes": 300
+    },
+    "initial/.agents/skills/lobo-programming/references/callbacks.lobo.ids.json": {
+      "sha256": "7cf6c0e2a287692417905cb0fb94a3ab5f04cb517695ad597f2404e5888b11cc",
+      "bytes": 334
+    },
+    "initial/libraries/json/README.md": {
+      "sha256": "fcc2d6742f11f4a53fbe1f26ce7a390e477e0de88a983e4a348884f6983d4959",
+      "bytes": 5305
+    },
+    "initial/libraries/json/json.lobo": {
+      "sha256": "3ed68fee975a46affca613dd6da60fbe6ea297fc447b8c91a76fbe7b2406ac39",
+      "bytes": 8228
+    },
+    "initial/libraries/native/README.md": {
+      "sha256": "4de8dd7276b56d529c96f909ba6e4903fda299e255394e1e8e4bef094d104eea",
+      "bytes": 3872
+    },
+    "initial/libraries/native/native.lobo": {
+      "sha256": "ee7ba249a414ff9421cc36d3373f412b6ce63e62d696d1bdd0f9ce111e9027d1",
+      "bytes": 4649
+    },
+    "initial/libraries/native/permissions.lobo": {
+      "sha256": "c3148d6d50d3d8e2f326b771b76353fed490ba06cfd8cad21deb5d7f8f070e12",
+      "bytes": 1347
+    },
+    "initial/libraries/sql/sql.lobo.ids.json": {
+      "sha256": "67fc9cd6d80fed595e0efdffeb36b7153d865236ab188d2da776ed8effd643d4",
+      "bytes": 2033
+    },
+    "initial/libraries/sql/sql.lobo": {
+      "sha256": "5704a8abcf1e1d0ee435b09aa7219c9c809bc1aaa304f3fe61b3de41d903a133",
+      "bytes": 9348
+    },
+    "initial/libraries/sql/README.md": {
+      "sha256": "85f5ec08131d902d2ed64014ebd687462def277aa5f0876599c1058cfd71fad5",
+      "bytes": 4514
+    },
+    "initial/libraries/http/http.lobo": {
+      "sha256": "ea9b9d87e15321e06ca67932258b60451c3da04a815e97d234ef2b36a91dba9f",
+      "bytes": 2787
+    },
+    "initial/libraries/http/README.md": {
+      "sha256": "c4dd34349e63538c79fe003c6cff87c3e4d27a624bc2d3146ed4fe08c4626774",
+      "bytes": 4399
+    },
+    "initial/libraries/http-server/server.lobo": {
+      "sha256": "3aeac600d4131e544a7054f0f751efb5945e1616c84b210cfdabf5d936912a1e",
+      "bytes": 6880
+    },
+    "initial/libraries/http-server/transport.lobo.ids.json": {
+      "sha256": "9163bf4fbd4215230030857e386d89b9a38843f233d4ca357e119f93779cc68d",
+      "bytes": 2021
+    },
+    "initial/libraries/http-server/README.md": {
+      "sha256": "7f695c6966c1a31adf74d2d620760857a07ac28c0763a65fc8a6001800b6bde2",
+      "bytes": 7886
+    },
+    "initial/libraries/http-server/server.lobo.ids.json": {
+      "sha256": "27cc7a4a712b98b29bd3fbae6e38616ed1713fb9cf07cc4e6c371d0823f3e640",
+      "bytes": 1408
+    },
+    "initial/libraries/http-server/transport.lobo": {
+      "sha256": "ac5af9a0ceed5f7a446450c0248c7b6c284931908dc27b25ea1a69cb6517a52b",
+      "bytes": 8145
+    },
+    "candidate-final/.check-io/2d5ccdcbf95d4c2e999eaa3ee5ab385d.request.json": {
+      "sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+      "bytes": 2
+    },
+    "candidate-final/.check-io/2d5ccdcbf95d4c2e999eaa3ee5ab385d.response.json": {
+      "sha256": "703b83ee1fad340017911ba9208dd771beeddac800b00f55ca595980e11f1446",
+      "bytes": 1524
+    },
+    "check-00/source/util.lobo": {
+      "sha256": "c43f8e6085a7f03acbc1dac3e872ffe5ebdf8f86133519b5ce286a08e7d2055c",
+      "bytes": 338
+    },
+    "check-00/source/logic.lobo.ids.json": {
+      "sha256": "a71c36cb1b5a0c3de10ddf814c9ab6d5e547c02a00cfbd7f4499d71deece96d7",
+      "bytes": 375
+    },
+    "check-00/source/util.lobo.ids.json": {
+      "sha256": "e19f179ed53b0319c39febce4e46eb462845e30547177c99a14aac27ed6ad174",
+      "bytes": 178
+    },
+    "check-00/source/logic.lobo": {
+      "sha256": "66e1fbbda097ee4a2c6af49782ca420d81212661f559160a2f1db3e3cf44cc49",
+      "bytes": 234
+    },
+    "check-00/source/model.lobo": {
+      "sha256": "f09f82502ce9b55ae6a0444d309745c8c22a19ca07aad5bea3d5dd87876fdfc2",
+      "bytes": 140
+    },
+    "check-00/source/model.lobo.ids.json": {
+      "sha256": "558abb1cf76cec313f51b42b5d4f8d850362a59f0714c4911f95280695589c05",
+      "bytes": 244
+    }
+  }
+}
