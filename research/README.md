@@ -1,5 +1,13 @@
 # Lobo research record
 
+## Separate response contract, reference and graph tests
+
+The [completed84-attempt pilot](learning-study-2026-11-24.md), decision 0067, keeps product 1.11.2 frozen.
+Explicit response disclosure improves observed shape compliance 15/18 to 17/18; task acceptance stays 9/18.
+The flat reference gains two task items, while the same-facts graph loses one item on a different fresh
+form. Costs and coverage gaps are documented without a general ranking or score replacement. All 90
+usage records, failed answers, source/grade audits and 297 concrete replays are retained as paper local-042.
+
 ## Context treatments and language reading reference
 
 The [completed four-arm pilot](context-factorial-study-2026-11-23.md), decision

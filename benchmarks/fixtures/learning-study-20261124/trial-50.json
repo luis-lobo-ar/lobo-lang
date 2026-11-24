@@ -1,0 +1,148 @@
+{
+  "assignment": {
+    "index": 50,
+    "stage": "reference",
+    "reasoning": "low",
+    "family": "propagation",
+    "language": "lobo",
+    "arm": "flat",
+    "phase": "comprehension"
+  },
+  "result": {
+    "assignment": {
+      "index": 50,
+      "stage": "reference",
+      "reasoning": "low",
+      "family": "propagation",
+      "language": "lobo",
+      "arm": "flat",
+      "phase": "comprehension"
+    },
+    "command": [
+      "codex",
+      "exec",
+      "--ignore-user-config",
+      "--ephemeral",
+      "--json",
+      "--sandbox",
+      "read-only",
+      "--skip-git-repo-check",
+      "--disable",
+      "multi_agent",
+      "--disable",
+      "multi_agent_v2",
+      "--disable",
+      "apps",
+      "--disable",
+      "plugins",
+      "--disable",
+      "memories",
+      "-C",
+      "/tmp/lobo-learning-kzu1bpvt",
+      "-m",
+      "gpt-5.6-luna",
+      "-c",
+      "model_reasoning_effort=\"low\"",
+      "-c",
+      "approval_policy=\"never\"",
+      "--output-last-message",
+      "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/learning-study-20261124/run/trial-50/last-message.txt",
+      "--disable",
+      "shell_tool",
+      "-"
+    ],
+    "started_unix": 1795528836.0706546,
+    "load_before": [
+      0.3310546875,
+      0.62548828125,
+      0.939453125
+    ],
+    "workspace": "/tmp/lobo-learning-kzu1bpvt",
+    "status": "completed",
+    "exit_code": 0,
+    "agent_wall_s": 10.336612371960655,
+    "load_after": [
+      0.8857421875,
+      0.740234375,
+      0.97265625
+    ],
+    "usage": {
+      "input_tokens": 19365,
+      "cached_input_tokens": 0,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 436,
+      "reasoning_output_tokens": 406
+    },
+    "item_types": [
+      "agent_message"
+    ],
+    "grading": {
+      "accepted": true,
+      "format_valid": true,
+      "format_errors": [],
+      "passed": 10,
+      "total": 10,
+      "checks": {
+        "predictions_0": true,
+        "predictions_1": true,
+        "predictions_2": true,
+        "predictions_3": true,
+        "predictions_4": true,
+        "predictions_5": true,
+        "admissions_0": true,
+        "admissions_1": true,
+        "admissions_2": true,
+        "admissions_3": true
+      }
+    },
+    "accepted": true
+  },
+  "prompt": "Source-only Lobo 1.11.2 comprehension. No tools, execution or delegation.\nUse only the supplied task directory. Read TASK.txt, GUIDE.txt and the model/algorithm files. Change only the listed editable files. The app and models are trusted read-only adapters. No dependencies, network, file IO, subprocesses or unsafe code in the algorithm. Standard in-memory collections are allowed. Host-injected instruction/skill reads are permitted when required, but other trials, repository code, private graders and reference solutions are outside scope. Do not inspect the compiler binary or its parent directory. Use python3 check.py to submit a visible check; the host compiles and grades a snapshot, at most six submissions. No direct compiler/test invocation is needed. Initial stubs may compile but are deliberately incorrect. Use checks before and after editing. Build artifacts belong to the host. End with a concise result. All inputs and arithmetic fit signed 64-bit values under the stated bounds; results must preserve exact integers. No output or external side effects in run().\n\nLobo 1.11.2 is a native language. There is no projection/interpreter step. model.lobo declares the immutable DTOs. logic.lobo and its adjacent logic.lobo.ids.json are editable; app/model/util sources are fixed. Each block returns its final expression without a trailing semicolon. Use fn f(x:I64)->I64 {x+1}, let x=...; if condition {a} else {b}, &&/||/!, checked I64 arithmetic, and ==/!= comparisons. Names cannot shadow other visible names or function/type declarations. No assignment, break, continue, return keyword or for statement.\nRecords: record Pair {left:I64,right:I64}; Pair {left:1,right:2}; pair.left; Pair {...pair,left:3}. Variants: match event {Credit(n)=> expression,Debit(n)=> expression,Lock=> expression,Unlock=> expression}. Every case must occur. Expected types infer case owners. Parenthesize complex match subjects: match (cursor.best) {...}.\nLists: List<T>, List::empty<I64>(), List::prepend(value,list), List::length(list), List::head(list), List::tail(list). Head/tail require nonempty. Prepend reverses order; the supplied util.reverse<T> restores order and may infer T. Lists are persistent; no indexing, append or mutation operation.\nCounted loops carry one typed value: fold(i in n,total:I64=0) {total+i}. The index runs 0..n-1; zero iterations return the initial state. For multiple variables, carry a record: fold(i in List::length(items),state:Cursor=Cursor {pending:items,total:0}) {Cursor {pending:List::tail(state.pending),total:state.total+List::head(state.pending)}}. State-driven loop: while(state:State=initial; condition_using_state) {new_state}. To stop early, carry a Bool and test it in the loop condition. Finite execution fuel/heap apply; do not use deep recursive traversal.\nBytes: Bytes::length(data), Bytes::at(data,index) returns 0..255, Bytes::slice(data,start,count), Bytes::empty(), Bytes::push(data,value). Guard bounds before at/slice. List<Bytes> is supported. Remainder uses %, division truncates toward zero. Ordinary expected failures are values in the declared DTO, not runtime faults.\nNew functions/records/variants need identity entries. Existing IDs must stay stable. After adding declarations, run the explicit authoring command below (it only updates the managed identity map). Then use python3 check.py.\n\n/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/matched-study-20261123/freeze/lobo identities sync logic.lobo --source model.lobo --source util.lobo\n\nAll required stable identity metadata is correctly supplied by the host and omitted here. Do not reject snippets for missing identity metadata.\nRESPONSE CONTRACT v2. Return exactly one JSON object, without Markdown. All objects in this profile are closed: every required field must occur, unknown fields and duplicate keys are invalid. Integers use integer tokens, never 1.0 or true. Put any explanation in the optional top-level notes string. Shape validity and semantic correctness are separate checks. Input domain bounds in the task still apply.\n{\"additional_properties\": false, \"kind\": \"object\", \"optional\": {\"notes\": {\"kind\": \"string\"}}, \"required\": {\"admissions\": {\"items\": {\"kind\": \"boolean\"}, \"kind\": \"array\", \"length\": 4}, \"predictions\": {\"items\": {\"kind\": \"integer\", \"rule\": \"JSON integer token, not float or boolean\"}, \"kind\": \"array\", \"length\": 6}}}\n\nPredict the I64 result of p0,p1,p2,p3,p4,p5 in order, as six JSON integers. Classify whether each of four admission snippets passes static checking, as four JSON booleans. Admission asks TYPE/CHECK acceptance, not successful runtime execution or proof of contracts. For each admission case, keep the shared helper/type declarations in PROGRAM, remove p0..p5, and append only that snippet. Each case is checked independently; no snippet sees another. The host supplies correct metadata for the resulting complete module. Return only the requested JSON.\nPROGRAM:\nmodule questions;\nvariant Result<T> {Ok(T),Err(I64)}\nfn gate(value:I64)->Result<I64> {if value==2 {Err(4)} else {Ok(value+1)}}\nfn decode(item:Result<I64>)->I64 {match item {Ok(value)=>value,Err(code)=>-code}}\nfn work(start:I64)->Result<I64> {let value=try gate(start);Ok(value*3)}\nfn looped()->Result<I64> {let amount=fold(i in 4,total:I64=0) {let value=try gate(i);total+value};Ok(amount)}\nfn nested()->Result<I64> {if true {let value=try gate(2);Ok(value)} else {Ok(8)}}\nfn p0()->I64 {decode(work(0))}\nfn p1()->I64 {decode(work(2))}\nfn p2()->I64 {decode(looped())}\nfn p3()->I64 {decode(work(2))+11}\nfn p4()->I64 {decode(nested())}\nfn p5()->I64 {let item:Result<I64>=Ok(5);decode(item)}\n\nADMISSION SNIPPETS:\nCASE 0\nfn candidate()->I64 {try gate(0)}\nCASE 1\nfn candidate()->Result<I64> {let value=try gate(0);Ok(value)}\nCASE 2\nfn candidate()->Result<I64> {Ok(try(gate(0)))}\nCASE 3\nfn candidate()->Result<I64> requires {false} {Err(4)}\nLANGUAGE REFERENCE core/1.11 compiler 1.11.2\nSelected implemented rules and high-risk distinctions, not a complete normative specification.\nCONCEPT blocks\nBlocks and bindings\nCategory: language\nStatus: implemented\nRule: A block returns its final expression. let bindings are immutable. Function boundaries have explicit types.\nPitfall: No assignment or return statement\nPitfall: Do not shadow visible names\nSource: {\"anchor\": \"Functions, recursion\", \"path\": \"spec/core-v1.0.md\", \"sha256\": \"8dbc2ca888f49b84125a8faedf39160bb1eab27e0f25b336b1ef8f87f14f3b2b\"}\nCONCEPT records\nNominal records\nCategory: language\nStatus: implemented\nRule: A record groups named typed fields. Construction supplies every field. Nominal identity, not field similarity, determines the type.\nPitfall: Records are immutable\nPitfall: Empty and partial records are not admitted\nSource: {\"anchor\": \"## Declarations\", \"path\": \"spec/core-v0.4.md\", \"sha256\": \"84828c9c83b0c0b70d278e2458d77e01231bfd75899a99193b80a762b78ede83\"}\nCONCEPT updates\nRecord updates\nCategory: language\nStatus: implemented\nRule: Type { ...base, field: value } constructs a new value. Evaluate the same-nominal base once, then overrides once in written order.\nPitfall: Three dots, one base first\nPitfall: Empty values replace fields; they are not skipped\nSource: {\"anchor\": \"## Immutable record updates\", \"path\": \"spec/core-v1.10.md\", \"sha256\": \"45d45f48a14fda25275c50ea02d6d65854d14e3fb6989ea56ef6d1aba62ec308\"}\nCONCEPT variants\nVariants\nCategory: language\nStatus: implemented\nRule: A nominal variant chooses one named case, optionally carrying a typed payload. Expected types can identify a case owner.\nPitfall: A case is not a record field\nPitfall: Bare payload-free cases need an identifying expected type\nSource: {\"anchor\": \"## Contextual variant cases\", \"path\": \"spec/core-v1.5.md\", \"sha256\": \"dac4877adab3d738fb05fc57c37436106a22206a3069446a00c47de65c1abdda\"}\nCONCEPT match\nExhaustive match\nCategory: language\nStatus: implemented\nRule: match selects the case of a variant and binds its payload. Every case occurs exactly once and all arm results have the same type.\nPitfall: All arms are checked, even unreachable arms\nSource: {\"anchor\": \"Every arm\", \"path\": \"spec/core-v0.5.md\", \"sha256\": \"02ad206aa3cf73c38a8c13d082cdd7d0ea61c45a4dd2ab304497df2cc7c326cc\"}\nCONCEPT try\nResult propagation\nCategory: language\nStatus: implemented\nRule: Prefix try unwraps Ok(T) or returns Err(E) from the enclosing function. Operand and output must each have exactly the payload cases Ok and Err with matching error types.\nPitfall: No implicit resource cleanup\nPitfall: try(value) remains a function call\nPitfall: Runtime faults are not caught; postconditions still run\nSource: {\"anchor\": \"## Type rule\", \"path\": \"spec/core-v1.8.md\", \"sha256\": \"422e050a2b5aa621e9b236f003084fa5398995e3144b3781b998092422255eb6\"}\nCONCEPT lists\nPersistent lists\nCategory: language\nStatus: implemented\nRule: List<T> is immutable. prepend(value,list) returns a new first element followed by the old list. head/tail require a nonempty list.\nPitfall: Prepending reverses traversal order\nPitfall: No built-in append or indexing operation\nSource: {\"anchor\": \"## Operations\", \"path\": \"spec/core-v0.6.md\", \"sha256\": \"3d8737fe0d67ef67916ba63fc6d91386d9ff983c9148d2b2c671048a0cf35245\"}\nCONCEPT fold\nCounted fold\nCategory: language\nStatus: implemented\nRule: fold(i in n,state:T=initial) returns successive typed states for indices 0 through n-1. Zero iterations return initial.\nPitfall: A record carries multiple state fields\nPitfall: Count must be nonnegative; fuel still applies\nSource: {\"anchor\": \"## Sequential evaluation\", \"path\": \"spec/core-v0.2.md\", \"sha256\": \"9cbdbe1ddd2a55ce69b3333d5984a12d437ed225d856668c69edfbfd2a4b1ad2\"}\nCONCEPT while\nState-driven while\nCategory: language\nStatus: implemented\nRule: while(state:T=initial; condition) repeatedly evaluates a condition and replaces the state with the body value. The result is the last state.\nPitfall: No break or continue statement; carry stop state\nPitfall: Finite fuel can stop a nonterminating loop\nSource: {\"anchor\": \"## Sequential semantics\", \"path\": \"spec/core-v0.8.md\", \"sha256\": \"790cfe562577be3dafa5ca3d2028e34d8782cbb36731fe45c29560a4badc6887\"}\nCONCEPT bytes\nBytes and byte ranges\nCategory: language\nStatus: implemented\nRule: Bytes stores raw immutable octets. Bytes::at returns an integer 0..255. Bytes::slice(data,start,count) uses a byte count.\nPitfall: The third slice argument is not an end offset\nPitfall: Empty Bytes is a value; indexing it faults\nSource: {\"anchor\": \"Bytes::slice(xs, start, count)\", \"path\": \"spec/core-v0.7.md\", \"sha256\": \"0111fcfce8f7ba3ca9abfa027282113dcb6c31df7fb2d946847260f392efb221\"}\nCONCEPT text\nUTF-8 text\nCategory: language\nStatus: implemented\nRule: Text stores valid UTF-8. Text::length/at/slice index Unicode scalar values. Text::bytes gives the UTF-8 Bytes view.\nPitfall: Scalar positions are not byte offsets or grapheme positions\nPitfall: There is no implicit Text/Bytes conversion\nSource: {\"anchor\": \"## Explicit operations\", \"path\": \"spec/core-v0.7.md\", \"sha256\": \"0111fcfce8f7ba3ca9abfa027282113dcb6c31df7fb2d946847260f392efb221\"}\nCONCEPT generics\nGeneric inference\nCategory: language\nStatus: implemented\nRule: Generic functions, records and variants are checked parametrically. Local argument and expected constructor contexts can infer type arguments when they determine every parameter consistently.\nPitfall: Explicit specialization remains available\nPitfall: No global case-name search or whole-program inference\nPitfall: Function boundaries still need types\nSource: {\"anchor\": \"## Generic function calls\", \"path\": \"spec/core-v1.4.md\", \"sha256\": \"01b365a0c8874db2ad9982e1e85dc036cf22cf31521c2b28c943c08888edf9b2\"}\nSource: {\"anchor\": \"## Generic constructor arguments\", \"path\": \"spec/core-v1.5.md\", \"sha256\": \"dac4877adab3d738fb05fc57c37436106a22206a3069446a00c47de65c1abdda\"}\nCONCEPT callbacks\nNamed callbacks\nCategory: language\nStatus: implemented\nRule: Fn(A) actions { action.id } -> B describes a named function value. Named references capture no environment. Signature parameters, result and action set match exactly.\nPitfall: Omitted action clause means pure\nPitfall: Pass context as an argument\nPitfall: No action widening or captured closures\nSource: {\"anchor\": \"## Callback actions\", \"path\": \"spec/core-v1.11.md\", \"sha256\": \"d13c38830326c983d336c83ab4a398867bd17858ade3c5f8ecc6d088359182aa\"}\nCONCEPT actions\nDeclared actions\nCategory: language\nStatus: implemented\nRule: A function declares an upper bound on its actions. Every direct and callback invocation must fit that bound, including unreachable code.\nPitfall: A declaration does not grant resource authority\nPitfall: Actionful callbacks are checked by exact declared sets\nSource: {\"anchor\": \"## Checking and purity\", \"path\": \"spec/core-v0.3.md\", \"sha256\": \"96e39f958c14b082ad0f3a0c72dc0b3318a7c1c442812b35c338d35b00759543\"}\nSource: {\"anchor\": \"## Callback actions\", \"path\": \"spec/core-v1.11.md\", \"sha256\": \"d13c38830326c983d336c83ab4a398867bd17858ade3c5f8ecc6d088359182aa\"}\nCONCEPT permissions\nTyped permissions\nCategory: library\nStatus: implemented\nRule: Native and SQL libraries expose typed permission collections for capability restriction. Derived capabilities can remove rights. Launch grants bound root authority.\nPitfall: Permissions are authority, actions are behavior\nPitfall: Typed collections wrap a closed provider catalog; arbitrary FFI is absent\nSource: {\"anchor\": \"Permission\", \"path\": \"libraries/native/README.md\", \"sha256\": \"4de8dd7276b56d529c96f909ba6e4903fda299e255394e1e8e4bef094d104eea\"}\nCONCEPT limits\nExecution limits\nCategory: runtime\nStatus: implemented\nRule: Fuel, heap, depth and native operation/byte limits bound invocations. Native resource operations also obey deadlines and explicit launch grants.\nPitfall: Limits do not prove termination or functional correctness\nPitfall: Quota exhaustion and typed IO errors have distinct behavior\nSource: {\"anchor\": \"## Launch policy and limits\", \"path\": \"spec/native-interface-v0.1.md\", \"sha256\": \"fc98302a3a5e50c8a87079231b9311954e8351383ba872e4223385ff1770934e\"}\nCONCEPT identities\nStable identities\nCategory: tooling\nStatus: implemented\nRule: Adjacent .lobo.ids.json files bind declaration/import names to persistent IDs. Explicit init/sync/rename authoring commands manage bindings. Checks never allocate IDs.\nPitfall: Preserve ID values when renaming; retarget keys\nPitfall: Do not derive established identities from names or bodies\nSource: {\"anchor\": \"## Source and identity metadata\", \"path\": \"spec/core-v1.3.md\", \"sha256\": \"2ea91b7b4d4c7716a593ceafcfff42227f05f94e45d8500e9ed04e0c956a9118\"}\nCONCEPT imports\nClosed imports\nCategory: tooling\nStatus: implemented\nRule: use group { name }; binds selected declarations by stable identity. Supply every source explicitly. The loader does not discover dependency files by path.\nPitfall: A source spelling is not the persistent identity\nPitfall: Compilation requires the complete explicit source bundle\nSource: {\"anchor\": \"The loader does not discover\", \"path\": \"spec/core-v1.3.md\", \"sha256\": \"2ea91b7b4d4c7716a593ceafcfff42227f05f94e45d8500e9ed04e0c956a9118\"}\nCONCEPT json\nJSON literals\nCategory: library\nStatus: implemented\nRule: JSON literal syntax uses the supplied JSON library builders by stable ID. Json and directly called helpers stay explicit. The compiler records generated builder imports.\nPitfall: Supply the JSON source dependency\nPitfall: Literal syntax does not imply a database or network grant\nSource: {\"anchor\": \"## Closed dependencies\", \"path\": \"spec/core-v1.6.md\", \"sha256\": \"71967bd60313ce04cabdf740863eb2f1c73c49ecb1f22ea58ed6e9abbcd9c886\"}\nCONCEPT native\nNative compilation\nCategory: tooling\nStatus: implemented\nRule: compile/run use machine code by default through the C backend. Direct LLVM is optional. eval is the reference evaluator for correctness comparisons.\nPitfall: No projection step is needed\nPitfall: The proposed workspace daemon and self-hosting are not implemented\nSource: {\"anchor\": \"##\", \"path\": \"docs/native-development.md\", \"sha256\": \"5b111489386861c5549f245cb27458667401ff2e900e41be2d1a23b11b9d1ded\"}\nSource: {\"anchor\": \"## Source selection\", \"path\": \"spec/core-v1.2.md\", \"sha256\": \"7d0f42dd9d1bd99b860af5045c960fa82ffc96511d8f6397fefa381964c5b363\"}\nSource: {\"anchor\": \"The language is experimental; the wider workspace, WASM backend, and self-hosting are future work.\", \"path\": \"README.md\", \"sha256\": \"ad2e5f1d96e13509ed67b34588e5ffb1cd3c5087016554989a5638236073fc3c\"}\nCONCEPT wire-input\nStudy input encoding\nCategory: experiment\nStatus: study protocol\nRule: Input JSON encodings belong to each experiment protocol and its trusted adapters. A hexadecimal JSON string can encode Bytes; this is not a Lobo expression.\nPitfall: Do not infer a wire schema from source types alone\nPitfall: Schema changes need identical input documentation across comparison languages\nSource: {\"anchor\": \"def input_schema\", \"path\": \"benchmarks/matched-study/context.py\", \"sha256\": \"05e5c702ff967e00e135368d9e00eb3a0296efbcaf028fcf169b0b81da08d156\"}\nCONCEPT resources\nNative resource lifetime\nCategory: runtime\nStatus: implemented\nRule: Opaque capability, listener and stream tokens carry generation-checked runtime identity. Explicit close policy and invocation-exit cleanup bound handle lifetime.\nPitfall: Capture an operation result before cleanup\nPitfall: Prefix try does not close handles when returning an error\nSource: {\"anchor\": \"## Authority and resource state\", \"path\": \"spec/native-interface-v0.1.md\", \"sha256\": \"fc98302a3a5e50c8a87079231b9311954e8351383ba872e4223385ff1770934e\"}\nSource: {\"anchor\": \"## Resource ownership\", \"path\": \"spec/core-v1.8.md\", \"sha256\": \"422e050a2b5aa621e9b236f003084fa5398995e3144b3781b998092422255eb6\"}\nRelationship: updates | preserves nominal type | records\nRelationship: variants | handled by | match\nRelationship: try | propagates result cases | variants\nRelationship: try | does not implicitly close | resources\nRelationship: fold | can carry | records\nRelationship: while | can carry | records\nRelationship: lists | can be traversed by | fold\nRelationship: bytes | converts explicitly with | text\nRelationship: generics | infers constructor arguments for | records\nRelationship: generics | infers contextual owners for | variants\nRelationship: callbacks | declares exact bound of | actions\nRelationship: actions | does not grant | permissions\nRelationship: permissions | constrained by | limits\nRelationship: native | enforces | limits\nRelationship: imports | pins targets using | identities\nRelationship: json | requires supplied sources through | imports\nRelationship: wire-input | adapts external representation to | bytes\nRelationship: blocks | can invoke | callbacks\nRelationship: try | can exit through | fold\nRelationship: try | can exit through | while\nRelationship: permissions | authorizes operations on | resources\nRelationship: resources | bounded by | limits\nCHECKED EXAMPLES\nmodule reading_examples;\n\nrecord Pair { left: I64, right: I64 }\nvariant Result<T> { Ok(T), Err(Text) }\n\nfn bump(input: Result<I64>) -> Result<I64> {\n  let value = try input;\n  Ok(value + 1)\n}\n\nfn slice_count() -> I64 {\n  let data = Text::bytes(\"ABCDE\");\n  Bytes::length(Bytes::slice(data, 1, 3))\n}\n\nfn spread() -> I64 {\n  let original = Pair { left: 2, right: 3 };\n  let updated = Pair { ...original, left: 8 };\n  updated.left + updated.right\n}\n\nfn counted() -> I64 {\n  fold(index in 4, total: I64 = 0) { total + index }\n}\n\nfn stopped() -> I64 {\n  while(state: I64 = 0; state < 4) { state + 1 }\n}\n\nfn list_order() -> I64 {\n  let values = List::prepend(2, List::prepend(9, List::empty<I64>()));\n  List::head(values)\n}\n\nfn propagate() -> I64 {\n  match bump(Ok(8)) { Ok(value) => value, Err(error) => -1 }\n}\n\nfn propagate_error() -> Bool {\n  match bump(Err(\"example\")) { Ok(value) => false, Err(error) => error == \"example\" }\n}\n",
+  "last_message": "{\"admissions\":[false,true,false,true],\"predictions\":[3,-4,-4,7,-4,5]}",
+  "canonical_example": {
+    "predictions": [
+      3,
+      -4,
+      -4,
+      7,
+      -4,
+      5
+    ],
+    "admissions": [
+      false,
+      true,
+      false,
+      true
+    ]
+  },
+  "raw_evidence_hashes": {
+    "assignment.json": {
+      "sha256": "fb53b5ac5b63e0c7dece317625c8cb476eb317044cc166494b56f5d6578afae1",
+      "bytes": 158
+    },
+    "stderr.txt": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "command.json": {
+      "sha256": "c79de6d6d12a3624d7bdb0aa93fefce6a5493ae533c7d265fb3a95e2b11f8008",
+      "bytes": 620
+    },
+    "prompt.txt": {
+      "sha256": "bd189cd9ba16878f6f74a178d6442491476272e09a1a52aaa299e6e114ee68ad",
+      "bytes": 19760
+    },
+    "events.jsonl": {
+      "sha256": "3af04b14084282c2cf7473d1328120c842f0d33df44984f7a679137a36f81e7d",
+      "bytes": 416
+    },
+    "result.json": {
+      "sha256": "bd451ea4b21d0c06610d9efbcbf356b0b5993689f76af28ce6975075c07d7355",
+      "bytes": 1876
+    },
+    "last-message.txt": {
+      "sha256": "153903cac0935ae80988131cf91a54154984624712f4a95d91ef44b47ec01392",
+      "bytes": 69
+    }
+  }
+}

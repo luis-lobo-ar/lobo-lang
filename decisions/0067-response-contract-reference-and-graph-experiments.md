@@ -1,6 +1,6 @@
 # 0067 — Separate response-contract, reference and graph experiments
 
-Date: 2026-11-24. Status: selected; register after validation, before participant calls.
+Date: 2026-11-24. Status: completed; product and tested materials remain frozen.
 
 The user selected fixing the response-format ambiguity and separately testing the language reference and
 graph on fresh questions. Use the reliable-coding workflow with TDD. Keep product/compiler/extension
@@ -54,3 +54,11 @@ limits. Cached input/reasoning output are subsets, billing and parent developmen
 Alias weights, caching, high-before-low time order, small task count and non-blinded task authorship limit
 interpretation. Append paper evidence without replacing earlier entries/pins. Stop after these 84 attempts;
 no language change or automatic follow-up study is authorized.
+
+Completion: registration 678a7ee preceded all calls; all 84 attempts completed with all 90 usage records
+known. Shape compliance is 15/18 ambiguous versus 17/18 explicit; whole-task acceptance is 9/18 each.
+Reference items 116/120 base versus118/120 flat; graph 110/120 flat versus 109/120 adjacency, with mixed
+whole-task counts. Median paired reported tokens increase 2.5%,24.2%,6.8% respectively. Coverage gaps
+include builtin signatures, contextual/constructor spellings and contracts; some mistakes contradict
+provided facts. All results and 297 observed-input replays are retained. See
+[the report](../research/learning-study-2026-11-24.md). Stop here; no extra model trials or material edits.

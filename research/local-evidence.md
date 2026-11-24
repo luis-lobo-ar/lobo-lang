@@ -1,5 +1,14 @@
 # Local evidence for the Lobo paper
 
+## Response contract, reference presence and graph presentation
+
+Paper local-042 adds [three separate registered comparisons](learning-study-2026-11-24.md),
+[all 84 outcomes](../benchmarks/results/2026-11-24-learning-study.json) and
+[item-level diagnostics](../benchmarks/results/2026-11-24-learning-diagnostics.json). The explicit profile
+clarifies closed inputs; shape compliance rises15/18 to 17/18 without a whole-task gain. Reference items
+rise 116/120 to 118/120; same-facts graph items are 109/120 versus 110/120 flat on a different form.
+Coverage gaps and conflicting metrics limit interpretation. All 41 earlier entries and 131 pins are preserved.
+
 ## Isolated context treatments and language reference
 
 Paper local-041 adds [the 72-attempt pilot](context-factorial-study-2026-11-23.md),

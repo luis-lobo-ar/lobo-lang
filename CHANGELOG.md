@@ -1,5 +1,17 @@
 # Lobo change ledger
 
+## 2026-11-24 — Separate response contracts, reference and graph presentation
+
+Completed all 84 registered fresh-question attempts at frozen 1.11.2. Explicit response-profile disclosure
+gives 17/18 valid shapes versus 15/18; whole-task acceptance stays 9/18. The flat reference gives 118/120
+items versus 116/120 base. Graph presentation gives109/120 versus 110/120 flat on a different form; its
+task counts move in the other direction, so no consistent advantage is demonstrated. Paired reported
+tokens increase 2.5%,24.2%,6.8%. Builtin/grammar/contract coverage gaps and remaining model errors are
+documented without changing any score. All 90 usage records and 297 concrete observed-input replays are
+retained, alongside every earlier pin. TDD, 312 compiler tests, native/evaluator/static checks and compiled
+defect detection pass. No compiler, library, extension or tested-reference edits. See
+[the report](research/learning-study-2026-11-24.md), decision 0067 and paper local-042.
+
 ## 2026-11-23 — Isolate prompt and input-documentation changes
 
 Completed the registered 72-attempt, four-arm fresh-question pilot on frozen 1.11.2. Every arm accepts

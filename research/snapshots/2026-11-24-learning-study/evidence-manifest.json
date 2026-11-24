@@ -1,0 +1,1726 @@
+{
+  "date": "2026-11-24",
+  "files": [
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/.gitattributes",
+      "sha256": "218d938ac044cbbb4a4491bf2cc3a135e2da60a56c6c9e76d75d93306e159d12",
+      "bytes": 200
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/archive-evidence.py",
+      "sha256": "f78a06373f5eb700905904f9066a60ec58b44760d838344ee8cc5758800d8002",
+      "bytes": 1614
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/cargo-counts.json",
+      "sha256": "a9b69cd496401586ee11f84d4c457420d39fd0c4e661b9612dc367137905c956",
+      "bytes": 67
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/code/learning.py",
+      "sha256": "b41678da7dc3d1c2bdabe27e04281b491f900a5956155ae3a4dfc8a7b41fccf5",
+      "bytes": 19986
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/code/learning_corpus.py",
+      "sha256": "a75bbe1ffefa09525fa5b761daa31576ead4b85b2bd63b632018c38318a52385",
+      "bytes": 15936
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/code/learning_diagnostics.py",
+      "sha256": "b742553ec35595fa41704cfe511597c449fbf8d8911043fb347891d6df1f11fa",
+      "bytes": 3911
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/code/learning_report.py",
+      "sha256": "ce0fbd5d968cafcb9e4fd4fe67703399a76b22819b1f7535c0dc14bdae829d0c",
+      "bytes": 5388
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/code/response_contract.py",
+      "sha256": "f37d2afd1a7611e72001bf55515db502dd954f3de1ab005868a151fb0039c2d1",
+      "bytes": 4072
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/code/test_learning.py",
+      "sha256": "a7064b64aa1646c10682106e10ef030ebb47d0448e85653a8337b84a9ad16b84",
+      "bytes": 6670
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/code/test_learning_diagnostics.py",
+      "sha256": "0bf677748652dfadaabf58d64eee8972ed5082afec51fc203343939a7ae235d2",
+      "bytes": 1139
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/code/test_learning_report.py",
+      "sha256": "03251faca92b14302932547c2e3cb247cd1762a6a4f6c2bdcffa4d8f50de60fa",
+      "bytes": 1662
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/development/all-harness-tests.txt",
+      "sha256": "a27df23a7531ba286c2066d6bc8ee664f5135ce6c63e5be329c0498b808a1103",
+      "bytes": 131
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/development/all-new-tests-green.txt",
+      "sha256": "acfb09536560388410092c5cee079b9ee896afa337322fef4582c0abab99ae18",
+      "bytes": 112
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/development/cargo-exit.txt",
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+      "bytes": 2
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/development/cargo-test.txt",
+      "sha256": "148de22a0f4ef6e2728615811700e2633464c45c071673c0a214ebec04d84033",
+      "bytes": 36491
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/development/diagnostics-green.txt",
+      "sha256": "a6707d4eff38012da33ddc34bc6dc076a3b17151cfc9aef223c8790cbe64c3da",
+      "bytes": 100
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/development/diagnostics-red.txt",
+      "sha256": "1d65ab768da24db00d30a417bb7f72dd3d811838833a2f39c036bc3d80181d95",
+      "bytes": 1342
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/development/diagnostics-result.txt",
+      "sha256": "b0aa03a8dbc348b6f691497014fdb584d074a4eeb9a706a5cbd01f2d6d05627a",
+      "bytes": 44
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/development/final-harness-tests.txt",
+      "sha256": "094155a411ad05dd402ab0f6debce2637fed4b47102347dfaa2396eaff779ae8",
+      "bytes": 133
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/development/final-research-tests.txt",
+      "sha256": "8168b4037239d301219bdda533812272667f96330404c6c231e21ab99ed153ea",
+      "bytes": 114
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/development/observed-input-replays.txt",
+      "sha256": "edc94d6fd529efc4101c2c2c6593834786878c45dbfb37cd503273f5bbeca2ef",
+      "bytes": 47
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/development/publication.txt",
+      "sha256": "85c49a51a2f5ca2e9fed2f719130fa903a75826c2f718bd35d6204365c8d7cfc",
+      "bytes": 89
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/development/report-green.txt",
+      "sha256": "a6707d4eff38012da33ddc34bc6dc076a3b17151cfc9aef223c8790cbe64c3da",
+      "bytes": 100
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/development/report-red.txt",
+      "sha256": "46aba44349a2fcbb7ca8e7a29423c43a5c96aa3b421365304133fdea30a87b2c",
+      "bytes": 1317
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/development/repository-links-first.txt",
+      "sha256": "1f11bb3bb382f1877ffa8eec4eb376db85d0ecfa2e1301289bb91fbd2cc966ae",
+      "bytes": 55
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/development/research-tests-green.txt",
+      "sha256": "174421e4f4ea4fda26e3da125cc1519c550be4d6febbba75e13e308d0ef38f2d",
+      "bytes": 114
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/development/tdd-behavior-red.txt",
+      "sha256": "006ac55040db8bd82eeb2e5abab682d80dc719e313b23af3bbac2921bafb69a1",
+      "bytes": 109
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/development/tdd-distinct-admissions-green.txt",
+      "sha256": "395f4ba177429a162b2f04a7e5dd660a39233158ce91c848b5b64fb547fbd0ed",
+      "bytes": 110
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/development/tdd-final-contract-green.txt",
+      "sha256": "57256a13cfbd13539b3f6c3a9bd6c4cd9c1a8f25a390d6295b563a1d8a31853d",
+      "bytes": 110
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/development/tdd-final-green.txt",
+      "sha256": "b3422b145032ac3a56ce40c0e8bbe6f04030fe26a1ce1f5388afec7a5b7cbee0",
+      "bytes": 109
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/development/tdd-first-attempt.txt",
+      "sha256": "54e883f4eca3a541021de1c1a921ddad564f303fadd533f9fecdee8021f7c0b5",
+      "bytes": 2246
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/development/tdd-freshness-green.txt",
+      "sha256": "b3422b145032ac3a56ce40c0e8bbe6f04030fe26a1ce1f5388afec7a5b7cbee0",
+      "bytes": 109
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/development/tdd-freshness-red.txt",
+      "sha256": "544a2997ee1e3dcd19a2632b3ea7ff194580f86d35c80c187f2611c964886069",
+      "bytes": 742
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/development/tdd-green.txt",
+      "sha256": "006ac55040db8bd82eeb2e5abab682d80dc719e313b23af3bbac2921bafb69a1",
+      "bytes": 109
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/development/tdd-red.txt",
+      "sha256": "9481075ea26bdda77ebcb85bbc451602c9a62be31b7d2a082398aaea929cfae2",
+      "bytes": 1282
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/development/tdd-shared-context-green.txt",
+      "sha256": "a4dfc6ba8d8ee7f993f00a450146247a1360e5c1204cf97b042c9525cb23198e",
+      "bytes": 113
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/development/tdd-shared-context-red.txt",
+      "sha256": "0d05d591f1199e752beb46360dc92bfdf00a6a92721333c328020abe3622b15e",
+      "bytes": 701
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/development/validation-final.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/development/validation-first.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/development/validation-registered.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/registration/manifest.json",
+      "sha256": "b5d039aa1620453f6bf9fe044fa37ea584af2df8f70f1bcbaf7d1701885ae740",
+      "bytes": 31729
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/registration/prompt-00.txt",
+      "sha256": "108c37158607175835424d7134649ea4027d437af2581e6263a2f49e52f7aa41",
+      "bytes": 5176
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/registration/prompt-01.txt",
+      "sha256": "12cc14cd368e38e5c8df4c78a0d7fed57ef332ddab0c26aa2458f7fe6eb30d81",
+      "bytes": 6929
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/registration/prompt-02.txt",
+      "sha256": "7482b5d1dc97ff4fd4e2017c672b4b377de1f699ab1cbd521b7848820e7dafb5",
+      "bytes": 9549
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/registration/prompt-03.txt",
+      "sha256": "829fc5cf1e988e63001c0b05b26b7931970e5214c1694a02c2aeb6800474ba91",
+      "bytes": 7796
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/registration/prompt-04.txt",
+      "sha256": "1765fb0cacde4982cdc5ff424704e5bf0fc0472fa7bbda30767a80d7a74e487a",
+      "bytes": 5806
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/registration/prompt-05.txt",
+      "sha256": "f8d2fa08c035aca39d88ef3ba790c453a9ab382f4cc9e6990997e62f3e87184e",
+      "bytes": 8231
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/registration/prompt-06.txt",
+      "sha256": "82df0f713fda74ce0d0a5758d9420ffc2c01ef7b193009a127671d44f4cbe4a8",
+      "bytes": 11231
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/registration/prompt-07.txt",
+      "sha256": "eeb2a66392a789c8cc603157e85e45eca097e236a6cddc5119efd0e13650a774",
+      "bytes": 8806
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/registration/prompt-08.txt",
+      "sha256": "6c0279c7fafaaafa0ef69699859b52b7bdb11f5bfe4876880f96c7e88d5bc232",
+      "bytes": 5786
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/registration/prompt-09.txt",
+      "sha256": "2081471f92ff5977b6afa9a00601d4ed0179ebb8fb5e899bdec96e0c2a6bf8b7",
+      "bytes": 7951
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/registration/prompt-10.txt",
+      "sha256": "16552fd932cd8c3289a7586305e989702566e30bba7c11628ea327767ef34d4b",
+      "bytes": 8029
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/registration/prompt-11.txt",
+      "sha256": "38fd163269683a187e27c5feb189f780eb5561392b0feacafad420049e1fc2fc",
+      "bytes": 5604
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/registration/prompt-12.txt",
+      "sha256": "292f67e1723a31af52f95a6d622736da9ecbad9f88226599c27e8ba79400eba2",
+      "bytes": 5494
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/registration/prompt-13.txt",
+      "sha256": "9179321ad6783e743905c28947fc92a1f1b81b3282f0d1107d705ba066b8a50f",
+      "bytes": 7247
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/registration/prompt-14.txt",
+      "sha256": "d70c5dc3f0395e89896f58f74f75e0e94dc997d8f0d5a5fa1b39d2e602829d4b",
+      "bytes": 10321
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/registration/prompt-15.txt",
+      "sha256": "b5deb023c0e156231ce261b1a2a4c22960deaf8c972a3f993b183d40144902e2",
+      "bytes": 8156
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/registration/prompt-16.txt",
+      "sha256": "7b3f45f600b05e6d4c32e642da51d7dbb82ad00e06c9a4764e572fc5e6557be4",
+      "bytes": 5602
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/registration/prompt-17.txt",
+      "sha256": "d0f117929ac943de7679281773811330acf01d264645e0e6dd7d015cf8ab9437",
+      "bytes": 7767
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/registration/prompt-18.txt",
+      "sha256": "108c37158607175835424d7134649ea4027d437af2581e6263a2f49e52f7aa41",
+      "bytes": 5176
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/registration/prompt-19.txt",
+      "sha256": "12cc14cd368e38e5c8df4c78a0d7fed57ef332ddab0c26aa2458f7fe6eb30d81",
+      "bytes": 6929
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/registration/prompt-20.txt",
+      "sha256": "7482b5d1dc97ff4fd4e2017c672b4b377de1f699ab1cbd521b7848820e7dafb5",
+      "bytes": 9549
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/registration/prompt-21.txt",
+      "sha256": "829fc5cf1e988e63001c0b05b26b7931970e5214c1694a02c2aeb6800474ba91",
+      "bytes": 7796
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/registration/prompt-22.txt",
+      "sha256": "1765fb0cacde4982cdc5ff424704e5bf0fc0472fa7bbda30767a80d7a74e487a",
+      "bytes": 5806
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/registration/prompt-23.txt",
+      "sha256": "f8d2fa08c035aca39d88ef3ba790c453a9ab382f4cc9e6990997e62f3e87184e",
+      "bytes": 8231
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/registration/prompt-24.txt",
+      "sha256": "82df0f713fda74ce0d0a5758d9420ffc2c01ef7b193009a127671d44f4cbe4a8",
+      "bytes": 11231
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/registration/prompt-25.txt",
+      "sha256": "eeb2a66392a789c8cc603157e85e45eca097e236a6cddc5119efd0e13650a774",
+      "bytes": 8806
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/registration/prompt-26.txt",
+      "sha256": "6c0279c7fafaaafa0ef69699859b52b7bdb11f5bfe4876880f96c7e88d5bc232",
+      "bytes": 5786
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/registration/prompt-27.txt",
+      "sha256": "2081471f92ff5977b6afa9a00601d4ed0179ebb8fb5e899bdec96e0c2a6bf8b7",
+      "bytes": 7951
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/registration/prompt-28.txt",
+      "sha256": "16552fd932cd8c3289a7586305e989702566e30bba7c11628ea327767ef34d4b",
+      "bytes": 8029
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/registration/prompt-29.txt",
+      "sha256": "38fd163269683a187e27c5feb189f780eb5561392b0feacafad420049e1fc2fc",
+      "bytes": 5604
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/registration/prompt-30.txt",
+      "sha256": "292f67e1723a31af52f95a6d622736da9ecbad9f88226599c27e8ba79400eba2",
+      "bytes": 5494
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/registration/prompt-31.txt",
+      "sha256": "9179321ad6783e743905c28947fc92a1f1b81b3282f0d1107d705ba066b8a50f",
+      "bytes": 7247
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/registration/prompt-32.txt",
+      "sha256": "d70c5dc3f0395e89896f58f74f75e0e94dc997d8f0d5a5fa1b39d2e602829d4b",
+      "bytes": 10321
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/registration/prompt-33.txt",
+      "sha256": "b5deb023c0e156231ce261b1a2a4c22960deaf8c972a3f993b183d40144902e2",
+      "bytes": 8156
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/registration/prompt-34.txt",
+      "sha256": "7b3f45f600b05e6d4c32e642da51d7dbb82ad00e06c9a4764e572fc5e6557be4",
+      "bytes": 5602
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/registration/prompt-35.txt",
+      "sha256": "d0f117929ac943de7679281773811330acf01d264645e0e6dd7d015cf8ab9437",
+      "bytes": 7767
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/registration/prompt-36.txt",
+      "sha256": "d563e24a57548403333cad7322a65fdb1a6e4b0235822de8b814921804503271",
+      "bytes": 5592
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/registration/prompt-37.txt",
+      "sha256": "ecfbc3823d911e2644a9fdf1e1499ad85a953e7bb02e87cc43c277152b74a08f",
+      "bytes": 19476
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/registration/prompt-38.txt",
+      "sha256": "bd189cd9ba16878f6f74a178d6442491476272e09a1a52aaa299e6e114ee68ad",
+      "bytes": 19760
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/registration/prompt-39.txt",
+      "sha256": "0e4f8a2134f13fbea22e3443f3fab06f70bb7c76a1a692cc59fb31f499004df5",
+      "bytes": 5876
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/registration/prompt-40.txt",
+      "sha256": "d973e7ad3b162fb271f3e8265285c0cb1291d47e300b131c54854baaa0af5901",
+      "bytes": 5885
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/registration/prompt-41.txt",
+      "sha256": "20aeb58dd024f152afbc7b3fc774fae25d19cb31590aa6d71b154e6bbdfb2c09",
+      "bytes": 19769
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/registration/prompt-42.txt",
+      "sha256": "702feac513ee26f74d106ff67778760cc657880561620dcee48c35c29d1f3ae0",
+      "bytes": 19882
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/registration/prompt-43.txt",
+      "sha256": "740575b7a531c329fd7c4cd0485909aec398dbae23738122b127761371816052",
+      "bytes": 5998
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/registration/prompt-44.txt",
+      "sha256": "9f60bb15f5f08145c85cc50c836f671badaf7dcb2e5f8e4e206df2f71119ed53",
+      "bytes": 6013
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/registration/prompt-45.txt",
+      "sha256": "07ff192ab32988cb0dd7f883939ea976a4771bbfe2c62d12b6d56aa9557604df",
+      "bytes": 19897
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/registration/prompt-46.txt",
+      "sha256": "31ddbd7c630404f28a8f5ea5d078aeb5b451495d1fefae5e0273af4cd031c585",
+      "bytes": 19485
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/registration/prompt-47.txt",
+      "sha256": "4bf231f8ff00ad8981df9304fe50a3ea1f6a64842e0c8055ce5afc40e7d5e022",
+      "bytes": 5601
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/registration/prompt-48.txt",
+      "sha256": "d563e24a57548403333cad7322a65fdb1a6e4b0235822de8b814921804503271",
+      "bytes": 5592
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/registration/prompt-49.txt",
+      "sha256": "ecfbc3823d911e2644a9fdf1e1499ad85a953e7bb02e87cc43c277152b74a08f",
+      "bytes": 19476
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/registration/prompt-50.txt",
+      "sha256": "bd189cd9ba16878f6f74a178d6442491476272e09a1a52aaa299e6e114ee68ad",
+      "bytes": 19760
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/registration/prompt-51.txt",
+      "sha256": "0e4f8a2134f13fbea22e3443f3fab06f70bb7c76a1a692cc59fb31f499004df5",
+      "bytes": 5876
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/registration/prompt-52.txt",
+      "sha256": "d973e7ad3b162fb271f3e8265285c0cb1291d47e300b131c54854baaa0af5901",
+      "bytes": 5885
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/registration/prompt-53.txt",
+      "sha256": "20aeb58dd024f152afbc7b3fc774fae25d19cb31590aa6d71b154e6bbdfb2c09",
+      "bytes": 19769
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/registration/prompt-54.txt",
+      "sha256": "702feac513ee26f74d106ff67778760cc657880561620dcee48c35c29d1f3ae0",
+      "bytes": 19882
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/registration/prompt-55.txt",
+      "sha256": "740575b7a531c329fd7c4cd0485909aec398dbae23738122b127761371816052",
+      "bytes": 5998
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/registration/prompt-56.txt",
+      "sha256": "9f60bb15f5f08145c85cc50c836f671badaf7dcb2e5f8e4e206df2f71119ed53",
+      "bytes": 6013
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/registration/prompt-57.txt",
+      "sha256": "07ff192ab32988cb0dd7f883939ea976a4771bbfe2c62d12b6d56aa9557604df",
+      "bytes": 19897
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/registration/prompt-58.txt",
+      "sha256": "31ddbd7c630404f28a8f5ea5d078aeb5b451495d1fefae5e0273af4cd031c585",
+      "bytes": 19485
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/registration/prompt-59.txt",
+      "sha256": "4bf231f8ff00ad8981df9304fe50a3ea1f6a64842e0c8055ce5afc40e7d5e022",
+      "bytes": 5601
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/registration/prompt-60.txt",
+      "sha256": "b33a1617ea09b694c04f6a4c3db450053c9aee3e4f38f9cc3f6fe9c5bf21d51d",
+      "bytes": 19568
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/registration/prompt-61.txt",
+      "sha256": "a0ebbc366ae77914cf2296ef12a4d986ca51e66081c8de9ce39cbf788cad6a8f",
+      "bytes": 25036
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/registration/prompt-62.txt",
+      "sha256": "41f72494858a309534b4e88fdf50e494461f40eac4cf740da76497c31216a631",
+      "bytes": 25348
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/registration/prompt-63.txt",
+      "sha256": "7065e60a43dde301623e1170cc5bd13fde66ff3e505a7eea5242b46b6ce1080e",
+      "bytes": 19880
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/registration/prompt-64.txt",
+      "sha256": "7766af15d200d3474be15a7cf34d7b01d924149b24d35e6ee786beabf34966bf",
+      "bytes": 19846
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/registration/prompt-65.txt",
+      "sha256": "bcccb9dc27c5c4e026cd7064862ca63487bde0d5683365e7f6b55bfa90893aa4",
+      "bytes": 25314
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/registration/prompt-66.txt",
+      "sha256": "fa7f977e4414e5aa1cfda4459975af0dacea8afd2a5ba75925f53811fc7c6568",
+      "bytes": 25404
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/registration/prompt-67.txt",
+      "sha256": "878252e256060c84a9071f9e95b901272be6a4a2d95dab0518abfa48586e5861",
+      "bytes": 19936
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/registration/prompt-68.txt",
+      "sha256": "8f446a20dd444026ea8fabac2aa69adfe0b58692af74f22047576d6e18eea000",
+      "bytes": 19926
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/registration/prompt-69.txt",
+      "sha256": "ef0d7658807f3d33d56284867925f7b3d6242d35d3ce247165ddf1b70ad7a57a",
+      "bytes": 25394
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/registration/prompt-70.txt",
+      "sha256": "75e41477da9f3cac1cae27609d7e2332f34e6ac688bbbdf02d1ca7e199aa2e6e",
+      "bytes": 24963
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/registration/prompt-71.txt",
+      "sha256": "b859b141afbad620341e13d5a7fb1b26c84e5d819d4cfd5137cd4d47382b316c",
+      "bytes": 19495
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/registration/prompt-72.txt",
+      "sha256": "b33a1617ea09b694c04f6a4c3db450053c9aee3e4f38f9cc3f6fe9c5bf21d51d",
+      "bytes": 19568
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/registration/prompt-73.txt",
+      "sha256": "a0ebbc366ae77914cf2296ef12a4d986ca51e66081c8de9ce39cbf788cad6a8f",
+      "bytes": 25036
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/registration/prompt-74.txt",
+      "sha256": "41f72494858a309534b4e88fdf50e494461f40eac4cf740da76497c31216a631",
+      "bytes": 25348
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/registration/prompt-75.txt",
+      "sha256": "7065e60a43dde301623e1170cc5bd13fde66ff3e505a7eea5242b46b6ce1080e",
+      "bytes": 19880
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/registration/prompt-76.txt",
+      "sha256": "7766af15d200d3474be15a7cf34d7b01d924149b24d35e6ee786beabf34966bf",
+      "bytes": 19846
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/registration/prompt-77.txt",
+      "sha256": "bcccb9dc27c5c4e026cd7064862ca63487bde0d5683365e7f6b55bfa90893aa4",
+      "bytes": 25314
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/registration/prompt-78.txt",
+      "sha256": "fa7f977e4414e5aa1cfda4459975af0dacea8afd2a5ba75925f53811fc7c6568",
+      "bytes": 25404
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/registration/prompt-79.txt",
+      "sha256": "878252e256060c84a9071f9e95b901272be6a4a2d95dab0518abfa48586e5861",
+      "bytes": 19936
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/registration/prompt-80.txt",
+      "sha256": "8f446a20dd444026ea8fabac2aa69adfe0b58692af74f22047576d6e18eea000",
+      "bytes": 19926
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/registration/prompt-81.txt",
+      "sha256": "ef0d7658807f3d33d56284867925f7b3d6242d35d3ce247165ddf1b70ad7a57a",
+      "bytes": 25394
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/registration/prompt-82.txt",
+      "sha256": "75e41477da9f3cac1cae27609d7e2332f34e6ac688bbbdf02d1ca7e199aa2e6e",
+      "bytes": 24963
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/registration/prompt-83.txt",
+      "sha256": "b859b141afbad620341e13d5a7fb1b26c84e5d819d4cfd5137cd4d47382b316c",
+      "bytes": 19495
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/replay-observed-inputs.py",
+      "sha256": "d42087f5af2cbc47f6a5729b3da2dd5dfd219520d8602d1750f45f9b54858d6e",
+      "bytes": 1804
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/validation-round-1.json",
+      "sha256": "7856c9fb881462535a670480a265d88688ec8023c9bf4a088c623b892663f386",
+      "bytes": 1926393
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/validation-round-2.json",
+      "sha256": "f74156e89cd75916a17e8dc751e24ff5cfb9d46f84f0319548c8f9d2b19a7e06",
+      "bytes": 1946054
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/validation-sources/callbacks-0/admission-0.lobo",
+      "sha256": "a83a9b9a717b84c51e65ca50540cf915a5793c7e39c4d4766b7696fc65f0f679",
+      "bytes": 475
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/validation-sources/callbacks-0/admission-0.lobo.ids.json",
+      "sha256": "757d109bf49d2d1ec2e9572d617bfd59f55e66dd9d9079707a26b3c5b925e999",
+      "bytes": 519
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/validation-sources/callbacks-0/admission-1.lobo",
+      "sha256": "77094e0abdd4629d4b62475b2e32f299b90d5718f643f2912daab692242b14b2",
+      "bytes": 496
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/validation-sources/callbacks-0/admission-1.lobo.ids.json",
+      "sha256": "f39be23136d70af6e68d7be3cecd2ab4c9a1a3366be4a83150cb654186cdc3bf",
+      "bytes": 519
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/validation-sources/callbacks-0/admission-2.lobo",
+      "sha256": "ce5f3b3d6b45e9076a6610431e3cce5c340ea6f858d1e6ff77e012cf08aec4b1",
+      "bytes": 492
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/validation-sources/callbacks-0/admission-2.lobo.ids.json",
+      "sha256": "722a214a5fdfde764e4d002e44d34da9838194f555ae8dbca8b6448f16e3f4f2",
+      "bytes": 519
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/validation-sources/callbacks-0/admission-3.lobo",
+      "sha256": "44cffecd58e8366768a3be4e7babc30f8ecb1ae20e2ef2420ea6aa0f68c322e4",
+      "bytes": 515
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/validation-sources/callbacks-0/admission-3.lobo.ids.json",
+      "sha256": "7f39f5175e8a4ad36b3caead2451e94cf7bd459353df1c119caa3cb2efa4f89f",
+      "bytes": 519
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/validation-sources/callbacks-0/mutant.lobo",
+      "sha256": "cf9be663d0c65310c8118e4230bb44f9dfb1489997724e64485efe96ad7089da",
+      "bytes": 767
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/validation-sources/callbacks-0/mutant.lobo.ids.json",
+      "sha256": "e28316bab801b83ac0930899b415f06a0c099a1d9e078bf4c65ddeef5c5b01c2",
+      "bytes": 693
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/validation-sources/callbacks-0/program.lobo",
+      "sha256": "ae931733116b970b6f61226ca9b6a5e142ec2c8f796105121215cb90bd48e6aa",
+      "bytes": 765
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/validation-sources/callbacks-0/program.lobo.ids.json",
+      "sha256": "d5b89a86314d0eb1550ba73394c56212664a1f0d6cf838be82f16fc78f6a1007",
+      "bytes": 602
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/validation-sources/callbacks-1/admission-0.lobo",
+      "sha256": "8181ce430c2d1bbf228de05bd6c2af57ad346676c6efba46d6bd4196079771aa",
+      "bytes": 491
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/validation-sources/callbacks-1/admission-0.lobo.ids.json",
+      "sha256": "a7d495d5effafb360994cc370b113ef6f89b22fafdd4d81a043de8e4aded0b61",
+      "bytes": 547
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/validation-sources/callbacks-1/admission-1.lobo",
+      "sha256": "360ceea35ecabfcd1ffdf6900d7bb47d2dabb12e880d6882acc56f5fce22b146",
+      "bytes": 512
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/validation-sources/callbacks-1/admission-1.lobo.ids.json",
+      "sha256": "68586877a56b9d1ceae999ef49431684707c9e0d226ae680e631e8349c25e4a0",
+      "bytes": 547
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/validation-sources/callbacks-1/admission-2.lobo",
+      "sha256": "cb099e030736f2fe6abd44136ee8cba91bd9a560c6742c1d07fdafbf443b9408",
+      "bytes": 515
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/validation-sources/callbacks-1/admission-2.lobo.ids.json",
+      "sha256": "ec2731903aff7cd006b7b75fdbef07f1491d333f76343b2f7659d0ccc30812f3",
+      "bytes": 547
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/validation-sources/callbacks-1/admission-3.lobo",
+      "sha256": "f1d94c58ba27aa92d2dc7ff9d8a62f2a7c0a87a10fd9a150967517a168a37223",
+      "bytes": 526
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/validation-sources/callbacks-1/admission-3.lobo.ids.json",
+      "sha256": "af921a664fef8ecce61ca16bf7823ddc31de1d1f25fd20ecebf73c285c441890",
+      "bytes": 547
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/validation-sources/callbacks-1/mutant.lobo",
+      "sha256": "db61812efa9e44e9298b21f1957a66ba66ea58a7292d3ef3b5b63823d9382ee8",
+      "bytes": 803
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/validation-sources/callbacks-1/mutant.lobo.ids.json",
+      "sha256": "a561a256c8749dde400e1b9f0b9ee67fd886607a6d2f98a599eb1bfa95f9f65f",
+      "bytes": 717
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/validation-sources/callbacks-1/program.lobo",
+      "sha256": "3effb224efb082220494c46fa9557af2bc81968c4b5a75596044c603bc21b45f",
+      "bytes": 801
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/validation-sources/callbacks-1/program.lobo.ids.json",
+      "sha256": "2f64d5f0f70046f10acffa8e42762772a7051fceaeb5ef9784247dbcfa3a6c3f",
+      "bytes": 626
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/validation-sources/contracts-0/admission-0.lobo",
+      "sha256": "2ac492dfb981db94ae9af03ad930f7296d36d01e0bf76dbfc64c03ce9bc41ef1",
+      "bytes": 201
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/validation-sources/contracts-0/admission-0.lobo.ids.json",
+      "sha256": "85febd15886e2d957c4e4facb5c7075b245fea9defea0af010494e7f2f227d9a",
+      "bytes": 293
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/validation-sources/contracts-0/admission-1.lobo",
+      "sha256": "30aea92e61e510a8e0c664dfea7c2b8c013a8e6349bd5b24f4e01e405aedec8f",
+      "bytes": 204
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/validation-sources/contracts-0/admission-1.lobo.ids.json",
+      "sha256": "9f21038a716b4227b7089d1635f3d58b5a2356a134d79ce8ed90a9b280fe54b9",
+      "bytes": 293
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/validation-sources/contracts-0/admission-2.lobo",
+      "sha256": "08102c911720181634b20589f616eaa84d644c635f8ee494b48fecb3e80b7e11",
+      "bytes": 222
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/validation-sources/contracts-0/admission-2.lobo.ids.json",
+      "sha256": "cbfc2e961685890684c355aba91c90788ef69cd62427b5a4fa9754e9619fb11a",
+      "bytes": 343
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/validation-sources/contracts-0/admission-3.lobo",
+      "sha256": "a25ceec14f152642208b5ae209921c26a7f1a55f4319a633fef35ee28e6f91a7",
+      "bytes": 209
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/validation-sources/contracts-0/admission-3.lobo.ids.json",
+      "sha256": "292d8bd5ca51bf42aca1d1264c71fce1a63262f47876cd30088ed1e3d3f1ce3f",
+      "bytes": 293
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/validation-sources/contracts-0/mutant.lobo",
+      "sha256": "4405ab04e29919ec2c8e52b9402878256dfc15c8d14b9d522f441a03782cef6b",
+      "bytes": 423
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/validation-sources/contracts-0/mutant.lobo.ids.json",
+      "sha256": "acd4249a9a8b149cfad277efd1d8cf15487de0cc2abf6b1b727bc79d3b0adbae",
+      "bytes": 483
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/validation-sources/contracts-0/program.lobo",
+      "sha256": "8e00cea6cb46887b4276a75e77f6d65f146d6c7fd20f85788d234ad2c009252e",
+      "bytes": 421
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/validation-sources/contracts-0/program.lobo.ids.json",
+      "sha256": "25dbb6dbcec9e157bfe8cd7e9f917d534e6160556719aa310689dc5c509a44d5",
+      "bytes": 420
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/validation-sources/contracts-1/admission-0.lobo",
+      "sha256": "5342c773465549e428099433456ea388fdd09a6e5260dcf6ba8f083f23155262",
+      "bytes": 281
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/validation-sources/contracts-1/admission-0.lobo.ids.json",
+      "sha256": "5c8d912867d2c75aaa89c6c8ae0bd1385e529d7332a05c499fdd2719dc2745bf",
+      "bytes": 361
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/validation-sources/contracts-1/admission-1.lobo",
+      "sha256": "f3abe59b0a9e5e9706dcf69ac168243779e5483a00bfec3fa09ab3f5eaae9552",
+      "bytes": 213
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/validation-sources/contracts-1/admission-1.lobo.ids.json",
+      "sha256": "845aa514aadff02a8c8a0cd7486121d78ba365d86bef32ba7bec99812f1ff49a",
+      "bytes": 305
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/validation-sources/contracts-1/admission-2.lobo",
+      "sha256": "22b0ee8c8692d0decf3d53dd5d1c9acfad46e0f6e514ffa197fdaf491c58603a",
+      "bytes": 222
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/validation-sources/contracts-1/admission-2.lobo.ids.json",
+      "sha256": "2dfa475c26f5de0eeb43af6464933a6ac8616cadf3d946b78a533efd293af4a4",
+      "bytes": 305
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/validation-sources/contracts-1/admission-3.lobo",
+      "sha256": "77324b151911b4bc51b96338d8171721ac3e95a6ff6b4152c82ea7d4740ffa90",
+      "bytes": 214
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/validation-sources/contracts-1/admission-3.lobo.ids.json",
+      "sha256": "7b0cbaceb019485d32cbd34170c79fc47d3a8bc85b35f5372cad555e3debec52",
+      "bytes": 305
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/validation-sources/contracts-1/mutant.lobo",
+      "sha256": "c133fc6f0cd19e1fa98ea02592cab193f7bd71527067b138147e39fdc75fb1ce",
+      "bytes": 437
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/validation-sources/contracts-1/mutant.lobo.ids.json",
+      "sha256": "46ff3109345eacb7712328381a5050966385bc99d5c818e74b371a40a752d2ea",
+      "bytes": 491
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/validation-sources/contracts-1/program.lobo",
+      "sha256": "0d8313c8dbb0659009fc91465e2009e8e436f76711168b262056ba847c7da5a8",
+      "bytes": 435
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/validation-sources/contracts-1/program.lobo.ids.json",
+      "sha256": "82b57fcc7689d0c1bb7c26ed812ddb7d06a0cb6f57f33eccf512dced1816d683",
+      "bytes": 428
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/validation-sources/frames-lobo/app.lobo",
+      "sha256": "142bad6701d0bd55f85bab75daca46f781995b191389e76d65706653b59196de",
+      "bytes": 1062
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/validation-sources/frames-lobo/app.lobo.ids.json",
+      "sha256": "9be6120e78c2604599df4b53da3ef73b62a5050ff036b880d3bcf7303dfb9aeb",
+      "bytes": 542
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/validation-sources/frames-lobo/logic.lobo",
+      "sha256": "dffdf73644cdcf45d032b569ee642440c8e1949993b949a5f681e085b61ca16e",
+      "bytes": 1234
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/validation-sources/frames-lobo/logic.lobo.ids.json",
+      "sha256": "50861c003db3051f3608dfae79a2bec4375ce02c97f3c6da388121b4bb665507",
+      "bytes": 408
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/validation-sources/frames-lobo/model.lobo",
+      "sha256": "8f19009753bcb61cfe9bfffb1b2071a6d3d6dbff5924e07cca55397dc8de7da7",
+      "bytes": 145
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/validation-sources/frames-lobo/util.lobo",
+      "sha256": "675dff309d63957c2322be1f6b18a39808f1f27ff17a41210d57c8b8bfb9b343",
+      "bytes": 436
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/validation-sources/frames-lobo-mutant/app.lobo",
+      "sha256": "142bad6701d0bd55f85bab75daca46f781995b191389e76d65706653b59196de",
+      "bytes": 1062
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/validation-sources/frames-lobo-mutant/app.lobo.ids.json",
+      "sha256": "9be6120e78c2604599df4b53da3ef73b62a5050ff036b880d3bcf7303dfb9aeb",
+      "bytes": 542
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/validation-sources/frames-lobo-mutant/logic.lobo",
+      "sha256": "936f693e7fde778796242f334bb6b86e083fc16759362e702bd0a6b05bb53acf",
+      "bytes": 1247
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/validation-sources/frames-lobo-mutant/logic.lobo.ids.json",
+      "sha256": "50861c003db3051f3608dfae79a2bec4375ce02c97f3c6da388121b4bb665507",
+      "bytes": 408
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/validation-sources/frames-lobo-mutant/model.lobo",
+      "sha256": "8f19009753bcb61cfe9bfffb1b2071a6d3d6dbff5924e07cca55397dc8de7da7",
+      "bytes": 145
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/validation-sources/frames-lobo-mutant/util.lobo",
+      "sha256": "675dff309d63957c2322be1f6b18a39808f1f27ff17a41210d57c8b8bfb9b343",
+      "bytes": 436
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/validation-sources/frames-python/app.py",
+      "sha256": "de5f172372195558cf705966b31e12acc4dcee498f5f2da10a58cecb3f94871e",
+      "bytes": 393
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/validation-sources/frames-python/logic.py",
+      "sha256": "7af54f0a654cb5e33836e2a7097a0dfe50c5f356d2861760db74a3eaa49951ba",
+      "bytes": 631
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/validation-sources/frames-python/model.py",
+      "sha256": "1835c96386946241180506a20545ca0afc2f04b02b9a58abe7b2df3191a82ed9",
+      "bytes": 105
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/validation-sources/frames-python-mutant/app.py",
+      "sha256": "de5f172372195558cf705966b31e12acc4dcee498f5f2da10a58cecb3f94871e",
+      "bytes": 393
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/validation-sources/frames-python-mutant/logic.py",
+      "sha256": "ab84393054ad0308da587a4c9089f494f0367ac39a62436e4565a38071b270af",
+      "bytes": 645
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/validation-sources/frames-python-mutant/model.py",
+      "sha256": "1835c96386946241180506a20545ca0afc2f04b02b9a58abe7b2df3191a82ed9",
+      "bytes": 105
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/validation-sources/frames-rust/app.rs",
+      "sha256": "1276b1f5e67b8b0b9447fcbf21afdf713253c68ae63174910db8284a603261e9",
+      "bytes": 803
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/validation-sources/frames-rust/logic.rs",
+      "sha256": "baf38ef7bd7fd2603a513cf064a724761226fae1cf6381f917bc19892e28fc94",
+      "bytes": 914
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/validation-sources/frames-rust/model.rs",
+      "sha256": "ef1a9c3bd9c4ed9639bc4144520853a9f46a4324c7a5f0cec5d6a69901269e6b",
+      "bytes": 76
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/validation-sources/frames-rust-mutant/app.rs",
+      "sha256": "1276b1f5e67b8b0b9447fcbf21afdf713253c68ae63174910db8284a603261e9",
+      "bytes": 803
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/validation-sources/frames-rust-mutant/logic.rs",
+      "sha256": "3a361f8248cc488cf091fbe3f8676952e9b787d4cf9a0b6fe19eb4e53c585908",
+      "bytes": 927
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/validation-sources/frames-rust-mutant/model.rs",
+      "sha256": "ef1a9c3bd9c4ed9639bc4144520853a9f46a4324c7a5f0cec5d6a69901269e6b",
+      "bytes": 76
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/validation-sources/ledger-lobo/app.lobo",
+      "sha256": "25516b5a2114f47b7445df0fab47d7ca40a484e7b6cb10c5916f28334d5e26d0",
+      "bytes": 1106
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/validation-sources/ledger-lobo/app.lobo.ids.json",
+      "sha256": "f27c6fd2b22eef6a0627f811c4585e65da786e6057fb715fedc89b941e0f9261",
+      "bytes": 583
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/validation-sources/ledger-lobo/logic.lobo",
+      "sha256": "9800cb683227caee690aabad74eae80ce4bd71a710779fb42201525520d5ba71",
+      "bytes": 1303
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/validation-sources/ledger-lobo/logic.lobo.ids.json",
+      "sha256": "81426df1c12ccd1152cb9fc79c3922e4d05005ae62a8fe3b0ffbb3491a77f279",
+      "bytes": 412
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/validation-sources/ledger-lobo/model.lobo",
+      "sha256": "bca415f8fe0bfc4f054a028de3ca80e745554dcddb4d3c3d94f4abd8031009b3",
+      "bytes": 238
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/validation-sources/ledger-lobo/util.lobo",
+      "sha256": "675dff309d63957c2322be1f6b18a39808f1f27ff17a41210d57c8b8bfb9b343",
+      "bytes": 436
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/validation-sources/ledger-lobo-mutant/app.lobo",
+      "sha256": "25516b5a2114f47b7445df0fab47d7ca40a484e7b6cb10c5916f28334d5e26d0",
+      "bytes": 1106
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/validation-sources/ledger-lobo-mutant/app.lobo.ids.json",
+      "sha256": "f27c6fd2b22eef6a0627f811c4585e65da786e6057fb715fedc89b941e0f9261",
+      "bytes": 583
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/validation-sources/ledger-lobo-mutant/logic.lobo",
+      "sha256": "60b14512052ee548a6541ad73c207762e9f32be05b6541cfea8d093b0b973be0",
+      "bytes": 1303
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/validation-sources/ledger-lobo-mutant/logic.lobo.ids.json",
+      "sha256": "81426df1c12ccd1152cb9fc79c3922e4d05005ae62a8fe3b0ffbb3491a77f279",
+      "bytes": 412
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/validation-sources/ledger-lobo-mutant/model.lobo",
+      "sha256": "bca415f8fe0bfc4f054a028de3ca80e745554dcddb4d3c3d94f4abd8031009b3",
+      "bytes": 238
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/validation-sources/ledger-lobo-mutant/util.lobo",
+      "sha256": "675dff309d63957c2322be1f6b18a39808f1f27ff17a41210d57c8b8bfb9b343",
+      "bytes": 436
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/validation-sources/ledger-python/app.py",
+      "sha256": "4bbf65c5a0ae432105fd2cbcf4e56150189b12966d6162feea32bea59665618a",
+      "bytes": 424
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/validation-sources/ledger-python/logic.py",
+      "sha256": "c92aaf73956222213482bc85e4805343c5acaa7d968e5953ddb58b31c3072775",
+      "bytes": 705
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/validation-sources/ledger-python/model.py",
+      "sha256": "ca98ab244630880f729f90ff991001bc78c080002efca722b1c3d337bd56d9f8",
+      "bytes": 259
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/validation-sources/ledger-python-mutant/app.py",
+      "sha256": "4bbf65c5a0ae432105fd2cbcf4e56150189b12966d6162feea32bea59665618a",
+      "bytes": 424
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/validation-sources/ledger-python-mutant/logic.py",
+      "sha256": "3e4699a57b431ce62b25f128ac02aa0186500c2b4bbbbfccd47049752e35234c",
+      "bytes": 705
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/validation-sources/ledger-python-mutant/model.py",
+      "sha256": "ca98ab244630880f729f90ff991001bc78c080002efca722b1c3d337bd56d9f8",
+      "bytes": 259
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/validation-sources/ledger-rust/app.rs",
+      "sha256": "db38bbbeac6cea46002f6fc5c4583a93e38d515a5fedb11d65a7797de92989bc",
+      "bytes": 832
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/validation-sources/ledger-rust/logic.rs",
+      "sha256": "926aacf532e657e116b891a14cabecbaa1f988633cb98d51ecb58f8095158590",
+      "bytes": 929
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/validation-sources/ledger-rust/model.rs",
+      "sha256": "1bbbcc6cf0c2cdb47a17953ed582e6c4f8bbf350e54575fb26a088226b5d7167",
+      "bytes": 155
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/validation-sources/ledger-rust-mutant/app.rs",
+      "sha256": "db38bbbeac6cea46002f6fc5c4583a93e38d515a5fedb11d65a7797de92989bc",
+      "bytes": 832
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/validation-sources/ledger-rust-mutant/logic.rs",
+      "sha256": "08e50bebae884a749a84389b69292aa85817d68db326ffd479070bfd20b15a30",
+      "bytes": 929
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/validation-sources/ledger-rust-mutant/model.rs",
+      "sha256": "1bbbcc6cf0c2cdb47a17953ed582e6c4f8bbf350e54575fb26a088226b5d7167",
+      "bytes": 155
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/validation-sources/nominal-0/admission-0.lobo",
+      "sha256": "e3405a1549c59c5e4d741247d93afa659449cfb187bad5f0bd951ed67273a94b",
+      "bytes": 264
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/validation-sources/nominal-0/admission-0.lobo.ids.json",
+      "sha256": "81ab93ab04b396f6b4c4e25896240247588f59ecb863450b7140b352137dc078",
+      "bytes": 423
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/validation-sources/nominal-0/admission-1.lobo",
+      "sha256": "2d37c1096312c1b8437a0b6bc085a383b3468d74110283bb9902b6bfa715515c",
+      "bytes": 284
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/validation-sources/nominal-0/admission-1.lobo.ids.json",
+      "sha256": "40700646d7907ea0e339e24427188445834684f12d798bf3e476ef706a6106d7",
+      "bytes": 423
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/validation-sources/nominal-0/admission-2.lobo",
+      "sha256": "7d25d38f3c00ee06a0651e68bc123de2c83515315185bcdcb55ad7c122705de6",
+      "bytes": 300
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/validation-sources/nominal-0/admission-2.lobo.ids.json",
+      "sha256": "099517c01a7b1602cfe90cc0566ea91ae1dbac8d6b593822353a6c7bc9298317",
+      "bytes": 473
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/validation-sources/nominal-0/admission-3.lobo",
+      "sha256": "74f871cd84de1d5db5a76e3e71aeee18d71cd3b8d8297cd2c30667f641e6063b",
+      "bytes": 264
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/validation-sources/nominal-0/admission-3.lobo.ids.json",
+      "sha256": "15e686b5063a62ff862b03e27fbc65f949fb5bb3d048f2b371fe11ab814b9eb7",
+      "bytes": 423
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/validation-sources/nominal-0/mutant.lobo",
+      "sha256": "cec770d7cee4bc5391590e842df4e7d6b6d22e7095bf2b534f44db9060354ce2",
+      "bytes": 674
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/validation-sources/nominal-0/mutant.lobo.ids.json",
+      "sha256": "e9d2425792b3dd38ca08bde190b24c1f08074c8c77d69c8a9101e42d4567e821",
+      "bytes": 591
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/validation-sources/nominal-0/program.lobo",
+      "sha256": "30166a1f6815168e7c0a6041ffad3a7dbc6d59ecb253d060d17ffa367908a420",
+      "bytes": 674
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/validation-sources/nominal-0/program.lobo.ids.json",
+      "sha256": "524d11c00be394c5e8ce54a1f20fe583e230e4674e265477518dc032f55af7c4",
+      "bytes": 507
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/validation-sources/nominal-1/admission-0.lobo",
+      "sha256": "9eed64c24be52f91003000d08ae9074f6956be56a1d0b40ef22297acf9cb4965",
+      "bytes": 291
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/validation-sources/nominal-1/admission-0.lobo.ids.json",
+      "sha256": "00ebaf5247c0a5aee6ed6101359ff213f9b016bc7845730334fcbf93a49f877f",
+      "bytes": 447
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/validation-sources/nominal-1/admission-1.lobo",
+      "sha256": "0a7b2d14b50842db657879bdbbc0312de699ffc0081a71e636535490c8feb838",
+      "bytes": 298
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/validation-sources/nominal-1/admission-1.lobo.ids.json",
+      "sha256": "9db49041217adf5b6bed93973f9a72111614fe2db5d0a921fd2aaf73bd7c7c5f",
+      "bytes": 447
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/validation-sources/nominal-1/admission-2.lobo",
+      "sha256": "99f020f2aad7a7162d2c5e680948822031bf873c03e665ca0735adbbc848b4f4",
+      "bytes": 310
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/validation-sources/nominal-1/admission-2.lobo.ids.json",
+      "sha256": "ffdb49ee54d4efd2323c98a4f7334ef357e2e1e655c4e0d41591ca82784abf2c",
+      "bytes": 447
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/validation-sources/nominal-1/admission-3.lobo",
+      "sha256": "f3f167696bf775d96fd625979ec5166633c2c490efd753276fdbb889050635c7",
+      "bytes": 304
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/validation-sources/nominal-1/admission-3.lobo.ids.json",
+      "sha256": "7e87349cdf76e0a4a39dddfd0d77673ffb4902d4ef984d891e127312d89ff9e8",
+      "bytes": 447
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/validation-sources/nominal-1/mutant.lobo",
+      "sha256": "240e3afcdc3cf81c0f14ab8648855d127d0419be56fa0296b1bfc7d0176d0e06",
+      "bytes": 709
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/validation-sources/nominal-1/mutant.lobo.ids.json",
+      "sha256": "1a5a39bb280a2dc4b4631b8505f43c926cf97544d6c510efc5a4b1fed5a151dd",
+      "bytes": 611
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/validation-sources/nominal-1/program.lobo",
+      "sha256": "dc4c23db3e02c1ab39afdcdd8a3923d9b30effd9c0c85c3c239ae3c4fe834cba",
+      "bytes": 708
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/validation-sources/nominal-1/program.lobo.ids.json",
+      "sha256": "2a3338ad31960c90eb53809c37122ba529df906d3c21fdc1d6db648d83503984",
+      "bytes": 527
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/validation-sources/propagation-0/admission-0.lobo",
+      "sha256": "6634968b9a3813c531884d3ddc0c506c4656aef82e1db3dc6b7856e85826d736",
+      "bytes": 506
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/validation-sources/propagation-0/admission-0.lobo.ids.json",
+      "sha256": "2111b4439a095fe74fa5ec133bb6f69a21b1c331910fbb01a3395ef30e77aba3",
+      "bytes": 515
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/validation-sources/propagation-0/admission-1.lobo",
+      "sha256": "1ed1cc0367c8f3bb8d59430525be11382583682a6760743ce99eb20618dfee62",
+      "bytes": 534
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/validation-sources/propagation-0/admission-1.lobo.ids.json",
+      "sha256": "991487ca51c6e633859adc0d562e778a2b8fb1c149713d6b42338e8aece23ed0",
+      "bytes": 515
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/validation-sources/propagation-0/admission-2.lobo",
+      "sha256": "8a7c4fc0d637c4e384545fd295ebf62129377728b0afde0353844d27123c984b",
+      "bytes": 519
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/validation-sources/propagation-0/admission-2.lobo.ids.json",
+      "sha256": "6dc5f6e98e82787381e563da340972423012a08a68ab2dec7d5b29535c2f9262",
+      "bytes": 515
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/validation-sources/propagation-0/admission-3.lobo",
+      "sha256": "15cb3fc8fb7b4d41039bde252b99856100aec31102efe9407ed3012ebb116c24",
+      "bytes": 526
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/validation-sources/propagation-0/admission-3.lobo.ids.json",
+      "sha256": "3f631e6eda420d3adf398c64c9d3d9458419336386f98be8576266b48f5c3b1f",
+      "bytes": 515
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/validation-sources/propagation-0/mutant.lobo",
+      "sha256": "2d28a6b779fd7cbc13f593c2a42ed928b74edf519cdb88adf7ec19e8f6f55d0b",
+      "bytes": 688
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/validation-sources/propagation-0/mutant.lobo.ids.json",
+      "sha256": "8becf502c19cf02b5d43f19862e37a7f4aba5163dac4dbc231753d79e761af2f",
+      "bytes": 699
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/validation-sources/propagation-0/program.lobo",
+      "sha256": "c264be0fc576f49d1b14d44c04657eec4cd292579840f19bd0a90a2fe329d095",
+      "bytes": 688
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/validation-sources/propagation-0/program.lobo.ids.json",
+      "sha256": "21d1dd83d9312ef87ccf545519391c4bb2a9bc0b68b6b7f9ba73720745253a6e",
+      "bytes": 608
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/validation-sources/propagation-1/admission-0.lobo",
+      "sha256": "39d4b22223cb6e08303ac2197d1c84ca0889b101b30dfdf02c93bdc1b891c503",
+      "bytes": 582
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/validation-sources/propagation-1/admission-0.lobo.ids.json",
+      "sha256": "35afd3ecf921f291f11956b12a8a306d4162fc42c479d8ad90385b8cc7774f6c",
+      "bytes": 603
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/validation-sources/propagation-1/admission-1.lobo",
+      "sha256": "23fc7b0de46635be1fb76b69be7d3b4422778e217780b1ad3e96b56efc8eaacd",
+      "bytes": 554
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/validation-sources/propagation-1/admission-1.lobo.ids.json",
+      "sha256": "d8363d7869939d482553e668f8991949a4582b179b3cb101b8aae5f0910bf423",
+      "bytes": 543
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/validation-sources/propagation-1/admission-2.lobo",
+      "sha256": "5d04f7c23951d93233ee6f169154cbd91a92f81c48a1484af1fc977d30dafeff",
+      "bytes": 565
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/validation-sources/propagation-1/admission-2.lobo.ids.json",
+      "sha256": "f37c8271c7c35297f54d795c3a07763f954b06b499e23eb754bb58930524b4f0",
+      "bytes": 543
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/validation-sources/propagation-1/admission-3.lobo",
+      "sha256": "c1c08ba79911ff7dcb8f650455623287db05907018cccd61257d142af198f883",
+      "bytes": 564
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/validation-sources/propagation-1/admission-3.lobo.ids.json",
+      "sha256": "93b9bc2413b82ab201eae9dc8fdbf8a200dc3ecbc8aad2d0d51cce8b5545c77d",
+      "bytes": 595
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/validation-sources/propagation-1/mutant.lobo",
+      "sha256": "b6a3422316086d9379c74f62204b2b7d463a5a85d2e858e4ffdcdb0d6f65de11",
+      "bytes": 740
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/validation-sources/propagation-1/mutant.lobo.ids.json",
+      "sha256": "65a37cbbddc1b71ec4269a24227eac16c369a8b2b0fa6b4df627807f5f521e80",
+      "bytes": 723
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/validation-sources/propagation-1/program.lobo",
+      "sha256": "86a93bac70bd6ba97ea99002dbe697cd79257ef97e35de82ef74996d055c6d58",
+      "bytes": 740
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/validation-sources/propagation-1/program.lobo.ids.json",
+      "sha256": "8a30d57eee17fe34d0618583f63910a85d5d6d84529a6dc5f29f612a36ca322e",
+      "bytes": 632
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/validation-sources/ranges-0/admission-0.lobo",
+      "sha256": "2d1792b6b23b94dfd3db0e1a4ef9ca108365900a88c3b419169aab664d81d9ba",
+      "bytes": 90
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/validation-sources/ranges-0/admission-0.lobo.ids.json",
+      "sha256": "5cfc2bd559a5174263af4da875d2d3a03e8a419c3d7f68dab4814c0d1b2cfb1c",
+      "bytes": 165
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/validation-sources/ranges-0/admission-1.lobo",
+      "sha256": "dd863804a3b196b9e846ddace65e879046026a44c5a92342f54f9e144b419885",
+      "bytes": 86
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/validation-sources/ranges-0/admission-1.lobo.ids.json",
+      "sha256": "3d374efd1c490e1785014a1fc5820435a9c8b40a969ae7de55cf1270a2a8e1f3",
+      "bytes": 165
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/validation-sources/ranges-0/admission-2.lobo",
+      "sha256": "6fcd898482eba5dc826069e5c7a28b195d91835a7b353870f7b4fb4260381564",
+      "bytes": 67
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/validation-sources/ranges-0/admission-2.lobo.ids.json",
+      "sha256": "9bf3b7339bc1d3f0f7c39d00670a097cc1ae464c9756d9aba71f1b4a840c58ca",
+      "bytes": 165
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/validation-sources/ranges-0/admission-3.lobo",
+      "sha256": "a963ac9f298c882edcdc0448c007f8102ccdeeb45d91ca179a5ee9f095b33773",
+      "bytes": 82
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/validation-sources/ranges-0/admission-3.lobo.ids.json",
+      "sha256": "faf17e3c913dab4eae4e41973b8eb1a21306eb94babf8ba6a613df4acab50871",
+      "bytes": 165
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/validation-sources/ranges-0/mutant.lobo",
+      "sha256": "1563f8cd2cd93e989da145346dee3b8d74fc5c9f70c87f38a57aca04e90ae4ba",
+      "bytes": 353
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/validation-sources/ranges-0/mutant.lobo.ids.json",
+      "sha256": "a5c7d6093b8371a0efd32308a1eafd348bad6427a4fc7e9d58af1d1169afe7e2",
+      "bytes": 348
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/validation-sources/ranges-0/program.lobo",
+      "sha256": "dfdac330fb4c2078d4dacce31e77490c62da51411456c7c754c84e1b2f882f80",
+      "bytes": 353
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/validation-sources/ranges-0/program.lobo.ids.json",
+      "sha256": "4fb9ecd135d79cadcabc477c597f350d5ef3482b37955181d3032b13d9d2ceb3",
+      "bytes": 299
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/validation-sources/ranges-1/admission-0.lobo",
+      "sha256": "ac2cd957d1756fc4a30ed2b892cb93f39339a666b2d60d8520f3368987e9260c",
+      "bytes": 70
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/validation-sources/ranges-1/admission-0.lobo.ids.json",
+      "sha256": "33cecf08621a92bdd6ed7894dfe9c0970791b65a70cbb420ba130f466230aba9",
+      "bytes": 169
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/validation-sources/ranges-1/admission-1.lobo",
+      "sha256": "f333772c784cc11567486f1073d5d911628167d1266b7ff1c85cbeb9448b9517",
+      "bytes": 101
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/validation-sources/ranges-1/admission-1.lobo.ids.json",
+      "sha256": "590dc979a7a55f2455ee19c038453bf1e1e7694e77435c5a87df44f5b5e74921",
+      "bytes": 169
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/validation-sources/ranges-1/admission-2.lobo",
+      "sha256": "d0da1a656895699f5d0d902246708b105bc741f2801aeb51edf6d395c645af9b",
+      "bytes": 76
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/validation-sources/ranges-1/admission-2.lobo.ids.json",
+      "sha256": "f01e1217e7f846f5ae08e7c6678fb485d20008600b2f4e2be71002bfc99af10d",
+      "bytes": 169
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/validation-sources/ranges-1/admission-3.lobo",
+      "sha256": "8b2d2f54bcd5b9b6dbbcba958d98d40556128bb4acf6183eb09939bc223a6ce3",
+      "bytes": 88
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/validation-sources/ranges-1/admission-3.lobo.ids.json",
+      "sha256": "8c881108d612b4294eb4dd92e59aba90f3b556a6583f6c675b380268fc3ffdf3",
+      "bytes": 169
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/validation-sources/ranges-1/mutant.lobo",
+      "sha256": "79dea8cc2952003500ed3a25eca518dddb4ffee9517777f1ce29cf0b3fbb9d92",
+      "bytes": 353
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/validation-sources/ranges-1/mutant.lobo.ids.json",
+      "sha256": "16e390ecd2a72c1688a47c37bf72ca3f63e3c43e54d1ecc13865b66541e61912",
+      "bytes": 348
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/validation-sources/ranges-1/program.lobo",
+      "sha256": "97359e11a252248f91cf7909749f3f4a08e4eebec1e8edae47ef0b9ac5fe8936",
+      "bytes": 353
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/validation-sources/ranges-1/program.lobo.ids.json",
+      "sha256": "40c556841f71361b655054810a0ac574e66e6003e23c4a44930889b61f73f82e",
+      "bytes": 299
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/validation-sources/scheduler-lobo/app.lobo",
+      "sha256": "3450bad45b8b2ae8054b409f8f8d4a1a12886c540a04d45ce20f4c24d9867508",
+      "bytes": 1074
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/validation-sources/scheduler-lobo/app.lobo.ids.json",
+      "sha256": "9a638f1b71bc04afcf7a001121fc0d08b629c3823afa3dad6e19c42f89cf2ed3",
+      "bytes": 615
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/validation-sources/scheduler-lobo/logic.lobo",
+      "sha256": "0c9ab9bdc6ce352c24a676f6a810667a9fc1c15c8634687889afd3b942445ad5",
+      "bytes": 1770
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/validation-sources/scheduler-lobo/logic.lobo.ids.json",
+      "sha256": "0a881a40d02b97a8b9aa5bcc2c49d550089ee8df748306e24d0e6308064dc0dd",
+      "bytes": 585
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/validation-sources/scheduler-lobo/model.lobo",
+      "sha256": "2f57c6917dce5820d78292bdbaa7fba639b9c1b0e6a01a80a3cfcba0a78662b1",
+      "bytes": 219
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/validation-sources/scheduler-lobo/util.lobo",
+      "sha256": "675dff309d63957c2322be1f6b18a39808f1f27ff17a41210d57c8b8bfb9b343",
+      "bytes": 436
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/validation-sources/scheduler-lobo-mutant/app.lobo",
+      "sha256": "3450bad45b8b2ae8054b409f8f8d4a1a12886c540a04d45ce20f4c24d9867508",
+      "bytes": 1074
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/validation-sources/scheduler-lobo-mutant/app.lobo.ids.json",
+      "sha256": "9a638f1b71bc04afcf7a001121fc0d08b629c3823afa3dad6e19c42f89cf2ed3",
+      "bytes": 615
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/validation-sources/scheduler-lobo-mutant/logic.lobo",
+      "sha256": "445578ae1493bb307812a8ce17dd66e1ed5f416c70e438b0aae23f00ef5d7ea1",
+      "bytes": 1772
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/validation-sources/scheduler-lobo-mutant/logic.lobo.ids.json",
+      "sha256": "0a881a40d02b97a8b9aa5bcc2c49d550089ee8df748306e24d0e6308064dc0dd",
+      "bytes": 585
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/validation-sources/scheduler-lobo-mutant/model.lobo",
+      "sha256": "2f57c6917dce5820d78292bdbaa7fba639b9c1b0e6a01a80a3cfcba0a78662b1",
+      "bytes": 219
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/validation-sources/scheduler-lobo-mutant/util.lobo",
+      "sha256": "675dff309d63957c2322be1f6b18a39808f1f27ff17a41210d57c8b8bfb9b343",
+      "bytes": 436
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/validation-sources/scheduler-python/app.py",
+      "sha256": "31b7c9febf46f8ed62ffb7833acbb2872fbf3051b69de20e52a579b836a8e138",
+      "bytes": 442
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/validation-sources/scheduler-python/logic.py",
+      "sha256": "858d499e225e320884ff2fcefde1461c91b6ae12a4f48be5ffbdc24ec9ca4466",
+      "bytes": 594
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/validation-sources/scheduler-python/model.py",
+      "sha256": "958517ea6bd2485371eee3f1675bc0be7407bf72d43394983c065ae480ff3c20",
+      "bytes": 170
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/validation-sources/scheduler-python-mutant/app.py",
+      "sha256": "31b7c9febf46f8ed62ffb7833acbb2872fbf3051b69de20e52a579b836a8e138",
+      "bytes": 442
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/validation-sources/scheduler-python-mutant/logic.py",
+      "sha256": "32a6808a921e69e6e6491363ee94eb0bddd78bf95ab6b7691f4f1403c2177cc5",
+      "bytes": 596
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/validation-sources/scheduler-python-mutant/model.py",
+      "sha256": "958517ea6bd2485371eee3f1675bc0be7407bf72d43394983c065ae480ff3c20",
+      "bytes": 170
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/validation-sources/scheduler-rust/app.rs",
+      "sha256": "672e9d2caa1392c5dd959e8cc52e9f96620c66a45df4aea7fdd8a30751d46745",
+      "bytes": 759
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/validation-sources/scheduler-rust/logic.rs",
+      "sha256": "e5d239c530048ff494197ec3fef59b0997316ffdc2eca7f9f4f60865f69a93b2",
+      "bytes": 756
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/validation-sources/scheduler-rust/model.rs",
+      "sha256": "be414e39c3949e839a6cfe140b281b4d508d0c255e31276173a4e8fc1d5ba392",
+      "bytes": 146
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/validation-sources/scheduler-rust-mutant/app.rs",
+      "sha256": "672e9d2caa1392c5dd959e8cc52e9f96620c66a45df4aea7fdd8a30751d46745",
+      "bytes": 759
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/validation-sources/scheduler-rust-mutant/logic.rs",
+      "sha256": "ac8767df12e94ec083271a399e8cfa145952dce609bfdfc9a4c9870817ef5c61",
+      "bytes": 758
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/validation-sources/scheduler-rust-mutant/model.rs",
+      "sha256": "be414e39c3949e839a6cfe140b281b4d508d0c255e31276173a4e8fc1d5ba392",
+      "bytes": 146
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/validation-sources/state-0/admission-0.lobo",
+      "sha256": "65db82f2f11ed80dd564c6c899a2e269e788272ef0452466de0465f3edd7172b",
+      "bytes": 159
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/validation-sources/state-0/admission-0.lobo.ids.json",
+      "sha256": "1ad3431e06e8610253a3c7040f1a26402cee69bdfef234f0fcd71f70fb751282",
+      "bytes": 265
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/validation-sources/state-0/admission-1.lobo",
+      "sha256": "bd143cbd9e521cdc93f1ee73b97642c8191e5e2a2cd273355bb02e252555c72a",
+      "bytes": 160
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/validation-sources/state-0/admission-1.lobo.ids.json",
+      "sha256": "70c714414813f3eec5babe29ce7ec32a8d71886106b74775f55f0f824a6d9519",
+      "bytes": 265
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/validation-sources/state-0/admission-2.lobo",
+      "sha256": "224f51ff9cb6f623f8bb71bfb49bc843b09fafdd2486c65815836432b0f53043",
+      "bytes": 159
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/validation-sources/state-0/admission-2.lobo.ids.json",
+      "sha256": "e2d46346d417c6ba0e2b196c0e84d602b99a63cfee74b98e23d78201abf026f0",
+      "bytes": 265
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/validation-sources/state-0/admission-3.lobo",
+      "sha256": "64a56c385bef527c7a6606f95a370157093510d55ab4edeb84490a1da909caaf",
+      "bytes": 173
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/validation-sources/state-0/admission-3.lobo.ids.json",
+      "sha256": "f9258ac499cd68c4acbb40027ffa88f6727df12f2c44e6279b9da5dfd53dc9df",
+      "bytes": 265
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/validation-sources/state-0/mutant.lobo",
+      "sha256": "f919ffbea715ae90407ed1539942b2eeb256393443564b8d635f10dbd3e5d2b7",
+      "bytes": 795
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/validation-sources/state-0/mutant.lobo.ids.json",
+      "sha256": "c9085d8b86eaeb65e404e04ffaed7b5948b46a5074c36d7d41e842529cb54cb5",
+      "bytes": 435
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/validation-sources/state-0/program.lobo",
+      "sha256": "bec945f1525a8233fda8bcd98779390e18f343f1601728207c48aac6672f0b08",
+      "bytes": 795
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/validation-sources/state-0/program.lobo.ids.json",
+      "sha256": "7e72ce89171bab9b45f5578e4338cd589060da50a465471ddafa158d894dfc56",
+      "bytes": 372
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/validation-sources/state-1/admission-0.lobo",
+      "sha256": "645e764156cd56423712b803a3c214d3899b3d743d5f28c99b46873e196b9748",
+      "bytes": 179
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/validation-sources/state-1/admission-0.lobo.ids.json",
+      "sha256": "8d8c7f36f50b4f547e64f556861aba392d379eed21540f310d2e5f654c57b872",
+      "bytes": 277
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/validation-sources/state-1/admission-1.lobo",
+      "sha256": "2a28929cfa8472049ab593a76c69ed431b610b5e3597d43a53fe43ac1115fb0c",
+      "bytes": 172
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/validation-sources/state-1/admission-1.lobo.ids.json",
+      "sha256": "4805acc7f7f09bf2f7387a0538cfa1373be88c8834aca92ec4c0da9a214f1928",
+      "bytes": 277
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/validation-sources/state-1/admission-2.lobo",
+      "sha256": "fe6e4344c8d84c10eef0cbbd00b696fe9697644db28c51b5a5eca0c97d7aa742",
+      "bytes": 168
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/validation-sources/state-1/admission-2.lobo.ids.json",
+      "sha256": "f339dfcb1e8870b2758f15ce428f2822f5cf878f3c89a097c8ba5a7d3735238d",
+      "bytes": 277
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/validation-sources/state-1/admission-3.lobo",
+      "sha256": "bdeb24e0b7caea9807a2e77c00a542d715f9135a572e7f95e31e86f24de69042",
+      "bytes": 161
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/validation-sources/state-1/admission-3.lobo.ids.json",
+      "sha256": "5a2ec6b70d900c51676878631b03687b13f994c1e0a3733f54c98a28859b3168",
+      "bytes": 277
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/validation-sources/state-1/mutant.lobo",
+      "sha256": "5f83e8da6f60d83ab11a4e14c6ac306bea155848f970b415daa88318113a9d0b",
+      "bytes": 811
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/validation-sources/state-1/mutant.lobo.ids.json",
+      "sha256": "383b9de2b6a077f8930173be96b84f1bc15dab8eb6c73e58acc60fb0e3f81579",
+      "bytes": 443
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/validation-sources/state-1/program.lobo",
+      "sha256": "acaa19178a6033d4d5a6bc451f9dc255c203b609cff48a56c78c3b0ced68800d",
+      "bytes": 811
+    },
+    {
+      "path": "research/snapshots/2026-11-24-learning-study/validation-sources/state-1/program.lobo.ids.json",
+      "sha256": "a2828fa4767985d3abb44d8e18a2f12d7dcba55802404cf607326a29a527fda1",
+      "bytes": 380
+    }
+  ],
+  "self_excluded": true
+}

@@ -1,0 +1,20 @@
+{
+  "date": "2026-11-24",
+  "index_sha256": "88777c2da875377e7a6870a3746d9643ceb7c5dd0c6369edccae3aed2e45f264",
+  "entries": 42,
+  "pins": 141,
+  "previous_entries_equal": true,
+  "all_pins_verified": true,
+  "prior_entries": 41,
+  "prior_pins": 131,
+  "snapshot_files": 344,
+  "registered_code_pins": 13,
+  "wording_review": "Before publication, clarified that false type judgments do not reveal the model reason; no score or factual coverage observation changed.",
+  "final_repository_check": {
+    "command": "./scripts/check.sh",
+    "status": "passed",
+    "log": "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/learning-study-final-index-check.txt",
+    "sha256": "1f11bb3bb382f1877ffa8eec4eb376db85d0ecfa2e1301289bb91fbd2cc966ae"
+  },
+  "git_diff_check": "passed"
+}

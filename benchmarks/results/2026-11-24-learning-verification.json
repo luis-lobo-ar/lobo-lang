@@ -1,0 +1,80 @@
+{
+  "format": "lobo-learning-verification/1",
+  "date": "2026-11-24",
+  "registration_commit": "678a7ee",
+  "frozen_version": "1.11.2",
+  "product_and_tested_material_paths_changed": [],
+  "registered_code_pins": 13,
+  "all_registered_code_matches": true,
+  "scheduled": 84,
+  "attempted": 84,
+  "unattempted": 0,
+  "completed": 84,
+  "tools_used": 0,
+  "audits": 84,
+  "all_audits_verified": true,
+  "usage": {
+    "scored_known": 84,
+    "excluded_availability_known": 6,
+    "total_known": 90,
+    "total_unknown": 0,
+    "reported_tokens": 1628608,
+    "billing": null,
+    "parent_development_usage": null
+  },
+  "checks": {
+    "cargo": {
+      "suites": 59,
+      "passed": 312,
+      "failed": 0,
+      "ignored": 0
+    },
+    "harness_tests": 34,
+    "research_tests": 15,
+    "cross_language_oracle_comparisons": 1908,
+    "native_evaluator_value_observations": 144,
+    "static_admissions": 48,
+    "killed_compiled_format_defects": 9,
+    "killed_compiled_micro_defects": 12,
+    "observed_witness_counterexample_replays": 297,
+    "all_observed_replays_agree": true,
+    "flat_graph_semantic_facts_equal": true,
+    "reference_data_unmodified": true,
+    "repository_json_links": {
+      "command": "./scripts/check.sh",
+      "status": "passed",
+      "log": "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/learning-study-publication-links.txt",
+      "sha256": "1f11bb3bb382f1877ffa8eec4eb376db85d0ecfa2e1301289bb91fbd2cc966ae"
+    },
+    "git_diff_check": "passed"
+  },
+  "raw_archive": {
+    "archive": "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/learning-study-20261124-raw.tar.gz",
+    "archive_sha256": "1d1b5c9b514be2740ade9a0c57fc3a0c2cbc22f3be9cac19803cd1411d6a02d8",
+    "archive_bytes": 4529493,
+    "members": 1517,
+    "all_member_hashes_verified": true,
+    "limits": "Retained prior frozen compiler remains at the path/hash in registration; it is not duplicated in this raw archive. Final public-index/link checks are retained separately after archive closure."
+  },
+  "raw_archive_manifest": {
+    "path": "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/learning-study-20261124-raw-manifest.json",
+    "sha256": "301108f9e57e9674ce832d2774e3a4a89a95ef9cafcea94ab2939eb9277cde38"
+  },
+  "snapshot_manifest": {
+    "path": "research/snapshots/2026-11-24-learning-study/evidence-manifest.json",
+    "sha256": "e0eb2760d19381dd18257ed0c8adf321c671c70d49c7d2d4c7bf14d17822cbc0",
+    "files": 344
+  },
+  "prior_paper": {
+    "entries": 41,
+    "pins": 131,
+    "all_hashes_verified": true
+  },
+  "limitations": [
+    "No primary score repair/projection or participant retry",
+    "Same-facts graph presentation only; no interactive retrieval",
+    "Incomplete tested reference coverage documented before and after outcomes",
+    "Counterexample/witness replays validate admissible inputs only; malformed replies remain failures",
+    "Earlier development validation rounds are retained separately, not independent trial evidence"
+  ]
+}

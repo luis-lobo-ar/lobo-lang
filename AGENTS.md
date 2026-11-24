@@ -5,11 +5,14 @@ Use the GitHub account luis-lobo-ar for this repository. Commit author and commi
 active gh account may belong to another project. Keep user-facing examples on the lobo CLI. Cargo commands
 belong in compiler build/test instructions. Preserve frozen research documents and fixtures.
 
-The user selected decision 0067: fix the response contract, then test reference presence and graph
-presentation separately on fresh questions. Register all84 assignments before calls; use only additive
-learning-study code. Keep product1.11.2, the existing reference/graph, old drivers/fixtures/scores and all
-paper pins frozen. Strict format and semantics remain separate outcomes; no projection/retry/replacement.
-Retain every result and unknown, then stop at this three-stage pilot. See decision0067 for the fixed scope.
+Decision 0067 is complete:84 attempts and 6 excluded availability checks, all with known usage. Explicit
+response disclosure gives 17/18 valid shapes versus 15/18, with 9/18 whole-task acceptance in both arms.
+The flat reference gives 118/120 items versus 116/120 base; graph 109/120 versus 110/120 flat on a different
+fresh form. Do not compare absolute scores across stages or declare a general graph/reference advantage.
+Read research/learning-study-2026-11-24.md and its coverage limits before choosing more work. Keep product
+1.11.2, old/new registered drivers, the tested reference/graph and all paper evidence frozen. No extra
+trials, reference edits, API changes or language unfreeze without new user selection. Preserve local-042
+and all earlier entries/pins. Complete signature/grammar context and tool-assisted tests are proposals.
 
 Decision 0066 is complete: 72 fresh-question attempts, four context arms, Luna/high then low. Each arm
 accepts 12/18; token savings from deduplication are observed, comprehension improvement is not. Read

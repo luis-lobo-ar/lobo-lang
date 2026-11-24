@@ -1356,6 +1356,73 @@
         "A compiler defect, a new language construct or authorization for additional trials",
         "That secondary metadata projection replaces the preregistered primary scores"
       ]
+    },
+    {
+      "id": "local-042",
+      "date": "2026-11-24",
+      "title": "Separate response-contract reference and graph-presentation studies",
+      "evidence_kind": "Three registered source-only participant comparisons with native/static validation",
+      "status": "All84 attempts completed; tested product/materials remain frozen",
+      "files": [
+        {
+          "path": "research/learning-study-2026-11-24.md",
+          "sha256": "8f1034b7f2fba2371eae33e2675ca52eff8374df9dc5eeecc1deecf0d736f82b"
+        },
+        {
+          "path": "benchmarks/results/2026-11-24-learning-study.json",
+          "sha256": "88bf9c26c93bb201f8d0ceec168f2ccf99b0ee200cd4b7e9fdcf307d5972e97f"
+        },
+        {
+          "path": "benchmarks/results/2026-11-24-learning-diagnostics.json",
+          "sha256": "b70974819a83916c77dbdd47e2363b8a01aca57b9ff3ae7e88289070f0c331d8"
+        },
+        {
+          "path": "benchmarks/results/2026-11-24-learning-observed-input-replays.json",
+          "sha256": "4228d3ed4b14eaf30d3266579a5205753c798649ff4a50f4f3e46f11a7db5b18"
+        },
+        {
+          "path": "benchmarks/results/2026-11-24-learning-verification.json",
+          "sha256": "1634de4dc7092742c16ebdc06a11a6d59e3542461482802197f41ea0893100b4"
+        },
+        {
+          "path": "benchmarks/results/2026-11-24-response-contract-v2.json",
+          "sha256": "e82f266178e4cb34ba461f95195d11226973860a45f1565b6a639400903438e2"
+        },
+        {
+          "path": "benchmarks/results/2026-11-24-learning-validation.json",
+          "sha256": "a4ee3c21652a06f2a9d34362df8c34a2b0213acb2554902acfef27172aef239a"
+        },
+        {
+          "path": "benchmarks/results/2026-11-24-learning-material-coverage.json",
+          "sha256": "e8e15b9a094ba57634ddc16521947a560da6c4a3919d0b3a1ea71d671f626fa6"
+        },
+        {
+          "path": "research/snapshots/2026-11-24-learning-study/registration/manifest.json",
+          "sha256": "b5d039aa1620453f6bf9fe044fa37ea584af2df8f70f1bcbaf7d1701885ae740"
+        },
+        {
+          "path": "research/snapshots/2026-11-24-learning-study/evidence-manifest.json",
+          "sha256": "e0eb2760d19381dd18257ed0c8adf321c671c70d49c7d2d4c7bf14d17822cbc0"
+        }
+      ],
+      "supports": [
+        "An executable v2 closed response profile with optional top-level notes and explicit lexical/type rules fixes the earlier specification omission without altering old scores",
+        "Explicit disclosure gives17/18 valid shapes versus15/18 under ambiguous wording; whole-task acceptance is9/18 each",
+        "Flat reference yields118/120 task items and10/12 tasks versus116/120 and9/12 base, with mixed high/low results",
+        "Graph organization of identical facts yields109/120 items and5/12 tasks versus110/120 and4/12 flat on a different fresh form; no consistent advantage",
+        "Median paired reported tokens increase2.5%,24.2%,6.8% in the three comparisons; all90 CLI conversations have known usage",
+        "Incomplete builtin/contextual/constructor/contract coverage and remaining errors on provided facts are documented with every failed reply",
+        "All297 admissible observed-input replays agree; final1908 format observations,144 native/evaluator values,48 static admissions and21 compiled mutation checks pass",
+        "All41 prior entries and131 pins remain unchanged"
+      ],
+      "does_not_establish": [
+        "A general language/reference/graph/model superiority or quality equivalence result",
+        "Causal contributions of particular words, facts, model weights or pretraining",
+        "That graphs supply missing facts or improve interactive retrieval/traversal",
+        "Repository construction quality, human comprehension, native runtime speed or production safety",
+        "Billing savings, total study-development usage or immutable model identity",
+        "Permission to change tested materials, run more trials or unfreeze the language"
+      ]
     }
   ],
   "backend_recommendation": {
@@ -1383,6 +1450,6 @@
     "Preserve original task/attempt denominators, versions, failures, corrections and unmeasured outcomes.",
     "Public development fixtures are excluded from claims of unseen confirmatory evaluation."
   ],
-  "updated_on": "2026-11-23",
-  "last_updated_on": "2026-11-23"
+  "updated_on": "2026-11-24",
+  "last_updated_on": "2026-11-24"
 }
