@@ -1,0 +1,96 @@
+Source-only comprehension. Do not use tools.
+Task family: ledger. Phase: comprehension.
+Implement run(events,initial)->Summary(balance,rejected,peak,audit). Events have kinds Credit(amount), Debit(amount), Lock and Unlock. Start at initial balance, unlocked, rejected=0, peak=initial, empty audit. Credit/Debit amounts are valid iff 0<=amount<=97. Invalid amounts reject once and leave the balance unchanged. A valid credit always succeeds, even locked. A debit succeeds iff unlocked and amount<=balance; otherwise reject once. Zero-value credits/debits succeed under the same rules. Lock/Unlock are idempotent and never reject. After EVERY event append the current balance to audit, including rejects and locks. Peak is the maximum balance ever observed, including initial. Inputs: 0<=initial<=1000000, at most32 events, amounts between -1000000 and1000001; Lock/Unlock amounts are ignored. No overflow is possible.
+
+Required signature: run(events:List<Event>,initial:I64).
+
+Analyze the supplied program without executing it. Return ONE JSON object with keys: predictions (the SIX full normalized Summary objects for the inputs below, in order); witness (any valid input yielding {"balance": 10, "rejected": 2, "peak": 13}; unspecified Summary fields can have any value); direct_calls (names of application functions directly invoked by run, ignoring constructors/builtins/standard-library methods and util.reverse); impacted (names of functions in logic whose return values can change for identical direct arguments if amount_allowed changes the inclusive lower amount bound from0 to1 (zero amounts become invalid); include the edited predicate itself, ignore reachability alone); fault_location (the predicate function responsible for that policy); counterexample (any valid input distinguishing the original program from that mutant). Bytes in answers are lowercase hexadecimal strings. Use plain function names without module prefixes. No tools/target execution. Inputs:
+[{"initial": 8, "events": [[0, 4], [1, 5], [2, 0], [0, 3], [1, 0], [3, 0], [1, 2]]}, {"initial": 3, "events": [[0, 97], [0, 1], [1, 98], [1, 97]]}, {"initial": 12, "events": [[2, 0], [2, 9], [1, 4], [0, 2], [3, 0], [1, 14]]}, {"initial": 6, "events": [[0, -2], [1, 8], [1, 0], [0, 0], [1, 6]]}, {"initial": 0, "events": [[0, 98], [0, 96], [1, 96], [1, 1]]}, {"initial": 4, "events": [[3, 7], [1, 4], [0, 97], [0, 97], [1, 97]]}]
+Use NO tools or execution; reason from the supplied source. End with ONLY the requested JSON object, no Markdown.
+
+Use only the supplied task directory. Read TASK.txt, GUIDE.txt and the model/algorithm files. Change only the listed editable files. The app and models are trusted read-only adapters. No dependencies, network, file IO, subprocesses or unsafe code in the algorithm. Standard in-memory collections are allowed. Host-injected instruction/skill reads are permitted when required, but other trials, repository code, private graders and reference solutions are outside scope. Do not inspect the compiler binary or its parent directory. Use python3 check.py to submit a visible check; the host compiles and grades a snapshot, at most six submissions. No direct compiler/test invocation is needed. Initial stubs may compile but are deliberately incorrect. Use checks before and after editing. Build artifacts belong to the host. End with a concise result. All inputs and arithmetic fit signed 64-bit values under the stated bounds; results must preserve exact integers. No output or external side effects in run().
+
+Lobo 1.11.2 is a native language. There is no projection/interpreter step. model.lobo declares the immutable DTOs. logic.lobo and its adjacent logic.lobo.ids.json are editable; app/model/util sources are fixed. Each block returns its final expression without a trailing semicolon. Use fn f(x:I64)->I64 {x+1}, let x=...; if condition {a} else {b}, &&/||/!, checked I64 arithmetic, and ==/!= comparisons. Names cannot shadow other visible names or function/type declarations. No assignment, break, continue, return keyword or for statement.
+Records: record Pair {left:I64,right:I64}; Pair {left:1,right:2}; pair.left; Pair {...pair,left:3}. Variants: match event {Credit(n)=> expression,Debit(n)=> expression,Lock=> expression,Unlock=> expression}. Every case must occur. Expected types infer case owners. Parenthesize complex match subjects: match (cursor.best) {...}.
+Lists: List<T>, List::empty<I64>(), List::prepend(value,list), List::length(list), List::head(list), List::tail(list). Head/tail require nonempty. Prepend reverses order; the supplied util.reverse<T> restores order and may infer T. Lists are persistent; no indexing, append or mutation operation.
+Counted loops carry one typed value: fold(i in n,total:I64=0) {total+i}. The index runs 0..n-1; zero iterations return the initial state. For multiple variables, carry a record: fold(i in List::length(items),state:Cursor=Cursor {pending:items,total:0}) {Cursor {pending:List::tail(state.pending),total:state.total+List::head(state.pending)}}. State-driven loop: while(state:State=initial; condition_using_state) {new_state}. To stop early, carry a Bool and test it in the loop condition. Finite execution fuel/heap apply; do not use deep recursive traversal.
+Bytes: Bytes::length(data), Bytes::at(data,index) returns 0..255, Bytes::slice(data,start,count), Bytes::empty(), Bytes::push(data,value). Guard bounds before at/slice. List<Bytes> is supported. Remainder uses %, division truncates toward zero. Ordinary expected failures are values in the declared DTO, not runtime faults.
+New functions/records/variants need identity entries. Existing IDs must stay stable. After adding declarations, run the explicit authoring command below (it only updates the managed identity map). Then use python3 check.py.
+
+/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/matched-study-20261123/freeze/lobo identities sync logic.lobo --source model.lobo --source util.lobo
+
+FILE model.lobo
+module model;
+variant Event { Credit(I64), Debit(I64), Lock, Unlock }
+record Summary { balance:I64,rejected:I64,peak:I64,audit:List<I64> }
+identities {module:"study.ledger.model",Event:"study.ledger.Event",Summary:"study.ledger.Summary"}
+
+FILE util.lobo
+module util;
+record Reverse<T> { pending:List<T>, output:List<T> }
+fn reverse<T>(items:List<T>)->List<T> {
+ let final=fold(i in List::length(items), state:Reverse<T> =Reverse {pending:items,output:List::empty<T>()}) {
+  Reverse {pending:List::tail(state.pending),output:List::prepend(List::head(state.pending),state.output)}
+ };
+ final.output
+}
+identities {module:"study.util",Reverse:"study.util.Reverse",reverse:"study.util.reverse"}
+
+FILE logic.lobo
+module logic;
+use model {Summary,Event};
+use util {reverse};
+record State {balance:I64,rejected:I64,peak:I64,locked:Bool,audit:List<I64>}
+record Cursor {pending:List<Event>,state:State}
+fn amount_allowed(value:I64)->Bool {value>=0 && value<=97}
+fn apply_event(state:State,event:Event)->State {
+ let next=match event {
+  Credit(amount)=> if amount_allowed(amount) {State {...state,balance:state.balance+amount }} else {State {...state,rejected:state.rejected+1}},
+  Debit(amount)=> if !amount_allowed(amount) || state.locked || amount>state.balance {State {...state,rejected:state.rejected+1}} else {State {...state,balance:state.balance-amount }},
+  Lock=> State {...state,locked:true}, Unlock=> State {...state,locked:false}
+ };
+ State {...next,peak:if next.balance>state.peak {next.balance} else {state.peak},audit:List::prepend(next.balance,state.audit)}
+}
+fn run(events:List<Event>,initial:I64)->Summary {
+ let final=fold(i in List::length(events),cursor:Cursor=Cursor {pending:events,state:State {balance:initial,rejected:0,peak:initial,locked:false,audit:List::empty<I64>()}}) {
+  Cursor {pending:List::tail(cursor.pending),state:apply_event(cursor.state,List::head(cursor.pending))}
+ };
+ Summary {balance:final.state.balance,rejected:final.state.rejected,peak:final.state.peak,audit:reverse(final.state.audit)}
+}
+
+FILE TASK.txt
+Task family: ledger. Phase: comprehension.
+Implement run(events,initial)->Summary(balance,rejected,peak,audit). Events have kinds Credit(amount), Debit(amount), Lock and Unlock. Start at initial balance, unlocked, rejected=0, peak=initial, empty audit. Credit/Debit amounts are valid iff 0<=amount<=97. Invalid amounts reject once and leave the balance unchanged. A valid credit always succeeds, even locked. A debit succeeds iff unlocked and amount<=balance; otherwise reject once. Zero-value credits/debits succeed under the same rules. Lock/Unlock are idempotent and never reject. After EVERY event append the current balance to audit, including rejects and locks. Peak is the maximum balance ever observed, including initial. Inputs: 0<=initial<=1000000, at most32 events, amounts between -1000000 and1000001; Lock/Unlock amounts are ignored. No overflow is possible.
+
+Required signature: run(events:List<Event>,initial:I64).
+
+Analyze the supplied program without executing it. Return ONE JSON object with keys: predictions (the SIX full normalized Summary objects for the inputs below, in order); witness (any valid input yielding {"balance": 10, "rejected": 2, "peak": 13}; unspecified Summary fields can have any value); direct_calls (names of application functions directly invoked by run, ignoring constructors/builtins/standard-library methods and util.reverse); impacted (names of functions in logic whose return values can change for identical direct arguments if amount_allowed changes the inclusive lower amount bound from0 to1 (zero amounts become invalid); include the edited predicate itself, ignore reachability alone); fault_location (the predicate function responsible for that policy); counterexample (any valid input distinguishing the original program from that mutant). Bytes in answers are lowercase hexadecimal strings. Use plain function names without module prefixes. No tools/target execution. Inputs:
+[{"initial": 8, "events": [[0, 4], [1, 5], [2, 0], [0, 3], [1, 0], [3, 0], [1, 2]]}, {"initial": 3, "events": [[0, 97], [0, 1], [1, 98], [1, 97]]}, {"initial": 12, "events": [[2, 0], [2, 9], [1, 4], [0, 2], [3, 0], [1, 14]]}, {"initial": 6, "events": [[0, -2], [1, 8], [1, 0], [0, 0], [1, 6]]}, {"initial": 0, "events": [[0, 98], [0, 96], [1, 96], [1, 1]]}, {"initial": 4, "events": [[3, 7], [1, 4], [0, 97], [0, 97], [1, 97]]}]
+Use NO tools or execution; reason from the supplied source. End with ONLY the requested JSON object, no Markdown.
+
+FILE GUIDE.txt
+Use only the supplied task directory. Read TASK.txt, GUIDE.txt and the model/algorithm files. Change only the listed editable files. The app and models are trusted read-only adapters. No dependencies, network, file IO, subprocesses or unsafe code in the algorithm. Standard in-memory collections are allowed. Host-injected instruction/skill reads are permitted when required, but other trials, repository code, private graders and reference solutions are outside scope. Do not inspect the compiler binary or its parent directory. Use python3 check.py to submit a visible check; the host compiles and grades a snapshot, at most six submissions. No direct compiler/test invocation is needed. Initial stubs may compile but are deliberately incorrect. Use checks before and after editing. Build artifacts belong to the host. End with a concise result. All inputs and arithmetic fit signed 64-bit values under the stated bounds; results must preserve exact integers. No output or external side effects in run().
+
+Lobo 1.11.2 is a native language. There is no projection/interpreter step. model.lobo declares the immutable DTOs. logic.lobo and its adjacent logic.lobo.ids.json are editable; app/model/util sources are fixed. Each block returns its final expression without a trailing semicolon. Use fn f(x:I64)->I64 {x+1}, let x=...; if condition {a} else {b}, &&/||/!, checked I64 arithmetic, and ==/!= comparisons. Names cannot shadow other visible names or function/type declarations. No assignment, break, continue, return keyword or for statement.
+Records: record Pair {left:I64,right:I64}; Pair {left:1,right:2}; pair.left; Pair {...pair,left:3}. Variants: match event {Credit(n)=> expression,Debit(n)=> expression,Lock=> expression,Unlock=> expression}. Every case must occur. Expected types infer case owners. Parenthesize complex match subjects: match (cursor.best) {...}.
+Lists: List<T>, List::empty<I64>(), List::prepend(value,list), List::length(list), List::head(list), List::tail(list). Head/tail require nonempty. Prepend reverses order; the supplied util.reverse<T> restores order and may infer T. Lists are persistent; no indexing, append or mutation operation.
+Counted loops carry one typed value: fold(i in n,total:I64=0) {total+i}. The index runs 0..n-1; zero iterations return the initial state. For multiple variables, carry a record: fold(i in List::length(items),state:Cursor=Cursor {pending:items,total:0}) {Cursor {pending:List::tail(state.pending),total:state.total+List::head(state.pending)}}. State-driven loop: while(state:State=initial; condition_using_state) {new_state}. To stop early, carry a Bool and test it in the loop condition. Finite execution fuel/heap apply; do not use deep recursive traversal.
+Bytes: Bytes::length(data), Bytes::at(data,index) returns 0..255, Bytes::slice(data,start,count), Bytes::empty(), Bytes::push(data,value). Guard bounds before at/slice. List<Bytes> is supported. Remainder uses %, division truncates toward zero. Ordinary expected failures are values in the declared DTO, not runtime faults.
+New functions/records/variants need identity entries. Existing IDs must stay stable. After adding declarations, run the explicit authoring command below (it only updates the managed identity map). Then use python3 check.py.
+
+/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/matched-study-20261123/freeze/lobo identities sync logic.lobo --source model.lobo --source util.lobo
+
+FILE check.py
+import json,time,uuid
+from pathlib import Path
+root=Path('.check-io');root.mkdir(exist_ok=True)
+key=uuid.uuid4().hex
+(root/(key+'.request.json')).write_text('{}')
+response=root/(key+'.response.json')
+end=time.monotonic()+40
+while not response.exists() and time.monotonic()<end:time.sleep(.05)
+if not response.exists():raise SystemExit('controller timeout')
+print(response.read_text())
+
+FILE AGENTS.md
+This is an isolated matched experiment. Follow TASK.txt and GUIDE.txt. Only the declared algorithm files are editable. Do not inspect other directories.

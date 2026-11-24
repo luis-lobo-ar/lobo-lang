@@ -1,0 +1,3 @@
+mod model;mod logic;
+fn main(){let a:Vec<String>=std::env::args().collect();let budget:i64=a[1].parse().unwrap();let jobs:Vec<model::Job>=a[2].split(';').filter(|s|!s.is_empty()).map(|s| {let v:Vec<_>=s.split(':').collect();model::Job {id:v[0].parse().unwrap(),cost:v[1].parse().unwrap(),deps:v[2].split(',').filter(|s|!s.is_empty()).map(|s|s.parse().unwrap()).collect() }}).collect();
+if a.len()>3 {let repeats:i64=a[4].parse().unwrap();let mut total=0i64;for i in 0..repeats {let v=logic::run(std::hint::black_box(&jobs),budget+i%3);total+=std::hint::black_box(v.spent+v.blocked+v.order.iter().sum::<i64>());}println!("{}",total);} else {let v=logic::run(&jobs,budget);println!("{{\"order\":{:?},\"spent\":{},\"blocked\":{}}}",v.order,v.spent,v.blocked);}}

@@ -1,0 +1,64 @@
+Source-only comprehension. Do not use tools.
+Task family: scheduler. Phase: comprehension.
+Implement run(jobs,budget)->Summary(order,spent,blocked). Job fields id,cost,deps. Jobs have unique IDs exactly0..n-1, arrive in arbitrary order,0<=n<=24,0<=cost<=64,0<=budget<=512. deps contains valid IDs, may repeat and may contain self-dependencies or cycles. Start with no completed jobs. Repeatedly choose the HIGHEST ID among unfinished jobs whose every dependency is completed and whose cost<=remaining budget; execute it, append its ID to order, subtract its cost. A zero-cost job can run at zero budget. If no eligible fitting job remains, stop. spent is total executed cost. blocked counts EVERY unfinished job, whether blocked by dependencies or budget. Do not stop merely because a lower-ID job is unaffordable.
+
+Required signature: run(jobs, budget).
+
+Analyze the supplied program without executing it. Return ONE JSON object with keys: predictions (the SIX full normalized Summary objects for the inputs below, in order); witness (any valid input yielding {"order": [2, 0], "spent": 4, "blocked": 1}; unspecified Summary fields can have any value); direct_calls (names of application functions directly invoked by run, ignoring constructors/builtins/standard-library methods and util.reverse); impacted (names of functions in logic whose return values can change for identical direct arguments if budget_allows changes cost<=remaining to cost+2<=remaining (retain at least2 units); include the edited predicate itself, ignore reachability alone); fault_location (the predicate function responsible for that policy); counterexample (any valid input distinguishing the original program from that mutant). Bytes in answers are lowercase hexadecimal strings. Use plain function names without module prefixes. No tools/target execution. Inputs:
+[{"jobs": [{"id": 0, "cost": 2, "deps": []}, {"id": 2, "cost": 1, "deps": []}, {"id": 1, "cost": 1, "deps": []}], "budget": 2}, {"jobs": [{"id": 2, "cost": 0, "deps": [1]}, {"id": 1, "cost": 2, "deps": [0, 0]}, {"id": 0, "cost": 1, "deps": []}], "budget": 3}, {"jobs": [{"id": 0, "cost": 0, "deps": [0]}, {"id": 2, "cost": 0, "deps": []}, {"id": 1, "cost": 0, "deps": [2]}], "budget": 0}, {"jobs": [{"id": 1, "cost": 5, "deps": []}, {"id": 0, "cost": 2, "deps": []}, {"id": 2, "cost": 6, "deps": []}], "budget": 4}, {"jobs": [{"id": 0, "cost": 1, "deps": [1]}, {"id": 1, "cost": 0, "deps": [0]}, {"id": 2, "cost": 1, "deps": []}], "budget": 6}, {"jobs": [{"id": 2, "cost": 2, "deps": []}, {"id": 0, "cost": 1, "deps": [2]}, {"id": 1, "cost": 3, "deps": []}], "budget": 5}]
+Use NO tools or execution; reason from the supplied source. End with ONLY the requested JSON object, no Markdown.
+
+Use only the supplied task directory. Read TASK.txt, GUIDE.txt and the model/algorithm files. Change only the listed editable files. The app and models are trusted read-only adapters. No dependencies, network, file IO, subprocesses or unsafe code in the algorithm. Standard in-memory collections are allowed. Host-injected instruction/skill reads are permitted when required, but other trials, repository code, private graders and reference solutions are outside scope. Do not inspect the compiler binary or its parent directory. Use python3 check.py to submit a visible check; the host compiles and grades a snapshot, at most six submissions. No direct compiler/test invocation is needed. Initial stubs may compile but are deliberately incorrect. Use checks before and after editing. Build artifacts belong to the host. End with a concise result. All inputs and arithmetic fit signed 64-bit values under the stated bounds; results must preserve exact integers. No output or external side effects in run().
+
+Python 3.12, standard library only. logic.py exports run with the signature in TASK.txt; app.py and model.py are fixed. Import DTOs from model. Ledger uses Event(kind:Kind,amount:int), with Kind.CREDIT/DEBIT/LOCK/UNLOCK (and UNDO in the change model). Scheduler uses Job(id:int,cost:int,deps:list[int]) and change adds priority:int. Summary dataclasses and their field order are in model.py. Input bytes are bytes objects, not strings; the trusted wrapper handles hexadecimal input/output. Use in-memory lists, tuples, sets, dictionaries and ordinary helpers as needed. Keep exact integer results; no float conversion. Imports from model, dataclasses, enum, typing, collections, functools, itertools and math are allowed. No imports for file/network/process IO, open/eval/exec or dynamic import. The host py-compiles and executes the program. Submit with python3 check.py; no application prints or wrapper changes.
+FILE model.py
+from dataclasses import dataclass
+@dataclass(frozen=True)
+class Job:
+ id:int
+ cost:int
+ deps:list[int]
+@dataclass
+class Summary:
+ order:list[int]
+ spent:int
+ blocked:int
+
+FILE logic.py
+from model import Job,Summary
+
+def deps_complete(job,done):
+ return all(x in done for x in job.deps)
+
+def budget_allows(cost,remaining):
+ return cost<=remaining
+
+def next_job(jobs,done,remaining):
+ best=None
+ for item in jobs:
+  if item.id not in done and deps_complete(item,done) and budget_allows(item.cost,remaining):
+   if best is None or item.id>best.id:best=item
+ return best
+
+def run(jobs,budget):
+ done=[];remaining=budget
+ while True:
+  job=next_job(jobs,done,remaining)
+  if job is None:break
+  done.append(job.id);remaining-=job.cost
+ return Summary(done,budget-remaining,len(jobs)-len(done))
+
+FILE check.py
+import json,time,uuid
+from pathlib import Path
+root=Path('.check-io');root.mkdir(exist_ok=True)
+key=uuid.uuid4().hex
+(root/(key+'.request.json')).write_text('{}')
+response=root/(key+'.response.json')
+end=time.monotonic()+40
+while not response.exists() and time.monotonic()<end:time.sleep(.05)
+if not response.exists():raise SystemExit('controller timeout')
+print(response.read_text())
+
+FILE AGENTS.md
+This is an isolated matched experiment. Follow TASK.txt and GUIDE.txt. Only the declared algorithm files are editable. Do not inspect other directories.

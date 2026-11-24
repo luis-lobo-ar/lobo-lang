@@ -1,0 +1,20 @@
+module logic;
+use model {Summary};
+use util {reverse};
+record Header {length:I64,payload:I64,error:I64}
+record State {frames:List<Bytes>,cursor:I64,error:I64}
+fn read_size(data:Bytes,start:I64)->Header {Header {length:Bytes::at(data,start),payload:start+1,error:0}}
+fn size_allowed(length:I64,limit:I64)->Bool {length<=limit}
+fn payload_checksum(data:Bytes)->I64 {fold(i in Bytes::length(data),total:I64=7) {(total+Bytes::at(data,i))%256}}
+fn run(data:Bytes,limit:I64)->Summary {
+ let final=while(state:State=State {frames:List::empty<Bytes>(),cursor:0,error:0};state.cursor<Bytes::length(data) && state.error==0) {
+  let header=read_size(data,state.cursor);
+  if header.error!=0 {State {...state,error:header.error}} else {if !size_allowed(header.length,limit) {State {...state,error:3}} else {
+   if Bytes::length(data)-header.payload<header.length+1 {State {...state,error:1}} else {
+    let payload=Bytes::slice(data,header.payload,header.length);
+    if payload_checksum(payload)!=Bytes::at(data,header.payload+header.length) {State {...state,error:2}} else {State {...state,frames:List::prepend(payload,state.frames),cursor:header.payload+header.length+1}}
+   }
+  }}
+ };
+ Summary {frames:reverse(final.frames),consumed:final.cursor,error:final.error}
+}

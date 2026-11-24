@@ -1,0 +1,13 @@
+F.........
+======================================================================
+FAIL: test_arm_positions_are_balanced (test_context.ContextTests.test_arm_positions_are_balanced)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/matched-study/test_context.py", line 91, in test_arm_positions_are_balanced
+    self.assertLessEqual(max(counts)-min(counts),1)
+AssertionError: 5 not less than or equal to 1
+
+----------------------------------------------------------------------
+Ran 10 tests in 0.008s
+
+FAILED (failures=1)

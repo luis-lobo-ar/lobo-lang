@@ -1,0 +1,4 @@
+module model;
+variant Event { Credit(I64), Debit(I64), Lock, Unlock }
+record Summary { balance:I64,rejected:I64,peak:I64,audit:List<I64> }
+identities {module:"study.ledger.model",Event:"study.ledger.Event",Summary:"study.ledger.Summary"}

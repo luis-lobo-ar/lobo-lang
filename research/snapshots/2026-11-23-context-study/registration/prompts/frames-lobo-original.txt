@@ -1,0 +1,95 @@
+Source-only comprehension. Do not use tools.
+Task family: frames. Phase: comprehension.
+Implement run(data,limit)->Summary(frames,consumed,error). data is bytes of length<=512;0<=limit<=64. Each frame is one unsigned length byte n, followed by n payload bytes, followed by one checksum byte equal to (7+sum(payload))%256. Empty payload is valid and needs checksum7. Parse from left to right, retaining payloads in input order. At a frame start: first reject n>limit with error3 EVEN IF payload/checksum is missing; otherwise missing payload/checksum is error1; otherwise wrong checksum is error2. Stop on the first error. consumed is the offending frame's START offset; retain only earlier valid frames. With no error, consumed=len(data),error=0. Empty input succeeds. frames is a list of bytes values, not decoded text.
+
+Required signature: run(data:Bytes,limit:I64).
+
+Analyze the supplied program without executing it. Return ONE JSON object with keys: predictions (the SIX full normalized Summary objects for the inputs below, in order); witness (any valid input yielding {"frames": ["0a", "0b0c"], "consumed": 7, "error": 0}; unspecified Summary fields can have any value); direct_calls (names of application functions directly invoked by run, ignoring constructors/builtins/standard-library methods and util.reverse); impacted (names of functions in logic whose return values can change for identical direct arguments if size_allowed additionally rejects length==2, retaining the inclusive upper limit; include the edited predicate itself, ignore reachability alone); fault_location (the predicate function responsible for that policy); counterexample (any valid input distinguishing the original program from that mutant). Bytes in answers are lowercase hexadecimal strings. Use plain function names without module prefixes. No tools/target execution. Inputs:
+[{"data": "0007", "limit": 1}, {"data": "02040510", "limit": 3}, {"data": "0109100203040e", "limit": 3}, {"data": "0109100203040f", "limit": 3}, {"data": "0401", "limit": 3}, {"data": "0109100203", "limit": 3}]
+Use NO tools or execution; reason from the supplied source. End with ONLY the requested JSON object, no Markdown.
+
+Use only the supplied task directory. Read TASK.txt, GUIDE.txt and the model/algorithm files. Change only the listed editable files. The app and models are trusted read-only adapters. No dependencies, network, file IO, subprocesses or unsafe code in the algorithm. Standard in-memory collections are allowed. Host-injected instruction/skill reads are permitted when required, but other trials, repository code, private graders and reference solutions are outside scope. Do not inspect the compiler binary or its parent directory. Use python3 check.py to submit a visible check; the host compiles and grades a snapshot, at most six submissions. No direct compiler/test invocation is needed. Initial stubs may compile but are deliberately incorrect. Use checks before and after editing. Build artifacts belong to the host. End with a concise result. All inputs and arithmetic fit signed 64-bit values under the stated bounds; results must preserve exact integers. No output or external side effects in run().
+
+Lobo 1.11.2 is a native language. There is no projection/interpreter step. model.lobo declares the immutable DTOs. logic.lobo and its adjacent logic.lobo.ids.json are editable; app/model/util sources are fixed. Each block returns its final expression without a trailing semicolon. Use fn f(x:I64)->I64 {x+1}, let x=...; if condition {a} else {b}, &&/||/!, checked I64 arithmetic, and ==/!= comparisons. Names cannot shadow other visible names or function/type declarations. No assignment, break, continue, return keyword or for statement.
+Records: record Pair {left:I64,right:I64}; Pair {left:1,right:2}; pair.left; Pair {...pair,left:3}. Variants: match event {Credit(n)=> expression,Debit(n)=> expression,Lock=> expression,Unlock=> expression}. Every case must occur. Expected types infer case owners. Parenthesize complex match subjects: match (cursor.best) {...}.
+Lists: List<T>, List::empty<I64>(), List::prepend(value,list), List::length(list), List::head(list), List::tail(list). Head/tail require nonempty. Prepend reverses order; the supplied util.reverse<T> restores order and may infer T. Lists are persistent; no indexing, append or mutation operation.
+Counted loops carry one typed value: fold(i in n,total:I64=0) {total+i}. The index runs 0..n-1; zero iterations return the initial state. For multiple variables, carry a record: fold(i in List::length(items),state:Cursor=Cursor {pending:items,total:0}) {Cursor {pending:List::tail(state.pending),total:state.total+List::head(state.pending)}}. State-driven loop: while(state:State=initial; condition_using_state) {new_state}. To stop early, carry a Bool and test it in the loop condition. Finite execution fuel/heap apply; do not use deep recursive traversal.
+Bytes: Bytes::length(data), Bytes::at(data,index) returns 0..255, Bytes::slice(data,start,count), Bytes::empty(), Bytes::push(data,value). Guard bounds before at/slice. List<Bytes> is supported. Remainder uses %, division truncates toward zero. Ordinary expected failures are values in the declared DTO, not runtime faults.
+New functions/records/variants need identity entries. Existing IDs must stay stable. After adding declarations, run the explicit authoring command below (it only updates the managed identity map). Then use python3 check.py.
+
+/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/matched-study-20261123/freeze/lobo identities sync logic.lobo --source model.lobo --source util.lobo
+
+FILE model.lobo
+module model;
+record Summary {frames:List<Bytes>,consumed:I64,error:I64}
+identities {module:"study.frames.model",Summary:"study.frames.Summary"}
+
+FILE util.lobo
+module util;
+record Reverse<T> { pending:List<T>, output:List<T> }
+fn reverse<T>(items:List<T>)->List<T> {
+ let final=fold(i in List::length(items), state:Reverse<T> =Reverse {pending:items,output:List::empty<T>()}) {
+  Reverse {pending:List::tail(state.pending),output:List::prepend(List::head(state.pending),state.output)}
+ };
+ final.output
+}
+identities {module:"study.util",Reverse:"study.util.Reverse",reverse:"study.util.reverse"}
+
+FILE logic.lobo
+module logic;
+use model {Summary};
+use util {reverse};
+record Header {length:I64,payload:I64,error:I64}
+record State {frames:List<Bytes>,cursor:I64,error:I64}
+fn read_size(data:Bytes,start:I64)->Header {Header {length:Bytes::at(data,start),payload:start+1,error:0}}
+fn size_allowed(length:I64,limit:I64)->Bool {length<=limit}
+fn payload_checksum(data:Bytes)->I64 {fold(i in Bytes::length(data),total:I64=7) {(total+Bytes::at(data,i))%256}}
+fn run(data:Bytes,limit:I64)->Summary {
+ let final=while(state:State=State {frames:List::empty<Bytes>(),cursor:0,error:0};state.cursor<Bytes::length(data) && state.error==0) {
+  let header=read_size(data,state.cursor);
+  if header.error!=0 {State {...state,error:header.error}} else {if !size_allowed(header.length,limit) {State {...state,error:3}} else {
+   if Bytes::length(data)-header.payload<header.length+1 {State {...state,error:1}} else {
+    let payload=Bytes::slice(data,header.payload,header.length);
+    if payload_checksum(payload)!=Bytes::at(data,header.payload+header.length) {State {...state,error:2}} else {State {...state,frames:List::prepend(payload,state.frames),cursor:header.payload+header.length+1}}
+   }
+  }}
+ };
+ Summary {frames:reverse(final.frames),consumed:final.cursor,error:final.error}
+}
+
+FILE TASK.txt
+Task family: frames. Phase: comprehension.
+Implement run(data,limit)->Summary(frames,consumed,error). data is bytes of length<=512;0<=limit<=64. Each frame is one unsigned length byte n, followed by n payload bytes, followed by one checksum byte equal to (7+sum(payload))%256. Empty payload is valid and needs checksum7. Parse from left to right, retaining payloads in input order. At a frame start: first reject n>limit with error3 EVEN IF payload/checksum is missing; otherwise missing payload/checksum is error1; otherwise wrong checksum is error2. Stop on the first error. consumed is the offending frame's START offset; retain only earlier valid frames. With no error, consumed=len(data),error=0. Empty input succeeds. frames is a list of bytes values, not decoded text.
+
+Required signature: run(data:Bytes,limit:I64).
+
+Analyze the supplied program without executing it. Return ONE JSON object with keys: predictions (the SIX full normalized Summary objects for the inputs below, in order); witness (any valid input yielding {"frames": ["0a", "0b0c"], "consumed": 7, "error": 0}; unspecified Summary fields can have any value); direct_calls (names of application functions directly invoked by run, ignoring constructors/builtins/standard-library methods and util.reverse); impacted (names of functions in logic whose return values can change for identical direct arguments if size_allowed additionally rejects length==2, retaining the inclusive upper limit; include the edited predicate itself, ignore reachability alone); fault_location (the predicate function responsible for that policy); counterexample (any valid input distinguishing the original program from that mutant). Bytes in answers are lowercase hexadecimal strings. Use plain function names without module prefixes. No tools/target execution. Inputs:
+[{"data": "0007", "limit": 1}, {"data": "02040510", "limit": 3}, {"data": "0109100203040e", "limit": 3}, {"data": "0109100203040f", "limit": 3}, {"data": "0401", "limit": 3}, {"data": "0109100203", "limit": 3}]
+Use NO tools or execution; reason from the supplied source. End with ONLY the requested JSON object, no Markdown.
+
+FILE GUIDE.txt
+Use only the supplied task directory. Read TASK.txt, GUIDE.txt and the model/algorithm files. Change only the listed editable files. The app and models are trusted read-only adapters. No dependencies, network, file IO, subprocesses or unsafe code in the algorithm. Standard in-memory collections are allowed. Host-injected instruction/skill reads are permitted when required, but other trials, repository code, private graders and reference solutions are outside scope. Do not inspect the compiler binary or its parent directory. Use python3 check.py to submit a visible check; the host compiles and grades a snapshot, at most six submissions. No direct compiler/test invocation is needed. Initial stubs may compile but are deliberately incorrect. Use checks before and after editing. Build artifacts belong to the host. End with a concise result. All inputs and arithmetic fit signed 64-bit values under the stated bounds; results must preserve exact integers. No output or external side effects in run().
+
+Lobo 1.11.2 is a native language. There is no projection/interpreter step. model.lobo declares the immutable DTOs. logic.lobo and its adjacent logic.lobo.ids.json are editable; app/model/util sources are fixed. Each block returns its final expression without a trailing semicolon. Use fn f(x:I64)->I64 {x+1}, let x=...; if condition {a} else {b}, &&/||/!, checked I64 arithmetic, and ==/!= comparisons. Names cannot shadow other visible names or function/type declarations. No assignment, break, continue, return keyword or for statement.
+Records: record Pair {left:I64,right:I64}; Pair {left:1,right:2}; pair.left; Pair {...pair,left:3}. Variants: match event {Credit(n)=> expression,Debit(n)=> expression,Lock=> expression,Unlock=> expression}. Every case must occur. Expected types infer case owners. Parenthesize complex match subjects: match (cursor.best) {...}.
+Lists: List<T>, List::empty<I64>(), List::prepend(value,list), List::length(list), List::head(list), List::tail(list). Head/tail require nonempty. Prepend reverses order; the supplied util.reverse<T> restores order and may infer T. Lists are persistent; no indexing, append or mutation operation.
+Counted loops carry one typed value: fold(i in n,total:I64=0) {total+i}. The index runs 0..n-1; zero iterations return the initial state. For multiple variables, carry a record: fold(i in List::length(items),state:Cursor=Cursor {pending:items,total:0}) {Cursor {pending:List::tail(state.pending),total:state.total+List::head(state.pending)}}. State-driven loop: while(state:State=initial; condition_using_state) {new_state}. To stop early, carry a Bool and test it in the loop condition. Finite execution fuel/heap apply; do not use deep recursive traversal.
+Bytes: Bytes::length(data), Bytes::at(data,index) returns 0..255, Bytes::slice(data,start,count), Bytes::empty(), Bytes::push(data,value). Guard bounds before at/slice. List<Bytes> is supported. Remainder uses %, division truncates toward zero. Ordinary expected failures are values in the declared DTO, not runtime faults.
+New functions/records/variants need identity entries. Existing IDs must stay stable. After adding declarations, run the explicit authoring command below (it only updates the managed identity map). Then use python3 check.py.
+
+/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/matched-study-20261123/freeze/lobo identities sync logic.lobo --source model.lobo --source util.lobo
+
+FILE check.py
+import json,time,uuid
+from pathlib import Path
+root=Path('.check-io');root.mkdir(exist_ok=True)
+key=uuid.uuid4().hex
+(root/(key+'.request.json')).write_text('{}')
+response=root/(key+'.response.json')
+end=time.monotonic()+40
+while not response.exists() and time.monotonic()<end:time.sleep(.05)
+if not response.exists():raise SystemExit('controller timeout')
+print(response.read_text())
+
+FILE AGENTS.md
+This is an isolated matched experiment. Follow TASK.txt and GUIDE.txt. Only the declared algorithm files are editable. Do not inspect other directories.

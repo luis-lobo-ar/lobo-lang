@@ -1,0 +1,21 @@
+...F.F...
+======================================================================
+FAIL: test_new_oracles_distinguish_old_programs (test_context.ContextTests.test_new_oracles_distinguish_old_programs)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/matched-study/test_context.py", line 72, in test_new_oracles_distinguish_old_programs
+    self.assertNotEqual(c.oracle(family, counter), c.oracle(family, counter, mutant=True))
+AssertionError: {'order': [1], 'spent': 2, 'blocked': 1} == {'order': [1], 'spent': 2, 'blocked': 1}
+
+======================================================================
+FAIL: test_positive_and_negative_grading (test_context.ContextTests.test_positive_and_negative_grading)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/matched-study/test_context.py", line 59, in test_positive_and_negative_grading
+    self.assertTrue(c.grade(family, answer)['accepted'])
+AssertionError: False is not true
+
+----------------------------------------------------------------------
+Ran 9 tests in 0.007s
+
+FAILED (failures=2)

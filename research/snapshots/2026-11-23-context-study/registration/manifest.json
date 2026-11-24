@@ -1,0 +1,1177 @@
+{
+  "format": "lobo-context-factorial/1",
+  "date": "2026-11-23",
+  "model": "gpt-5.6-luna",
+  "ordered_cohorts": [
+    "high",
+    "low"
+  ],
+  "schedule": [
+    {
+      "index": 0,
+      "reasoning": "high",
+      "family": "frames",
+      "language": "python",
+      "arm": "original",
+      "phase": "comprehension"
+    },
+    {
+      "index": 1,
+      "reasoning": "high",
+      "family": "frames",
+      "language": "python",
+      "arm": "dedup",
+      "phase": "comprehension"
+    },
+    {
+      "index": 2,
+      "reasoning": "high",
+      "family": "frames",
+      "language": "python",
+      "arm": "both",
+      "phase": "comprehension"
+    },
+    {
+      "index": 3,
+      "reasoning": "high",
+      "family": "frames",
+      "language": "python",
+      "arm": "schema",
+      "phase": "comprehension"
+    },
+    {
+      "index": 4,
+      "reasoning": "high",
+      "family": "frames",
+      "language": "lobo",
+      "arm": "dedup",
+      "phase": "comprehension"
+    },
+    {
+      "index": 5,
+      "reasoning": "high",
+      "family": "frames",
+      "language": "lobo",
+      "arm": "schema",
+      "phase": "comprehension"
+    },
+    {
+      "index": 6,
+      "reasoning": "high",
+      "family": "frames",
+      "language": "lobo",
+      "arm": "original",
+      "phase": "comprehension"
+    },
+    {
+      "index": 7,
+      "reasoning": "high",
+      "family": "frames",
+      "language": "lobo",
+      "arm": "both",
+      "phase": "comprehension"
+    },
+    {
+      "index": 8,
+      "reasoning": "high",
+      "family": "scheduler",
+      "language": "rust",
+      "arm": "schema",
+      "phase": "comprehension"
+    },
+    {
+      "index": 9,
+      "reasoning": "high",
+      "family": "scheduler",
+      "language": "rust",
+      "arm": "both",
+      "phase": "comprehension"
+    },
+    {
+      "index": 10,
+      "reasoning": "high",
+      "family": "scheduler",
+      "language": "rust",
+      "arm": "dedup",
+      "phase": "comprehension"
+    },
+    {
+      "index": 11,
+      "reasoning": "high",
+      "family": "scheduler",
+      "language": "rust",
+      "arm": "original",
+      "phase": "comprehension"
+    },
+    {
+      "index": 12,
+      "reasoning": "high",
+      "family": "scheduler",
+      "language": "lobo",
+      "arm": "both",
+      "phase": "comprehension"
+    },
+    {
+      "index": 13,
+      "reasoning": "high",
+      "family": "scheduler",
+      "language": "lobo",
+      "arm": "original",
+      "phase": "comprehension"
+    },
+    {
+      "index": 14,
+      "reasoning": "high",
+      "family": "scheduler",
+      "language": "lobo",
+      "arm": "schema",
+      "phase": "comprehension"
+    },
+    {
+      "index": 15,
+      "reasoning": "high",
+      "family": "scheduler",
+      "language": "lobo",
+      "arm": "dedup",
+      "phase": "comprehension"
+    },
+    {
+      "index": 16,
+      "reasoning": "high",
+      "family": "ledger",
+      "language": "rust",
+      "arm": "original",
+      "phase": "comprehension"
+    },
+    {
+      "index": 17,
+      "reasoning": "high",
+      "family": "ledger",
+      "language": "rust",
+      "arm": "dedup",
+      "phase": "comprehension"
+    },
+    {
+      "index": 18,
+      "reasoning": "high",
+      "family": "ledger",
+      "language": "rust",
+      "arm": "both",
+      "phase": "comprehension"
+    },
+    {
+      "index": 19,
+      "reasoning": "high",
+      "family": "ledger",
+      "language": "rust",
+      "arm": "schema",
+      "phase": "comprehension"
+    },
+    {
+      "index": 20,
+      "reasoning": "high",
+      "family": "scheduler",
+      "language": "python",
+      "arm": "dedup",
+      "phase": "comprehension"
+    },
+    {
+      "index": 21,
+      "reasoning": "high",
+      "family": "scheduler",
+      "language": "python",
+      "arm": "schema",
+      "phase": "comprehension"
+    },
+    {
+      "index": 22,
+      "reasoning": "high",
+      "family": "scheduler",
+      "language": "python",
+      "arm": "original",
+      "phase": "comprehension"
+    },
+    {
+      "index": 23,
+      "reasoning": "high",
+      "family": "scheduler",
+      "language": "python",
+      "arm": "both",
+      "phase": "comprehension"
+    },
+    {
+      "index": 24,
+      "reasoning": "high",
+      "family": "frames",
+      "language": "rust",
+      "arm": "schema",
+      "phase": "comprehension"
+    },
+    {
+      "index": 25,
+      "reasoning": "high",
+      "family": "frames",
+      "language": "rust",
+      "arm": "both",
+      "phase": "comprehension"
+    },
+    {
+      "index": 26,
+      "reasoning": "high",
+      "family": "frames",
+      "language": "rust",
+      "arm": "dedup",
+      "phase": "comprehension"
+    },
+    {
+      "index": 27,
+      "reasoning": "high",
+      "family": "frames",
+      "language": "rust",
+      "arm": "original",
+      "phase": "comprehension"
+    },
+    {
+      "index": 28,
+      "reasoning": "high",
+      "family": "ledger",
+      "language": "lobo",
+      "arm": "both",
+      "phase": "comprehension"
+    },
+    {
+      "index": 29,
+      "reasoning": "high",
+      "family": "ledger",
+      "language": "lobo",
+      "arm": "original",
+      "phase": "comprehension"
+    },
+    {
+      "index": 30,
+      "reasoning": "high",
+      "family": "ledger",
+      "language": "lobo",
+      "arm": "schema",
+      "phase": "comprehension"
+    },
+    {
+      "index": 31,
+      "reasoning": "high",
+      "family": "ledger",
+      "language": "lobo",
+      "arm": "dedup",
+      "phase": "comprehension"
+    },
+    {
+      "index": 32,
+      "reasoning": "high",
+      "family": "ledger",
+      "language": "python",
+      "arm": "original",
+      "phase": "comprehension"
+    },
+    {
+      "index": 33,
+      "reasoning": "high",
+      "family": "ledger",
+      "language": "python",
+      "arm": "dedup",
+      "phase": "comprehension"
+    },
+    {
+      "index": 34,
+      "reasoning": "high",
+      "family": "ledger",
+      "language": "python",
+      "arm": "both",
+      "phase": "comprehension"
+    },
+    {
+      "index": 35,
+      "reasoning": "high",
+      "family": "ledger",
+      "language": "python",
+      "arm": "schema",
+      "phase": "comprehension"
+    },
+    {
+      "index": 36,
+      "reasoning": "low",
+      "family": "frames",
+      "language": "python",
+      "arm": "original",
+      "phase": "comprehension"
+    },
+    {
+      "index": 37,
+      "reasoning": "low",
+      "family": "frames",
+      "language": "python",
+      "arm": "dedup",
+      "phase": "comprehension"
+    },
+    {
+      "index": 38,
+      "reasoning": "low",
+      "family": "frames",
+      "language": "python",
+      "arm": "both",
+      "phase": "comprehension"
+    },
+    {
+      "index": 39,
+      "reasoning": "low",
+      "family": "frames",
+      "language": "python",
+      "arm": "schema",
+      "phase": "comprehension"
+    },
+    {
+      "index": 40,
+      "reasoning": "low",
+      "family": "frames",
+      "language": "lobo",
+      "arm": "dedup",
+      "phase": "comprehension"
+    },
+    {
+      "index": 41,
+      "reasoning": "low",
+      "family": "frames",
+      "language": "lobo",
+      "arm": "schema",
+      "phase": "comprehension"
+    },
+    {
+      "index": 42,
+      "reasoning": "low",
+      "family": "frames",
+      "language": "lobo",
+      "arm": "original",
+      "phase": "comprehension"
+    },
+    {
+      "index": 43,
+      "reasoning": "low",
+      "family": "frames",
+      "language": "lobo",
+      "arm": "both",
+      "phase": "comprehension"
+    },
+    {
+      "index": 44,
+      "reasoning": "low",
+      "family": "scheduler",
+      "language": "rust",
+      "arm": "schema",
+      "phase": "comprehension"
+    },
+    {
+      "index": 45,
+      "reasoning": "low",
+      "family": "scheduler",
+      "language": "rust",
+      "arm": "both",
+      "phase": "comprehension"
+    },
+    {
+      "index": 46,
+      "reasoning": "low",
+      "family": "scheduler",
+      "language": "rust",
+      "arm": "dedup",
+      "phase": "comprehension"
+    },
+    {
+      "index": 47,
+      "reasoning": "low",
+      "family": "scheduler",
+      "language": "rust",
+      "arm": "original",
+      "phase": "comprehension"
+    },
+    {
+      "index": 48,
+      "reasoning": "low",
+      "family": "scheduler",
+      "language": "lobo",
+      "arm": "both",
+      "phase": "comprehension"
+    },
+    {
+      "index": 49,
+      "reasoning": "low",
+      "family": "scheduler",
+      "language": "lobo",
+      "arm": "original",
+      "phase": "comprehension"
+    },
+    {
+      "index": 50,
+      "reasoning": "low",
+      "family": "scheduler",
+      "language": "lobo",
+      "arm": "schema",
+      "phase": "comprehension"
+    },
+    {
+      "index": 51,
+      "reasoning": "low",
+      "family": "scheduler",
+      "language": "lobo",
+      "arm": "dedup",
+      "phase": "comprehension"
+    },
+    {
+      "index": 52,
+      "reasoning": "low",
+      "family": "ledger",
+      "language": "rust",
+      "arm": "original",
+      "phase": "comprehension"
+    },
+    {
+      "index": 53,
+      "reasoning": "low",
+      "family": "ledger",
+      "language": "rust",
+      "arm": "dedup",
+      "phase": "comprehension"
+    },
+    {
+      "index": 54,
+      "reasoning": "low",
+      "family": "ledger",
+      "language": "rust",
+      "arm": "both",
+      "phase": "comprehension"
+    },
+    {
+      "index": 55,
+      "reasoning": "low",
+      "family": "ledger",
+      "language": "rust",
+      "arm": "schema",
+      "phase": "comprehension"
+    },
+    {
+      "index": 56,
+      "reasoning": "low",
+      "family": "scheduler",
+      "language": "python",
+      "arm": "dedup",
+      "phase": "comprehension"
+    },
+    {
+      "index": 57,
+      "reasoning": "low",
+      "family": "scheduler",
+      "language": "python",
+      "arm": "schema",
+      "phase": "comprehension"
+    },
+    {
+      "index": 58,
+      "reasoning": "low",
+      "family": "scheduler",
+      "language": "python",
+      "arm": "original",
+      "phase": "comprehension"
+    },
+    {
+      "index": 59,
+      "reasoning": "low",
+      "family": "scheduler",
+      "language": "python",
+      "arm": "both",
+      "phase": "comprehension"
+    },
+    {
+      "index": 60,
+      "reasoning": "low",
+      "family": "frames",
+      "language": "rust",
+      "arm": "schema",
+      "phase": "comprehension"
+    },
+    {
+      "index": 61,
+      "reasoning": "low",
+      "family": "frames",
+      "language": "rust",
+      "arm": "both",
+      "phase": "comprehension"
+    },
+    {
+      "index": 62,
+      "reasoning": "low",
+      "family": "frames",
+      "language": "rust",
+      "arm": "dedup",
+      "phase": "comprehension"
+    },
+    {
+      "index": 63,
+      "reasoning": "low",
+      "family": "frames",
+      "language": "rust",
+      "arm": "original",
+      "phase": "comprehension"
+    },
+    {
+      "index": 64,
+      "reasoning": "low",
+      "family": "ledger",
+      "language": "lobo",
+      "arm": "both",
+      "phase": "comprehension"
+    },
+    {
+      "index": 65,
+      "reasoning": "low",
+      "family": "ledger",
+      "language": "lobo",
+      "arm": "original",
+      "phase": "comprehension"
+    },
+    {
+      "index": 66,
+      "reasoning": "low",
+      "family": "ledger",
+      "language": "lobo",
+      "arm": "schema",
+      "phase": "comprehension"
+    },
+    {
+      "index": 67,
+      "reasoning": "low",
+      "family": "ledger",
+      "language": "lobo",
+      "arm": "dedup",
+      "phase": "comprehension"
+    },
+    {
+      "index": 68,
+      "reasoning": "low",
+      "family": "ledger",
+      "language": "python",
+      "arm": "original",
+      "phase": "comprehension"
+    },
+    {
+      "index": 69,
+      "reasoning": "low",
+      "family": "ledger",
+      "language": "python",
+      "arm": "dedup",
+      "phase": "comprehension"
+    },
+    {
+      "index": 70,
+      "reasoning": "low",
+      "family": "ledger",
+      "language": "python",
+      "arm": "both",
+      "phase": "comprehension"
+    },
+    {
+      "index": 71,
+      "reasoning": "low",
+      "family": "ledger",
+      "language": "python",
+      "arm": "schema",
+      "phase": "comprehension"
+    }
+  ],
+  "scheduled_total": 72,
+  "arms": [
+    "original",
+    "dedup",
+    "schema",
+    "both"
+  ],
+  "driver_sha256": "05e5c702ff967e00e135368d9e00eb3a0296efbcaf028fcf169b0b81da08d156",
+  "tests_sha256": "a3b70c3a86a5e65aa8e03a8e49e42f714587ffcd4fe2e436666b6c8d2d84c2b4",
+  "base_driver_sha256": "1c05a60a0c431a9d9336f7b28c9fcfb9f69446cb24ead52f380d1a5d4c838bf0",
+  "luna_driver_sha256": "5c02b9846c7af3211ad70cf212e8f119b3360bce8e29b2c2032a9792b321509c",
+  "compiler_sha256": "8d9f84530b8d34a6a72597d25befc249a604430a6569656b4184721e1e444d9d",
+  "freeze_version": "1.11.2",
+  "inputs": {
+    "ledger/lobo/original": {
+      "prompt_sha256": "ebd10366b4e5de7e97a068b8c84a1c52b03b378de5ac95543a59818bc93b6dd3",
+      "prompt_bytes": 14524,
+      "files": {
+        "model.lobo": "bca415f8fe0bfc4f054a028de3ca80e745554dcddb4d3c3d94f4abd8031009b3",
+        "util.lobo": "675dff309d63957c2322be1f6b18a39808f1f27ff17a41210d57c8b8bfb9b343",
+        "logic.lobo": "ec21e24bc3dfa0fd11ca0c7a5450a8a29469a2e75c2f0ce1b68cbe812e7845ad",
+        "logic.lobo.ids.json": "bc2b53158b6974497887a33cd2e7b9fe8140c7eaec0d0b1767e6e25c3b22f598",
+        "app.lobo": "25516b5a2114f47b7445df0fab47d7ca40a484e7b6cb10c5916f28334d5e26d0",
+        "app.lobo.ids.json": "f27c6fd2b22eef6a0627f811c4585e65da786e6057fb715fedc89b941e0f9261",
+        "TASK.txt": "fb148340a27a5785a4c939ac45b94c018d500695253251d48cf800e757b1c79a",
+        "GUIDE.txt": "d6770e2f1b55cb966bfaf138608d4c836a43770709d04a63c9acf88b30f43e1c",
+        "check.py": "19cfc08bd63439e1487ff9ee80fc4a013b804feb6b424788b2fc62fb63bd278f",
+        "AGENTS.md": "3c8c8fce33c21a65ee4b8a44fe408af1f260accb220adba4fb6a75e331e7ea11"
+      }
+    },
+    "ledger/lobo/dedup": {
+      "prompt_sha256": "45ffd1a0535b0fb7718fdfbf3c7072439ce4e3eef1550624ba2131bcba697834",
+      "prompt_bytes": 8576,
+      "files": {
+        "model.lobo": "bca415f8fe0bfc4f054a028de3ca80e745554dcddb4d3c3d94f4abd8031009b3",
+        "util.lobo": "675dff309d63957c2322be1f6b18a39808f1f27ff17a41210d57c8b8bfb9b343",
+        "logic.lobo": "ec21e24bc3dfa0fd11ca0c7a5450a8a29469a2e75c2f0ce1b68cbe812e7845ad",
+        "logic.lobo.ids.json": "bc2b53158b6974497887a33cd2e7b9fe8140c7eaec0d0b1767e6e25c3b22f598",
+        "app.lobo": "25516b5a2114f47b7445df0fab47d7ca40a484e7b6cb10c5916f28334d5e26d0",
+        "app.lobo.ids.json": "f27c6fd2b22eef6a0627f811c4585e65da786e6057fb715fedc89b941e0f9261",
+        "TASK.txt": "fb148340a27a5785a4c939ac45b94c018d500695253251d48cf800e757b1c79a",
+        "GUIDE.txt": "d6770e2f1b55cb966bfaf138608d4c836a43770709d04a63c9acf88b30f43e1c",
+        "check.py": "19cfc08bd63439e1487ff9ee80fc4a013b804feb6b424788b2fc62fb63bd278f",
+        "AGENTS.md": "3c8c8fce33c21a65ee4b8a44fe408af1f260accb220adba4fb6a75e331e7ea11"
+      }
+    },
+    "ledger/lobo/schema": {
+      "prompt_sha256": "a29f85359b0d912839b54876aef9c0dc2399dab7b24c29760f01bed6dbb14815",
+      "prompt_bytes": 15122,
+      "files": {
+        "model.lobo": "bca415f8fe0bfc4f054a028de3ca80e745554dcddb4d3c3d94f4abd8031009b3",
+        "util.lobo": "675dff309d63957c2322be1f6b18a39808f1f27ff17a41210d57c8b8bfb9b343",
+        "logic.lobo": "ec21e24bc3dfa0fd11ca0c7a5450a8a29469a2e75c2f0ce1b68cbe812e7845ad",
+        "logic.lobo.ids.json": "bc2b53158b6974497887a33cd2e7b9fe8140c7eaec0d0b1767e6e25c3b22f598",
+        "app.lobo": "25516b5a2114f47b7445df0fab47d7ca40a484e7b6cb10c5916f28334d5e26d0",
+        "app.lobo.ids.json": "f27c6fd2b22eef6a0627f811c4585e65da786e6057fb715fedc89b941e0f9261",
+        "TASK.txt": "fb148340a27a5785a4c939ac45b94c018d500695253251d48cf800e757b1c79a",
+        "GUIDE.txt": "d6770e2f1b55cb966bfaf138608d4c836a43770709d04a63c9acf88b30f43e1c",
+        "check.py": "19cfc08bd63439e1487ff9ee80fc4a013b804feb6b424788b2fc62fb63bd278f",
+        "AGENTS.md": "3c8c8fce33c21a65ee4b8a44fe408af1f260accb220adba4fb6a75e331e7ea11"
+      }
+    },
+    "ledger/lobo/both": {
+      "prompt_sha256": "2371d27204dcb4c4a9923a5138059800f7748fd849608897c8ee4d6513a046cb",
+      "prompt_bytes": 9174,
+      "files": {
+        "model.lobo": "bca415f8fe0bfc4f054a028de3ca80e745554dcddb4d3c3d94f4abd8031009b3",
+        "util.lobo": "675dff309d63957c2322be1f6b18a39808f1f27ff17a41210d57c8b8bfb9b343",
+        "logic.lobo": "ec21e24bc3dfa0fd11ca0c7a5450a8a29469a2e75c2f0ce1b68cbe812e7845ad",
+        "logic.lobo.ids.json": "bc2b53158b6974497887a33cd2e7b9fe8140c7eaec0d0b1767e6e25c3b22f598",
+        "app.lobo": "25516b5a2114f47b7445df0fab47d7ca40a484e7b6cb10c5916f28334d5e26d0",
+        "app.lobo.ids.json": "f27c6fd2b22eef6a0627f811c4585e65da786e6057fb715fedc89b941e0f9261",
+        "TASK.txt": "fb148340a27a5785a4c939ac45b94c018d500695253251d48cf800e757b1c79a",
+        "GUIDE.txt": "d6770e2f1b55cb966bfaf138608d4c836a43770709d04a63c9acf88b30f43e1c",
+        "check.py": "19cfc08bd63439e1487ff9ee80fc4a013b804feb6b424788b2fc62fb63bd278f",
+        "AGENTS.md": "3c8c8fce33c21a65ee4b8a44fe408af1f260accb220adba4fb6a75e331e7ea11"
+      }
+    },
+    "ledger/rust/original": {
+      "prompt_sha256": "8fcdb28c8cdb1a92f67e015e0ea0ae3f0fd8ba30308105c8733643b6fa054266",
+      "prompt_bytes": 10691,
+      "files": {
+        "model.rs": "1bbbcc6cf0c2cdb47a17953ed582e6c4f8bbf350e54575fb26a088226b5d7167",
+        "logic.rs": "19072404b07e19f1bd6cc9da6208d5407e340b73022f4a51bfcdd4ed02c2c64f",
+        "app.rs": "db38bbbeac6cea46002f6fc5c4583a93e38d515a5fedb11d65a7797de92989bc",
+        "TASK.txt": "7485566cc4590a5a73b28b378d6a342c61ae4b191ca69fb6eb00d15666480489",
+        "GUIDE.txt": "dc0cdfda459eaa4953793c7f471da101b61d779627c1083a30ebaf20cb1c2f95",
+        "check.py": "19cfc08bd63439e1487ff9ee80fc4a013b804feb6b424788b2fc62fb63bd278f",
+        "AGENTS.md": "3c8c8fce33c21a65ee4b8a44fe408af1f260accb220adba4fb6a75e331e7ea11"
+      }
+    },
+    "ledger/rust/dedup": {
+      "prompt_sha256": "022cb2f3c73c33057f52298bb2f526636199cd80c1bc962c576fa2b26b7b6b6c",
+      "prompt_bytes": 6203,
+      "files": {
+        "model.rs": "1bbbcc6cf0c2cdb47a17953ed582e6c4f8bbf350e54575fb26a088226b5d7167",
+        "logic.rs": "19072404b07e19f1bd6cc9da6208d5407e340b73022f4a51bfcdd4ed02c2c64f",
+        "app.rs": "db38bbbeac6cea46002f6fc5c4583a93e38d515a5fedb11d65a7797de92989bc",
+        "TASK.txt": "7485566cc4590a5a73b28b378d6a342c61ae4b191ca69fb6eb00d15666480489",
+        "GUIDE.txt": "dc0cdfda459eaa4953793c7f471da101b61d779627c1083a30ebaf20cb1c2f95",
+        "check.py": "19cfc08bd63439e1487ff9ee80fc4a013b804feb6b424788b2fc62fb63bd278f",
+        "AGENTS.md": "3c8c8fce33c21a65ee4b8a44fe408af1f260accb220adba4fb6a75e331e7ea11"
+      }
+    },
+    "ledger/rust/schema": {
+      "prompt_sha256": "724ac3e567f972c5279271a61081e748e67365c1614cf19801388532a675b8cc",
+      "prompt_bytes": 11289,
+      "files": {
+        "model.rs": "1bbbcc6cf0c2cdb47a17953ed582e6c4f8bbf350e54575fb26a088226b5d7167",
+        "logic.rs": "19072404b07e19f1bd6cc9da6208d5407e340b73022f4a51bfcdd4ed02c2c64f",
+        "app.rs": "db38bbbeac6cea46002f6fc5c4583a93e38d515a5fedb11d65a7797de92989bc",
+        "TASK.txt": "7485566cc4590a5a73b28b378d6a342c61ae4b191ca69fb6eb00d15666480489",
+        "GUIDE.txt": "dc0cdfda459eaa4953793c7f471da101b61d779627c1083a30ebaf20cb1c2f95",
+        "check.py": "19cfc08bd63439e1487ff9ee80fc4a013b804feb6b424788b2fc62fb63bd278f",
+        "AGENTS.md": "3c8c8fce33c21a65ee4b8a44fe408af1f260accb220adba4fb6a75e331e7ea11"
+      }
+    },
+    "ledger/rust/both": {
+      "prompt_sha256": "98979596ce674dd31313a3facf0e897977ba6a52037a8143db51a0f51204243c",
+      "prompt_bytes": 6801,
+      "files": {
+        "model.rs": "1bbbcc6cf0c2cdb47a17953ed582e6c4f8bbf350e54575fb26a088226b5d7167",
+        "logic.rs": "19072404b07e19f1bd6cc9da6208d5407e340b73022f4a51bfcdd4ed02c2c64f",
+        "app.rs": "db38bbbeac6cea46002f6fc5c4583a93e38d515a5fedb11d65a7797de92989bc",
+        "TASK.txt": "7485566cc4590a5a73b28b378d6a342c61ae4b191ca69fb6eb00d15666480489",
+        "GUIDE.txt": "dc0cdfda459eaa4953793c7f471da101b61d779627c1083a30ebaf20cb1c2f95",
+        "check.py": "19cfc08bd63439e1487ff9ee80fc4a013b804feb6b424788b2fc62fb63bd278f",
+        "AGENTS.md": "3c8c8fce33c21a65ee4b8a44fe408af1f260accb220adba4fb6a75e331e7ea11"
+      }
+    },
+    "ledger/python/original": {
+      "prompt_sha256": "27abdf9cc202d66c123b26f0aba9ce1221724a1ca37c29e2a4a76d2363db830e",
+      "prompt_bytes": 10414,
+      "files": {
+        "model.py": "ca98ab244630880f729f90ff991001bc78c080002efca722b1c3d337bd56d9f8",
+        "logic.py": "14814e0b68830e8171d0dbfd252f6db68d26f94bdccf650d15a7c9af62ebfdb3",
+        "app.py": "4bbf65c5a0ae432105fd2cbcf4e56150189b12966d6162feea32bea59665618a",
+        "TASK.txt": "49b7dc06f6cf06894d0fc64443bcfbbd2a23e93714ded377bf79753524fa61d7",
+        "GUIDE.txt": "113a49012b7f55256c365e33a5e367d51b851b09d0114b18e9acd9631a51e93e",
+        "check.py": "19cfc08bd63439e1487ff9ee80fc4a013b804feb6b424788b2fc62fb63bd278f",
+        "AGENTS.md": "3c8c8fce33c21a65ee4b8a44fe408af1f260accb220adba4fb6a75e331e7ea11"
+      }
+    },
+    "ledger/python/dedup": {
+      "prompt_sha256": "26599c471f68b47057191bd6a38b4df3414d5f6f49534db883c5ac5594aa4f87",
+      "prompt_bytes": 6002,
+      "files": {
+        "model.py": "ca98ab244630880f729f90ff991001bc78c080002efca722b1c3d337bd56d9f8",
+        "logic.py": "14814e0b68830e8171d0dbfd252f6db68d26f94bdccf650d15a7c9af62ebfdb3",
+        "app.py": "4bbf65c5a0ae432105fd2cbcf4e56150189b12966d6162feea32bea59665618a",
+        "TASK.txt": "49b7dc06f6cf06894d0fc64443bcfbbd2a23e93714ded377bf79753524fa61d7",
+        "GUIDE.txt": "113a49012b7f55256c365e33a5e367d51b851b09d0114b18e9acd9631a51e93e",
+        "check.py": "19cfc08bd63439e1487ff9ee80fc4a013b804feb6b424788b2fc62fb63bd278f",
+        "AGENTS.md": "3c8c8fce33c21a65ee4b8a44fe408af1f260accb220adba4fb6a75e331e7ea11"
+      }
+    },
+    "ledger/python/schema": {
+      "prompt_sha256": "2b5b6f10fab7453c2745ca74282102e22daa9cff9179338ab48ad192fbb5b3b1",
+      "prompt_bytes": 11012,
+      "files": {
+        "model.py": "ca98ab244630880f729f90ff991001bc78c080002efca722b1c3d337bd56d9f8",
+        "logic.py": "14814e0b68830e8171d0dbfd252f6db68d26f94bdccf650d15a7c9af62ebfdb3",
+        "app.py": "4bbf65c5a0ae432105fd2cbcf4e56150189b12966d6162feea32bea59665618a",
+        "TASK.txt": "49b7dc06f6cf06894d0fc64443bcfbbd2a23e93714ded377bf79753524fa61d7",
+        "GUIDE.txt": "113a49012b7f55256c365e33a5e367d51b851b09d0114b18e9acd9631a51e93e",
+        "check.py": "19cfc08bd63439e1487ff9ee80fc4a013b804feb6b424788b2fc62fb63bd278f",
+        "AGENTS.md": "3c8c8fce33c21a65ee4b8a44fe408af1f260accb220adba4fb6a75e331e7ea11"
+      }
+    },
+    "ledger/python/both": {
+      "prompt_sha256": "fa2b517a186056a894dadef50212c5789b5fa447f5afd5df2bdab079403e71f2",
+      "prompt_bytes": 6600,
+      "files": {
+        "model.py": "ca98ab244630880f729f90ff991001bc78c080002efca722b1c3d337bd56d9f8",
+        "logic.py": "14814e0b68830e8171d0dbfd252f6db68d26f94bdccf650d15a7c9af62ebfdb3",
+        "app.py": "4bbf65c5a0ae432105fd2cbcf4e56150189b12966d6162feea32bea59665618a",
+        "TASK.txt": "49b7dc06f6cf06894d0fc64443bcfbbd2a23e93714ded377bf79753524fa61d7",
+        "GUIDE.txt": "113a49012b7f55256c365e33a5e367d51b851b09d0114b18e9acd9631a51e93e",
+        "check.py": "19cfc08bd63439e1487ff9ee80fc4a013b804feb6b424788b2fc62fb63bd278f",
+        "AGENTS.md": "3c8c8fce33c21a65ee4b8a44fe408af1f260accb220adba4fb6a75e331e7ea11"
+      }
+    },
+    "scheduler/lobo/original": {
+      "prompt_sha256": "a32fb8e022d9a7e28996ad0f9ad2149c4902daf1fddbf95070d488f9dcceac70",
+      "prompt_bytes": 15417,
+      "files": {
+        "model.lobo": "2f57c6917dce5820d78292bdbaa7fba639b9c1b0e6a01a80a3cfcba0a78662b1",
+        "util.lobo": "675dff309d63957c2322be1f6b18a39808f1f27ff17a41210d57c8b8bfb9b343",
+        "logic.lobo": "5b710fb7a876fef8ede1d59c5ed41a4325f2a4f5a290b46ec1218309a6250311",
+        "logic.lobo.ids.json": "552a8458be898cd03afe7ae56e9fd175463941a8bd5045ef8509278577774ac3",
+        "app.lobo": "3450bad45b8b2ae8054b409f8f8d4a1a12886c540a04d45ce20f4c24d9867508",
+        "app.lobo.ids.json": "9a638f1b71bc04afcf7a001121fc0d08b629c3823afa3dad6e19c42f89cf2ed3",
+        "TASK.txt": "830c163eca776a13376973e2aefa365d7d8e388ea2d4e0bd36cce295af10488c",
+        "GUIDE.txt": "d6770e2f1b55cb966bfaf138608d4c836a43770709d04a63c9acf88b30f43e1c",
+        "check.py": "19cfc08bd63439e1487ff9ee80fc4a013b804feb6b424788b2fc62fb63bd278f",
+        "AGENTS.md": "3c8c8fce33c21a65ee4b8a44fe408af1f260accb220adba4fb6a75e331e7ea11"
+      }
+    },
+    "scheduler/lobo/dedup": {
+      "prompt_sha256": "1b4395ab1037a49c0dfdbc6d0f1a119da5f1749ed6625673181a21f2c352c7cc",
+      "prompt_bytes": 9243,
+      "files": {
+        "model.lobo": "2f57c6917dce5820d78292bdbaa7fba639b9c1b0e6a01a80a3cfcba0a78662b1",
+        "util.lobo": "675dff309d63957c2322be1f6b18a39808f1f27ff17a41210d57c8b8bfb9b343",
+        "logic.lobo": "5b710fb7a876fef8ede1d59c5ed41a4325f2a4f5a290b46ec1218309a6250311",
+        "logic.lobo.ids.json": "552a8458be898cd03afe7ae56e9fd175463941a8bd5045ef8509278577774ac3",
+        "app.lobo": "3450bad45b8b2ae8054b409f8f8d4a1a12886c540a04d45ce20f4c24d9867508",
+        "app.lobo.ids.json": "9a638f1b71bc04afcf7a001121fc0d08b629c3823afa3dad6e19c42f89cf2ed3",
+        "TASK.txt": "830c163eca776a13376973e2aefa365d7d8e388ea2d4e0bd36cce295af10488c",
+        "GUIDE.txt": "d6770e2f1b55cb966bfaf138608d4c836a43770709d04a63c9acf88b30f43e1c",
+        "check.py": "19cfc08bd63439e1487ff9ee80fc4a013b804feb6b424788b2fc62fb63bd278f",
+        "AGENTS.md": "3c8c8fce33c21a65ee4b8a44fe408af1f260accb220adba4fb6a75e331e7ea11"
+      }
+    },
+    "scheduler/lobo/schema": {
+      "prompt_sha256": "340519dd5ebe13e1c03ccd079e143fefb2585409184dd7f28ad3fe5a377c7d57",
+      "prompt_bytes": 16006,
+      "files": {
+        "model.lobo": "2f57c6917dce5820d78292bdbaa7fba639b9c1b0e6a01a80a3cfcba0a78662b1",
+        "util.lobo": "675dff309d63957c2322be1f6b18a39808f1f27ff17a41210d57c8b8bfb9b343",
+        "logic.lobo": "5b710fb7a876fef8ede1d59c5ed41a4325f2a4f5a290b46ec1218309a6250311",
+        "logic.lobo.ids.json": "552a8458be898cd03afe7ae56e9fd175463941a8bd5045ef8509278577774ac3",
+        "app.lobo": "3450bad45b8b2ae8054b409f8f8d4a1a12886c540a04d45ce20f4c24d9867508",
+        "app.lobo.ids.json": "9a638f1b71bc04afcf7a001121fc0d08b629c3823afa3dad6e19c42f89cf2ed3",
+        "TASK.txt": "830c163eca776a13376973e2aefa365d7d8e388ea2d4e0bd36cce295af10488c",
+        "GUIDE.txt": "d6770e2f1b55cb966bfaf138608d4c836a43770709d04a63c9acf88b30f43e1c",
+        "check.py": "19cfc08bd63439e1487ff9ee80fc4a013b804feb6b424788b2fc62fb63bd278f",
+        "AGENTS.md": "3c8c8fce33c21a65ee4b8a44fe408af1f260accb220adba4fb6a75e331e7ea11"
+      }
+    },
+    "scheduler/lobo/both": {
+      "prompt_sha256": "493f155233c01135e1ba26283523f0996cc22b5d71af3bdaa1bf6bf40411df7c",
+      "prompt_bytes": 9832,
+      "files": {
+        "model.lobo": "2f57c6917dce5820d78292bdbaa7fba639b9c1b0e6a01a80a3cfcba0a78662b1",
+        "util.lobo": "675dff309d63957c2322be1f6b18a39808f1f27ff17a41210d57c8b8bfb9b343",
+        "logic.lobo": "5b710fb7a876fef8ede1d59c5ed41a4325f2a4f5a290b46ec1218309a6250311",
+        "logic.lobo.ids.json": "552a8458be898cd03afe7ae56e9fd175463941a8bd5045ef8509278577774ac3",
+        "app.lobo": "3450bad45b8b2ae8054b409f8f8d4a1a12886c540a04d45ce20f4c24d9867508",
+        "app.lobo.ids.json": "9a638f1b71bc04afcf7a001121fc0d08b629c3823afa3dad6e19c42f89cf2ed3",
+        "TASK.txt": "830c163eca776a13376973e2aefa365d7d8e388ea2d4e0bd36cce295af10488c",
+        "GUIDE.txt": "d6770e2f1b55cb966bfaf138608d4c836a43770709d04a63c9acf88b30f43e1c",
+        "check.py": "19cfc08bd63439e1487ff9ee80fc4a013b804feb6b424788b2fc62fb63bd278f",
+        "AGENTS.md": "3c8c8fce33c21a65ee4b8a44fe408af1f260accb220adba4fb6a75e331e7ea11"
+      }
+    },
+    "scheduler/rust/original": {
+      "prompt_sha256": "ffcbfd413349d83fc1e2d0de7bb14f7a0edb75eff63c3fef6c3ec37873368399",
+      "prompt_bytes": 10954,
+      "files": {
+        "model.rs": "be414e39c3949e839a6cfe140b281b4d508d0c255e31276173a4e8fc1d5ba392",
+        "logic.rs": "9820d2d8adf392488a94ffb73f6bb89c3ba37be43511579d04acee4d32ed3ed2",
+        "app.rs": "672e9d2caa1392c5dd959e8cc52e9f96620c66a45df4aea7fdd8a30751d46745",
+        "TASK.txt": "b2ec04864b145a474f262f39e421044e5656ffc95c6eb98322c31d6dd7bdbe76",
+        "GUIDE.txt": "dc0cdfda459eaa4953793c7f471da101b61d779627c1083a30ebaf20cb1c2f95",
+        "check.py": "19cfc08bd63439e1487ff9ee80fc4a013b804feb6b424788b2fc62fb63bd278f",
+        "AGENTS.md": "3c8c8fce33c21a65ee4b8a44fe408af1f260accb220adba4fb6a75e331e7ea11"
+      }
+    },
+    "scheduler/rust/dedup": {
+      "prompt_sha256": "9e5a60c1a63920e711d4daf88bb8bb889a0de993d765e876a8e82f7619446191",
+      "prompt_bytes": 6240,
+      "files": {
+        "model.rs": "be414e39c3949e839a6cfe140b281b4d508d0c255e31276173a4e8fc1d5ba392",
+        "logic.rs": "9820d2d8adf392488a94ffb73f6bb89c3ba37be43511579d04acee4d32ed3ed2",
+        "app.rs": "672e9d2caa1392c5dd959e8cc52e9f96620c66a45df4aea7fdd8a30751d46745",
+        "TASK.txt": "b2ec04864b145a474f262f39e421044e5656ffc95c6eb98322c31d6dd7bdbe76",
+        "GUIDE.txt": "dc0cdfda459eaa4953793c7f471da101b61d779627c1083a30ebaf20cb1c2f95",
+        "check.py": "19cfc08bd63439e1487ff9ee80fc4a013b804feb6b424788b2fc62fb63bd278f",
+        "AGENTS.md": "3c8c8fce33c21a65ee4b8a44fe408af1f260accb220adba4fb6a75e331e7ea11"
+      }
+    },
+    "scheduler/rust/schema": {
+      "prompt_sha256": "4d2a6c66f49fc6f3bcbcf20666953f4452c5be24d0d3553436efae9e8003111d",
+      "prompt_bytes": 11543,
+      "files": {
+        "model.rs": "be414e39c3949e839a6cfe140b281b4d508d0c255e31276173a4e8fc1d5ba392",
+        "logic.rs": "9820d2d8adf392488a94ffb73f6bb89c3ba37be43511579d04acee4d32ed3ed2",
+        "app.rs": "672e9d2caa1392c5dd959e8cc52e9f96620c66a45df4aea7fdd8a30751d46745",
+        "TASK.txt": "b2ec04864b145a474f262f39e421044e5656ffc95c6eb98322c31d6dd7bdbe76",
+        "GUIDE.txt": "dc0cdfda459eaa4953793c7f471da101b61d779627c1083a30ebaf20cb1c2f95",
+        "check.py": "19cfc08bd63439e1487ff9ee80fc4a013b804feb6b424788b2fc62fb63bd278f",
+        "AGENTS.md": "3c8c8fce33c21a65ee4b8a44fe408af1f260accb220adba4fb6a75e331e7ea11"
+      }
+    },
+    "scheduler/rust/both": {
+      "prompt_sha256": "1de634d4f88e38b9fa4a629734d4f90238b66017a63cbc1b501b5c54e1614852",
+      "prompt_bytes": 6829,
+      "files": {
+        "model.rs": "be414e39c3949e839a6cfe140b281b4d508d0c255e31276173a4e8fc1d5ba392",
+        "logic.rs": "9820d2d8adf392488a94ffb73f6bb89c3ba37be43511579d04acee4d32ed3ed2",
+        "app.rs": "672e9d2caa1392c5dd959e8cc52e9f96620c66a45df4aea7fdd8a30751d46745",
+        "TASK.txt": "b2ec04864b145a474f262f39e421044e5656ffc95c6eb98322c31d6dd7bdbe76",
+        "GUIDE.txt": "dc0cdfda459eaa4953793c7f471da101b61d779627c1083a30ebaf20cb1c2f95",
+        "check.py": "19cfc08bd63439e1487ff9ee80fc4a013b804feb6b424788b2fc62fb63bd278f",
+        "AGENTS.md": "3c8c8fce33c21a65ee4b8a44fe408af1f260accb220adba4fb6a75e331e7ea11"
+      }
+    },
+    "scheduler/python/original": {
+      "prompt_sha256": "e6bcdcad5945b13e3958a0228037790a876c684303243a1fb314b1c8e268f7ce",
+      "prompt_bytes": 10668,
+      "files": {
+        "model.py": "958517ea6bd2485371eee3f1675bc0be7407bf72d43394983c065ae480ff3c20",
+        "logic.py": "b7c61e5d000b6b18e2ab7bc39d646cdc2d8ffb4597f24f2b368d4e0d6636eef1",
+        "app.py": "31b7c9febf46f8ed62ffb7833acbb2872fbf3051b69de20e52a579b836a8e138",
+        "TASK.txt": "8942c6b03933a496bda20addaa4595e0f720184abe75d4a6e5592d9ed3587df4",
+        "GUIDE.txt": "113a49012b7f55256c365e33a5e367d51b851b09d0114b18e9acd9631a51e93e",
+        "check.py": "19cfc08bd63439e1487ff9ee80fc4a013b804feb6b424788b2fc62fb63bd278f",
+        "AGENTS.md": "3c8c8fce33c21a65ee4b8a44fe408af1f260accb220adba4fb6a75e331e7ea11"
+      }
+    },
+    "scheduler/python/dedup": {
+      "prompt_sha256": "087ecd7cd415d83a1f760dcf02bc47b5b5e2cb6597e21d905b73b00734804abc",
+      "prompt_bytes": 6028,
+      "files": {
+        "model.py": "958517ea6bd2485371eee3f1675bc0be7407bf72d43394983c065ae480ff3c20",
+        "logic.py": "b7c61e5d000b6b18e2ab7bc39d646cdc2d8ffb4597f24f2b368d4e0d6636eef1",
+        "app.py": "31b7c9febf46f8ed62ffb7833acbb2872fbf3051b69de20e52a579b836a8e138",
+        "TASK.txt": "8942c6b03933a496bda20addaa4595e0f720184abe75d4a6e5592d9ed3587df4",
+        "GUIDE.txt": "113a49012b7f55256c365e33a5e367d51b851b09d0114b18e9acd9631a51e93e",
+        "check.py": "19cfc08bd63439e1487ff9ee80fc4a013b804feb6b424788b2fc62fb63bd278f",
+        "AGENTS.md": "3c8c8fce33c21a65ee4b8a44fe408af1f260accb220adba4fb6a75e331e7ea11"
+      }
+    },
+    "scheduler/python/schema": {
+      "prompt_sha256": "47119cce96f0b2bc97cee835015eed2d9c6be6ec548ffd3be64be51a85b9450c",
+      "prompt_bytes": 11257,
+      "files": {
+        "model.py": "958517ea6bd2485371eee3f1675bc0be7407bf72d43394983c065ae480ff3c20",
+        "logic.py": "b7c61e5d000b6b18e2ab7bc39d646cdc2d8ffb4597f24f2b368d4e0d6636eef1",
+        "app.py": "31b7c9febf46f8ed62ffb7833acbb2872fbf3051b69de20e52a579b836a8e138",
+        "TASK.txt": "8942c6b03933a496bda20addaa4595e0f720184abe75d4a6e5592d9ed3587df4",
+        "GUIDE.txt": "113a49012b7f55256c365e33a5e367d51b851b09d0114b18e9acd9631a51e93e",
+        "check.py": "19cfc08bd63439e1487ff9ee80fc4a013b804feb6b424788b2fc62fb63bd278f",
+        "AGENTS.md": "3c8c8fce33c21a65ee4b8a44fe408af1f260accb220adba4fb6a75e331e7ea11"
+      }
+    },
+    "scheduler/python/both": {
+      "prompt_sha256": "02028bdfdc4a6bbd13f2def16e413ee0f0bba9ac703b0b519bf97c3d79059d47",
+      "prompt_bytes": 6617,
+      "files": {
+        "model.py": "958517ea6bd2485371eee3f1675bc0be7407bf72d43394983c065ae480ff3c20",
+        "logic.py": "b7c61e5d000b6b18e2ab7bc39d646cdc2d8ffb4597f24f2b368d4e0d6636eef1",
+        "app.py": "31b7c9febf46f8ed62ffb7833acbb2872fbf3051b69de20e52a579b836a8e138",
+        "TASK.txt": "8942c6b03933a496bda20addaa4595e0f720184abe75d4a6e5592d9ed3587df4",
+        "GUIDE.txt": "113a49012b7f55256c365e33a5e367d51b851b09d0114b18e9acd9631a51e93e",
+        "check.py": "19cfc08bd63439e1487ff9ee80fc4a013b804feb6b424788b2fc62fb63bd278f",
+        "AGENTS.md": "3c8c8fce33c21a65ee4b8a44fe408af1f260accb220adba4fb6a75e331e7ea11"
+      }
+    },
+    "frames/lobo/original": {
+      "prompt_sha256": "db5093676424c54e5fd199e866421a532ef5cef79a069a2129a4245396bbe84b",
+      "prompt_bytes": 13714,
+      "files": {
+        "model.lobo": "8f19009753bcb61cfe9bfffb1b2071a6d3d6dbff5924e07cca55397dc8de7da7",
+        "util.lobo": "675dff309d63957c2322be1f6b18a39808f1f27ff17a41210d57c8b8bfb9b343",
+        "logic.lobo": "06e0449403d2be2206fb66dd48c99a327f598ca1fd00c80e8eac93ff5cbac3a5",
+        "logic.lobo.ids.json": "e7a291235940a99eeda7658a083bf7f1027f6cb308114f1aa8141ce7ceca50cf",
+        "app.lobo": "142bad6701d0bd55f85bab75daca46f781995b191389e76d65706653b59196de",
+        "app.lobo.ids.json": "9be6120e78c2604599df4b53da3ef73b62a5050ff036b880d3bcf7303dfb9aeb",
+        "TASK.txt": "4b693c3ae5610d253a8e09a5799a32d57ab2671a30fe9b043a2f7955fe1c014a",
+        "GUIDE.txt": "d6770e2f1b55cb966bfaf138608d4c836a43770709d04a63c9acf88b30f43e1c",
+        "check.py": "19cfc08bd63439e1487ff9ee80fc4a013b804feb6b424788b2fc62fb63bd278f",
+        "AGENTS.md": "3c8c8fce33c21a65ee4b8a44fe408af1f260accb220adba4fb6a75e331e7ea11"
+      }
+    },
+    "frames/lobo/dedup": {
+      "prompt_sha256": "0f2c46504183dedf597ed1793d9e57426f5d93313a25b1f28d20bc451dfc2317",
+      "prompt_bytes": 8094,
+      "files": {
+        "model.lobo": "8f19009753bcb61cfe9bfffb1b2071a6d3d6dbff5924e07cca55397dc8de7da7",
+        "util.lobo": "675dff309d63957c2322be1f6b18a39808f1f27ff17a41210d57c8b8bfb9b343",
+        "logic.lobo": "06e0449403d2be2206fb66dd48c99a327f598ca1fd00c80e8eac93ff5cbac3a5",
+        "logic.lobo.ids.json": "e7a291235940a99eeda7658a083bf7f1027f6cb308114f1aa8141ce7ceca50cf",
+        "app.lobo": "142bad6701d0bd55f85bab75daca46f781995b191389e76d65706653b59196de",
+        "app.lobo.ids.json": "9be6120e78c2604599df4b53da3ef73b62a5050ff036b880d3bcf7303dfb9aeb",
+        "TASK.txt": "4b693c3ae5610d253a8e09a5799a32d57ab2671a30fe9b043a2f7955fe1c014a",
+        "GUIDE.txt": "d6770e2f1b55cb966bfaf138608d4c836a43770709d04a63c9acf88b30f43e1c",
+        "check.py": "19cfc08bd63439e1487ff9ee80fc4a013b804feb6b424788b2fc62fb63bd278f",
+        "AGENTS.md": "3c8c8fce33c21a65ee4b8a44fe408af1f260accb220adba4fb6a75e331e7ea11"
+      }
+    },
+    "frames/lobo/schema": {
+      "prompt_sha256": "3a9d313b6d1e1b10dd335241b5056fd9c17592f3df568a33aef25c0b59c8b4e9",
+      "prompt_bytes": 14392,
+      "files": {
+        "model.lobo": "8f19009753bcb61cfe9bfffb1b2071a6d3d6dbff5924e07cca55397dc8de7da7",
+        "util.lobo": "675dff309d63957c2322be1f6b18a39808f1f27ff17a41210d57c8b8bfb9b343",
+        "logic.lobo": "06e0449403d2be2206fb66dd48c99a327f598ca1fd00c80e8eac93ff5cbac3a5",
+        "logic.lobo.ids.json": "e7a291235940a99eeda7658a083bf7f1027f6cb308114f1aa8141ce7ceca50cf",
+        "app.lobo": "142bad6701d0bd55f85bab75daca46f781995b191389e76d65706653b59196de",
+        "app.lobo.ids.json": "9be6120e78c2604599df4b53da3ef73b62a5050ff036b880d3bcf7303dfb9aeb",
+        "TASK.txt": "4b693c3ae5610d253a8e09a5799a32d57ab2671a30fe9b043a2f7955fe1c014a",
+        "GUIDE.txt": "d6770e2f1b55cb966bfaf138608d4c836a43770709d04a63c9acf88b30f43e1c",
+        "check.py": "19cfc08bd63439e1487ff9ee80fc4a013b804feb6b424788b2fc62fb63bd278f",
+        "AGENTS.md": "3c8c8fce33c21a65ee4b8a44fe408af1f260accb220adba4fb6a75e331e7ea11"
+      }
+    },
+    "frames/lobo/both": {
+      "prompt_sha256": "c49399c00610335bc94188eeeb08ede8d25b93b51605dacee533287585a1ed76",
+      "prompt_bytes": 8772,
+      "files": {
+        "model.lobo": "8f19009753bcb61cfe9bfffb1b2071a6d3d6dbff5924e07cca55397dc8de7da7",
+        "util.lobo": "675dff309d63957c2322be1f6b18a39808f1f27ff17a41210d57c8b8bfb9b343",
+        "logic.lobo": "06e0449403d2be2206fb66dd48c99a327f598ca1fd00c80e8eac93ff5cbac3a5",
+        "logic.lobo.ids.json": "e7a291235940a99eeda7658a083bf7f1027f6cb308114f1aa8141ce7ceca50cf",
+        "app.lobo": "142bad6701d0bd55f85bab75daca46f781995b191389e76d65706653b59196de",
+        "app.lobo.ids.json": "9be6120e78c2604599df4b53da3ef73b62a5050ff036b880d3bcf7303dfb9aeb",
+        "TASK.txt": "4b693c3ae5610d253a8e09a5799a32d57ab2671a30fe9b043a2f7955fe1c014a",
+        "GUIDE.txt": "d6770e2f1b55cb966bfaf138608d4c836a43770709d04a63c9acf88b30f43e1c",
+        "check.py": "19cfc08bd63439e1487ff9ee80fc4a013b804feb6b424788b2fc62fb63bd278f",
+        "AGENTS.md": "3c8c8fce33c21a65ee4b8a44fe408af1f260accb220adba4fb6a75e331e7ea11"
+      }
+    },
+    "frames/rust/original": {
+      "prompt_sha256": "d4e1a4dbbbf103af73879b2be9eb84bb6a6f201e0652db64964bea01e09c60a2",
+      "prompt_bytes": 9955,
+      "files": {
+        "model.rs": "ef1a9c3bd9c4ed9639bc4144520853a9f46a4324c7a5f0cec5d6a69901269e6b",
+        "logic.rs": "d8ac21b05ddd5c501a5d616e1384104f7e5edce29c4ed494498aedb566d77b24",
+        "app.rs": "1276b1f5e67b8b0b9447fcbf21afdf713253c68ae63174910db8284a603261e9",
+        "TASK.txt": "3c21c90679666dd955d7508cc169baee14d6e176d8020ba3ad03ac0778124d1a",
+        "GUIDE.txt": "dc0cdfda459eaa4953793c7f471da101b61d779627c1083a30ebaf20cb1c2f95",
+        "check.py": "19cfc08bd63439e1487ff9ee80fc4a013b804feb6b424788b2fc62fb63bd278f",
+        "AGENTS.md": "3c8c8fce33c21a65ee4b8a44fe408af1f260accb220adba4fb6a75e331e7ea11"
+      }
+    },
+    "frames/rust/dedup": {
+      "prompt_sha256": "7967efe98e1b8a7cb5ae85298876b69b631bf668eb3a8ad72a485c54f5378105",
+      "prompt_bytes": 5792,
+      "files": {
+        "model.rs": "ef1a9c3bd9c4ed9639bc4144520853a9f46a4324c7a5f0cec5d6a69901269e6b",
+        "logic.rs": "d8ac21b05ddd5c501a5d616e1384104f7e5edce29c4ed494498aedb566d77b24",
+        "app.rs": "1276b1f5e67b8b0b9447fcbf21afdf713253c68ae63174910db8284a603261e9",
+        "TASK.txt": "3c21c90679666dd955d7508cc169baee14d6e176d8020ba3ad03ac0778124d1a",
+        "GUIDE.txt": "dc0cdfda459eaa4953793c7f471da101b61d779627c1083a30ebaf20cb1c2f95",
+        "check.py": "19cfc08bd63439e1487ff9ee80fc4a013b804feb6b424788b2fc62fb63bd278f",
+        "AGENTS.md": "3c8c8fce33c21a65ee4b8a44fe408af1f260accb220adba4fb6a75e331e7ea11"
+      }
+    },
+    "frames/rust/schema": {
+      "prompt_sha256": "77577661d484416821b88f8ad51f905d4ad5f20b7387b72181fbacd4fc5a60f6",
+      "prompt_bytes": 10633,
+      "files": {
+        "model.rs": "ef1a9c3bd9c4ed9639bc4144520853a9f46a4324c7a5f0cec5d6a69901269e6b",
+        "logic.rs": "d8ac21b05ddd5c501a5d616e1384104f7e5edce29c4ed494498aedb566d77b24",
+        "app.rs": "1276b1f5e67b8b0b9447fcbf21afdf713253c68ae63174910db8284a603261e9",
+        "TASK.txt": "3c21c90679666dd955d7508cc169baee14d6e176d8020ba3ad03ac0778124d1a",
+        "GUIDE.txt": "dc0cdfda459eaa4953793c7f471da101b61d779627c1083a30ebaf20cb1c2f95",
+        "check.py": "19cfc08bd63439e1487ff9ee80fc4a013b804feb6b424788b2fc62fb63bd278f",
+        "AGENTS.md": "3c8c8fce33c21a65ee4b8a44fe408af1f260accb220adba4fb6a75e331e7ea11"
+      }
+    },
+    "frames/rust/both": {
+      "prompt_sha256": "0a18c4f5beb631471ec0e565f57356a1e16e5a0c3a5831f80005521f57b8254f",
+      "prompt_bytes": 6470,
+      "files": {
+        "model.rs": "ef1a9c3bd9c4ed9639bc4144520853a9f46a4324c7a5f0cec5d6a69901269e6b",
+        "logic.rs": "d8ac21b05ddd5c501a5d616e1384104f7e5edce29c4ed494498aedb566d77b24",
+        "app.rs": "1276b1f5e67b8b0b9447fcbf21afdf713253c68ae63174910db8284a603261e9",
+        "TASK.txt": "3c21c90679666dd955d7508cc169baee14d6e176d8020ba3ad03ac0778124d1a",
+        "GUIDE.txt": "dc0cdfda459eaa4953793c7f471da101b61d779627c1083a30ebaf20cb1c2f95",
+        "check.py": "19cfc08bd63439e1487ff9ee80fc4a013b804feb6b424788b2fc62fb63bd278f",
+        "AGENTS.md": "3c8c8fce33c21a65ee4b8a44fe408af1f260accb220adba4fb6a75e331e7ea11"
+      }
+    },
+    "frames/python/original": {
+      "prompt_sha256": "57752df84918a7e9271a7afeb886f4676d50a1847a39ebc34737f77177f238e9",
+      "prompt_bytes": 9555,
+      "files": {
+        "model.py": "1835c96386946241180506a20545ca0afc2f04b02b9a58abe7b2df3191a82ed9",
+        "logic.py": "245918ada55284be5826bb2cd51ca5bc41e4879e51a9b3bd08fb2c757c09269e",
+        "app.py": "de5f172372195558cf705966b31e12acc4dcee498f5f2da10a58cecb3f94871e",
+        "TASK.txt": "31f012248e9da275c590d020423524254e45518f0e25eba373389474a7854a9a",
+        "GUIDE.txt": "113a49012b7f55256c365e33a5e367d51b851b09d0114b18e9acd9631a51e93e",
+        "check.py": "19cfc08bd63439e1487ff9ee80fc4a013b804feb6b424788b2fc62fb63bd278f",
+        "AGENTS.md": "3c8c8fce33c21a65ee4b8a44fe408af1f260accb220adba4fb6a75e331e7ea11"
+      }
+    },
+    "frames/python/dedup": {
+      "prompt_sha256": "1861f3a9c5949afb11525afbc57c7e5841b3947d45662cd5e7ad8f96c47a0553",
+      "prompt_bytes": 5465,
+      "files": {
+        "model.py": "1835c96386946241180506a20545ca0afc2f04b02b9a58abe7b2df3191a82ed9",
+        "logic.py": "245918ada55284be5826bb2cd51ca5bc41e4879e51a9b3bd08fb2c757c09269e",
+        "app.py": "de5f172372195558cf705966b31e12acc4dcee498f5f2da10a58cecb3f94871e",
+        "TASK.txt": "31f012248e9da275c590d020423524254e45518f0e25eba373389474a7854a9a",
+        "GUIDE.txt": "113a49012b7f55256c365e33a5e367d51b851b09d0114b18e9acd9631a51e93e",
+        "check.py": "19cfc08bd63439e1487ff9ee80fc4a013b804feb6b424788b2fc62fb63bd278f",
+        "AGENTS.md": "3c8c8fce33c21a65ee4b8a44fe408af1f260accb220adba4fb6a75e331e7ea11"
+      }
+    },
+    "frames/python/schema": {
+      "prompt_sha256": "d1b69b175ed4f5945800caba64dcd76589cfd21bb952be33759139d804ca24b9",
+      "prompt_bytes": 10233,
+      "files": {
+        "model.py": "1835c96386946241180506a20545ca0afc2f04b02b9a58abe7b2df3191a82ed9",
+        "logic.py": "245918ada55284be5826bb2cd51ca5bc41e4879e51a9b3bd08fb2c757c09269e",
+        "app.py": "de5f172372195558cf705966b31e12acc4dcee498f5f2da10a58cecb3f94871e",
+        "TASK.txt": "31f012248e9da275c590d020423524254e45518f0e25eba373389474a7854a9a",
+        "GUIDE.txt": "113a49012b7f55256c365e33a5e367d51b851b09d0114b18e9acd9631a51e93e",
+        "check.py": "19cfc08bd63439e1487ff9ee80fc4a013b804feb6b424788b2fc62fb63bd278f",
+        "AGENTS.md": "3c8c8fce33c21a65ee4b8a44fe408af1f260accb220adba4fb6a75e331e7ea11"
+      }
+    },
+    "frames/python/both": {
+      "prompt_sha256": "4f020ad1064ac3f1c3e39b476f586bb30a18d04af3e5c88c3d81eb985e0f7402",
+      "prompt_bytes": 6143,
+      "files": {
+        "model.py": "1835c96386946241180506a20545ca0afc2f04b02b9a58abe7b2df3191a82ed9",
+        "logic.py": "245918ada55284be5826bb2cd51ca5bc41e4879e51a9b3bd08fb2c757c09269e",
+        "app.py": "de5f172372195558cf705966b31e12acc4dcee498f5f2da10a58cecb3f94871e",
+        "TASK.txt": "31f012248e9da275c590d020423524254e45518f0e25eba373389474a7854a9a",
+        "GUIDE.txt": "113a49012b7f55256c365e33a5e367d51b851b09d0114b18e9acd9631a51e93e",
+        "check.py": "19cfc08bd63439e1487ff9ee80fc4a013b804feb6b424788b2fc62fb63bd278f",
+        "AGENTS.md": "3c8c8fce33c21a65ee4b8a44fe408af1f260accb220adba4fb6a75e331e7ea11"
+      }
+    }
+  },
+  "validation_sha256": "82be3f8e905554116ec8575cc88bf6c0f43b9f8e185487023efe7041472d14f9",
+  "environment": {
+    "versions": [
+      {
+        "command": [
+          "codex",
+          "--version"
+        ],
+        "stdout": "codex-cli 0.171.0\n",
+        "stderr": "",
+        "executable": "/home/luis/.codex/packages/standalone/releases/0.171.0-x86_64-unknown-linux-musl/bin/codex",
+        "sha256": "b76a027d6b210f9a8da7aaf321dd235c700f0ef7a794d4a5314b9af6c134f0f0"
+      },
+      {
+        "command": [
+          "rustc",
+          "--version"
+        ],
+        "stdout": "rustc 1.92.0 (ded5c06cf 2025-12-08)\n",
+        "stderr": "",
+        "executable": "/home/luis/.cargo/bin/rustup",
+        "sha256": "20a06e644b0d9bd2fbdbfd52d42540bdde820ea7df86e92e533c073da0cdd43c"
+      },
+      {
+        "command": [
+          "clang",
+          "--version"
+        ],
+        "stdout": "Ubuntu clang version 18.1.3 (1ubuntu1)\nTarget: x86_64-pc-linux-gnu\nThread model: posix\nInstalledDir: /usr/bin\n",
+        "stderr": "",
+        "executable": "/usr/lib/llvm-18/bin/clang",
+        "sha256": "8ef402d453d1ba4902e4ee0f0f847f6cfa01400c95aa43c24e97818b9c0e3f45"
+      },
+      {
+        "command": [
+          "python3",
+          "--version"
+        ],
+        "stdout": "Python 3.12.3\n",
+        "stderr": "",
+        "executable": "/usr/bin/python3.12",
+        "sha256": "e50d468e8b0adfb05733f5b87b3cff34829c4a8c1aea50c865aa8bdfe4bb150f"
+      }
+    ],
+    "logical_cpus": 16,
+    "load": [
+      0.84619140625,
+      1.43310546875,
+      1.77587890625
+    ],
+    "recorded_unix": 1795495719.3563678
+  },
+  "limits": {
+    "deadline_s": 120,
+    "tools": 0,
+    "hard_token_cap": null
+  },
+  "scope": "Source-only comprehension, fresh contexts and fresh program/question variants. No reference graph exposure, no product or frozen-fixture edits.",
+  "interventions": {
+    "dedup": "Remove only FILE TASK.txt and FILE GUIDE.txt duplicates, retain other noise.",
+    "schema": "Append one language-neutral input schema; identical bytes for all languages in each family."
+  },
+  "analysis": "Report all attempts/items by arm, language and effort; matched within-question discordances, usage including cache, wall time and unknowns. Pilot is descriptive: one program form/family, no powered generalization or posthoc task tuning.",
+  "failure_policy": "No retries/replacements. After three consecutive infrastructure failures stop that cohort, record remaining assignments. One excluded source-free availability canary per effort. Missing terminal usage is unknown.",
+  "limitations": [
+    "Four-arm matched questions repeat across stateless independent invocations; provider caching and time drift remain possible.",
+    "High then low order prevents a causal reasoning comparison.",
+    "Fresh programs change constants/helper names/order policy relative to old studies; do not interpret old-vs-new score differences as treatment effects.",
+    "Parent/harness-development tokens and actual billing unavailable.",
+    "Graph usefulness not measured in this experiment."
+  ]
+}

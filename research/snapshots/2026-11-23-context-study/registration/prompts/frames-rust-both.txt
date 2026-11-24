@@ -1,0 +1,52 @@
+Source-only comprehension. Do not use tools.
+Task family: frames. Phase: comprehension.
+Implement run(data,limit)->Summary(frames,consumed,error). data is bytes of length<=512;0<=limit<=64. Each frame is one unsigned length byte n, followed by n payload bytes, followed by one checksum byte equal to (7+sum(payload))%256. Empty payload is valid and needs checksum7. Parse from left to right, retaining payloads in input order. At a frame start: first reject n>limit with error3 EVEN IF payload/checksum is missing; otherwise missing payload/checksum is error1; otherwise wrong checksum is error2. Stop on the first error. consumed is the offending frame's START offset; retain only earlier valid frames. With no error, consumed=len(data),error=0. Empty input succeeds. frames is a list of bytes values, not decoded text.
+
+Required signature: run(data:&[u8],limit:i64).
+
+Analyze the supplied program without executing it. Return ONE JSON object with keys: predictions (the SIX full normalized Summary objects for the inputs below, in order); witness (any valid input yielding {"frames": ["0a", "0b0c"], "consumed": 7, "error": 0}; unspecified Summary fields can have any value); direct_calls (names of application functions directly invoked by run, ignoring constructors/builtins/standard-library methods and util.reverse); impacted (names of functions in logic whose return values can change for identical direct arguments if size_allowed additionally rejects length==2, retaining the inclusive upper limit; include the edited predicate itself, ignore reachability alone); fault_location (the predicate function responsible for that policy); counterexample (any valid input distinguishing the original program from that mutant). Bytes in answers are lowercase hexadecimal strings. Use plain function names without module prefixes. No tools/target execution. Inputs:
+[{"data": "0007", "limit": 1}, {"data": "02040510", "limit": 3}, {"data": "0109100203040e", "limit": 3}, {"data": "0109100203040f", "limit": 3}, {"data": "0401", "limit": 3}, {"data": "0109100203", "limit": 3}]
+Use NO tools or execution; reason from the supplied source. End with ONLY the requested JSON object, no Markdown.
+
+Use only the supplied task directory. Read TASK.txt, GUIDE.txt and the model/algorithm files. Change only the listed editable files. The app and models are trusted read-only adapters. No dependencies, network, file IO, subprocesses or unsafe code in the algorithm. Standard in-memory collections are allowed. Host-injected instruction/skill reads are permitted when required, but other trials, repository code, private graders and reference solutions are outside scope. Do not inspect the compiler binary or its parent directory. Use python3 check.py to submit a visible check; the host compiles and grades a snapshot, at most six submissions. No direct compiler/test invocation is needed. Initial stubs may compile but are deliberately incorrect. Use checks before and after editing. Build artifacts belong to the host. End with a concise result. All inputs and arithmetic fit signed 64-bit values under the stated bounds; results must preserve exact integers. No output or external side effects in run().
+
+Rust edition 2021, standard library only. logic.rs exports pub fn run with the signature in TASK.txt; app.rs and model.rs are fixed. Import DTOs with use crate::model::{Event,Summary} or {Job,Summary}. Event payload variants are Event::Credit(i64), Event::Debit(i64), Event::Lock, Event::Unlock; the change model also has Event::Undo. Job has public id:i64, cost:i64, deps:Vec<i64>; the change model also has priority:i64. Summary fields are public and listed in model.rs. Use Vec<T>, slices &[T], .iter(), .len(), .contains(), push/pop, pattern matching and ordinary helpers as needed. Constructors use Summary {field:value,...}. No serde or external crates are available. The host builds optimized machine code with rustc --edition=2021 -C opt-level=3 -C overflow-checks=yes -C panic=abort -C strip=symbols. Build/check work is included in your wall budget. Submit with python3 check.py rather than modifying the wrapper. No file/network/process IO or unsafe code in logic.rs.
+FILE model.rs
+pub struct Summary {pub frames:Vec<Vec<u8>>,pub consumed:i64,pub error:i64}
+
+FILE logic.rs
+use crate::model::Summary;
+struct Header {length:i64,payload:usize,error:i64}
+fn read_size(data:&[u8],start:usize)->Header {Header {length:data[start] as i64,payload:start+1,error:0}}
+fn size_allowed(length:i64,limit:i64)->bool {length<=limit}
+fn payload_checksum(data:&[u8])->u8 {data.iter().fold(7u8,|sum,b|sum.wrapping_add(*b))}
+pub fn run(data:&[u8],limit:i64)->Summary {
+ let mut frames=Vec::new();let mut cursor=0;let mut error=0;
+ while cursor<data.len() && error==0 {
+  let header=read_size(data,cursor);
+  if header.error!=0 {error=header.error;} else if !size_allowed(header.length,limit) {error=3;}
+  else if data.len()-header.payload<(header.length+1) as usize {error=1;}
+  else {let end=header.payload+header.length as usize;let payload=&data[header.payload..end];
+   if payload_checksum(payload)!=data[end] {error=2;} else {frames.push(payload.to_vec());cursor=end+1;}
+  }
+ }
+ Summary {frames,consumed:cursor as i64,error}
+}
+
+FILE check.py
+import json,time,uuid
+from pathlib import Path
+root=Path('.check-io');root.mkdir(exist_ok=True)
+key=uuid.uuid4().hex
+(root/(key+'.request.json')).write_text('{}')
+response=root/(key+'.response.json')
+end=time.monotonic()+40
+while not response.exists() and time.monotonic()<end:time.sleep(.05)
+if not response.exists():raise SystemExit('controller timeout')
+print(response.read_text())
+
+FILE AGENTS.md
+This is an isolated matched experiment. Follow TASK.txt and GUIDE.txt. Only the declared algorithm files are editable. Do not inspect other directories.
+
+INPUT DOCUMENTATION v1 (identical across languages). Inputs are JSON objects. Integers below are JSON integers, not strings, floats or booleans. Arrays preserve order. The harness converts this wire representation to the run signature; this is not language syntax.
+Fields: limit: integer in [0,64]; data: even-length hexadecimal string encoding at most512 raw bytes, two hexadecimal digits per byte. Input hex accepts either letter case; output bytes use lowercase hex. Decode data before calling run: the string is not UTF-8 payload text, a decimal number, or one byte per digit. An empty string encodes zero bytes. All offsets and lengths in the program count decoded bytes.

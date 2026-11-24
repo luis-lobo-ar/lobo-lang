@@ -1,0 +1,16 @@
+{
+  "format": "lobo-identities/0.1",
+  "identities": {
+    "module": "study.frames.app",
+    "model.Summary": "study.frames.Summary",
+    "logic.run": "study.frames.run",
+    "SumCursor": "study.frames.app.SumCursor",
+    "FrameCursor": "study.frames.app.FrameCursor",
+    "sum_list": "study.frames.app.sum_list",
+    "sum_bytes": "study.frames.app.sum_bytes",
+    "sum_frames": "study.frames.app.sum_frames",
+    "digest_summary": "study.frames.app.digest_summary",
+    "entry": "study.frames.entry",
+    "bench": "study.frames.bench"
+  }
+}

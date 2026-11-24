@@ -1,0 +1,14 @@
+{
+  "format": "lobo-identities/0.1",
+  "identities": {
+    "module": "study.ledger.logic",
+    "model.Summary": "study.ledger.Summary",
+    "util.reverse": "study.util.reverse",
+    "model.Event": "study.ledger.Event",
+    "State": "study.ledger.State",
+    "Cursor": "study.ledger.Cursor",
+    "amount_allowed": "study.ledger.valid_amount",
+    "apply_event": "study.ledger.step",
+    "run": "study.ledger.run"
+  }
+}
