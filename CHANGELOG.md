@@ -1,5 +1,15 @@
 # Lobo change ledger
 
+## 2026-11-24 — Small checked-reference pilot
+
+Completed24 preregistered source-only attempts at frozen1.11.2. Existing/clean/targeted guides give
+68/80,67/80,80/80 correct items and0/8,0/8,8/8 whole tasks. Short topic cards fix these selected
+admission errors at both high/low reasoning. Cleanup alone gives no accuracy gain. Combined median
+paired reported tokens fall2.2%; billing and generalization remain unknown. All outcomes, TDD failures,
+new native/static/mutation checks and prior evidence are preserved. The unchanged312-pass compiler
+receipt is reused, not newly rerun. No compiler/library/editor or old reference changes. See
+[the report](research/compact-pilot-2026-11-24.md), decision0068 and paper local-043.
+
 ## 2026-11-24 — Separate response contracts, reference and graph presentation
 
 Completed all 84 registered fresh-question attempts at frozen 1.11.2. Explicit response-profile disclosure

@@ -1423,6 +1423,67 @@
         "Billing savings, total study-development usage or immutable model identity",
         "Permission to change tested materials, run more trials or unfreeze the language"
       ]
+    },
+    {
+      "id": "local-043",
+      "date": "2026-11-24",
+      "title": "Small reading-guide and checked-topic-card pilot",
+      "evidence_kind": "Three registered source-only context contrasts with native/static calibration",
+      "status": "All24 attempts completed; product and tested materials remain frozen",
+      "files": [
+        {
+          "path": "research/compact-pilot-2026-11-24.md",
+          "sha256": "761a1fc994e8bdf6865f293fc37728aab95932c49d67a9ea23907a1de352ef25"
+        },
+        {
+          "path": "benchmarks/results/2026-11-24-compact-pilot.json",
+          "sha256": "1916e89b225a13e313cfe2f59efae1c808169a8667a0d43aebadda820570f1d3"
+        },
+        {
+          "path": "benchmarks/results/2026-11-24-compact-verification.json",
+          "sha256": "10856803931973a79877f8cc518c20bbe5af7b6d27b0b2e397271312d2307058"
+        },
+        {
+          "path": "benchmarks/results/2026-11-24-compact-validation.json",
+          "sha256": "20df7822149f4babdb64dbc46b1a852d5ed79ba414047fbcf19b9757464a4e5f"
+        },
+        {
+          "path": "benchmarks/results/2026-11-24-compact-signature-probes.json",
+          "sha256": "df5323f87af018880a4d4850ad5057b022fd01731b5735cd818d0f42a25bfb78"
+        },
+        {
+          "path": "docs/agent-reference/compact-pilot-2026-11-24/cards.json",
+          "sha256": "c0a288cc94f5ea717beee3bdc27de2068fe6f213de384d8acdfc837f079da64c"
+        },
+        {
+          "path": "docs/agent-reference/compact-pilot-2026-11-24/reading-guide.txt",
+          "sha256": "22573988b598fdbf9e2602500b834f60493d0cc8898d82ee99922585396de9cb"
+        },
+        {
+          "path": "research/snapshots/2026-11-24-compact-pilot/registration/manifest.json",
+          "sha256": "5a0a4c4036c1ab9ea8e1cd80f77f95c5998fb9577c0b34680f630430ce83bd2f"
+        },
+        {
+          "path": "research/snapshots/2026-11-24-compact-pilot/evidence-manifest.json",
+          "sha256": "6dd840cd430a6447debf54fad23583b42960e34df3db019b677cf849ec76b61b"
+        }
+      ],
+      "supports": [
+        "Existing/clean/targeted arms give68/80,67/80,80/80 items and0/8,0/8,8/8 strict whole tasks on four selected fresh program instances",
+        "Targeted cards give4/4 complete high-reasoning and4/4 low-reasoning tasks; errors in other arms concentrate in static admissions",
+        "Guide cleanup alone does not improve accuracy; additional checked facts conditional on cleanup give13 more correct items",
+        "Combined targeted/existing median paired reported token ratio0.9778; targeted/clean1.0009. Wall ratios are descriptive, billing unknown",
+        "All24 strict outcomes,25 failed item checks,26 known usage records and exact prompts/answers retained",
+        "New TDD/harness/native/evaluator/static/signature/mutation checks pass; unchanged earlier312-pass compiler receipt is reused rather than newly run",
+        "All42 previous entries and141 pins remain unchanged"
+      ],
+      "does_not_establish": [
+        "General-language comprehension, independent blind-holdout performance, statistical noninferiority or a general model/language advantage",
+        "Which individual sentence causes an improvement or any causal reasoning-level difference",
+        "Better repository construction, human comprehension, Rust/Python superiority, production safety or native execution speed",
+        "Billing savings, parent development usage, provider request counts or immutable model weights",
+        "Permission for additional model trials, tested-material edits or product unfreeze"
+      ]
     }
   ],
   "backend_recommendation": {

@@ -1,0 +1,167 @@
+{
+  "format": "lobo-compact-topic-packet/1",
+  "date": "2026-11-24",
+  "language": "core/1.11",
+  "compiler": "1.11.2",
+  "coverage": "Four targeted cards; operation coverage is checked for this pilot, not claimed complete for the language.",
+  "buffer_signatures": {
+    "Bytes::empty": {
+      "parameters": [],
+      "result": "Bytes"
+    },
+    "Bytes::length": {
+      "parameters": [
+        "Bytes"
+      ],
+      "result": "I64"
+    },
+    "Bytes::at": {
+      "parameters": [
+        "Bytes",
+        "I64"
+      ],
+      "result": "I64"
+    },
+    "Bytes::slice": {
+      "parameters": [
+        "Bytes",
+        "I64",
+        "I64"
+      ],
+      "result": "Bytes"
+    },
+    "Bytes::push": {
+      "parameters": [
+        "Bytes",
+        "I64"
+      ],
+      "result": "Bytes"
+    },
+    "Bytes::concat": {
+      "parameters": [
+        "Bytes",
+        "Bytes"
+      ],
+      "result": "Bytes"
+    },
+    "Bytes::from_list": {
+      "parameters": [
+        "List<I64>"
+      ],
+      "result": "Bytes"
+    },
+    "Text::bytes": {
+      "parameters": [
+        "Text"
+      ],
+      "result": "Bytes"
+    },
+    "Text::valid": {
+      "parameters": [
+        "Bytes"
+      ],
+      "result": "Bool"
+    },
+    "Text::from_bytes": {
+      "parameters": [
+        "Bytes"
+      ],
+      "result": "Text"
+    },
+    "Text::length": {
+      "parameters": [
+        "Text"
+      ],
+      "result": "I64"
+    },
+    "Text::at": {
+      "parameters": [
+        "Text",
+        "I64"
+      ],
+      "result": "I64"
+    },
+    "Text::slice": {
+      "parameters": [
+        "Text",
+        "I64",
+        "I64"
+      ],
+      "result": "Text"
+    },
+    "Text::concat": {
+      "parameters": [
+        "Text",
+        "Text"
+      ],
+      "result": "Text"
+    }
+  },
+  "cards": {
+    "ranges": {
+      "text": "Buffer operations are pure. Signatures:\nBytes::empty()->Bytes\nBytes::length(Bytes)->I64\nBytes::at(Bytes,I64)->I64\nBytes::slice(Bytes,I64,I64)->Bytes\nBytes::push(Bytes,I64)->Bytes\nBytes::concat(Bytes,Bytes)->Bytes\nBytes::from_list(List<I64>)->Bytes\nText::bytes(Text)->Bytes\nText::valid(Bytes)->Bool\nText::from_bytes(Bytes)->Text\nText::length(Text)->I64\nText::at(Text,I64)->I64\nText::slice(Text,I64,I64)->Text\nText::concat(Text,Text)->Text\nBytes index/count units are raw bytes; Text index/count units are Unicode scalars. slice arguments are start,count, not start,end. at returns I64. Buffers are immutable; concat/push return new values. Text::bytes gives UTF-8 bytes; no implicit Text/Bytes conversion. Byte bounds, byte values outside0..255, invalid slice ranges and invalid UTF-8 in from_bytes fault at runtime, not by static type rejection. Text::valid reports UTF-8 validity as Bool.",
+      "sources": [
+        {
+          "path": "spec/core-v0.7.md",
+          "sha256": "0111fcfce8f7ba3ca9abfa027282113dcb6c31df7fb2d946847260f392efb221",
+          "anchor": "## Explicit operations"
+        }
+      ]
+    },
+    "nominal": {
+      "text": "Records/variants have nominal identity: similar fields do not make types interchangeable. A record update Type {...base,field:value} needs the same nominal record and generic arguments as base; unmentioned fields are preserved. Generic constructors can infer arguments from fields/payloads or an identifying expected nominal type. With such an expected variant type, a payload-free case may be written Case or Case(). No global case-name search occurs. A bare case without an identifying expected type is unresolved. Generic FUNCTION calls infer from argument constraints, not their expected return type; use explicit specialization when no argument determines a parameter. Declaration boundary types remain explicit. Match handles every case with matching arm result types.",
+      "sources": [
+        {
+          "path": "spec/core-v1.4.md",
+          "sha256": "01b365a0c8874db2ad9982e1e85dc036cf22cf31521c2b28c943c08888edf9b2",
+          "anchor": "## Generic function calls"
+        },
+        {
+          "path": "spec/core-v1.5.md",
+          "sha256": "dac4877adab3d738fb05fc57c37436106a22206a3069446a00c47de65c1abdda",
+          "anchor": "## Contextual variant cases"
+        },
+        {
+          "path": "spec/core-v1.10.md",
+          "sha256": "45d45f48a14fda25275c50ea02d6d65854d14e3fb6989ea56ef6d1aba62ec308",
+          "anchor": "## Immutable record updates"
+        }
+      ]
+    },
+    "propagation": {
+      "text": "try operand is prefix propagation: exactly two payload cases Ok(T),Err(E) are required in operand and enclosing output; error types match exactly, no conversion. Ok yields its payload; Err exits only the enclosing FUNCTION, including from loops or branches. Callers continue with the returned result. Direct prefix try is forbidden in requires/ensures. A PURE helper may use try in its own body and be called by a contract. The identifier try is legal for functions/variables. try(value) and try (value) are ordinary function calls, not propagation; they require a callable named try. Runtime faults are not caught. Postconditions run on propagated errors too. No implicit resource cleanup is added.",
+      "sources": [
+        {
+          "path": "spec/core-v1.8.md",
+          "sha256": "422e050a2b5aa621e9b236f003084fa5398995e3144b3781b998092422255eb6",
+          "anchor": "## Type rule"
+        },
+        {
+          "path": "spec/core-v1.8.md",
+          "sha256": "422e050a2b5aa621e9b236f003084fa5398995e3144b3781b998092422255eb6",
+          "anchor": "## Contextual spelling"
+        }
+      ]
+    },
+    "contracts": {
+      "text": "requires and ensures expressions must be Bool and pure, regardless of the enclosing function action declaration. Calls to any function with a nonempty DECLARED action bound are forbidden in contracts, even if its body is currently pure or its call is in an unreachable/short-circuited branch. All functions, branches and generic bodies are statically checked, including unused ones. Static checking establishes types/actions, not truth of preconditions/postconditions, termination or absence of runtime faults. A well-typed false contract or unexecuted faulting expression can pass check. On invocation, preconditions run before the body; postconditions run after normal or propagated results. Short-circuiting skips unevaluated calls at runtime only.",
+      "sources": [
+        {
+          "path": "spec/core-v0.3.md",
+          "sha256": "96e39f958c14b082ad0f3a0c72dc0b3318a7c1c442812b35c338d35b00759543",
+          "anchor": "## Checking and purity"
+        },
+        {
+          "path": "spec/core-v1.0.md",
+          "sha256": "8dbc2ca888f49b84125a8faedf39160bb1eab27e0f25b336b1ef8f87f14f3b2b",
+          "anchor": "## Types, contracts and representation"
+        },
+        {
+          "path": "spec/core-v1.8.md",
+          "sha256": "422e050a2b5aa621e9b236f003084fa5398995e3144b3781b998092422255eb6",
+          "anchor": "## Execution"
+        }
+      ]
+    }
+  }
+}

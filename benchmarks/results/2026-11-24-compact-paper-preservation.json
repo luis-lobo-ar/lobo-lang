@@ -1,0 +1,14 @@
+{
+  "format": "lobo-paper-preservation/1",
+  "date": "2026-11-24",
+  "new_entry": "local-043",
+  "prior_entries": 42,
+  "prior_pins": 141,
+  "all_prior_entry_objects_unchanged": true,
+  "all_prior_pins_unchanged": true,
+  "entries": 43,
+  "pins": 150,
+  "all_current_file_hashes_verified": true,
+  "index_sha256": "08b3c5a2b12202eef0e3d4ee2cd8b24b9e76aa1a3e72f1d9101371e232c416c6",
+  "limits": "Append-only evidence entry. Local raw archive is not an off-device backup. No prior score or scope is replaced."
+}

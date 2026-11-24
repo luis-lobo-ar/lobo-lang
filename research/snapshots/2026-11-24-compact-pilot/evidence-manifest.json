@@ -1,0 +1,996 @@
+{
+  "date": "2026-11-24",
+  "files": [
+    {
+      "path": "research/snapshots/2026-11-24-compact-pilot/.gitattributes",
+      "sha256": "68875ee60e8a378e700ba991c58a47cac197248aa638717c39fd48abd2e58727",
+      "bytes": 188
+    },
+    {
+      "path": "research/snapshots/2026-11-24-compact-pilot/README.md",
+      "sha256": "974c8feddd8433554c5100316a27891d2eb8fd8a3a5c84f16e6ca426fcb681ec",
+      "bytes": 609
+    },
+    {
+      "path": "research/snapshots/2026-11-24-compact-pilot/archive-evidence.py",
+      "sha256": "f83b73ce5b3b31de5bc70c1e4c7935455b522b789938e05afac3c5c1e1366c70",
+      "bytes": 2077
+    },
+    {
+      "path": "research/snapshots/2026-11-24-compact-pilot/code/benchmarks/matched-study/compact.py",
+      "sha256": "8250c7398ebd6b21829a3146ba32bd69977b3e293ec1a3192d5c90d5257a89f9",
+      "bytes": 18417
+    },
+    {
+      "path": "research/snapshots/2026-11-24-compact-pilot/code/benchmarks/matched-study/compact_report.py",
+      "sha256": "88353ad2ffcdb6406b3634974cd3e90bfdf01360e9e1c6cb3574f82ca02e8e53",
+      "bytes": 5086
+    },
+    {
+      "path": "research/snapshots/2026-11-24-compact-pilot/code/benchmarks/matched-study/context.py",
+      "sha256": "05e5c702ff967e00e135368d9e00eb3a0296efbcaf028fcf169b0b81da08d156",
+      "bytes": 22350
+    },
+    {
+      "path": "research/snapshots/2026-11-24-compact-pilot/code/benchmarks/matched-study/context_report.py",
+      "sha256": "2ae4867a9db65208da8647fab5e7d235bb5f4aafb61dfd9e6032a381f16c74bb",
+      "bytes": 9181
+    },
+    {
+      "path": "research/snapshots/2026-11-24-compact-pilot/code/benchmarks/matched-study/learning.py",
+      "sha256": "b41678da7dc3d1c2bdabe27e04281b491f900a5956155ae3a4dfc8a7b41fccf5",
+      "bytes": 19986
+    },
+    {
+      "path": "research/snapshots/2026-11-24-compact-pilot/code/benchmarks/matched-study/learning_corpus.py",
+      "sha256": "a75bbe1ffefa09525fa5b761daa31576ead4b85b2bd63b632018c38318a52385",
+      "bytes": 15936
+    },
+    {
+      "path": "research/snapshots/2026-11-24-compact-pilot/code/benchmarks/matched-study/learning_report.py",
+      "sha256": "ce0fbd5d968cafcb9e4fd4fe67703399a76b22819b1f7535c0dc14bdae829d0c",
+      "bytes": 5388
+    },
+    {
+      "path": "research/snapshots/2026-11-24-compact-pilot/code/benchmarks/matched-study/luna.py",
+      "sha256": "5c02b9846c7af3211ad70cf212e8f119b3360bce8e29b2c2032a9792b321509c",
+      "bytes": 9748
+    },
+    {
+      "path": "research/snapshots/2026-11-24-compact-pilot/code/benchmarks/matched-study/response_contract.py",
+      "sha256": "f37d2afd1a7611e72001bf55515db502dd954f3de1ab005868a151fb0039c2d1",
+      "bytes": 4072
+    },
+    {
+      "path": "research/snapshots/2026-11-24-compact-pilot/code/benchmarks/matched-study/study.py",
+      "sha256": "1c05a60a0c431a9d9336f7b28c9fcfb9f69446cb24ead52f380d1a5d4c838bf0",
+      "bytes": 69354
+    },
+    {
+      "path": "research/snapshots/2026-11-24-compact-pilot/code/benchmarks/matched-study/test_compact.py",
+      "sha256": "89393bcbf95f90657a7fd82671f92be0a39074c5ea4d22b878e9b0ba0da3192f",
+      "bytes": 3216
+    },
+    {
+      "path": "research/snapshots/2026-11-24-compact-pilot/code/benchmarks/matched-study/test_compact_report.py",
+      "sha256": "c7b51f1e8775d98bb607c6621fbd89a6826ba72f264f35783e43338221242140",
+      "bytes": 1091
+    },
+    {
+      "path": "research/snapshots/2026-11-24-compact-pilot/code/benchmarks/matched-study/test_learning.py",
+      "sha256": "a7064b64aa1646c10682106e10ef030ebb47d0448e85653a8337b84a9ad16b84",
+      "bytes": 6670
+    },
+    {
+      "path": "research/snapshots/2026-11-24-compact-pilot/code/benchmarks/matched-study/test_learning_report.py",
+      "sha256": "03251faca92b14302932547c2e3cb247cd1762a6a4f6c2bdcffa4d8f50de60fa",
+      "bytes": 1662
+    },
+    {
+      "path": "research/snapshots/2026-11-24-compact-pilot/code/docs/agent-reference/1.11.2/concepts.json",
+      "sha256": "393f075c8bb9db80227461135fa30cfa282de86e39db3f379c841a75dac63f55",
+      "bytes": 18430
+    },
+    {
+      "path": "research/snapshots/2026-11-24-compact-pilot/code/docs/agent-reference/1.11.2/reading-examples.lobo",
+      "sha256": "8fa7b6507cab932ef797d068718d7180963baae3c149123bc728346b9bf713b3",
+      "bytes": 925
+    },
+    {
+      "path": "research/snapshots/2026-11-24-compact-pilot/code/docs/agent-reference/compact-pilot-2026-11-24/cards.json",
+      "sha256": "c0a288cc94f5ea717beee3bdc27de2068fe6f213de384d8acdfc837f079da64c",
+      "bytes": 6943
+    },
+    {
+      "path": "research/snapshots/2026-11-24-compact-pilot/code/research/language_reference.py",
+      "sha256": "8809a8feb79085560f8e23de576c1eaba4fd25194898dd8ac59d4d5f9c23d290",
+      "bytes": 4196
+    },
+    {
+      "path": "research/snapshots/2026-11-24-compact-pilot/development/final-audit.json",
+      "sha256": "331ed9b2fcf8336a01651f67aa4075636a62a2045fd552117eaf8f667010e94b",
+      "bytes": 14707
+    },
+    {
+      "path": "research/snapshots/2026-11-24-compact-pilot/development/final-harness-tests.txt",
+      "sha256": "406dc54692a02ea75c6b4b30e106bc689c99c62aa0431099897c67cc1063b96e",
+      "bytes": 139
+    },
+    {
+      "path": "research/snapshots/2026-11-24-compact-pilot/development/final-research-tests.txt",
+      "sha256": "e080ee456859a7b67b594c37dc38bd620e09f385f7b41af9ec7a56311bb5324f",
+      "bytes": 114
+    },
+    {
+      "path": "research/snapshots/2026-11-24-compact-pilot/development/publication.txt",
+      "sha256": "c6dbbb235590fe1288b807111165bed8000ee73109a71412cdf0b52ec6fc4bbf",
+      "bytes": 95
+    },
+    {
+      "path": "research/snapshots/2026-11-24-compact-pilot/development/report-red.txt",
+      "sha256": "ac20610aff544d9b39d425af8cd9ab7f8d0e8b3e3f63a195a50ba41359756969",
+      "bytes": 1312
+    },
+    {
+      "path": "research/snapshots/2026-11-24-compact-pilot/development/tdd-final-green.txt",
+      "sha256": "065c7d15facfd20f14fb9182747be315f3349fa1d5e1a0e966047509f4bfa9b1",
+      "bytes": 104
+    },
+    {
+      "path": "research/snapshots/2026-11-24-compact-pilot/development/tdd-first-green.txt",
+      "sha256": "baf49b59538192f3e136ca0404cac516ecb8dd2fe5ba1416604056f3080fa49c",
+      "bytes": 103
+    },
+    {
+      "path": "research/snapshots/2026-11-24-compact-pilot/development/tdd-green.txt",
+      "sha256": "b95b5805bef96b568b1b2424b637003cd6f306e6312d682e4f2e4e23f635b26a",
+      "bytes": 104
+    },
+    {
+      "path": "research/snapshots/2026-11-24-compact-pilot/development/tdd-red.txt",
+      "sha256": "6a0c39a1bbb0d6a094066d636414f40bd520240adacb258013aec0b6c35f9b31",
+      "bytes": 1277
+    },
+    {
+      "path": "research/snapshots/2026-11-24-compact-pilot/development/validation.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "research/snapshots/2026-11-24-compact-pilot/environment-after.json",
+      "sha256": "733cc61cc41b8f59c4c2c5c30fd50ebff95e58e716050f761118c4a46b1e1f6d",
+      "bytes": 1403
+    },
+    {
+      "path": "research/snapshots/2026-11-24-compact-pilot/environment-before.json",
+      "sha256": "5ec6d421127b4df43893044ac8458709994f32e79943ae6a7be49da5bfc0acd4",
+      "bytes": 1407
+    },
+    {
+      "path": "research/snapshots/2026-11-24-compact-pilot/materials/README.md.txt",
+      "sha256": "be8543478f0fecc46731678ff43b69ed4060ba9319808ba22f59800340c6c420",
+      "bytes": 2069
+    },
+    {
+      "path": "research/snapshots/2026-11-24-compact-pilot/materials/cards.json",
+      "sha256": "c0a288cc94f5ea717beee3bdc27de2068fe6f213de384d8acdfc837f079da64c",
+      "bytes": 6943
+    },
+    {
+      "path": "research/snapshots/2026-11-24-compact-pilot/materials/contracts.txt",
+      "sha256": "86a129a75ffba8cb447f0a97b513cc92abb806b932609fc253273909aae868aa",
+      "bytes": 796
+    },
+    {
+      "path": "research/snapshots/2026-11-24-compact-pilot/materials/nominal.txt",
+      "sha256": "9810070ea2f016955293106bc0f7bf2f9fbb718619ad5b8372f34fbc380a0510",
+      "bytes": 819
+    },
+    {
+      "path": "research/snapshots/2026-11-24-compact-pilot/materials/propagation.txt",
+      "sha256": "d204f387ce82c1a0c1106ec337db631c06ec084c51f7b583f7eb9b45fb38c43f",
+      "bytes": 744
+    },
+    {
+      "path": "research/snapshots/2026-11-24-compact-pilot/materials/ranges.txt",
+      "sha256": "633eac0a1b432389d842277929b485519962a646c07bbe97a69a403b5d217478",
+      "bytes": 934
+    },
+    {
+      "path": "research/snapshots/2026-11-24-compact-pilot/materials/reading-guide.txt",
+      "sha256": "22573988b598fdbf9e2602500b834f60493d0cc8898d82ee99922585396de9cb",
+      "bytes": 2003
+    },
+    {
+      "path": "research/snapshots/2026-11-24-compact-pilot/participant-run.log",
+      "sha256": "f718fc779b392fdc1494a03244aa4fe4593dc47a2c788be29decd67b07fb7b87",
+      "bytes": 7460
+    },
+    {
+      "path": "research/snapshots/2026-11-24-compact-pilot/publish-findings.py",
+      "sha256": "b658877a47d8b2477c8b2477c8ef6d203dbc065db0e133823d7d6031a064d94e",
+      "bytes": 17394
+    },
+    {
+      "path": "research/snapshots/2026-11-24-compact-pilot/raw-archive-manifest.json",
+      "sha256": "6f9005583c70fe0258b6b025447e87fc754105660323b9cc0bd6c815070a3379",
+      "bytes": 56191
+    },
+    {
+      "path": "research/snapshots/2026-11-24-compact-pilot/registration/manifest.json",
+      "sha256": "5a0a4c4036c1ab9ea8e1cd80f77f95c5998fb9577c0b34680f630430ce83bd2f",
+      "bytes": 13688
+    },
+    {
+      "path": "research/snapshots/2026-11-24-compact-pilot/registration/prompt-00.txt",
+      "sha256": "e7934af97af7164b01dae123cde981007c1f0ce5818db93f43117e34e1ea278e",
+      "bytes": 5365
+    },
+    {
+      "path": "research/snapshots/2026-11-24-compact-pilot/registration/prompt-01.txt",
+      "sha256": "d142f28875b8dcb253c77270f18db2d4cb20a1f0cb58b69b2750a3ca3b491284",
+      "bytes": 3925
+    },
+    {
+      "path": "research/snapshots/2026-11-24-compact-pilot/registration/prompt-02.txt",
+      "sha256": "c272203fbf8b96c6a74a395703f1fa1e1e59abcf50aa9fa2c71d57f43e94b3ac",
+      "bytes": 4722
+    },
+    {
+      "path": "research/snapshots/2026-11-24-compact-pilot/registration/prompt-03.txt",
+      "sha256": "c628be55829b4f314f9f73ee9af5045a24cc7005a2b06e2e275722750506638b",
+      "bytes": 4367
+    },
+    {
+      "path": "research/snapshots/2026-11-24-compact-pilot/registration/prompt-04.txt",
+      "sha256": "521e907cb24ef8800c680ffc7e6568909ed8efb4dc8b00625a9948a0a440a0e5",
+      "bytes": 5112
+    },
+    {
+      "path": "research/snapshots/2026-11-24-compact-pilot/registration/prompt-05.txt",
+      "sha256": "270372f48440cdc9b987fda3e3a820c3822be4cb3873ba1ec6ae229b9a679cbf",
+      "bytes": 5807
+    },
+    {
+      "path": "research/snapshots/2026-11-24-compact-pilot/registration/prompt-06.txt",
+      "sha256": "262be3bf4f1f9c384189d3769fd78d5303a372081457a47d1036c4fc5dff7a6d",
+      "bytes": 4933
+    },
+    {
+      "path": "research/snapshots/2026-11-24-compact-pilot/registration/prompt-07.txt",
+      "sha256": "592850b535ea0b165a8ada570f258a4a6d91653e3723d5ff8e17070d18d17459",
+      "bytes": 5553
+    },
+    {
+      "path": "research/snapshots/2026-11-24-compact-pilot/registration/prompt-08.txt",
+      "sha256": "06f6bc58e2220625f7660a197583eab9109c685bd042a2ca1aa006196862472b",
+      "bytes": 4113
+    },
+    {
+      "path": "research/snapshots/2026-11-24-compact-pilot/registration/prompt-09.txt",
+      "sha256": "d75230f468a0a1e47e9ba3a0ac1dd6949909cc3442d28b2737e7ed2d28b7ac8d",
+      "bytes": 5461
+    },
+    {
+      "path": "research/snapshots/2026-11-24-compact-pilot/registration/prompt-10.txt",
+      "sha256": "6fb84e0b3777e538d4bc69ba61ec67467c1d8a5dda84bac8024aa1f222720364",
+      "bytes": 4021
+    },
+    {
+      "path": "research/snapshots/2026-11-24-compact-pilot/registration/prompt-11.txt",
+      "sha256": "0fce9e76ae2ce8670cc788994fa4072729c10d4ab52991997d01b9ae26dd2dfe",
+      "bytes": 4956
+    },
+    {
+      "path": "research/snapshots/2026-11-24-compact-pilot/registration/prompt-12.txt",
+      "sha256": "d142f28875b8dcb253c77270f18db2d4cb20a1f0cb58b69b2750a3ca3b491284",
+      "bytes": 3925
+    },
+    {
+      "path": "research/snapshots/2026-11-24-compact-pilot/registration/prompt-13.txt",
+      "sha256": "c272203fbf8b96c6a74a395703f1fa1e1e59abcf50aa9fa2c71d57f43e94b3ac",
+      "bytes": 4722
+    },
+    {
+      "path": "research/snapshots/2026-11-24-compact-pilot/registration/prompt-14.txt",
+      "sha256": "e7934af97af7164b01dae123cde981007c1f0ce5818db93f43117e34e1ea278e",
+      "bytes": 5365
+    },
+    {
+      "path": "research/snapshots/2026-11-24-compact-pilot/registration/prompt-15.txt",
+      "sha256": "521e907cb24ef8800c680ffc7e6568909ed8efb4dc8b00625a9948a0a440a0e5",
+      "bytes": 5112
+    },
+    {
+      "path": "research/snapshots/2026-11-24-compact-pilot/registration/prompt-16.txt",
+      "sha256": "270372f48440cdc9b987fda3e3a820c3822be4cb3873ba1ec6ae229b9a679cbf",
+      "bytes": 5807
+    },
+    {
+      "path": "research/snapshots/2026-11-24-compact-pilot/registration/prompt-17.txt",
+      "sha256": "c628be55829b4f314f9f73ee9af5045a24cc7005a2b06e2e275722750506638b",
+      "bytes": 4367
+    },
+    {
+      "path": "research/snapshots/2026-11-24-compact-pilot/registration/prompt-18.txt",
+      "sha256": "592850b535ea0b165a8ada570f258a4a6d91653e3723d5ff8e17070d18d17459",
+      "bytes": 5553
+    },
+    {
+      "path": "research/snapshots/2026-11-24-compact-pilot/registration/prompt-19.txt",
+      "sha256": "06f6bc58e2220625f7660a197583eab9109c685bd042a2ca1aa006196862472b",
+      "bytes": 4113
+    },
+    {
+      "path": "research/snapshots/2026-11-24-compact-pilot/registration/prompt-20.txt",
+      "sha256": "262be3bf4f1f9c384189d3769fd78d5303a372081457a47d1036c4fc5dff7a6d",
+      "bytes": 4933
+    },
+    {
+      "path": "research/snapshots/2026-11-24-compact-pilot/registration/prompt-21.txt",
+      "sha256": "6fb84e0b3777e538d4bc69ba61ec67467c1d8a5dda84bac8024aa1f222720364",
+      "bytes": 4021
+    },
+    {
+      "path": "research/snapshots/2026-11-24-compact-pilot/registration/prompt-22.txt",
+      "sha256": "0fce9e76ae2ce8670cc788994fa4072729c10d4ab52991997d01b9ae26dd2dfe",
+      "bytes": 4956
+    },
+    {
+      "path": "research/snapshots/2026-11-24-compact-pilot/registration/prompt-23.txt",
+      "sha256": "d75230f468a0a1e47e9ba3a0ac1dd6949909cc3442d28b2737e7ed2d28b7ac8d",
+      "bytes": 5461
+    },
+    {
+      "path": "research/snapshots/2026-11-24-compact-pilot/validation-sources/contracts/admission-0.lobo",
+      "sha256": "d9189437912b12225164b89b13ed50308be900f7d33f88436d9973929008b0a0",
+      "bytes": 195
+    },
+    {
+      "path": "research/snapshots/2026-11-24-compact-pilot/validation-sources/contracts/admission-0.lobo.ids.json",
+      "sha256": "89aa40a38747f19c9af75a58a6e5e72121e3c83cc4d212dfec090ff69fb94987",
+      "bytes": 241
+    },
+    {
+      "path": "research/snapshots/2026-11-24-compact-pilot/validation-sources/contracts/admission-1.lobo",
+      "sha256": "3389d4802c159abf65f15a004279ce4c181ee17fb903c1a15b8d883f1a78bbff",
+      "bytes": 194
+    },
+    {
+      "path": "research/snapshots/2026-11-24-compact-pilot/validation-sources/contracts/admission-1.lobo.ids.json",
+      "sha256": "342611534a5a571b69a44959f4849213aba404812a492770f677518691a0a3c3",
+      "bytes": 241
+    },
+    {
+      "path": "research/snapshots/2026-11-24-compact-pilot/validation-sources/contracts/admission-2.lobo",
+      "sha256": "4874ad059a51a4edb8cf4e8f05af02a33984384d1a8c968b4b314885bfb45c5f",
+      "bytes": 271
+    },
+    {
+      "path": "research/snapshots/2026-11-24-compact-pilot/validation-sources/contracts/admission-2.lobo.ids.json",
+      "sha256": "0c620ecc178b019619c553b957774da2f154eecd8d2baa0dfee613a0ac66acf4",
+      "bytes": 291
+    },
+    {
+      "path": "research/snapshots/2026-11-24-compact-pilot/validation-sources/contracts/admission-3.lobo",
+      "sha256": "922bc26645187f9c70a0f41ed9674f428595c3219a6dc936dd936c0ecee8c5a3",
+      "bytes": 214
+    },
+    {
+      "path": "research/snapshots/2026-11-24-compact-pilot/validation-sources/contracts/admission-3.lobo.ids.json",
+      "sha256": "467e43e92058218e7e028f79e9a8a863b19e99a54fb7e5e8957617d616ea1de5",
+      "bytes": 241
+    },
+    {
+      "path": "research/snapshots/2026-11-24-compact-pilot/validation-sources/contracts/mutant.lobo",
+      "sha256": "ba3cade16271d3fa8973dcfe2ca9f849e42077da764cc18468f65891db970e4e",
+      "bytes": 390
+    },
+    {
+      "path": "research/snapshots/2026-11-24-compact-pilot/validation-sources/contracts/mutant.lobo.ids.json",
+      "sha256": "bc78f51f6263f3d1badd7e2b00b07d7af9f00d312315e74a1e438fdcf7b06956",
+      "bytes": 436
+    },
+    {
+      "path": "research/snapshots/2026-11-24-compact-pilot/validation-sources/contracts/program.lobo",
+      "sha256": "4a022c13a799dda51481a838edc1765589a8014b5c0f26fe67881703b553856a",
+      "bytes": 390
+    },
+    {
+      "path": "research/snapshots/2026-11-24-compact-pilot/validation-sources/contracts/program.lobo.ids.json",
+      "sha256": "0c5b0fc24f4fb0837372d29f321db1cd4e52224851609a45f0d0752d1f78efcc",
+      "bytes": 373
+    },
+    {
+      "path": "research/snapshots/2026-11-24-compact-pilot/validation-sources/nominal/admission-0.lobo",
+      "sha256": "3f066093bcfabb1d094e5721a2b9c817b14ed5e836dd0822c6a1fc90890a293b",
+      "bytes": 256
+    },
+    {
+      "path": "research/snapshots/2026-11-24-compact-pilot/validation-sources/nominal/admission-0.lobo.ids.json",
+      "sha256": "cdd1e0200551a5f7ab6c7321556096fa75e950a0ec27f945f13c4d36664bf6a3",
+      "bytes": 373
+    },
+    {
+      "path": "research/snapshots/2026-11-24-compact-pilot/validation-sources/nominal/admission-1.lobo",
+      "sha256": "36f799dc26f7dd435a05da3d686e474991518fc089d7130baf11b49c7718162b",
+      "bytes": 310
+    },
+    {
+      "path": "research/snapshots/2026-11-24-compact-pilot/validation-sources/nominal/admission-1.lobo.ids.json",
+      "sha256": "924b28937309fa4528d86d0285ebdde7f178d2c557f40f885edbc7f516364442",
+      "bytes": 415
+    },
+    {
+      "path": "research/snapshots/2026-11-24-compact-pilot/validation-sources/nominal/admission-2.lobo",
+      "sha256": "c9841b3e40428ecfa0f066f8844f9407dbfd33d7e96e97f32b60b73def084dc5",
+      "bytes": 264
+    },
+    {
+      "path": "research/snapshots/2026-11-24-compact-pilot/validation-sources/nominal/admission-2.lobo.ids.json",
+      "sha256": "9f54b85f606dffa92d39d02912572c0452a4d8b9a33f4e3b215d742b2c781266",
+      "bytes": 373
+    },
+    {
+      "path": "research/snapshots/2026-11-24-compact-pilot/validation-sources/nominal/admission-3.lobo",
+      "sha256": "08ac20604901028b1aeefa3615e1c9c0585329624c0261874af2999e389c6290",
+      "bytes": 285
+    },
+    {
+      "path": "research/snapshots/2026-11-24-compact-pilot/validation-sources/nominal/admission-3.lobo.ids.json",
+      "sha256": "1a1292dbee68da42332f91b1b2f0c9d34213072cb41188cc0a95d82375a3663f",
+      "bytes": 415
+    },
+    {
+      "path": "research/snapshots/2026-11-24-compact-pilot/validation-sources/nominal/mutant.lobo",
+      "sha256": "e361b4dcd4196d9bbf26488dcbf8b243871888d3440311ac6bd31fcaad7857b8",
+      "bytes": 597
+    },
+    {
+      "path": "research/snapshots/2026-11-24-compact-pilot/validation-sources/nominal/mutant.lobo.ids.json",
+      "sha256": "f723e3202a58317136fbf080f467dabd2de82c22016f1f3cd223a16dd96225c5",
+      "bytes": 561
+    },
+    {
+      "path": "research/snapshots/2026-11-24-compact-pilot/validation-sources/nominal/program.lobo",
+      "sha256": "7f75b9894600363dc81381b9f740d79e6519f7acb159ca24db506ccf1bb6b214",
+      "bytes": 597
+    },
+    {
+      "path": "research/snapshots/2026-11-24-compact-pilot/validation-sources/nominal/program.lobo.ids.json",
+      "sha256": "f18c986b1f78dc5afed0d5476b265e81f650f738243bd755e9c12a8df5c41eac",
+      "bytes": 477
+    },
+    {
+      "path": "research/snapshots/2026-11-24-compact-pilot/validation-sources/propagation/admission-0.lobo",
+      "sha256": "03916c71169db409102950eaa46bda027f43b55375d4c475533c6b18e250ea75",
+      "bytes": 655
+    },
+    {
+      "path": "research/snapshots/2026-11-24-compact-pilot/validation-sources/propagation/admission-0.lobo.ids.json",
+      "sha256": "a7c055bb0d75a111e3fed448866e6259bc124996f2bd6d8658d744df31ed83a7",
+      "bytes": 505
+    },
+    {
+      "path": "research/snapshots/2026-11-24-compact-pilot/validation-sources/propagation/admission-1.lobo",
+      "sha256": "ac00728894dfc1ebe874c812c2f036738377589413fd27e49a03e94ce1810639",
+      "bytes": 564
+    },
+    {
+      "path": "research/snapshots/2026-11-24-compact-pilot/validation-sources/propagation/admission-1.lobo.ids.json",
+      "sha256": "8d00889e406165a3f4661a6a9d331bbb4319ceed8f3f5459f1e4c07f455bd397",
+      "bytes": 455
+    },
+    {
+      "path": "research/snapshots/2026-11-24-compact-pilot/validation-sources/propagation/admission-2.lobo",
+      "sha256": "ab08f75ed3ef76ba82c259c004b2c957a7b5a7668478dea48d0ae4317de60f05",
+      "bytes": 560
+    },
+    {
+      "path": "research/snapshots/2026-11-24-compact-pilot/validation-sources/propagation/admission-2.lobo.ids.json",
+      "sha256": "79eea509343d2c7225cb28a84b4430d4560ada19fd3f980120b895b5cd82b156",
+      "bytes": 499
+    },
+    {
+      "path": "research/snapshots/2026-11-24-compact-pilot/validation-sources/propagation/admission-3.lobo",
+      "sha256": "3774ff29f5dd49f3d52f419857adda620010aa846f43a192bb0c6fc53c6ccfb4",
+      "bytes": 596
+    },
+    {
+      "path": "research/snapshots/2026-11-24-compact-pilot/validation-sources/propagation/admission-3.lobo.ids.json",
+      "sha256": "26744a7e208c64645c8117522d0aa9b1b95cd5c79d7c8501bd09d495442688f1",
+      "bytes": 509
+    },
+    {
+      "path": "research/snapshots/2026-11-24-compact-pilot/validation-sources/propagation/mutant.lobo",
+      "sha256": "017ea49a454ea9238371723e93b670d1dc479bd7e5c8a3063d06966a6675fe65",
+      "bytes": 715
+    },
+    {
+      "path": "research/snapshots/2026-11-24-compact-pilot/validation-sources/propagation/mutant.lobo.ids.json",
+      "sha256": "decfd2453ff96b52e246a844af5435bc8b7e1c1c8665e0171d4db39b17abe5a1",
+      "bytes": 664
+    },
+    {
+      "path": "research/snapshots/2026-11-24-compact-pilot/validation-sources/propagation/program.lobo",
+      "sha256": "39f053b53cda44f95648b0ec87f070913515cfe7b0f1ba6c3512b30890825685",
+      "bytes": 715
+    },
+    {
+      "path": "research/snapshots/2026-11-24-compact-pilot/validation-sources/propagation/program.lobo.ids.json",
+      "sha256": "c35209434290d34aa8ffea39c2e921701f24e1dde193e73790c29a9073a8e961",
+      "bytes": 573
+    },
+    {
+      "path": "research/snapshots/2026-11-24-compact-pilot/validation-sources/ranges/admission-0.lobo",
+      "sha256": "9830785d19c34add1810c31087d45082050314e6bad7740bb2184030f865a91f",
+      "bytes": 95
+    },
+    {
+      "path": "research/snapshots/2026-11-24-compact-pilot/validation-sources/ranges/admission-0.lobo.ids.json",
+      "sha256": "f2d095a256da81b8f515f994085d371caba44b4c264b63bdd92cc3e68a581dfa",
+      "bytes": 149
+    },
+    {
+      "path": "research/snapshots/2026-11-24-compact-pilot/validation-sources/ranges/admission-1.lobo",
+      "sha256": "9f98109c3211fec767055be2c4847fbff5b09a75f9ac9748ebd9d5dbb3c84b77",
+      "bytes": 96
+    },
+    {
+      "path": "research/snapshots/2026-11-24-compact-pilot/validation-sources/ranges/admission-1.lobo.ids.json",
+      "sha256": "de8fae1a9a171d6e936fc7590c82c7b530332b62caf9a33a2328234676009148",
+      "bytes": 149
+    },
+    {
+      "path": "research/snapshots/2026-11-24-compact-pilot/validation-sources/ranges/admission-2.lobo",
+      "sha256": "dcd0d9ddc5562b76bf17a63fa377db3713807ade9abb7003057f64baf4f2888b",
+      "bytes": 60
+    },
+    {
+      "path": "research/snapshots/2026-11-24-compact-pilot/validation-sources/ranges/admission-2.lobo.ids.json",
+      "sha256": "755e5ed03970a65de85214d780242ff8195ceffa76e53ec4aa3fc885c8b31fc5",
+      "bytes": 149
+    },
+    {
+      "path": "research/snapshots/2026-11-24-compact-pilot/validation-sources/ranges/admission-3.lobo",
+      "sha256": "8502897c87dff151ad0a28312071dab6398974975bbb9f6c01823c6c19180bd6",
+      "bytes": 59
+    },
+    {
+      "path": "research/snapshots/2026-11-24-compact-pilot/validation-sources/ranges/admission-3.lobo.ids.json",
+      "sha256": "e0ea8be1597b1a7cd3eef9ee422782da53a7de4042609bc8bcf274a3d13b4e4f",
+      "bytes": 149
+    },
+    {
+      "path": "research/snapshots/2026-11-24-compact-pilot/validation-sources/ranges/mutant.lobo",
+      "sha256": "bad60aef412f2954428c8467f3611ad8039f45e564c67a02dea002af17849dba",
+      "bytes": 408
+    },
+    {
+      "path": "research/snapshots/2026-11-24-compact-pilot/validation-sources/ranges/mutant.lobo.ids.json",
+      "sha256": "7c061dc8d3b6fb00694babb55973f08fcf32f92f88b07b17a7653b0bbe0a1685",
+      "bytes": 327
+    },
+    {
+      "path": "research/snapshots/2026-11-24-compact-pilot/validation-sources/ranges/program.lobo",
+      "sha256": "f1f11ebbed54cc2c8e5d7b9b29751922d0bfc78d324c9d3221da94b848b739db",
+      "bytes": 406
+    },
+    {
+      "path": "research/snapshots/2026-11-24-compact-pilot/validation-sources/ranges/program.lobo.ids.json",
+      "sha256": "3f4d762a61f351d0d1b0f20f53ca349644210b77dc8639591e9045c7c30dadf5",
+      "bytes": 278
+    },
+    {
+      "path": "research/snapshots/2026-11-24-compact-pilot/validation-sources/signature-probes/Bytes-at-False.lobo",
+      "sha256": "29aaed38be024d32c49834f90f1c8be4f40bd6072399b2d9a27513ef40cfd604",
+      "bytes": 74
+    },
+    {
+      "path": "research/snapshots/2026-11-24-compact-pilot/validation-sources/signature-probes/Bytes-at-False.lobo.ids.json",
+      "sha256": "068ceefc93c1cb0efa207402a7dd6331ac2c7647ca3f12ed65e5495782a33058",
+      "bytes": 135
+    },
+    {
+      "path": "research/snapshots/2026-11-24-compact-pilot/validation-sources/signature-probes/Bytes-at-True.lobo",
+      "sha256": "71115b7da7ccf2f3322e197945f4628dc6292bdd3416920108f545e57025e6f2",
+      "bytes": 75
+    },
+    {
+      "path": "research/snapshots/2026-11-24-compact-pilot/validation-sources/signature-probes/Bytes-at-True.lobo.ids.json",
+      "sha256": "068ceefc93c1cb0efa207402a7dd6331ac2c7647ca3f12ed65e5495782a33058",
+      "bytes": 135
+    },
+    {
+      "path": "research/snapshots/2026-11-24-compact-pilot/validation-sources/signature-probes/Bytes-concat-False.lobo",
+      "sha256": "682bebd4f5decc1ae3060cfcc6cfdd2991bce62c050cda915a1a92e23556204d",
+      "bytes": 82
+    },
+    {
+      "path": "research/snapshots/2026-11-24-compact-pilot/validation-sources/signature-probes/Bytes-concat-False.lobo.ids.json",
+      "sha256": "068ceefc93c1cb0efa207402a7dd6331ac2c7647ca3f12ed65e5495782a33058",
+      "bytes": 135
+    },
+    {
+      "path": "research/snapshots/2026-11-24-compact-pilot/validation-sources/signature-probes/Bytes-concat-True.lobo",
+      "sha256": "b1af67e36594266264a4ef88f6704fe73cf265a4f6c4c3cf8d9b2268bc9885a2",
+      "bytes": 83
+    },
+    {
+      "path": "research/snapshots/2026-11-24-compact-pilot/validation-sources/signature-probes/Bytes-concat-True.lobo.ids.json",
+      "sha256": "068ceefc93c1cb0efa207402a7dd6331ac2c7647ca3f12ed65e5495782a33058",
+      "bytes": 135
+    },
+    {
+      "path": "research/snapshots/2026-11-24-compact-pilot/validation-sources/signature-probes/Bytes-empty-False.lobo",
+      "sha256": "74baa6da07350680c322e11d5babf4c9d849e372fda4bad65ff36e6cd9592496",
+      "bytes": 56
+    },
+    {
+      "path": "research/snapshots/2026-11-24-compact-pilot/validation-sources/signature-probes/Bytes-empty-False.lobo.ids.json",
+      "sha256": "068ceefc93c1cb0efa207402a7dd6331ac2c7647ca3f12ed65e5495782a33058",
+      "bytes": 135
+    },
+    {
+      "path": "research/snapshots/2026-11-24-compact-pilot/validation-sources/signature-probes/Bytes-empty-True.lobo",
+      "sha256": "af702cbeab1ca3c56e3f644ae7cacdeb552b77331cba888ff45c710b15ac64df",
+      "bytes": 52
+    },
+    {
+      "path": "research/snapshots/2026-11-24-compact-pilot/validation-sources/signature-probes/Bytes-empty-True.lobo.ids.json",
+      "sha256": "068ceefc93c1cb0efa207402a7dd6331ac2c7647ca3f12ed65e5495782a33058",
+      "bytes": 135
+    },
+    {
+      "path": "research/snapshots/2026-11-24-compact-pilot/validation-sources/signature-probes/Bytes-from_list-False.lobo",
+      "sha256": "a864f623c53dbc2537745ee869e8afae0b59f850484afc30da6fcbd42436f635",
+      "bytes": 69
+    },
+    {
+      "path": "research/snapshots/2026-11-24-compact-pilot/validation-sources/signature-probes/Bytes-from_list-False.lobo.ids.json",
+      "sha256": "068ceefc93c1cb0efa207402a7dd6331ac2c7647ca3f12ed65e5495782a33058",
+      "bytes": 135
+    },
+    {
+      "path": "research/snapshots/2026-11-24-compact-pilot/validation-sources/signature-probes/Bytes-from_list-True.lobo",
+      "sha256": "2e17d52ea4d85db7d99e004b7969d840a794bcc17e68e81b0ab873e932d884bc",
+      "bytes": 74
+    },
+    {
+      "path": "research/snapshots/2026-11-24-compact-pilot/validation-sources/signature-probes/Bytes-from_list-True.lobo.ids.json",
+      "sha256": "068ceefc93c1cb0efa207402a7dd6331ac2c7647ca3f12ed65e5495782a33058",
+      "bytes": 135
+    },
+    {
+      "path": "research/snapshots/2026-11-24-compact-pilot/validation-sources/signature-probes/Bytes-length-False.lobo",
+      "sha256": "20af3e968bbec85a73ab72aa2b173a5936b2ddcaff1805e236994d329fe217b6",
+      "bytes": 64
+    },
+    {
+      "path": "research/snapshots/2026-11-24-compact-pilot/validation-sources/signature-probes/Bytes-length-False.lobo.ids.json",
+      "sha256": "068ceefc93c1cb0efa207402a7dd6331ac2c7647ca3f12ed65e5495782a33058",
+      "bytes": 135
+    },
+    {
+      "path": "research/snapshots/2026-11-24-compact-pilot/validation-sources/signature-probes/Bytes-length-True.lobo",
+      "sha256": "55aaf24e1aa64f5827f5a6425d54269b0191913830c3572a9d8b837ffdf8b912",
+      "bytes": 65
+    },
+    {
+      "path": "research/snapshots/2026-11-24-compact-pilot/validation-sources/signature-probes/Bytes-length-True.lobo.ids.json",
+      "sha256": "068ceefc93c1cb0efa207402a7dd6331ac2c7647ca3f12ed65e5495782a33058",
+      "bytes": 135
+    },
+    {
+      "path": "research/snapshots/2026-11-24-compact-pilot/validation-sources/signature-probes/Bytes-push-False.lobo",
+      "sha256": "5c6a751b04d6761aeb658ee927df9ac28057590295029149709fc763c384a6a6",
+      "bytes": 78
+    },
+    {
+      "path": "research/snapshots/2026-11-24-compact-pilot/validation-sources/signature-probes/Bytes-push-False.lobo.ids.json",
+      "sha256": "068ceefc93c1cb0efa207402a7dd6331ac2c7647ca3f12ed65e5495782a33058",
+      "bytes": 135
+    },
+    {
+      "path": "research/snapshots/2026-11-24-compact-pilot/validation-sources/signature-probes/Bytes-push-True.lobo",
+      "sha256": "045d3bbc8b73666432e0dae3c6e2812071b06b2c736fccb4355721a9c5de3d3f",
+      "bytes": 79
+    },
+    {
+      "path": "research/snapshots/2026-11-24-compact-pilot/validation-sources/signature-probes/Bytes-push-True.lobo.ids.json",
+      "sha256": "068ceefc93c1cb0efa207402a7dd6331ac2c7647ca3f12ed65e5495782a33058",
+      "bytes": 135
+    },
+    {
+      "path": "research/snapshots/2026-11-24-compact-pilot/validation-sources/signature-probes/Bytes-slice-False.lobo",
+      "sha256": "3aaef2b5922b6d3319ac2d0bf4a89d4de3b733878d02da0e58c223e74bf4377f",
+      "bytes": 93
+    },
+    {
+      "path": "research/snapshots/2026-11-24-compact-pilot/validation-sources/signature-probes/Bytes-slice-False.lobo.ids.json",
+      "sha256": "068ceefc93c1cb0efa207402a7dd6331ac2c7647ca3f12ed65e5495782a33058",
+      "bytes": 135
+    },
+    {
+      "path": "research/snapshots/2026-11-24-compact-pilot/validation-sources/signature-probes/Bytes-slice-True.lobo",
+      "sha256": "126dbb112c7d5d6818f1eb39912fbc7601f4ba0ce78936e3c597bf496cda8444",
+      "bytes": 94
+    },
+    {
+      "path": "research/snapshots/2026-11-24-compact-pilot/validation-sources/signature-probes/Bytes-slice-True.lobo.ids.json",
+      "sha256": "068ceefc93c1cb0efa207402a7dd6331ac2c7647ca3f12ed65e5495782a33058",
+      "bytes": 135
+    },
+    {
+      "path": "research/snapshots/2026-11-24-compact-pilot/validation-sources/signature-probes/Text-at-False.lobo",
+      "sha256": "5d1de8bf5e16f8a5915341078434ca1eaca8bf9127eb4525e9236cb675aacded",
+      "bytes": 73
+    },
+    {
+      "path": "research/snapshots/2026-11-24-compact-pilot/validation-sources/signature-probes/Text-at-False.lobo.ids.json",
+      "sha256": "068ceefc93c1cb0efa207402a7dd6331ac2c7647ca3f12ed65e5495782a33058",
+      "bytes": 135
+    },
+    {
+      "path": "research/snapshots/2026-11-24-compact-pilot/validation-sources/signature-probes/Text-at-True.lobo",
+      "sha256": "2efe6e3d117c03bad6ece6f1578c0e116838972ab8d0b3091a61a8821693c8e7",
+      "bytes": 73
+    },
+    {
+      "path": "research/snapshots/2026-11-24-compact-pilot/validation-sources/signature-probes/Text-at-True.lobo.ids.json",
+      "sha256": "068ceefc93c1cb0efa207402a7dd6331ac2c7647ca3f12ed65e5495782a33058",
+      "bytes": 135
+    },
+    {
+      "path": "research/snapshots/2026-11-24-compact-pilot/validation-sources/signature-probes/Text-bytes-False.lobo",
+      "sha256": "9bd6e9651c6839292f05981a7001469a6b70a366cdb7db6437868af8fc9bbe51",
+      "bytes": 64
+    },
+    {
+      "path": "research/snapshots/2026-11-24-compact-pilot/validation-sources/signature-probes/Text-bytes-False.lobo.ids.json",
+      "sha256": "068ceefc93c1cb0efa207402a7dd6331ac2c7647ca3f12ed65e5495782a33058",
+      "bytes": 135
+    },
+    {
+      "path": "research/snapshots/2026-11-24-compact-pilot/validation-sources/signature-probes/Text-bytes-True.lobo",
+      "sha256": "51ead0a199c60d1ae49d9077586a7179477a2ea820bb30e733c811eea67bc554",
+      "bytes": 64
+    },
+    {
+      "path": "research/snapshots/2026-11-24-compact-pilot/validation-sources/signature-probes/Text-bytes-True.lobo.ids.json",
+      "sha256": "068ceefc93c1cb0efa207402a7dd6331ac2c7647ca3f12ed65e5495782a33058",
+      "bytes": 135
+    },
+    {
+      "path": "research/snapshots/2026-11-24-compact-pilot/validation-sources/signature-probes/Text-concat-False.lobo",
+      "sha256": "2f572296f68a0ac57e644028be319ee22c562fe107033a7d7246620eb44c1965",
+      "bytes": 79
+    },
+    {
+      "path": "research/snapshots/2026-11-24-compact-pilot/validation-sources/signature-probes/Text-concat-False.lobo.ids.json",
+      "sha256": "068ceefc93c1cb0efa207402a7dd6331ac2c7647ca3f12ed65e5495782a33058",
+      "bytes": 135
+    },
+    {
+      "path": "research/snapshots/2026-11-24-compact-pilot/validation-sources/signature-probes/Text-concat-True.lobo",
+      "sha256": "ffec91160776fd782aefeb4e598e6d4eafbbcc005fbf0e8e70461fb845480c50",
+      "bytes": 79
+    },
+    {
+      "path": "research/snapshots/2026-11-24-compact-pilot/validation-sources/signature-probes/Text-concat-True.lobo.ids.json",
+      "sha256": "068ceefc93c1cb0efa207402a7dd6331ac2c7647ca3f12ed65e5495782a33058",
+      "bytes": 135
+    },
+    {
+      "path": "research/snapshots/2026-11-24-compact-pilot/validation-sources/signature-probes/Text-from_bytes-False.lobo",
+      "sha256": "6a4722e8afb3d59a6f5f51a41c7e8102212cb01d65da54ddb21dc97ffc2cf611",
+      "bytes": 68
+    },
+    {
+      "path": "research/snapshots/2026-11-24-compact-pilot/validation-sources/signature-probes/Text-from_bytes-False.lobo.ids.json",
+      "sha256": "068ceefc93c1cb0efa207402a7dd6331ac2c7647ca3f12ed65e5495782a33058",
+      "bytes": 135
+    },
+    {
+      "path": "research/snapshots/2026-11-24-compact-pilot/validation-sources/signature-probes/Text-from_bytes-True.lobo",
+      "sha256": "a5d04e245848a3d56a45960c6844cddc9ff8635a1b4ca8e671454966da1dd72c",
+      "bytes": 69
+    },
+    {
+      "path": "research/snapshots/2026-11-24-compact-pilot/validation-sources/signature-probes/Text-from_bytes-True.lobo.ids.json",
+      "sha256": "068ceefc93c1cb0efa207402a7dd6331ac2c7647ca3f12ed65e5495782a33058",
+      "bytes": 135
+    },
+    {
+      "path": "research/snapshots/2026-11-24-compact-pilot/validation-sources/signature-probes/Text-length-False.lobo",
+      "sha256": "e8908a432fb3de0e08ab6911d9e2ce65d898214f53817e26e2bccb72a7637208",
+      "bytes": 63
+    },
+    {
+      "path": "research/snapshots/2026-11-24-compact-pilot/validation-sources/signature-probes/Text-length-False.lobo.ids.json",
+      "sha256": "068ceefc93c1cb0efa207402a7dd6331ac2c7647ca3f12ed65e5495782a33058",
+      "bytes": 135
+    },
+    {
+      "path": "research/snapshots/2026-11-24-compact-pilot/validation-sources/signature-probes/Text-length-True.lobo",
+      "sha256": "76e56ebac602dc5d27dc6ab7c5774ceff15ce76e096e1aa48f8d91aa19d0aebe",
+      "bytes": 63
+    },
+    {
+      "path": "research/snapshots/2026-11-24-compact-pilot/validation-sources/signature-probes/Text-length-True.lobo.ids.json",
+      "sha256": "068ceefc93c1cb0efa207402a7dd6331ac2c7647ca3f12ed65e5495782a33058",
+      "bytes": 135
+    },
+    {
+      "path": "research/snapshots/2026-11-24-compact-pilot/validation-sources/signature-probes/Text-slice-False.lobo",
+      "sha256": "2038d665e4ace9cd93e123d9f4ffb6f593b8c120aaefbd06e5a7926ee0eab878",
+      "bytes": 91
+    },
+    {
+      "path": "research/snapshots/2026-11-24-compact-pilot/validation-sources/signature-probes/Text-slice-False.lobo.ids.json",
+      "sha256": "068ceefc93c1cb0efa207402a7dd6331ac2c7647ca3f12ed65e5495782a33058",
+      "bytes": 135
+    },
+    {
+      "path": "research/snapshots/2026-11-24-compact-pilot/validation-sources/signature-probes/Text-slice-True.lobo",
+      "sha256": "46768de33fb0d61969a3797bed9302f4a81ffdd0c23184e85fb311065c507c08",
+      "bytes": 91
+    },
+    {
+      "path": "research/snapshots/2026-11-24-compact-pilot/validation-sources/signature-probes/Text-slice-True.lobo.ids.json",
+      "sha256": "068ceefc93c1cb0efa207402a7dd6331ac2c7647ca3f12ed65e5495782a33058",
+      "bytes": 135
+    },
+    {
+      "path": "research/snapshots/2026-11-24-compact-pilot/validation-sources/signature-probes/Text-valid-False.lobo",
+      "sha256": "09cb26a904f318078777c697dadcb04c2c73d14c529397deb58b143fa5c4e3be",
+      "bytes": 63
+    },
+    {
+      "path": "research/snapshots/2026-11-24-compact-pilot/validation-sources/signature-probes/Text-valid-False.lobo.ids.json",
+      "sha256": "068ceefc93c1cb0efa207402a7dd6331ac2c7647ca3f12ed65e5495782a33058",
+      "bytes": 135
+    },
+    {
+      "path": "research/snapshots/2026-11-24-compact-pilot/validation-sources/signature-probes/Text-valid-True.lobo",
+      "sha256": "e76ab6489419abf1736a17f44c63cbc9ac2eb95d899e2fdd911ce0495d9d90f9",
+      "bytes": 64
+    },
+    {
+      "path": "research/snapshots/2026-11-24-compact-pilot/validation-sources/signature-probes/Text-valid-True.lobo.ids.json",
+      "sha256": "068ceefc93c1cb0efa207402a7dd6331ac2c7647ca3f12ed65e5495782a33058",
+      "bytes": 135
+    },
+    {
+      "path": "benchmarks/fixtures/compact-study-20261124/availability-high.json",
+      "sha256": "2eaea4853689f5a02c91ecc53b81bc57d39af4ebc8a481ecfd805f5432a8c72c",
+      "bytes": 1656
+    },
+    {
+      "path": "benchmarks/fixtures/compact-study-20261124/availability-low.json",
+      "sha256": "c3ef7d153dba57f380bd6d5f4c2ec12b74dfc90ac9e7f19e4e5a3b71e6ee4fe8",
+      "bytes": 1652
+    },
+    {
+      "path": "benchmarks/fixtures/compact-study-20261124/trial-00.json",
+      "sha256": "0dabc4059d724c79970c20ec77e1e9df228c90e72b6b2615a12393cf8d94e1b7",
+      "bytes": 8792
+    },
+    {
+      "path": "benchmarks/fixtures/compact-study-20261124/trial-01.json",
+      "sha256": "640eeb764e3897d3e61432e6839b3aed1665c8bf177467d3e06254003245b92e",
+      "bytes": 7346
+    },
+    {
+      "path": "benchmarks/fixtures/compact-study-20261124/trial-02.json",
+      "sha256": "146d036540bc8e5ae080a47c6bb4de8d9415eee0d62c8d11f21f59f8256b1028",
+      "bytes": 8142
+    },
+    {
+      "path": "benchmarks/fixtures/compact-study-20261124/trial-03.json",
+      "sha256": "f92f7904ff40192b1c0cdff35dc9321381e4ad5b328650c94cc211d3b7069571",
+      "bytes": 7795
+    },
+    {
+      "path": "benchmarks/fixtures/compact-study-20261124/trial-04.json",
+      "sha256": "85e88a040b8ae3b6434902fce6e10d625b82a358d34e9bf917cb1f8901f4451a",
+      "bytes": 8541
+    },
+    {
+      "path": "benchmarks/fixtures/compact-study-20261124/trial-05.json",
+      "sha256": "816b6592eb990d2c3efd90acb0353f0a300a209034313499e55555ea225e33d2",
+      "bytes": 9239
+    },
+    {
+      "path": "benchmarks/fixtures/compact-study-20261124/trial-06.json",
+      "sha256": "79aba3d4cec63e0503c286a2c8dfb6e8ad88f8c3f79458bb6160cae4d7d03072",
+      "bytes": 8352
+    },
+    {
+      "path": "benchmarks/fixtures/compact-study-20261124/trial-07.json",
+      "sha256": "1fbceb0e2d8f784a04ce8de72f400b37194406232c562c31927e385c811be733",
+      "bytes": 8975
+    },
+    {
+      "path": "benchmarks/fixtures/compact-study-20261124/trial-08.json",
+      "sha256": "3a11e92540ef2bc8e963a0d794861be28cab1b4d597cf56cb0e90006a9bc1868",
+      "bytes": 7529
+    },
+    {
+      "path": "benchmarks/fixtures/compact-study-20261124/trial-09.json",
+      "sha256": "19db9776adaca8b31015f6b6cf6d7ca1e723aaf1683615f2cde78241e0890310",
+      "bytes": 8941
+    },
+    {
+      "path": "benchmarks/fixtures/compact-study-20261124/trial-10.json",
+      "sha256": "8dcff3995872ec339d6ebfb9f2720be25fec85008393e52fc54939b75304812b",
+      "bytes": 7499
+    },
+    {
+      "path": "benchmarks/fixtures/compact-study-20261124/trial-11.json",
+      "sha256": "6b81355f20949fb9c03cb05bce53d60fa9fb4e2886e96ace365bc6d86e731982",
+      "bytes": 8455
+    },
+    {
+      "path": "benchmarks/fixtures/compact-study-20261124/trial-12.json",
+      "sha256": "b17b43faf74781529e1b0c938079e0526aea1ad2ec1f8503b98d87f264335266",
+      "bytes": 7339
+    },
+    {
+      "path": "benchmarks/fixtures/compact-study-20261124/trial-13.json",
+      "sha256": "bc6b6e856a2469240b64df7cc6e0e8283f826599d0967638c2745bf0fb53823e",
+      "bytes": 8143
+    },
+    {
+      "path": "benchmarks/fixtures/compact-study-20261124/trial-14.json",
+      "sha256": "fad13aaf045404614beba7050166ebb2a923f28f0bea2070e2321cb9cab8064a",
+      "bytes": 8792
+    },
+    {
+      "path": "benchmarks/fixtures/compact-study-20261124/trial-15.json",
+      "sha256": "7b9706ca7f0d0416d3dc0c13a8774d0325d55fdb4ab9e8d097ba2c9c4ef8be99",
+      "bytes": 8544
+    },
+    {
+      "path": "benchmarks/fixtures/compact-study-20261124/trial-16.json",
+      "sha256": "e037c3d182557b635235661871af0be51261a44bdab529df9c927b7a7b426962",
+      "bytes": 9237
+    },
+    {
+      "path": "benchmarks/fixtures/compact-study-20261124/trial-17.json",
+      "sha256": "c9f24f1e4b6ca2c6d8551adccf6ca7d8c0b4114dda1c55c158e29c3434e3b51e",
+      "bytes": 7794
+    },
+    {
+      "path": "benchmarks/fixtures/compact-study-20261124/trial-18.json",
+      "sha256": "4ccc3f1995c01e01e4c8dbef907de765d448e236d9cc0e001f1af81a0b4dee64",
+      "bytes": 8972
+    },
+    {
+      "path": "benchmarks/fixtures/compact-study-20261124/trial-19.json",
+      "sha256": "a9d988673da22d629b3583a006416c801a31eff3e7521d72015f2209ae55a471",
+      "bytes": 7527
+    },
+    {
+      "path": "benchmarks/fixtures/compact-study-20261124/trial-20.json",
+      "sha256": "5d41bb960f5f48ff3655591aaae8df62f16bdc4f472398c70cde1ebf19b64037",
+      "bytes": 8350
+    },
+    {
+      "path": "benchmarks/fixtures/compact-study-20261124/trial-21.json",
+      "sha256": "75cc5db9d333ab3da8a77735bfcd950a85bd5a1e62518201206cc2cc04cf4d7d",
+      "bytes": 7502
+    },
+    {
+      "path": "benchmarks/fixtures/compact-study-20261124/trial-22.json",
+      "sha256": "fe69cd013a6dfdfed82febae13c9ab3eb184378dc818a7e1acb54c839a5b239c",
+      "bytes": 8449
+    },
+    {
+      "path": "benchmarks/fixtures/compact-study-20261124/trial-23.json",
+      "sha256": "6f9b01f57ead7a16e348ea061c796b0498c66d98790e9f3023e30b1697e29352",
+      "bytes": 8940
+    }
+  ],
+  "all_hashes_verified": true
+}

@@ -19,3 +19,13 @@ evaluator and static checks before model calls. Cards contain general rules rath
 Decision [0068](../../../decisions/0068-small-guide-and-fact-pilot.md) bounds the test to 24 attempts.
 The three arms isolate guide cleanup and the conditional addition of targeted facts. This is a small
 development test, with no blind holdout or general improvement claim.
+
+## Preserved text and outcome
+
+Use [the reading guide](reading-guide.txt) with one relevant card:
+[ranges](ranges.txt), [nominal values](nominal.txt), [propagation](propagation.txt), or
+[contracts](contracts.txt). These text exports exactly match the registered rendered materials.
+
+[The completed pilot](../../../research/compact-pilot-2026-11-24.md) gives80/80 correct items with
+cards, compared with68/80 old and67/80 clean. This selected four-topic result does not establish
+full-language comprehension. Keep the tested texts frozen; changes require a new study/material version.

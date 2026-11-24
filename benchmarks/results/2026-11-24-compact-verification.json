@@ -1,0 +1,83 @@
+{
+  "format": "lobo-compact-verification/1",
+  "date": "2026-11-24",
+  "registration_commit": "ef3d410",
+  "frozen_version": "1.11.2",
+  "product_and_old_tested_material_paths_changed": [],
+  "registered_code_pins": 18,
+  "all_registered_code_matches": true,
+  "compiler_sha256": "8d9f84530b8d34a6a72597d25befc249a604430a6569656b4184721e1e444d9d",
+  "scheduled": 24,
+  "attempted": 24,
+  "unattempted": 0,
+  "completed": 24,
+  "tools_used": 0,
+  "all_24_prompt_grade_acceptance_tool_audits_verified": true,
+  "standalone_text_exports_exact": true,
+  "usage": {
+    "scored_known": 24,
+    "excluded_availability_known": 2,
+    "total_known": 26,
+    "total_unknown": 0,
+    "reported_tokens": 412214,
+    "billing": null,
+    "parent_development_usage": null
+  },
+  "checks": {
+    "compiler_regression": {
+      "status": "reused_prior_receipt_not_rerun",
+      "path": "benchmarks/results/2026-11-24-learning-verification.json",
+      "sha256": "1634de4dc7092742c16ebdc06a11a6d59e3542461482802197f41ea0893100b4",
+      "suites": 59,
+      "passed": 312,
+      "failed": 0,
+      "ignored": 0
+    },
+    "harness_tests": 40,
+    "new_harness_tests": 6,
+    "research_tests": 15,
+    "native_evaluator_value_observations": 48,
+    "static_admissions": 16,
+    "positive_negative_signature_probes": 28,
+    "buffer_operations_probed": 14,
+    "killed_compiled_defects": 4,
+    "repository_json_links": {
+      "command": "./scripts/check.sh",
+      "status": "passed",
+      "log": "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/compact-study-publication-links.txt",
+      "sha256": "1f11bb3bb382f1877ffa8eec4eb376db85d0ecfa2e1301289bb91fbd2cc966ae"
+    },
+    "git_diff_check": "passed"
+  },
+  "raw_archive": {
+    "archive": "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/compact-study-20261124-raw.tar.gz",
+    "archive_sha256": "a18f88d5c04440c3fed4ec39db1300e2ce930e9f7ff86833e6b5c0f965620077",
+    "archive_bytes": 117386,
+    "members": 334,
+    "all_member_hashes_verified": true,
+    "limits": "Local ignored archive, not an off-device backup. Frozen compiler is retained separately at its registered path/hash. Final public-index/link checks are retained outside this closed raw directory. Reused earlier compiler suite; no new cargo run."
+  },
+  "raw_archive_manifest": {
+    "path": "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/compact-study-20261124-raw-manifest.json",
+    "sha256": "6f9005583c70fe0258b6b025447e87fc754105660323b9cc0bd6c815070a3379"
+  },
+  "snapshot_manifest": {
+    "path": "research/snapshots/2026-11-24-compact-pilot/evidence-manifest.json",
+    "sha256": "6dd840cd430a6447debf54fad23583b42960e34df3db019b677cf849ec76b61b",
+    "files": 198
+  },
+  "prior_paper": {
+    "entries": 42,
+    "pins": 141,
+    "all_hashes_verified": true
+  },
+  "limitations": [
+    "Small development-targeted pilot: four topics selected after earlier errors; new examples but not independent blinded holdouts",
+    "One program instance/topic, high-before-low order, aliases and provider caches limit generalization",
+    "Cleanup removes authoring instructions and adds a reading-mode cue while preserving semantic paragraphs; it is not a pure token-count ablation",
+    "Targeted facts contrast is conditional on the cleaned guide; no facts-only arm or interaction estimate",
+    "Cards cover this pilot, not the complete language; signature provenance kept outside the delivered text",
+    "Source-only presentation, no tool-assisted verification or interactive graph",
+    "Parent-agent development tokens, underlying provider requests and billing unknown"
+  ]
+}

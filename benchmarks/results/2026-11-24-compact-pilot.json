@@ -1,0 +1,4047 @@
+{
+  "format": "lobo-compact-pilot-results/1",
+  "date": "2026-11-24",
+  "registration_sha256": "5a0a4c4036c1ab9ea8e1cd80f77f95c5998fb9577c0b34680f630430ce83bd2f",
+  "registered_model": "gpt-5.6-luna",
+  "scheduled": 24,
+  "attempted": 24,
+  "unattempted": [],
+  "groups": [
+    {
+      "reasoning": null,
+      "arm": "legacy",
+      "attempted": 8,
+      "accepted": 0,
+      "passed_items": 68,
+      "total_items": 80,
+      "usage": {
+        "known": 8,
+        "unknown": 0,
+        "billing": null,
+        "input_tokens": 123624,
+        "input_tokens_unknown": 0,
+        "output_tokens": 7589,
+        "output_tokens_unknown": 0,
+        "cached_input_tokens": 95872,
+        "cached_input_tokens_unknown": 0,
+        "reasoning_output_tokens": 7349,
+        "reasoning_output_tokens_unknown": 0,
+        "cache_write_input_tokens": 0,
+        "cache_write_input_tokens_unknown": 0,
+        "reported_input_plus_output_tokens": 131213
+      },
+      "reported_tokens": {
+        "n": 8,
+        "median": 16027.0,
+        "minimum": 15674,
+        "maximum": 18530
+      },
+      "wall_s": {
+        "n": 8,
+        "median": 13.17963966797106,
+        "minimum": 7.458530419971794,
+        "maximum": 59.59856859291904
+      },
+      "status_counts": {
+        "completed": 8
+      },
+      "format_valid": 8,
+      "predictions_passed": 47,
+      "predictions_total": 48,
+      "admissions_passed": 21,
+      "admissions_total": 32
+    },
+    {
+      "reasoning": null,
+      "arm": "clean",
+      "attempted": 8,
+      "accepted": 0,
+      "passed_items": 67,
+      "total_items": 80,
+      "usage": {
+        "known": 8,
+        "unknown": 0,
+        "billing": null,
+        "input_tokens": 121268,
+        "input_tokens_unknown": 0,
+        "output_tokens": 6309,
+        "output_tokens_unknown": 0,
+        "cached_input_tokens": 95872,
+        "cached_input_tokens_unknown": 0,
+        "reasoning_output_tokens": 6069,
+        "reasoning_output_tokens_unknown": 0,
+        "cache_write_input_tokens": 0,
+        "cache_write_input_tokens_unknown": 0,
+        "reported_input_plus_output_tokens": 127577
+      },
+      "reported_tokens": {
+        "n": 8,
+        "median": 15671.0,
+        "minimum": 15356,
+        "maximum": 18052
+      },
+      "wall_s": {
+        "n": 8,
+        "median": 13.667061914457008,
+        "minimum": 8.749703723937273,
+        "maximum": 56.151358294067904
+      },
+      "status_counts": {
+        "completed": 8
+      },
+      "format_valid": 8,
+      "predictions_passed": 48,
+      "predictions_total": 48,
+      "admissions_passed": 19,
+      "admissions_total": 32
+    },
+    {
+      "reasoning": null,
+      "arm": "targeted",
+      "attempted": 8,
+      "accepted": 8,
+      "passed_items": 80,
+      "total_items": 80,
+      "usage": {
+        "known": 8,
+        "unknown": 0,
+        "billing": null,
+        "input_tokens": 122737,
+        "input_tokens_unknown": 0,
+        "output_tokens": 2447,
+        "output_tokens_unknown": 0,
+        "cached_input_tokens": 91520,
+        "cached_input_tokens_unknown": 0,
+        "reasoning_output_tokens": 2207,
+        "reasoning_output_tokens_unknown": 0,
+        "cache_write_input_tokens": 0,
+        "cache_write_input_tokens_unknown": 0,
+        "reported_input_plus_output_tokens": 125184
+      },
+      "reported_tokens": {
+        "n": 8,
+        "median": 15609.5,
+        "minimum": 15456,
+        "maximum": 16041
+      },
+      "wall_s": {
+        "n": 8,
+        "median": 8.146742862300016,
+        "minimum": 5.812425771960989,
+        "maximum": 14.288242019945756
+      },
+      "status_counts": {
+        "completed": 8
+      },
+      "format_valid": 8,
+      "predictions_passed": 48,
+      "predictions_total": 48,
+      "admissions_passed": 32,
+      "admissions_total": 32
+    },
+    {
+      "reasoning": "high",
+      "arm": "legacy",
+      "attempted": 4,
+      "accepted": 0,
+      "passed_items": 35,
+      "total_items": 40,
+      "usage": {
+        "known": 4,
+        "unknown": 0,
+        "billing": null,
+        "input_tokens": 61815,
+        "input_tokens_unknown": 0,
+        "output_tokens": 5607,
+        "output_tokens_unknown": 0,
+        "cached_input_tokens": 41088,
+        "cached_input_tokens_unknown": 0,
+        "reasoning_output_tokens": 5487,
+        "reasoning_output_tokens_unknown": 0,
+        "cache_write_input_tokens": 0,
+        "cache_write_input_tokens_unknown": 0,
+        "reported_input_plus_output_tokens": 67422
+      },
+      "reported_tokens": {
+        "n": 4,
+        "median": 16529.5,
+        "minimum": 15833,
+        "maximum": 18530
+      },
+      "wall_s": {
+        "n": 4,
+        "median": 21.70093234349042,
+        "minimum": 10.837169321021065,
+        "maximum": 59.59856859291904
+      },
+      "status_counts": {
+        "completed": 4
+      },
+      "format_valid": 4,
+      "predictions_passed": 24,
+      "predictions_total": 24,
+      "admissions_passed": 11,
+      "admissions_total": 16
+    },
+    {
+      "reasoning": "high",
+      "arm": "clean",
+      "attempted": 4,
+      "accepted": 0,
+      "passed_items": 34,
+      "total_items": 40,
+      "usage": {
+        "known": 4,
+        "unknown": 0,
+        "billing": null,
+        "input_tokens": 60631,
+        "input_tokens_unknown": 0,
+        "output_tokens": 4426,
+        "output_tokens_unknown": 0,
+        "cached_input_tokens": 41088,
+        "cached_input_tokens_unknown": 0,
+        "reasoning_output_tokens": 4306,
+        "reasoning_output_tokens_unknown": 0,
+        "cache_write_input_tokens": 0,
+        "cache_write_input_tokens_unknown": 0,
+        "reported_input_plus_output_tokens": 65057
+      },
+      "reported_tokens": {
+        "n": 4,
+        "median": 15755.0,
+        "minimum": 15495,
+        "maximum": 18052
+      },
+      "wall_s": {
+        "n": 4,
+        "median": 14.485442480421625,
+        "minimum": 8.749703723937273,
+        "maximum": 56.151358294067904
+      },
+      "status_counts": {
+        "completed": 4
+      },
+      "format_valid": 4,
+      "predictions_passed": 24,
+      "predictions_total": 24,
+      "admissions_passed": 10,
+      "admissions_total": 16
+    },
+    {
+      "reasoning": "high",
+      "arm": "targeted",
+      "attempted": 4,
+      "accepted": 4,
+      "passed_items": 40,
+      "total_items": 40,
+      "usage": {
+        "known": 4,
+        "unknown": 0,
+        "billing": null,
+        "input_tokens": 61364,
+        "input_tokens_unknown": 0,
+        "output_tokens": 1514,
+        "output_tokens_unknown": 0,
+        "cached_input_tokens": 41088,
+        "cached_input_tokens_unknown": 0,
+        "reasoning_output_tokens": 1394,
+        "reasoning_output_tokens_unknown": 0,
+        "cache_write_input_tokens": 0,
+        "cache_write_input_tokens_unknown": 0,
+        "reported_input_plus_output_tokens": 62878
+      },
+      "reported_tokens": {
+        "n": 4,
+        "median": 15645.0,
+        "minimum": 15547,
+        "maximum": 16041
+      },
+      "wall_s": {
+        "n": 4,
+        "median": 9.147720322944224,
+        "minimum": 7.3461486380547285,
+        "maximum": 14.288242019945756
+      },
+      "status_counts": {
+        "completed": 4
+      },
+      "format_valid": 4,
+      "predictions_passed": 24,
+      "predictions_total": 24,
+      "admissions_passed": 16,
+      "admissions_total": 16
+    },
+    {
+      "reasoning": "low",
+      "arm": "legacy",
+      "attempted": 4,
+      "accepted": 0,
+      "passed_items": 33,
+      "total_items": 40,
+      "usage": {
+        "known": 4,
+        "unknown": 0,
+        "billing": null,
+        "input_tokens": 61809,
+        "input_tokens_unknown": 0,
+        "output_tokens": 1982,
+        "output_tokens_unknown": 0,
+        "cached_input_tokens": 54784,
+        "cached_input_tokens_unknown": 0,
+        "reasoning_output_tokens": 1862,
+        "reasoning_output_tokens_unknown": 0,
+        "cache_write_input_tokens": 0,
+        "cache_write_input_tokens_unknown": 0,
+        "reported_input_plus_output_tokens": 63791
+      },
+      "reported_tokens": {
+        "n": 4,
+        "median": 15961.5,
+        "minimum": 15674,
+        "maximum": 16194
+      },
+      "wall_s": {
+        "n": 4,
+        "median": 12.089465370052494,
+        "minimum": 7.458530419971794,
+        "maximum": 17.690302714006975
+      },
+      "status_counts": {
+        "completed": 4
+      },
+      "format_valid": 4,
+      "predictions_passed": 23,
+      "predictions_total": 24,
+      "admissions_passed": 10,
+      "admissions_total": 16
+    },
+    {
+      "reasoning": "low",
+      "arm": "clean",
+      "attempted": 4,
+      "accepted": 0,
+      "passed_items": 33,
+      "total_items": 40,
+      "usage": {
+        "known": 4,
+        "unknown": 0,
+        "billing": null,
+        "input_tokens": 60637,
+        "input_tokens_unknown": 0,
+        "output_tokens": 1883,
+        "output_tokens_unknown": 0,
+        "cached_input_tokens": 54784,
+        "cached_input_tokens_unknown": 0,
+        "reasoning_output_tokens": 1763,
+        "reasoning_output_tokens_unknown": 0,
+        "cache_write_input_tokens": 0,
+        "cache_write_input_tokens_unknown": 0,
+        "reported_input_plus_output_tokens": 62520
+      },
+      "reported_tokens": {
+        "n": 4,
+        "median": 15671.0,
+        "minimum": 15356,
+        "maximum": 15822
+      },
+      "wall_s": {
+        "n": 4,
+        "median": 12.341516818851233,
+        "minimum": 9.617295786039904,
+        "maximum": 16.356303469045088
+      },
+      "status_counts": {
+        "completed": 4
+      },
+      "format_valid": 4,
+      "predictions_passed": 24,
+      "predictions_total": 24,
+      "admissions_passed": 9,
+      "admissions_total": 16
+    },
+    {
+      "reasoning": "low",
+      "arm": "targeted",
+      "attempted": 4,
+      "accepted": 4,
+      "passed_items": 40,
+      "total_items": 40,
+      "usage": {
+        "known": 4,
+        "unknown": 0,
+        "billing": null,
+        "input_tokens": 61373,
+        "input_tokens_unknown": 0,
+        "output_tokens": 933,
+        "output_tokens_unknown": 0,
+        "cached_input_tokens": 50432,
+        "cached_input_tokens_unknown": 0,
+        "reasoning_output_tokens": 813,
+        "reasoning_output_tokens_unknown": 0,
+        "cache_write_input_tokens": 0,
+        "cache_write_input_tokens_unknown": 0,
+        "reported_input_plus_output_tokens": 62306
+      },
+      "reported_tokens": {
+        "n": 4,
+        "median": 15569.0,
+        "minimum": 15456,
+        "maximum": 15712
+      },
+      "wall_s": {
+        "n": 4,
+        "median": 7.9215417539235204,
+        "minimum": 5.812425771960989,
+        "maximum": 8.321760151069611
+      },
+      "status_counts": {
+        "completed": 4
+      },
+      "format_valid": 4,
+      "predictions_passed": 24,
+      "predictions_total": 24,
+      "admissions_passed": 16,
+      "admissions_total": 16
+    }
+  ],
+  "contrasts": [
+    {
+      "reasoning": null,
+      "before": "legacy",
+      "after": "clean",
+      "pairs": 8,
+      "pass_to_fail": 0,
+      "fail_to_pass": 0,
+      "item_difference": -1,
+      "token_ratio": {
+        "n": 8,
+        "median": 0.9764280878376091,
+        "minimum": 0.9281206171107994,
+        "maximum": 1.0003793626707131
+      },
+      "wall_ratio": {
+        "n": 8,
+        "median": 0.8747692926039681,
+        "minimum": 0.49112019849086225,
+        "maximum": 1.5985038945818126
+      },
+      "pair_outcomes": [
+        {
+          "reasoning": "high",
+          "family": "contracts",
+          "language": "lobo",
+          "before_accepted": false,
+          "after_accepted": false,
+          "item_difference": 0,
+          "before_index": 0,
+          "after_index": 1
+        },
+        {
+          "reasoning": "high",
+          "family": "nominal",
+          "language": "lobo",
+          "before_accepted": false,
+          "after_accepted": false,
+          "item_difference": 0,
+          "before_index": 7,
+          "after_index": 8
+        },
+        {
+          "reasoning": "high",
+          "family": "propagation",
+          "language": "lobo",
+          "before_accepted": false,
+          "after_accepted": false,
+          "item_difference": -1,
+          "before_index": 5,
+          "after_index": 3
+        },
+        {
+          "reasoning": "high",
+          "family": "ranges",
+          "language": "lobo",
+          "before_accepted": false,
+          "after_accepted": false,
+          "item_difference": 0,
+          "before_index": 9,
+          "after_index": 10
+        },
+        {
+          "reasoning": "low",
+          "family": "contracts",
+          "language": "lobo",
+          "before_accepted": false,
+          "after_accepted": false,
+          "item_difference": -1,
+          "before_index": 14,
+          "after_index": 12
+        },
+        {
+          "reasoning": "low",
+          "family": "nominal",
+          "language": "lobo",
+          "before_accepted": false,
+          "after_accepted": false,
+          "item_difference": 0,
+          "before_index": 18,
+          "after_index": 19
+        },
+        {
+          "reasoning": "low",
+          "family": "propagation",
+          "language": "lobo",
+          "before_accepted": false,
+          "after_accepted": false,
+          "item_difference": 0,
+          "before_index": 16,
+          "after_index": 17
+        },
+        {
+          "reasoning": "low",
+          "family": "ranges",
+          "language": "lobo",
+          "before_accepted": false,
+          "after_accepted": false,
+          "item_difference": 1,
+          "before_index": 23,
+          "after_index": 21
+        }
+      ]
+    },
+    {
+      "reasoning": null,
+      "before": "clean",
+      "after": "targeted",
+      "pairs": 8,
+      "pass_to_fail": 0,
+      "fail_to_pass": 8,
+      "item_difference": 13,
+      "token_ratio": {
+        "n": 8,
+        "median": 1.0008608258605947,
+        "minimum": 0.8674939064923555,
+        "maximum": 1.0100113335851908
+      },
+      "wall_ratio": {
+        "n": 8,
+        "median": 0.5970936808160068,
+        "minimum": 0.18137826012597855,
+        "maximum": 0.9388145591205534
+      },
+      "pair_outcomes": [
+        {
+          "reasoning": "high",
+          "family": "contracts",
+          "language": "lobo",
+          "before_accepted": false,
+          "after_accepted": true,
+          "item_difference": 1,
+          "before_index": 1,
+          "after_index": 2
+        },
+        {
+          "reasoning": "high",
+          "family": "nominal",
+          "language": "lobo",
+          "before_accepted": false,
+          "after_accepted": true,
+          "item_difference": 2,
+          "before_index": 8,
+          "after_index": 6
+        },
+        {
+          "reasoning": "high",
+          "family": "propagation",
+          "language": "lobo",
+          "before_accepted": false,
+          "after_accepted": true,
+          "item_difference": 2,
+          "before_index": 3,
+          "after_index": 4
+        },
+        {
+          "reasoning": "high",
+          "family": "ranges",
+          "language": "lobo",
+          "before_accepted": false,
+          "after_accepted": true,
+          "item_difference": 1,
+          "before_index": 10,
+          "after_index": 11
+        },
+        {
+          "reasoning": "low",
+          "family": "contracts",
+          "language": "lobo",
+          "before_accepted": false,
+          "after_accepted": true,
+          "item_difference": 2,
+          "before_index": 12,
+          "after_index": 13
+        },
+        {
+          "reasoning": "low",
+          "family": "nominal",
+          "language": "lobo",
+          "before_accepted": false,
+          "after_accepted": true,
+          "item_difference": 2,
+          "before_index": 19,
+          "after_index": 20
+        },
+        {
+          "reasoning": "low",
+          "family": "propagation",
+          "language": "lobo",
+          "before_accepted": false,
+          "after_accepted": true,
+          "item_difference": 2,
+          "before_index": 17,
+          "after_index": 15
+        },
+        {
+          "reasoning": "low",
+          "family": "ranges",
+          "language": "lobo",
+          "before_accepted": false,
+          "after_accepted": true,
+          "item_difference": 1,
+          "before_index": 21,
+          "after_index": 22
+        }
+      ]
+    },
+    {
+      "reasoning": null,
+      "before": "legacy",
+      "after": "targeted",
+      "pairs": 8,
+      "pass_to_fail": 0,
+      "fail_to_pass": 8,
+      "item_difference": 12,
+      "token_ratio": {
+        "n": 8,
+        "median": 0.9777990769378555,
+        "minimum": 0.8451160280626012,
+        "maximum": 0.98609161669006
+      },
+      "wall_ratio": {
+        "n": 8,
+        "median": 0.6250585620170537,
+        "minimum": 0.1708872530253775,
+        "maximum": 0.7996945686065003
+      },
+      "pair_outcomes": [
+        {
+          "reasoning": "high",
+          "family": "contracts",
+          "language": "lobo",
+          "before_accepted": false,
+          "after_accepted": true,
+          "item_difference": 1,
+          "before_index": 0,
+          "after_index": 2
+        },
+        {
+          "reasoning": "high",
+          "family": "nominal",
+          "language": "lobo",
+          "before_accepted": false,
+          "after_accepted": true,
+          "item_difference": 2,
+          "before_index": 7,
+          "after_index": 6
+        },
+        {
+          "reasoning": "high",
+          "family": "propagation",
+          "language": "lobo",
+          "before_accepted": false,
+          "after_accepted": true,
+          "item_difference": 1,
+          "before_index": 5,
+          "after_index": 4
+        },
+        {
+          "reasoning": "high",
+          "family": "ranges",
+          "language": "lobo",
+          "before_accepted": false,
+          "after_accepted": true,
+          "item_difference": 1,
+          "before_index": 9,
+          "after_index": 11
+        },
+        {
+          "reasoning": "low",
+          "family": "contracts",
+          "language": "lobo",
+          "before_accepted": false,
+          "after_accepted": true,
+          "item_difference": 1,
+          "before_index": 14,
+          "after_index": 13
+        },
+        {
+          "reasoning": "low",
+          "family": "nominal",
+          "language": "lobo",
+          "before_accepted": false,
+          "after_accepted": true,
+          "item_difference": 2,
+          "before_index": 18,
+          "after_index": 20
+        },
+        {
+          "reasoning": "low",
+          "family": "propagation",
+          "language": "lobo",
+          "before_accepted": false,
+          "after_accepted": true,
+          "item_difference": 2,
+          "before_index": 16,
+          "after_index": 15
+        },
+        {
+          "reasoning": "low",
+          "family": "ranges",
+          "language": "lobo",
+          "before_accepted": false,
+          "after_accepted": true,
+          "item_difference": 2,
+          "before_index": 23,
+          "after_index": 22
+        }
+      ]
+    },
+    {
+      "reasoning": "high",
+      "before": "legacy",
+      "after": "clean",
+      "pairs": 4,
+      "pass_to_fail": 0,
+      "fail_to_pass": 0,
+      "item_difference": -1,
+      "token_ratio": {
+        "n": 4,
+        "median": 0.9764280878376091,
+        "minimum": 0.9281206171107994,
+        "maximum": 0.9799962375368407
+      },
+      "wall_ratio": {
+        "n": 4,
+        "median": 0.8747692926039681,
+        "minimum": 0.49112019849086225,
+        "maximum": 1.1078603495832697
+      },
+      "pair_outcomes": [
+        {
+          "reasoning": "high",
+          "family": "contracts",
+          "language": "lobo",
+          "before_accepted": false,
+          "after_accepted": false,
+          "item_difference": 0,
+          "before_index": 0,
+          "after_index": 1
+        },
+        {
+          "reasoning": "high",
+          "family": "nominal",
+          "language": "lobo",
+          "before_accepted": false,
+          "after_accepted": false,
+          "item_difference": 0,
+          "before_index": 7,
+          "after_index": 8
+        },
+        {
+          "reasoning": "high",
+          "family": "propagation",
+          "language": "lobo",
+          "before_accepted": false,
+          "after_accepted": false,
+          "item_difference": -1,
+          "before_index": 5,
+          "after_index": 3
+        },
+        {
+          "reasoning": "high",
+          "family": "ranges",
+          "language": "lobo",
+          "before_accepted": false,
+          "after_accepted": false,
+          "item_difference": 0,
+          "before_index": 9,
+          "after_index": 10
+        }
+      ]
+    },
+    {
+      "reasoning": "high",
+      "before": "clean",
+      "after": "targeted",
+      "pairs": 4,
+      "pass_to_fail": 0,
+      "fail_to_pass": 4,
+      "item_difference": 6,
+      "token_ratio": {
+        "n": 4,
+        "median": 1.001741948346821,
+        "minimum": 0.8674939064923555,
+        "maximum": 1.0100113335851908
+      },
+      "wall_ratio": {
+        "n": 4,
+        "median": 0.7147017401619904,
+        "minimum": 0.18137826012597855,
+        "maximum": 0.9388145591205534
+      },
+      "pair_outcomes": [
+        {
+          "reasoning": "high",
+          "family": "contracts",
+          "language": "lobo",
+          "before_accepted": false,
+          "after_accepted": true,
+          "item_difference": 1,
+          "before_index": 1,
+          "after_index": 2
+        },
+        {
+          "reasoning": "high",
+          "family": "nominal",
+          "language": "lobo",
+          "before_accepted": false,
+          "after_accepted": true,
+          "item_difference": 2,
+          "before_index": 8,
+          "after_index": 6
+        },
+        {
+          "reasoning": "high",
+          "family": "propagation",
+          "language": "lobo",
+          "before_accepted": false,
+          "after_accepted": true,
+          "item_difference": 2,
+          "before_index": 3,
+          "after_index": 4
+        },
+        {
+          "reasoning": "high",
+          "family": "ranges",
+          "language": "lobo",
+          "before_accepted": false,
+          "after_accepted": true,
+          "item_difference": 1,
+          "before_index": 10,
+          "after_index": 11
+        }
+      ]
+    },
+    {
+      "reasoning": "high",
+      "before": "legacy",
+      "after": "targeted",
+      "pairs": 4,
+      "pass_to_fail": 0,
+      "fail_to_pass": 4,
+      "item_difference": 5,
+      "token_ratio": {
+        "n": 4,
+        "median": 0.958766997595735,
+        "minimum": 0.8451160280626012,
+        "maximum": 0.9819364618202489
+      },
+      "wall_ratio": {
+        "n": 4,
+        "median": 0.5572518372482871,
+        "minimum": 0.1708872530253775,
+        "maximum": 0.6778660017616651
+      },
+      "pair_outcomes": [
+        {
+          "reasoning": "high",
+          "family": "contracts",
+          "language": "lobo",
+          "before_accepted": false,
+          "after_accepted": true,
+          "item_difference": 1,
+          "before_index": 0,
+          "after_index": 2
+        },
+        {
+          "reasoning": "high",
+          "family": "nominal",
+          "language": "lobo",
+          "before_accepted": false,
+          "after_accepted": true,
+          "item_difference": 2,
+          "before_index": 7,
+          "after_index": 6
+        },
+        {
+          "reasoning": "high",
+          "family": "propagation",
+          "language": "lobo",
+          "before_accepted": false,
+          "after_accepted": true,
+          "item_difference": 1,
+          "before_index": 5,
+          "after_index": 4
+        },
+        {
+          "reasoning": "high",
+          "family": "ranges",
+          "language": "lobo",
+          "before_accepted": false,
+          "after_accepted": true,
+          "item_difference": 1,
+          "before_index": 9,
+          "after_index": 11
+        }
+      ]
+    },
+    {
+      "reasoning": "low",
+      "before": "legacy",
+      "after": "clean",
+      "pairs": 4,
+      "pass_to_fail": 0,
+      "fail_to_pass": 0,
+      "item_difference": 0,
+      "token_ratio": {
+        "n": 4,
+        "median": 0.9768180025250462,
+        "minimum": 0.9667160676793874,
+        "maximum": 1.0003793626707131
+      },
+      "wall_ratio": {
+        "n": 4,
+        "median": 1.042674570107605,
+        "minimum": 0.7678042550491961,
+        "maximum": 1.5985038945818126
+      },
+      "pair_outcomes": [
+        {
+          "reasoning": "low",
+          "family": "contracts",
+          "language": "lobo",
+          "before_accepted": false,
+          "after_accepted": false,
+          "item_difference": -1,
+          "before_index": 14,
+          "after_index": 12
+        },
+        {
+          "reasoning": "low",
+          "family": "nominal",
+          "language": "lobo",
+          "before_accepted": false,
+          "after_accepted": false,
+          "item_difference": 0,
+          "before_index": 18,
+          "after_index": 19
+        },
+        {
+          "reasoning": "low",
+          "family": "propagation",
+          "language": "lobo",
+          "before_accepted": false,
+          "after_accepted": false,
+          "item_difference": 0,
+          "before_index": 16,
+          "after_index": 17
+        },
+        {
+          "reasoning": "low",
+          "family": "ranges",
+          "language": "lobo",
+          "before_accepted": false,
+          "after_accepted": false,
+          "item_difference": 1,
+          "before_index": 23,
+          "after_index": 21
+        }
+      ]
+    },
+    {
+      "reasoning": "low",
+      "before": "clean",
+      "after": "targeted",
+      "pairs": 4,
+      "pass_to_fail": 0,
+      "fail_to_pass": 4,
+      "item_difference": 7,
+      "token_ratio": {
+        "n": 4,
+        "median": 0.9974113383059291,
+        "minimum": 0.9852736695740109,
+        "maximum": 1.0065121125293046
+      },
+      "wall_ratio": {
+        "n": 4,
+        "median": 0.5841774546998068,
+        "minimum": 0.5002768972394088,
+        "maximum": 0.749684892239941
+      },
+      "pair_outcomes": [
+        {
+          "reasoning": "low",
+          "family": "contracts",
+          "language": "lobo",
+          "before_accepted": false,
+          "after_accepted": true,
+          "item_difference": 2,
+          "before_index": 12,
+          "after_index": 13
+        },
+        {
+          "reasoning": "low",
+          "family": "nominal",
+          "language": "lobo",
+          "before_accepted": false,
+          "after_accepted": true,
+          "item_difference": 2,
+          "before_index": 19,
+          "after_index": 20
+        },
+        {
+          "reasoning": "low",
+          "family": "propagation",
+          "language": "lobo",
+          "before_accepted": false,
+          "after_accepted": true,
+          "item_difference": 2,
+          "before_index": 17,
+          "after_index": 15
+        },
+        {
+          "reasoning": "low",
+          "family": "ranges",
+          "language": "lobo",
+          "before_accepted": false,
+          "after_accepted": true,
+          "item_difference": 1,
+          "before_index": 21,
+          "after_index": 22
+        }
+      ]
+    },
+    {
+      "reasoning": "low",
+      "before": "legacy",
+      "after": "targeted",
+      "pairs": 4,
+      "pass_to_fail": 0,
+      "fail_to_pass": 4,
+      "item_difference": 7,
+      "token_ratio": {
+        "n": 4,
+        "median": 0.9805619732624569,
+        "minimum": 0.9601704334938866,
+        "maximum": 0.98609161669006
+      },
+      "wall_ratio": {
+        "n": 4,
+        "median": 0.6879916528690649,
+        "minimum": 0.4330283592027833,
+        "maximum": 0.7996945686065003
+      },
+      "pair_outcomes": [
+        {
+          "reasoning": "low",
+          "family": "contracts",
+          "language": "lobo",
+          "before_accepted": false,
+          "after_accepted": true,
+          "item_difference": 1,
+          "before_index": 14,
+          "after_index": 13
+        },
+        {
+          "reasoning": "low",
+          "family": "nominal",
+          "language": "lobo",
+          "before_accepted": false,
+          "after_accepted": true,
+          "item_difference": 2,
+          "before_index": 18,
+          "after_index": 20
+        },
+        {
+          "reasoning": "low",
+          "family": "propagation",
+          "language": "lobo",
+          "before_accepted": false,
+          "after_accepted": true,
+          "item_difference": 2,
+          "before_index": 16,
+          "after_index": 15
+        },
+        {
+          "reasoning": "low",
+          "family": "ranges",
+          "language": "lobo",
+          "before_accepted": false,
+          "after_accepted": true,
+          "item_difference": 2,
+          "before_index": 23,
+          "after_index": 22
+        }
+      ]
+    }
+  ],
+  "trials": [
+    {
+      "assignment": {
+        "index": 0,
+        "stage": "compact",
+        "reasoning": "high",
+        "family": "contracts",
+        "language": "lobo",
+        "arm": "legacy",
+        "phase": "comprehension"
+      },
+      "command": [
+        "codex",
+        "exec",
+        "--ignore-user-config",
+        "--ephemeral",
+        "--json",
+        "--sandbox",
+        "read-only",
+        "--skip-git-repo-check",
+        "--disable",
+        "multi_agent",
+        "--disable",
+        "multi_agent_v2",
+        "--disable",
+        "apps",
+        "--disable",
+        "plugins",
+        "--disable",
+        "memories",
+        "-C",
+        "/tmp/lobo-learning-p7p9fca1",
+        "-m",
+        "gpt-5.6-luna",
+        "-c",
+        "model_reasoning_effort=\"high\"",
+        "-c",
+        "approval_policy=\"never\"",
+        "--output-last-message",
+        "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/compact-study-20261124/run/trial-00/last-message.txt",
+        "--disable",
+        "shell_tool",
+        "-"
+      ],
+      "started_unix": 1795531850.9224737,
+      "load_before": [
+        3.70947265625,
+        8.66455078125,
+        5.32568359375
+      ],
+      "workspace": "/tmp/lobo-learning-p7p9fca1",
+      "status": "completed",
+      "exit_code": 0,
+      "agent_wall_s": 59.59856859291904,
+      "load_after": [
+        1.94482421875,
+        7.22705078125,
+        5.03662109375
+      ],
+      "usage": {
+        "input_tokens": 15408,
+        "cached_input_tokens": 13696,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 3122,
+        "reasoning_output_tokens": 3092
+      },
+      "item_types": [
+        "agent_message"
+      ],
+      "grading": {
+        "accepted": false,
+        "format_valid": true,
+        "format_errors": [],
+        "passed": 9,
+        "total": 10,
+        "checks": {
+          "predictions_0": true,
+          "predictions_1": true,
+          "predictions_2": true,
+          "predictions_3": true,
+          "predictions_4": true,
+          "predictions_5": true,
+          "admissions_0": true,
+          "admissions_1": true,
+          "admissions_2": false,
+          "admissions_3": true
+        }
+      },
+      "accepted": false
+    },
+    {
+      "assignment": {
+        "index": 1,
+        "stage": "compact",
+        "reasoning": "high",
+        "family": "contracts",
+        "language": "lobo",
+        "arm": "clean",
+        "phase": "comprehension"
+      },
+      "command": [
+        "codex",
+        "exec",
+        "--ignore-user-config",
+        "--ephemeral",
+        "--json",
+        "--sandbox",
+        "read-only",
+        "--skip-git-repo-check",
+        "--disable",
+        "multi_agent",
+        "--disable",
+        "multi_agent_v2",
+        "--disable",
+        "apps",
+        "--disable",
+        "plugins",
+        "--disable",
+        "memories",
+        "-C",
+        "/tmp/lobo-learning-mxuhjxnp",
+        "-m",
+        "gpt-5.6-luna",
+        "-c",
+        "model_reasoning_effort=\"high\"",
+        "-c",
+        "approval_policy=\"never\"",
+        "--output-last-message",
+        "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/compact-study-20261124/run/trial-01/last-message.txt",
+        "--disable",
+        "shell_tool",
+        "-"
+      ],
+      "started_unix": 1795531910.5245647,
+      "load_before": [
+        1.94482421875,
+        7.22705078125,
+        5.03662109375
+      ],
+      "workspace": "/tmp/lobo-learning-mxuhjxnp",
+      "status": "completed",
+      "exit_code": 0,
+      "agent_wall_s": 56.151358294067904,
+      "load_after": [
+        2.23388671875,
+        6.48193359375,
+        4.91015625
+      ],
+      "usage": {
+        "input_tokens": 15109,
+        "cached_input_tokens": 13696,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 2943,
+        "reasoning_output_tokens": 2913
+      },
+      "item_types": [
+        "agent_message"
+      ],
+      "grading": {
+        "accepted": false,
+        "format_valid": true,
+        "format_errors": [],
+        "passed": 9,
+        "total": 10,
+        "checks": {
+          "predictions_0": true,
+          "predictions_1": true,
+          "predictions_2": true,
+          "predictions_3": true,
+          "predictions_4": true,
+          "predictions_5": true,
+          "admissions_0": true,
+          "admissions_1": true,
+          "admissions_2": false,
+          "admissions_3": true
+        }
+      },
+      "accepted": false
+    },
+    {
+      "assignment": {
+        "index": 2,
+        "stage": "compact",
+        "reasoning": "high",
+        "family": "contracts",
+        "language": "lobo",
+        "arm": "targeted",
+        "phase": "comprehension"
+      },
+      "command": [
+        "codex",
+        "exec",
+        "--ignore-user-config",
+        "--ephemeral",
+        "--json",
+        "--sandbox",
+        "read-only",
+        "--skip-git-repo-check",
+        "--disable",
+        "multi_agent",
+        "--disable",
+        "multi_agent_v2",
+        "--disable",
+        "apps",
+        "--disable",
+        "plugins",
+        "--disable",
+        "memories",
+        "-C",
+        "/tmp/lobo-learning-md380cjq",
+        "-m",
+        "gpt-5.6-luna",
+        "-c",
+        "model_reasoning_effort=\"high\"",
+        "-c",
+        "approval_policy=\"never\"",
+        "--output-last-message",
+        "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/compact-study-20261124/run/trial-02/last-message.txt",
+        "--disable",
+        "shell_tool",
+        "-"
+      ],
+      "started_unix": 1795531966.6806972,
+      "load_before": [
+        2.23388671875,
+        6.48193359375,
+        4.91015625
+      ],
+      "workspace": "/tmp/lobo-learning-md380cjq",
+      "status": "completed",
+      "exit_code": 0,
+      "agent_wall_s": 10.184635671088472,
+      "load_after": [
+        1.89013671875,
+        6.26806640625,
+        4.85693359375
+      ],
+      "usage": {
+        "input_tokens": 15270,
+        "cached_input_tokens": 0,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 390,
+        "reasoning_output_tokens": 360
+      },
+      "item_types": [
+        "agent_message"
+      ],
+      "grading": {
+        "accepted": true,
+        "format_valid": true,
+        "format_errors": [],
+        "passed": 10,
+        "total": 10,
+        "checks": {
+          "predictions_0": true,
+          "predictions_1": true,
+          "predictions_2": true,
+          "predictions_3": true,
+          "predictions_4": true,
+          "predictions_5": true,
+          "admissions_0": true,
+          "admissions_1": true,
+          "admissions_2": true,
+          "admissions_3": true
+        }
+      },
+      "accepted": true
+    },
+    {
+      "assignment": {
+        "index": 3,
+        "stage": "compact",
+        "reasoning": "high",
+        "family": "propagation",
+        "language": "lobo",
+        "arm": "clean",
+        "phase": "comprehension"
+      },
+      "command": [
+        "codex",
+        "exec",
+        "--ignore-user-config",
+        "--ephemeral",
+        "--json",
+        "--sandbox",
+        "read-only",
+        "--skip-git-repo-check",
+        "--disable",
+        "multi_agent",
+        "--disable",
+        "multi_agent_v2",
+        "--disable",
+        "apps",
+        "--disable",
+        "plugins",
+        "--disable",
+        "memories",
+        "-C",
+        "/tmp/lobo-learning-li85iacz",
+        "-m",
+        "gpt-5.6-luna",
+        "-c",
+        "model_reasoning_effort=\"high\"",
+        "-c",
+        "approval_policy=\"never\"",
+        "--output-last-message",
+        "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/compact-study-20261124/run/trial-03/last-message.txt",
+        "--disable",
+        "shell_tool",
+        "-"
+      ],
+      "started_unix": 1795531976.8677814,
+      "load_before": [
+        1.89013671875,
+        6.26806640625,
+        4.85693359375
+      ],
+      "workspace": "/tmp/lobo-learning-li85iacz",
+      "status": "completed",
+      "exit_code": 0,
+      "agent_wall_s": 15.219450828852132,
+      "load_after": [
+        1.92578125,
+        6.00390625,
+        4.80029296875
+      ],
+      "usage": {
+        "input_tokens": 15234,
+        "cached_input_tokens": 13696,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 648,
+        "reasoning_output_tokens": 618
+      },
+      "item_types": [
+        "agent_message"
+      ],
+      "grading": {
+        "accepted": false,
+        "format_valid": true,
+        "format_errors": [],
+        "passed": 8,
+        "total": 10,
+        "checks": {
+          "predictions_0": true,
+          "predictions_1": true,
+          "predictions_2": true,
+          "predictions_3": true,
+          "predictions_4": true,
+          "predictions_5": true,
+          "admissions_0": true,
+          "admissions_1": false,
+          "admissions_2": false,
+          "admissions_3": true
+        }
+      },
+      "accepted": false
+    },
+    {
+      "assignment": {
+        "index": 4,
+        "stage": "compact",
+        "reasoning": "high",
+        "family": "propagation",
+        "language": "lobo",
+        "arm": "targeted",
+        "phase": "comprehension"
+      },
+      "command": [
+        "codex",
+        "exec",
+        "--ignore-user-config",
+        "--ephemeral",
+        "--json",
+        "--sandbox",
+        "read-only",
+        "--skip-git-repo-check",
+        "--disable",
+        "multi_agent",
+        "--disable",
+        "multi_agent_v2",
+        "--disable",
+        "apps",
+        "--disable",
+        "plugins",
+        "--disable",
+        "memories",
+        "-C",
+        "/tmp/lobo-learning-3vkpoj9d",
+        "-m",
+        "gpt-5.6-luna",
+        "-c",
+        "model_reasoning_effort=\"high\"",
+        "-c",
+        "approval_policy=\"never\"",
+        "--output-last-message",
+        "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/compact-study-20261124/run/trial-04/last-message.txt",
+        "--disable",
+        "shell_tool",
+        "-"
+      ],
+      "started_unix": 1795531992.089727,
+      "load_before": [
+        1.92578125,
+        6.00390625,
+        4.80029296875
+      ],
+      "workspace": "/tmp/lobo-learning-3vkpoj9d",
+      "status": "completed",
+      "exit_code": 0,
+      "agent_wall_s": 14.288242019945756,
+      "load_after": [
+        1.62939453125,
+        5.8056640625,
+        4.74853515625
+      ],
+      "usage": {
+        "input_tokens": 15401,
+        "cached_input_tokens": 13696,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 640,
+        "reasoning_output_tokens": 610
+      },
+      "item_types": [
+        "agent_message"
+      ],
+      "grading": {
+        "accepted": true,
+        "format_valid": true,
+        "format_errors": [],
+        "passed": 10,
+        "total": 10,
+        "checks": {
+          "predictions_0": true,
+          "predictions_1": true,
+          "predictions_2": true,
+          "predictions_3": true,
+          "predictions_4": true,
+          "predictions_5": true,
+          "admissions_0": true,
+          "admissions_1": true,
+          "admissions_2": true,
+          "admissions_3": true
+        }
+      },
+      "accepted": true
+    },
+    {
+      "assignment": {
+        "index": 5,
+        "stage": "compact",
+        "reasoning": "high",
+        "family": "propagation",
+        "language": "lobo",
+        "arm": "legacy",
+        "phase": "comprehension"
+      },
+      "command": [
+        "codex",
+        "exec",
+        "--ignore-user-config",
+        "--ephemeral",
+        "--json",
+        "--sandbox",
+        "read-only",
+        "--skip-git-repo-check",
+        "--disable",
+        "multi_agent",
+        "--disable",
+        "multi_agent_v2",
+        "--disable",
+        "apps",
+        "--disable",
+        "plugins",
+        "--disable",
+        "memories",
+        "-C",
+        "/tmp/lobo-learning-23ivdk88",
+        "-m",
+        "gpt-5.6-luna",
+        "-c",
+        "model_reasoning_effort=\"high\"",
+        "-c",
+        "approval_policy=\"never\"",
+        "--output-last-message",
+        "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/compact-study-20261124/run/trial-05/last-message.txt",
+        "--disable",
+        "shell_tool",
+        "-"
+      ],
+      "started_unix": 1795532006.3812203,
+      "load_before": [
+        1.62939453125,
+        5.8056640625,
+        4.74853515625
+      ],
+      "workspace": "/tmp/lobo-learning-23ivdk88",
+      "status": "completed",
+      "exit_code": 0,
+      "agent_wall_s": 30.989258588058874,
+      "load_after": [
+        1.541015625,
+        5.3330078125,
+        4.62841796875
+      ],
+      "usage": {
+        "input_tokens": 15530,
+        "cached_input_tokens": 0,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 1582,
+        "reasoning_output_tokens": 1552
+      },
+      "item_types": [
+        "agent_message"
+      ],
+      "grading": {
+        "accepted": false,
+        "format_valid": true,
+        "format_errors": [],
+        "passed": 9,
+        "total": 10,
+        "checks": {
+          "predictions_0": true,
+          "predictions_1": true,
+          "predictions_2": true,
+          "predictions_3": true,
+          "predictions_4": true,
+          "predictions_5": true,
+          "admissions_0": true,
+          "admissions_1": true,
+          "admissions_2": false,
+          "admissions_3": true
+        }
+      },
+      "accepted": false
+    },
+    {
+      "assignment": {
+        "index": 6,
+        "stage": "compact",
+        "reasoning": "high",
+        "family": "nominal",
+        "language": "lobo",
+        "arm": "targeted",
+        "phase": "comprehension"
+      },
+      "command": [
+        "codex",
+        "exec",
+        "--ignore-user-config",
+        "--ephemeral",
+        "--json",
+        "--sandbox",
+        "read-only",
+        "--skip-git-repo-check",
+        "--disable",
+        "multi_agent",
+        "--disable",
+        "multi_agent_v2",
+        "--disable",
+        "apps",
+        "--disable",
+        "plugins",
+        "--disable",
+        "memories",
+        "-C",
+        "/tmp/lobo-learning-ser6bjxd",
+        "-m",
+        "gpt-5.6-luna",
+        "-c",
+        "model_reasoning_effort=\"high\"",
+        "-c",
+        "approval_policy=\"never\"",
+        "--output-last-message",
+        "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/compact-study-20261124/run/trial-06/last-message.txt",
+        "--disable",
+        "shell_tool",
+        "-"
+      ],
+      "started_unix": 1795532037.3732057,
+      "load_before": [
+        1.541015625,
+        5.3330078125,
+        4.62841796875
+      ],
+      "workspace": "/tmp/lobo-learning-ser6bjxd",
+      "status": "completed",
+      "exit_code": 0,
+      "agent_wall_s": 7.3461486380547285,
+      "load_after": [
+        2.458984375,
+        5.46044921875,
+        4.673828125
+      ],
+      "usage": {
+        "input_tokens": 15311,
+        "cached_input_tokens": 13696,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 236,
+        "reasoning_output_tokens": 206
+      },
+      "item_types": [
+        "agent_message"
+      ],
+      "grading": {
+        "accepted": true,
+        "format_valid": true,
+        "format_errors": [],
+        "passed": 10,
+        "total": 10,
+        "checks": {
+          "predictions_0": true,
+          "predictions_1": true,
+          "predictions_2": true,
+          "predictions_3": true,
+          "predictions_4": true,
+          "predictions_5": true,
+          "admissions_0": true,
+          "admissions_1": true,
+          "admissions_2": true,
+          "admissions_3": true
+        }
+      },
+      "accepted": true
+    },
+    {
+      "assignment": {
+        "index": 7,
+        "stage": "compact",
+        "reasoning": "high",
+        "family": "nominal",
+        "language": "lobo",
+        "arm": "legacy",
+        "phase": "comprehension"
+      },
+      "command": [
+        "codex",
+        "exec",
+        "--ignore-user-config",
+        "--ephemeral",
+        "--json",
+        "--sandbox",
+        "read-only",
+        "--skip-git-repo-check",
+        "--disable",
+        "multi_agent",
+        "--disable",
+        "multi_agent_v2",
+        "--disable",
+        "apps",
+        "--disable",
+        "plugins",
+        "--disable",
+        "memories",
+        "-C",
+        "/tmp/lobo-learning-6ykgordd",
+        "-m",
+        "gpt-5.6-luna",
+        "-c",
+        "model_reasoning_effort=\"high\"",
+        "-c",
+        "approval_policy=\"never\"",
+        "--output-last-message",
+        "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/compact-study-20261124/run/trial-07/last-message.txt",
+        "--disable",
+        "shell_tool",
+        "-"
+      ],
+      "started_unix": 1795532044.722133,
+      "load_before": [
+        2.458984375,
+        5.46044921875,
+        4.673828125
+      ],
+      "workspace": "/tmp/lobo-learning-6ykgordd",
+      "status": "completed",
+      "exit_code": 0,
+      "agent_wall_s": 10.837169321021065,
+      "load_after": [
+        2.31396484375,
+        5.32958984375,
+        4.63916015625
+      ],
+      "usage": {
+        "input_tokens": 15454,
+        "cached_input_tokens": 13696,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 379,
+        "reasoning_output_tokens": 349
+      },
+      "item_types": [
+        "agent_message"
+      ],
+      "grading": {
+        "accepted": false,
+        "format_valid": true,
+        "format_errors": [],
+        "passed": 8,
+        "total": 10,
+        "checks": {
+          "predictions_0": true,
+          "predictions_1": true,
+          "predictions_2": true,
+          "predictions_3": true,
+          "predictions_4": true,
+          "predictions_5": true,
+          "admissions_0": false,
+          "admissions_1": true,
+          "admissions_2": true,
+          "admissions_3": false
+        }
+      },
+      "accepted": false
+    },
+    {
+      "assignment": {
+        "index": 8,
+        "stage": "compact",
+        "reasoning": "high",
+        "family": "nominal",
+        "language": "lobo",
+        "arm": "clean",
+        "phase": "comprehension"
+      },
+      "command": [
+        "codex",
+        "exec",
+        "--ignore-user-config",
+        "--ephemeral",
+        "--json",
+        "--sandbox",
+        "read-only",
+        "--skip-git-repo-check",
+        "--disable",
+        "multi_agent",
+        "--disable",
+        "multi_agent_v2",
+        "--disable",
+        "apps",
+        "--disable",
+        "plugins",
+        "--disable",
+        "memories",
+        "-C",
+        "/tmp/lobo-learning-5r1rihow",
+        "-m",
+        "gpt-5.6-luna",
+        "-c",
+        "model_reasoning_effort=\"high\"",
+        "-c",
+        "approval_policy=\"never\"",
+        "--output-last-message",
+        "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/compact-study-20261124/run/trial-08/last-message.txt",
+        "--disable",
+        "shell_tool",
+        "-"
+      ],
+      "started_unix": 1795532055.5624247,
+      "load_before": [
+        2.31396484375,
+        5.32958984375,
+        4.63916015625
+      ],
+      "workspace": "/tmp/lobo-learning-5r1rihow",
+      "status": "completed",
+      "exit_code": 0,
+      "agent_wall_s": 8.749703723937273,
+      "load_after": [
+        2.03759765625,
+        5.169921875,
+        4.59423828125
+      ],
+      "usage": {
+        "input_tokens": 15161,
+        "cached_input_tokens": 0,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 334,
+        "reasoning_output_tokens": 304
+      },
+      "item_types": [
+        "agent_message"
+      ],
+      "grading": {
+        "accepted": false,
+        "format_valid": true,
+        "format_errors": [],
+        "passed": 8,
+        "total": 10,
+        "checks": {
+          "predictions_0": true,
+          "predictions_1": true,
+          "predictions_2": true,
+          "predictions_3": true,
+          "predictions_4": true,
+          "predictions_5": true,
+          "admissions_0": false,
+          "admissions_1": true,
+          "admissions_2": true,
+          "admissions_3": false
+        }
+      },
+      "accepted": false
+    },
+    {
+      "assignment": {
+        "index": 9,
+        "stage": "compact",
+        "reasoning": "high",
+        "family": "ranges",
+        "language": "lobo",
+        "arm": "legacy",
+        "phase": "comprehension"
+      },
+      "command": [
+        "codex",
+        "exec",
+        "--ignore-user-config",
+        "--ephemeral",
+        "--json",
+        "--sandbox",
+        "read-only",
+        "--skip-git-repo-check",
+        "--disable",
+        "multi_agent",
+        "--disable",
+        "multi_agent_v2",
+        "--disable",
+        "apps",
+        "--disable",
+        "plugins",
+        "--disable",
+        "memories",
+        "-C",
+        "/tmp/lobo-learning-kj55vwwm",
+        "-m",
+        "gpt-5.6-luna",
+        "-c",
+        "model_reasoning_effort=\"high\"",
+        "-c",
+        "approval_policy=\"never\"",
+        "--output-last-message",
+        "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/compact-study-20261124/run/trial-09/last-message.txt",
+        "--disable",
+        "shell_tool",
+        "-"
+      ],
+      "started_unix": 1795532064.3175933,
+      "load_before": [
+        2.03759765625,
+        5.169921875,
+        4.59423828125
+      ],
+      "workspace": "/tmp/lobo-learning-kj55vwwm",
+      "status": "completed",
+      "exit_code": 0,
+      "agent_wall_s": 12.41260609892197,
+      "load_after": [
+        1.79736328125,
+        5.015625,
+        4.5498046875
+      ],
+      "usage": {
+        "input_tokens": 15423,
+        "cached_input_tokens": 13696,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 524,
+        "reasoning_output_tokens": 494
+      },
+      "item_types": [
+        "agent_message"
+      ],
+      "grading": {
+        "accepted": false,
+        "format_valid": true,
+        "format_errors": [],
+        "passed": 9,
+        "total": 10,
+        "checks": {
+          "predictions_0": true,
+          "predictions_1": true,
+          "predictions_2": true,
+          "predictions_3": true,
+          "predictions_4": true,
+          "predictions_5": true,
+          "admissions_0": false,
+          "admissions_1": true,
+          "admissions_2": true,
+          "admissions_3": true
+        }
+      },
+      "accepted": false
+    },
+    {
+      "assignment": {
+        "index": 10,
+        "stage": "compact",
+        "reasoning": "high",
+        "family": "ranges",
+        "language": "lobo",
+        "arm": "clean",
+        "phase": "comprehension"
+      },
+      "command": [
+        "codex",
+        "exec",
+        "--ignore-user-config",
+        "--ephemeral",
+        "--json",
+        "--sandbox",
+        "read-only",
+        "--skip-git-repo-check",
+        "--disable",
+        "multi_agent",
+        "--disable",
+        "multi_agent_v2",
+        "--disable",
+        "apps",
+        "--disable",
+        "plugins",
+        "--disable",
+        "memories",
+        "-C",
+        "/tmp/lobo-learning-ugyfckmj",
+        "-m",
+        "gpt-5.6-luna",
+        "-c",
+        "model_reasoning_effort=\"high\"",
+        "-c",
+        "approval_policy=\"never\"",
+        "--output-last-message",
+        "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/compact-study-20261124/run/trial-10/last-message.txt",
+        "--disable",
+        "shell_tool",
+        "-"
+      ],
+      "started_unix": 1795532076.7335036,
+      "load_before": [
+        1.79736328125,
+        5.015625,
+        4.5498046875
+      ],
+      "workspace": "/tmp/lobo-learning-ugyfckmj",
+      "status": "completed",
+      "exit_code": 0,
+      "agent_wall_s": 13.751434131991118,
+      "load_after": [
+        1.99072265625,
+        4.89990234375,
+        4.51904296875
+      ],
+      "usage": {
+        "input_tokens": 15127,
+        "cached_input_tokens": 13696,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 501,
+        "reasoning_output_tokens": 471
+      },
+      "item_types": [
+        "agent_message"
+      ],
+      "grading": {
+        "accepted": false,
+        "format_valid": true,
+        "format_errors": [],
+        "passed": 9,
+        "total": 10,
+        "checks": {
+          "predictions_0": true,
+          "predictions_1": true,
+          "predictions_2": true,
+          "predictions_3": true,
+          "predictions_4": true,
+          "predictions_5": true,
+          "admissions_0": true,
+          "admissions_1": true,
+          "admissions_2": true,
+          "admissions_3": false
+        }
+      },
+      "accepted": false
+    },
+    {
+      "assignment": {
+        "index": 11,
+        "stage": "compact",
+        "reasoning": "high",
+        "family": "ranges",
+        "language": "lobo",
+        "arm": "targeted",
+        "phase": "comprehension"
+      },
+      "command": [
+        "codex",
+        "exec",
+        "--ignore-user-config",
+        "--ephemeral",
+        "--json",
+        "--sandbox",
+        "read-only",
+        "--skip-git-repo-check",
+        "--disable",
+        "multi_agent",
+        "--disable",
+        "multi_agent_v2",
+        "--disable",
+        "apps",
+        "--disable",
+        "plugins",
+        "--disable",
+        "memories",
+        "-C",
+        "/tmp/lobo-learning-bj0433hk",
+        "-m",
+        "gpt-5.6-luna",
+        "-c",
+        "model_reasoning_effort=\"high\"",
+        "-c",
+        "approval_policy=\"never\"",
+        "--output-last-message",
+        "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/compact-study-20261124/run/trial-11/last-message.txt",
+        "--disable",
+        "shell_tool",
+        "-"
+      ],
+      "started_unix": 1795532090.488697,
+      "load_before": [
+        1.99072265625,
+        4.89990234375,
+        4.51904296875
+      ],
+      "workspace": "/tmp/lobo-learning-bj0433hk",
+      "status": "completed",
+      "exit_code": 0,
+      "agent_wall_s": 8.110804974799976,
+      "load_after": [
+        1.68408203125,
+        4.73828125,
+        4.47021484375
+      ],
+      "usage": {
+        "input_tokens": 15382,
+        "cached_input_tokens": 13696,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 248,
+        "reasoning_output_tokens": 218
+      },
+      "item_types": [
+        "agent_message"
+      ],
+      "grading": {
+        "accepted": true,
+        "format_valid": true,
+        "format_errors": [],
+        "passed": 10,
+        "total": 10,
+        "checks": {
+          "predictions_0": true,
+          "predictions_1": true,
+          "predictions_2": true,
+          "predictions_3": true,
+          "predictions_4": true,
+          "predictions_5": true,
+          "admissions_0": true,
+          "admissions_1": true,
+          "admissions_2": true,
+          "admissions_3": true
+        }
+      },
+      "accepted": true
+    },
+    {
+      "assignment": {
+        "index": 12,
+        "stage": "compact",
+        "reasoning": "low",
+        "family": "contracts",
+        "language": "lobo",
+        "arm": "clean",
+        "phase": "comprehension"
+      },
+      "command": [
+        "codex",
+        "exec",
+        "--ignore-user-config",
+        "--ephemeral",
+        "--json",
+        "--sandbox",
+        "read-only",
+        "--skip-git-repo-check",
+        "--disable",
+        "multi_agent",
+        "--disable",
+        "multi_agent_v2",
+        "--disable",
+        "apps",
+        "--disable",
+        "plugins",
+        "--disable",
+        "memories",
+        "-C",
+        "/tmp/lobo-learning-prbtq9zi",
+        "-m",
+        "gpt-5.6-luna",
+        "-c",
+        "model_reasoning_effort=\"low\"",
+        "-c",
+        "approval_policy=\"never\"",
+        "--output-last-message",
+        "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/compact-study-20261124/run/trial-12/last-message.txt",
+        "--disable",
+        "shell_tool",
+        "-"
+      ],
+      "started_unix": 1795532101.44032,
+      "load_before": [
+        1.68408203125,
+        4.73828125,
+        4.47021484375
+      ],
+      "workspace": "/tmp/lobo-learning-prbtq9zi",
+      "status": "completed",
+      "exit_code": 0,
+      "agent_wall_s": 13.582689696922898,
+      "load_after": [
+        1.822265625,
+        4.619140625,
+        4.43505859375
+      ],
+      "usage": {
+        "input_tokens": 15109,
+        "cached_input_tokens": 13696,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 546,
+        "reasoning_output_tokens": 516
+      },
+      "item_types": [
+        "agent_message"
+      ],
+      "grading": {
+        "accepted": false,
+        "format_valid": true,
+        "format_errors": [],
+        "passed": 8,
+        "total": 10,
+        "checks": {
+          "predictions_0": true,
+          "predictions_1": true,
+          "predictions_2": true,
+          "predictions_3": true,
+          "predictions_4": true,
+          "predictions_5": true,
+          "admissions_0": false,
+          "admissions_1": true,
+          "admissions_2": false,
+          "admissions_3": true
+        }
+      },
+      "accepted": false
+    },
+    {
+      "assignment": {
+        "index": 13,
+        "stage": "compact",
+        "reasoning": "low",
+        "family": "contracts",
+        "language": "lobo",
+        "arm": "targeted",
+        "phase": "comprehension"
+      },
+      "command": [
+        "codex",
+        "exec",
+        "--ignore-user-config",
+        "--ephemeral",
+        "--json",
+        "--sandbox",
+        "read-only",
+        "--skip-git-repo-check",
+        "--disable",
+        "multi_agent",
+        "--disable",
+        "multi_agent_v2",
+        "--disable",
+        "apps",
+        "--disable",
+        "plugins",
+        "--disable",
+        "memories",
+        "-C",
+        "/tmp/lobo-learning-1hjkh16r",
+        "-m",
+        "gpt-5.6-luna",
+        "-c",
+        "model_reasoning_effort=\"low\"",
+        "-c",
+        "approval_policy=\"never\"",
+        "--output-last-message",
+        "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/compact-study-20261124/run/trial-13/last-message.txt",
+        "--disable",
+        "shell_tool",
+        "-"
+      ],
+      "started_unix": 1795532115.0257719,
+      "load_before": [
+        1.822265625,
+        4.619140625,
+        4.43505859375
+      ],
+      "workspace": "/tmp/lobo-learning-1hjkh16r",
+      "status": "completed",
+      "exit_code": 0,
+      "agent_wall_s": 7.660402758046985,
+      "load_after": [
+        1.84326171875,
+        4.53173828125,
+        4.40869140625
+      ],
+      "usage": {
+        "input_tokens": 15276,
+        "cached_input_tokens": 13696,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 273,
+        "reasoning_output_tokens": 243
+      },
+      "item_types": [
+        "agent_message"
+      ],
+      "grading": {
+        "accepted": true,
+        "format_valid": true,
+        "format_errors": [],
+        "passed": 10,
+        "total": 10,
+        "checks": {
+          "predictions_0": true,
+          "predictions_1": true,
+          "predictions_2": true,
+          "predictions_3": true,
+          "predictions_4": true,
+          "predictions_5": true,
+          "admissions_0": true,
+          "admissions_1": true,
+          "admissions_2": true,
+          "admissions_3": true
+        }
+      },
+      "accepted": true
+    },
+    {
+      "assignment": {
+        "index": 14,
+        "stage": "compact",
+        "reasoning": "low",
+        "family": "contracts",
+        "language": "lobo",
+        "arm": "legacy",
+        "phase": "comprehension"
+      },
+      "command": [
+        "codex",
+        "exec",
+        "--ignore-user-config",
+        "--ephemeral",
+        "--json",
+        "--sandbox",
+        "read-only",
+        "--skip-git-repo-check",
+        "--disable",
+        "multi_agent",
+        "--disable",
+        "multi_agent_v2",
+        "--disable",
+        "apps",
+        "--disable",
+        "plugins",
+        "--disable",
+        "memories",
+        "-C",
+        "/tmp/lobo-learning-_fgj2lli",
+        "-m",
+        "gpt-5.6-luna",
+        "-c",
+        "model_reasoning_effort=\"low\"",
+        "-c",
+        "approval_policy=\"never\"",
+        "--output-last-message",
+        "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/compact-study-20261124/run/trial-14/last-message.txt",
+        "--disable",
+        "shell_tool",
+        "-"
+      ],
+      "started_unix": 1795532122.6891382,
+      "load_before": [
+        1.84326171875,
+        4.53173828125,
+        4.40869140625
+      ],
+      "workspace": "/tmp/lobo-learning-_fgj2lli",
+      "status": "completed",
+      "exit_code": 0,
+      "agent_wall_s": 17.690302714006975,
+      "load_after": [
+        1.43408203125,
+        4.30908203125,
+        4.33740234375
+      ],
+      "usage": {
+        "input_tokens": 15402,
+        "cached_input_tokens": 13696,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 792,
+        "reasoning_output_tokens": 762
+      },
+      "item_types": [
+        "agent_message"
+      ],
+      "grading": {
+        "accepted": false,
+        "format_valid": true,
+        "format_errors": [],
+        "passed": 9,
+        "total": 10,
+        "checks": {
+          "predictions_0": true,
+          "predictions_1": true,
+          "predictions_2": true,
+          "predictions_3": true,
+          "predictions_4": true,
+          "predictions_5": true,
+          "admissions_0": false,
+          "admissions_1": true,
+          "admissions_2": true,
+          "admissions_3": true
+        }
+      },
+      "accepted": false
+    },
+    {
+      "assignment": {
+        "index": 15,
+        "stage": "compact",
+        "reasoning": "low",
+        "family": "propagation",
+        "language": "lobo",
+        "arm": "targeted",
+        "phase": "comprehension"
+      },
+      "command": [
+        "codex",
+        "exec",
+        "--ignore-user-config",
+        "--ephemeral",
+        "--json",
+        "--sandbox",
+        "read-only",
+        "--skip-git-repo-check",
+        "--disable",
+        "multi_agent",
+        "--disable",
+        "multi_agent_v2",
+        "--disable",
+        "apps",
+        "--disable",
+        "plugins",
+        "--disable",
+        "memories",
+        "-C",
+        "/tmp/lobo-learning-20on65ar",
+        "-m",
+        "gpt-5.6-luna",
+        "-c",
+        "model_reasoning_effort=\"low\"",
+        "-c",
+        "approval_policy=\"never\"",
+        "--output-last-message",
+        "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/compact-study-20261124/run/trial-15/last-message.txt",
+        "--disable",
+        "shell_tool",
+        "-"
+      ],
+      "started_unix": 1795532140.38331,
+      "load_before": [
+        1.43408203125,
+        4.30908203125,
+        4.33740234375
+      ],
+      "workspace": "/tmp/lobo-learning-20on65ar",
+      "status": "completed",
+      "exit_code": 0,
+      "agent_wall_s": 8.321760151069611,
+      "load_after": [
+        1.28662109375,
+        4.18310546875,
+        4.2958984375
+      ],
+      "usage": {
+        "input_tokens": 15398,
+        "cached_input_tokens": 13696,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 314,
+        "reasoning_output_tokens": 284
+      },
+      "item_types": [
+        "agent_message"
+      ],
+      "grading": {
+        "accepted": true,
+        "format_valid": true,
+        "format_errors": [],
+        "passed": 10,
+        "total": 10,
+        "checks": {
+          "predictions_0": true,
+          "predictions_1": true,
+          "predictions_2": true,
+          "predictions_3": true,
+          "predictions_4": true,
+          "predictions_5": true,
+          "admissions_0": true,
+          "admissions_1": true,
+          "admissions_2": true,
+          "admissions_3": true
+        }
+      },
+      "accepted": true
+    },
+    {
+      "assignment": {
+        "index": 16,
+        "stage": "compact",
+        "reasoning": "low",
+        "family": "propagation",
+        "language": "lobo",
+        "arm": "legacy",
+        "phase": "comprehension"
+      },
+      "command": [
+        "codex",
+        "exec",
+        "--ignore-user-config",
+        "--ephemeral",
+        "--json",
+        "--sandbox",
+        "read-only",
+        "--skip-git-repo-check",
+        "--disable",
+        "multi_agent",
+        "--disable",
+        "multi_agent_v2",
+        "--disable",
+        "apps",
+        "--disable",
+        "plugins",
+        "--disable",
+        "memories",
+        "-C",
+        "/tmp/lobo-learning-llaz0pzz",
+        "-m",
+        "gpt-5.6-luna",
+        "-c",
+        "model_reasoning_effort=\"low\"",
+        "-c",
+        "approval_policy=\"never\"",
+        "--output-last-message",
+        "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/compact-study-20261124/run/trial-16/last-message.txt",
+        "--disable",
+        "shell_tool",
+        "-"
+      ],
+      "started_unix": 1795532148.7085407,
+      "load_before": [
+        1.28662109375,
+        4.18310546875,
+        4.2958984375
+      ],
+      "workspace": "/tmp/lobo-learning-llaz0pzz",
+      "status": "completed",
+      "exit_code": 0,
+      "agent_wall_s": 13.94667323702015,
+      "load_after": [
+        1.00048828125,
+        3.9775390625,
+        4.2265625
+      ],
+      "usage": {
+        "input_tokens": 15533,
+        "cached_input_tokens": 13696,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 574,
+        "reasoning_output_tokens": 544
+      },
+      "item_types": [
+        "agent_message"
+      ],
+      "grading": {
+        "accepted": false,
+        "format_valid": true,
+        "format_errors": [],
+        "passed": 8,
+        "total": 10,
+        "checks": {
+          "predictions_0": true,
+          "predictions_1": true,
+          "predictions_2": true,
+          "predictions_3": false,
+          "predictions_4": true,
+          "predictions_5": true,
+          "admissions_0": true,
+          "admissions_1": true,
+          "admissions_2": false,
+          "admissions_3": true
+        }
+      },
+      "accepted": false
+    },
+    {
+      "assignment": {
+        "index": 17,
+        "stage": "compact",
+        "reasoning": "low",
+        "family": "propagation",
+        "language": "lobo",
+        "arm": "clean",
+        "phase": "comprehension"
+      },
+      "command": [
+        "codex",
+        "exec",
+        "--ignore-user-config",
+        "--ephemeral",
+        "--json",
+        "--sandbox",
+        "read-only",
+        "--skip-git-repo-check",
+        "--disable",
+        "multi_agent",
+        "--disable",
+        "multi_agent_v2",
+        "--disable",
+        "apps",
+        "--disable",
+        "plugins",
+        "--disable",
+        "memories",
+        "-C",
+        "/tmp/lobo-learning-sifs9si2",
+        "-m",
+        "gpt-5.6-luna",
+        "-c",
+        "model_reasoning_effort=\"low\"",
+        "-c",
+        "approval_policy=\"never\"",
+        "--output-last-message",
+        "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/compact-study-20261124/run/trial-17/last-message.txt",
+        "--disable",
+        "shell_tool",
+        "-"
+      ],
+      "started_unix": 1795532162.6589618,
+      "load_before": [
+        1.00048828125,
+        3.9775390625,
+        4.2265625
+      ],
+      "workspace": "/tmp/lobo-learning-sifs9si2",
+      "status": "completed",
+      "exit_code": 0,
+      "agent_wall_s": 11.100343940779567,
+      "load_after": [
+        0.84619140625,
+        3.84619140625,
+        4.1806640625
+      ],
+      "usage": {
+        "input_tokens": 15237,
+        "cached_input_tokens": 13696,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 450,
+        "reasoning_output_tokens": 420
+      },
+      "item_types": [
+        "agent_message"
+      ],
+      "grading": {
+        "accepted": false,
+        "format_valid": true,
+        "format_errors": [],
+        "passed": 8,
+        "total": 10,
+        "checks": {
+          "predictions_0": true,
+          "predictions_1": true,
+          "predictions_2": true,
+          "predictions_3": true,
+          "predictions_4": true,
+          "predictions_5": true,
+          "admissions_0": true,
+          "admissions_1": false,
+          "admissions_2": false,
+          "admissions_3": true
+        }
+      },
+      "accepted": false
+    },
+    {
+      "assignment": {
+        "index": 18,
+        "stage": "compact",
+        "reasoning": "low",
+        "family": "nominal",
+        "language": "lobo",
+        "arm": "legacy",
+        "phase": "comprehension"
+      },
+      "command": [
+        "codex",
+        "exec",
+        "--ignore-user-config",
+        "--ephemeral",
+        "--json",
+        "--sandbox",
+        "read-only",
+        "--skip-git-repo-check",
+        "--disable",
+        "multi_agent",
+        "--disable",
+        "multi_agent_v2",
+        "--disable",
+        "apps",
+        "--disable",
+        "plugins",
+        "--disable",
+        "memories",
+        "-C",
+        "/tmp/lobo-learning-f1bj71fl",
+        "-m",
+        "gpt-5.6-luna",
+        "-c",
+        "model_reasoning_effort=\"low\"",
+        "-c",
+        "approval_policy=\"never\"",
+        "--output-last-message",
+        "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/compact-study-20261124/run/trial-18/last-message.txt",
+        "--disable",
+        "shell_tool",
+        "-"
+      ],
+      "started_unix": 1795532173.763474,
+      "load_before": [
+        0.84619140625,
+        3.84619140625,
+        4.1806640625
+      ],
+      "workspace": "/tmp/lobo-learning-f1bj71fl",
+      "status": "completed",
+      "exit_code": 0,
+      "agent_wall_s": 7.458530419971794,
+      "load_after": [
+        0.7783203125,
+        3.7822265625,
+        4.158203125
+      ],
+      "usage": {
+        "input_tokens": 15451,
+        "cached_input_tokens": 13696,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 223,
+        "reasoning_output_tokens": 193
+      },
+      "item_types": [
+        "agent_message"
+      ],
+      "grading": {
+        "accepted": false,
+        "format_valid": true,
+        "format_errors": [],
+        "passed": 8,
+        "total": 10,
+        "checks": {
+          "predictions_0": true,
+          "predictions_1": true,
+          "predictions_2": true,
+          "predictions_3": true,
+          "predictions_4": true,
+          "predictions_5": true,
+          "admissions_0": false,
+          "admissions_1": true,
+          "admissions_2": true,
+          "admissions_3": false
+        }
+      },
+      "accepted": false
+    },
+    {
+      "assignment": {
+        "index": 19,
+        "stage": "compact",
+        "reasoning": "low",
+        "family": "nominal",
+        "language": "lobo",
+        "arm": "clean",
+        "phase": "comprehension"
+      },
+      "command": [
+        "codex",
+        "exec",
+        "--ignore-user-config",
+        "--ephemeral",
+        "--json",
+        "--sandbox",
+        "read-only",
+        "--skip-git-repo-check",
+        "--disable",
+        "multi_agent",
+        "--disable",
+        "multi_agent_v2",
+        "--disable",
+        "apps",
+        "--disable",
+        "plugins",
+        "--disable",
+        "memories",
+        "-C",
+        "/tmp/lobo-learning-3jl2dm_o",
+        "-m",
+        "gpt-5.6-luna",
+        "-c",
+        "model_reasoning_effort=\"low\"",
+        "-c",
+        "approval_policy=\"never\"",
+        "--output-last-message",
+        "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/compact-study-20261124/run/trial-19/last-message.txt",
+        "--disable",
+        "shell_tool",
+        "-"
+      ],
+      "started_unix": 1795532181.2252612,
+      "load_before": [
+        0.7783203125,
+        3.7822265625,
+        4.158203125
+      ],
+      "workspace": "/tmp/lobo-learning-3jl2dm_o",
+      "status": "completed",
+      "exit_code": 0,
+      "agent_wall_s": 9.617295786039904,
+      "load_after": [
+        1.1806640625,
+        3.7724609375,
+        4.1513671875
+      ],
+      "usage": {
+        "input_tokens": 15161,
+        "cached_input_tokens": 13696,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 195,
+        "reasoning_output_tokens": 165
+      },
+      "item_types": [
+        "agent_message"
+      ],
+      "grading": {
+        "accepted": false,
+        "format_valid": true,
+        "format_errors": [],
+        "passed": 8,
+        "total": 10,
+        "checks": {
+          "predictions_0": true,
+          "predictions_1": true,
+          "predictions_2": true,
+          "predictions_3": true,
+          "predictions_4": true,
+          "predictions_5": true,
+          "admissions_0": false,
+          "admissions_1": true,
+          "admissions_2": true,
+          "admissions_3": false
+        }
+      },
+      "accepted": false
+    },
+    {
+      "assignment": {
+        "index": 20,
+        "stage": "compact",
+        "reasoning": "low",
+        "family": "nominal",
+        "language": "lobo",
+        "arm": "targeted",
+        "phase": "comprehension"
+      },
+      "command": [
+        "codex",
+        "exec",
+        "--ignore-user-config",
+        "--ephemeral",
+        "--json",
+        "--sandbox",
+        "read-only",
+        "--skip-git-repo-check",
+        "--disable",
+        "multi_agent",
+        "--disable",
+        "multi_agent_v2",
+        "--disable",
+        "apps",
+        "--disable",
+        "plugins",
+        "--disable",
+        "memories",
+        "-C",
+        "/tmp/lobo-learning-toay2csb",
+        "-m",
+        "gpt-5.6-luna",
+        "-c",
+        "model_reasoning_effort=\"low\"",
+        "-c",
+        "approval_policy=\"never\"",
+        "--output-last-message",
+        "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/compact-study-20261124/run/trial-20/last-message.txt",
+        "--disable",
+        "shell_tool",
+        "-"
+      ],
+      "started_unix": 1795532190.846972,
+      "load_before": [
+        1.1806640625,
+        3.7724609375,
+        4.1513671875
+      ],
+      "workspace": "/tmp/lobo-learning-toay2csb",
+      "status": "completed",
+      "exit_code": 0,
+      "agent_wall_s": 5.812425771960989,
+      "load_after": [
+        1.166015625,
+        3.72607421875,
+        4.13427734375
+      ],
+      "usage": {
+        "input_tokens": 15314,
+        "cached_input_tokens": 9344,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 142,
+        "reasoning_output_tokens": 112
+      },
+      "item_types": [
+        "agent_message"
+      ],
+      "grading": {
+        "accepted": true,
+        "format_valid": true,
+        "format_errors": [],
+        "passed": 10,
+        "total": 10,
+        "checks": {
+          "predictions_0": true,
+          "predictions_1": true,
+          "predictions_2": true,
+          "predictions_3": true,
+          "predictions_4": true,
+          "predictions_5": true,
+          "admissions_0": true,
+          "admissions_1": true,
+          "admissions_2": true,
+          "admissions_3": true
+        }
+      },
+      "accepted": true
+    },
+    {
+      "assignment": {
+        "index": 21,
+        "stage": "compact",
+        "reasoning": "low",
+        "family": "ranges",
+        "language": "lobo",
+        "arm": "clean",
+        "phase": "comprehension"
+      },
+      "command": [
+        "codex",
+        "exec",
+        "--ignore-user-config",
+        "--ephemeral",
+        "--json",
+        "--sandbox",
+        "read-only",
+        "--skip-git-repo-check",
+        "--disable",
+        "multi_agent",
+        "--disable",
+        "multi_agent_v2",
+        "--disable",
+        "apps",
+        "--disable",
+        "plugins",
+        "--disable",
+        "memories",
+        "-C",
+        "/tmp/lobo-learning-vrrg_xe7",
+        "-m",
+        "gpt-5.6-luna",
+        "-c",
+        "model_reasoning_effort=\"low\"",
+        "-c",
+        "approval_policy=\"never\"",
+        "--output-last-message",
+        "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/compact-study-20261124/run/trial-21/last-message.txt",
+        "--disable",
+        "shell_tool",
+        "-"
+      ],
+      "started_unix": 1795532196.6640654,
+      "load_before": [
+        1.166015625,
+        3.72607421875,
+        4.13427734375
+      ],
+      "workspace": "/tmp/lobo-learning-vrrg_xe7",
+      "status": "completed",
+      "exit_code": 0,
+      "agent_wall_s": 16.356303469045088,
+      "load_after": [
+        1.0380859375,
+        3.53173828125,
+        4.06103515625
+      ],
+      "usage": {
+        "input_tokens": 15130,
+        "cached_input_tokens": 13696,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 692,
+        "reasoning_output_tokens": 662
+      },
+      "item_types": [
+        "agent_message"
+      ],
+      "grading": {
+        "accepted": false,
+        "format_valid": true,
+        "format_errors": [],
+        "passed": 9,
+        "total": 10,
+        "checks": {
+          "predictions_0": true,
+          "predictions_1": true,
+          "predictions_2": true,
+          "predictions_3": true,
+          "predictions_4": true,
+          "predictions_5": true,
+          "admissions_0": false,
+          "admissions_1": true,
+          "admissions_2": true,
+          "admissions_3": true
+        }
+      },
+      "accepted": false
+    },
+    {
+      "assignment": {
+        "index": 22,
+        "stage": "compact",
+        "reasoning": "low",
+        "family": "ranges",
+        "language": "lobo",
+        "arm": "targeted",
+        "phase": "comprehension"
+      },
+      "command": [
+        "codex",
+        "exec",
+        "--ignore-user-config",
+        "--ephemeral",
+        "--json",
+        "--sandbox",
+        "read-only",
+        "--skip-git-repo-check",
+        "--disable",
+        "multi_agent",
+        "--disable",
+        "multi_agent_v2",
+        "--disable",
+        "apps",
+        "--disable",
+        "plugins",
+        "--disable",
+        "memories",
+        "-C",
+        "/tmp/lobo-learning-si_8ts8j",
+        "-m",
+        "gpt-5.6-luna",
+        "-c",
+        "model_reasoning_effort=\"low\"",
+        "-c",
+        "approval_policy=\"never\"",
+        "--output-last-message",
+        "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/compact-study-20261124/run/trial-22/last-message.txt",
+        "--disable",
+        "shell_tool",
+        "-"
+      ],
+      "started_unix": 1795532213.0236473,
+      "load_before": [
+        1.0380859375,
+        3.53173828125,
+        4.06103515625
+      ],
+      "workspace": "/tmp/lobo-learning-si_8ts8j",
+      "status": "completed",
+      "exit_code": 0,
+      "agent_wall_s": 8.182680749800056,
+      "load_after": [
+        0.95458984375,
+        3.47265625,
+        4.0390625
+      ],
+      "usage": {
+        "input_tokens": 15385,
+        "cached_input_tokens": 13696,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 204,
+        "reasoning_output_tokens": 174
+      },
+      "item_types": [
+        "agent_message"
+      ],
+      "grading": {
+        "accepted": true,
+        "format_valid": true,
+        "format_errors": [],
+        "passed": 10,
+        "total": 10,
+        "checks": {
+          "predictions_0": true,
+          "predictions_1": true,
+          "predictions_2": true,
+          "predictions_3": true,
+          "predictions_4": true,
+          "predictions_5": true,
+          "admissions_0": true,
+          "admissions_1": true,
+          "admissions_2": true,
+          "admissions_3": true
+        }
+      },
+      "accepted": true
+    },
+    {
+      "assignment": {
+        "index": 23,
+        "stage": "compact",
+        "reasoning": "low",
+        "family": "ranges",
+        "language": "lobo",
+        "arm": "legacy",
+        "phase": "comprehension"
+      },
+      "command": [
+        "codex",
+        "exec",
+        "--ignore-user-config",
+        "--ephemeral",
+        "--json",
+        "--sandbox",
+        "read-only",
+        "--skip-git-repo-check",
+        "--disable",
+        "multi_agent",
+        "--disable",
+        "multi_agent_v2",
+        "--disable",
+        "apps",
+        "--disable",
+        "plugins",
+        "--disable",
+        "memories",
+        "-C",
+        "/tmp/lobo-learning-p7gv0r80",
+        "-m",
+        "gpt-5.6-luna",
+        "-c",
+        "model_reasoning_effort=\"low\"",
+        "-c",
+        "approval_policy=\"never\"",
+        "--output-last-message",
+        "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/compact-study-20261124/run/trial-23/last-message.txt",
+        "--disable",
+        "shell_tool",
+        "-"
+      ],
+      "started_unix": 1795532221.2097256,
+      "load_before": [
+        0.95458984375,
+        3.47265625,
+        4.0390625
+      ],
+      "workspace": "/tmp/lobo-learning-p7gv0r80",
+      "status": "completed",
+      "exit_code": 0,
+      "agent_wall_s": 10.232257503084838,
+      "load_after": [
+        1.1220703125,
+        3.423828125,
+        4.0166015625
+      ],
+      "usage": {
+        "input_tokens": 15423,
+        "cached_input_tokens": 13696,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 393,
+        "reasoning_output_tokens": 363
+      },
+      "item_types": [
+        "agent_message"
+      ],
+      "grading": {
+        "accepted": false,
+        "format_valid": true,
+        "format_errors": [],
+        "passed": 8,
+        "total": 10,
+        "checks": {
+          "predictions_0": true,
+          "predictions_1": true,
+          "predictions_2": true,
+          "predictions_3": true,
+          "predictions_4": true,
+          "predictions_5": true,
+          "admissions_0": false,
+          "admissions_1": true,
+          "admissions_2": false,
+          "admissions_3": true
+        }
+      },
+      "accepted": false
+    }
+  ],
+  "incorrect_items": [
+    {
+      "assignment": {
+        "index": 0,
+        "stage": "compact",
+        "reasoning": "high",
+        "family": "contracts",
+        "language": "lobo",
+        "arm": "legacy",
+        "phase": "comprehension"
+      },
+      "item": "admissions_2",
+      "expected": false,
+      "actual": true,
+      "checked_source": "module compact;\nfn add(value:I64)->I64 requires {value>=0} ensures {result>value} {value+5}\nfn post(value:I64)->I64 ensures {result==value*2} {value*2}\nfn observe()->I64 actions {pilot.audit} {3} fn candidate()->I64 actions {pilot.audit} ensures {true || observe()>0} {1}"
+    },
+    {
+      "assignment": {
+        "index": 1,
+        "stage": "compact",
+        "reasoning": "high",
+        "family": "contracts",
+        "language": "lobo",
+        "arm": "clean",
+        "phase": "comprehension"
+      },
+      "item": "admissions_2",
+      "expected": false,
+      "actual": true,
+      "checked_source": "module compact;\nfn add(value:I64)->I64 requires {value>=0} ensures {result>value} {value+5}\nfn post(value:I64)->I64 ensures {result==value*2} {value*2}\nfn observe()->I64 actions {pilot.audit} {3} fn candidate()->I64 actions {pilot.audit} ensures {true || observe()>0} {1}"
+    },
+    {
+      "assignment": {
+        "index": 3,
+        "stage": "compact",
+        "reasoning": "high",
+        "family": "propagation",
+        "language": "lobo",
+        "arm": "clean",
+        "phase": "comprehension"
+      },
+      "item": "admissions_1",
+      "expected": false,
+      "actual": true,
+      "checked_source": "module compact;\nvariant Attempt<T> {Ok(T),Err(I64)}\nfn produce(value:I64)->Attempt<I64> {if value<0 {Err(31)} else {Ok(value+4)}}\nfn unpack(item:Attempt<I64>)->I64 {match item {Ok(value)=>value,Err(code)=>-code}}\nfn flow(start:I64)->Attempt<I64> {let value=try produce(start);Ok(value+6)}\nfn scan()->Attempt<I64> {let amount=fold(i in 5,total:I64=1) {let part=try produce(1-i);total+part};Ok(amount)}\nfn choose(flag:Bool)->Attempt<I64> {if flag {Ok(23)} else {let value=try produce(-1);Ok(value)}}\nfn candidate()->Attempt<I64> requires {(try produce(2))>0} {Ok(7)}"
+    },
+    {
+      "assignment": {
+        "index": 3,
+        "stage": "compact",
+        "reasoning": "high",
+        "family": "propagation",
+        "language": "lobo",
+        "arm": "clean",
+        "phase": "comprehension"
+      },
+      "item": "admissions_2",
+      "expected": true,
+      "actual": false,
+      "checked_source": "module compact;\nvariant Attempt<T> {Ok(T),Err(I64)}\nfn produce(value:I64)->Attempt<I64> {if value<0 {Err(31)} else {Ok(value+4)}}\nfn unpack(item:Attempt<I64>)->I64 {match item {Ok(value)=>value,Err(code)=>-code}}\nfn flow(start:I64)->Attempt<I64> {let value=try produce(start);Ok(value+6)}\nfn scan()->Attempt<I64> {let amount=fold(i in 5,total:I64=1) {let part=try produce(1-i);total+part};Ok(amount)}\nfn choose(flag:Bool)->Attempt<I64> {if flag {Ok(23)} else {let value=try produce(-1);Ok(value)}}\nfn try(value:I64)->I64 {value*3} fn candidate()->I64 {try (4)}"
+    },
+    {
+      "assignment": {
+        "index": 5,
+        "stage": "compact",
+        "reasoning": "high",
+        "family": "propagation",
+        "language": "lobo",
+        "arm": "legacy",
+        "phase": "comprehension"
+      },
+      "item": "admissions_2",
+      "expected": true,
+      "actual": false,
+      "checked_source": "module compact;\nvariant Attempt<T> {Ok(T),Err(I64)}\nfn produce(value:I64)->Attempt<I64> {if value<0 {Err(31)} else {Ok(value+4)}}\nfn unpack(item:Attempt<I64>)->I64 {match item {Ok(value)=>value,Err(code)=>-code}}\nfn flow(start:I64)->Attempt<I64> {let value=try produce(start);Ok(value+6)}\nfn scan()->Attempt<I64> {let amount=fold(i in 5,total:I64=1) {let part=try produce(1-i);total+part};Ok(amount)}\nfn choose(flag:Bool)->Attempt<I64> {if flag {Ok(23)} else {let value=try produce(-1);Ok(value)}}\nfn try(value:I64)->I64 {value*3} fn candidate()->I64 {try (4)}"
+    },
+    {
+      "assignment": {
+        "index": 7,
+        "stage": "compact",
+        "reasoning": "high",
+        "family": "nominal",
+        "language": "lobo",
+        "arm": "legacy",
+        "phase": "comprehension"
+      },
+      "item": "admissions_0",
+      "expected": true,
+      "actual": false,
+      "checked_source": "module compact;\nrecord Crate<T> {item:T}\nrecord Pair {a:I64,b:I64}\nvariant Check<T> {Waiting,Have(T)}\nfn pick(status:Check<I64>)->I64 {match status {Waiting=>-9,Have(item)=>item*2}}\nfn identity<T>(value:T)->T {value}\nfn candidate()->Check<Text> {Waiting()}"
+    },
+    {
+      "assignment": {
+        "index": 7,
+        "stage": "compact",
+        "reasoning": "high",
+        "family": "nominal",
+        "language": "lobo",
+        "arm": "legacy",
+        "phase": "comprehension"
+      },
+      "item": "admissions_3",
+      "expected": false,
+      "actual": true,
+      "checked_source": "module compact;\nrecord Crate<T> {item:T}\nrecord Pair {a:I64,b:I64}\nvariant Check<T> {Waiting,Have(T)}\nfn pick(status:Check<I64>)->I64 {match status {Waiting=>-9,Have(item)=>item*2}}\nfn identity<T>(value:T)->T {value}\nfn make<T>()->Check<T> {Waiting} fn candidate()->Check<I64> {make()}"
+    },
+    {
+      "assignment": {
+        "index": 8,
+        "stage": "compact",
+        "reasoning": "high",
+        "family": "nominal",
+        "language": "lobo",
+        "arm": "clean",
+        "phase": "comprehension"
+      },
+      "item": "admissions_0",
+      "expected": true,
+      "actual": false,
+      "checked_source": "module compact;\nrecord Crate<T> {item:T}\nrecord Pair {a:I64,b:I64}\nvariant Check<T> {Waiting,Have(T)}\nfn pick(status:Check<I64>)->I64 {match status {Waiting=>-9,Have(item)=>item*2}}\nfn identity<T>(value:T)->T {value}\nfn candidate()->Check<Text> {Waiting()}"
+    },
+    {
+      "assignment": {
+        "index": 8,
+        "stage": "compact",
+        "reasoning": "high",
+        "family": "nominal",
+        "language": "lobo",
+        "arm": "clean",
+        "phase": "comprehension"
+      },
+      "item": "admissions_3",
+      "expected": false,
+      "actual": true,
+      "checked_source": "module compact;\nrecord Crate<T> {item:T}\nrecord Pair {a:I64,b:I64}\nvariant Check<T> {Waiting,Have(T)}\nfn pick(status:Check<I64>)->I64 {match status {Waiting=>-9,Have(item)=>item*2}}\nfn identity<T>(value:T)->T {value}\nfn make<T>()->Check<T> {Waiting} fn candidate()->Check<I64> {make()}"
+    },
+    {
+      "assignment": {
+        "index": 9,
+        "stage": "compact",
+        "reasoning": "high",
+        "family": "ranges",
+        "language": "lobo",
+        "arm": "legacy",
+        "phase": "comprehension"
+      },
+      "item": "admissions_0",
+      "expected": true,
+      "actual": false,
+      "checked_source": "module compact;\nfn candidate()->Bytes {Bytes::from_list(List::prepend(260,List::empty<I64>()))}"
+    },
+    {
+      "assignment": {
+        "index": 10,
+        "stage": "compact",
+        "reasoning": "high",
+        "family": "ranges",
+        "language": "lobo",
+        "arm": "clean",
+        "phase": "comprehension"
+      },
+      "item": "admissions_3",
+      "expected": false,
+      "actual": true,
+      "checked_source": "module compact;\nfn candidate()->Bool {Text::valid(\"ready\")}"
+    },
+    {
+      "assignment": {
+        "index": 12,
+        "stage": "compact",
+        "reasoning": "low",
+        "family": "contracts",
+        "language": "lobo",
+        "arm": "clean",
+        "phase": "comprehension"
+      },
+      "item": "admissions_0",
+      "expected": true,
+      "actual": false,
+      "checked_source": "module compact;\nfn add(value:I64)->I64 requires {value>=0} ensures {result>value} {value+5}\nfn post(value:I64)->I64 ensures {result==value*2} {value*2}\nfn candidate()->I64 ensures {result<0} {14}"
+    },
+    {
+      "assignment": {
+        "index": 12,
+        "stage": "compact",
+        "reasoning": "low",
+        "family": "contracts",
+        "language": "lobo",
+        "arm": "clean",
+        "phase": "comprehension"
+      },
+      "item": "admissions_2",
+      "expected": false,
+      "actual": true,
+      "checked_source": "module compact;\nfn add(value:I64)->I64 requires {value>=0} ensures {result>value} {value+5}\nfn post(value:I64)->I64 ensures {result==value*2} {value*2}\nfn observe()->I64 actions {pilot.audit} {3} fn candidate()->I64 actions {pilot.audit} ensures {true || observe()>0} {1}"
+    },
+    {
+      "assignment": {
+        "index": 14,
+        "stage": "compact",
+        "reasoning": "low",
+        "family": "contracts",
+        "language": "lobo",
+        "arm": "legacy",
+        "phase": "comprehension"
+      },
+      "item": "admissions_0",
+      "expected": true,
+      "actual": false,
+      "checked_source": "module compact;\nfn add(value:I64)->I64 requires {value>=0} ensures {result>value} {value+5}\nfn post(value:I64)->I64 ensures {result==value*2} {value*2}\nfn candidate()->I64 ensures {result<0} {14}"
+    },
+    {
+      "assignment": {
+        "index": 16,
+        "stage": "compact",
+        "reasoning": "low",
+        "family": "propagation",
+        "language": "lobo",
+        "arm": "legacy",
+        "phase": "comprehension"
+      },
+      "item": "predictions_3",
+      "expected": -31,
+      "actual": 16
+    },
+    {
+      "assignment": {
+        "index": 16,
+        "stage": "compact",
+        "reasoning": "low",
+        "family": "propagation",
+        "language": "lobo",
+        "arm": "legacy",
+        "phase": "comprehension"
+      },
+      "item": "admissions_2",
+      "expected": true,
+      "actual": false,
+      "checked_source": "module compact;\nvariant Attempt<T> {Ok(T),Err(I64)}\nfn produce(value:I64)->Attempt<I64> {if value<0 {Err(31)} else {Ok(value+4)}}\nfn unpack(item:Attempt<I64>)->I64 {match item {Ok(value)=>value,Err(code)=>-code}}\nfn flow(start:I64)->Attempt<I64> {let value=try produce(start);Ok(value+6)}\nfn scan()->Attempt<I64> {let amount=fold(i in 5,total:I64=1) {let part=try produce(1-i);total+part};Ok(amount)}\nfn choose(flag:Bool)->Attempt<I64> {if flag {Ok(23)} else {let value=try produce(-1);Ok(value)}}\nfn try(value:I64)->I64 {value*3} fn candidate()->I64 {try (4)}"
+    },
+    {
+      "assignment": {
+        "index": 17,
+        "stage": "compact",
+        "reasoning": "low",
+        "family": "propagation",
+        "language": "lobo",
+        "arm": "clean",
+        "phase": "comprehension"
+      },
+      "item": "admissions_1",
+      "expected": false,
+      "actual": true,
+      "checked_source": "module compact;\nvariant Attempt<T> {Ok(T),Err(I64)}\nfn produce(value:I64)->Attempt<I64> {if value<0 {Err(31)} else {Ok(value+4)}}\nfn unpack(item:Attempt<I64>)->I64 {match item {Ok(value)=>value,Err(code)=>-code}}\nfn flow(start:I64)->Attempt<I64> {let value=try produce(start);Ok(value+6)}\nfn scan()->Attempt<I64> {let amount=fold(i in 5,total:I64=1) {let part=try produce(1-i);total+part};Ok(amount)}\nfn choose(flag:Bool)->Attempt<I64> {if flag {Ok(23)} else {let value=try produce(-1);Ok(value)}}\nfn candidate()->Attempt<I64> requires {(try produce(2))>0} {Ok(7)}"
+    },
+    {
+      "assignment": {
+        "index": 17,
+        "stage": "compact",
+        "reasoning": "low",
+        "family": "propagation",
+        "language": "lobo",
+        "arm": "clean",
+        "phase": "comprehension"
+      },
+      "item": "admissions_2",
+      "expected": true,
+      "actual": false,
+      "checked_source": "module compact;\nvariant Attempt<T> {Ok(T),Err(I64)}\nfn produce(value:I64)->Attempt<I64> {if value<0 {Err(31)} else {Ok(value+4)}}\nfn unpack(item:Attempt<I64>)->I64 {match item {Ok(value)=>value,Err(code)=>-code}}\nfn flow(start:I64)->Attempt<I64> {let value=try produce(start);Ok(value+6)}\nfn scan()->Attempt<I64> {let amount=fold(i in 5,total:I64=1) {let part=try produce(1-i);total+part};Ok(amount)}\nfn choose(flag:Bool)->Attempt<I64> {if flag {Ok(23)} else {let value=try produce(-1);Ok(value)}}\nfn try(value:I64)->I64 {value*3} fn candidate()->I64 {try (4)}"
+    },
+    {
+      "assignment": {
+        "index": 18,
+        "stage": "compact",
+        "reasoning": "low",
+        "family": "nominal",
+        "language": "lobo",
+        "arm": "legacy",
+        "phase": "comprehension"
+      },
+      "item": "admissions_0",
+      "expected": true,
+      "actual": false,
+      "checked_source": "module compact;\nrecord Crate<T> {item:T}\nrecord Pair {a:I64,b:I64}\nvariant Check<T> {Waiting,Have(T)}\nfn pick(status:Check<I64>)->I64 {match status {Waiting=>-9,Have(item)=>item*2}}\nfn identity<T>(value:T)->T {value}\nfn candidate()->Check<Text> {Waiting()}"
+    },
+    {
+      "assignment": {
+        "index": 18,
+        "stage": "compact",
+        "reasoning": "low",
+        "family": "nominal",
+        "language": "lobo",
+        "arm": "legacy",
+        "phase": "comprehension"
+      },
+      "item": "admissions_3",
+      "expected": false,
+      "actual": true,
+      "checked_source": "module compact;\nrecord Crate<T> {item:T}\nrecord Pair {a:I64,b:I64}\nvariant Check<T> {Waiting,Have(T)}\nfn pick(status:Check<I64>)->I64 {match status {Waiting=>-9,Have(item)=>item*2}}\nfn identity<T>(value:T)->T {value}\nfn make<T>()->Check<T> {Waiting} fn candidate()->Check<I64> {make()}"
+    },
+    {
+      "assignment": {
+        "index": 19,
+        "stage": "compact",
+        "reasoning": "low",
+        "family": "nominal",
+        "language": "lobo",
+        "arm": "clean",
+        "phase": "comprehension"
+      },
+      "item": "admissions_0",
+      "expected": true,
+      "actual": false,
+      "checked_source": "module compact;\nrecord Crate<T> {item:T}\nrecord Pair {a:I64,b:I64}\nvariant Check<T> {Waiting,Have(T)}\nfn pick(status:Check<I64>)->I64 {match status {Waiting=>-9,Have(item)=>item*2}}\nfn identity<T>(value:T)->T {value}\nfn candidate()->Check<Text> {Waiting()}"
+    },
+    {
+      "assignment": {
+        "index": 19,
+        "stage": "compact",
+        "reasoning": "low",
+        "family": "nominal",
+        "language": "lobo",
+        "arm": "clean",
+        "phase": "comprehension"
+      },
+      "item": "admissions_3",
+      "expected": false,
+      "actual": true,
+      "checked_source": "module compact;\nrecord Crate<T> {item:T}\nrecord Pair {a:I64,b:I64}\nvariant Check<T> {Waiting,Have(T)}\nfn pick(status:Check<I64>)->I64 {match status {Waiting=>-9,Have(item)=>item*2}}\nfn identity<T>(value:T)->T {value}\nfn make<T>()->Check<T> {Waiting} fn candidate()->Check<I64> {make()}"
+    },
+    {
+      "assignment": {
+        "index": 21,
+        "stage": "compact",
+        "reasoning": "low",
+        "family": "ranges",
+        "language": "lobo",
+        "arm": "clean",
+        "phase": "comprehension"
+      },
+      "item": "admissions_0",
+      "expected": true,
+      "actual": false,
+      "checked_source": "module compact;\nfn candidate()->Bytes {Bytes::from_list(List::prepend(260,List::empty<I64>()))}"
+    },
+    {
+      "assignment": {
+        "index": 23,
+        "stage": "compact",
+        "reasoning": "low",
+        "family": "ranges",
+        "language": "lobo",
+        "arm": "legacy",
+        "phase": "comprehension"
+      },
+      "item": "admissions_0",
+      "expected": true,
+      "actual": false,
+      "checked_source": "module compact;\nfn candidate()->Bytes {Bytes::from_list(List::prepend(260,List::empty<I64>()))}"
+    },
+    {
+      "assignment": {
+        "index": 23,
+        "stage": "compact",
+        "reasoning": "low",
+        "family": "ranges",
+        "language": "lobo",
+        "arm": "legacy",
+        "phase": "comprehension"
+      },
+      "item": "admissions_2",
+      "expected": true,
+      "actual": false,
+      "checked_source": "module compact;\nfn candidate()->Text {Text::concat(\"a\",\"z\")}"
+    }
+  ],
+  "format_errors": [],
+  "audits": [
+    {
+      "index": 0,
+      "prompt_matches": true,
+      "grade_matches": true,
+      "acceptance_matches": true,
+      "no_tools": true
+    },
+    {
+      "index": 1,
+      "prompt_matches": true,
+      "grade_matches": true,
+      "acceptance_matches": true,
+      "no_tools": true
+    },
+    {
+      "index": 2,
+      "prompt_matches": true,
+      "grade_matches": true,
+      "acceptance_matches": true,
+      "no_tools": true
+    },
+    {
+      "index": 3,
+      "prompt_matches": true,
+      "grade_matches": true,
+      "acceptance_matches": true,
+      "no_tools": true
+    },
+    {
+      "index": 4,
+      "prompt_matches": true,
+      "grade_matches": true,
+      "acceptance_matches": true,
+      "no_tools": true
+    },
+    {
+      "index": 5,
+      "prompt_matches": true,
+      "grade_matches": true,
+      "acceptance_matches": true,
+      "no_tools": true
+    },
+    {
+      "index": 6,
+      "prompt_matches": true,
+      "grade_matches": true,
+      "acceptance_matches": true,
+      "no_tools": true
+    },
+    {
+      "index": 7,
+      "prompt_matches": true,
+      "grade_matches": true,
+      "acceptance_matches": true,
+      "no_tools": true
+    },
+    {
+      "index": 8,
+      "prompt_matches": true,
+      "grade_matches": true,
+      "acceptance_matches": true,
+      "no_tools": true
+    },
+    {
+      "index": 9,
+      "prompt_matches": true,
+      "grade_matches": true,
+      "acceptance_matches": true,
+      "no_tools": true
+    },
+    {
+      "index": 10,
+      "prompt_matches": true,
+      "grade_matches": true,
+      "acceptance_matches": true,
+      "no_tools": true
+    },
+    {
+      "index": 11,
+      "prompt_matches": true,
+      "grade_matches": true,
+      "acceptance_matches": true,
+      "no_tools": true
+    },
+    {
+      "index": 12,
+      "prompt_matches": true,
+      "grade_matches": true,
+      "acceptance_matches": true,
+      "no_tools": true
+    },
+    {
+      "index": 13,
+      "prompt_matches": true,
+      "grade_matches": true,
+      "acceptance_matches": true,
+      "no_tools": true
+    },
+    {
+      "index": 14,
+      "prompt_matches": true,
+      "grade_matches": true,
+      "acceptance_matches": true,
+      "no_tools": true
+    },
+    {
+      "index": 15,
+      "prompt_matches": true,
+      "grade_matches": true,
+      "acceptance_matches": true,
+      "no_tools": true
+    },
+    {
+      "index": 16,
+      "prompt_matches": true,
+      "grade_matches": true,
+      "acceptance_matches": true,
+      "no_tools": true
+    },
+    {
+      "index": 17,
+      "prompt_matches": true,
+      "grade_matches": true,
+      "acceptance_matches": true,
+      "no_tools": true
+    },
+    {
+      "index": 18,
+      "prompt_matches": true,
+      "grade_matches": true,
+      "acceptance_matches": true,
+      "no_tools": true
+    },
+    {
+      "index": 19,
+      "prompt_matches": true,
+      "grade_matches": true,
+      "acceptance_matches": true,
+      "no_tools": true
+    },
+    {
+      "index": 20,
+      "prompt_matches": true,
+      "grade_matches": true,
+      "acceptance_matches": true,
+      "no_tools": true
+    },
+    {
+      "index": 21,
+      "prompt_matches": true,
+      "grade_matches": true,
+      "acceptance_matches": true,
+      "no_tools": true
+    },
+    {
+      "index": 22,
+      "prompt_matches": true,
+      "grade_matches": true,
+      "acceptance_matches": true,
+      "no_tools": true
+    },
+    {
+      "index": 23,
+      "prompt_matches": true,
+      "grade_matches": true,
+      "acceptance_matches": true,
+      "no_tools": true
+    }
+  ],
+  "scored_usage": {
+    "known": 24,
+    "unknown": 0,
+    "billing": null,
+    "input_tokens": 367629,
+    "input_tokens_unknown": 0,
+    "output_tokens": 16345,
+    "output_tokens_unknown": 0,
+    "cached_input_tokens": 283264,
+    "cached_input_tokens_unknown": 0,
+    "reasoning_output_tokens": 15625,
+    "reasoning_output_tokens_unknown": 0,
+    "cache_write_input_tokens": 0,
+    "cache_write_input_tokens_unknown": 0,
+    "reported_input_plus_output_tokens": 383974
+  },
+  "availability_usage": {
+    "known": 2,
+    "unknown": 0,
+    "billing": null,
+    "input_tokens": 28230,
+    "input_tokens_unknown": 0,
+    "output_tokens": 10,
+    "output_tokens_unknown": 0,
+    "cached_input_tokens": 27392,
+    "cached_input_tokens_unknown": 0,
+    "reasoning_output_tokens": 0,
+    "reasoning_output_tokens_unknown": 0,
+    "cache_write_input_tokens": 0,
+    "cache_write_input_tokens_unknown": 0,
+    "reported_input_plus_output_tokens": 28240
+  },
+  "all_participant_usage": {
+    "known": 26,
+    "unknown": 0,
+    "billing": null,
+    "input_tokens": 395859,
+    "input_tokens_unknown": 0,
+    "output_tokens": 16355,
+    "output_tokens_unknown": 0,
+    "cached_input_tokens": 310656,
+    "cached_input_tokens_unknown": 0,
+    "reasoning_output_tokens": 15625,
+    "reasoning_output_tokens_unknown": 0,
+    "cache_write_input_tokens": 0,
+    "cache_write_input_tokens_unknown": 0,
+    "reported_input_plus_output_tokens": 412214
+  },
+  "canaries": [
+    {
+      "model": "gpt-5.6-luna",
+      "reasoning": "high",
+      "excluded_from_scored_trials": true,
+      "command": [
+        "codex",
+        "exec",
+        "--ignore-user-config",
+        "--ephemeral",
+        "--json",
+        "--sandbox",
+        "read-only",
+        "--skip-git-repo-check",
+        "--disable",
+        "multi_agent",
+        "--disable",
+        "multi_agent_v2",
+        "--disable",
+        "apps",
+        "--disable",
+        "plugins",
+        "--disable",
+        "memories",
+        "-C",
+        "/tmp/luna-availability-y3pnb3e4",
+        "-m",
+        "gpt-5.6-luna",
+        "-c",
+        "model_reasoning_effort=\"high\"",
+        "-c",
+        "approval_policy=\"never\"",
+        "--output-last-message",
+        "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/compact-study-20261124/run/availability-high/last-message.txt",
+        "--disable",
+        "shell_tool",
+        "-"
+      ],
+      "exit_code": 0,
+      "usage": {
+        "input_tokens": 14115,
+        "cached_input_tokens": 13696,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 5,
+        "reasoning_output_tokens": 0
+      },
+      "available": true,
+      "last_message": "READY",
+      "wall_s": 2.7706915619783103
+    },
+    {
+      "model": "gpt-5.6-luna",
+      "reasoning": "low",
+      "excluded_from_scored_trials": true,
+      "command": [
+        "codex",
+        "exec",
+        "--ignore-user-config",
+        "--ephemeral",
+        "--json",
+        "--sandbox",
+        "read-only",
+        "--skip-git-repo-check",
+        "--disable",
+        "multi_agent",
+        "--disable",
+        "multi_agent_v2",
+        "--disable",
+        "apps",
+        "--disable",
+        "plugins",
+        "--disable",
+        "memories",
+        "-C",
+        "/tmp/luna-availability-3e5kkpnb",
+        "-m",
+        "gpt-5.6-luna",
+        "-c",
+        "model_reasoning_effort=\"low\"",
+        "-c",
+        "approval_policy=\"never\"",
+        "--output-last-message",
+        "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/compact-study-20261124/run/availability-low/last-message.txt",
+        "--disable",
+        "shell_tool",
+        "-"
+      ],
+      "exit_code": 0,
+      "usage": {
+        "input_tokens": 14115,
+        "cached_input_tokens": 13696,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 5,
+        "reasoning_output_tokens": 0
+      },
+      "available": true,
+      "last_message": "READY",
+      "wall_s": 2.836079757194966
+    }
+  ],
+  "prior_paper": {
+    "entries": 42,
+    "pins": 141,
+    "verified": true
+  },
+  "raw_evidence": "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/compact-study-20261124",
+  "public_bundles": "benchmarks/fixtures/compact-study-20261124",
+  "environment_before": {
+    "versions": [
+      {
+        "command": [
+          "codex",
+          "--version"
+        ],
+        "stdout": "codex-cli 0.171.0\n",
+        "stderr": "",
+        "executable": "/home/luis/.codex/packages/standalone/releases/0.171.0-x86_64-unknown-linux-musl/bin/codex",
+        "sha256": "b76a027d6b210f9a8da7aaf321dd235c700f0ef7a794d4a5314b9af6c134f0f0"
+      },
+      {
+        "command": [
+          "rustc",
+          "--version"
+        ],
+        "stdout": "rustc 1.92.0 (ded5c06cf 2025-12-08)\n",
+        "stderr": "",
+        "executable": "/home/luis/.cargo/bin/rustup",
+        "sha256": "20a06e644b0d9bd2fbdbfd52d42540bdde820ea7df86e92e533c073da0cdd43c"
+      },
+      {
+        "command": [
+          "clang",
+          "--version"
+        ],
+        "stdout": "Ubuntu clang version 18.1.3 (1ubuntu1)\nTarget: x86_64-pc-linux-gnu\nThread model: posix\nInstalledDir: /usr/bin\n",
+        "stderr": "",
+        "executable": "/usr/lib/llvm-18/bin/clang",
+        "sha256": "8ef402d453d1ba4902e4ee0f0f847f6cfa01400c95aa43c24e97818b9c0e3f45"
+      },
+      {
+        "command": [
+          "python3",
+          "--version"
+        ],
+        "stdout": "Python 3.12.3\n",
+        "stderr": "",
+        "executable": "/usr/bin/python3.12",
+        "sha256": "e50d468e8b0adfb05733f5b87b3cff34829c4a8c1aea50c865aa8bdfe4bb150f"
+      }
+    ],
+    "logical_cpus": 16,
+    "load": [
+      3.70947265625,
+      8.66455078125,
+      5.32568359375
+    ],
+    "recorded_unix": 1795531848.1475842
+  },
+  "environment_after": {
+    "versions": [
+      {
+        "command": [
+          "codex",
+          "--version"
+        ],
+        "stdout": "codex-cli 0.171.0\n",
+        "stderr": "",
+        "executable": "/home/luis/.codex/packages/standalone/releases/0.171.0-x86_64-unknown-linux-musl/bin/codex",
+        "sha256": "b76a027d6b210f9a8da7aaf321dd235c700f0ef7a794d4a5314b9af6c134f0f0"
+      },
+      {
+        "command": [
+          "rustc",
+          "--version"
+        ],
+        "stdout": "rustc 1.92.0 (ded5c06cf 2025-12-08)\n",
+        "stderr": "",
+        "executable": "/home/luis/.cargo/bin/rustup",
+        "sha256": "20a06e644b0d9bd2fbdbfd52d42540bdde820ea7df86e92e533c073da0cdd43c"
+      },
+      {
+        "command": [
+          "clang",
+          "--version"
+        ],
+        "stdout": "Ubuntu clang version 18.1.3 (1ubuntu1)\nTarget: x86_64-pc-linux-gnu\nThread model: posix\nInstalledDir: /usr/bin\n",
+        "stderr": "",
+        "executable": "/usr/lib/llvm-18/bin/clang",
+        "sha256": "8ef402d453d1ba4902e4ee0f0f847f6cfa01400c95aa43c24e97818b9c0e3f45"
+      },
+      {
+        "command": [
+          "python3",
+          "--version"
+        ],
+        "stdout": "Python 3.12.3\n",
+        "stderr": "",
+        "executable": "/usr/bin/python3.12",
+        "sha256": "e50d468e8b0adfb05733f5b87b3cff34829c4a8c1aea50c865aa8bdfe4bb150f"
+      }
+    ],
+    "logical_cpus": 16,
+    "load": [
+      1.1220703125,
+      3.423828125,
+      4.0166015625
+    ],
+    "recorded_unix": 1795532231.8703828
+  },
+  "limitations": [
+    "Small development-targeted pilot: four topics selected after earlier errors; new examples but not independent blinded holdouts",
+    "One program instance/topic, high-before-low order, aliases and provider caches limit generalization",
+    "Cleanup removes authoring instructions and adds a reading-mode cue while preserving semantic paragraphs; it is not a pure token-count ablation",
+    "Targeted facts contrast is conditional on the cleaned guide; no facts-only arm or interaction estimate",
+    "Cards cover this pilot, not the complete language; signature provenance kept outside the delivered text",
+    "Source-only presentation, no tool-assisted verification or interactive graph",
+    "Parent-agent development tokens, underlying provider requests and billing unknown"
+  ]
+}

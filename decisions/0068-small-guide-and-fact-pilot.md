@@ -1,6 +1,6 @@
 # 0068 — Small reading-guide and checked-fact pilot
 
-Date: 2026-11-24. Status: selected; register before participant calls.
+Date: 2026-11-24. Status: complete; all24 registered attempts retained.
 
 The user asked for changes and small tests to see whether statistics improve. Use reliable coding/TDD.
 Keep product/compiler/extension 1.11.2, the tested old reference/graph, old drivers/questions/scores and
@@ -37,3 +37,12 @@ For this research-only change, verify the identical frozen compiler hash and reu
 regression receipt. Run new focused tests/native calibration/probes and repository checks. Do not present
 that receipt as a newly rerun compiler suite. Retain every negative/intermediate test result and every
 participant outcome/unknown. Append paper evidence without altering prior entries or pins. Stop at 24.
+
+## Observed outcome
+
+Registration `ef3d410` preceded calls. Existing/clean/targeted arms give68/80,67/80,80/80 items and
+0/8,0/8,8/8 whole tasks. Targeted cards pass4/4 high and4/4 low; cleanup alone does not improve
+accuracy. Combined median paired reported tokens fall2.2%, with unknown billing. Preserve the additive
+packet and all results as development-targeted research evidence; no universal default switch or claim
+of general language/model superiority. See [the report](../research/compact-pilot-2026-11-24.md).
+All26 participant/availability usage records are known. Stop at24; no additional calls or product edits.

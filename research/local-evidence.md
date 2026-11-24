@@ -1,5 +1,13 @@
 # Local evidence for the Lobo paper
 
+## Compact checked-reference pilot
+
+Paper local-043 adds [the small three-arm pilot](compact-pilot-2026-11-24.md) and
+[all24 results](../benchmarks/results/2026-11-24-compact-pilot.json). Targeted cards give80/80 items
+and8/8 tasks versus68/80 and0/8 old; cleanup alone gives67/80 and0/8. Both reasoning settings benefit
+on these selected tasks; combined median paired reported tokens are2.2% lower. The sample does not
+establish a general language or model advantage. All42 prior entries and141 pins remain unchanged.
+
 ## Response contract, reference presence and graph presentation
 
 Paper local-042 adds [three separate registered comparisons](learning-study-2026-11-24.md),

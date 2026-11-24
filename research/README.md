@@ -1,5 +1,13 @@
 # Lobo research record
 
+## Small checked-reference pilot
+
+The [24-attempt pilot](compact-pilot-2026-11-24.md) tests reading-only cleanup and relevant checked
+cards at frozen1.11.2. Existing/clean/targeted item scores are68/80,67/80,80/80. All targeted tasks
+pass at both reasoning settings, with combined median paired reported tokens2.2% lower than the old
+guide. Cleanup alone does not improve accuracy. This is a selected four-topic development sample;
+all errors, costs and limits remain in paper local-043. No more trials or product changes are implied.
+
 ## Separate response contract, reference and graph tests
 
 The [completed84-attempt pilot](learning-study-2026-11-24.md), decision 0067, keeps product 1.11.2 frozen.
