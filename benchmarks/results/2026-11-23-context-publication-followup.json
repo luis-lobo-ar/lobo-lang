@@ -1,0 +1,13 @@
+{
+  "date": "2026-11-23",
+  "publication_commit": "944d7f2",
+  "observation": "Staged diff check reported a final blank line in the newly tracked raw Cargo log. The commit command continued after that warning. Earlier working-tree checks did not include this then-untracked file.",
+  "resolution": "Keep the raw log unchanged. A directory-scoped .gitattributes exempts exactly cargo-test.txt from whitespace normalization/checking, following the existing raw-profile precedent.",
+  "raw_log_bytes_preserved": true,
+  "raw_log_sha256": "df394fad0fdc1d89b8c03d0ccbc39a11bbd76e2ffede81035d83cac0f59177d5",
+  "checks": {
+    "git_diff_check_since_a0825f4": "passed with the narrow raw-log exception",
+    "all_41_paper_entries_and_131_pins": "verified unchanged"
+  },
+  "scope": "Publication metadata only; no score, registered input, artifact hash, language or test outcome changed. The new .gitattributes is an addendum outside the closed snapshot manifest."
+}
