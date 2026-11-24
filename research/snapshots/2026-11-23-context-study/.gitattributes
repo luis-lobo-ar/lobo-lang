@@ -1,0 +1,5 @@
+# Registered inputs/prompts and raw terminal logs retain their original bytes.
+# Authored source/docs outside these evidence paths keep normal whitespace checks.
+registration/inputs/** -whitespace
+registration/prompts/** -whitespace
+development/*.txt -whitespace
