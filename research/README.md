@@ -1,12 +1,21 @@
 # Lobo research record
 
-## Current reassessment at compiler 1.11.2
+## Frozen matched agent pilot at compiler 1.11.2
+
+The [completed 54-attempt study](matched-agent-study-2026-11-23.md) compares construction, source-only
+comprehension and requirement changes with Rust and Python. All arms pass the declared checks;
+Lobo has higher median paired construction cost. The complete runtime comparison, original infrastructure
+interruption, unknown usage, source bundles and limits are retained as new paper evidence local-038.
+This is an exploratory current-checkpoint result, without a demonstrated Lobo quality advantage.
+
+## Pre-study reassessment at compiler 1.11.2
 
 The [2026-11-23 cross-iteration review](reassessment-2026-11-23.md) revisits construction, comprehension,
 H1/H2/H3, onboarding, tokens, state/context, safety, tooling and native execution. Fresh local replay data
 are linked from [the receipt](../benchmarks/results/2026-11-23-research-reassessment.json). Earlier readiness
 pages retain their dated Core 0.9/0.11 scope. Later language features are implemented, while a current
-agent-construction/comprehension advantage remains unmeasured. No new model trials were run.
+agent-construction/comprehension advantage was unmeasured at that checkpoint. That review ran no new
+model trials; the newer study above adds matched observations without establishing an advantage.
 
 
 ## Maintained HTTP refactor and reproducibility correction

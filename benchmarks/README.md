@@ -1,5 +1,13 @@
 # Execution comparisons
 
+## Frozen 1.11.2 matched agent and runtime study
+
+[The completed study](../research/matched-agent-study-2026-11-23.md) compares Lobo, Rust and Python for
+construction, comprehension and requirement changes. [The protocol](matched-study/README.md) separates
+equal working limits, reported token cost and full-process runtime. All trials, failures, source bundles,
+unknown usage and profiling limits are retained in the linked data. New model-backed runs require explicit
+authorization; unit tests and replaying public source bundles need no model calls.
+
 ## C versus direct LLVM native backend
 
 Compiler 0.11.1 exposes both routes with unchanged source semantics. After a release build, run

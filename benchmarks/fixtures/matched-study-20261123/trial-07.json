@@ -1,0 +1,14 @@
+{
+  "assignment": {
+    "index": 7,
+    "repeat": 1,
+    "family": "ledger",
+    "phase": "change",
+    "language": "rust"
+  },
+  "files": {
+    "logic.rs": "use crate::model::{Event,Summary};\npub fn valid_amount(value:i64)->bool {value>=0 && value<=1000000}\nstruct State {balance:i64,rejected:i64,peak:i64,locked:bool,audit:Vec<i64>,history:Vec<i64> }\nfn step(mut state:State,event:&Event)->State {\n match *event {\n  Event::Credit(amount)=> {if valid_amount(amount) { state.history.push(state.balance);state.balance+=amount;} else {state.rejected+=1;}},\n  Event::Debit(amount)=> {if !valid_amount(amount) || state.locked || amount>state.balance {state.rejected+=1;} else { state.history.push(state.balance);state.balance-=amount;}},\n  Event::Lock=>state.locked=true,Event::Unlock=>state.locked=false,\n  Event::Undo=> {\n   if state.locked {state.rejected+=1;}\n   else if let Some(balance)=state.history.pop() {state.balance=balance;}\n   else {state.rejected+=1;}\n  }\n }\n state.peak=state.peak.max(state.balance);state.audit.push(state.balance);state\n}\npub fn run(events:&[Event],initial:i64)->Summary {\n let mut state=State {balance:initial,rejected:0,peak:initial,locked:false,audit:Vec::new(),history:Vec::new() };\n for event in events {state=step(state,event);}\n Summary {balance:state.balance,rejected:state.rejected,peak:state.peak,audit:state.audit}\n}\n",
+    "app.rs": "mod model;mod logic;\nfn main(){let a:Vec<String>=std::env::args().collect();let initial:i64=a[1].parse().unwrap();let events:Vec<model::Event>=a[2].split(';').filter(|s|!s.is_empty()).map(|s| {let v:Vec<_>=s.split(':').collect();let n:i64=v[1].parse().unwrap();match v[0] {\"0\"=>model::Event::Credit(n),\"1\"=>model::Event::Debit(n),\"2\"=>model::Event::Lock,\"3\"=>model::Event::Unlock ,\"4\"=>model::Event::Undo,_=>panic!(\"bad event\")}}).collect();\nif a.len()>3 {let repeats:i64=a[4].parse().unwrap();let mut total=0i64;for i in 0..repeats {let v=logic::run(std::hint::black_box(&events),initial+i%3);total+=std::hint::black_box(v.balance+v.rejected+v.peak+v.audit.iter().sum::<i64>());}println!(\"{}\",total);} else {let v=logic::run(&events,initial);println!(\"{{\\\"balance\\\":{},\\\"rejected\\\":{},\\\"peak\\\":{},\\\"audit\\\":{:?}}}\",v.balance,v.rejected,v.peak,v.audit);}}\n",
+    "model.rs": "#[derive(Clone)] pub enum Event {Credit(i64),Debit(i64),Lock,Unlock,Undo}\npub struct Summary {pub balance:i64,pub rejected:i64,pub peak:i64,pub audit:Vec<i64>}\n"
+  }
+}

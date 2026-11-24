@@ -1,0 +1,10 @@
+{
+  "assignment": {
+    "index": 29,
+    "repeat": 1,
+    "family": "ledger",
+    "phase": "comprehension",
+    "language": "python"
+  },
+  "answer": "{\"predictions\":[{\"balance\":4,\"rejected\":0,\"peak\":5,\"audit\":[5,3,4]},{\"balance\":0,\"rejected\":1,\"peak\":5,\"audit\":[3,3,5,5,0]},{\"balance\":0,\"rejected\":2,\"peak\":1,\"audit\":[1,1,0]},{\"balance\":0,\"rejected\":0,\"peak\":0,\"audit\":[0,0,0,0]},{\"balance\":7,\"rejected\":1,\"peak\":7,\"audit\":[7,7,7,7]},{\"balance\":1000001,\"rejected\":1,\"peak\":1000001,\"audit\":[1000000,1000001,1000001]}],\"witness\":{\"initial\":9,\"events\":[[1,2],[1,8]]},\"direct_calls\":[\"step\"],\"impacted\":[\"valid_amount\",\"step\",\"run\"],\"fault_location\":\"valid_amount\",\"counterexample\":{\"initial\":0,\"events\":[[0,1000000]]}}"
+}

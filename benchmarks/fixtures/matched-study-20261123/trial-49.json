@@ -1,0 +1,14 @@
+{
+  "assignment": {
+    "index": 49,
+    "repeat": 0,
+    "family": "scheduler",
+    "phase": "change",
+    "language": "rust"
+  },
+  "files": {
+    "logic.rs": "use crate::model::{Job,Summary};\nfn ready(job:&Job,done:&[i64])->bool {job.deps.iter().all(|x|done.contains(x))}\nfn fits(cost:i64,remaining:i64)->bool {cost<=remaining}\nfn choose<'a>(jobs:&'a [Job],done:&[i64],remaining:i64)->Option<&'a Job> {\n let mut best:Option<&Job>=None;\n for item in jobs {if !done.contains(&item.id) && ready(item,done) && fits(item.cost,remaining) {\n  if best.map_or(true,|old| item.priority>old.priority || (item.priority==old.priority && item.id<old.id)) {best=Some(item);}\n }} best\n}\npub fn run(jobs:&[Job],budget:i64)->Summary {\n let mut done=Vec::new();let mut remaining=budget;\n while let Some(job)=choose(jobs,&done,remaining) {done.push(job.id);remaining-=job.cost;}\n Summary {blocked:jobs.len() as i64-done.len() as i64,spent:budget-remaining,order:done}\n}\n",
+    "app.rs": "mod model;mod logic;\nfn main(){let a:Vec<String>=std::env::args().collect();let budget:i64=a[1].parse().unwrap();let jobs:Vec<model::Job>=a[2].split(';').filter(|s|!s.is_empty()).map(|s| {let v:Vec<_>=s.split(':').collect();model::Job {id:v[0].parse().unwrap(),cost:v[1].parse().unwrap(),deps:v[2].split(',').filter(|s|!s.is_empty()).map(|s|s.parse().unwrap()).collect() ,priority:v[3].parse().unwrap()}}).collect();\nif a.len()>3 {let repeats:i64=a[4].parse().unwrap();let mut total=0i64;for i in 0..repeats {let v=logic::run(std::hint::black_box(&jobs),budget+i%3);total+=std::hint::black_box(v.spent+v.blocked+v.order.iter().sum::<i64>());}println!(\"{}\",total);} else {let v=logic::run(&jobs,budget);println!(\"{{\\\"order\\\":{:?},\\\"spent\\\":{},\\\"blocked\\\":{}}}\",v.order,v.spent,v.blocked);}}\n",
+    "model.rs": "#[derive(Clone)] pub struct Job {pub id:i64,pub cost:i64,pub deps:Vec<i64>,pub priority:i64}\npub struct Summary {pub order:Vec<i64>,pub spent:i64,pub blocked:i64}\n"
+  }
+}

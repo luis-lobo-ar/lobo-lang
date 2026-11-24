@@ -1,6 +1,6 @@
 # 0063 — Freeze 1.11.2 for matched agent experiments
 
-Date: 2026-11-23. Status: selected by the user; results pending.
+Date: 2026-11-23. Status: completed exploratory study, including the recorded infrastructure amendment.
 
 The user requested a frozen-version comparison with Rust and Python for construction,
 comprehension and requirement changes, followed by performance benchmarks. Freeze compiler/extension
@@ -46,3 +46,12 @@ checks. Its final candidate passed, but its feedback opportunity was impaired. P
 cohort, mark its remaining assignments not attempted, and use a separately registered 54-assignment
 cohort for the matched comparison. Only the empty-mountpoint audit changes; no tasks, guides, oracles,
 model settings, budgets or schedule changes. Excluded live transport canaries now exercise this audit.
+
+## Completed observations
+
+All 54 amended-cohort attempts pass the declared checks, with a comprehension ceiling. Median paired
+Lobo construction input-plus-output token cost is 1.23 times Rust and 1.81 times Python. Runtime
+measurements retain 270 successful builds, 162 correct warmups and 1134 correct timed process runs.
+Nine hardware-counter denials limit native CPU attribution. Earlier evidence and the original interrupted
+cohort remain separate. See research/matched-agent-study-2026-11-23.md and paper entry local-038.
+No product change or automatic next language milestone is selected.

@@ -1,0 +1,23 @@
+	Command being timed: "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/matched-study-20261123/performance-main/reference-frames-0-lobo/program --entry study.frames.bench --fuel 100000000 --heap-cells 4000000 --arg Bytes:010000020d0e1b031a1b1c51042728292aa20534353637380e0641424344454695074e4f505152535437085b5c5d5e5f606162f4016868027576eb0382838489048f90919242059c9d9e9fa01606a9aaabacadae0507b6b7b8b9babbbc0f08c3c4c5c6c7c8c9ca3401d0d002dddebb03eaebecc104f7f8f9fae20504050607081e0611121314151675071e1f2021222324e7082b2c2d2e2f303132740138380245468b03525354f9045f60616282056c6d6e6f702606797a7b7c7d7ee507868788898a8b8cbf08939495969798999ab4 --arg I64:8 --arg I64:100"
+	User time (seconds): 0.00
+	System time (seconds): 0.00
+	Percent of CPU this job got: 100%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:00.00
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 1792
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 152
+	Voluntary context switches: 1
+	Involuntary context switches: 1
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 0
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0

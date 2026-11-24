@@ -1,0 +1,14 @@
+{
+  "assignment": {
+    "index": 20,
+    "repeat": 1,
+    "family": "frames",
+    "phase": "change",
+    "language": "python"
+  },
+  "files": {
+    "app.py": "import sys,json\nfrom dataclasses import asdict\nimport model,logic\na=sys.argv\nlimit=int(a[1]);data=bytes.fromhex(a[2])\nif len(a)>3:\n total=0\n for i in range(int(a[4])):\n  v=logic.run(data,limit+i%3);total+=v.consumed+v.error+sum(len(b)+sum(b) for b in v.frames)\n print(total)\nelse:\n v=logic.run(data,limit);value=asdict(v)\n value['frames']=[b.hex() for b in v.frames]\n print(json.dumps(value))\n",
+    "logic.py": "from model import Summary\n\ndef read_header(data,start):\n if data[start]==254:\n  if len(data)-start<3:return 0,start,1\n  return data[start+1]+256*data[start+2],start+3,0\n return data[start],start+1,0\n\ndef fits(length,limit):\n return length<=limit\n\ndef checksum(data):\n return sum(data)%256\n\ndef run(data,limit):\n frames=[];cursor=0;error=0\n while cursor<len(data) and error==0:\n  if data[cursor]==255:\n   cursor+=1\n   continue\n  length,payload,header_error=read_header(data,cursor)\n  if header_error:error=header_error\n  elif not fits(length,limit):error=3\n  elif len(data)-payload<length+1:error=1\n  else:\n   value=data[payload:payload+length]\n   if checksum(value)!=data[payload+length]:error=2\n   else:frames.append(value);cursor=payload+length+1\n return Summary(frames,cursor,error)\n",
+    "model.py": "from dataclasses import dataclass\n@dataclass\nclass Summary:\n frames:list[bytes]\n consumed:int\n error:int\n"
+  }
+}

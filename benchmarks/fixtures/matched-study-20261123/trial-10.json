@@ -1,0 +1,14 @@
+{
+  "assignment": {
+    "index": 10,
+    "repeat": 0,
+    "family": "scheduler",
+    "phase": "construction",
+    "language": "python"
+  },
+  "files": {
+    "app.py": "import sys,json\nfrom dataclasses import asdict\nimport model,logic\na=sys.argv\nbudget=int(a[1]);jobs=[]\nfor s in a[2].split(';'):\n if s:\n  v=s.split(':');jobs.append(model.Job(int(v[0]),int(v[1]),[int(x) for x in v[2].split(',') if x]))\nif len(a)>3:\n total=0\n for i in range(int(a[4])):\n  v=logic.run(jobs,budget+i%3);total+=v.spent+v.blocked+sum(v.order)\n print(total)\nelse:\n v=logic.run(jobs,budget);value=asdict(v)\n print(json.dumps(value))\n",
+    "logic.py": "from model import Summary\n\n\ndef run(jobs, budget):\n    ordered_jobs = sorted(jobs, key=lambda job: job.id)\n    completed = set()\n    order = []\n    remaining = budget\n\n    while True:\n        for job in ordered_jobs:\n            if job.id in completed or job.cost > remaining:\n                continue\n            if not all(dependency in completed for dependency in job.deps):\n                continue\n            completed.add(job.id)\n            order.append(job.id)\n            remaining -= job.cost\n            break\n        else:\n            break\n\n    return Summary(order, budget - remaining, len(jobs) - len(completed))\n",
+    "model.py": "from dataclasses import dataclass\n@dataclass(frozen=True)\nclass Job:\n id:int\n cost:int\n deps:list[int]\n@dataclass\nclass Summary:\n order:list[int]\n spent:int\n blocked:int\n"
+  }
+}

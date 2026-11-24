@@ -1,0 +1,10 @@
+{
+  "assignment": {
+    "index": 42,
+    "repeat": 1,
+    "family": "scheduler",
+    "phase": "comprehension",
+    "language": "python"
+  },
+  "answer": "{\"predictions\":[{\"order\":[1,0],\"spent\":3,\"blocked\":0},{\"order\":[0],\"spent\":2,\"blocked\":2},{\"order\":[1],\"spent\":0,\"blocked\":1},{\"order\":[],\"spent\":0,\"blocked\":3},{\"order\":[1],\"spent\":2,\"blocked\":1},{\"order\":[0,1,2],\"spent\":2,\"blocked\":0}],\"witness\":{\"jobs\":[{\"id\":0,\"cost\":2,\"deps\":[1]},{\"id\":1,\"cost\":1,\"deps\":[]}],\"budget\":3},\"direct_calls\":[\"choose\"],\"impacted\":[\"fits\",\"choose\",\"run\"],\"fault_location\":\"fits\",\"counterexample\":{\"jobs\":[{\"id\":0,\"cost\":1,\"deps\":[]}],\"budget\":1}}"
+}

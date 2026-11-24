@@ -307,6 +307,14 @@ See [Core v0.11](spec/core-v0.11.md) and [the public reuse workload](spec/generi
 lobo run examples/generics.lobo --entry example.generics.text --arg Text:c3a9
 ```
 
+## Frozen matched agent study
+
+Compiler 1.11.2 is frozen at tag `research/lobo-1.11.2` for a
+[Lobo/Rust/Python pilot](research/matched-agent-study-2026-11-23.md) covering construction, comprehension,
+requirement changes and runtime. All 54 primary attempts pass the declared checks. Costs and limitations
+remain distinct from correctness; this pilot establishes no Lobo quality or token-efficiency advantage.
+Source bundles and every outcome, including the initial infrastructure interruption, are retained.
+
 ## Agent programming skill
 
 The repository includes [lobo-programming](.agents/skills/lobo-programming/SKILL.md), targeting

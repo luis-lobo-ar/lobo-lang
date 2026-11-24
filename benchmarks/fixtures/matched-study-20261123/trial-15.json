@@ -1,0 +1,10 @@
+{
+  "assignment": {
+    "index": 15,
+    "repeat": 0,
+    "family": "frames",
+    "phase": "comprehension",
+    "language": "lobo"
+  },
+  "answer": "{\"predictions\":[{\"frames\":[],\"consumed\":0,\"error\":0},{\"frames\":[\"\"],\"consumed\":2,\"error\":0},{\"frames\":[\"0102\"],\"consumed\":4,\"error\":0},{\"frames\":[],\"consumed\":0,\"error\":2},{\"frames\":[],\"consumed\":0,\"error\":3},{\"frames\":[\"01\"],\"consumed\":3,\"error\":1}],\"witness\":{\"data\":\"010101010202\",\"limit\":1},\"direct_calls\":[\"read_header\",\"fits\",\"checksum\"],\"impacted\":[\"fits\",\"run\"],\"fault_location\":\"fits\",\"counterexample\":{\"data\":\"0000\",\"limit\":0}}"
+}

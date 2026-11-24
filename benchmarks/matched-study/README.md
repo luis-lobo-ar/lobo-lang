@@ -102,3 +102,36 @@ canaries to run that audit while inside a live sandboxed check. Keep task contra
 budgets and schedule byte-for-byte unchanged. Register a new harness hash and rerun the full 54-assignment
 schedule as a distinct amended cohort. This is an infrastructure restart, not a language-driven task or
 budget adjustment. Original trials, the interrupted attempt and missing usage remain in total accounting.
+
+## Completed evidence and replay
+
+The [completed report](../../research/matched-agent-study-2026-11-23.md),
+[agent observations](../results/2026-11-23-matched-agent-study.json) and
+[runtime observations](../results/2026-11-23-matched-performance.json) retain the primary and original
+cohorts separately. Public JSON bundles under `benchmarks/fixtures/matched-study-20261123` contain
+`files` maps for programs or an `answer` for comprehension. Their hashes are in the agent observations.
+The archived harnesses and tests are in `research/snapshots/2026-11-23-matched-study/harnesses.json`.
+No model access is needed to extract, compile or grade those stored programs.
+
+For example, from the repository root with compiler 1.11.2 installed:
+
+```sh
+python3 - <<'PY'
+import json
+from pathlib import Path
+bundle = json.loads(Path('benchmarks/fixtures/matched-study-20261123/trial-53.json').read_text())
+folder = Path('target/matched-replay')
+folder.mkdir(parents=True, exist_ok=False)
+for name, text in bundle['files'].items():
+    assert Path(name).name == name
+    (folder / name).write_text(text)
+PY
+lobo compile target/matched-replay/app.lobo --source target/matched-replay/model.lobo --source target/matched-replay/util.lobo --source target/matched-replay/logic.lobo -o target/matched-replay/program
+./target/matched-replay/program --entry study.frames.entry --fuel 100000000 --heap-cells 4000000 --arg Bytes:02010102 --arg I64:2
+```
+
+The final record contains one payload `0101`, consumed offset4 and error0. Use a fresh destination for
+each replay. Full held-out inputs and their expected values are deterministic in `study.py`; the public
+bundle replay verification independently rebuilt one agent program per language and regraded all stored
+comprehension answers. The original source archive can be rebuilt from tag `research/lobo-1.11.2` using
+the compiler-build instructions; the local ignored freeze manifest records the exact original binaries.

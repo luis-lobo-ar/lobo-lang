@@ -5,6 +5,10 @@ Use the GitHub account luis-lobo-ar for this repository. Commit author and commi
 active gh account may belong to another project. Keep user-facing examples on the lobo CLI. Cargo commands
 belong in compiler build/test instructions. Preserve frozen research documents and fixtures.
 
+The decision-0063 study is complete; see research/matched-agent-study-2026-11-23.md and paper entry
+local-038. Do not automatically rerun model experiments or unfreeze the language. New scope requires
+user selection; preserve all primary/original-cohort outcomes, unknown usage and old paper pins.
+
 Research scope selected in decision 0063: freeze 1.11.2 and run matched construction, comprehension and
 change experiments against Rust/Python, followed by runtime benchmarks. Do not evolve the product during
 these trials. Preserve every assignment, failure, unknown usage, original fixture and paper evidence pin.

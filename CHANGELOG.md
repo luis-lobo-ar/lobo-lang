@@ -1,5 +1,15 @@
 # Lobo change ledger
 
+## 2026-11-23 — Freeze 1.11.2 and run matched agent experiments
+
+Frozen Core 1.11/compiler-extension 1.11.2 at tag `research/lobo-1.11.2`, with no product changes.
+Locally registered matched tasks, budgets and source-only comprehension; all 54 primary attempts pass.
+Lobo has higher median paired construction token/time costs, and no quality advantage is established.
+A separately retained infrastructure restart preserves five completed attempts, one interrupted attempt
+with unknown usage, and 48 unattempted assignments. All 270 builds, 162 warmups and 1134 timed runtime
+runs validate; native hardware counters remain unavailable. Public source bundles, hashes, profiles and
+paper entry local-038 preserve every outcome. See [the full report](research/matched-agent-study-2026-11-23.md).
+
 ## 2026-11-23 — Reassess the research across language iterations
 
 Reviewed the original construction/comprehension/cost hypotheses against compiler 1.11.2. Fresh local

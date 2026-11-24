@@ -1,5 +1,13 @@
 # Local evidence for the Lobo paper
 
+## Frozen matched construction, comprehension and change study
+
+Paper entry local-038 adds [the completed pilot](matched-agent-study-2026-11-23.md),
+[all agent outcomes](../benchmarks/results/2026-11-23-matched-agent-study.json) and
+[all runtime observations](../benchmarks/results/2026-11-23-matched-performance.json). The primary 54 attempts
+all pass; reported construction costs favor the comparator environments. This establishes scoped feasibility,
+not Lobo superiority. The original interrupted cohort, unknown usage and all 37 prior entries are preserved.
+
 ## Cross-iteration research reassessment
 
 [The review](reassessment-2026-11-23.md) and [receipt](../benchmarks/results/2026-11-23-research-reassessment.json),

@@ -1,7 +1,7 @@
 {
   "format": "lobo-local-paper-evidence/0.1",
   "recorded_on": "2026-11-04",
-  "scope": "Existing local results indexed for the future white paper/paper; no new experiment",
+  "scope": "Versioned local evidence for the future paper; each entry retains its original scope and limitations",
   "entries": [
     {
       "id": "local-001",
@@ -1136,6 +1136,74 @@
         "A controlled longitudinal speed regression or general language runtime ranking",
         "New model-backed trials, human comprehension measurements or universal safety proofs"
       ]
+    },
+    {
+      "id": "local-038",
+      "date": "2026-11-23",
+      "title": "Frozen 1.11.2 matched agent pilot and runtime comparison",
+      "evidence_kind": "locally registered exploratory comparative agent study and repeated native/Python runtime observations",
+      "status": "completed; quality ceiling, higher median Lobo construction cost, profiling limits and infrastructure restart retained",
+      "files": [
+        {
+          "path": "research/matched-agent-study-2026-11-23.md",
+          "sha256": "57c0b20e2107abc6e419609a2187e2189fb0c8e02013b061f31ca753046a6491"
+        },
+        {
+          "path": "benchmarks/results/2026-11-23-matched-agent-study.json",
+          "sha256": "187f5212d8de30173340c313156621e3eee46407dbb87d322f5eaa2778e3776d"
+        },
+        {
+          "path": "benchmarks/results/2026-11-23-matched-performance.json",
+          "sha256": "b5f4d58265aac82983e5e6497a2a679f583129d6e446353eaa11a32c69de5876"
+        },
+        {
+          "path": "benchmarks/results/2026-11-23-matched-study-preflight.json",
+          "sha256": "f6f5552aa2a41da7c00ed5f3e221316edaf04ae2c2377199acdf7792bf2e8cd7"
+        },
+        {
+          "path": "benchmarks/results/2026-11-23-matched-study-registration.json",
+          "sha256": "4587626f7e6e01a96a2cdf678ff677d662a8bc705d478cf3794489f0a053632a"
+        },
+        {
+          "path": "benchmarks/results/2026-11-23-matched-study-registration-amendment-1.json",
+          "sha256": "3bd72c150d0efdb36791fec17d4699cf94f264764d09a6a419e24fd297aec7b2"
+        },
+        {
+          "path": "benchmarks/results/2026-11-23-matched-study-amendment-1.json",
+          "sha256": "10a9d3663ebee1c11b3c6a97cd0d7488dd65f6b23230ec4dd05299816ae8e1ab"
+        },
+        {
+          "path": "benchmarks/results/2026-11-23-matched-performance-registration.json",
+          "sha256": "22f4ce39e98e8e7829a1c2be9c2b3e4a3479a4b26a01e4ffb72e7c0cbd2a3705"
+        },
+        {
+          "path": "benchmarks/results/2026-11-23-matched-study-verification.json",
+          "sha256": "6e4242ad444bc24cb02feee73e18d98f44769f3d3f0e3539080ca771ca186e4f"
+        },
+        {
+          "path": "benchmarks/results/2026-11-23-matched-raw-evidence-manifest.json",
+          "sha256": "8920f5f4105dc8c574f873270a1b3706f08b4a3f31ec03822eb97c04b5dcc3d5"
+        },
+        {
+          "path": "research/snapshots/2026-11-23-matched-study/harnesses.json",
+          "sha256": "61503ec63a6c5d385148ae26529db2e5a26c7a58745ba581d2431f68f0cd98bb"
+        }
+      ],
+      "supports": [
+        "54/54 primary attempts accepted across three languages and phases under equal time/tool/check limits",
+        "Reported paired construction, comprehension and change costs for the selected model/guides/tasks",
+        "Scoped optimized native/Python process timings, compile times and artifact sizes with correct outputs",
+        "A concrete reserved-name/identity-synchronization diagnostic interaction and recorded recovery",
+        "Complete retention of the original interrupted cohort, unknown participant usage and excluded canaries"
+      ],
+      "does_not_establish": [
+        "A Lobo quality or token-efficiency advantage",
+        "General software-construction/comprehension equality or a population language ranking",
+        "Causal attribution to H1/H2/H3, syntax alone, or a complete programming-skill ablation",
+        "An isolated native function/instruction speedup or native CPU-hotspot attribution",
+        "A hard-token-matched experiment, total study-development token cost or billed-dollar saving",
+        "A controlled longitudinal improvement over older language iterations or immutable model weights"
+      ]
     }
   ],
   "backend_recommendation": {
@@ -1163,5 +1231,6 @@
     "Preserve original task/attempt denominators, versions, failures, corrections and unmeasured outcomes.",
     "Public development fixtures are excluded from claims of unseen confirmatory evaluation."
   ],
-  "updated_on": "2026-11-23"
+  "updated_on": "2026-11-23",
+  "last_updated_on": "2026-11-23"
 }

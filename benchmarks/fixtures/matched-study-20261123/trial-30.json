@@ -1,0 +1,14 @@
+{
+  "assignment": {
+    "index": 30,
+    "repeat": 0,
+    "family": "frames",
+    "phase": "construction",
+    "language": "python"
+  },
+  "files": {
+    "app.py": "import sys,json\nfrom dataclasses import asdict\nimport model,logic\na=sys.argv\nlimit=int(a[1]);data=bytes.fromhex(a[2])\nif len(a)>3:\n total=0\n for i in range(int(a[4])):\n  v=logic.run(data,limit+i%3);total+=v.consumed+v.error+sum(len(b)+sum(b) for b in v.frames)\n print(total)\nelse:\n v=logic.run(data,limit);value=asdict(v)\n value['frames']=[b.hex() for b in v.frames]\n print(json.dumps(value))\n",
+    "logic.py": "from model import Summary\n\n\ndef run(data, limit):\n    frames = []\n    offset = 0\n    while offset < len(data):\n        length = data[offset]\n        if length > limit:\n            return Summary(frames, offset, 3)\n\n        checksum_offset = offset + 1 + length\n        if checksum_offset >= len(data):\n            return Summary(frames, offset, 1)\n\n        payload = data[offset + 1:checksum_offset]\n        if data[checksum_offset] != sum(payload) % 256:\n            return Summary(frames, offset, 2)\n\n        frames.append(payload)\n        offset = checksum_offset + 1\n\n    return Summary(frames, len(data), 0)\n",
+    "model.py": "from dataclasses import dataclass\n@dataclass\nclass Summary:\n frames:list[bytes]\n consumed:int\n error:int\n"
+  }
+}

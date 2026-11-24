@@ -1,0 +1,89 @@
+{
+  "date": "2026-11-23",
+  "prior_paper_entries_preserved": 37,
+  "prior_paper_file_pins_verified": 100,
+  "source_archive_and_compilers_unchanged": true,
+  "registered_agent_harness_unchanged": true,
+  "registered_performance_harness_unchanged": true,
+  "product_source_changes": [],
+  "primary_assignments": 54,
+  "primary_accepted": 54,
+  "primary_usage_known": 54,
+  "primary_usage_unknown": 0,
+  "max_observed_wall_s": 54.24716999591328,
+  "max_observed_command_items": 12,
+  "max_observed_visible_submissions": 3,
+  "comprehension_no_tools_verified": 18,
+  "public_bundles_hash_verified": 72,
+  "profile_files_hash_verified": 30,
+  "public_bundle_replay": {
+    "programs": [
+      {
+        "assignment": {
+          "index": 51,
+          "repeat": 1,
+          "family": "frames",
+          "phase": "construction",
+          "language": "python"
+        },
+        "compiled": true,
+        "accepted": true,
+        "passed": 96,
+        "total": 96
+      },
+      {
+        "assignment": {
+          "index": 52,
+          "repeat": 1,
+          "family": "frames",
+          "phase": "construction",
+          "language": "rust"
+        },
+        "compiled": true,
+        "accepted": true,
+        "passed": 96,
+        "total": 96
+      },
+      {
+        "assignment": {
+          "index": 53,
+          "repeat": 1,
+          "family": "frames",
+          "phase": "construction",
+          "language": "lobo"
+        },
+        "compiled": true,
+        "accepted": true,
+        "passed": 96,
+        "total": 96
+      }
+    ],
+    "comprehension_answers_regraded": 18
+  },
+  "new_harness_unit_tests_passed": 16,
+  "prior_reassessment_unit_tests_passed": 4,
+  "raw_evidence_files_hashed": 3973,
+  "raw_manifest_sha256": "8920f5f4105dc8c574f873270a1b3706f08b4a3f31ec03822eb97c04b5dcc3d5",
+  "performance_counts": {
+    "configurations": 54,
+    "builds": 270,
+    "timed_process_runs": 1134,
+    "warmups": 162,
+    "build_or_validation_errors": 0,
+    "hardware_counter_denials": 9
+  },
+  "scope": "No product change; extension/skill/compiler versions remain frozen. No model calls during replay/verification.",
+  "verification_scope": "Local pre-publication validation; final commits and remote refs verify publication separately",
+  "documented_replay_command": {
+    "exit_code": 0,
+    "compiler_version": "frozen 1.11.2 exposed as lobo on a task-local PATH",
+    "actual": {
+      "frames": [
+        "0101"
+      ],
+      "consumed": 4,
+      "error": 0
+    },
+    "stdout": "{\"artifact\":\"target/matched-replay/program\",\"entries\":[\"study.frames.app.sum_list\",\"study.frames.app.sum_bytes\",\"study.frames.app.sum_frames\",\"study.frames.app.digest_summary\",\"study.frames.entry\",\"study.frames.bench\",\"study.frames.run\",\"lobo.generic.2efd80a063f712cef2b53840a34ee7f3\"],\"format\":\"native\",\"status\":\"ok\"}\n{\"status\":\"ok\",\"kind\":\"value\",\"value\":{\"type\":\"Record\",\"value\":{\"id\":\"study.frames.Summary\",\"fields\":{\"frames\":{\"type\":\"List\",\"value\":{\"element\":\"Bytes\",\"elements\":[{\"type\":\"Bytes\",\"value\":\"0101\"}]}},\"consumed\":{\"type\":\"I64\",\"value\":\"4\"},\"error\":{\"type\":\"I64\",\"value\":\"0\"}}}}}\n"
+  }
+}

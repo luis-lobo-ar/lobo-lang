@@ -1,0 +1,14 @@
+{
+  "assignment": {
+    "index": 22,
+    "repeat": 0,
+    "family": "ledger",
+    "phase": "construction",
+    "language": "rust"
+  },
+  "files": {
+    "logic.rs": "use crate::model::{Event, Summary};\n\npub fn run(events: &[Event], initial: i64) -> Summary {\n    let mut balance = initial;\n    let mut rejected = 0;\n    let mut peak = initial;\n    let mut locked = false;\n    let mut audit = Vec::with_capacity(events.len());\n\n    for event in events {\n        match *event {\n            Event::Credit(amount) => {\n                if (0..=1_000_000).contains(&amount) {\n                    balance += amount;\n                } else {\n                    rejected += 1;\n                }\n            }\n            Event::Debit(amount) => {\n                if (0..=1_000_000).contains(&amount) && !locked && amount <= balance {\n                    balance -= amount;\n                } else {\n                    rejected += 1;\n                }\n            }\n            Event::Lock => locked = true,\n            Event::Unlock => locked = false,\n        }\n        peak = peak.max(balance);\n        audit.push(balance);\n    }\n\n    Summary { balance, rejected, peak, audit }\n}\n",
+    "app.rs": "mod model;mod logic;\nfn main(){let a:Vec<String>=std::env::args().collect();let initial:i64=a[1].parse().unwrap();let events:Vec<model::Event>=a[2].split(';').filter(|s|!s.is_empty()).map(|s| {let v:Vec<_>=s.split(':').collect();let n:i64=v[1].parse().unwrap();match v[0] {\"0\"=>model::Event::Credit(n),\"1\"=>model::Event::Debit(n),\"2\"=>model::Event::Lock,\"3\"=>model::Event::Unlock ,_=>panic!(\"bad event\")}}).collect();\nif a.len()>3 {let repeats:i64=a[4].parse().unwrap();let mut total=0i64;for i in 0..repeats {let v=logic::run(std::hint::black_box(&events),initial+i%3);total+=std::hint::black_box(v.balance+v.rejected+v.peak+v.audit.iter().sum::<i64>());}println!(\"{}\",total);} else {let v=logic::run(&events,initial);println!(\"{{\\\"balance\\\":{},\\\"rejected\\\":{},\\\"peak\\\":{},\\\"audit\\\":{:?}}}\",v.balance,v.rejected,v.peak,v.audit);}}\n",
+    "model.rs": "#[derive(Clone)] pub enum Event {Credit(i64),Debit(i64),Lock,Unlock}\npub struct Summary {pub balance:i64,pub rejected:i64,pub peak:i64,pub audit:Vec<i64>}\n"
+  }
+}

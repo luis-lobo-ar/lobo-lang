@@ -1,0 +1,10 @@
+{
+  "family": "ledger",
+  "language": "python",
+  "changed": false,
+  "files": {
+    "model.py": "from dataclasses import dataclass\nfrom enum import IntEnum\nclass Kind(IntEnum):\n CREDIT=0\n DEBIT=1\n LOCK=2\n UNLOCK=3\n@dataclass(frozen=True)\nclass Event:\n kind:Kind\n amount:int=0\n@dataclass\nclass Summary:\n balance:int\n rejected:int\n peak:int\n audit:list[int]\n",
+    "logic.py": "from model import Event,Kind,Summary\n\ndef valid_amount(value):\n return 0<=value<=1000000\n\ndef step(state,event):\n balance,rejected,peak,locked,audit =state\n if event.kind==Kind.LOCK:locked=True\n elif event.kind==Kind.UNLOCK:locked=False\n elif event.kind in (Kind.CREDIT,Kind.DEBIT):\n  amount=event.amount\n  if not valid_amount(amount) or (event.kind==Kind.DEBIT and (locked or amount>balance)):rejected+=1\n  else:\n   pass\n   balance+=amount if event.kind==Kind.CREDIT else -amount\n peak=max(peak,balance)\n return balance,rejected,peak,locked,audit+[balance] \n\ndef run(events,initial):\n state=(initial,0,initial,False,[] )\n for event in events:state=step(state,event)\n return Summary(*state[:3],state[4])\n",
+    "app.py": "import sys,json\nfrom dataclasses import asdict\nimport model,logic\na=sys.argv\ninitial=int(a[1]);events=[model.Event(model.Kind(int(s.split(':')[0])),int(s.split(':')[1])) for s in a[2].split(';') if s]\nif len(a)>3:\n total=0\n for i in range(int(a[4])):\n  v=logic.run(events,initial+i%3);total+=v.balance+v.rejected+v.peak+sum(v.audit)\n print(total)\nelse:\n v=logic.run(events,initial);value=asdict(v)\n print(json.dumps(value))\n"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "assignment": {
+    "index": 32,
+    "repeat": 0,
+    "family": "frames",
+    "phase": "construction",
+    "language": "rust"
+  },
+  "files": {
+    "logic.rs": "use crate::model::Summary;\n\npub fn run(data: &[u8], limit: i64) -> Summary {\n    let mut summary = Summary { frames: Vec::new(), consumed: 0, error: 0 };\n    let mut offset = 0;\n\n    while offset < data.len() {\n        let length = data[offset] as usize;\n        if length as i64 > limit {\n            summary.error = 3;\n            return summary;\n        }\n\n        let payload_start = offset + 1;\n        let checksum_offset = payload_start + length;\n        if checksum_offset >= data.len() {\n            summary.error = 1;\n            return summary;\n        }\n\n        let payload = &data[payload_start..checksum_offset];\n        let checksum = payload.iter().fold(0u8, |sum, &byte| sum.wrapping_add(byte));\n        if checksum != data[checksum_offset] {\n            summary.error = 2;\n            return summary;\n        }\n\n        summary.frames.push(payload.to_vec());\n        offset = checksum_offset + 1;\n        summary.consumed = offset as i64;\n    }\n\n    summary\n}\n",
+    "app.rs": "mod model;mod logic;\nfn main(){let a:Vec<String>=std::env::args().collect();let limit:i64=a[1].parse().unwrap();let data:Vec<u8>=(0..a[2].len()).step_by(2).map(|i|u8::from_str_radix(&a[2][i..i+2],16).unwrap()).collect();\nif a.len()>3 {let repeats:i64=a[4].parse().unwrap();let mut total=0i64;for i in 0..repeats {let v=logic::run(std::hint::black_box(&data),limit+i%3);total+=std::hint::black_box(v.consumed+v.error+v.frames.iter().map(|b|b.len() as i64+b.iter().map(|x|*x as i64).sum::<i64>()).sum::<i64>());}println!(\"{}\",total);} else {let v=logic::run(&data,limit);let strings:Vec<String>=v.frames.iter().map(|b|format!(\"\\\"{}\\\"\",b.iter().map(|x|format!(\"{:02x}\",x)).collect::<String>())).collect();println!(\"{{\\\"frames\\\":[{}],\\\"consumed\\\":{},\\\"error\\\":{}}}\",strings.join(\",\"),v.consumed,v.error);}}\n",
+    "model.rs": "pub struct Summary {pub frames:Vec<Vec<u8>>,pub consumed:i64,pub error:i64}\n"
+  }
+}

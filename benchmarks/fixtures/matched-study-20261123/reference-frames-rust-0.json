@@ -1,0 +1,10 @@
+{
+  "family": "frames",
+  "language": "rust",
+  "changed": false,
+  "files": {
+    "model.rs": "pub struct Summary {pub frames:Vec<Vec<u8>>,pub consumed:i64,pub error:i64}\n",
+    "logic.rs": "use crate::model::Summary;\nstruct Header {length:i64,payload:usize,error:i64}\nfn read_header(data:&[u8],start:usize)->Header {Header {length:data[start] as i64,payload:start+1,error:0}}\nfn fits(length:i64,limit:i64)->bool {length<=limit}\nfn checksum(data:&[u8])->u8 {data.iter().fold(0u8,|sum,b|sum.wrapping_add(*b))}\npub fn run(data:&[u8],limit:i64)->Summary {\n let mut frames=Vec::new();let mut cursor=0;let mut error=0;\n while cursor<data.len() && error==0 {\n  let header=read_header(data,cursor);\n  if header.error!=0 {error=header.error;} else if !fits(header.length,limit) {error=3;}\n  else if data.len()-header.payload<(header.length+1) as usize {error=1;}\n  else {let end=header.payload+header.length as usize;let payload=&data[header.payload..end];\n   if checksum(payload)!=data[end] {error=2;} else {frames.push(payload.to_vec());cursor=end+1;}\n  }\n }\n Summary {frames,consumed:cursor as i64,error}\n}\n",
+    "app.rs": "mod model;mod logic;\nfn main(){let a:Vec<String>=std::env::args().collect();let limit:i64=a[1].parse().unwrap();let data:Vec<u8>=(0..a[2].len()).step_by(2).map(|i|u8::from_str_radix(&a[2][i..i+2],16).unwrap()).collect();\nif a.len()>3 {let repeats:i64=a[4].parse().unwrap();let mut total=0i64;for i in 0..repeats {let v=logic::run(std::hint::black_box(&data),limit+i%3);total+=std::hint::black_box(v.consumed+v.error+v.frames.iter().map(|b|b.len() as i64+b.iter().map(|x|*x as i64).sum::<i64>()).sum::<i64>());}println!(\"{}\",total);} else {let v=logic::run(&data,limit);let strings:Vec<String>=v.frames.iter().map(|b|format!(\"\\\"{}\\\"\",b.iter().map(|x|format!(\"{:02x}\",x)).collect::<String>())).collect();println!(\"{{\\\"frames\\\":[{}],\\\"consumed\\\":{},\\\"error\\\":{}}}\",strings.join(\",\"),v.consumed,v.error);}}\n"
+  }
+}
