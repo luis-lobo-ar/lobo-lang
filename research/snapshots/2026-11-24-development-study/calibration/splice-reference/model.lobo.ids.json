@@ -1,0 +1,8 @@
+{
+  "format": "lobo-identities/0.1",
+  "identities": {
+    "module": "skilldev.splice.model.module",
+    "Change": "skilldev.splice.model.Change",
+    "Edit": "skilldev.splice.model.Edit"
+  }
+}

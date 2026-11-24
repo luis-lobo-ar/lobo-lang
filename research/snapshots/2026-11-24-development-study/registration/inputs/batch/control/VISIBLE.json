@@ -1,0 +1,102 @@
+[
+  {
+    "input": {
+      "samples": []
+    },
+    "expected": {
+      "case": "Ok",
+      "payload": {
+        "values": [],
+        "total": 0,
+        "maximum": 0
+      }
+    }
+  },
+  {
+    "input": {
+      "samples": [
+        [
+          2,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          0,
+          8
+        ]
+      ]
+    },
+    "expected": {
+      "case": "Ok",
+      "payload": {
+        "values": [
+          6,
+          4,
+          0
+        ],
+        "total": 10,
+        "maximum": 6
+      }
+    }
+  },
+  {
+    "input": {
+      "samples": [
+        [
+          -1,
+          0
+        ]
+      ]
+    },
+    "expected": {
+      "case": "Err",
+      "payload": 11
+    }
+  },
+  {
+    "input": {
+      "samples": [
+        [
+          2,
+          0
+        ],
+        [
+          -1,
+          2
+        ]
+      ]
+    },
+    "expected": {
+      "case": "Err",
+      "payload": 12
+    }
+  },
+  {
+    "input": {
+      "samples": [
+        [
+          1,
+          1
+        ],
+        [
+          4,
+          2
+        ]
+      ]
+    },
+    "expected": {
+      "case": "Ok",
+      "payload": {
+        "values": [
+          1,
+          8
+        ],
+        "total": 9,
+        "maximum": 8
+      }
+    }
+  }
+]

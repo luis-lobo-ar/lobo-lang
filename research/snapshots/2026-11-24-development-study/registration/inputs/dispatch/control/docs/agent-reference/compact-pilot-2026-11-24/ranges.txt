@@ -1,0 +1,17 @@
+CHECKED TOPIC CARD: Lobo 1.11.2 / Core 1.11
+Buffer operations are pure. Signatures:
+Bytes::empty()->Bytes
+Bytes::length(Bytes)->I64
+Bytes::at(Bytes,I64)->I64
+Bytes::slice(Bytes,I64,I64)->Bytes
+Bytes::push(Bytes,I64)->Bytes
+Bytes::concat(Bytes,Bytes)->Bytes
+Bytes::from_list(List<I64>)->Bytes
+Text::bytes(Text)->Bytes
+Text::valid(Bytes)->Bool
+Text::from_bytes(Bytes)->Text
+Text::length(Text)->I64
+Text::at(Text,I64)->I64
+Text::slice(Text,I64,I64)->Text
+Text::concat(Text,Text)->Text
+Bytes index/count units are raw bytes; Text index/count units are Unicode scalars. slice arguments are start,count, not start,end. at returns I64. Buffers are immutable; concat/push return new values. Text::bytes gives UTF-8 bytes; no implicit Text/Bytes conversion. Byte bounds, byte values outside0..255, invalid slice ranges and invalid UTF-8 in from_bytes fault at runtime, not by static type rejection. Text::valid reports UTF-8 validity as Bool.

@@ -1,0 +1,10 @@
+{
+  "format": "lobo-identities/0.1",
+  "identities": {
+    "apply": "lobo.a9911b2e83b2141ea5c9f6cadcf09045",
+    "identity": "lobo.1a1f968ed365a12150c983dc3c98afad",
+    "increment": "skill.compact.increment",
+    "module": "skill.compact",
+    "next": "lobo.02cb64025bf1f62bb90aeac2922689c9"
+  }
+}

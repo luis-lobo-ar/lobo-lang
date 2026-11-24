@@ -1,0 +1,9 @@
+{
+  "format": "lobo-identities/0.1",
+  "identities": {
+    "module": "skilldev.batch.model.module",
+    "Sample": "skilldev.batch.model.Sample",
+    "Summary": "skilldev.batch.model.Summary",
+    "Outcome": "skilldev.batch.model.Outcome"
+  }
+}

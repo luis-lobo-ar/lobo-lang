@@ -1,0 +1,17 @@
+........E
+======================================================================
+ERROR: test_pairs_include_repetitions (test_development_report.ReportTests.test_pairs_include_repetitions)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/matched-study/test_development_report.py", line 11, in test_pairs_include_repetitions
+    p=r.pairs(rows);self.assertEqual(p['pairs'],2);self.assertEqual(p['fail_to_pass'],2)
+      ^^^^^^^^^^^^^
+  File "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/matched-study/development_report.py", line 20, in pairs
+    return dict(pairs=len(values),fail_to_pass=sum(not a['accepted'] and b['accepted'] for a,b in values),pass_to_fail=sum(a['accepted'] and not b['accepted'] for a,b in values),case_difference=sum(b['grading']['passed']-a['grading']['passed'] for a,b in values),token_ratio=old.stats([old.total(b)/old.total(a) for a,b in values if old.total(a) not in (None,0) and old.total(b) is not None]),wall_ratio=old.stats([b['agent_wall_s']/a['agent_wall_s'] for a,b in values if a['agent_wall_s']>0]),outcomes=[dict(family=a['assignment']['family'],repeat=a['assignment']['repeat'],control_index=a['assignment']['index'],skill_index=b['assignment']['index'],control_accepted=a['accepted'],skill_accepted=b['accepted']) for a,b in values])
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             ~~~~~~~~~~~~~~~^^^^^^^^^
+KeyError: 'index'
+
+----------------------------------------------------------------------
+Ran 9 tests in 0.073s
+
+FAILED (errors=1)

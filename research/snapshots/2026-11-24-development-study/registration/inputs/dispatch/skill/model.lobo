@@ -1,0 +1,3 @@
+module model;
+record Entry {key:I64,value:I64,active:Bool}
+record Summary {kept:List<Entry>,dropped:I64}

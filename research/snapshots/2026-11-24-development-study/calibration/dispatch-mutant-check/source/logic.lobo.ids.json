@@ -1,0 +1,12 @@
+{
+  "format": "lobo-identities/0.1",
+  "identities": {
+    "module": "skilldev.dispatch.module",
+    "Cursor": "skilldev.dispatch.Cursor",
+    "Seen": "skilldev.dispatch.Seen",
+    "run": "skilldev.dispatch.run",
+    "model.Entry": "skilldev.dispatch.model.Entry",
+    "model.Summary": "skilldev.dispatch.model.Summary",
+    "util.reverse": "skilldev.util.reverse"
+  }
+}

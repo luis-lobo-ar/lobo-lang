@@ -1,0 +1,13 @@
+{
+  "format": "lobo-identities/0.1",
+  "identities": {
+    "module": "skilldev.batch.module",
+    "Cursor": "skilldev.batch.Cursor",
+    "convert": "skilldev.batch.convert",
+    "run": "skilldev.batch.run",
+    "model.Sample": "skilldev.batch.model.Sample",
+    "model.Summary": "skilldev.batch.model.Summary",
+    "model.Outcome": "skilldev.batch.model.Outcome",
+    "util.reverse": "skilldev.util.reverse"
+  }
+}

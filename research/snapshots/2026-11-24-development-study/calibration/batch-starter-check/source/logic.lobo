@@ -1,0 +1,5 @@
+module logic;
+use model {Sample,Summary,Outcome};
+use util {reverse};
+fn convert(sample:Sample)->Outcome<I64> {Ok(sample.raw)}
+fn run(samples:List<Sample>)->Outcome<Summary> {Ok(Summary {values:List::empty<I64>(),total:0,maximum:0})}

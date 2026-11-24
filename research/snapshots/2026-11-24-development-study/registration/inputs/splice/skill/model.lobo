@@ -1,0 +1,3 @@
+module model;
+record Change {text:Text,removed:Text,scalar_delta:I64,byte_delta:I64}
+variant Edit<T> {Ok(T),Err(I64)}

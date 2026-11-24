@@ -1,0 +1,10 @@
+{
+  "format": "lobo-identities/0.1",
+  "identities": {
+    "module": "skilldev.splice.module",
+    "run": "skilldev.splice.run",
+    "model.Change": "skilldev.splice.model.Change",
+    "model.Edit": "skilldev.splice.model.Edit",
+    "util.reverse": "skilldev.util.reverse"
+  }
+}

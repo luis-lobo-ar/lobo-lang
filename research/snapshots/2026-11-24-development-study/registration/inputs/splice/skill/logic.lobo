@@ -1,0 +1,4 @@
+module logic;
+use model {Change,Edit};
+use util {reverse};
+fn run(text:Text,start:I64,count:I64,replacement:Text)->Edit<Change> {Err(1)}

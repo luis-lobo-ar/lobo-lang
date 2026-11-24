@@ -1,0 +1,20 @@
+module skill_callbacks;
+
+record Context { offset: I64 }
+
+fn observe(context: Context, value: I64) -> I64
+actions { demo.observe }
+{
+  context.offset + value
+}
+
+fn apply<C>(context: C, value: I64,
+  callback: Fn(C, I64) actions { demo.observe } -> I64) -> I64
+actions { demo.observe }
+{
+  callback(context, value)
+}
+
+fn main() -> I64 actions { demo.observe } {
+  apply(Context { offset: 2 }, 40, observe)
+}

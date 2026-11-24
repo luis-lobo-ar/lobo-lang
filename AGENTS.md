@@ -5,6 +5,11 @@ Use the GitHub account luis-lobo-ar for this repository. Commit author and commi
 active gh account may belong to another project. Keep user-facing examples on the lobo CLI. Cargo commands
 belong in compiler build/test instructions. Preserve frozen research documents and fixtures.
 
+The user selected decision0070: run12 fresh matched development attempts, with/without the frozen new
+skill, all GPT-5.6-Luna/high under identical120s/16-command/6-visible-check limits. Register before calls,
+isolate installed skill discovery, preserve every outcome/unknown and all earlier paper pins, keep product
+and skills/cards frozen, and stop at12. Reuse the unchanged312-pass compiler receipt honestly.
+
 Decision0069 adds the lobo-development skill for application changes. Prefer its task-specific reference
 routing and native TDD workflow; the older programming skill, all tested reading packets and studies stay
 unchanged. This authorizes skill packaging/verification only, not product evolution or more model trials.

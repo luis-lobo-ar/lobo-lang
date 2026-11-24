@@ -1,0 +1,1 @@
+Before publishing registration and before any participant/availability call, excluded the source-only reading-guide.txt from both development arms. Both retain the identical four topic cards and other normative materials (78 shared files). Preliminary registration is retained separately. No task, oracle, skill, model, budget or calibration change.

@@ -1,0 +1,8 @@
+{
+  "format": "lobo-identities/0.1",
+  "identities": {
+    "module": "skilldev.dispatch.model.module",
+    "Entry": "skilldev.dispatch.model.Entry",
+    "Summary": "skilldev.dispatch.model.Summary"
+  }
+}

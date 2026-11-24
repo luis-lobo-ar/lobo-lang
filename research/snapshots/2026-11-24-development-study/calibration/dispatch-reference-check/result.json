@@ -1,0 +1,5795 @@
+{
+  "issues": [],
+  "build": {
+    "ok": true,
+    "command": [
+      "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/matched-study-20261123/freeze/lobo",
+      "compile",
+      "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/development-study-20261124/validation-final/dispatch-reference-check/source/logic.lobo",
+      "--source",
+      "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/development-study-20261124/validation-final/dispatch-reference-check/source/model.lobo",
+      "--source",
+      "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/development-study-20261124/validation-final/dispatch-reference-check/source/util.lobo",
+      "-o",
+      "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/development-study-20261124/validation-final/dispatch-reference-check/program"
+    ],
+    "exit_code": 0,
+    "stdout": "{\"artifact\":\"/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/development-study-20261124/validation-final/dispatch-reference-check/program\",\"entries\":[\"skilldev.dispatch.run\",\"lobo.generic.be9fe796ec2a866296dbb7b985c93cf9\"],\"format\":\"native\",\"status\":\"ok\"}\n",
+    "stderr": ""
+  },
+  "cases": [
+    {
+      "input": {
+        "entries": []
+      },
+      "expected": {
+        "kept": [],
+        "dropped": 0
+      },
+      "actual": {
+        "kept": [],
+        "dropped": 0
+      },
+      "error": null,
+      "ok": true
+    },
+    {
+      "input": {
+        "entries": [
+          [
+            1,
+            3,
+            true
+          ],
+          [
+            1,
+            4,
+            true
+          ]
+        ]
+      },
+      "expected": {
+        "kept": [
+          {
+            "key": 1,
+            "value": 4,
+            "active": true
+          }
+        ],
+        "dropped": 1
+      },
+      "actual": {
+        "kept": [
+          {
+            "key": 1,
+            "value": 4,
+            "active": true
+          }
+        ],
+        "dropped": 1
+      },
+      "error": null,
+      "ok": true
+    },
+    {
+      "input": {
+        "entries": [
+          [
+            1,
+            3,
+            true
+          ],
+          [
+            2,
+            8,
+            true
+          ],
+          [
+            1,
+            0,
+            false
+          ]
+        ]
+      },
+      "expected": {
+        "kept": [
+          {
+            "key": 2,
+            "value": 8,
+            "active": true
+          }
+        ],
+        "dropped": 2
+      },
+      "actual": {
+        "kept": [
+          {
+            "key": 2,
+            "value": 8,
+            "active": true
+          }
+        ],
+        "dropped": 2
+      },
+      "error": null,
+      "ok": true
+    },
+    {
+      "input": {
+        "entries": [
+          [
+            3,
+            6,
+            false
+          ],
+          [
+            3,
+            7,
+            true
+          ]
+        ]
+      },
+      "expected": {
+        "kept": [
+          {
+            "key": 3,
+            "value": 7,
+            "active": true
+          }
+        ],
+        "dropped": 1
+      },
+      "actual": {
+        "kept": [
+          {
+            "key": 3,
+            "value": 7,
+            "active": true
+          }
+        ],
+        "dropped": 1
+      },
+      "error": null,
+      "ok": true
+    },
+    {
+      "input": {
+        "entries": [
+          [
+            2,
+            7,
+            true
+          ],
+          [
+            1,
+            8,
+            true
+          ],
+          [
+            2,
+            9,
+            true
+          ]
+        ]
+      },
+      "expected": {
+        "kept": [
+          {
+            "key": 1,
+            "value": 8,
+            "active": true
+          },
+          {
+            "key": 2,
+            "value": 9,
+            "active": true
+          }
+        ],
+        "dropped": 1
+      },
+      "actual": {
+        "kept": [
+          {
+            "key": 1,
+            "value": 8,
+            "active": true
+          },
+          {
+            "key": 2,
+            "value": 9,
+            "active": true
+          }
+        ],
+        "dropped": 1
+      },
+      "error": null,
+      "ok": true
+    },
+    {
+      "input": {
+        "entries": [
+          [
+            -2,
+            87,
+            false
+          ],
+          [
+            -3,
+            63,
+            true
+          ],
+          [
+            3,
+            -8,
+            false
+          ],
+          [
+            0,
+            90,
+            true
+          ],
+          [
+            -2,
+            64,
+            true
+          ],
+          [
+            0,
+            23,
+            true
+          ],
+          [
+            2,
+            83,
+            false
+          ],
+          [
+            5,
+            -69,
+            false
+          ],
+          [
+            3,
+            7,
+            true
+          ],
+          [
+            2,
+            -58,
+            false
+          ],
+          [
+            2,
+            59,
+            false
+          ],
+          [
+            0,
+            8,
+            false
+          ],
+          [
+            -1,
+            -54,
+            true
+          ],
+          [
+            3,
+            -34,
+            true
+          ]
+        ]
+      },
+      "expected": {
+        "kept": [
+          {
+            "key": -3,
+            "value": 63,
+            "active": true
+          },
+          {
+            "key": -2,
+            "value": 64,
+            "active": true
+          },
+          {
+            "key": -1,
+            "value": -54,
+            "active": true
+          },
+          {
+            "key": 3,
+            "value": -34,
+            "active": true
+          }
+        ],
+        "dropped": 10
+      },
+      "actual": {
+        "kept": [
+          {
+            "key": -3,
+            "value": 63,
+            "active": true
+          },
+          {
+            "key": -2,
+            "value": 64,
+            "active": true
+          },
+          {
+            "key": -1,
+            "value": -54,
+            "active": true
+          },
+          {
+            "key": 3,
+            "value": -34,
+            "active": true
+          }
+        ],
+        "dropped": 10
+      },
+      "error": null,
+      "ok": true
+    },
+    {
+      "input": {
+        "entries": [
+          [
+            0,
+            40,
+            true
+          ],
+          [
+            4,
+            -5,
+            false
+          ],
+          [
+            -3,
+            -52,
+            false
+          ],
+          [
+            -2,
+            -82,
+            false
+          ],
+          [
+            -2,
+            52,
+            true
+          ],
+          [
+            -2,
+            91,
+            false
+          ],
+          [
+            3,
+            -99,
+            true
+          ]
+        ]
+      },
+      "expected": {
+        "kept": [
+          {
+            "key": 0,
+            "value": 40,
+            "active": true
+          },
+          {
+            "key": 3,
+            "value": -99,
+            "active": true
+          }
+        ],
+        "dropped": 5
+      },
+      "actual": {
+        "kept": [
+          {
+            "key": 0,
+            "value": 40,
+            "active": true
+          },
+          {
+            "key": 3,
+            "value": -99,
+            "active": true
+          }
+        ],
+        "dropped": 5
+      },
+      "error": null,
+      "ok": true
+    },
+    {
+      "input": {
+        "entries": [
+          [
+            5,
+            -6,
+            true
+          ],
+          [
+            -1,
+            -89,
+            false
+          ],
+          [
+            -2,
+            39,
+            false
+          ],
+          [
+            5,
+            55,
+            false
+          ],
+          [
+            3,
+            37,
+            true
+          ],
+          [
+            3,
+            23,
+            false
+          ],
+          [
+            2,
+            -18,
+            false
+          ],
+          [
+            5,
+            2,
+            true
+          ],
+          [
+            4,
+            -85,
+            false
+          ],
+          [
+            3,
+            20,
+            false
+          ],
+          [
+            -3,
+            2,
+            true
+          ],
+          [
+            -3,
+            -23,
+            true
+          ]
+        ]
+      },
+      "expected": {
+        "kept": [
+          {
+            "key": 5,
+            "value": 2,
+            "active": true
+          },
+          {
+            "key": -3,
+            "value": -23,
+            "active": true
+          }
+        ],
+        "dropped": 10
+      },
+      "actual": {
+        "kept": [
+          {
+            "key": 5,
+            "value": 2,
+            "active": true
+          },
+          {
+            "key": -3,
+            "value": -23,
+            "active": true
+          }
+        ],
+        "dropped": 10
+      },
+      "error": null,
+      "ok": true
+    },
+    {
+      "input": {
+        "entries": [
+          [
+            -1,
+            -17,
+            true
+          ],
+          [
+            -3,
+            58,
+            false
+          ],
+          [
+            -2,
+            -63,
+            true
+          ],
+          [
+            -2,
+            -93,
+            false
+          ],
+          [
+            0,
+            -25,
+            true
+          ],
+          [
+            4,
+            -12,
+            false
+          ],
+          [
+            -2,
+            96,
+            true
+          ],
+          [
+            3,
+            38,
+            false
+          ],
+          [
+            4,
+            74,
+            true
+          ],
+          [
+            -3,
+            -81,
+            true
+          ],
+          [
+            -1,
+            27,
+            false
+          ],
+          [
+            2,
+            35,
+            false
+          ],
+          [
+            -1,
+            -83,
+            false
+          ]
+        ]
+      },
+      "expected": {
+        "kept": [
+          {
+            "key": 0,
+            "value": -25,
+            "active": true
+          },
+          {
+            "key": -2,
+            "value": 96,
+            "active": true
+          },
+          {
+            "key": 4,
+            "value": 74,
+            "active": true
+          },
+          {
+            "key": -3,
+            "value": -81,
+            "active": true
+          }
+        ],
+        "dropped": 9
+      },
+      "actual": {
+        "kept": [
+          {
+            "key": 0,
+            "value": -25,
+            "active": true
+          },
+          {
+            "key": -2,
+            "value": 96,
+            "active": true
+          },
+          {
+            "key": 4,
+            "value": 74,
+            "active": true
+          },
+          {
+            "key": -3,
+            "value": -81,
+            "active": true
+          }
+        ],
+        "dropped": 9
+      },
+      "error": null,
+      "ok": true
+    },
+    {
+      "input": {
+        "entries": [
+          [
+            5,
+            -84,
+            true
+          ],
+          [
+            4,
+            32,
+            true
+          ],
+          [
+            5,
+            48,
+            true
+          ],
+          [
+            4,
+            -76,
+            true
+          ],
+          [
+            -1,
+            -46,
+            false
+          ],
+          [
+            0,
+            53,
+            true
+          ],
+          [
+            0,
+            13,
+            false
+          ],
+          [
+            2,
+            -25,
+            false
+          ],
+          [
+            0,
+            50,
+            true
+          ],
+          [
+            -2,
+            78,
+            false
+          ],
+          [
+            3,
+            12,
+            false
+          ],
+          [
+            5,
+            -32,
+            true
+          ],
+          [
+            3,
+            -20,
+            false
+          ],
+          [
+            5,
+            52,
+            true
+          ],
+          [
+            2,
+            75,
+            false
+          ],
+          [
+            0,
+            5,
+            false
+          ]
+        ]
+      },
+      "expected": {
+        "kept": [
+          {
+            "key": 4,
+            "value": -76,
+            "active": true
+          },
+          {
+            "key": 5,
+            "value": 52,
+            "active": true
+          }
+        ],
+        "dropped": 14
+      },
+      "actual": {
+        "kept": [
+          {
+            "key": 4,
+            "value": -76,
+            "active": true
+          },
+          {
+            "key": 5,
+            "value": 52,
+            "active": true
+          }
+        ],
+        "dropped": 14
+      },
+      "error": null,
+      "ok": true
+    },
+    {
+      "input": {
+        "entries": [
+          [
+            1,
+            -54,
+            true
+          ],
+          [
+            5,
+            -75,
+            true
+          ],
+          [
+            0,
+            38,
+            true
+          ],
+          [
+            -2,
+            -60,
+            true
+          ]
+        ]
+      },
+      "expected": {
+        "kept": [
+          {
+            "key": 1,
+            "value": -54,
+            "active": true
+          },
+          {
+            "key": 5,
+            "value": -75,
+            "active": true
+          },
+          {
+            "key": 0,
+            "value": 38,
+            "active": true
+          },
+          {
+            "key": -2,
+            "value": -60,
+            "active": true
+          }
+        ],
+        "dropped": 0
+      },
+      "actual": {
+        "kept": [
+          {
+            "key": 1,
+            "value": -54,
+            "active": true
+          },
+          {
+            "key": 5,
+            "value": -75,
+            "active": true
+          },
+          {
+            "key": 0,
+            "value": 38,
+            "active": true
+          },
+          {
+            "key": -2,
+            "value": -60,
+            "active": true
+          }
+        ],
+        "dropped": 0
+      },
+      "error": null,
+      "ok": true
+    },
+    {
+      "input": {
+        "entries": []
+      },
+      "expected": {
+        "kept": [],
+        "dropped": 0
+      },
+      "actual": {
+        "kept": [],
+        "dropped": 0
+      },
+      "error": null,
+      "ok": true
+    },
+    {
+      "input": {
+        "entries": [
+          [
+            0,
+            -31,
+            true
+          ],
+          [
+            -2,
+            -54,
+            true
+          ],
+          [
+            -1,
+            -32,
+            true
+          ],
+          [
+            1,
+            66,
+            false
+          ],
+          [
+            5,
+            27,
+            true
+          ],
+          [
+            3,
+            47,
+            true
+          ],
+          [
+            -1,
+            -10,
+            true
+          ],
+          [
+            -1,
+            91,
+            false
+          ],
+          [
+            0,
+            -86,
+            false
+          ],
+          [
+            4,
+            -93,
+            true
+          ],
+          [
+            -1,
+            -33,
+            true
+          ],
+          [
+            -3,
+            0,
+            false
+          ],
+          [
+            1,
+            -23,
+            false
+          ],
+          [
+            4,
+            55,
+            true
+          ],
+          [
+            -2,
+            50,
+            true
+          ]
+        ]
+      },
+      "expected": {
+        "kept": [
+          {
+            "key": 5,
+            "value": 27,
+            "active": true
+          },
+          {
+            "key": 3,
+            "value": 47,
+            "active": true
+          },
+          {
+            "key": -1,
+            "value": -33,
+            "active": true
+          },
+          {
+            "key": 4,
+            "value": 55,
+            "active": true
+          },
+          {
+            "key": -2,
+            "value": 50,
+            "active": true
+          }
+        ],
+        "dropped": 10
+      },
+      "actual": {
+        "kept": [
+          {
+            "key": 5,
+            "value": 27,
+            "active": true
+          },
+          {
+            "key": 3,
+            "value": 47,
+            "active": true
+          },
+          {
+            "key": -1,
+            "value": -33,
+            "active": true
+          },
+          {
+            "key": 4,
+            "value": 55,
+            "active": true
+          },
+          {
+            "key": -2,
+            "value": 50,
+            "active": true
+          }
+        ],
+        "dropped": 10
+      },
+      "error": null,
+      "ok": true
+    },
+    {
+      "input": {
+        "entries": [
+          [
+            4,
+            -17,
+            false
+          ]
+        ]
+      },
+      "expected": {
+        "kept": [],
+        "dropped": 1
+      },
+      "actual": {
+        "kept": [],
+        "dropped": 1
+      },
+      "error": null,
+      "ok": true
+    },
+    {
+      "input": {
+        "entries": [
+          [
+            -1,
+            -48,
+            false
+          ],
+          [
+            1,
+            -61,
+            false
+          ],
+          [
+            0,
+            26,
+            true
+          ],
+          [
+            2,
+            26,
+            true
+          ],
+          [
+            1,
+            -100,
+            true
+          ],
+          [
+            3,
+            -62,
+            true
+          ],
+          [
+            2,
+            29,
+            true
+          ],
+          [
+            0,
+            -50,
+            false
+          ],
+          [
+            -3,
+            -41,
+            true
+          ],
+          [
+            -2,
+            -51,
+            false
+          ],
+          [
+            -1,
+            -69,
+            true
+          ],
+          [
+            0,
+            -73,
+            true
+          ],
+          [
+            1,
+            65,
+            false
+          ],
+          [
+            4,
+            26,
+            true
+          ],
+          [
+            -1,
+            0,
+            false
+          ],
+          [
+            -3,
+            -36,
+            false
+          ]
+        ]
+      },
+      "expected": {
+        "kept": [
+          {
+            "key": 3,
+            "value": -62,
+            "active": true
+          },
+          {
+            "key": 2,
+            "value": 29,
+            "active": true
+          },
+          {
+            "key": 0,
+            "value": -73,
+            "active": true
+          },
+          {
+            "key": 4,
+            "value": 26,
+            "active": true
+          }
+        ],
+        "dropped": 12
+      },
+      "actual": {
+        "kept": [
+          {
+            "key": 3,
+            "value": -62,
+            "active": true
+          },
+          {
+            "key": 2,
+            "value": 29,
+            "active": true
+          },
+          {
+            "key": 0,
+            "value": -73,
+            "active": true
+          },
+          {
+            "key": 4,
+            "value": 26,
+            "active": true
+          }
+        ],
+        "dropped": 12
+      },
+      "error": null,
+      "ok": true
+    },
+    {
+      "input": {
+        "entries": [
+          [
+            4,
+            2,
+            false
+          ],
+          [
+            3,
+            -18,
+            true
+          ]
+        ]
+      },
+      "expected": {
+        "kept": [
+          {
+            "key": 3,
+            "value": -18,
+            "active": true
+          }
+        ],
+        "dropped": 1
+      },
+      "actual": {
+        "kept": [
+          {
+            "key": 3,
+            "value": -18,
+            "active": true
+          }
+        ],
+        "dropped": 1
+      },
+      "error": null,
+      "ok": true
+    },
+    {
+      "input": {
+        "entries": [
+          [
+            4,
+            100,
+            false
+          ],
+          [
+            0,
+            65,
+            false
+          ],
+          [
+            2,
+            -36,
+            true
+          ],
+          [
+            2,
+            69,
+            true
+          ],
+          [
+            -1,
+            22,
+            false
+          ],
+          [
+            0,
+            43,
+            false
+          ],
+          [
+            5,
+            72,
+            false
+          ],
+          [
+            5,
+            -98,
+            true
+          ],
+          [
+            5,
+            62,
+            true
+          ],
+          [
+            -2,
+            -43,
+            true
+          ],
+          [
+            2,
+            -96,
+            true
+          ],
+          [
+            4,
+            -74,
+            false
+          ],
+          [
+            -2,
+            -40,
+            false
+          ]
+        ]
+      },
+      "expected": {
+        "kept": [
+          {
+            "key": 5,
+            "value": 62,
+            "active": true
+          },
+          {
+            "key": 2,
+            "value": -96,
+            "active": true
+          }
+        ],
+        "dropped": 11
+      },
+      "actual": {
+        "kept": [
+          {
+            "key": 5,
+            "value": 62,
+            "active": true
+          },
+          {
+            "key": 2,
+            "value": -96,
+            "active": true
+          }
+        ],
+        "dropped": 11
+      },
+      "error": null,
+      "ok": true
+    },
+    {
+      "input": {
+        "entries": [
+          [
+            4,
+            9,
+            false
+          ],
+          [
+            3,
+            -71,
+            true
+          ]
+        ]
+      },
+      "expected": {
+        "kept": [
+          {
+            "key": 3,
+            "value": -71,
+            "active": true
+          }
+        ],
+        "dropped": 1
+      },
+      "actual": {
+        "kept": [
+          {
+            "key": 3,
+            "value": -71,
+            "active": true
+          }
+        ],
+        "dropped": 1
+      },
+      "error": null,
+      "ok": true
+    },
+    {
+      "input": {
+        "entries": [
+          [
+            -2,
+            25,
+            false
+          ]
+        ]
+      },
+      "expected": {
+        "kept": [],
+        "dropped": 1
+      },
+      "actual": {
+        "kept": [],
+        "dropped": 1
+      },
+      "error": null,
+      "ok": true
+    },
+    {
+      "input": {
+        "entries": [
+          [
+            -1,
+            52,
+            false
+          ],
+          [
+            5,
+            -96,
+            true
+          ],
+          [
+            2,
+            -85,
+            true
+          ],
+          [
+            -1,
+            -25,
+            true
+          ],
+          [
+            1,
+            36,
+            true
+          ],
+          [
+            -3,
+            -24,
+            false
+          ],
+          [
+            4,
+            -24,
+            false
+          ],
+          [
+            1,
+            -24,
+            true
+          ],
+          [
+            4,
+            -72,
+            true
+          ],
+          [
+            3,
+            -59,
+            false
+          ],
+          [
+            2,
+            -60,
+            false
+          ],
+          [
+            0,
+            45,
+            false
+          ],
+          [
+            5,
+            77,
+            false
+          ]
+        ]
+      },
+      "expected": {
+        "kept": [
+          {
+            "key": -1,
+            "value": -25,
+            "active": true
+          },
+          {
+            "key": 1,
+            "value": -24,
+            "active": true
+          },
+          {
+            "key": 4,
+            "value": -72,
+            "active": true
+          }
+        ],
+        "dropped": 10
+      },
+      "actual": {
+        "kept": [
+          {
+            "key": -1,
+            "value": -25,
+            "active": true
+          },
+          {
+            "key": 1,
+            "value": -24,
+            "active": true
+          },
+          {
+            "key": 4,
+            "value": -72,
+            "active": true
+          }
+        ],
+        "dropped": 10
+      },
+      "error": null,
+      "ok": true
+    },
+    {
+      "input": {
+        "entries": [
+          [
+            0,
+            -81,
+            true
+          ],
+          [
+            -3,
+            -7,
+            false
+          ],
+          [
+            3,
+            80,
+            false
+          ],
+          [
+            -2,
+            -58,
+            false
+          ],
+          [
+            -2,
+            45,
+            false
+          ]
+        ]
+      },
+      "expected": {
+        "kept": [
+          {
+            "key": 0,
+            "value": -81,
+            "active": true
+          }
+        ],
+        "dropped": 4
+      },
+      "actual": {
+        "kept": [
+          {
+            "key": 0,
+            "value": -81,
+            "active": true
+          }
+        ],
+        "dropped": 4
+      },
+      "error": null,
+      "ok": true
+    },
+    {
+      "input": {
+        "entries": [
+          [
+            -2,
+            -55,
+            false
+          ],
+          [
+            2,
+            -77,
+            true
+          ],
+          [
+            0,
+            11,
+            true
+          ],
+          [
+            -1,
+            91,
+            false
+          ],
+          [
+            2,
+            21,
+            false
+          ],
+          [
+            -1,
+            68,
+            true
+          ],
+          [
+            -1,
+            21,
+            false
+          ],
+          [
+            3,
+            70,
+            true
+          ],
+          [
+            -2,
+            39,
+            false
+          ],
+          [
+            1,
+            -5,
+            true
+          ]
+        ]
+      },
+      "expected": {
+        "kept": [
+          {
+            "key": 0,
+            "value": 11,
+            "active": true
+          },
+          {
+            "key": 3,
+            "value": 70,
+            "active": true
+          },
+          {
+            "key": 1,
+            "value": -5,
+            "active": true
+          }
+        ],
+        "dropped": 7
+      },
+      "actual": {
+        "kept": [
+          {
+            "key": 0,
+            "value": 11,
+            "active": true
+          },
+          {
+            "key": 3,
+            "value": 70,
+            "active": true
+          },
+          {
+            "key": 1,
+            "value": -5,
+            "active": true
+          }
+        ],
+        "dropped": 7
+      },
+      "error": null,
+      "ok": true
+    },
+    {
+      "input": {
+        "entries": [
+          [
+            -1,
+            95,
+            true
+          ]
+        ]
+      },
+      "expected": {
+        "kept": [
+          {
+            "key": -1,
+            "value": 95,
+            "active": true
+          }
+        ],
+        "dropped": 0
+      },
+      "actual": {
+        "kept": [
+          {
+            "key": -1,
+            "value": 95,
+            "active": true
+          }
+        ],
+        "dropped": 0
+      },
+      "error": null,
+      "ok": true
+    },
+    {
+      "input": {
+        "entries": [
+          [
+            2,
+            64,
+            true
+          ],
+          [
+            3,
+            83,
+            true
+          ],
+          [
+            5,
+            -38,
+            true
+          ],
+          [
+            3,
+            37,
+            true
+          ],
+          [
+            0,
+            -54,
+            true
+          ],
+          [
+            5,
+            4,
+            false
+          ],
+          [
+            5,
+            -64,
+            false
+          ],
+          [
+            0,
+            -37,
+            true
+          ],
+          [
+            4,
+            28,
+            true
+          ],
+          [
+            3,
+            -15,
+            true
+          ],
+          [
+            5,
+            -68,
+            true
+          ],
+          [
+            1,
+            -60,
+            true
+          ]
+        ]
+      },
+      "expected": {
+        "kept": [
+          {
+            "key": 2,
+            "value": 64,
+            "active": true
+          },
+          {
+            "key": 0,
+            "value": -37,
+            "active": true
+          },
+          {
+            "key": 4,
+            "value": 28,
+            "active": true
+          },
+          {
+            "key": 3,
+            "value": -15,
+            "active": true
+          },
+          {
+            "key": 5,
+            "value": -68,
+            "active": true
+          },
+          {
+            "key": 1,
+            "value": -60,
+            "active": true
+          }
+        ],
+        "dropped": 6
+      },
+      "actual": {
+        "kept": [
+          {
+            "key": 2,
+            "value": 64,
+            "active": true
+          },
+          {
+            "key": 0,
+            "value": -37,
+            "active": true
+          },
+          {
+            "key": 4,
+            "value": 28,
+            "active": true
+          },
+          {
+            "key": 3,
+            "value": -15,
+            "active": true
+          },
+          {
+            "key": 5,
+            "value": -68,
+            "active": true
+          },
+          {
+            "key": 1,
+            "value": -60,
+            "active": true
+          }
+        ],
+        "dropped": 6
+      },
+      "error": null,
+      "ok": true
+    },
+    {
+      "input": {
+        "entries": [
+          [
+            3,
+            29,
+            true
+          ],
+          [
+            -3,
+            -39,
+            false
+          ],
+          [
+            0,
+            67,
+            true
+          ],
+          [
+            -3,
+            47,
+            true
+          ],
+          [
+            4,
+            100,
+            false
+          ],
+          [
+            3,
+            43,
+            true
+          ],
+          [
+            4,
+            -30,
+            false
+          ],
+          [
+            -1,
+            -90,
+            false
+          ],
+          [
+            2,
+            18,
+            false
+          ],
+          [
+            4,
+            -47,
+            false
+          ],
+          [
+            0,
+            32,
+            true
+          ],
+          [
+            -3,
+            32,
+            true
+          ]
+        ]
+      },
+      "expected": {
+        "kept": [
+          {
+            "key": 3,
+            "value": 43,
+            "active": true
+          },
+          {
+            "key": 0,
+            "value": 32,
+            "active": true
+          },
+          {
+            "key": -3,
+            "value": 32,
+            "active": true
+          }
+        ],
+        "dropped": 9
+      },
+      "actual": {
+        "kept": [
+          {
+            "key": 3,
+            "value": 43,
+            "active": true
+          },
+          {
+            "key": 0,
+            "value": 32,
+            "active": true
+          },
+          {
+            "key": -3,
+            "value": 32,
+            "active": true
+          }
+        ],
+        "dropped": 9
+      },
+      "error": null,
+      "ok": true
+    },
+    {
+      "input": {
+        "entries": [
+          [
+            -3,
+            79,
+            true
+          ],
+          [
+            -3,
+            87,
+            false
+          ],
+          [
+            4,
+            24,
+            true
+          ],
+          [
+            5,
+            -79,
+            true
+          ],
+          [
+            -1,
+            -10,
+            true
+          ],
+          [
+            0,
+            6,
+            false
+          ],
+          [
+            3,
+            -100,
+            false
+          ],
+          [
+            -2,
+            -51,
+            true
+          ]
+        ]
+      },
+      "expected": {
+        "kept": [
+          {
+            "key": 4,
+            "value": 24,
+            "active": true
+          },
+          {
+            "key": 5,
+            "value": -79,
+            "active": true
+          },
+          {
+            "key": -1,
+            "value": -10,
+            "active": true
+          },
+          {
+            "key": -2,
+            "value": -51,
+            "active": true
+          }
+        ],
+        "dropped": 4
+      },
+      "actual": {
+        "kept": [
+          {
+            "key": 4,
+            "value": 24,
+            "active": true
+          },
+          {
+            "key": 5,
+            "value": -79,
+            "active": true
+          },
+          {
+            "key": -1,
+            "value": -10,
+            "active": true
+          },
+          {
+            "key": -2,
+            "value": -51,
+            "active": true
+          }
+        ],
+        "dropped": 4
+      },
+      "error": null,
+      "ok": true
+    },
+    {
+      "input": {
+        "entries": [
+          [
+            5,
+            -1,
+            true
+          ],
+          [
+            -2,
+            0,
+            false
+          ],
+          [
+            3,
+            -87,
+            true
+          ],
+          [
+            -1,
+            -6,
+            false
+          ]
+        ]
+      },
+      "expected": {
+        "kept": [
+          {
+            "key": 5,
+            "value": -1,
+            "active": true
+          },
+          {
+            "key": 3,
+            "value": -87,
+            "active": true
+          }
+        ],
+        "dropped": 2
+      },
+      "actual": {
+        "kept": [
+          {
+            "key": 5,
+            "value": -1,
+            "active": true
+          },
+          {
+            "key": 3,
+            "value": -87,
+            "active": true
+          }
+        ],
+        "dropped": 2
+      },
+      "error": null,
+      "ok": true
+    },
+    {
+      "input": {
+        "entries": [
+          [
+            2,
+            -2,
+            false
+          ],
+          [
+            2,
+            50,
+            false
+          ],
+          [
+            3,
+            -95,
+            true
+          ],
+          [
+            -3,
+            40,
+            true
+          ],
+          [
+            -1,
+            30,
+            true
+          ],
+          [
+            4,
+            -17,
+            true
+          ],
+          [
+            -2,
+            40,
+            false
+          ],
+          [
+            1,
+            -66,
+            false
+          ],
+          [
+            4,
+            43,
+            true
+          ],
+          [
+            3,
+            7,
+            false
+          ],
+          [
+            -3,
+            -40,
+            false
+          ],
+          [
+            0,
+            -53,
+            false
+          ],
+          [
+            -3,
+            27,
+            true
+          ]
+        ]
+      },
+      "expected": {
+        "kept": [
+          {
+            "key": -1,
+            "value": 30,
+            "active": true
+          },
+          {
+            "key": 4,
+            "value": 43,
+            "active": true
+          },
+          {
+            "key": -3,
+            "value": 27,
+            "active": true
+          }
+        ],
+        "dropped": 10
+      },
+      "actual": {
+        "kept": [
+          {
+            "key": -1,
+            "value": 30,
+            "active": true
+          },
+          {
+            "key": 4,
+            "value": 43,
+            "active": true
+          },
+          {
+            "key": -3,
+            "value": 27,
+            "active": true
+          }
+        ],
+        "dropped": 10
+      },
+      "error": null,
+      "ok": true
+    },
+    {
+      "input": {
+        "entries": [
+          [
+            1,
+            24,
+            true
+          ],
+          [
+            -1,
+            85,
+            true
+          ],
+          [
+            1,
+            -27,
+            true
+          ],
+          [
+            -1,
+            27,
+            false
+          ],
+          [
+            -2,
+            11,
+            false
+          ]
+        ]
+      },
+      "expected": {
+        "kept": [
+          {
+            "key": 1,
+            "value": -27,
+            "active": true
+          }
+        ],
+        "dropped": 4
+      },
+      "actual": {
+        "kept": [
+          {
+            "key": 1,
+            "value": -27,
+            "active": true
+          }
+        ],
+        "dropped": 4
+      },
+      "error": null,
+      "ok": true
+    },
+    {
+      "input": {
+        "entries": [
+          [
+            -2,
+            32,
+            false
+          ],
+          [
+            2,
+            52,
+            true
+          ],
+          [
+            0,
+            40,
+            true
+          ],
+          [
+            -2,
+            96,
+            false
+          ],
+          [
+            5,
+            87,
+            true
+          ],
+          [
+            4,
+            13,
+            false
+          ],
+          [
+            4,
+            -91,
+            true
+          ],
+          [
+            -1,
+            -10,
+            true
+          ],
+          [
+            1,
+            -98,
+            true
+          ],
+          [
+            5,
+            50,
+            false
+          ],
+          [
+            5,
+            -86,
+            true
+          ],
+          [
+            3,
+            31,
+            false
+          ],
+          [
+            0,
+            66,
+            false
+          ],
+          [
+            -1,
+            -6,
+            true
+          ],
+          [
+            5,
+            40,
+            false
+          ]
+        ]
+      },
+      "expected": {
+        "kept": [
+          {
+            "key": 2,
+            "value": 52,
+            "active": true
+          },
+          {
+            "key": 4,
+            "value": -91,
+            "active": true
+          },
+          {
+            "key": 1,
+            "value": -98,
+            "active": true
+          },
+          {
+            "key": -1,
+            "value": -6,
+            "active": true
+          }
+        ],
+        "dropped": 11
+      },
+      "actual": {
+        "kept": [
+          {
+            "key": 2,
+            "value": 52,
+            "active": true
+          },
+          {
+            "key": 4,
+            "value": -91,
+            "active": true
+          },
+          {
+            "key": 1,
+            "value": -98,
+            "active": true
+          },
+          {
+            "key": -1,
+            "value": -6,
+            "active": true
+          }
+        ],
+        "dropped": 11
+      },
+      "error": null,
+      "ok": true
+    },
+    {
+      "input": {
+        "entries": [
+          [
+            4,
+            25,
+            true
+          ],
+          [
+            0,
+            -64,
+            true
+          ],
+          [
+            5,
+            -25,
+            false
+          ],
+          [
+            0,
+            78,
+            false
+          ],
+          [
+            5,
+            -37,
+            false
+          ],
+          [
+            -1,
+            -68,
+            true
+          ],
+          [
+            3,
+            79,
+            false
+          ]
+        ]
+      },
+      "expected": {
+        "kept": [
+          {
+            "key": 4,
+            "value": 25,
+            "active": true
+          },
+          {
+            "key": -1,
+            "value": -68,
+            "active": true
+          }
+        ],
+        "dropped": 5
+      },
+      "actual": {
+        "kept": [
+          {
+            "key": 4,
+            "value": 25,
+            "active": true
+          },
+          {
+            "key": -1,
+            "value": -68,
+            "active": true
+          }
+        ],
+        "dropped": 5
+      },
+      "error": null,
+      "ok": true
+    },
+    {
+      "input": {
+        "entries": [
+          [
+            0,
+            42,
+            false
+          ],
+          [
+            4,
+            -33,
+            true
+          ],
+          [
+            1,
+            46,
+            false
+          ],
+          [
+            -3,
+            -85,
+            false
+          ],
+          [
+            3,
+            2,
+            true
+          ],
+          [
+            5,
+            -82,
+            true
+          ],
+          [
+            -3,
+            65,
+            true
+          ],
+          [
+            2,
+            -40,
+            false
+          ],
+          [
+            -3,
+            57,
+            false
+          ],
+          [
+            3,
+            90,
+            false
+          ]
+        ]
+      },
+      "expected": {
+        "kept": [
+          {
+            "key": 4,
+            "value": -33,
+            "active": true
+          },
+          {
+            "key": 5,
+            "value": -82,
+            "active": true
+          }
+        ],
+        "dropped": 8
+      },
+      "actual": {
+        "kept": [
+          {
+            "key": 4,
+            "value": -33,
+            "active": true
+          },
+          {
+            "key": 5,
+            "value": -82,
+            "active": true
+          }
+        ],
+        "dropped": 8
+      },
+      "error": null,
+      "ok": true
+    },
+    {
+      "input": {
+        "entries": [
+          [
+            1,
+            -89,
+            false
+          ],
+          [
+            -2,
+            10,
+            true
+          ],
+          [
+            -2,
+            -53,
+            true
+          ],
+          [
+            3,
+            81,
+            true
+          ],
+          [
+            1,
+            -69,
+            false
+          ],
+          [
+            1,
+            -52,
+            false
+          ],
+          [
+            -1,
+            8,
+            true
+          ]
+        ]
+      },
+      "expected": {
+        "kept": [
+          {
+            "key": -2,
+            "value": -53,
+            "active": true
+          },
+          {
+            "key": 3,
+            "value": 81,
+            "active": true
+          },
+          {
+            "key": -1,
+            "value": 8,
+            "active": true
+          }
+        ],
+        "dropped": 4
+      },
+      "actual": {
+        "kept": [
+          {
+            "key": -2,
+            "value": -53,
+            "active": true
+          },
+          {
+            "key": 3,
+            "value": 81,
+            "active": true
+          },
+          {
+            "key": -1,
+            "value": 8,
+            "active": true
+          }
+        ],
+        "dropped": 4
+      },
+      "error": null,
+      "ok": true
+    },
+    {
+      "input": {
+        "entries": [
+          [
+            4,
+            -69,
+            true
+          ],
+          [
+            1,
+            -29,
+            false
+          ],
+          [
+            4,
+            -66,
+            true
+          ],
+          [
+            3,
+            13,
+            false
+          ],
+          [
+            -3,
+            -26,
+            true
+          ],
+          [
+            1,
+            -99,
+            false
+          ],
+          [
+            1,
+            -91,
+            false
+          ],
+          [
+            5,
+            -42,
+            true
+          ],
+          [
+            4,
+            -19,
+            true
+          ],
+          [
+            0,
+            32,
+            true
+          ],
+          [
+            0,
+            94,
+            false
+          ],
+          [
+            1,
+            -50,
+            false
+          ],
+          [
+            2,
+            -26,
+            true
+          ],
+          [
+            2,
+            91,
+            true
+          ]
+        ]
+      },
+      "expected": {
+        "kept": [
+          {
+            "key": -3,
+            "value": -26,
+            "active": true
+          },
+          {
+            "key": 5,
+            "value": -42,
+            "active": true
+          },
+          {
+            "key": 4,
+            "value": -19,
+            "active": true
+          },
+          {
+            "key": 2,
+            "value": 91,
+            "active": true
+          }
+        ],
+        "dropped": 10
+      },
+      "actual": {
+        "kept": [
+          {
+            "key": -3,
+            "value": -26,
+            "active": true
+          },
+          {
+            "key": 5,
+            "value": -42,
+            "active": true
+          },
+          {
+            "key": 4,
+            "value": -19,
+            "active": true
+          },
+          {
+            "key": 2,
+            "value": 91,
+            "active": true
+          }
+        ],
+        "dropped": 10
+      },
+      "error": null,
+      "ok": true
+    },
+    {
+      "input": {
+        "entries": [
+          [
+            -2,
+            86,
+            false
+          ],
+          [
+            5,
+            6,
+            true
+          ],
+          [
+            1,
+            21,
+            true
+          ],
+          [
+            -1,
+            20,
+            true
+          ],
+          [
+            5,
+            -27,
+            true
+          ],
+          [
+            -1,
+            63,
+            true
+          ],
+          [
+            4,
+            45,
+            true
+          ],
+          [
+            1,
+            -16,
+            true
+          ],
+          [
+            3,
+            -13,
+            false
+          ],
+          [
+            -3,
+            -82,
+            false
+          ],
+          [
+            -3,
+            46,
+            false
+          ],
+          [
+            -3,
+            -1,
+            false
+          ],
+          [
+            5,
+            31,
+            false
+          ],
+          [
+            1,
+            15,
+            true
+          ],
+          [
+            2,
+            -68,
+            true
+          ]
+        ]
+      },
+      "expected": {
+        "kept": [
+          {
+            "key": -1,
+            "value": 63,
+            "active": true
+          },
+          {
+            "key": 4,
+            "value": 45,
+            "active": true
+          },
+          {
+            "key": 1,
+            "value": 15,
+            "active": true
+          },
+          {
+            "key": 2,
+            "value": -68,
+            "active": true
+          }
+        ],
+        "dropped": 11
+      },
+      "actual": {
+        "kept": [
+          {
+            "key": -1,
+            "value": 63,
+            "active": true
+          },
+          {
+            "key": 4,
+            "value": 45,
+            "active": true
+          },
+          {
+            "key": 1,
+            "value": 15,
+            "active": true
+          },
+          {
+            "key": 2,
+            "value": -68,
+            "active": true
+          }
+        ],
+        "dropped": 11
+      },
+      "error": null,
+      "ok": true
+    },
+    {
+      "input": {
+        "entries": [
+          [
+            -2,
+            -77,
+            false
+          ],
+          [
+            3,
+            26,
+            false
+          ],
+          [
+            2,
+            75,
+            true
+          ],
+          [
+            3,
+            68,
+            true
+          ],
+          [
+            0,
+            -46,
+            true
+          ],
+          [
+            -1,
+            84,
+            false
+          ],
+          [
+            -3,
+            43,
+            false
+          ],
+          [
+            5,
+            78,
+            true
+          ],
+          [
+            5,
+            -58,
+            false
+          ],
+          [
+            2,
+            96,
+            false
+          ],
+          [
+            -3,
+            -67,
+            true
+          ]
+        ]
+      },
+      "expected": {
+        "kept": [
+          {
+            "key": 3,
+            "value": 68,
+            "active": true
+          },
+          {
+            "key": 0,
+            "value": -46,
+            "active": true
+          },
+          {
+            "key": -3,
+            "value": -67,
+            "active": true
+          }
+        ],
+        "dropped": 8
+      },
+      "actual": {
+        "kept": [
+          {
+            "key": 3,
+            "value": 68,
+            "active": true
+          },
+          {
+            "key": 0,
+            "value": -46,
+            "active": true
+          },
+          {
+            "key": -3,
+            "value": -67,
+            "active": true
+          }
+        ],
+        "dropped": 8
+      },
+      "error": null,
+      "ok": true
+    },
+    {
+      "input": {
+        "entries": [
+          [
+            -1,
+            -91,
+            false
+          ],
+          [
+            0,
+            94,
+            false
+          ],
+          [
+            -2,
+            -26,
+            false
+          ],
+          [
+            2,
+            70,
+            true
+          ],
+          [
+            -2,
+            -37,
+            false
+          ],
+          [
+            3,
+            -21,
+            true
+          ],
+          [
+            0,
+            -87,
+            false
+          ],
+          [
+            -1,
+            -85,
+            true
+          ],
+          [
+            5,
+            62,
+            false
+          ],
+          [
+            1,
+            54,
+            true
+          ],
+          [
+            3,
+            -54,
+            true
+          ],
+          [
+            2,
+            90,
+            true
+          ],
+          [
+            3,
+            -68,
+            false
+          ],
+          [
+            0,
+            -67,
+            false
+          ],
+          [
+            3,
+            39,
+            false
+          ]
+        ]
+      },
+      "expected": {
+        "kept": [
+          {
+            "key": -1,
+            "value": -85,
+            "active": true
+          },
+          {
+            "key": 1,
+            "value": 54,
+            "active": true
+          },
+          {
+            "key": 2,
+            "value": 90,
+            "active": true
+          }
+        ],
+        "dropped": 12
+      },
+      "actual": {
+        "kept": [
+          {
+            "key": -1,
+            "value": -85,
+            "active": true
+          },
+          {
+            "key": 1,
+            "value": 54,
+            "active": true
+          },
+          {
+            "key": 2,
+            "value": 90,
+            "active": true
+          }
+        ],
+        "dropped": 12
+      },
+      "error": null,
+      "ok": true
+    },
+    {
+      "input": {
+        "entries": [
+          [
+            0,
+            83,
+            true
+          ],
+          [
+            -2,
+            6,
+            true
+          ],
+          [
+            3,
+            66,
+            false
+          ],
+          [
+            -3,
+            -11,
+            false
+          ],
+          [
+            2,
+            -93,
+            false
+          ],
+          [
+            0,
+            -19,
+            true
+          ],
+          [
+            -1,
+            -99,
+            true
+          ],
+          [
+            -1,
+            -8,
+            false
+          ],
+          [
+            5,
+            -27,
+            true
+          ],
+          [
+            2,
+            -46,
+            false
+          ]
+        ]
+      },
+      "expected": {
+        "kept": [
+          {
+            "key": -2,
+            "value": 6,
+            "active": true
+          },
+          {
+            "key": 0,
+            "value": -19,
+            "active": true
+          },
+          {
+            "key": 5,
+            "value": -27,
+            "active": true
+          }
+        ],
+        "dropped": 7
+      },
+      "actual": {
+        "kept": [
+          {
+            "key": -2,
+            "value": 6,
+            "active": true
+          },
+          {
+            "key": 0,
+            "value": -19,
+            "active": true
+          },
+          {
+            "key": 5,
+            "value": -27,
+            "active": true
+          }
+        ],
+        "dropped": 7
+      },
+      "error": null,
+      "ok": true
+    },
+    {
+      "input": {
+        "entries": [
+          [
+            -1,
+            -4,
+            true
+          ],
+          [
+            2,
+            -62,
+            true
+          ],
+          [
+            4,
+            -90,
+            true
+          ],
+          [
+            1,
+            1,
+            false
+          ],
+          [
+            2,
+            34,
+            false
+          ],
+          [
+            4,
+            81,
+            true
+          ],
+          [
+            0,
+            51,
+            false
+          ],
+          [
+            -3,
+            -37,
+            false
+          ],
+          [
+            1,
+            16,
+            true
+          ],
+          [
+            5,
+            -75,
+            true
+          ],
+          [
+            -1,
+            -88,
+            true
+          ],
+          [
+            2,
+            -59,
+            false
+          ],
+          [
+            -3,
+            17,
+            true
+          ]
+        ]
+      },
+      "expected": {
+        "kept": [
+          {
+            "key": 4,
+            "value": 81,
+            "active": true
+          },
+          {
+            "key": 1,
+            "value": 16,
+            "active": true
+          },
+          {
+            "key": 5,
+            "value": -75,
+            "active": true
+          },
+          {
+            "key": -1,
+            "value": -88,
+            "active": true
+          },
+          {
+            "key": -3,
+            "value": 17,
+            "active": true
+          }
+        ],
+        "dropped": 8
+      },
+      "actual": {
+        "kept": [
+          {
+            "key": 4,
+            "value": 81,
+            "active": true
+          },
+          {
+            "key": 1,
+            "value": 16,
+            "active": true
+          },
+          {
+            "key": 5,
+            "value": -75,
+            "active": true
+          },
+          {
+            "key": -1,
+            "value": -88,
+            "active": true
+          },
+          {
+            "key": -3,
+            "value": 17,
+            "active": true
+          }
+        ],
+        "dropped": 8
+      },
+      "error": null,
+      "ok": true
+    },
+    {
+      "input": {
+        "entries": [
+          [
+            -3,
+            68,
+            false
+          ]
+        ]
+      },
+      "expected": {
+        "kept": [],
+        "dropped": 1
+      },
+      "actual": {
+        "kept": [],
+        "dropped": 1
+      },
+      "error": null,
+      "ok": true
+    },
+    {
+      "input": {
+        "entries": [
+          [
+            -3,
+            46,
+            false
+          ]
+        ]
+      },
+      "expected": {
+        "kept": [],
+        "dropped": 1
+      },
+      "actual": {
+        "kept": [],
+        "dropped": 1
+      },
+      "error": null,
+      "ok": true
+    },
+    {
+      "input": {
+        "entries": [
+          [
+            -2,
+            43,
+            true
+          ],
+          [
+            3,
+            7,
+            true
+          ],
+          [
+            2,
+            -25,
+            true
+          ],
+          [
+            4,
+            26,
+            true
+          ],
+          [
+            2,
+            -85,
+            true
+          ],
+          [
+            -3,
+            -35,
+            true
+          ],
+          [
+            3,
+            27,
+            false
+          ],
+          [
+            5,
+            27,
+            true
+          ],
+          [
+            -2,
+            58,
+            false
+          ],
+          [
+            4,
+            -22,
+            true
+          ],
+          [
+            0,
+            -100,
+            true
+          ]
+        ]
+      },
+      "expected": {
+        "kept": [
+          {
+            "key": 2,
+            "value": -85,
+            "active": true
+          },
+          {
+            "key": -3,
+            "value": -35,
+            "active": true
+          },
+          {
+            "key": 5,
+            "value": 27,
+            "active": true
+          },
+          {
+            "key": 4,
+            "value": -22,
+            "active": true
+          },
+          {
+            "key": 0,
+            "value": -100,
+            "active": true
+          }
+        ],
+        "dropped": 6
+      },
+      "actual": {
+        "kept": [
+          {
+            "key": 2,
+            "value": -85,
+            "active": true
+          },
+          {
+            "key": -3,
+            "value": -35,
+            "active": true
+          },
+          {
+            "key": 5,
+            "value": 27,
+            "active": true
+          },
+          {
+            "key": 4,
+            "value": -22,
+            "active": true
+          },
+          {
+            "key": 0,
+            "value": -100,
+            "active": true
+          }
+        ],
+        "dropped": 6
+      },
+      "error": null,
+      "ok": true
+    },
+    {
+      "input": {
+        "entries": [
+          [
+            2,
+            21,
+            true
+          ],
+          [
+            -3,
+            58,
+            false
+          ],
+          [
+            3,
+            -97,
+            false
+          ],
+          [
+            2,
+            73,
+            true
+          ],
+          [
+            0,
+            -12,
+            true
+          ],
+          [
+            -2,
+            76,
+            true
+          ],
+          [
+            5,
+            85,
+            false
+          ],
+          [
+            4,
+            13,
+            true
+          ],
+          [
+            -3,
+            88,
+            true
+          ],
+          [
+            1,
+            14,
+            false
+          ],
+          [
+            5,
+            -59,
+            true
+          ],
+          [
+            -3,
+            10,
+            false
+          ]
+        ]
+      },
+      "expected": {
+        "kept": [
+          {
+            "key": 2,
+            "value": 73,
+            "active": true
+          },
+          {
+            "key": 0,
+            "value": -12,
+            "active": true
+          },
+          {
+            "key": -2,
+            "value": 76,
+            "active": true
+          },
+          {
+            "key": 4,
+            "value": 13,
+            "active": true
+          },
+          {
+            "key": 5,
+            "value": -59,
+            "active": true
+          }
+        ],
+        "dropped": 7
+      },
+      "actual": {
+        "kept": [
+          {
+            "key": 2,
+            "value": 73,
+            "active": true
+          },
+          {
+            "key": 0,
+            "value": -12,
+            "active": true
+          },
+          {
+            "key": -2,
+            "value": 76,
+            "active": true
+          },
+          {
+            "key": 4,
+            "value": 13,
+            "active": true
+          },
+          {
+            "key": 5,
+            "value": -59,
+            "active": true
+          }
+        ],
+        "dropped": 7
+      },
+      "error": null,
+      "ok": true
+    },
+    {
+      "input": {
+        "entries": [
+          [
+            5,
+            83,
+            false
+          ],
+          [
+            3,
+            57,
+            true
+          ],
+          [
+            -1,
+            37,
+            true
+          ],
+          [
+            -2,
+            94,
+            false
+          ],
+          [
+            -1,
+            -35,
+            true
+          ],
+          [
+            -3,
+            72,
+            false
+          ],
+          [
+            2,
+            60,
+            true
+          ],
+          [
+            4,
+            -64,
+            true
+          ],
+          [
+            0,
+            4,
+            true
+          ],
+          [
+            4,
+            40,
+            true
+          ],
+          [
+            3,
+            33,
+            true
+          ],
+          [
+            1,
+            -4,
+            true
+          ],
+          [
+            -1,
+            -28,
+            false
+          ],
+          [
+            -3,
+            36,
+            false
+          ],
+          [
+            5,
+            -35,
+            false
+          ]
+        ]
+      },
+      "expected": {
+        "kept": [
+          {
+            "key": 2,
+            "value": 60,
+            "active": true
+          },
+          {
+            "key": 0,
+            "value": 4,
+            "active": true
+          },
+          {
+            "key": 4,
+            "value": 40,
+            "active": true
+          },
+          {
+            "key": 3,
+            "value": 33,
+            "active": true
+          },
+          {
+            "key": 1,
+            "value": -4,
+            "active": true
+          }
+        ],
+        "dropped": 10
+      },
+      "actual": {
+        "kept": [
+          {
+            "key": 2,
+            "value": 60,
+            "active": true
+          },
+          {
+            "key": 0,
+            "value": 4,
+            "active": true
+          },
+          {
+            "key": 4,
+            "value": 40,
+            "active": true
+          },
+          {
+            "key": 3,
+            "value": 33,
+            "active": true
+          },
+          {
+            "key": 1,
+            "value": -4,
+            "active": true
+          }
+        ],
+        "dropped": 10
+      },
+      "error": null,
+      "ok": true
+    },
+    {
+      "input": {
+        "entries": [
+          [
+            1,
+            11,
+            true
+          ],
+          [
+            -1,
+            88,
+            false
+          ],
+          [
+            2,
+            -3,
+            true
+          ],
+          [
+            1,
+            -87,
+            true
+          ]
+        ]
+      },
+      "expected": {
+        "kept": [
+          {
+            "key": 2,
+            "value": -3,
+            "active": true
+          },
+          {
+            "key": 1,
+            "value": -87,
+            "active": true
+          }
+        ],
+        "dropped": 2
+      },
+      "actual": {
+        "kept": [
+          {
+            "key": 2,
+            "value": -3,
+            "active": true
+          },
+          {
+            "key": 1,
+            "value": -87,
+            "active": true
+          }
+        ],
+        "dropped": 2
+      },
+      "error": null,
+      "ok": true
+    },
+    {
+      "input": {
+        "entries": [
+          [
+            2,
+            -50,
+            true
+          ],
+          [
+            4,
+            -72,
+            true
+          ]
+        ]
+      },
+      "expected": {
+        "kept": [
+          {
+            "key": 2,
+            "value": -50,
+            "active": true
+          },
+          {
+            "key": 4,
+            "value": -72,
+            "active": true
+          }
+        ],
+        "dropped": 0
+      },
+      "actual": {
+        "kept": [
+          {
+            "key": 2,
+            "value": -50,
+            "active": true
+          },
+          {
+            "key": 4,
+            "value": -72,
+            "active": true
+          }
+        ],
+        "dropped": 0
+      },
+      "error": null,
+      "ok": true
+    },
+    {
+      "input": {
+        "entries": [
+          [
+            1,
+            36,
+            true
+          ],
+          [
+            2,
+            70,
+            false
+          ],
+          [
+            -2,
+            -9,
+            false
+          ],
+          [
+            1,
+            43,
+            true
+          ],
+          [
+            -3,
+            59,
+            false
+          ],
+          [
+            0,
+            26,
+            false
+          ],
+          [
+            -1,
+            -65,
+            true
+          ],
+          [
+            -1,
+            -55,
+            false
+          ],
+          [
+            3,
+            57,
+            true
+          ],
+          [
+            5,
+            72,
+            true
+          ],
+          [
+            0,
+            -87,
+            false
+          ]
+        ]
+      },
+      "expected": {
+        "kept": [
+          {
+            "key": 1,
+            "value": 43,
+            "active": true
+          },
+          {
+            "key": 3,
+            "value": 57,
+            "active": true
+          },
+          {
+            "key": 5,
+            "value": 72,
+            "active": true
+          }
+        ],
+        "dropped": 8
+      },
+      "actual": {
+        "kept": [
+          {
+            "key": 1,
+            "value": 43,
+            "active": true
+          },
+          {
+            "key": 3,
+            "value": 57,
+            "active": true
+          },
+          {
+            "key": 5,
+            "value": 72,
+            "active": true
+          }
+        ],
+        "dropped": 8
+      },
+      "error": null,
+      "ok": true
+    },
+    {
+      "input": {
+        "entries": [
+          [
+            4,
+            -93,
+            true
+          ],
+          [
+            -3,
+            -55,
+            true
+          ],
+          [
+            5,
+            -31,
+            false
+          ],
+          [
+            2,
+            89,
+            false
+          ],
+          [
+            -3,
+            -67,
+            false
+          ],
+          [
+            3,
+            -9,
+            true
+          ],
+          [
+            -1,
+            -62,
+            true
+          ],
+          [
+            0,
+            68,
+            true
+          ],
+          [
+            -2,
+            89,
+            true
+          ],
+          [
+            4,
+            -70,
+            false
+          ],
+          [
+            -3,
+            2,
+            true
+          ],
+          [
+            1,
+            3,
+            false
+          ],
+          [
+            -3,
+            23,
+            false
+          ]
+        ]
+      },
+      "expected": {
+        "kept": [
+          {
+            "key": 3,
+            "value": -9,
+            "active": true
+          },
+          {
+            "key": -1,
+            "value": -62,
+            "active": true
+          },
+          {
+            "key": 0,
+            "value": 68,
+            "active": true
+          },
+          {
+            "key": -2,
+            "value": 89,
+            "active": true
+          }
+        ],
+        "dropped": 9
+      },
+      "actual": {
+        "kept": [
+          {
+            "key": 3,
+            "value": -9,
+            "active": true
+          },
+          {
+            "key": -1,
+            "value": -62,
+            "active": true
+          },
+          {
+            "key": 0,
+            "value": 68,
+            "active": true
+          },
+          {
+            "key": -2,
+            "value": 89,
+            "active": true
+          }
+        ],
+        "dropped": 9
+      },
+      "error": null,
+      "ok": true
+    },
+    {
+      "input": {
+        "entries": [
+          [
+            -2,
+            -36,
+            true
+          ],
+          [
+            -3,
+            -19,
+            true
+          ],
+          [
+            -2,
+            -7,
+            true
+          ],
+          [
+            -2,
+            -64,
+            false
+          ],
+          [
+            -3,
+            88,
+            false
+          ],
+          [
+            1,
+            -74,
+            true
+          ],
+          [
+            5,
+            -25,
+            true
+          ],
+          [
+            0,
+            -95,
+            false
+          ],
+          [
+            -2,
+            -26,
+            false
+          ],
+          [
+            5,
+            -67,
+            true
+          ],
+          [
+            1,
+            -55,
+            false
+          ],
+          [
+            1,
+            50,
+            true
+          ],
+          [
+            0,
+            42,
+            false
+          ]
+        ]
+      },
+      "expected": {
+        "kept": [
+          {
+            "key": 5,
+            "value": -67,
+            "active": true
+          },
+          {
+            "key": 1,
+            "value": 50,
+            "active": true
+          }
+        ],
+        "dropped": 11
+      },
+      "actual": {
+        "kept": [
+          {
+            "key": 5,
+            "value": -67,
+            "active": true
+          },
+          {
+            "key": 1,
+            "value": 50,
+            "active": true
+          }
+        ],
+        "dropped": 11
+      },
+      "error": null,
+      "ok": true
+    },
+    {
+      "input": {
+        "entries": [
+          [
+            -3,
+            -53,
+            false
+          ],
+          [
+            -1,
+            -40,
+            true
+          ],
+          [
+            3,
+            32,
+            true
+          ],
+          [
+            2,
+            -76,
+            true
+          ],
+          [
+            4,
+            -29,
+            true
+          ],
+          [
+            5,
+            -48,
+            false
+          ],
+          [
+            1,
+            -34,
+            false
+          ],
+          [
+            0,
+            0,
+            true
+          ],
+          [
+            -3,
+            -84,
+            true
+          ],
+          [
+            -1,
+            -97,
+            false
+          ],
+          [
+            2,
+            34,
+            true
+          ],
+          [
+            -2,
+            73,
+            false
+          ],
+          [
+            1,
+            83,
+            true
+          ]
+        ]
+      },
+      "expected": {
+        "kept": [
+          {
+            "key": 3,
+            "value": 32,
+            "active": true
+          },
+          {
+            "key": 4,
+            "value": -29,
+            "active": true
+          },
+          {
+            "key": 0,
+            "value": 0,
+            "active": true
+          },
+          {
+            "key": -3,
+            "value": -84,
+            "active": true
+          },
+          {
+            "key": 2,
+            "value": 34,
+            "active": true
+          },
+          {
+            "key": 1,
+            "value": 83,
+            "active": true
+          }
+        ],
+        "dropped": 7
+      },
+      "actual": {
+        "kept": [
+          {
+            "key": 3,
+            "value": 32,
+            "active": true
+          },
+          {
+            "key": 4,
+            "value": -29,
+            "active": true
+          },
+          {
+            "key": 0,
+            "value": 0,
+            "active": true
+          },
+          {
+            "key": -3,
+            "value": -84,
+            "active": true
+          },
+          {
+            "key": 2,
+            "value": 34,
+            "active": true
+          },
+          {
+            "key": 1,
+            "value": 83,
+            "active": true
+          }
+        ],
+        "dropped": 7
+      },
+      "error": null,
+      "ok": true
+    },
+    {
+      "input": {
+        "entries": [
+          [
+            1,
+            -95,
+            false
+          ],
+          [
+            4,
+            -1,
+            false
+          ]
+        ]
+      },
+      "expected": {
+        "kept": [],
+        "dropped": 2
+      },
+      "actual": {
+        "kept": [],
+        "dropped": 2
+      },
+      "error": null,
+      "ok": true
+    },
+    {
+      "input": {
+        "entries": []
+      },
+      "expected": {
+        "kept": [],
+        "dropped": 0
+      },
+      "actual": {
+        "kept": [],
+        "dropped": 0
+      },
+      "error": null,
+      "ok": true
+    },
+    {
+      "input": {
+        "entries": [
+          [
+            2,
+            -73,
+            false
+          ],
+          [
+            0,
+            -27,
+            true
+          ],
+          [
+            -1,
+            85,
+            true
+          ],
+          [
+            -2,
+            4,
+            false
+          ]
+        ]
+      },
+      "expected": {
+        "kept": [
+          {
+            "key": 0,
+            "value": -27,
+            "active": true
+          },
+          {
+            "key": -1,
+            "value": 85,
+            "active": true
+          }
+        ],
+        "dropped": 2
+      },
+      "actual": {
+        "kept": [
+          {
+            "key": 0,
+            "value": -27,
+            "active": true
+          },
+          {
+            "key": -1,
+            "value": 85,
+            "active": true
+          }
+        ],
+        "dropped": 2
+      },
+      "error": null,
+      "ok": true
+    },
+    {
+      "input": {
+        "entries": [
+          [
+            -2,
+            -3,
+            false
+          ],
+          [
+            5,
+            86,
+            true
+          ],
+          [
+            -2,
+            -74,
+            true
+          ],
+          [
+            -1,
+            24,
+            false
+          ],
+          [
+            -3,
+            70,
+            false
+          ],
+          [
+            2,
+            -18,
+            false
+          ],
+          [
+            4,
+            -32,
+            false
+          ],
+          [
+            1,
+            -79,
+            true
+          ],
+          [
+            2,
+            -66,
+            true
+          ],
+          [
+            -1,
+            77,
+            false
+          ]
+        ]
+      },
+      "expected": {
+        "kept": [
+          {
+            "key": 5,
+            "value": 86,
+            "active": true
+          },
+          {
+            "key": -2,
+            "value": -74,
+            "active": true
+          },
+          {
+            "key": 1,
+            "value": -79,
+            "active": true
+          },
+          {
+            "key": 2,
+            "value": -66,
+            "active": true
+          }
+        ],
+        "dropped": 6
+      },
+      "actual": {
+        "kept": [
+          {
+            "key": 5,
+            "value": 86,
+            "active": true
+          },
+          {
+            "key": -2,
+            "value": -74,
+            "active": true
+          },
+          {
+            "key": 1,
+            "value": -79,
+            "active": true
+          },
+          {
+            "key": 2,
+            "value": -66,
+            "active": true
+          }
+        ],
+        "dropped": 6
+      },
+      "error": null,
+      "ok": true
+    },
+    {
+      "input": {
+        "entries": [
+          [
+            5,
+            -85,
+            true
+          ],
+          [
+            1,
+            10,
+            false
+          ],
+          [
+            -2,
+            19,
+            false
+          ],
+          [
+            1,
+            17,
+            false
+          ],
+          [
+            3,
+            48,
+            true
+          ],
+          [
+            2,
+            -99,
+            false
+          ],
+          [
+            -3,
+            -75,
+            true
+          ],
+          [
+            -1,
+            58,
+            false
+          ],
+          [
+            4,
+            70,
+            false
+          ],
+          [
+            -1,
+            90,
+            false
+          ],
+          [
+            3,
+            -83,
+            true
+          ],
+          [
+            -1,
+            61,
+            false
+          ],
+          [
+            2,
+            -54,
+            true
+          ]
+        ]
+      },
+      "expected": {
+        "kept": [
+          {
+            "key": 5,
+            "value": -85,
+            "active": true
+          },
+          {
+            "key": -3,
+            "value": -75,
+            "active": true
+          },
+          {
+            "key": 3,
+            "value": -83,
+            "active": true
+          },
+          {
+            "key": 2,
+            "value": -54,
+            "active": true
+          }
+        ],
+        "dropped": 9
+      },
+      "actual": {
+        "kept": [
+          {
+            "key": 5,
+            "value": -85,
+            "active": true
+          },
+          {
+            "key": -3,
+            "value": -75,
+            "active": true
+          },
+          {
+            "key": 3,
+            "value": -83,
+            "active": true
+          },
+          {
+            "key": 2,
+            "value": -54,
+            "active": true
+          }
+        ],
+        "dropped": 9
+      },
+      "error": null,
+      "ok": true
+    },
+    {
+      "input": {
+        "entries": [
+          [
+            2,
+            59,
+            true
+          ],
+          [
+            5,
+            -2,
+            false
+          ],
+          [
+            3,
+            -4,
+            true
+          ],
+          [
+            1,
+            88,
+            false
+          ],
+          [
+            3,
+            84,
+            true
+          ],
+          [
+            -1,
+            -30,
+            true
+          ],
+          [
+            4,
+            20,
+            true
+          ],
+          [
+            2,
+            -50,
+            true
+          ],
+          [
+            -1,
+            -38,
+            true
+          ],
+          [
+            -3,
+            95,
+            true
+          ],
+          [
+            -3,
+            -89,
+            false
+          ],
+          [
+            4,
+            -17,
+            false
+          ],
+          [
+            -1,
+            81,
+            true
+          ],
+          [
+            -1,
+            54,
+            true
+          ],
+          [
+            4,
+            100,
+            false
+          ],
+          [
+            0,
+            -100,
+            true
+          ]
+        ]
+      },
+      "expected": {
+        "kept": [
+          {
+            "key": 3,
+            "value": 84,
+            "active": true
+          },
+          {
+            "key": 2,
+            "value": -50,
+            "active": true
+          },
+          {
+            "key": -1,
+            "value": 54,
+            "active": true
+          },
+          {
+            "key": 0,
+            "value": -100,
+            "active": true
+          }
+        ],
+        "dropped": 12
+      },
+      "actual": {
+        "kept": [
+          {
+            "key": 3,
+            "value": 84,
+            "active": true
+          },
+          {
+            "key": 2,
+            "value": -50,
+            "active": true
+          },
+          {
+            "key": -1,
+            "value": 54,
+            "active": true
+          },
+          {
+            "key": 0,
+            "value": -100,
+            "active": true
+          }
+        ],
+        "dropped": 12
+      },
+      "error": null,
+      "ok": true
+    },
+    {
+      "input": {
+        "entries": [
+          [
+            1,
+            14,
+            false
+          ],
+          [
+            1,
+            24,
+            false
+          ],
+          [
+            4,
+            91,
+            true
+          ],
+          [
+            -2,
+            99,
+            true
+          ],
+          [
+            0,
+            -92,
+            false
+          ],
+          [
+            5,
+            86,
+            true
+          ],
+          [
+            4,
+            -39,
+            false
+          ],
+          [
+            3,
+            79,
+            true
+          ],
+          [
+            -3,
+            90,
+            true
+          ],
+          [
+            -2,
+            -67,
+            false
+          ]
+        ]
+      },
+      "expected": {
+        "kept": [
+          {
+            "key": 5,
+            "value": 86,
+            "active": true
+          },
+          {
+            "key": 3,
+            "value": 79,
+            "active": true
+          },
+          {
+            "key": -3,
+            "value": 90,
+            "active": true
+          }
+        ],
+        "dropped": 7
+      },
+      "actual": {
+        "kept": [
+          {
+            "key": 5,
+            "value": 86,
+            "active": true
+          },
+          {
+            "key": 3,
+            "value": 79,
+            "active": true
+          },
+          {
+            "key": -3,
+            "value": 90,
+            "active": true
+          }
+        ],
+        "dropped": 7
+      },
+      "error": null,
+      "ok": true
+    },
+    {
+      "input": {
+        "entries": [
+          [
+            1,
+            51,
+            false
+          ],
+          [
+            -3,
+            36,
+            false
+          ],
+          [
+            0,
+            95,
+            false
+          ],
+          [
+            5,
+            -49,
+            false
+          ],
+          [
+            -2,
+            -83,
+            false
+          ],
+          [
+            -3,
+            39,
+            true
+          ],
+          [
+            5,
+            -25,
+            true
+          ],
+          [
+            5,
+            -62,
+            true
+          ],
+          [
+            -1,
+            50,
+            true
+          ],
+          [
+            1,
+            62,
+            false
+          ],
+          [
+            -3,
+            -15,
+            true
+          ],
+          [
+            4,
+            41,
+            false
+          ],
+          [
+            1,
+            46,
+            true
+          ],
+          [
+            5,
+            -77,
+            false
+          ],
+          [
+            4,
+            92,
+            true
+          ]
+        ]
+      },
+      "expected": {
+        "kept": [
+          {
+            "key": -1,
+            "value": 50,
+            "active": true
+          },
+          {
+            "key": -3,
+            "value": -15,
+            "active": true
+          },
+          {
+            "key": 1,
+            "value": 46,
+            "active": true
+          },
+          {
+            "key": 4,
+            "value": 92,
+            "active": true
+          }
+        ],
+        "dropped": 11
+      },
+      "actual": {
+        "kept": [
+          {
+            "key": -1,
+            "value": 50,
+            "active": true
+          },
+          {
+            "key": -3,
+            "value": -15,
+            "active": true
+          },
+          {
+            "key": 1,
+            "value": 46,
+            "active": true
+          },
+          {
+            "key": 4,
+            "value": 92,
+            "active": true
+          }
+        ],
+        "dropped": 11
+      },
+      "error": null,
+      "ok": true
+    },
+    {
+      "input": {
+        "entries": []
+      },
+      "expected": {
+        "kept": [],
+        "dropped": 0
+      },
+      "actual": {
+        "kept": [],
+        "dropped": 0
+      },
+      "error": null,
+      "ok": true
+    },
+    {
+      "input": {
+        "entries": []
+      },
+      "expected": {
+        "kept": [],
+        "dropped": 0
+      },
+      "actual": {
+        "kept": [],
+        "dropped": 0
+      },
+      "error": null,
+      "ok": true
+    },
+    {
+      "input": {
+        "entries": [
+          [
+            0,
+            -16,
+            true
+          ],
+          [
+            3,
+            13,
+            false
+          ],
+          [
+            1,
+            88,
+            true
+          ],
+          [
+            1,
+            25,
+            false
+          ],
+          [
+            -2,
+            15,
+            false
+          ],
+          [
+            2,
+            -42,
+            true
+          ],
+          [
+            5,
+            31,
+            true
+          ],
+          [
+            4,
+            -3,
+            false
+          ],
+          [
+            1,
+            82,
+            false
+          ]
+        ]
+      },
+      "expected": {
+        "kept": [
+          {
+            "key": 0,
+            "value": -16,
+            "active": true
+          },
+          {
+            "key": 2,
+            "value": -42,
+            "active": true
+          },
+          {
+            "key": 5,
+            "value": 31,
+            "active": true
+          }
+        ],
+        "dropped": 6
+      },
+      "actual": {
+        "kept": [
+          {
+            "key": 0,
+            "value": -16,
+            "active": true
+          },
+          {
+            "key": 2,
+            "value": -42,
+            "active": true
+          },
+          {
+            "key": 5,
+            "value": 31,
+            "active": true
+          }
+        ],
+        "dropped": 6
+      },
+      "error": null,
+      "ok": true
+    },
+    {
+      "input": {
+        "entries": [
+          [
+            2,
+            -67,
+            true
+          ],
+          [
+            3,
+            56,
+            true
+          ],
+          [
+            2,
+            8,
+            true
+          ],
+          [
+            3,
+            -28,
+            true
+          ],
+          [
+            -1,
+            -99,
+            false
+          ],
+          [
+            -3,
+            -19,
+            false
+          ],
+          [
+            -1,
+            93,
+            false
+          ],
+          [
+            2,
+            84,
+            true
+          ],
+          [
+            4,
+            64,
+            false
+          ],
+          [
+            -3,
+            -10,
+            true
+          ],
+          [
+            2,
+            -31,
+            false
+          ],
+          [
+            4,
+            -39,
+            false
+          ],
+          [
+            -3,
+            18,
+            false
+          ],
+          [
+            2,
+            69,
+            false
+          ]
+        ]
+      },
+      "expected": {
+        "kept": [
+          {
+            "key": 3,
+            "value": -28,
+            "active": true
+          }
+        ],
+        "dropped": 13
+      },
+      "actual": {
+        "kept": [
+          {
+            "key": 3,
+            "value": -28,
+            "active": true
+          }
+        ],
+        "dropped": 13
+      },
+      "error": null,
+      "ok": true
+    },
+    {
+      "input": {
+        "entries": [
+          [
+            -1,
+            -54,
+            false
+          ],
+          [
+            2,
+            18,
+            true
+          ],
+          [
+            5,
+            -91,
+            true
+          ],
+          [
+            0,
+            54,
+            false
+          ],
+          [
+            5,
+            56,
+            false
+          ],
+          [
+            -1,
+            84,
+            true
+          ]
+        ]
+      },
+      "expected": {
+        "kept": [
+          {
+            "key": 2,
+            "value": 18,
+            "active": true
+          },
+          {
+            "key": -1,
+            "value": 84,
+            "active": true
+          }
+        ],
+        "dropped": 4
+      },
+      "actual": {
+        "kept": [
+          {
+            "key": 2,
+            "value": 18,
+            "active": true
+          },
+          {
+            "key": -1,
+            "value": 84,
+            "active": true
+          }
+        ],
+        "dropped": 4
+      },
+      "error": null,
+      "ok": true
+    },
+    {
+      "input": {
+        "entries": [
+          [
+            5,
+            60,
+            false
+          ],
+          [
+            1,
+            31,
+            false
+          ],
+          [
+            0,
+            -54,
+            false
+          ],
+          [
+            -2,
+            -60,
+            false
+          ],
+          [
+            3,
+            94,
+            false
+          ],
+          [
+            0,
+            47,
+            true
+          ],
+          [
+            1,
+            21,
+            false
+          ],
+          [
+            -3,
+            -77,
+            true
+          ],
+          [
+            0,
+            4,
+            true
+          ],
+          [
+            5,
+            -73,
+            false
+          ]
+        ]
+      },
+      "expected": {
+        "kept": [
+          {
+            "key": -3,
+            "value": -77,
+            "active": true
+          },
+          {
+            "key": 0,
+            "value": 4,
+            "active": true
+          }
+        ],
+        "dropped": 8
+      },
+      "actual": {
+        "kept": [
+          {
+            "key": -3,
+            "value": -77,
+            "active": true
+          },
+          {
+            "key": 0,
+            "value": 4,
+            "active": true
+          }
+        ],
+        "dropped": 8
+      },
+      "error": null,
+      "ok": true
+    },
+    {
+      "input": {
+        "entries": [
+          [
+            0,
+            -19,
+            true
+          ],
+          [
+            2,
+            -78,
+            false
+          ],
+          [
+            -3,
+            15,
+            true
+          ],
+          [
+            1,
+            -54,
+            false
+          ],
+          [
+            -2,
+            2,
+            false
+          ],
+          [
+            3,
+            -41,
+            false
+          ],
+          [
+            -3,
+            76,
+            false
+          ],
+          [
+            0,
+            -57,
+            true
+          ],
+          [
+            3,
+            12,
+            false
+          ],
+          [
+            3,
+            -60,
+            true
+          ],
+          [
+            0,
+            44,
+            true
+          ],
+          [
+            5,
+            70,
+            false
+          ],
+          [
+            0,
+            31,
+            true
+          ],
+          [
+            4,
+            -52,
+            false
+          ],
+          [
+            4,
+            -84,
+            true
+          ]
+        ]
+      },
+      "expected": {
+        "kept": [
+          {
+            "key": 3,
+            "value": -60,
+            "active": true
+          },
+          {
+            "key": 0,
+            "value": 31,
+            "active": true
+          },
+          {
+            "key": 4,
+            "value": -84,
+            "active": true
+          }
+        ],
+        "dropped": 12
+      },
+      "actual": {
+        "kept": [
+          {
+            "key": 3,
+            "value": -60,
+            "active": true
+          },
+          {
+            "key": 0,
+            "value": 31,
+            "active": true
+          },
+          {
+            "key": 4,
+            "value": -84,
+            "active": true
+          }
+        ],
+        "dropped": 12
+      },
+      "error": null,
+      "ok": true
+    },
+    {
+      "input": {
+        "entries": []
+      },
+      "expected": {
+        "kept": [],
+        "dropped": 0
+      },
+      "actual": {
+        "kept": [],
+        "dropped": 0
+      },
+      "error": null,
+      "ok": true
+    },
+    {
+      "input": {
+        "entries": [
+          [
+            2,
+            -1,
+            true
+          ]
+        ]
+      },
+      "expected": {
+        "kept": [
+          {
+            "key": 2,
+            "value": -1,
+            "active": true
+          }
+        ],
+        "dropped": 0
+      },
+      "actual": {
+        "kept": [
+          {
+            "key": 2,
+            "value": -1,
+            "active": true
+          }
+        ],
+        "dropped": 0
+      },
+      "error": null,
+      "ok": true
+    },
+    {
+      "input": {
+        "entries": [
+          [
+            2,
+            60,
+            true
+          ],
+          [
+            0,
+            12,
+            false
+          ],
+          [
+            -1,
+            50,
+            false
+          ],
+          [
+            5,
+            -21,
+            false
+          ],
+          [
+            -2,
+            -32,
+            true
+          ],
+          [
+            1,
+            -41,
+            true
+          ]
+        ]
+      },
+      "expected": {
+        "kept": [
+          {
+            "key": 2,
+            "value": 60,
+            "active": true
+          },
+          {
+            "key": -2,
+            "value": -32,
+            "active": true
+          },
+          {
+            "key": 1,
+            "value": -41,
+            "active": true
+          }
+        ],
+        "dropped": 3
+      },
+      "actual": {
+        "kept": [
+          {
+            "key": 2,
+            "value": 60,
+            "active": true
+          },
+          {
+            "key": -2,
+            "value": -32,
+            "active": true
+          },
+          {
+            "key": 1,
+            "value": -41,
+            "active": true
+          }
+        ],
+        "dropped": 3
+      },
+      "error": null,
+      "ok": true
+    },
+    {
+      "input": {
+        "entries": [
+          [
+            0,
+            45,
+            false
+          ],
+          [
+            1,
+            56,
+            false
+          ],
+          [
+            -2,
+            27,
+            false
+          ]
+        ]
+      },
+      "expected": {
+        "kept": [],
+        "dropped": 3
+      },
+      "actual": {
+        "kept": [],
+        "dropped": 3
+      },
+      "error": null,
+      "ok": true
+    },
+    {
+      "input": {
+        "entries": [
+          [
+            4,
+            -60,
+            false
+          ],
+          [
+            3,
+            -86,
+            true
+          ],
+          [
+            -2,
+            72,
+            true
+          ],
+          [
+            1,
+            -70,
+            true
+          ],
+          [
+            -1,
+            71,
+            false
+          ],
+          [
+            0,
+            82,
+            false
+          ],
+          [
+            0,
+            -23,
+            true
+          ],
+          [
+            -2,
+            -45,
+            true
+          ],
+          [
+            0,
+            3,
+            false
+          ],
+          [
+            1,
+            -54,
+            false
+          ],
+          [
+            -3,
+            40,
+            true
+          ],
+          [
+            -1,
+            -80,
+            true
+          ],
+          [
+            -1,
+            -23,
+            true
+          ],
+          [
+            -1,
+            22,
+            false
+          ]
+        ]
+      },
+      "expected": {
+        "kept": [
+          {
+            "key": 3,
+            "value": -86,
+            "active": true
+          },
+          {
+            "key": -2,
+            "value": -45,
+            "active": true
+          },
+          {
+            "key": -3,
+            "value": 40,
+            "active": true
+          }
+        ],
+        "dropped": 11
+      },
+      "actual": {
+        "kept": [
+          {
+            "key": 3,
+            "value": -86,
+            "active": true
+          },
+          {
+            "key": -2,
+            "value": -45,
+            "active": true
+          },
+          {
+            "key": -3,
+            "value": 40,
+            "active": true
+          }
+        ],
+        "dropped": 11
+      },
+      "error": null,
+      "ok": true
+    }
+  ],
+  "accepted": true,
+  "passed": 70,
+  "total": 70
+}

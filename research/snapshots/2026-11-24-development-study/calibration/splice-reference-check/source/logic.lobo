@@ -1,0 +1,12 @@
+module logic;
+use model {Change,Edit};
+use util {reverse};
+fn run(text:Text,start:I64,count:I64,replacement:Text)->Edit<Change> {
+ let size=Text::length(text);
+ if start<0 || start>size {Err(1)} else {
+  if count<0 || count>size-start {Err(2)} else {
+   let output=Text::concat(Text::concat(Text::slice(text,0,start),replacement),Text::slice(text,start+count,size-start-count));
+   Ok(Change {text:output,removed:Text::slice(text,start,count),scalar_delta:Text::length(replacement)-count,byte_delta:Bytes::length(Text::bytes(output))-Bytes::length(Text::bytes(text))})
+  }
+ }
+}

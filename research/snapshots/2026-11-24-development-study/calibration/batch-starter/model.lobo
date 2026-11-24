@@ -1,0 +1,4 @@
+module model;
+record Sample {raw:I64,scale:I64}
+record Summary {values:List<I64>,total:I64,maximum:I64}
+variant Outcome<T> {Ok(T),Err(I64)}

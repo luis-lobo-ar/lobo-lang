@@ -1,0 +1,15 @@
+module logic;
+use model {Entry,Summary};
+use util {reverse};
+record Cursor {pending:List<Entry>,kept:List<Entry>}
+record Seen {pending:List<Entry>,found:Bool}
+fn run(entries:List<Entry>)->Summary {
+ let final=fold(i in List::length(entries),cursor:Cursor=Cursor {pending:entries,kept:List::empty<Entry>()}) {
+  let item=List::head(cursor.pending);
+  let later=List::tail(cursor.pending);
+  let scanned=fold(j in List::length(later),search:Seen=Seen {pending:later,found:false}) {
+   Seen {pending:List::tail(search.pending),found:search.found || List::head(search.pending).key==item.key}
+  };
+  Cursor {pending:later,kept:if item.active {List::prepend(item,cursor.kept)} else {cursor.kept}}
+ };Summary {kept:reverse(final.kept),dropped:List::length(entries)-List::length(final.kept)}
+}

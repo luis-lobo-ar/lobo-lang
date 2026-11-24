@@ -1,0 +1,10 @@
+module logic;
+use model {Entry,Summary};
+use util {reverse};
+record Cursor {pending:List<Entry>,kept:List<Entry>}
+fn run(entries:List<Entry>)->Summary {
+ let final=fold(i in List::length(entries),cursor:Cursor=Cursor {pending:entries,kept:List::empty<Entry>()}) {
+  let item=List::head(cursor.pending);
+  Cursor {pending:List::tail(cursor.pending),kept:if item.active {List::prepend(item,cursor.kept)} else {cursor.kept}}
+ };Summary {kept:reverse(final.kept),dropped:List::length(entries)-List::length(final.kept)}
+}

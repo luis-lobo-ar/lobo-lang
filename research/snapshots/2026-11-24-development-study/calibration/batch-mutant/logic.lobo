@@ -1,0 +1,14 @@
+module logic;
+use model {Sample,Summary,Outcome};
+use util {reverse};
+record Cursor {pending:List<Sample>,output:List<I64>,total:I64,maximum:I64}
+fn convert(sample:Sample)->Outcome<I64> {
+ if sample.raw<0 {Err(11)} else {if sample.scale<=0 {Err(12)} else {Ok(sample.raw*sample.scale)}}
+}
+fn run(samples:List<Sample>)->Outcome<Summary> {
+ let final=fold(i in List::length(samples),cursor:Cursor=Cursor {pending:samples,output:List::empty<I64>(),total:0,maximum:0}) {
+  let amount=try convert(List::head(cursor.pending));
+  Cursor {pending:List::tail(cursor.pending),output:List::prepend(amount,cursor.output),total:cursor.total+amount,maximum:if amount>cursor.maximum {amount} else {cursor.maximum}}
+ };
+ Ok(Summary {values:final.output,total:final.total,maximum:final.maximum})
+}

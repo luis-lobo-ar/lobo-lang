@@ -1,0 +1,130 @@
+[
+  {
+    "input": {
+      "entries": []
+    },
+    "expected": {
+      "kept": [],
+      "dropped": 0
+    }
+  },
+  {
+    "input": {
+      "entries": [
+        [
+          1,
+          3,
+          true
+        ],
+        [
+          1,
+          4,
+          true
+        ]
+      ]
+    },
+    "expected": {
+      "kept": [
+        {
+          "key": 1,
+          "value": 4,
+          "active": true
+        }
+      ],
+      "dropped": 1
+    }
+  },
+  {
+    "input": {
+      "entries": [
+        [
+          1,
+          3,
+          true
+        ],
+        [
+          2,
+          8,
+          true
+        ],
+        [
+          1,
+          0,
+          false
+        ]
+      ]
+    },
+    "expected": {
+      "kept": [
+        {
+          "key": 2,
+          "value": 8,
+          "active": true
+        }
+      ],
+      "dropped": 2
+    }
+  },
+  {
+    "input": {
+      "entries": [
+        [
+          3,
+          6,
+          false
+        ],
+        [
+          3,
+          7,
+          true
+        ]
+      ]
+    },
+    "expected": {
+      "kept": [
+        {
+          "key": 3,
+          "value": 7,
+          "active": true
+        }
+      ],
+      "dropped": 1
+    }
+  },
+  {
+    "input": {
+      "entries": [
+        [
+          2,
+          7,
+          true
+        ],
+        [
+          1,
+          8,
+          true
+        ],
+        [
+          2,
+          9,
+          true
+        ]
+      ]
+    },
+    "expected": {
+      "kept": [
+        {
+          "key": 1,
+          "value": 8,
+          "active": true
+        },
+        {
+          "key": 2,
+          "value": 9,
+          "active": true
+        }
+      ],
+      "dropped": 1
+    }
+  }
+]

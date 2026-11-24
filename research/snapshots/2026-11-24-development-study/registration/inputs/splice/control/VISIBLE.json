@@ -1,0 +1,77 @@
+[
+  {
+    "input": {
+      "text": "K\u00e9\ud83d\udc3aZ",
+      "start": 1,
+      "count": 2,
+      "replacement": "\u03bb"
+    },
+    "expected": {
+      "case": "Ok",
+      "payload": {
+        "text": "K\u03bbZ",
+        "removed": "\u00e9\ud83d\udc3a",
+        "scalar_delta": -1,
+        "byte_delta": -4
+      }
+    }
+  },
+  {
+    "input": {
+      "text": "",
+      "start": 0,
+      "count": 0,
+      "replacement": "x"
+    },
+    "expected": {
+      "case": "Ok",
+      "payload": {
+        "text": "x",
+        "removed": "",
+        "scalar_delta": 1,
+        "byte_delta": 1
+      }
+    }
+  },
+  {
+    "input": {
+      "text": "hi",
+      "start": -1,
+      "count": -1,
+      "replacement": ""
+    },
+    "expected": {
+      "case": "Err",
+      "payload": 1
+    }
+  },
+  {
+    "input": {
+      "text": "hi",
+      "start": 1,
+      "count": 2,
+      "replacement": ""
+    },
+    "expected": {
+      "case": "Err",
+      "payload": 2
+    }
+  },
+  {
+    "input": {
+      "text": "ab",
+      "start": 2,
+      "count": 0,
+      "replacement": "!"
+    },
+    "expected": {
+      "case": "Ok",
+      "payload": {
+        "text": "ab!",
+        "removed": "",
+        "scalar_delta": 1,
+        "byte_delta": 1
+      }
+    }
+  }
+]
