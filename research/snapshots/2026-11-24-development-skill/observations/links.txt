@@ -1,0 +1,1 @@
+check: JSON, JSONL, and local Markdown links are valid

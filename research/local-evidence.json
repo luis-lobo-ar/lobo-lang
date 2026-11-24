@@ -1484,6 +1484,40 @@
         "Billing savings, parent development usage, provider request counts or immutable model weights",
         "Permission for additional model trials, tested-material edits or product unfreeze"
       ]
+    },
+    {
+      "id": "local-044",
+      "date": "2026-11-24",
+      "title": "Focused development skill packaging and deterministic verification",
+      "evidence_kind": "Skill implementation and local structure/reference/native-tool checks; no agent experiment",
+      "status": "Implemented, locally installed and checked",
+      "files": [
+        {
+          "path": "benchmarks/results/2026-11-24-development-skill.json",
+          "sha256": "d21461e6309130e1ec23aec2a26533ac5a3c8ad44043348434570710c397dff3"
+        },
+        {
+          "path": "decisions/0069-focused-lobo-development-skill.md",
+          "sha256": "286174c9e2add723463a82e096224cda6431bf98846f1ff442bc8e96a2c1fd53"
+        },
+        {
+          "path": "research/snapshots/2026-11-24-development-skill/evidence-manifest.json",
+          "sha256": "a3cda3ee9f8c7487e02e85656596cfd24eed1303e0a7118ea64106f4fad51544"
+        }
+      ],
+      "supports": [
+        "New lobo-development skill routes to relevant checked rules and explicit native TDD workflow without changing the frozen programming skill/cards/product",
+        "Repository and installed symlink validate; all13 references resolve; UI metadata carries the matching invocation",
+        "A two-source native smoke check detects intentional208 versus expected207, then passes five known-answer cases with stable IDs",
+        "40 harness tests and15 final research tests pass; initial README provenance failure is retained and corrected by moving usage docs to a new file",
+        "All43 prior evidence entries and150 file pins remain unchanged"
+      ],
+      "does_not_establish": [
+        "Agent compliance, implicit skill discovery, construction quality or productivity gains",
+        "Comprehension or token benefits of this new skill; earlier card results remain a separate experiment",
+        "Standalone packaging, installation on another host, or availability without the accompanying checkout",
+        "New compiler/editor regression runs, product evolution or authorization for more model trials"
+      ]
     }
   ],
   "backend_recommendation": {

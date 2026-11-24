@@ -1,0 +1,8 @@
+{
+  "installed": "/home/luis/.codex/skills/lobo-development",
+  "target": "/home/luis/dev/lobo-ar/lobo-lang/.agents/skills/lobo-development",
+  "method": "symlink",
+  "physical_skill_resolves": true,
+  "existing_skill_overwritten": false,
+  "limits": "Filesystem installation checked. No separate UI-discovery or model-invocation experiment."
+}

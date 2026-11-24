@@ -1,5 +1,15 @@
 # Lobo change ledger
 
+## 2026-11-24 — Focused Lobo development skill
+
+Added [lobo-development](.agents/skills/lobo-development/SKILL.md) with task-relevant reference routing,
+explicit development mode, TDD, stable identities, action/cleanup constraints and native verification.
+Installed a local symlink for invocation as `$lobo-development`. The broader programming skill and frozen
+research packets stay unchanged. Structure, all 13 reference links, an intentional native behavioral
+failure and five corrected native cases are checked. Agent development gains remain unmeasured; no model
+trial or compiler/editor change accompanies this skill. See [the receipt](benchmarks/results/2026-11-24-development-skill.json)
+and [decision 0069](decisions/0069-focused-lobo-development-skill.md).
+
 ## 2026-11-24 — Small checked-reference pilot
 
 Completed24 preregistered source-only attempts at frozen1.11.2. Existing/clean/targeted guides give

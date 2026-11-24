@@ -1,0 +1,7 @@
+{
+  "format": "lobo-identities/0.1",
+  "identities": {
+    "fee": "lobo.c426d7e85e406460006a41d03c48d6ce",
+    "module": "lobo.762d98a9e5e15a6ad43d1a6e8a6542a6"
+  }
+}

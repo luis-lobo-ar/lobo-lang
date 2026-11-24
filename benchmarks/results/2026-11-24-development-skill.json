@@ -1,0 +1,94 @@
+{
+  "format": "lobo-development-skill-verification/1",
+  "date": "2026-11-24",
+  "status": "implemented and locally checked",
+  "compiler_version": "1.11.2",
+  "core": "1.11",
+  "compiler_sha256": "8d9f84530b8d34a6a72597d25befc249a604430a6569656b4184721e1e444d9d",
+  "skill": {
+    "path": ".agents/skills/lobo-development",
+    "bytes": 4799,
+    "sha256": "804a12e43f79bef059243f88e474266890c785d02df034645cbab88da50a52b5",
+    "ui_metadata_sha256": "42d8438407a32ea294d1f3a783b3d5a72db270f56a97ef7f4e797b85701aca44",
+    "automatic_invocation_policy": "default enabled",
+    "references": 13
+  },
+  "installation": {
+    "installed": "/home/luis/.codex/skills/lobo-development",
+    "target": "/home/luis/dev/lobo-ar/lobo-lang/.agents/skills/lobo-development",
+    "method": "symlink",
+    "physical_skill_resolves": true,
+    "existing_skill_overwritten": false,
+    "limits": "Filesystem installation checked. No separate UI-discovery or model-invocation experiment."
+  },
+  "checks": {
+    "skill_structure": "passed for repository and installed symlink",
+    "all_references_exist": true,
+    "native_workflow": {
+      "skill_references": 13,
+      "all_references_exist": true,
+      "intentional_behavioral_failure_detected": true,
+      "native_green_cases": 5,
+      "stable_metadata_unchanged": true,
+      "explicit_dependency_compiled": true,
+      "compiler_sha256": "8d9f84530b8d34a6a72597d25befc249a604430a6569656b4184721e1e444d9d",
+      "agent_trials": 0,
+      "limits": "Deterministic instruction/tool smoke check; no measured agent compliance, productivity or token benefit."
+    },
+    "harness_tests": 40,
+    "research_tests": 15,
+    "initial_research_failure": {
+      "error": "Frozen reference source README.md hash changed",
+      "correction": "Moved added usage section to docs/lobo-development-skill.md and restored original README bytes",
+      "retained": "observations/research-tests.txt"
+    },
+    "readme_and_old_programming_skill_unchanged": true,
+    "all_18_registered_material_pins_match": true,
+    "compiler_regression": {
+      "status": "reused prior receipt; full suite not rerun",
+      "path": "benchmarks/results/2026-11-24-learning-verification.json",
+      "sha256": "1634de4dc7092742c16ebdc06a11a6d59e3542461482802197f41ea0893100b4",
+      "passed": 312,
+      "failed": 0
+    },
+    "repository_checks": {
+      "status": "passed",
+      "command": "./scripts/check.sh",
+      "log": "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/development-skill-20261124/links.txt",
+      "sha256": "1f11bb3bb382f1877ffa8eec4eb376db85d0ecfa2e1301289bb91fbd2cc966ae",
+      "git_diff_check": "passed"
+    }
+  },
+  "agent_trials": 0,
+  "agent_development_benefit_measured": false,
+  "raw_evidence": "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/development-skill-20261124",
+  "native_binaries": [
+    {
+      "path": "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/development-skill-20261124/native/red",
+      "sha256": "7e7874d1af1238a3f3ac746d2a2b61d2ce2d086d09984dfd36b5e6f5351957b7",
+      "bytes": 18776
+    },
+    {
+      "path": "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/development-skill-20261124/native/green",
+      "sha256": "b97a1eccc4babf75713635fa2eaa3540328a5f1f3e3675fb6a5abec073868736",
+      "bytes": 18776
+    }
+  ],
+  "snapshot_manifest": {
+    "path": "research/snapshots/2026-11-24-development-skill/evidence-manifest.json",
+    "sha256": "a3cda3ee9f8c7487e02e85656596cfd24eed1303e0a7118ea64106f4fad51544",
+    "files": 23
+  },
+  "prior_paper": {
+    "entries": 43,
+    "pins": 150,
+    "all_unchanged": true
+  },
+  "limitations": [
+    "No new language/compiler/library/extension changes or updates to frozen studies/cards",
+    "Structure, references and native tool behavior checked; no independent model compliance or implicit-discovery experiment",
+    "No measured agent construction/comprehension/token gain from this new skill",
+    "Local installation depends on accompanying checkout; no standalone packaging or remote installation claim",
+    "Native binaries retained locally; private directory is not an off-device backup"
+  ]
+}

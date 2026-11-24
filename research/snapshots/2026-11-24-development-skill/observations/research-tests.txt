@@ -1,0 +1,17 @@
+......E........
+======================================================================
+ERROR: test_graph_provenance_and_unique_nodes (test_language_reference.ReferenceTests.test_graph_provenance_and_unique_nodes)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/luis/dev/lobo-ar/lobo-lang/research/test_language_reference.py", line 16, in test_graph_provenance_and_unique_nodes
+    data=r.load();r.validate(data)
+                  ^^^^^^^^^^^^^^^^
+  File "/home/luis/dev/lobo-ar/lobo-lang/research/language_reference.py", line 24, in validate
+    if hashlib.sha256(path.read_bytes()).hexdigest()!=ref['sha256']:raise ValueError('source changed: '+ref['path'])
+                                                                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: source changed: README.md
+
+----------------------------------------------------------------------
+Ran 15 tests in 0.548s
+
+FAILED (errors=1)

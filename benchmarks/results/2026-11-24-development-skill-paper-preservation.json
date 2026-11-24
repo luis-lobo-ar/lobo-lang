@@ -1,0 +1,13 @@
+{
+  "format": "lobo-paper-preservation/1",
+  "date": "2026-11-24",
+  "entry": "local-044",
+  "prior_entries": 43,
+  "prior_pins": 150,
+  "all_prior_entry_objects_unchanged": true,
+  "all_prior_pins_unchanged": true,
+  "entries": 44,
+  "pins": 153,
+  "all_file_hashes_verified": true,
+  "index_sha256": "4439aed89dba55407010e47dbf2cbd53dab3ef568d79580a0f0978d7ec1d87db"
+}

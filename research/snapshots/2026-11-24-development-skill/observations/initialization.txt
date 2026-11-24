@@ -1,0 +1,16 @@
+Initializing skill: lobo-development
+   Location: .agents/skills
+   Resources: none (create as needed)
+
+[OK] Created skill directory: /home/luis/dev/lobo-ar/lobo-lang/.agents/skills/lobo-development
+[OK] Created SKILL.md
+[OK] Created agents/openai.yaml
+
+[OK] Skill 'lobo-development' initialized successfully at /home/luis/dev/lobo-ar/lobo-lang/.agents/skills/lobo-development
+
+Next steps:
+1. Edit SKILL.md to complete the TODO items and update the description
+2. Create resource directories only if needed (scripts/, references/, assets/)
+3. Update agents/openai.yaml if the UI metadata should differ
+4. Run the validator when ready to check the skill structure
+5. Consider independent forward-testing only when complexity or risk warrants it

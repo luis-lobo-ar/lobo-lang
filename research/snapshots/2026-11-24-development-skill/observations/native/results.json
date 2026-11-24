@@ -1,0 +1,156 @@
+{
+  "compiler": "/home/luis/dev/lobo-ar/lobo-lang/target/release/lobo",
+  "compiler_sha256": "8d9f84530b8d34a6a72597d25befc249a604430a6569656b4184721e1e444d9d",
+  "skill": "/home/luis/dev/lobo-ar/lobo-lang/.agents/skills/lobo-development/SKILL.md",
+  "skill_sha256": "804a12e43f79bef059243f88e474266890c785d02df034645cbab88da50a52b5",
+  "commands": [
+    {
+      "command": [
+        "/home/luis/dev/lobo-ar/lobo-lang/target/release/lobo",
+        "identities",
+        "init",
+        "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/development-skill-20261124/native/helpers.lobo"
+      ],
+      "exit_code": 0,
+      "stdout": "{\"manifests\":[\"/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/development-skill-20261124/native/helpers.lobo.ids.json\"],\"operation\":\"init\",\"status\":\"ok\"}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/home/luis/dev/lobo-ar/lobo-lang/target/release/lobo",
+        "identities",
+        "init",
+        "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/development-skill-20261124/native/program.lobo",
+        "--source",
+        "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/development-skill-20261124/native/helpers.lobo"
+      ],
+      "exit_code": 0,
+      "stdout": "{\"manifests\":[\"/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/development-skill-20261124/native/program.lobo.ids.json\",\"/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/development-skill-20261124/native/helpers.lobo.ids.json\"],\"operation\":\"init\",\"status\":\"ok\"}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/home/luis/dev/lobo-ar/lobo-lang/target/release/lobo",
+        "check",
+        "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/development-skill-20261124/native/program.lobo",
+        "--source",
+        "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/development-skill-20261124/native/helpers.lobo"
+      ],
+      "exit_code": 0,
+      "stdout": "{\"actions\":{\"lobo.07d12a916cdd91edab351bde74295bc3\":[],\"lobo.72932620691dfa3794307cfa94b59047\":[],\"lobo.a86793d262fdc4c23243ad6f60657fd3\":[],\"lobo.c426d7e85e406460006a41d03c48d6ce\":[]},\"entries\":[\"lobo.c426d7e85e406460006a41d03c48d6ce\",\"lobo.a86793d262fdc4c23243ad6f60657fd3\",\"lobo.72932620691dfa3794307cfa94b59047\",\"lobo.07d12a916cdd91edab351bde74295bc3\"],\"language\":\"core/1.11\",\"status\":\"ok\"}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/home/luis/dev/lobo-ar/lobo-lang/target/release/lobo",
+        "compile",
+        "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/development-skill-20261124/native/program.lobo",
+        "--source",
+        "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/development-skill-20261124/native/helpers.lobo",
+        "-o",
+        "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/development-skill-20261124/native/red"
+      ],
+      "exit_code": 0,
+      "stdout": "{\"artifact\":\"/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/development-skill-20261124/native/red\",\"entries\":[\"lobo.c426d7e85e406460006a41d03c48d6ce\",\"lobo.a86793d262fdc4c23243ad6f60657fd3\",\"lobo.72932620691dfa3794307cfa94b59047\",\"lobo.07d12a916cdd91edab351bde74295bc3\"],\"format\":\"native\",\"status\":\"ok\"}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/development-skill-20261124/native/red",
+        "--entry",
+        "lobo.07d12a916cdd91edab351bde74295bc3",
+        "--arg",
+        "I64:0"
+      ],
+      "exit_code": 0,
+      "stdout": "{\"status\":\"ok\",\"kind\":\"value\",\"value\":{\"type\":\"I64\",\"value\":\"208\"}}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/home/luis/dev/lobo-ar/lobo-lang/target/release/lobo",
+        "check",
+        "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/development-skill-20261124/native/program.lobo",
+        "--source",
+        "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/development-skill-20261124/native/helpers.lobo"
+      ],
+      "exit_code": 0,
+      "stdout": "{\"actions\":{\"lobo.07d12a916cdd91edab351bde74295bc3\":[],\"lobo.72932620691dfa3794307cfa94b59047\":[],\"lobo.a86793d262fdc4c23243ad6f60657fd3\":[],\"lobo.c426d7e85e406460006a41d03c48d6ce\":[]},\"entries\":[\"lobo.c426d7e85e406460006a41d03c48d6ce\",\"lobo.a86793d262fdc4c23243ad6f60657fd3\",\"lobo.72932620691dfa3794307cfa94b59047\",\"lobo.07d12a916cdd91edab351bde74295bc3\"],\"language\":\"core/1.11\",\"status\":\"ok\"}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/home/luis/dev/lobo-ar/lobo-lang/target/release/lobo",
+        "compile",
+        "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/development-skill-20261124/native/program.lobo",
+        "--source",
+        "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/development-skill-20261124/native/helpers.lobo",
+        "-o",
+        "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/development-skill-20261124/native/green"
+      ],
+      "exit_code": 0,
+      "stdout": "{\"artifact\":\"/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/development-skill-20261124/native/green\",\"entries\":[\"lobo.c426d7e85e406460006a41d03c48d6ce\",\"lobo.a86793d262fdc4c23243ad6f60657fd3\",\"lobo.72932620691dfa3794307cfa94b59047\",\"lobo.07d12a916cdd91edab351bde74295bc3\"],\"format\":\"native\",\"status\":\"ok\"}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/development-skill-20261124/native/green",
+        "--entry",
+        "lobo.07d12a916cdd91edab351bde74295bc3",
+        "--arg",
+        "I64:0"
+      ],
+      "exit_code": 0,
+      "stdout": "{\"status\":\"ok\",\"kind\":\"value\",\"value\":{\"type\":\"I64\",\"value\":\"207\"}}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/development-skill-20261124/native/green",
+        "--entry",
+        "lobo.07d12a916cdd91edab351bde74295bc3",
+        "--arg",
+        "I64:5"
+      ],
+      "exit_code": 0,
+      "stdout": "{\"status\":\"ok\",\"kind\":\"value\",\"value\":{\"type\":\"I64\",\"value\":\"212\"}}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/development-skill-20261124/native/green",
+        "--entry",
+        "lobo.07d12a916cdd91edab351bde74295bc3",
+        "--arg",
+        "I64:10"
+      ],
+      "exit_code": 0,
+      "stdout": "{\"status\":\"ok\",\"kind\":\"value\",\"value\":{\"type\":\"I64\",\"value\":\"217\"}}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/development-skill-20261124/native/green",
+        "--entry",
+        "lobo.07d12a916cdd91edab351bde74295bc3",
+        "--arg",
+        "I64:-1"
+      ],
+      "exit_code": 0,
+      "stdout": "{\"status\":\"ok\",\"kind\":\"value\",\"value\":{\"type\":\"I64\",\"value\":\"-9\"}}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/development-skill-20261124/native/green",
+        "--entry",
+        "lobo.07d12a916cdd91edab351bde74295bc3",
+        "--arg",
+        "I64:-100"
+      ],
+      "exit_code": 0,
+      "stdout": "{\"status\":\"ok\",\"kind\":\"value\",\"value\":{\"type\":\"I64\",\"value\":\"-9\"}}\n",
+      "stderr": ""
+    }
+  ]
+}

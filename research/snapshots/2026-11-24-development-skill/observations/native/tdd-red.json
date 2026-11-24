@@ -1,0 +1,8 @@
+{
+  "requirement": "Nonnegative totals receive fee7; quantity stays2. Negative inputs propagate Err9.",
+  "input": 0,
+  "expected": 207,
+  "actual": 208,
+  "behavioral_test_passed": false,
+  "intentional_defect_detected": true
+}

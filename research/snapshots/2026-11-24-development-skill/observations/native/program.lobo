@@ -1,0 +1,14 @@
+module development_probe;
+use helpers {fee};
+record Item {quantity:I64,total:I64}
+variant Outcome<T> {Ok(T),Err(I64)}
+fn base(amount:I64)->Outcome<Item> {
+  if amount<0 {Err(9)} else {Ok(Item {quantity:2,total:amount})}
+}
+fn adjust(amount:I64)->Outcome<Item> {
+  let item=try base(amount);
+  Ok(Item {...item,total:helpers.fee(item.total)})
+}
+fn total(amount:I64)->I64 {
+  match adjust(amount) {Ok(item)=>item.quantity*100+item.total,Err(code)=>-code}
+}

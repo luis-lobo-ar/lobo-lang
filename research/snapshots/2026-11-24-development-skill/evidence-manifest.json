@@ -1,0 +1,121 @@
+{
+  "format": "lobo-skill-snapshot/1",
+  "date": "2026-11-24",
+  "files": [
+    {
+      "path": "research/snapshots/2026-11-24-development-skill/README.md",
+      "sha256": "61e07fe6df5b78de474397b5c16b8022024266ecbba7f7cd3679541ce9645bfd",
+      "bytes": 1080
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-skill/observations/harness-tests.txt",
+      "sha256": "bf6fe81efc3e5349f04225c5e0919afb0ee8cbc1255245a1116f406105c5e9fa",
+      "bytes": 139
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-skill/observations/initialization.txt",
+      "sha256": "c83d9682c31f7d8d95246510feefe46e0216705f1a9dfffc26f5365767b2195f",
+      "bytes": 744
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-skill/observations/installation.json",
+      "sha256": "91f9287e5b6e58fad7d2e5df24622493ea69f186d6382c8e1c83b661a31512b5",
+      "bytes": 345
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-skill/observations/installed-validation.txt",
+      "sha256": "db349825903d66adffea3ecf1bd8e1803043e8a71cf1a051235dabc5371f5bb0",
+      "bytes": 16
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-skill/observations/native/helpers-red.lobo.txt",
+      "sha256": "0779f3abb2ea44fd5cacf793ccd61050ef60a31080a313582b86a7eb63aab1c4",
+      "bytes": 49
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-skill/observations/native/helpers.lobo",
+      "sha256": "4b247ca4ae09d5053324931facd9bcc793900a1f744e88955bd82e2fe4125d40",
+      "bytes": 49
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-skill/observations/native/helpers.lobo.ids.json",
+      "sha256": "6f967eac21a66903b82977aae4db20d78b0b753fed6b1d6d971e4bca6114f944",
+      "bytes": 166
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-skill/observations/native/program.lobo",
+      "sha256": "428e68947ae354db33dcd4128a0d16f20c2e4b485c33465b71b817b1afed0d4a",
+      "bytes": 454
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-skill/observations/native/program.lobo.ids.json",
+      "sha256": "ac29cfcfb72566e8795c0d05650f468b25e4fc9a4e867b86228412d08889384f",
+      "bytes": 445
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-skill/observations/native/references.json",
+      "sha256": "3960496df607fdaf15b92a67a030c8b6686087c21b9ce8ff291cc2de5d14ab58",
+      "bytes": 3177
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-skill/observations/native/results.json",
+      "sha256": "ac6c331dada63759614b5cbfe76172dcefb344c1f0ea61eb31d4f063f92bed52",
+      "bytes": 7581
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-skill/observations/native/summary.json",
+      "sha256": "175c5fbd28f8ce449db85e6dd403dc6d8ea71d5a6b31399af1be25b8af00ff86",
+      "bytes": 446
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-skill/observations/native/tdd-red.json",
+      "sha256": "bc050c53d371996065dc22d05cce1037c4cdba3dc17cb9186ae589a49d905145",
+      "bytes": 229
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-skill/observations/research-tests-green.txt",
+      "sha256": "dc007fa096a9a3af50f14130a2d5bcff4ab1971022260aa673a7eef9da15317f",
+      "bytes": 114
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-skill/observations/research-tests.txt",
+      "sha256": "a508f1360157813838079989d162e84e6aa6ea7ae726ca781bc15e9b6410cccb",
+      "bytes": 1000
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-skill/observations/skill-validation-green.txt",
+      "sha256": "db349825903d66adffea3ecf1bd8e1803043e8a71cf1a051235dabc5371f5bb0",
+      "bytes": 16
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-skill/observations/skill-validation-red.txt",
+      "sha256": "d3fa877c5fac3660cb41f22ce6c1de474fe942087c8011f5e3cdc42630b49d36",
+      "bytes": 19
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-skill/skill/SKILL.md.txt",
+      "sha256": "804a12e43f79bef059243f88e474266890c785d02df034645cbab88da50a52b5",
+      "bytes": 4799
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-skill/skill/agents/openai.yaml",
+      "sha256": "42d8438407a32ea294d1f3a783b3d5a72db270f56a97ef7f4e797b85701aca44",
+      "bytes": 257
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-skill/usage-guide.md.txt",
+      "sha256": "c25066b7cf3b5b4d7cce1a5791b2d08d0391c8a017362d881f4aa1b8e77cf0a2",
+      "bytes": 1493
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-skill/verify.py",
+      "sha256": "510a6aff696b98b62e51ddfd998736675e272a08db9723e3655da3a8c1c4388a",
+      "bytes": 4140
+    },
+    {
+      "path": "research/snapshots/2026-11-24-development-skill/observations/links.txt",
+      "sha256": "1f11bb3bb382f1877ffa8eec4eb376db85d0ecfa2e1301289bb91fbd2cc966ae",
+      "bytes": 55
+    }
+  ]
+}

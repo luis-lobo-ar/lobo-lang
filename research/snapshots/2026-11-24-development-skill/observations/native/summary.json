@@ -1,0 +1,11 @@
+{
+  "skill_references": 13,
+  "all_references_exist": true,
+  "intentional_behavioral_failure_detected": true,
+  "native_green_cases": 5,
+  "stable_metadata_unchanged": true,
+  "explicit_dependency_compiled": true,
+  "compiler_sha256": "8d9f84530b8d34a6a72597d25befc249a604430a6569656b4184721e1e444d9d",
+  "agent_trials": 0,
+  "limits": "Deterministic instruction/tool smoke check; no measured agent compliance, productivity or token benefit."
+}

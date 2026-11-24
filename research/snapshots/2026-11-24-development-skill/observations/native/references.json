@@ -1,0 +1,67 @@
+[
+  {
+    "target": "../../../spec/README.md",
+    "resolved": "/home/luis/dev/lobo-ar/lobo-lang/spec/README.md",
+    "sha256": "e8b911e1997d93f0ede12e14c97851f8e08843ca19e84a1eb5a4319108e82653"
+  },
+  {
+    "target": "../lobo-programming/references/language.md",
+    "resolved": "/home/luis/dev/lobo-ar/lobo-lang/.agents/skills/lobo-programming/references/language.md",
+    "sha256": "f007469320ec5054db07dac9302f8b6ac9a9dc976099ffd566c1ea963ab36562"
+  },
+  {
+    "target": "../../../docs/agent-reference/compact-pilot-2026-11-24/ranges.txt",
+    "resolved": "/home/luis/dev/lobo-ar/lobo-lang/docs/agent-reference/compact-pilot-2026-11-24/ranges.txt",
+    "sha256": "633eac0a1b432389d842277929b485519962a646c07bbe97a69a403b5d217478"
+  },
+  {
+    "target": "../../../docs/agent-reference/compact-pilot-2026-11-24/nominal.txt",
+    "resolved": "/home/luis/dev/lobo-ar/lobo-lang/docs/agent-reference/compact-pilot-2026-11-24/nominal.txt",
+    "sha256": "9810070ea2f016955293106bc0f7bf2f9fbb718619ad5b8372f34fbc380a0510"
+  },
+  {
+    "target": "../../../docs/agent-reference/compact-pilot-2026-11-24/propagation.txt",
+    "resolved": "/home/luis/dev/lobo-ar/lobo-lang/docs/agent-reference/compact-pilot-2026-11-24/propagation.txt",
+    "sha256": "d204f387ce82c1a0c1106ec337db631c06ec084c51f7b583f7eb9b45fb38c43f"
+  },
+  {
+    "target": "../../../docs/agent-reference/compact-pilot-2026-11-24/contracts.txt",
+    "resolved": "/home/luis/dev/lobo-ar/lobo-lang/docs/agent-reference/compact-pilot-2026-11-24/contracts.txt",
+    "sha256": "86a129a75ffba8cb447f0a97b513cc92abb806b932609fc253273909aae868aa"
+  },
+  {
+    "target": "../../../spec/core-v1.11.md",
+    "resolved": "/home/luis/dev/lobo-ar/lobo-lang/spec/core-v1.11.md",
+    "sha256": "d13c38830326c983d336c83ab4a398867bd17858ade3c5f8ecc6d088359182aa"
+  },
+  {
+    "target": "../lobo-programming/references/tools.md",
+    "resolved": "/home/luis/dev/lobo-ar/lobo-lang/.agents/skills/lobo-programming/references/tools.md",
+    "sha256": "1913a1fceffba4c09f72625d9bc1e8d8104e35025ad674988a73405ba8eb8429"
+  },
+  {
+    "target": "../../../libraries/json/README.md",
+    "resolved": "/home/luis/dev/lobo-ar/lobo-lang/libraries/json/README.md",
+    "sha256": "fcc2d6742f11f4a53fbe1f26ce7a390e477e0de88a983e4a348884f6983d4959"
+  },
+  {
+    "target": "../../../libraries/http/README.md",
+    "resolved": "/home/luis/dev/lobo-ar/lobo-lang/libraries/http/README.md",
+    "sha256": "c4dd34349e63538c79fe003c6cff87c3e4d27a624bc2d3146ed4fe08c4626774"
+  },
+  {
+    "target": "../../../libraries/native/README.md",
+    "resolved": "/home/luis/dev/lobo-ar/lobo-lang/libraries/native/README.md",
+    "sha256": "4de8dd7276b56d529c96f909ba6e4903fda299e255394e1e8e4bef094d104eea"
+  },
+  {
+    "target": "../../../libraries/sql/README.md",
+    "resolved": "/home/luis/dev/lobo-ar/lobo-lang/libraries/sql/README.md",
+    "sha256": "85f5ec08131d902d2ed64014ebd687462def277aa5f0876599c1058cfd71fad5"
+  },
+  {
+    "target": "../../../research/compact-pilot-2026-11-24.md",
+    "resolved": "/home/luis/dev/lobo-ar/lobo-lang/research/compact-pilot-2026-11-24.md",
+    "sha256": "761a1fc994e8bdf6865f293fc37728aab95932c49d67a9ea23907a1de352ef25"
+  }
+]

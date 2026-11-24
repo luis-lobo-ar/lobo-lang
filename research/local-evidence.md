@@ -1,5 +1,15 @@
 # Local evidence for the Lobo paper
 
+## Focused development skill
+
+Paper local-044 records [the development skill](../docs/lobo-development-skill.md) and its
+[deterministic verification](../benchmarks/results/2026-11-24-development-skill.json): local installation,
+13 resolved references, an intentional behavioral failure and five corrected native cases with unchanged
+IDs. All43 previous entries and150 pins remain intact. This packaging task runs no model trial and
+establishes no new agent development/comprehension/token benefit. The initial README provenance failure
+and successful correction are retained with the final passing checks.
+
+
 ## Compact checked-reference pilot
 
 Paper local-043 adds [the small three-arm pilot](compact-pilot-2026-11-24.md) and

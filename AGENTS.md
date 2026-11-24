@@ -5,6 +5,11 @@ Use the GitHub account luis-lobo-ar for this repository. Commit author and commi
 active gh account may belong to another project. Keep user-facing examples on the lobo CLI. Cargo commands
 belong in compiler build/test instructions. Preserve frozen research documents and fixtures.
 
+Decision0069 adds the lobo-development skill for application changes. Prefer its task-specific reference
+routing and native TDD workflow; the older programming skill, all tested reading packets and studies stay
+unchanged. This authorizes skill packaging/verification only, not product evolution or more model trials.
+Preserve earlier evidence and distinguish deterministic skill/tool checks from measured agent benefits.
+
 Decision0068 is complete:24 attempts,26 known usage records, old/clean/targeted68/80,67/80,80/80
 items and0/8,0/8,8/8 tasks. The checked topic cards help these selected cases at both reasoning levels;
 guide cleanup alone does not. Combined median paired reported tokens are2.2% lower. Read

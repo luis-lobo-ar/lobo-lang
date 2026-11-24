@@ -1,0 +1,12 @@
+{
+  "format": "lobo-identities/0.1",
+  "identities": {
+    "Item": "lobo.f14228978f3d4c614dabbd25f2d01464",
+    "Outcome": "lobo.5f4e630c253052a00db3a7791ad8d406",
+    "adjust": "lobo.72932620691dfa3794307cfa94b59047",
+    "base": "lobo.a86793d262fdc4c23243ad6f60657fd3",
+    "helpers.fee": "lobo.c426d7e85e406460006a41d03c48d6ce",
+    "module": "lobo.b90604710fece801f9a82d14bba6bb38",
+    "total": "lobo.07d12a916cdd91edab351bde74295bc3"
+  }
+}

@@ -1,5 +1,13 @@
 # Lobo research record
 
+## Focused Lobo development skill
+
+The [new development skill](../docs/lobo-development-skill.md) packages task-relevant rule retrieval,
+TDD and native verification. Local structure/reference/tool checks pass; these are not agent performance
+measurements. See [the receipt](../benchmarks/results/2026-11-24-development-skill.json) and paper local-044.
+The existing programming skill, frozen cards, prior studies and product1.11.2 stay unchanged.
+
+
 ## Small checked-reference pilot
 
 The [24-attempt pilot](compact-pilot-2026-11-24.md) tests reading-only cleanup and relevant checked
