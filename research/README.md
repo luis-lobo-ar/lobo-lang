@@ -1,5 +1,14 @@
 # Lobo research record
 
+## Context treatments and language reading reference
+
+Decision [0066](../decisions/0066-isolate-comprehension-context-treatments.md) selects the four-arm,
+fresh-question prompt/input-documentation pilot. Its
+[registration](snapshots/2026-11-23-context-study/registration/manifest.json) pins all 72 assignments
+before participant calls. Product 1.11.2 and earlier evidence remain frozen.
+The separate [agent reading reference](../docs/agent-reference/1.11.2/README.md) has a source-pinned concept
+graph and bounded topic lookup. It is excluded from these trial prompts; its learning benefit is unmeasured.
+
 ## Comprehension failure attribution and proposed improvements
 
 The [offline failure analysis](comprehension-failure-analysis-2026-11-23.md) examines every Lobo miss,

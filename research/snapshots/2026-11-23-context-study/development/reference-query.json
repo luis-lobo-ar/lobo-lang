@@ -1,0 +1,73 @@
+{
+  "language_version": "core/1.11",
+  "topic": {
+    "id": "try",
+    "title": "Result propagation",
+    "category": "language",
+    "status": "implemented",
+    "semantics": "Prefix try unwraps Ok(T) or returns Err(E) from the enclosing function. Operand and output must each have exactly the payload cases Ok and Err with matching error types.",
+    "pitfalls": [
+      "No implicit resource cleanup",
+      "try(value) remains a function call",
+      "Runtime faults are not caught; postconditions still run"
+    ],
+    "source_refs": [
+      {
+        "path": "spec/core-v1.8.md",
+        "sha256": "422e050a2b5aa621e9b236f003084fa5398995e3144b3781b998092422255eb6",
+        "anchor": "## Type rule"
+      }
+    ]
+  },
+  "related": [
+    {
+      "id": "variants",
+      "title": "Variants",
+      "category": "language",
+      "status": "implemented",
+      "semantics": "A nominal variant chooses one named case, optionally carrying a typed payload. Expected types can identify a case owner.",
+      "pitfalls": [
+        "A case is not a record field",
+        "Bare payload-free cases need an identifying expected type"
+      ],
+      "source_refs": [
+        {
+          "path": "spec/core-v1.5.md",
+          "sha256": "dac4877adab3d738fb05fc57c37436106a22206a3069446a00c47de65c1abdda",
+          "anchor": "## Contextual variant cases"
+        }
+      ]
+    },
+    {
+      "id": "permissions",
+      "title": "Typed permissions",
+      "category": "library",
+      "status": "implemented",
+      "semantics": "Native and SQL libraries expose typed permission collections for capability restriction. Derived capabilities can remove rights. Launch grants bound root authority.",
+      "pitfalls": [
+        "Permissions are authority, actions are behavior",
+        "Typed collections wrap a closed provider catalog; arbitrary FFI is absent"
+      ],
+      "source_refs": [
+        {
+          "path": "libraries/native/README.md",
+          "sha256": "4de8dd7276b56d529c96f909ba6e4903fda299e255394e1e8e4bef094d104eea",
+          "anchor": "Permission"
+        }
+      ]
+    }
+  ],
+  "relationships": [
+    {
+      "source": "try",
+      "relation": "propagates result cases",
+      "target": "variants"
+    },
+    {
+      "source": "try",
+      "relation": "requires explicit cleanup under",
+      "target": "permissions"
+    }
+  ],
+  "omitted_neighbors": 2
+}

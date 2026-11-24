@@ -1,0 +1,16 @@
+{
+  "format": "lobo-identities/0.1",
+  "identities": {
+    "module": "agentref.reading",
+    "Pair": "agentref.Pair",
+    "Result": "agentref.Result",
+    "bump": "agentref.bump",
+    "slice_count": "agentref.slice_count",
+    "spread": "agentref.spread",
+    "counted": "agentref.counted",
+    "stopped": "agentref.stopped",
+    "list_order": "agentref.list_order",
+    "propagate": "agentref.propagate",
+    "propagate_error": "agentref.propagate_error"
+  }
+}

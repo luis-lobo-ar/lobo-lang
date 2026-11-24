@@ -1,0 +1,9 @@
+Warning: unknown mime-type for "docs/agent-reference/1.11.2/language-relationships.drawio" -- using "application/octet-stream"
+Error: no "view" mailcap rules found for type "application/octet-stream"
+
+
+  Your Terminal type is unknown!
+
+  Enter a terminal type: [vt100] 
+TERMINAL TYPE IS SET TO vt100
+(B)0[1;24r[m[?7h[?1h=[?1h=[H[J[21B[0;7mGetting file://localhost/home/luis/dev/lobo-ar/lobo-lang/docs/agent-reference/1[m[1;72H(p1 of 4)[2;1H<mxGraphModel adaptiveColors="auto" dx="1600" dy="1500" grid="1" gridSize="10">[1B  <root>[1B<mxCell id="0" />[1B[17D<mxCell id="1" parent="0" />[1B[28D<mxCell id="blocks" value="Blocks and bindings&#10;[language]" vertex="1" pa[7;1Hrent="1" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#dae8fc;fontSize=14;"[8;1H>[1B[5C<mxGeometry as="geometry" x="70" y="60" width="220" height="70" />[1B[68D</mxCell>[1B[9D<mxCell id="records" value="Nominal records&#10;[language]" vertex="1" paren[12;1Ht="1" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#dae8fc;fontSize=14;">[1B[72D<mxGeometry as="geometry" x="70" y="260" width="220" height="70" />[1B[69D</mxCell>[1B[9D<mxCell id="updates" value="Record updates&#10;[language]" vertex="1" parent[16;1H="1" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#dae8fc;fontSize=14;">[1B[71D<mxGeometry as="geometry" x="70" y="460" width="220" height="70" />[1B[69D</mxCell>[1B[9D<mxCell id="generics" value="Generic inference&#10;[language]" vertex="1" pa[20;1Hrent="1" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#dae8fc;fontSize=14;"[21;1H>[1B[2B[24;1H[?1l>
