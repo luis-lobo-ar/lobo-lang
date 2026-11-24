@@ -1,0 +1,13 @@
+module compact;
+variant Attempt<T> {Ok(T),Err(I64)}
+fn produce(value:I64)->Attempt<I64> {if value<0 {Err(31)} else {Ok(value+4)}}
+fn unpack(item:Attempt<I64>)->I64 {match item {Ok(value)=>value,Err(code)=>-code}}
+fn flow(start:I64)->Attempt<I64> {let value=try produce(start);Ok(value+7)}
+fn scan()->Attempt<I64> {let amount=fold(i in 5,total:I64=1) {let part=try produce(1-i);total+part};Ok(amount)}
+fn choose(flag:Bool)->Attempt<I64> {if flag {Ok(23)} else {let value=try produce(-1);Ok(value)}}
+fn p0()->I64 {unpack(flow(3))}
+fn p1()->I64 {unpack(flow(-2))}
+fn p2()->I64 {unpack(flow(-2))+50}
+fn p3()->I64 {unpack(scan())}
+fn p4()->I64 {unpack(choose(true))}
+fn p5()->I64 {let outcome=flow(0);unpack(outcome)*2}

@@ -1,0 +1,9 @@
+{
+  "format": "lobo-identities/0.1",
+  "identities": {
+    "module": "compact.contracts.case3",
+    "add": "compact.contracts.case3.add",
+    "post": "compact.contracts.case3.post",
+    "candidate": "compact.contracts.case3.candidate"
+  }
+}

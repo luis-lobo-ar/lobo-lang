@@ -1,0 +1,4 @@
+module compact;
+fn add(value:I64)->I64 requires {value>=0} ensures {result>value} {value+5}
+fn post(value:I64)->I64 ensures {result==value*2} {value*2}
+fn candidate()->I64 requires {false} {if false {1/0} else {2}}

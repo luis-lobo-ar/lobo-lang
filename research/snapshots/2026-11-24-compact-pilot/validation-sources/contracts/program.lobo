@@ -1,0 +1,9 @@
+module compact;
+fn add(value:I64)->I64 requires {value>=0} ensures {result>value} {value+5}
+fn post(value:I64)->I64 ensures {result==value*2} {value*2}
+fn p0()->I64 {add(8)}
+fn p1()->I64 {if false {add(-7)} else {27}}
+fn p2()->I64 {if true || add(-1)>0 {17} else {0}}
+fn p3()->I64 {fold(i in 0,total:I64=12) {add(-9)}}
+fn p4()->I64 {post(9)}
+fn p5()->I64 {if false && 1/0==0 {1} else {29}}

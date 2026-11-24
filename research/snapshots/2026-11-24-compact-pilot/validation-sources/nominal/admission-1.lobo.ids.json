@@ -1,0 +1,13 @@
+{
+  "format": "lobo-identities/0.1",
+  "identities": {
+    "module": "compact.nominal.case1",
+    "Crate": "compact.nominal.case1.Crate",
+    "Pair": "compact.nominal.case1.Pair",
+    "Check": "compact.nominal.case1.Check",
+    "pick": "compact.nominal.case1.pick",
+    "identity": "compact.nominal.case1.identity",
+    "Twin": "compact.nominal.case1.Twin",
+    "candidate": "compact.nominal.case1.candidate"
+  }
+}

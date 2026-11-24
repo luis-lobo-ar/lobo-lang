@@ -1,0 +1,12 @@
+module compact;
+record Crate<T> {item:T}
+record Pair {a:I64,b:I64}
+variant Check<T> {Waiting,Have(T)}
+fn pick(status:Check<I64>)->I64 {match status {Waiting=>-9,Have(item)=>item*2}}
+fn identity<T>(value:T)->T {value}
+fn p0()->I64 {let start=Pair {a:9,b:11};let finish=Pair {...start,b:18};finish.a+finish.b}
+fn p1()->I64 {let boxed=Crate {item:13};boxed.item}
+fn p2()->I64 {pick(Have(7))}
+fn p3()->I64 {pick(Waiting)}
+fn p4()->I64 {let status:Check<Crate<I64>>=Have(Crate {item:6});match status {Waiting=>0,Have(boxed)=>boxed.item+3}}
+fn p5()->I64 {let boxed=identity(Crate {item:19});boxed.item}

@@ -1,0 +1,1 @@
+module probe; fn candidate(arg0:Bytes)->Text {Text::from_bytes(arg0)}

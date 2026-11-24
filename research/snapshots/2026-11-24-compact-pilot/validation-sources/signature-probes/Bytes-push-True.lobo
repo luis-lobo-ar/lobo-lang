@@ -1,0 +1,1 @@
+module probe; fn candidate(arg0:Bytes,arg1:I64)->Bytes {Bytes::push(arg0,arg1)}

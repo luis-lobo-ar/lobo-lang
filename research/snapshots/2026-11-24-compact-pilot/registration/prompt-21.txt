@@ -1,0 +1,32 @@
+Source-only Lobo comprehension. No tools, execution, editing or delegation.
+READING MODE: reason from the supplied source and return the requested JSON without tools.
+Lobo 1.11.2 is a native language. There is no projection/interpreter step.
+Each block returns its final expression without a trailing semicolon. Use fn f(x:I64)->I64 {x+1}, let x=...; if condition {a} else {b}, &&/||/!, checked I64 arithmetic, and ==/!= comparisons. Names cannot shadow other visible names or function/type declarations. No assignment, break, continue, return keyword or for statement.
+Records: record Pair {left:I64,right:I64}; Pair {left:1,right:2}; pair.left; Pair {...pair,left:3}. Variants: match event {Credit(n)=> expression,Debit(n)=> expression,Lock=> expression,Unlock=> expression}. Every case must occur. Expected types infer case owners. Parenthesize complex match subjects: match (cursor.best) {...}.
+Lists: List<T>, List::empty<I64>(), List::prepend(value,list), List::length(list), List::head(list), List::tail(list). Head/tail require nonempty. Prepend reverses order; the supplied util.reverse<T> restores order and may infer T. Lists are persistent; no indexing, append or mutation operation.
+Counted loops carry one typed value: fold(i in n,total:I64=0) {total+i}. The index runs 0..n-1; zero iterations return the initial state. For multiple variables, carry a record: fold(i in List::length(items),state:Cursor=Cursor {pending:items,total:0}) {Cursor {pending:List::tail(state.pending),total:state.total+List::head(state.pending)}}. State-driven loop: while(state:State=initial; condition_using_state) {new_state}. To stop early, carry a Bool and test it in the loop condition. Finite execution fuel/heap apply; do not use deep recursive traversal.
+Bytes: Bytes::length(data), Bytes::at(data,index) returns 0..255, Bytes::slice(data,start,count), Bytes::empty(), Bytes::push(data,value). Guard bounds before at/slice. List<Bytes> is supported. Remainder uses %, division truncates toward zero. Ordinary expected failures are values in the declared DTO, not runtime faults.
+
+The host supplies correct stable identity metadata. RESPONSE CONTRACT v2. Return exactly one JSON object, without Markdown. All objects in this profile are closed: every required field must occur, unknown fields and duplicate keys are invalid. Integers use integer tokens, never 1.0 or true. Put any explanation in the optional top-level notes string. Shape validity and semantic correctness are separate checks. Input domain bounds in the task still apply.
+{"additional_properties": false, "kind": "object", "optional": {"notes": {"kind": "string"}}, "required": {"admissions": {"items": {"kind": "boolean"}, "kind": "array", "length": 4}, "predictions": {"items": {"kind": "integer", "rule": "JSON integer token, not float or boolean"}, "kind": "array", "length": 6}}}
+
+Predict I64 results of p0..p5 in order as six JSON integers. Classify four admission fragments as static-check acceptance booleans, not runtime success or contract proof. Keep shared types/helpers, remove p0..p5, and append each fragment independently. No fragment sees another. Literal KñΩS has Unicode scalars [75,241,937,83] and UTF-8 bytes [75,195,177,206,169,83]. This input legend is supplied in every arm.
+PROGRAM:
+module compact;
+fn p0()->I64 {Bytes::length(Text::bytes("KñΩS"))+Text::length("KñΩS")}
+fn p1()->I64 {Text::at("KñΩS",2)}
+fn p2()->I64 {Bytes::at(Bytes::slice(Text::bytes("KñΩS"),2,2),0)}
+fn p3()->I64 {Text::length(Text::slice("KñΩS",1,2))}
+fn p4()->I64 {Bytes::length(Bytes::concat(Text::bytes("uv"),Text::bytes("w")))}
+fn p5()->I64 {if Text::valid(Bytes::push(Bytes::empty(),254)) {1} else {0}}
+
+ADMISSION FRAGMENTS:
+CASE 0
+fn candidate()->Bytes {Bytes::from_list(List::prepend(260,List::empty<I64>()))}
+CASE 1
+fn candidate()->I64 {Text::length(Bytes::concat(Bytes::empty(),Bytes::empty()))}
+CASE 2
+fn candidate()->Text {Text::concat("a","z")}
+CASE 3
+fn candidate()->Bool {Text::valid("ready")}
+Return only the requested JSON object.

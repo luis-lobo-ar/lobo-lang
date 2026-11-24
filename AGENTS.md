@@ -5,6 +5,11 @@ Use the GitHub account luis-lobo-ar for this repository. Commit author and commi
 active gh account may belong to another project. Keep user-facing examples on the lobo CLI. Cargo commands
 belong in compiler build/test instructions. Preserve frozen research documents and fixtures.
 
+The user selected decision0068: a small24-attempt guide/checked-card pilot, high then low. Additive compact
+materials only; keep product1.11.2 and prior studies/reference/graph frozen. Register before calls, preserve
+strict scoring and every result/unknown, reuse the hash-matched prior compiler receipt without claiming a
+fresh full-suite run, and stop after24 attempts. See decisions/0068-small-guide-and-fact-pilot.md.
+
 Decision 0067 is complete:84 attempts and 6 excluded availability checks, all with known usage. Explicit
 response disclosure gives 17/18 valid shapes versus 15/18, with 9/18 whole-task acceptance in both arms.
 The flat reference gives 118/120 items versus 116/120 base; graph 109/120 versus 110/120 flat on a different

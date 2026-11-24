@@ -1,0 +1,2 @@
+module compact;
+fn candidate()->Bytes {Bytes::from_list(List::prepend(260,List::empty<I64>()))}

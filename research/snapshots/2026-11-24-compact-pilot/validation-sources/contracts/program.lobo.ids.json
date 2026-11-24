@@ -1,0 +1,14 @@
+{
+  "format": "lobo-identities/0.1",
+  "identities": {
+    "module": "compact.contracts",
+    "add": "compact.contracts.add",
+    "post": "compact.contracts.post",
+    "p0": "compact.contracts.p0",
+    "p1": "compact.contracts.p1",
+    "p2": "compact.contracts.p2",
+    "p3": "compact.contracts.p3",
+    "p4": "compact.contracts.p4",
+    "p5": "compact.contracts.p5"
+  }
+}

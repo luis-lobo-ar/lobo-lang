@@ -1,0 +1,437 @@
+{
+  "format": "lobo-compact-pilot/1",
+  "date": "2026-11-24",
+  "model": "gpt-5.6-luna",
+  "scheduled": 24,
+  "schedule": [
+    {
+      "index": 0,
+      "stage": "compact",
+      "reasoning": "high",
+      "family": "contracts",
+      "language": "lobo",
+      "arm": "legacy",
+      "phase": "comprehension"
+    },
+    {
+      "index": 1,
+      "stage": "compact",
+      "reasoning": "high",
+      "family": "contracts",
+      "language": "lobo",
+      "arm": "clean",
+      "phase": "comprehension"
+    },
+    {
+      "index": 2,
+      "stage": "compact",
+      "reasoning": "high",
+      "family": "contracts",
+      "language": "lobo",
+      "arm": "targeted",
+      "phase": "comprehension"
+    },
+    {
+      "index": 3,
+      "stage": "compact",
+      "reasoning": "high",
+      "family": "propagation",
+      "language": "lobo",
+      "arm": "clean",
+      "phase": "comprehension"
+    },
+    {
+      "index": 4,
+      "stage": "compact",
+      "reasoning": "high",
+      "family": "propagation",
+      "language": "lobo",
+      "arm": "targeted",
+      "phase": "comprehension"
+    },
+    {
+      "index": 5,
+      "stage": "compact",
+      "reasoning": "high",
+      "family": "propagation",
+      "language": "lobo",
+      "arm": "legacy",
+      "phase": "comprehension"
+    },
+    {
+      "index": 6,
+      "stage": "compact",
+      "reasoning": "high",
+      "family": "nominal",
+      "language": "lobo",
+      "arm": "targeted",
+      "phase": "comprehension"
+    },
+    {
+      "index": 7,
+      "stage": "compact",
+      "reasoning": "high",
+      "family": "nominal",
+      "language": "lobo",
+      "arm": "legacy",
+      "phase": "comprehension"
+    },
+    {
+      "index": 8,
+      "stage": "compact",
+      "reasoning": "high",
+      "family": "nominal",
+      "language": "lobo",
+      "arm": "clean",
+      "phase": "comprehension"
+    },
+    {
+      "index": 9,
+      "stage": "compact",
+      "reasoning": "high",
+      "family": "ranges",
+      "language": "lobo",
+      "arm": "legacy",
+      "phase": "comprehension"
+    },
+    {
+      "index": 10,
+      "stage": "compact",
+      "reasoning": "high",
+      "family": "ranges",
+      "language": "lobo",
+      "arm": "clean",
+      "phase": "comprehension"
+    },
+    {
+      "index": 11,
+      "stage": "compact",
+      "reasoning": "high",
+      "family": "ranges",
+      "language": "lobo",
+      "arm": "targeted",
+      "phase": "comprehension"
+    },
+    {
+      "index": 12,
+      "stage": "compact",
+      "reasoning": "low",
+      "family": "contracts",
+      "language": "lobo",
+      "arm": "clean",
+      "phase": "comprehension"
+    },
+    {
+      "index": 13,
+      "stage": "compact",
+      "reasoning": "low",
+      "family": "contracts",
+      "language": "lobo",
+      "arm": "targeted",
+      "phase": "comprehension"
+    },
+    {
+      "index": 14,
+      "stage": "compact",
+      "reasoning": "low",
+      "family": "contracts",
+      "language": "lobo",
+      "arm": "legacy",
+      "phase": "comprehension"
+    },
+    {
+      "index": 15,
+      "stage": "compact",
+      "reasoning": "low",
+      "family": "propagation",
+      "language": "lobo",
+      "arm": "targeted",
+      "phase": "comprehension"
+    },
+    {
+      "index": 16,
+      "stage": "compact",
+      "reasoning": "low",
+      "family": "propagation",
+      "language": "lobo",
+      "arm": "legacy",
+      "phase": "comprehension"
+    },
+    {
+      "index": 17,
+      "stage": "compact",
+      "reasoning": "low",
+      "family": "propagation",
+      "language": "lobo",
+      "arm": "clean",
+      "phase": "comprehension"
+    },
+    {
+      "index": 18,
+      "stage": "compact",
+      "reasoning": "low",
+      "family": "nominal",
+      "language": "lobo",
+      "arm": "legacy",
+      "phase": "comprehension"
+    },
+    {
+      "index": 19,
+      "stage": "compact",
+      "reasoning": "low",
+      "family": "nominal",
+      "language": "lobo",
+      "arm": "clean",
+      "phase": "comprehension"
+    },
+    {
+      "index": 20,
+      "stage": "compact",
+      "reasoning": "low",
+      "family": "nominal",
+      "language": "lobo",
+      "arm": "targeted",
+      "phase": "comprehension"
+    },
+    {
+      "index": 21,
+      "stage": "compact",
+      "reasoning": "low",
+      "family": "ranges",
+      "language": "lobo",
+      "arm": "clean",
+      "phase": "comprehension"
+    },
+    {
+      "index": 22,
+      "stage": "compact",
+      "reasoning": "low",
+      "family": "ranges",
+      "language": "lobo",
+      "arm": "targeted",
+      "phase": "comprehension"
+    },
+    {
+      "index": 23,
+      "stage": "compact",
+      "reasoning": "low",
+      "family": "ranges",
+      "language": "lobo",
+      "arm": "legacy",
+      "phase": "comprehension"
+    }
+  ],
+  "code": {
+    "benchmarks/matched-study/learning.py": "b41678da7dc3d1c2bdabe27e04281b491f900a5956155ae3a4dfc8a7b41fccf5",
+    "benchmarks/matched-study/learning_corpus.py": "a75bbe1ffefa09525fa5b761daa31576ead4b85b2bd63b632018c38318a52385",
+    "benchmarks/matched-study/response_contract.py": "f37d2afd1a7611e72001bf55515db502dd954f3de1ab005868a151fb0039c2d1",
+    "benchmarks/matched-study/test_learning.py": "a7064b64aa1646c10682106e10ef030ebb47d0448e85653a8337b84a9ad16b84",
+    "benchmarks/matched-study/learning_report.py": "ce0fbd5d968cafcb9e4fd4fe67703399a76b22819b1f7535c0dc14bdae829d0c",
+    "benchmarks/matched-study/test_learning_report.py": "03251faca92b14302932547c2e3cb247cd1762a6a4f6c2bdcffa4d8f50de60fa",
+    "benchmarks/matched-study/context_report.py": "2ae4867a9db65208da8647fab5e7d235bb5f4aafb61dfd9e6032a381f16c74bb",
+    "benchmarks/matched-study/context.py": "05e5c702ff967e00e135368d9e00eb3a0296efbcaf028fcf169b0b81da08d156",
+    "benchmarks/matched-study/luna.py": "5c02b9846c7af3211ad70cf212e8f119b3360bce8e29b2c2032a9792b321509c",
+    "benchmarks/matched-study/study.py": "1c05a60a0c431a9d9336f7b28c9fcfb9f69446cb24ead52f380d1a5d4c838bf0",
+    "research/language_reference.py": "8809a8feb79085560f8e23de576c1eaba4fd25194898dd8ac59d4d5f9c23d290",
+    "docs/agent-reference/1.11.2/concepts.json": "393f075c8bb9db80227461135fa30cfa282de86e39db3f379c841a75dac63f55",
+    "docs/agent-reference/1.11.2/reading-examples.lobo": "8fa7b6507cab932ef797d068718d7180963baae3c149123bc728346b9bf713b3",
+    "benchmarks/matched-study/compact.py": "8250c7398ebd6b21829a3146ba32bd69977b3e293ec1a3192d5c90d5257a89f9",
+    "benchmarks/matched-study/test_compact.py": "89393bcbf95f90657a7fd82671f92be0a39074c5ea4d22b878e9b0ba0da3192f",
+    "benchmarks/matched-study/compact_report.py": "88353ad2ffcdb6406b3634974cd3e90bfdf01360e9e1c6cb3574f82ca02e8e53",
+    "benchmarks/matched-study/test_compact_report.py": "c7b51f1e8775d98bb607c6621fbd89a6826ba72f264f35783e43338221242140",
+    "docs/agent-reference/compact-pilot-2026-11-24/cards.json": "c0a288cc94f5ea717beee3bdc27de2068fe6f213de384d8acdfc837f079da64c"
+  },
+  "prompts": {
+    "0": {
+      "sha256": "e7934af97af7164b01dae123cde981007c1f0ce5818db93f43117e34e1ea278e",
+      "bytes": 5365
+    },
+    "1": {
+      "sha256": "d142f28875b8dcb253c77270f18db2d4cb20a1f0cb58b69b2750a3ca3b491284",
+      "bytes": 3925
+    },
+    "2": {
+      "sha256": "c272203fbf8b96c6a74a395703f1fa1e1e59abcf50aa9fa2c71d57f43e94b3ac",
+      "bytes": 4722
+    },
+    "3": {
+      "sha256": "c628be55829b4f314f9f73ee9af5045a24cc7005a2b06e2e275722750506638b",
+      "bytes": 4367
+    },
+    "4": {
+      "sha256": "521e907cb24ef8800c680ffc7e6568909ed8efb4dc8b00625a9948a0a440a0e5",
+      "bytes": 5112
+    },
+    "5": {
+      "sha256": "270372f48440cdc9b987fda3e3a820c3822be4cb3873ba1ec6ae229b9a679cbf",
+      "bytes": 5807
+    },
+    "6": {
+      "sha256": "262be3bf4f1f9c384189d3769fd78d5303a372081457a47d1036c4fc5dff7a6d",
+      "bytes": 4933
+    },
+    "7": {
+      "sha256": "592850b535ea0b165a8ada570f258a4a6d91653e3723d5ff8e17070d18d17459",
+      "bytes": 5553
+    },
+    "8": {
+      "sha256": "06f6bc58e2220625f7660a197583eab9109c685bd042a2ca1aa006196862472b",
+      "bytes": 4113
+    },
+    "9": {
+      "sha256": "d75230f468a0a1e47e9ba3a0ac1dd6949909cc3442d28b2737e7ed2d28b7ac8d",
+      "bytes": 5461
+    },
+    "10": {
+      "sha256": "6fb84e0b3777e538d4bc69ba61ec67467c1d8a5dda84bac8024aa1f222720364",
+      "bytes": 4021
+    },
+    "11": {
+      "sha256": "0fce9e76ae2ce8670cc788994fa4072729c10d4ab52991997d01b9ae26dd2dfe",
+      "bytes": 4956
+    },
+    "12": {
+      "sha256": "d142f28875b8dcb253c77270f18db2d4cb20a1f0cb58b69b2750a3ca3b491284",
+      "bytes": 3925
+    },
+    "13": {
+      "sha256": "c272203fbf8b96c6a74a395703f1fa1e1e59abcf50aa9fa2c71d57f43e94b3ac",
+      "bytes": 4722
+    },
+    "14": {
+      "sha256": "e7934af97af7164b01dae123cde981007c1f0ce5818db93f43117e34e1ea278e",
+      "bytes": 5365
+    },
+    "15": {
+      "sha256": "521e907cb24ef8800c680ffc7e6568909ed8efb4dc8b00625a9948a0a440a0e5",
+      "bytes": 5112
+    },
+    "16": {
+      "sha256": "270372f48440cdc9b987fda3e3a820c3822be4cb3873ba1ec6ae229b9a679cbf",
+      "bytes": 5807
+    },
+    "17": {
+      "sha256": "c628be55829b4f314f9f73ee9af5045a24cc7005a2b06e2e275722750506638b",
+      "bytes": 4367
+    },
+    "18": {
+      "sha256": "592850b535ea0b165a8ada570f258a4a6d91653e3723d5ff8e17070d18d17459",
+      "bytes": 5553
+    },
+    "19": {
+      "sha256": "06f6bc58e2220625f7660a197583eab9109c685bd042a2ca1aa006196862472b",
+      "bytes": 4113
+    },
+    "20": {
+      "sha256": "262be3bf4f1f9c384189d3769fd78d5303a372081457a47d1036c4fc5dff7a6d",
+      "bytes": 4933
+    },
+    "21": {
+      "sha256": "6fb84e0b3777e538d4bc69ba61ec67467c1d8a5dda84bac8024aa1f222720364",
+      "bytes": 4021
+    },
+    "22": {
+      "sha256": "0fce9e76ae2ce8670cc788994fa4072729c10d4ab52991997d01b9ae26dd2dfe",
+      "bytes": 4956
+    },
+    "23": {
+      "sha256": "d75230f468a0a1e47e9ba3a0ac1dd6949909cc3442d28b2737e7ed2d28b7ac8d",
+      "bytes": 5461
+    }
+  },
+  "compiler_sha256": "8d9f84530b8d34a6a72597d25befc249a604430a6569656b4184721e1e444d9d",
+  "validation_sha256": "20df7822149f4babdb64dbc46b1a852d5ed79ba414047fbcf19b9757464a4e5f",
+  "signature_probes_sha256": "df5323f87af018880a4d4850ad5057b022fd01731b5735cd818d0f42a25bfb78",
+  "guide_bytes": {
+    "legacy": 3443,
+    "clean": 2003
+  },
+  "card_bytes": {
+    "ranges": 934,
+    "nominal": 819,
+    "propagation": 744,
+    "contracts": 796
+  },
+  "limits": {
+    "wall_s": 120,
+    "tools": 0,
+    "hard_token_cap": null
+  },
+  "contrasts": [
+    [
+      "legacy",
+      "clean"
+    ],
+    [
+      "clean",
+      "targeted"
+    ],
+    [
+      "legacy",
+      "targeted"
+    ]
+  ],
+  "analysis": "Report all three contrasts: whole-task acceptance, total task items, predictions, static admissions, shape validity and paired reported token/wall ratios. All failures and unknowns retained. Descriptive gain requires more correct items without lower observed task acceptance; mixed outcomes are not a winner. No noninferiority/general-language claim.",
+  "failure_policy": "No retries/replacements. Two excluded source-free availability checks. Stop each cohort after3 consecutive infrastructure failures, preserving unattempted rows. No fallback model.",
+  "regression_evidence": "Reuse the hash-matched frozen compiler and its unchanged312-pass receipt from decision0067. New code/cards/corpus receive focused tests and native/evaluator/typing/mutation checks; full product suite is not rerun for this research-only change.",
+  "environment": {
+    "versions": [
+      {
+        "command": [
+          "codex",
+          "--version"
+        ],
+        "stdout": "codex-cli 0.171.0\n",
+        "stderr": "",
+        "executable": "/home/luis/.codex/packages/standalone/releases/0.171.0-x86_64-unknown-linux-musl/bin/codex",
+        "sha256": "b76a027d6b210f9a8da7aaf321dd235c700f0ef7a794d4a5314b9af6c134f0f0"
+      },
+      {
+        "command": [
+          "rustc",
+          "--version"
+        ],
+        "stdout": "rustc 1.92.0 (ded5c06cf 2025-12-08)\n",
+        "stderr": "",
+        "executable": "/home/luis/.cargo/bin/rustup",
+        "sha256": "20a06e644b0d9bd2fbdbfd52d42540bdde820ea7df86e92e533c073da0cdd43c"
+      },
+      {
+        "command": [
+          "clang",
+          "--version"
+        ],
+        "stdout": "Ubuntu clang version 18.1.3 (1ubuntu1)\nTarget: x86_64-pc-linux-gnu\nThread model: posix\nInstalledDir: /usr/bin\n",
+        "stderr": "",
+        "executable": "/usr/lib/llvm-18/bin/clang",
+        "sha256": "8ef402d453d1ba4902e4ee0f0f847f6cfa01400c95aa43c24e97818b9c0e3f45"
+      },
+      {
+        "command": [
+          "python3",
+          "--version"
+        ],
+        "stdout": "Python 3.12.3\n",
+        "stderr": "",
+        "executable": "/usr/bin/python3.12",
+        "sha256": "e50d468e8b0adfb05733f5b87b3cff34829c4a8c1aea50c865aa8bdfe4bb150f"
+      }
+    ],
+    "logical_cpus": 16,
+    "load": [
+      7.7890625,
+      10.35107421875,
+      5.587890625
+    ],
+    "recorded_unix": 1795531784.076239
+  },
+  "limitations": [
+    "Small development-targeted pilot: four topics selected after earlier errors; new examples but not independent blinded holdouts",
+    "One program instance/topic, high-before-low order, aliases and provider caches limit generalization",
+    "Cleanup removes authoring instructions and adds a reading-mode cue while preserving semantic paragraphs; it is not a pure token-count ablation",
+    "Targeted facts contrast is conditional on the cleaned guide; no facts-only arm or interaction estimate",
+    "Cards cover this pilot, not the complete language; signature provenance kept outside the delivered text",
+    "Source-only presentation, no tool-assisted verification or interactive graph",
+    "Parent-agent development tokens, underlying provider requests and billing unknown"
+  ]
+}

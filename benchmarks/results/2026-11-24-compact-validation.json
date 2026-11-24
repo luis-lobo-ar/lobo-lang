@@ -1,0 +1,1082 @@
+[
+  {
+    "topic": "ranges",
+    "build": {
+      "command": [
+        "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/matched-study-20261123/freeze/lobo",
+        "compile",
+        "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/compact-study-20261124/validation/ranges/program.lobo",
+        "-o",
+        "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/compact-study-20261124/validation/ranges/program"
+      ],
+      "exit_code": 0,
+      "stdout": "{\"artifact\":\"/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/compact-study-20261124/validation/ranges/program\",\"entries\":[\"compact.ranges.p0\",\"compact.ranges.p1\",\"compact.ranges.p2\",\"compact.ranges.p3\",\"compact.ranges.p4\",\"compact.ranges.p5\"],\"format\":\"native\",\"status\":\"ok\"}\n",
+      "stderr": ""
+    },
+    "values": [
+      {
+        "route": "native",
+        "entry": 0,
+        "expected": 10,
+        "command": [
+          "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/compact-study-20261124/validation/ranges/program",
+          "--entry",
+          "compact.ranges.p0"
+        ],
+        "exit_code": 0,
+        "stdout": "{\"status\":\"ok\",\"kind\":\"value\",\"value\":{\"type\":\"I64\",\"value\":\"10\"}}\n",
+        "stderr": "",
+        "ok": true
+      },
+      {
+        "route": "eval",
+        "entry": 0,
+        "expected": 10,
+        "command": [
+          "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/matched-study-20261123/freeze/lobo",
+          "eval",
+          "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/compact-study-20261124/validation/ranges/program.lobo",
+          "--entry",
+          "compact.ranges.p0"
+        ],
+        "exit_code": 0,
+        "stdout": "{\"kind\":\"value\",\"status\":\"ok\",\"value\":{\"type\":\"I64\",\"value\":\"10\"}}\n",
+        "stderr": "",
+        "ok": true
+      },
+      {
+        "route": "native",
+        "entry": 1,
+        "expected": 937,
+        "command": [
+          "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/compact-study-20261124/validation/ranges/program",
+          "--entry",
+          "compact.ranges.p1"
+        ],
+        "exit_code": 0,
+        "stdout": "{\"status\":\"ok\",\"kind\":\"value\",\"value\":{\"type\":\"I64\",\"value\":\"937\"}}\n",
+        "stderr": "",
+        "ok": true
+      },
+      {
+        "route": "eval",
+        "entry": 1,
+        "expected": 937,
+        "command": [
+          "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/matched-study-20261123/freeze/lobo",
+          "eval",
+          "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/compact-study-20261124/validation/ranges/program.lobo",
+          "--entry",
+          "compact.ranges.p1"
+        ],
+        "exit_code": 0,
+        "stdout": "{\"kind\":\"value\",\"status\":\"ok\",\"value\":{\"type\":\"I64\",\"value\":\"937\"}}\n",
+        "stderr": "",
+        "ok": true
+      },
+      {
+        "route": "native",
+        "entry": 2,
+        "expected": 177,
+        "command": [
+          "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/compact-study-20261124/validation/ranges/program",
+          "--entry",
+          "compact.ranges.p2"
+        ],
+        "exit_code": 0,
+        "stdout": "{\"status\":\"ok\",\"kind\":\"value\",\"value\":{\"type\":\"I64\",\"value\":\"177\"}}\n",
+        "stderr": "",
+        "ok": true
+      },
+      {
+        "route": "eval",
+        "entry": 2,
+        "expected": 177,
+        "command": [
+          "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/matched-study-20261123/freeze/lobo",
+          "eval",
+          "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/compact-study-20261124/validation/ranges/program.lobo",
+          "--entry",
+          "compact.ranges.p2"
+        ],
+        "exit_code": 0,
+        "stdout": "{\"kind\":\"value\",\"status\":\"ok\",\"value\":{\"type\":\"I64\",\"value\":\"177\"}}\n",
+        "stderr": "",
+        "ok": true
+      },
+      {
+        "route": "native",
+        "entry": 3,
+        "expected": 2,
+        "command": [
+          "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/compact-study-20261124/validation/ranges/program",
+          "--entry",
+          "compact.ranges.p3"
+        ],
+        "exit_code": 0,
+        "stdout": "{\"status\":\"ok\",\"kind\":\"value\",\"value\":{\"type\":\"I64\",\"value\":\"2\"}}\n",
+        "stderr": "",
+        "ok": true
+      },
+      {
+        "route": "eval",
+        "entry": 3,
+        "expected": 2,
+        "command": [
+          "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/matched-study-20261123/freeze/lobo",
+          "eval",
+          "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/compact-study-20261124/validation/ranges/program.lobo",
+          "--entry",
+          "compact.ranges.p3"
+        ],
+        "exit_code": 0,
+        "stdout": "{\"kind\":\"value\",\"status\":\"ok\",\"value\":{\"type\":\"I64\",\"value\":\"2\"}}\n",
+        "stderr": "",
+        "ok": true
+      },
+      {
+        "route": "native",
+        "entry": 4,
+        "expected": 3,
+        "command": [
+          "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/compact-study-20261124/validation/ranges/program",
+          "--entry",
+          "compact.ranges.p4"
+        ],
+        "exit_code": 0,
+        "stdout": "{\"status\":\"ok\",\"kind\":\"value\",\"value\":{\"type\":\"I64\",\"value\":\"3\"}}\n",
+        "stderr": "",
+        "ok": true
+      },
+      {
+        "route": "eval",
+        "entry": 4,
+        "expected": 3,
+        "command": [
+          "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/matched-study-20261123/freeze/lobo",
+          "eval",
+          "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/compact-study-20261124/validation/ranges/program.lobo",
+          "--entry",
+          "compact.ranges.p4"
+        ],
+        "exit_code": 0,
+        "stdout": "{\"kind\":\"value\",\"status\":\"ok\",\"value\":{\"type\":\"I64\",\"value\":\"3\"}}\n",
+        "stderr": "",
+        "ok": true
+      },
+      {
+        "route": "native",
+        "entry": 5,
+        "expected": 0,
+        "command": [
+          "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/compact-study-20261124/validation/ranges/program",
+          "--entry",
+          "compact.ranges.p5"
+        ],
+        "exit_code": 0,
+        "stdout": "{\"status\":\"ok\",\"kind\":\"value\",\"value\":{\"type\":\"I64\",\"value\":\"0\"}}\n",
+        "stderr": "",
+        "ok": true
+      },
+      {
+        "route": "eval",
+        "entry": 5,
+        "expected": 0,
+        "command": [
+          "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/matched-study-20261123/freeze/lobo",
+          "eval",
+          "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/compact-study-20261124/validation/ranges/program.lobo",
+          "--entry",
+          "compact.ranges.p5"
+        ],
+        "exit_code": 0,
+        "stdout": "{\"kind\":\"value\",\"status\":\"ok\",\"value\":{\"type\":\"I64\",\"value\":\"0\"}}\n",
+        "stderr": "",
+        "ok": true
+      }
+    ],
+    "admissions": [
+      {
+        "command": [
+          "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/matched-study-20261123/freeze/lobo",
+          "check",
+          "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/compact-study-20261124/validation/ranges/admission-0.lobo"
+        ],
+        "exit_code": 0,
+        "stdout": "{\"actions\":{\"compact.ranges.case0.candidate\":[]},\"entries\":[\"compact.ranges.case0.candidate\"],\"language\":\"core/1.11\",\"status\":\"ok\"}\n",
+        "stderr": "",
+        "expected": true,
+        "ok": true
+      },
+      {
+        "command": [
+          "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/matched-study-20261123/freeze/lobo",
+          "check",
+          "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/compact-study-20261124/validation/ranges/admission-1.lobo"
+        ],
+        "exit_code": 1,
+        "stdout": "{\"diagnostic\":{\"code\":\"compile.type.mismatch\",\"message\":\"types must match exactly\",\"phase\":\"check\",\"range\":{\"end\":{\"byte\":94,\"character\":78,\"line\":1},\"start\":{\"byte\":50,\"character\":34,\"line\":1}},\"source\":\"/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/compact-study-20261124/validation/ranges/admission-1.lobo\",\"subject\":\"compact.ranges.case1.candidate\"},\"kind\":\"compile_error\",\"status\":\"error\"}\n",
+        "stderr": "",
+        "expected": false,
+        "ok": true
+      },
+      {
+        "command": [
+          "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/matched-study-20261123/freeze/lobo",
+          "check",
+          "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/compact-study-20261124/validation/ranges/admission-2.lobo"
+        ],
+        "exit_code": 0,
+        "stdout": "{\"actions\":{\"compact.ranges.case2.candidate\":[]},\"entries\":[\"compact.ranges.case2.candidate\"],\"language\":\"core/1.11\",\"status\":\"ok\"}\n",
+        "stderr": "",
+        "expected": true,
+        "ok": true
+      },
+      {
+        "command": [
+          "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/matched-study-20261123/freeze/lobo",
+          "check",
+          "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/compact-study-20261124/validation/ranges/admission-3.lobo"
+        ],
+        "exit_code": 1,
+        "stdout": "{\"diagnostic\":{\"code\":\"compile.type.mismatch\",\"message\":\"types must match exactly\",\"phase\":\"check\",\"range\":{\"end\":{\"byte\":57,\"character\":41,\"line\":1},\"start\":{\"byte\":50,\"character\":34,\"line\":1}},\"source\":\"/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/compact-study-20261124/validation/ranges/admission-3.lobo\",\"subject\":\"compact.ranges.case3.candidate\"},\"kind\":\"compile_error\",\"status\":\"error\"}\n",
+        "stderr": "",
+        "expected": false,
+        "ok": true
+      }
+    ],
+    "mutation": {
+      "build": {
+        "command": [
+          "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/matched-study-20261123/freeze/lobo",
+          "compile",
+          "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/compact-study-20261124/validation/ranges/mutant.lobo",
+          "-o",
+          "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/compact-study-20261124/validation/ranges/mutant"
+        ],
+        "exit_code": 0,
+        "stdout": "{\"artifact\":\"/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/compact-study-20261124/validation/ranges/mutant\",\"entries\":[\"compact.ranges.mutant.p0\",\"compact.ranges.mutant.p1\",\"compact.ranges.mutant.p2\",\"compact.ranges.mutant.p3\",\"compact.ranges.mutant.p4\",\"compact.ranges.mutant.p5\"],\"format\":\"native\",\"status\":\"ok\"}\n",
+        "stderr": ""
+      },
+      "command": [
+        "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/compact-study-20261124/validation/ranges/mutant",
+        "--entry",
+        "compact.ranges.mutant.p0"
+      ],
+      "exit_code": 0,
+      "stdout": "{\"status\":\"ok\",\"kind\":\"value\",\"value\":{\"type\":\"I64\",\"value\":\"11\"}}\n",
+      "stderr": "",
+      "killed": true
+    }
+  },
+  {
+    "topic": "nominal",
+    "build": {
+      "command": [
+        "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/matched-study-20261123/freeze/lobo",
+        "compile",
+        "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/compact-study-20261124/validation/nominal/program.lobo",
+        "-o",
+        "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/compact-study-20261124/validation/nominal/program"
+      ],
+      "exit_code": 0,
+      "stdout": "{\"artifact\":\"/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/compact-study-20261124/validation/nominal/program\",\"entries\":[\"compact.nominal.pick\",\"compact.nominal.p0\",\"compact.nominal.p1\",\"compact.nominal.p2\",\"compact.nominal.p3\",\"compact.nominal.p4\",\"compact.nominal.p5\",\"lobo.generic.95ec4225a0d0d984e79b30bc90f0dada\"],\"format\":\"native\",\"status\":\"ok\"}\n",
+      "stderr": ""
+    },
+    "values": [
+      {
+        "route": "native",
+        "entry": 0,
+        "expected": 26,
+        "command": [
+          "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/compact-study-20261124/validation/nominal/program",
+          "--entry",
+          "compact.nominal.p0"
+        ],
+        "exit_code": 0,
+        "stdout": "{\"status\":\"ok\",\"kind\":\"value\",\"value\":{\"type\":\"I64\",\"value\":\"26\"}}\n",
+        "stderr": "",
+        "ok": true
+      },
+      {
+        "route": "eval",
+        "entry": 0,
+        "expected": 26,
+        "command": [
+          "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/matched-study-20261123/freeze/lobo",
+          "eval",
+          "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/compact-study-20261124/validation/nominal/program.lobo",
+          "--entry",
+          "compact.nominal.p0"
+        ],
+        "exit_code": 0,
+        "stdout": "{\"kind\":\"value\",\"status\":\"ok\",\"value\":{\"type\":\"I64\",\"value\":\"26\"}}\n",
+        "stderr": "",
+        "ok": true
+      },
+      {
+        "route": "native",
+        "entry": 1,
+        "expected": 13,
+        "command": [
+          "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/compact-study-20261124/validation/nominal/program",
+          "--entry",
+          "compact.nominal.p1"
+        ],
+        "exit_code": 0,
+        "stdout": "{\"status\":\"ok\",\"kind\":\"value\",\"value\":{\"type\":\"I64\",\"value\":\"13\"}}\n",
+        "stderr": "",
+        "ok": true
+      },
+      {
+        "route": "eval",
+        "entry": 1,
+        "expected": 13,
+        "command": [
+          "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/matched-study-20261123/freeze/lobo",
+          "eval",
+          "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/compact-study-20261124/validation/nominal/program.lobo",
+          "--entry",
+          "compact.nominal.p1"
+        ],
+        "exit_code": 0,
+        "stdout": "{\"kind\":\"value\",\"status\":\"ok\",\"value\":{\"type\":\"I64\",\"value\":\"13\"}}\n",
+        "stderr": "",
+        "ok": true
+      },
+      {
+        "route": "native",
+        "entry": 2,
+        "expected": 14,
+        "command": [
+          "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/compact-study-20261124/validation/nominal/program",
+          "--entry",
+          "compact.nominal.p2"
+        ],
+        "exit_code": 0,
+        "stdout": "{\"status\":\"ok\",\"kind\":\"value\",\"value\":{\"type\":\"I64\",\"value\":\"14\"}}\n",
+        "stderr": "",
+        "ok": true
+      },
+      {
+        "route": "eval",
+        "entry": 2,
+        "expected": 14,
+        "command": [
+          "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/matched-study-20261123/freeze/lobo",
+          "eval",
+          "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/compact-study-20261124/validation/nominal/program.lobo",
+          "--entry",
+          "compact.nominal.p2"
+        ],
+        "exit_code": 0,
+        "stdout": "{\"kind\":\"value\",\"status\":\"ok\",\"value\":{\"type\":\"I64\",\"value\":\"14\"}}\n",
+        "stderr": "",
+        "ok": true
+      },
+      {
+        "route": "native",
+        "entry": 3,
+        "expected": -9,
+        "command": [
+          "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/compact-study-20261124/validation/nominal/program",
+          "--entry",
+          "compact.nominal.p3"
+        ],
+        "exit_code": 0,
+        "stdout": "{\"status\":\"ok\",\"kind\":\"value\",\"value\":{\"type\":\"I64\",\"value\":\"-9\"}}\n",
+        "stderr": "",
+        "ok": true
+      },
+      {
+        "route": "eval",
+        "entry": 3,
+        "expected": -9,
+        "command": [
+          "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/matched-study-20261123/freeze/lobo",
+          "eval",
+          "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/compact-study-20261124/validation/nominal/program.lobo",
+          "--entry",
+          "compact.nominal.p3"
+        ],
+        "exit_code": 0,
+        "stdout": "{\"kind\":\"value\",\"status\":\"ok\",\"value\":{\"type\":\"I64\",\"value\":\"-9\"}}\n",
+        "stderr": "",
+        "ok": true
+      },
+      {
+        "route": "native",
+        "entry": 4,
+        "expected": 9,
+        "command": [
+          "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/compact-study-20261124/validation/nominal/program",
+          "--entry",
+          "compact.nominal.p4"
+        ],
+        "exit_code": 0,
+        "stdout": "{\"status\":\"ok\",\"kind\":\"value\",\"value\":{\"type\":\"I64\",\"value\":\"9\"}}\n",
+        "stderr": "",
+        "ok": true
+      },
+      {
+        "route": "eval",
+        "entry": 4,
+        "expected": 9,
+        "command": [
+          "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/matched-study-20261123/freeze/lobo",
+          "eval",
+          "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/compact-study-20261124/validation/nominal/program.lobo",
+          "--entry",
+          "compact.nominal.p4"
+        ],
+        "exit_code": 0,
+        "stdout": "{\"kind\":\"value\",\"status\":\"ok\",\"value\":{\"type\":\"I64\",\"value\":\"9\"}}\n",
+        "stderr": "",
+        "ok": true
+      },
+      {
+        "route": "native",
+        "entry": 5,
+        "expected": 19,
+        "command": [
+          "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/compact-study-20261124/validation/nominal/program",
+          "--entry",
+          "compact.nominal.p5"
+        ],
+        "exit_code": 0,
+        "stdout": "{\"status\":\"ok\",\"kind\":\"value\",\"value\":{\"type\":\"I64\",\"value\":\"19\"}}\n",
+        "stderr": "",
+        "ok": true
+      },
+      {
+        "route": "eval",
+        "entry": 5,
+        "expected": 19,
+        "command": [
+          "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/matched-study-20261123/freeze/lobo",
+          "eval",
+          "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/compact-study-20261124/validation/nominal/program.lobo",
+          "--entry",
+          "compact.nominal.p5"
+        ],
+        "exit_code": 0,
+        "stdout": "{\"kind\":\"value\",\"status\":\"ok\",\"value\":{\"type\":\"I64\",\"value\":\"19\"}}\n",
+        "stderr": "",
+        "ok": true
+      }
+    ],
+    "admissions": [
+      {
+        "command": [
+          "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/matched-study-20261123/freeze/lobo",
+          "check",
+          "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/compact-study-20261124/validation/nominal/admission-0.lobo"
+        ],
+        "exit_code": 0,
+        "stdout": "{\"actions\":{\"compact.nominal.case0.candidate\":[],\"compact.nominal.case0.pick\":[]},\"entries\":[\"compact.nominal.case0.pick\",\"compact.nominal.case0.candidate\"],\"language\":\"core/1.11\",\"status\":\"ok\"}\n",
+        "stderr": "",
+        "expected": true,
+        "ok": true
+      },
+      {
+        "command": [
+          "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/matched-study-20261123/freeze/lobo",
+          "check",
+          "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/compact-study-20261124/validation/nominal/admission-1.lobo"
+        ],
+        "exit_code": 1,
+        "stdout": "{\"diagnostic\":{\"code\":\"compile.type.mismatch\",\"message\":\"types must match exactly\",\"phase\":\"check\",\"range\":{\"end\":{\"byte\":304,\"character\":87,\"line\":6},\"start\":{\"byte\":299,\"character\":82,\"line\":6}},\"source\":\"/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/compact-study-20261124/validation/nominal/admission-1.lobo\",\"subject\":\"compact.nominal.case1.candidate\"},\"kind\":\"compile_error\",\"status\":\"error\"}\n",
+        "stderr": "",
+        "expected": false,
+        "ok": true
+      },
+      {
+        "command": [
+          "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/matched-study-20261123/freeze/lobo",
+          "check",
+          "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/compact-study-20261124/validation/nominal/admission-2.lobo"
+        ],
+        "exit_code": 0,
+        "stdout": "{\"actions\":{\"compact.nominal.case2.candidate\":[],\"compact.nominal.case2.pick\":[]},\"entries\":[\"compact.nominal.case2.pick\",\"compact.nominal.case2.candidate\"],\"language\":\"core/1.11\",\"status\":\"ok\"}\n",
+        "stderr": "",
+        "expected": true,
+        "ok": true
+      },
+      {
+        "command": [
+          "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/matched-study-20261123/freeze/lobo",
+          "check",
+          "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/compact-study-20261124/validation/nominal/admission-3.lobo"
+        ],
+        "exit_code": 1,
+        "stdout": "{\"diagnostic\":{\"code\":\"compile.generic.inference\",\"message\":\"arguments do not determine every type parameter; supply explicit type arguments\",\"phase\":\"check\",\"range\":{\"end\":{\"byte\":284,\"character\":67,\"line\":6},\"start\":{\"byte\":278,\"character\":61,\"line\":6}},\"source\":\"/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/compact-study-20261124/validation/nominal/admission-3.lobo\",\"subject\":\"compact.nominal.case3.candidate\"},\"kind\":\"compile_error\",\"status\":\"error\"}\n",
+        "stderr": "",
+        "expected": false,
+        "ok": true
+      }
+    ],
+    "mutation": {
+      "build": {
+        "command": [
+          "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/matched-study-20261123/freeze/lobo",
+          "compile",
+          "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/compact-study-20261124/validation/nominal/mutant.lobo",
+          "-o",
+          "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/compact-study-20261124/validation/nominal/mutant"
+        ],
+        "exit_code": 0,
+        "stdout": "{\"artifact\":\"/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/compact-study-20261124/validation/nominal/mutant\",\"entries\":[\"compact.nominal.mutant.pick\",\"compact.nominal.mutant.p0\",\"compact.nominal.mutant.p1\",\"compact.nominal.mutant.p2\",\"compact.nominal.mutant.p3\",\"compact.nominal.mutant.p4\",\"compact.nominal.mutant.p5\",\"lobo.generic.8247c3de7c99f6dcd9c7d7f45d392a9c\"],\"format\":\"native\",\"status\":\"ok\"}\n",
+        "stderr": ""
+      },
+      "command": [
+        "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/compact-study-20261124/validation/nominal/mutant",
+        "--entry",
+        "compact.nominal.mutant.p0"
+      ],
+      "exit_code": 0,
+      "stdout": "{\"status\":\"ok\",\"kind\":\"value\",\"value\":{\"type\":\"I64\",\"value\":\"27\"}}\n",
+      "stderr": "",
+      "killed": true
+    }
+  },
+  {
+    "topic": "propagation",
+    "build": {
+      "command": [
+        "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/matched-study-20261123/freeze/lobo",
+        "compile",
+        "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/compact-study-20261124/validation/propagation/program.lobo",
+        "-o",
+        "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/compact-study-20261124/validation/propagation/program"
+      ],
+      "exit_code": 0,
+      "stdout": "{\"artifact\":\"/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/compact-study-20261124/validation/propagation/program\",\"entries\":[\"compact.propagation.produce\",\"compact.propagation.unpack\",\"compact.propagation.flow\",\"compact.propagation.scan\",\"compact.propagation.choose\",\"compact.propagation.p0\",\"compact.propagation.p1\",\"compact.propagation.p2\",\"compact.propagation.p3\",\"compact.propagation.p4\",\"compact.propagation.p5\"],\"format\":\"native\",\"status\":\"ok\"}\n",
+      "stderr": ""
+    },
+    "values": [
+      {
+        "route": "native",
+        "entry": 0,
+        "expected": 13,
+        "command": [
+          "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/compact-study-20261124/validation/propagation/program",
+          "--entry",
+          "compact.propagation.p0"
+        ],
+        "exit_code": 0,
+        "stdout": "{\"status\":\"ok\",\"kind\":\"value\",\"value\":{\"type\":\"I64\",\"value\":\"13\"}}\n",
+        "stderr": "",
+        "ok": true
+      },
+      {
+        "route": "eval",
+        "entry": 0,
+        "expected": 13,
+        "command": [
+          "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/matched-study-20261123/freeze/lobo",
+          "eval",
+          "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/compact-study-20261124/validation/propagation/program.lobo",
+          "--entry",
+          "compact.propagation.p0"
+        ],
+        "exit_code": 0,
+        "stdout": "{\"kind\":\"value\",\"status\":\"ok\",\"value\":{\"type\":\"I64\",\"value\":\"13\"}}\n",
+        "stderr": "",
+        "ok": true
+      },
+      {
+        "route": "native",
+        "entry": 1,
+        "expected": -31,
+        "command": [
+          "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/compact-study-20261124/validation/propagation/program",
+          "--entry",
+          "compact.propagation.p1"
+        ],
+        "exit_code": 0,
+        "stdout": "{\"status\":\"ok\",\"kind\":\"value\",\"value\":{\"type\":\"I64\",\"value\":\"-31\"}}\n",
+        "stderr": "",
+        "ok": true
+      },
+      {
+        "route": "eval",
+        "entry": 1,
+        "expected": -31,
+        "command": [
+          "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/matched-study-20261123/freeze/lobo",
+          "eval",
+          "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/compact-study-20261124/validation/propagation/program.lobo",
+          "--entry",
+          "compact.propagation.p1"
+        ],
+        "exit_code": 0,
+        "stdout": "{\"kind\":\"value\",\"status\":\"ok\",\"value\":{\"type\":\"I64\",\"value\":\"-31\"}}\n",
+        "stderr": "",
+        "ok": true
+      },
+      {
+        "route": "native",
+        "entry": 2,
+        "expected": 19,
+        "command": [
+          "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/compact-study-20261124/validation/propagation/program",
+          "--entry",
+          "compact.propagation.p2"
+        ],
+        "exit_code": 0,
+        "stdout": "{\"status\":\"ok\",\"kind\":\"value\",\"value\":{\"type\":\"I64\",\"value\":\"19\"}}\n",
+        "stderr": "",
+        "ok": true
+      },
+      {
+        "route": "eval",
+        "entry": 2,
+        "expected": 19,
+        "command": [
+          "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/matched-study-20261123/freeze/lobo",
+          "eval",
+          "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/compact-study-20261124/validation/propagation/program.lobo",
+          "--entry",
+          "compact.propagation.p2"
+        ],
+        "exit_code": 0,
+        "stdout": "{\"kind\":\"value\",\"status\":\"ok\",\"value\":{\"type\":\"I64\",\"value\":\"19\"}}\n",
+        "stderr": "",
+        "ok": true
+      },
+      {
+        "route": "native",
+        "entry": 3,
+        "expected": -31,
+        "command": [
+          "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/compact-study-20261124/validation/propagation/program",
+          "--entry",
+          "compact.propagation.p3"
+        ],
+        "exit_code": 0,
+        "stdout": "{\"status\":\"ok\",\"kind\":\"value\",\"value\":{\"type\":\"I64\",\"value\":\"-31\"}}\n",
+        "stderr": "",
+        "ok": true
+      },
+      {
+        "route": "eval",
+        "entry": 3,
+        "expected": -31,
+        "command": [
+          "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/matched-study-20261123/freeze/lobo",
+          "eval",
+          "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/compact-study-20261124/validation/propagation/program.lobo",
+          "--entry",
+          "compact.propagation.p3"
+        ],
+        "exit_code": 0,
+        "stdout": "{\"kind\":\"value\",\"status\":\"ok\",\"value\":{\"type\":\"I64\",\"value\":\"-31\"}}\n",
+        "stderr": "",
+        "ok": true
+      },
+      {
+        "route": "native",
+        "entry": 4,
+        "expected": 23,
+        "command": [
+          "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/compact-study-20261124/validation/propagation/program",
+          "--entry",
+          "compact.propagation.p4"
+        ],
+        "exit_code": 0,
+        "stdout": "{\"status\":\"ok\",\"kind\":\"value\",\"value\":{\"type\":\"I64\",\"value\":\"23\"}}\n",
+        "stderr": "",
+        "ok": true
+      },
+      {
+        "route": "eval",
+        "entry": 4,
+        "expected": 23,
+        "command": [
+          "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/matched-study-20261123/freeze/lobo",
+          "eval",
+          "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/compact-study-20261124/validation/propagation/program.lobo",
+          "--entry",
+          "compact.propagation.p4"
+        ],
+        "exit_code": 0,
+        "stdout": "{\"kind\":\"value\",\"status\":\"ok\",\"value\":{\"type\":\"I64\",\"value\":\"23\"}}\n",
+        "stderr": "",
+        "ok": true
+      },
+      {
+        "route": "native",
+        "entry": 5,
+        "expected": 20,
+        "command": [
+          "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/compact-study-20261124/validation/propagation/program",
+          "--entry",
+          "compact.propagation.p5"
+        ],
+        "exit_code": 0,
+        "stdout": "{\"status\":\"ok\",\"kind\":\"value\",\"value\":{\"type\":\"I64\",\"value\":\"20\"}}\n",
+        "stderr": "",
+        "ok": true
+      },
+      {
+        "route": "eval",
+        "entry": 5,
+        "expected": 20,
+        "command": [
+          "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/matched-study-20261123/freeze/lobo",
+          "eval",
+          "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/compact-study-20261124/validation/propagation/program.lobo",
+          "--entry",
+          "compact.propagation.p5"
+        ],
+        "exit_code": 0,
+        "stdout": "{\"kind\":\"value\",\"status\":\"ok\",\"value\":{\"type\":\"I64\",\"value\":\"20\"}}\n",
+        "stderr": "",
+        "ok": true
+      }
+    ],
+    "admissions": [
+      {
+        "command": [
+          "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/matched-study-20261123/freeze/lobo",
+          "check",
+          "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/compact-study-20261124/validation/propagation/admission-0.lobo"
+        ],
+        "exit_code": 0,
+        "stdout": "{\"actions\":{\"compact.propagation.case0.candidate\":[],\"compact.propagation.case0.choose\":[],\"compact.propagation.case0.flow\":[],\"compact.propagation.case0.produce\":[],\"compact.propagation.case0.scan\":[],\"compact.propagation.case0.status\":[],\"compact.propagation.case0.unpack\":[]},\"entries\":[\"compact.propagation.case0.produce\",\"compact.propagation.case0.unpack\",\"compact.propagation.case0.flow\",\"compact.propagation.case0.scan\",\"compact.propagation.case0.choose\",\"compact.propagation.case0.status\",\"compact.propagation.case0.candidate\"],\"language\":\"core/1.11\",\"status\":\"ok\"}\n",
+        "stderr": "",
+        "expected": true,
+        "ok": true
+      },
+      {
+        "command": [
+          "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/matched-study-20261123/freeze/lobo",
+          "check",
+          "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/compact-study-20261124/validation/propagation/admission-1.lobo"
+        ],
+        "exit_code": 1,
+        "stdout": "{\"diagnostic\":{\"code\":\"compile.try.contract\",\"message\":\"try is forbidden in contracts\",\"phase\":\"check\",\"range\":{\"end\":{\"byte\":552,\"character\":54,\"line\":7},\"start\":{\"byte\":538,\"character\":40,\"line\":7}},\"source\":\"/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/compact-study-20261124/validation/propagation/admission-1.lobo\",\"subject\":\"compact.propagation.case1.candidate\"},\"kind\":\"compile_error\",\"status\":\"error\"}\n",
+        "stderr": "",
+        "expected": false,
+        "ok": true
+      },
+      {
+        "command": [
+          "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/matched-study-20261123/freeze/lobo",
+          "check",
+          "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/compact-study-20261124/validation/propagation/admission-2.lobo"
+        ],
+        "exit_code": 0,
+        "stdout": "{\"actions\":{\"compact.propagation.case2.candidate\":[],\"compact.propagation.case2.choose\":[],\"compact.propagation.case2.flow\":[],\"compact.propagation.case2.produce\":[],\"compact.propagation.case2.scan\":[],\"compact.propagation.case2.try\":[],\"compact.propagation.case2.unpack\":[]},\"entries\":[\"compact.propagation.case2.produce\",\"compact.propagation.case2.unpack\",\"compact.propagation.case2.flow\",\"compact.propagation.case2.scan\",\"compact.propagation.case2.choose\",\"compact.propagation.case2.try\",\"compact.propagation.case2.candidate\"],\"language\":\"core/1.11\",\"status\":\"ok\"}\n",
+        "stderr": "",
+        "expected": true,
+        "ok": true
+      },
+      {
+        "command": [
+          "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/matched-study-20261123/freeze/lobo",
+          "check",
+          "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/compact-study-20261124/validation/propagation/admission-3.lobo"
+        ],
+        "exit_code": 1,
+        "stdout": "{\"diagnostic\":{\"code\":\"compile.try.error\",\"message\":\"try error payload types must match exactly\",\"phase\":\"check\",\"range\":{\"end\":{\"byte\":585,\"character\":87,\"line\":7},\"start\":{\"byte\":571,\"character\":73,\"line\":7}},\"source\":\"/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/compact-study-20261124/validation/propagation/admission-3.lobo\",\"subject\":\"compact.propagation.case3.candidate\"},\"kind\":\"compile_error\",\"status\":\"error\"}\n",
+        "stderr": "",
+        "expected": false,
+        "ok": true
+      }
+    ],
+    "mutation": {
+      "build": {
+        "command": [
+          "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/matched-study-20261123/freeze/lobo",
+          "compile",
+          "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/compact-study-20261124/validation/propagation/mutant.lobo",
+          "-o",
+          "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/compact-study-20261124/validation/propagation/mutant"
+        ],
+        "exit_code": 0,
+        "stdout": "{\"artifact\":\"/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/compact-study-20261124/validation/propagation/mutant\",\"entries\":[\"compact.propagation.mutant.produce\",\"compact.propagation.mutant.unpack\",\"compact.propagation.mutant.flow\",\"compact.propagation.mutant.scan\",\"compact.propagation.mutant.choose\",\"compact.propagation.mutant.p0\",\"compact.propagation.mutant.p1\",\"compact.propagation.mutant.p2\",\"compact.propagation.mutant.p3\",\"compact.propagation.mutant.p4\",\"compact.propagation.mutant.p5\"],\"format\":\"native\",\"status\":\"ok\"}\n",
+        "stderr": ""
+      },
+      "command": [
+        "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/compact-study-20261124/validation/propagation/mutant",
+        "--entry",
+        "compact.propagation.mutant.p0"
+      ],
+      "exit_code": 0,
+      "stdout": "{\"status\":\"ok\",\"kind\":\"value\",\"value\":{\"type\":\"I64\",\"value\":\"14\"}}\n",
+      "stderr": "",
+      "killed": true
+    }
+  },
+  {
+    "topic": "contracts",
+    "build": {
+      "command": [
+        "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/matched-study-20261123/freeze/lobo",
+        "compile",
+        "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/compact-study-20261124/validation/contracts/program.lobo",
+        "-o",
+        "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/compact-study-20261124/validation/contracts/program"
+      ],
+      "exit_code": 0,
+      "stdout": "{\"artifact\":\"/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/compact-study-20261124/validation/contracts/program\",\"entries\":[\"compact.contracts.add\",\"compact.contracts.post\",\"compact.contracts.p0\",\"compact.contracts.p1\",\"compact.contracts.p2\",\"compact.contracts.p3\",\"compact.contracts.p4\",\"compact.contracts.p5\"],\"format\":\"native\",\"status\":\"ok\"}\n",
+      "stderr": ""
+    },
+    "values": [
+      {
+        "route": "native",
+        "entry": 0,
+        "expected": 13,
+        "command": [
+          "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/compact-study-20261124/validation/contracts/program",
+          "--entry",
+          "compact.contracts.p0"
+        ],
+        "exit_code": 0,
+        "stdout": "{\"status\":\"ok\",\"kind\":\"value\",\"value\":{\"type\":\"I64\",\"value\":\"13\"}}\n",
+        "stderr": "",
+        "ok": true
+      },
+      {
+        "route": "eval",
+        "entry": 0,
+        "expected": 13,
+        "command": [
+          "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/matched-study-20261123/freeze/lobo",
+          "eval",
+          "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/compact-study-20261124/validation/contracts/program.lobo",
+          "--entry",
+          "compact.contracts.p0"
+        ],
+        "exit_code": 0,
+        "stdout": "{\"kind\":\"value\",\"status\":\"ok\",\"value\":{\"type\":\"I64\",\"value\":\"13\"}}\n",
+        "stderr": "",
+        "ok": true
+      },
+      {
+        "route": "native",
+        "entry": 1,
+        "expected": 27,
+        "command": [
+          "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/compact-study-20261124/validation/contracts/program",
+          "--entry",
+          "compact.contracts.p1"
+        ],
+        "exit_code": 0,
+        "stdout": "{\"status\":\"ok\",\"kind\":\"value\",\"value\":{\"type\":\"I64\",\"value\":\"27\"}}\n",
+        "stderr": "",
+        "ok": true
+      },
+      {
+        "route": "eval",
+        "entry": 1,
+        "expected": 27,
+        "command": [
+          "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/matched-study-20261123/freeze/lobo",
+          "eval",
+          "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/compact-study-20261124/validation/contracts/program.lobo",
+          "--entry",
+          "compact.contracts.p1"
+        ],
+        "exit_code": 0,
+        "stdout": "{\"kind\":\"value\",\"status\":\"ok\",\"value\":{\"type\":\"I64\",\"value\":\"27\"}}\n",
+        "stderr": "",
+        "ok": true
+      },
+      {
+        "route": "native",
+        "entry": 2,
+        "expected": 17,
+        "command": [
+          "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/compact-study-20261124/validation/contracts/program",
+          "--entry",
+          "compact.contracts.p2"
+        ],
+        "exit_code": 0,
+        "stdout": "{\"status\":\"ok\",\"kind\":\"value\",\"value\":{\"type\":\"I64\",\"value\":\"17\"}}\n",
+        "stderr": "",
+        "ok": true
+      },
+      {
+        "route": "eval",
+        "entry": 2,
+        "expected": 17,
+        "command": [
+          "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/matched-study-20261123/freeze/lobo",
+          "eval",
+          "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/compact-study-20261124/validation/contracts/program.lobo",
+          "--entry",
+          "compact.contracts.p2"
+        ],
+        "exit_code": 0,
+        "stdout": "{\"kind\":\"value\",\"status\":\"ok\",\"value\":{\"type\":\"I64\",\"value\":\"17\"}}\n",
+        "stderr": "",
+        "ok": true
+      },
+      {
+        "route": "native",
+        "entry": 3,
+        "expected": 12,
+        "command": [
+          "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/compact-study-20261124/validation/contracts/program",
+          "--entry",
+          "compact.contracts.p3"
+        ],
+        "exit_code": 0,
+        "stdout": "{\"status\":\"ok\",\"kind\":\"value\",\"value\":{\"type\":\"I64\",\"value\":\"12\"}}\n",
+        "stderr": "",
+        "ok": true
+      },
+      {
+        "route": "eval",
+        "entry": 3,
+        "expected": 12,
+        "command": [
+          "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/matched-study-20261123/freeze/lobo",
+          "eval",
+          "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/compact-study-20261124/validation/contracts/program.lobo",
+          "--entry",
+          "compact.contracts.p3"
+        ],
+        "exit_code": 0,
+        "stdout": "{\"kind\":\"value\",\"status\":\"ok\",\"value\":{\"type\":\"I64\",\"value\":\"12\"}}\n",
+        "stderr": "",
+        "ok": true
+      },
+      {
+        "route": "native",
+        "entry": 4,
+        "expected": 18,
+        "command": [
+          "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/compact-study-20261124/validation/contracts/program",
+          "--entry",
+          "compact.contracts.p4"
+        ],
+        "exit_code": 0,
+        "stdout": "{\"status\":\"ok\",\"kind\":\"value\",\"value\":{\"type\":\"I64\",\"value\":\"18\"}}\n",
+        "stderr": "",
+        "ok": true
+      },
+      {
+        "route": "eval",
+        "entry": 4,
+        "expected": 18,
+        "command": [
+          "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/matched-study-20261123/freeze/lobo",
+          "eval",
+          "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/compact-study-20261124/validation/contracts/program.lobo",
+          "--entry",
+          "compact.contracts.p4"
+        ],
+        "exit_code": 0,
+        "stdout": "{\"kind\":\"value\",\"status\":\"ok\",\"value\":{\"type\":\"I64\",\"value\":\"18\"}}\n",
+        "stderr": "",
+        "ok": true
+      },
+      {
+        "route": "native",
+        "entry": 5,
+        "expected": 29,
+        "command": [
+          "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/compact-study-20261124/validation/contracts/program",
+          "--entry",
+          "compact.contracts.p5"
+        ],
+        "exit_code": 0,
+        "stdout": "{\"status\":\"ok\",\"kind\":\"value\",\"value\":{\"type\":\"I64\",\"value\":\"29\"}}\n",
+        "stderr": "",
+        "ok": true
+      },
+      {
+        "route": "eval",
+        "entry": 5,
+        "expected": 29,
+        "command": [
+          "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/matched-study-20261123/freeze/lobo",
+          "eval",
+          "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/compact-study-20261124/validation/contracts/program.lobo",
+          "--entry",
+          "compact.contracts.p5"
+        ],
+        "exit_code": 0,
+        "stdout": "{\"kind\":\"value\",\"status\":\"ok\",\"value\":{\"type\":\"I64\",\"value\":\"29\"}}\n",
+        "stderr": "",
+        "ok": true
+      }
+    ],
+    "admissions": [
+      {
+        "command": [
+          "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/matched-study-20261123/freeze/lobo",
+          "check",
+          "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/compact-study-20261124/validation/contracts/admission-0.lobo"
+        ],
+        "exit_code": 0,
+        "stdout": "{\"actions\":{\"compact.contracts.case0.add\":[],\"compact.contracts.case0.candidate\":[],\"compact.contracts.case0.post\":[]},\"entries\":[\"compact.contracts.case0.add\",\"compact.contracts.case0.post\",\"compact.contracts.case0.candidate\"],\"language\":\"core/1.11\",\"status\":\"ok\"}\n",
+        "stderr": "",
+        "expected": true,
+        "ok": true
+      },
+      {
+        "command": [
+          "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/matched-study-20261123/freeze/lobo",
+          "check",
+          "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/compact-study-20261124/validation/contracts/admission-1.lobo"
+        ],
+        "exit_code": 1,
+        "stdout": "{\"diagnostic\":{\"code\":\"compile.type.mismatch\",\"message\":\"types must match exactly\",\"phase\":\"check\",\"range\":{\"end\":{\"byte\":189,\"character\":37,\"line\":3},\"start\":{\"byte\":181,\"character\":29,\"line\":3}},\"source\":\"/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/compact-study-20261124/validation/contracts/admission-1.lobo\",\"subject\":\"compact.contracts.case1.candidate\"},\"kind\":\"compile_error\",\"status\":\"error\"}\n",
+        "stderr": "",
+        "expected": false,
+        "ok": true
+      },
+      {
+        "command": [
+          "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/matched-study-20261123/freeze/lobo",
+          "check",
+          "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/compact-study-20261124/validation/contracts/admission-2.lobo"
+        ],
+        "exit_code": 1,
+        "stdout": "{\"diagnostic\":{\"code\":\"compile.action.contract\",\"message\":\"contracts require pure callees\",\"phase\":\"check\",\"range\":{\"end\":{\"byte\":264,\"character\":112,\"line\":3},\"start\":{\"byte\":255,\"character\":103,\"line\":3}},\"source\":\"/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/compact-study-20261124/validation/contracts/admission-2.lobo\",\"subject\":\"compact.contracts.case2.candidate\"},\"kind\":\"compile_error\",\"status\":\"error\"}\n",
+        "stderr": "",
+        "expected": false,
+        "ok": true
+      },
+      {
+        "command": [
+          "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/matched-study-20261123/freeze/lobo",
+          "check",
+          "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/compact-study-20261124/validation/contracts/admission-3.lobo"
+        ],
+        "exit_code": 0,
+        "stdout": "{\"actions\":{\"compact.contracts.case3.add\":[],\"compact.contracts.case3.candidate\":[],\"compact.contracts.case3.post\":[]},\"entries\":[\"compact.contracts.case3.add\",\"compact.contracts.case3.post\",\"compact.contracts.case3.candidate\"],\"language\":\"core/1.11\",\"status\":\"ok\"}\n",
+        "stderr": "",
+        "expected": true,
+        "ok": true
+      }
+    ],
+    "mutation": {
+      "build": {
+        "command": [
+          "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/matched-study-20261123/freeze/lobo",
+          "compile",
+          "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/compact-study-20261124/validation/contracts/mutant.lobo",
+          "-o",
+          "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/compact-study-20261124/validation/contracts/mutant"
+        ],
+        "exit_code": 0,
+        "stdout": "{\"artifact\":\"/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/compact-study-20261124/validation/contracts/mutant\",\"entries\":[\"compact.contracts.mutant.add\",\"compact.contracts.mutant.post\",\"compact.contracts.mutant.p0\",\"compact.contracts.mutant.p1\",\"compact.contracts.mutant.p2\",\"compact.contracts.mutant.p3\",\"compact.contracts.mutant.p4\",\"compact.contracts.mutant.p5\"],\"format\":\"native\",\"status\":\"ok\"}\n",
+        "stderr": ""
+      },
+      "command": [
+        "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/compact-study-20261124/validation/contracts/mutant",
+        "--entry",
+        "compact.contracts.mutant.p0"
+      ],
+      "exit_code": 0,
+      "stdout": "{\"status\":\"ok\",\"kind\":\"value\",\"value\":{\"type\":\"I64\",\"value\":\"14\"}}\n",
+      "stderr": "",
+      "killed": true
+    }
+  }
+]

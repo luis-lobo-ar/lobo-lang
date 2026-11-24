@@ -1,0 +1,12 @@
+{
+  "format": "lobo-identities/0.1",
+  "identities": {
+    "module": "compact.ranges.mutant",
+    "p0": "compact.ranges.mutant.p0",
+    "p1": "compact.ranges.mutant.p1",
+    "p2": "compact.ranges.mutant.p2",
+    "p3": "compact.ranges.mutant.p3",
+    "p4": "compact.ranges.mutant.p4",
+    "p5": "compact.ranges.mutant.p5"
+  }
+}

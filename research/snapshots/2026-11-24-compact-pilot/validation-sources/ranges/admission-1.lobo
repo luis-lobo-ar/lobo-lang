@@ -1,0 +1,2 @@
+module compact;
+fn candidate()->I64 {Text::length(Bytes::concat(Bytes::empty(),Bytes::empty()))}

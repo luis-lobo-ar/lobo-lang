@@ -1,0 +1,14 @@
+{
+  "format": "lobo-identities/0.1",
+  "identities": {
+    "module": "compact.propagation.case2",
+    "Attempt": "compact.propagation.case2.Attempt",
+    "produce": "compact.propagation.case2.produce",
+    "unpack": "compact.propagation.case2.unpack",
+    "flow": "compact.propagation.case2.flow",
+    "scan": "compact.propagation.case2.scan",
+    "choose": "compact.propagation.case2.choose",
+    "try": "compact.propagation.case2.try",
+    "candidate": "compact.propagation.case2.candidate"
+  }
+}

@@ -1,0 +1,2 @@
+module compact;
+fn candidate()->Bool {Text::valid("ready")}

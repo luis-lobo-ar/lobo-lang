@@ -1,0 +1,2 @@
+module compact;
+fn candidate()->Text {Text::concat("a","z")}

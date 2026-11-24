@@ -1,0 +1,7 @@
+module compact;
+fn p0()->I64 {Bytes::length(Text::bytes("KñΩS"))+Text::length("KñΩS")}
+fn p1()->I64 {Text::at("KñΩS",2)}
+fn p2()->I64 {Bytes::at(Bytes::slice(Text::bytes("KñΩS"),2,2),0)}
+fn p3()->I64 {Text::length(Text::slice("KñΩS",1,2))}
+fn p4()->I64 {Bytes::length(Bytes::concat(Text::bytes("uv"),Text::bytes("w")))}
+fn p5()->I64 {if Text::valid(Bytes::push(Bytes::empty(),254)) {1} else {0}}

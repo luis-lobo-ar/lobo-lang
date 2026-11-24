@@ -1,0 +1,1 @@
+module probe; fn candidate(arg0:List<I64>)->Bytes {Bytes::from_list(arg0)}

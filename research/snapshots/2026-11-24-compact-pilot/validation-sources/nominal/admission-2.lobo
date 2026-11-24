@@ -1,0 +1,7 @@
+module compact;
+record Crate<T> {item:T}
+record Pair {a:I64,b:I64}
+variant Check<T> {Waiting,Have(T)}
+fn pick(status:Check<I64>)->I64 {match status {Waiting=>-9,Have(item)=>item*2}}
+fn identity<T>(value:T)->T {value}
+fn candidate()->Crate<Bool> {Crate {item:true}}

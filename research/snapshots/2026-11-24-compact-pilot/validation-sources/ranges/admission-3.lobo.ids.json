@@ -1,0 +1,7 @@
+{
+  "format": "lobo-identities/0.1",
+  "identities": {
+    "module": "compact.ranges.case3",
+    "candidate": "compact.ranges.case3.candidate"
+  }
+}

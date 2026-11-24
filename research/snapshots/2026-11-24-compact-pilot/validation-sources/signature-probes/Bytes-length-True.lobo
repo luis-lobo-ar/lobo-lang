@@ -1,0 +1,1 @@
+module probe; fn candidate(arg0:Bytes)->I64 {Bytes::length(arg0)}

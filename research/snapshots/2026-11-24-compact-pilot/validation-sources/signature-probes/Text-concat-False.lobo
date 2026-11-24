@@ -1,0 +1,1 @@
+module probe; fn candidate(arg0:Bool,arg1:Text)->Text {Text::concat(arg0,arg1)}

@@ -1,0 +1,5 @@
+# Keep registered inputs and raw terminal evidence byte for byte.
+registration/** -whitespace
+validation-sources/** -whitespace
+development/*.txt -whitespace
+development/*.log -whitespace

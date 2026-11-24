@@ -1,0 +1,10 @@
+{
+  "format": "lobo-identities/0.1",
+  "identities": {
+    "module": "compact.contracts.case2",
+    "add": "compact.contracts.case2.add",
+    "post": "compact.contracts.case2.post",
+    "observe": "compact.contracts.case2.observe",
+    "candidate": "compact.contracts.case2.candidate"
+  }
+}

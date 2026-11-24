@@ -1,0 +1,7 @@
+{
+  "format": "lobo-identities/0.1",
+  "identities": {
+    "module": "compact.probe",
+    "candidate": "compact.probe.candidate"
+  }
+}

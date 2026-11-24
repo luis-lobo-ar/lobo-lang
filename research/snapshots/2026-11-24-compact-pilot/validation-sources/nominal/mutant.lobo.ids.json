@@ -1,0 +1,17 @@
+{
+  "format": "lobo-identities/0.1",
+  "identities": {
+    "module": "compact.nominal.mutant",
+    "Crate": "compact.nominal.mutant.Crate",
+    "Pair": "compact.nominal.mutant.Pair",
+    "Check": "compact.nominal.mutant.Check",
+    "pick": "compact.nominal.mutant.pick",
+    "identity": "compact.nominal.mutant.identity",
+    "p0": "compact.nominal.mutant.p0",
+    "p1": "compact.nominal.mutant.p1",
+    "p2": "compact.nominal.mutant.p2",
+    "p3": "compact.nominal.mutant.p3",
+    "p4": "compact.nominal.mutant.p4",
+    "p5": "compact.nominal.mutant.p5"
+  }
+}

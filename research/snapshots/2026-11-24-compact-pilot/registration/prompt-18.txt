@@ -1,0 +1,40 @@
+Source-only Lobo comprehension. No tools, execution, editing or delegation.
+Use only the supplied task directory. Read TASK.txt, GUIDE.txt and the model/algorithm files. Change only the listed editable files. The app and models are trusted read-only adapters. No dependencies, network, file IO, subprocesses or unsafe code in the algorithm. Standard in-memory collections are allowed. Host-injected instruction/skill reads are permitted when required, but other trials, repository code, private graders and reference solutions are outside scope. Do not inspect the compiler binary or its parent directory. Use python3 check.py to submit a visible check; the host compiles and grades a snapshot, at most six submissions. No direct compiler/test invocation is needed. Initial stubs may compile but are deliberately incorrect. Use checks before and after editing. Build artifacts belong to the host. End with a concise result. All inputs and arithmetic fit signed 64-bit values under the stated bounds; results must preserve exact integers. No output or external side effects in run().
+
+Lobo 1.11.2 is a native language. There is no projection/interpreter step. model.lobo declares the immutable DTOs. logic.lobo and its adjacent logic.lobo.ids.json are editable; app/model/util sources are fixed. Each block returns its final expression without a trailing semicolon. Use fn f(x:I64)->I64 {x+1}, let x=...; if condition {a} else {b}, &&/||/!, checked I64 arithmetic, and ==/!= comparisons. Names cannot shadow other visible names or function/type declarations. No assignment, break, continue, return keyword or for statement.
+Records: record Pair {left:I64,right:I64}; Pair {left:1,right:2}; pair.left; Pair {...pair,left:3}. Variants: match event {Credit(n)=> expression,Debit(n)=> expression,Lock=> expression,Unlock=> expression}. Every case must occur. Expected types infer case owners. Parenthesize complex match subjects: match (cursor.best) {...}.
+Lists: List<T>, List::empty<I64>(), List::prepend(value,list), List::length(list), List::head(list), List::tail(list). Head/tail require nonempty. Prepend reverses order; the supplied util.reverse<T> restores order and may infer T. Lists are persistent; no indexing, append or mutation operation.
+Counted loops carry one typed value: fold(i in n,total:I64=0) {total+i}. The index runs 0..n-1; zero iterations return the initial state. For multiple variables, carry a record: fold(i in List::length(items),state:Cursor=Cursor {pending:items,total:0}) {Cursor {pending:List::tail(state.pending),total:state.total+List::head(state.pending)}}. State-driven loop: while(state:State=initial; condition_using_state) {new_state}. To stop early, carry a Bool and test it in the loop condition. Finite execution fuel/heap apply; do not use deep recursive traversal.
+Bytes: Bytes::length(data), Bytes::at(data,index) returns 0..255, Bytes::slice(data,start,count), Bytes::empty(), Bytes::push(data,value). Guard bounds before at/slice. List<Bytes> is supported. Remainder uses %, division truncates toward zero. Ordinary expected failures are values in the declared DTO, not runtime faults.
+New functions/records/variants need identity entries. Existing IDs must stay stable. After adding declarations, run the explicit authoring command below (it only updates the managed identity map). Then use python3 check.py.
+
+/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/matched-study-20261123/freeze/lobo identities sync logic.lobo --source model.lobo --source util.lobo
+
+The host supplies correct stable identity metadata. RESPONSE CONTRACT v2. Return exactly one JSON object, without Markdown. All objects in this profile are closed: every required field must occur, unknown fields and duplicate keys are invalid. Integers use integer tokens, never 1.0 or true. Put any explanation in the optional top-level notes string. Shape validity and semantic correctness are separate checks. Input domain bounds in the task still apply.
+{"additional_properties": false, "kind": "object", "optional": {"notes": {"kind": "string"}}, "required": {"admissions": {"items": {"kind": "boolean"}, "kind": "array", "length": 4}, "predictions": {"items": {"kind": "integer", "rule": "JSON integer token, not float or boolean"}, "kind": "array", "length": 6}}}
+
+Predict I64 results of p0..p5 in order as six JSON integers. Classify four admission fragments as static-check acceptance booleans, not runtime success or contract proof. Keep shared types/helpers, remove p0..p5, and append each fragment independently. No fragment sees another. No extra input values are required.
+PROGRAM:
+module compact;
+record Crate<T> {item:T}
+record Pair {a:I64,b:I64}
+variant Check<T> {Waiting,Have(T)}
+fn pick(status:Check<I64>)->I64 {match status {Waiting=>-9,Have(item)=>item*2}}
+fn identity<T>(value:T)->T {value}
+fn p0()->I64 {let start=Pair {a:9,b:11};let finish=Pair {...start,b:17};finish.a+finish.b}
+fn p1()->I64 {let boxed=Crate {item:13};boxed.item}
+fn p2()->I64 {pick(Have(7))}
+fn p3()->I64 {pick(Waiting)}
+fn p4()->I64 {let status:Check<Crate<I64>>=Have(Crate {item:6});match status {Waiting=>0,Have(boxed)=>boxed.item+3}}
+fn p5()->I64 {let boxed=identity(Crate {item:19});boxed.item}
+
+ADMISSION FRAGMENTS:
+CASE 0
+fn candidate()->Check<Text> {Waiting()}
+CASE 1
+record Twin {a:I64,b:I64} fn candidate()->Pair {let value=Twin {a:2,b:8};Pair {...value,b:3}}
+CASE 2
+fn candidate()->Crate<Bool> {Crate {item:true}}
+CASE 3
+fn make<T>()->Check<T> {Waiting} fn candidate()->Check<I64> {make()}
+Return only the requested JSON object.

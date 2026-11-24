@@ -1,0 +1,18 @@
+{
+  "format": "lobo-identities/0.1",
+  "identities": {
+    "module": "compact.propagation",
+    "Attempt": "compact.propagation.Attempt",
+    "produce": "compact.propagation.produce",
+    "unpack": "compact.propagation.unpack",
+    "flow": "compact.propagation.flow",
+    "scan": "compact.propagation.scan",
+    "choose": "compact.propagation.choose",
+    "p0": "compact.propagation.p0",
+    "p1": "compact.propagation.p1",
+    "p2": "compact.propagation.p2",
+    "p3": "compact.propagation.p3",
+    "p4": "compact.propagation.p4",
+    "p5": "compact.propagation.p5"
+  }
+}
