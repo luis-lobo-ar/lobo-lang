@@ -1,0 +1,32 @@
+module logic;
+use model {Summary,Job};
+use util {reverse};
+variant Pick {None,Some(Job)}
+record Scan {pending:List<I64>,yes:Bool}
+record Search {pending:List<Job>,best:Pick}
+record State {done:List<I64>,remaining:I64,stopped:Bool}
+fn contains(items:List<I64>,value:I64)->Bool {
+ let final=fold(i in List::length(items),cursor:Scan=Scan {pending:items,yes:false}) {Scan {pending:List::tail(cursor.pending),yes:cursor.yes || List::head(cursor.pending)==value}};
+ final.yes
+}
+fn available(job:Job,done:List<I64>)->Bool {
+ let final=fold(i in List::length(job.deps),cursor:Scan=Scan {pending:job.deps,yes:true}) {Scan {pending:List::tail(cursor.pending),yes:cursor.yes && contains(done,List::head(cursor.pending))}};
+ final.yes
+}
+fn affordable(cost:I64,remaining:I64)->Bool {cost<=remaining}
+fn select_job(jobs:List<Job>,done:List<I64>,remaining:I64)->Pick {
+ let final=fold(i in List::length(jobs),cursor:Search=Search {pending:jobs,best:None}) {
+  let item=List::head(cursor.pending);
+  let best=if contains(done,item.id) || !available(item,done) || !affordable(item.cost,remaining) {cursor.best} else {
+   match (cursor.best) {None=> Pick::Some(item),Some(old)=> if item.id<old.id {Pick::Some(item)} else {cursor.best}}
+  };
+  Search {pending:List::tail(cursor.pending),best:best}
+ };
+ final.best
+}
+fn run(jobs:List<Job>,budget:I64)->Summary {
+ let final=while(state:State=State {done:List::empty<I64>(),remaining:budget,stopped:false};!state.stopped) {
+  match select_job(jobs,state.done,state.remaining) {None=> State {...state,stopped:true},Some(job)=> State {...state,done:List::prepend(job.id,state.done),remaining:state.remaining-job.cost}}
+ };
+ Summary {order:reverse(final.done),spent:budget-final.remaining,blocked:List::length(jobs)-List::length(final.done)}
+}

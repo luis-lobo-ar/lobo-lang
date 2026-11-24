@@ -1,0 +1,4 @@
+module questions;
+fn guarded(value:I64)->I64 requires {value>=0} ensures {result>=value} {value+4}
+fn consistent(value:I64)->I64 ensures {result==value+4} {value+4}
+fn candidate()->I64 ensures {false} {1}

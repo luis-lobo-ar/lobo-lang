@@ -1,0 +1,5 @@
+# Preserve raw registration/source snapshots and terminal logs byte for byte.
+registration/** -whitespace
+validation-sources/** -whitespace
+development/*.txt -whitespace
+development/*.log -whitespace

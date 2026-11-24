@@ -5,6 +5,12 @@ Use the GitHub account luis-lobo-ar for this repository. Commit author and commi
 active gh account may belong to another project. Keep user-facing examples on the lobo CLI. Cargo commands
 belong in compiler build/test instructions. Preserve frozen research documents and fixtures.
 
+The user selected decision 0067: fix the response contract, then test reference presence and graph
+presentation separately on fresh questions. Register all84 assignments before calls; use only additive
+learning-study code. Keep product1.11.2, the existing reference/graph, old drivers/fixtures/scores and all
+paper pins frozen. Strict format and semantics remain separate outcomes; no projection/retry/replacement.
+Retain every result and unknown, then stop at this three-stage pilot. See decision0067 for the fixed scope.
+
 Decision 0066 is complete: 72 fresh-question attempts, four context arms, Luna/high then low. Each arm
 accepts 12/18; token savings from deduplication are observed, comprehension improvement is not. Read
 research/context-factorial-study-2026-11-23.md before interpreting scores: seven items depend on an

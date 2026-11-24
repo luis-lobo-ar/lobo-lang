@@ -1,0 +1,17 @@
+{
+  "format": "lobo-identities/0.1",
+  "identities": {
+    "module": "study.ledger.app",
+    "model.Summary": "study.ledger.Summary",
+    "logic.run": "study.ledger.run",
+    "model.Event": "study.ledger.Event",
+    "SumCursor": "study.ledger.app.SumCursor",
+    "FrameCursor": "study.ledger.app.FrameCursor",
+    "sum_list": "study.ledger.app.sum_list",
+    "sum_bytes": "study.ledger.app.sum_bytes",
+    "sum_frames": "study.ledger.app.sum_frames",
+    "digest_summary": "study.ledger.app.digest_summary",
+    "entry": "study.ledger.entry",
+    "bench": "study.ledger.bench"
+  }
+}

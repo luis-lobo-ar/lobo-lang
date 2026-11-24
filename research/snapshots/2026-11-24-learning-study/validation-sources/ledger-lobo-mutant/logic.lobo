@@ -1,0 +1,20 @@
+module logic;
+use model {Summary,Event};
+use util {reverse};
+record State {balance:I64,rejected:I64,peak:I64,locked:Bool,audit:List<I64>}
+record Cursor {pending:List<Event>,state:State}
+fn permitted(value:I64)->Bool {value>=1 && value<=83}
+fn transition(state:State,event:Event)->State {
+ let next=match event {
+  Credit(amount)=> if permitted(amount) {State {...state,balance:state.balance+amount }} else {State {...state,rejected:state.rejected+1}},
+  Debit(amount)=> if !permitted(amount) || state.locked || amount>state.balance {State {...state,rejected:state.rejected+1}} else {State {...state,balance:state.balance-amount }},
+  Lock=> State {...state,locked:true}, Unlock=> State {...state,locked:false}
+ };
+ State {...next,peak:if next.balance>state.peak {next.balance} else {state.peak},audit:List::prepend(next.balance,state.audit)}
+}
+fn run(events:List<Event>,initial:I64)->Summary {
+ let final=fold(i in List::length(events),cursor:Cursor=Cursor {pending:events,state:State {balance:initial,rejected:0,peak:initial,locked:false,audit:List::empty<I64>()}}) {
+  Cursor {pending:List::tail(cursor.pending),state:transition(cursor.state,List::head(cursor.pending))}
+ };
+ Summary {balance:final.state.balance,rejected:final.state.rejected,peak:final.state.peak,audit:reverse(final.state.audit)}
+}

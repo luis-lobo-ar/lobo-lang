@@ -1,0 +1,4 @@
+module questions;
+record Cursor { pending: List<I64>, total: I64 }
+record State { index: I64, total: I64 }
+fn candidate()->I64 {while(state:I64=0;false) {1/0}}

@@ -1,0 +1,11 @@
+module app;
+use model {Summary};
+use logic {run};
+record SumCursor {pending:List<I64>,total:I64}
+record FrameCursor {pending:List<Bytes>,total:I64}
+fn sum_list(items:List<I64>)->I64 {let final=fold(i in List::length(items),state:SumCursor=SumCursor {pending:items,total:0}) {SumCursor {pending:List::tail(state.pending),total:state.total+List::head(state.pending)}}; final.total}
+fn sum_bytes(data:Bytes)->I64 {fold(i in Bytes::length(data),total:I64=0) {total+Bytes::at(data,i)}}
+fn sum_frames(items:List<Bytes>)->I64 {let final=fold(i in List::length(items),state:FrameCursor=FrameCursor {pending:items,total:0}) {FrameCursor {pending:List::tail(state.pending),total:state.total+Bytes::length(List::head(state.pending))+sum_bytes(List::head(state.pending))}}; final.total}
+fn digest_summary(value:Summary)->I64 {value.consumed+value.error+sum_frames(value.frames)}
+fn entry(data:Bytes,limit:I64)->Summary {logic.run(data,limit)}
+fn bench(data:Bytes,limit:I64,repeats:I64)->I64 {fold(i in repeats,total:I64=0) {total+digest_summary(logic.run(data,limit+i%3))}}

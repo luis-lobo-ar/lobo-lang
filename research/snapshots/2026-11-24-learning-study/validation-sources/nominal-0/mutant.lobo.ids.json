@@ -1,0 +1,17 @@
+{
+  "format": "lobo-identities/0.1",
+  "identities": {
+    "module": "learning.nominal.0.mutant",
+    "Box": "learning.nominal.0.mutant.Box",
+    "Duo": "learning.nominal.0.mutant.Duo",
+    "Maybe": "learning.nominal.0.mutant.Maybe",
+    "take": "learning.nominal.0.mutant.take",
+    "identity": "learning.nominal.0.mutant.identity",
+    "p0": "learning.nominal.0.mutant.p0",
+    "p1": "learning.nominal.0.mutant.p1",
+    "p2": "learning.nominal.0.mutant.p2",
+    "p3": "learning.nominal.0.mutant.p3",
+    "p4": "learning.nominal.0.mutant.p4",
+    "p5": "learning.nominal.0.mutant.p5"
+  }
+}

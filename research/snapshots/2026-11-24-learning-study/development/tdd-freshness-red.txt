@@ -1,0 +1,13 @@
+........F.
+======================================================================
+FAIL: test_schedule_is_bounded_balanced_and_stages_are_separate (test_learning.LearningTests.test_schedule_is_bounded_balanced_and_stages_are_separate)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/matched-study/test_learning.py", line 76, in test_schedule_is_bounded_balanced_and_stages_are_separate
+    self.assertTrue(all(a['source'] not in old for a in s.corpus.micro(family,1)['admissions']))
+AssertionError: False is not true
+
+----------------------------------------------------------------------
+Ran 10 tests in 0.007s
+
+FAILED (failures=1)

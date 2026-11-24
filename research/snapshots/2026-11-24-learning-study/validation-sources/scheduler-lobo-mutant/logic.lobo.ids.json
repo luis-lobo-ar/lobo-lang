@@ -1,0 +1,18 @@
+{
+  "format": "lobo-identities/0.1",
+  "identities": {
+    "module": "study.scheduler.logic",
+    "model.Summary": "study.scheduler.Summary",
+    "util.reverse": "study.util.reverse",
+    "model.Job": "study.scheduler.Job",
+    "Pick": "study.scheduler.Pick",
+    "Scan": "study.scheduler.Scan",
+    "Search": "study.scheduler.Search",
+    "State": "study.scheduler.State",
+    "contains": "study.scheduler.contains",
+    "available": "study.scheduler.ready",
+    "affordable": "study.scheduler.fits",
+    "select_job": "study.scheduler.choose",
+    "run": "study.scheduler.run"
+  }
+}

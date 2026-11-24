@@ -1,0 +1,12 @@
+{
+  "format": "lobo-identities/0.1",
+  "identities": {
+    "module": "learning.nominal.0.admission3",
+    "Box": "learning.nominal.0.admission3.Box",
+    "Duo": "learning.nominal.0.admission3.Duo",
+    "Maybe": "learning.nominal.0.admission3.Maybe",
+    "take": "learning.nominal.0.admission3.take",
+    "identity": "learning.nominal.0.admission3.identity",
+    "candidate": "learning.nominal.0.admission3.candidate"
+  }
+}

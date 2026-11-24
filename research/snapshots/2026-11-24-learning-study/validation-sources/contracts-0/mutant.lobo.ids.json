@@ -1,0 +1,14 @@
+{
+  "format": "lobo-identities/0.1",
+  "identities": {
+    "module": "learning.contracts.0.mutant",
+    "guarded": "learning.contracts.0.mutant.guarded",
+    "consistent": "learning.contracts.0.mutant.consistent",
+    "p0": "learning.contracts.0.mutant.p0",
+    "p1": "learning.contracts.0.mutant.p1",
+    "p2": "learning.contracts.0.mutant.p2",
+    "p3": "learning.contracts.0.mutant.p3",
+    "p4": "learning.contracts.0.mutant.p4",
+    "p5": "learning.contracts.0.mutant.p5"
+  }
+}

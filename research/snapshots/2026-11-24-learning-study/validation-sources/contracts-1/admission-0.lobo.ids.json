@@ -1,0 +1,10 @@
+{
+  "format": "lobo-identities/0.1",
+  "identities": {
+    "module": "learning.contracts.1.admission0",
+    "guarded_b": "learning.contracts.1.admission0.guarded_b",
+    "consistent_b": "learning.contracts.1.admission0.consistent_b",
+    "leaf_b": "learning.contracts.1.admission0.leaf_b",
+    "candidate_b": "learning.contracts.1.admission0.candidate_b"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "format": "lobo-identities/0.1",
+  "identities": {
+    "module": "learning.propagation.1.admission3",
+    "Result_b": "learning.propagation.1.admission3.Result_b",
+    "gate_b": "learning.propagation.1.admission3.gate_b",
+    "decode_b": "learning.propagation.1.admission3.decode_b",
+    "work_b": "learning.propagation.1.admission3.work_b",
+    "looped_b": "learning.propagation.1.admission3.looped_b",
+    "nested_b": "learning.propagation.1.admission3.nested_b",
+    "try": "learning.propagation.1.admission3.try",
+    "candidate_b": "learning.propagation.1.admission3.candidate_b"
+  }
+}

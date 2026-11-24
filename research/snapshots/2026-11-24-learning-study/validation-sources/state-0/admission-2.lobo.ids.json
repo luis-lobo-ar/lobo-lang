@@ -1,0 +1,9 @@
+{
+  "format": "lobo-identities/0.1",
+  "identities": {
+    "module": "learning.state.0.admission2",
+    "Cursor": "learning.state.0.admission2.Cursor",
+    "State": "learning.state.0.admission2.State",
+    "candidate": "learning.state.0.admission2.candidate"
+  }
+}

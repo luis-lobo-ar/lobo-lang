@@ -1,0 +1,2 @@
+module questions;
+fn candidate_b()->I64 {Bytes::length(Bytes::push(Bytes::empty(),"x"))}

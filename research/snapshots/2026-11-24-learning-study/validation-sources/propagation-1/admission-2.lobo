@@ -1,0 +1,8 @@
+module questions;
+variant Result_b<T> {Ok(T),Err(I64)}
+fn gate_b(value:I64)->Result_b<I64> {if value==3 {Err(7)} else {Ok(value+1)}}
+fn decode_b(item:Result_b<I64>)->I64 {match item {Ok(value)=>value,Err(code)=>-code}}
+fn work_b(start:I64)->Result_b<I64> {let value=try gate_b(start);Ok(value*3)}
+fn looped_b()->Result_b<I64> {let amount=fold(i in 5,total:I64=0) {let value=try gate_b(i);total+value};Ok(amount)}
+fn nested_b()->Result_b<I64> {if true {let value=try gate_b(3);Ok(value)} else {Ok(8)}}
+fn candidate_b()->Result_b<I64> ensures {(try result)>0} {Ok(1)}

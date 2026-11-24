@@ -1,0 +1,7 @@
+module questions;
+record Box_b<T> {value:T}
+record Duo_b {left:I64,right:I64}
+variant Maybe_b<T> {Missing,Found(T)}
+fn take_b(item:Maybe_b<I64>)->I64 {match item {Missing=>-7,Found(value)=>value+7}}
+fn identity_b<T>(value:T)->T {value}
+fn candidate_b()->I64 {let item:Maybe_b<I64>=Missing();take_b(item)}

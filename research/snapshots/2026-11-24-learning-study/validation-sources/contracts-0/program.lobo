@@ -1,0 +1,9 @@
+module questions;
+fn guarded(value:I64)->I64 requires {value>=0} ensures {result>=value} {value+4}
+fn consistent(value:I64)->I64 ensures {result==value+4} {value+4}
+fn p0()->I64 {guarded(5)}
+fn p1()->I64 {if false {guarded(-1)} else {4}}
+fn p2()->I64 {if false && guarded(-1)>0 {0} else {5}}
+fn p3()->I64 {fold(i in 0,total:I64=5) {guarded(-1)}}
+fn p4()->I64 {consistent(4)}
+fn p5()->I64 {if true || 1/0==0 {6} else {0}}

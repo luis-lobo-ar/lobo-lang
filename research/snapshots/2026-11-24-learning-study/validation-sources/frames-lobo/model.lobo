@@ -1,0 +1,3 @@
+module model;
+record Summary {frames:List<Bytes>,consumed:I64,error:I64}
+identities {module:"study.frames.model",Summary:"study.frames.Summary"}

@@ -1,0 +1,1196 @@
+{
+  "format": "lobo-learning-study/1",
+  "date": "2026-11-24",
+  "model": "gpt-5.6-luna",
+  "stages": [
+    "format",
+    "reference",
+    "graph"
+  ],
+  "schedule": [
+    {
+      "index": 0,
+      "stage": "format",
+      "reasoning": "high",
+      "family": "frames",
+      "language": "python",
+      "arm": "ambiguous",
+      "phase": "comprehension"
+    },
+    {
+      "index": 1,
+      "stage": "format",
+      "reasoning": "high",
+      "family": "frames",
+      "language": "python",
+      "arm": "explicit",
+      "phase": "comprehension"
+    },
+    {
+      "index": 2,
+      "stage": "format",
+      "reasoning": "high",
+      "family": "frames",
+      "language": "lobo",
+      "arm": "explicit",
+      "phase": "comprehension"
+    },
+    {
+      "index": 3,
+      "stage": "format",
+      "reasoning": "high",
+      "family": "frames",
+      "language": "lobo",
+      "arm": "ambiguous",
+      "phase": "comprehension"
+    },
+    {
+      "index": 4,
+      "stage": "format",
+      "reasoning": "high",
+      "family": "scheduler",
+      "language": "rust",
+      "arm": "ambiguous",
+      "phase": "comprehension"
+    },
+    {
+      "index": 5,
+      "stage": "format",
+      "reasoning": "high",
+      "family": "scheduler",
+      "language": "rust",
+      "arm": "explicit",
+      "phase": "comprehension"
+    },
+    {
+      "index": 6,
+      "stage": "format",
+      "reasoning": "high",
+      "family": "scheduler",
+      "language": "lobo",
+      "arm": "explicit",
+      "phase": "comprehension"
+    },
+    {
+      "index": 7,
+      "stage": "format",
+      "reasoning": "high",
+      "family": "scheduler",
+      "language": "lobo",
+      "arm": "ambiguous",
+      "phase": "comprehension"
+    },
+    {
+      "index": 8,
+      "stage": "format",
+      "reasoning": "high",
+      "family": "ledger",
+      "language": "rust",
+      "arm": "ambiguous",
+      "phase": "comprehension"
+    },
+    {
+      "index": 9,
+      "stage": "format",
+      "reasoning": "high",
+      "family": "ledger",
+      "language": "rust",
+      "arm": "explicit",
+      "phase": "comprehension"
+    },
+    {
+      "index": 10,
+      "stage": "format",
+      "reasoning": "high",
+      "family": "scheduler",
+      "language": "python",
+      "arm": "explicit",
+      "phase": "comprehension"
+    },
+    {
+      "index": 11,
+      "stage": "format",
+      "reasoning": "high",
+      "family": "scheduler",
+      "language": "python",
+      "arm": "ambiguous",
+      "phase": "comprehension"
+    },
+    {
+      "index": 12,
+      "stage": "format",
+      "reasoning": "high",
+      "family": "frames",
+      "language": "rust",
+      "arm": "ambiguous",
+      "phase": "comprehension"
+    },
+    {
+      "index": 13,
+      "stage": "format",
+      "reasoning": "high",
+      "family": "frames",
+      "language": "rust",
+      "arm": "explicit",
+      "phase": "comprehension"
+    },
+    {
+      "index": 14,
+      "stage": "format",
+      "reasoning": "high",
+      "family": "ledger",
+      "language": "lobo",
+      "arm": "explicit",
+      "phase": "comprehension"
+    },
+    {
+      "index": 15,
+      "stage": "format",
+      "reasoning": "high",
+      "family": "ledger",
+      "language": "lobo",
+      "arm": "ambiguous",
+      "phase": "comprehension"
+    },
+    {
+      "index": 16,
+      "stage": "format",
+      "reasoning": "high",
+      "family": "ledger",
+      "language": "python",
+      "arm": "ambiguous",
+      "phase": "comprehension"
+    },
+    {
+      "index": 17,
+      "stage": "format",
+      "reasoning": "high",
+      "family": "ledger",
+      "language": "python",
+      "arm": "explicit",
+      "phase": "comprehension"
+    },
+    {
+      "index": 18,
+      "stage": "format",
+      "reasoning": "low",
+      "family": "frames",
+      "language": "python",
+      "arm": "ambiguous",
+      "phase": "comprehension"
+    },
+    {
+      "index": 19,
+      "stage": "format",
+      "reasoning": "low",
+      "family": "frames",
+      "language": "python",
+      "arm": "explicit",
+      "phase": "comprehension"
+    },
+    {
+      "index": 20,
+      "stage": "format",
+      "reasoning": "low",
+      "family": "frames",
+      "language": "lobo",
+      "arm": "explicit",
+      "phase": "comprehension"
+    },
+    {
+      "index": 21,
+      "stage": "format",
+      "reasoning": "low",
+      "family": "frames",
+      "language": "lobo",
+      "arm": "ambiguous",
+      "phase": "comprehension"
+    },
+    {
+      "index": 22,
+      "stage": "format",
+      "reasoning": "low",
+      "family": "scheduler",
+      "language": "rust",
+      "arm": "ambiguous",
+      "phase": "comprehension"
+    },
+    {
+      "index": 23,
+      "stage": "format",
+      "reasoning": "low",
+      "family": "scheduler",
+      "language": "rust",
+      "arm": "explicit",
+      "phase": "comprehension"
+    },
+    {
+      "index": 24,
+      "stage": "format",
+      "reasoning": "low",
+      "family": "scheduler",
+      "language": "lobo",
+      "arm": "explicit",
+      "phase": "comprehension"
+    },
+    {
+      "index": 25,
+      "stage": "format",
+      "reasoning": "low",
+      "family": "scheduler",
+      "language": "lobo",
+      "arm": "ambiguous",
+      "phase": "comprehension"
+    },
+    {
+      "index": 26,
+      "stage": "format",
+      "reasoning": "low",
+      "family": "ledger",
+      "language": "rust",
+      "arm": "ambiguous",
+      "phase": "comprehension"
+    },
+    {
+      "index": 27,
+      "stage": "format",
+      "reasoning": "low",
+      "family": "ledger",
+      "language": "rust",
+      "arm": "explicit",
+      "phase": "comprehension"
+    },
+    {
+      "index": 28,
+      "stage": "format",
+      "reasoning": "low",
+      "family": "scheduler",
+      "language": "python",
+      "arm": "explicit",
+      "phase": "comprehension"
+    },
+    {
+      "index": 29,
+      "stage": "format",
+      "reasoning": "low",
+      "family": "scheduler",
+      "language": "python",
+      "arm": "ambiguous",
+      "phase": "comprehension"
+    },
+    {
+      "index": 30,
+      "stage": "format",
+      "reasoning": "low",
+      "family": "frames",
+      "language": "rust",
+      "arm": "ambiguous",
+      "phase": "comprehension"
+    },
+    {
+      "index": 31,
+      "stage": "format",
+      "reasoning": "low",
+      "family": "frames",
+      "language": "rust",
+      "arm": "explicit",
+      "phase": "comprehension"
+    },
+    {
+      "index": 32,
+      "stage": "format",
+      "reasoning": "low",
+      "family": "ledger",
+      "language": "lobo",
+      "arm": "explicit",
+      "phase": "comprehension"
+    },
+    {
+      "index": 33,
+      "stage": "format",
+      "reasoning": "low",
+      "family": "ledger",
+      "language": "lobo",
+      "arm": "ambiguous",
+      "phase": "comprehension"
+    },
+    {
+      "index": 34,
+      "stage": "format",
+      "reasoning": "low",
+      "family": "ledger",
+      "language": "python",
+      "arm": "ambiguous",
+      "phase": "comprehension"
+    },
+    {
+      "index": 35,
+      "stage": "format",
+      "reasoning": "low",
+      "family": "ledger",
+      "language": "python",
+      "arm": "explicit",
+      "phase": "comprehension"
+    },
+    {
+      "index": 36,
+      "stage": "reference",
+      "reasoning": "high",
+      "family": "contracts",
+      "language": "lobo",
+      "arm": "base",
+      "phase": "comprehension"
+    },
+    {
+      "index": 37,
+      "stage": "reference",
+      "reasoning": "high",
+      "family": "contracts",
+      "language": "lobo",
+      "arm": "flat",
+      "phase": "comprehension"
+    },
+    {
+      "index": 38,
+      "stage": "reference",
+      "reasoning": "high",
+      "family": "propagation",
+      "language": "lobo",
+      "arm": "flat",
+      "phase": "comprehension"
+    },
+    {
+      "index": 39,
+      "stage": "reference",
+      "reasoning": "high",
+      "family": "propagation",
+      "language": "lobo",
+      "arm": "base",
+      "phase": "comprehension"
+    },
+    {
+      "index": 40,
+      "stage": "reference",
+      "reasoning": "high",
+      "family": "nominal",
+      "language": "lobo",
+      "arm": "base",
+      "phase": "comprehension"
+    },
+    {
+      "index": 41,
+      "stage": "reference",
+      "reasoning": "high",
+      "family": "nominal",
+      "language": "lobo",
+      "arm": "flat",
+      "phase": "comprehension"
+    },
+    {
+      "index": 42,
+      "stage": "reference",
+      "reasoning": "high",
+      "family": "callbacks",
+      "language": "lobo",
+      "arm": "flat",
+      "phase": "comprehension"
+    },
+    {
+      "index": 43,
+      "stage": "reference",
+      "reasoning": "high",
+      "family": "callbacks",
+      "language": "lobo",
+      "arm": "base",
+      "phase": "comprehension"
+    },
+    {
+      "index": 44,
+      "stage": "reference",
+      "reasoning": "high",
+      "family": "state",
+      "language": "lobo",
+      "arm": "base",
+      "phase": "comprehension"
+    },
+    {
+      "index": 45,
+      "stage": "reference",
+      "reasoning": "high",
+      "family": "state",
+      "language": "lobo",
+      "arm": "flat",
+      "phase": "comprehension"
+    },
+    {
+      "index": 46,
+      "stage": "reference",
+      "reasoning": "high",
+      "family": "ranges",
+      "language": "lobo",
+      "arm": "flat",
+      "phase": "comprehension"
+    },
+    {
+      "index": 47,
+      "stage": "reference",
+      "reasoning": "high",
+      "family": "ranges",
+      "language": "lobo",
+      "arm": "base",
+      "phase": "comprehension"
+    },
+    {
+      "index": 48,
+      "stage": "reference",
+      "reasoning": "low",
+      "family": "contracts",
+      "language": "lobo",
+      "arm": "base",
+      "phase": "comprehension"
+    },
+    {
+      "index": 49,
+      "stage": "reference",
+      "reasoning": "low",
+      "family": "contracts",
+      "language": "lobo",
+      "arm": "flat",
+      "phase": "comprehension"
+    },
+    {
+      "index": 50,
+      "stage": "reference",
+      "reasoning": "low",
+      "family": "propagation",
+      "language": "lobo",
+      "arm": "flat",
+      "phase": "comprehension"
+    },
+    {
+      "index": 51,
+      "stage": "reference",
+      "reasoning": "low",
+      "family": "propagation",
+      "language": "lobo",
+      "arm": "base",
+      "phase": "comprehension"
+    },
+    {
+      "index": 52,
+      "stage": "reference",
+      "reasoning": "low",
+      "family": "nominal",
+      "language": "lobo",
+      "arm": "base",
+      "phase": "comprehension"
+    },
+    {
+      "index": 53,
+      "stage": "reference",
+      "reasoning": "low",
+      "family": "nominal",
+      "language": "lobo",
+      "arm": "flat",
+      "phase": "comprehension"
+    },
+    {
+      "index": 54,
+      "stage": "reference",
+      "reasoning": "low",
+      "family": "callbacks",
+      "language": "lobo",
+      "arm": "flat",
+      "phase": "comprehension"
+    },
+    {
+      "index": 55,
+      "stage": "reference",
+      "reasoning": "low",
+      "family": "callbacks",
+      "language": "lobo",
+      "arm": "base",
+      "phase": "comprehension"
+    },
+    {
+      "index": 56,
+      "stage": "reference",
+      "reasoning": "low",
+      "family": "state",
+      "language": "lobo",
+      "arm": "base",
+      "phase": "comprehension"
+    },
+    {
+      "index": 57,
+      "stage": "reference",
+      "reasoning": "low",
+      "family": "state",
+      "language": "lobo",
+      "arm": "flat",
+      "phase": "comprehension"
+    },
+    {
+      "index": 58,
+      "stage": "reference",
+      "reasoning": "low",
+      "family": "ranges",
+      "language": "lobo",
+      "arm": "flat",
+      "phase": "comprehension"
+    },
+    {
+      "index": 59,
+      "stage": "reference",
+      "reasoning": "low",
+      "family": "ranges",
+      "language": "lobo",
+      "arm": "base",
+      "phase": "comprehension"
+    },
+    {
+      "index": 60,
+      "stage": "graph",
+      "reasoning": "high",
+      "family": "contracts",
+      "language": "lobo",
+      "arm": "flat",
+      "phase": "comprehension"
+    },
+    {
+      "index": 61,
+      "stage": "graph",
+      "reasoning": "high",
+      "family": "contracts",
+      "language": "lobo",
+      "arm": "graph",
+      "phase": "comprehension"
+    },
+    {
+      "index": 62,
+      "stage": "graph",
+      "reasoning": "high",
+      "family": "propagation",
+      "language": "lobo",
+      "arm": "graph",
+      "phase": "comprehension"
+    },
+    {
+      "index": 63,
+      "stage": "graph",
+      "reasoning": "high",
+      "family": "propagation",
+      "language": "lobo",
+      "arm": "flat",
+      "phase": "comprehension"
+    },
+    {
+      "index": 64,
+      "stage": "graph",
+      "reasoning": "high",
+      "family": "nominal",
+      "language": "lobo",
+      "arm": "flat",
+      "phase": "comprehension"
+    },
+    {
+      "index": 65,
+      "stage": "graph",
+      "reasoning": "high",
+      "family": "nominal",
+      "language": "lobo",
+      "arm": "graph",
+      "phase": "comprehension"
+    },
+    {
+      "index": 66,
+      "stage": "graph",
+      "reasoning": "high",
+      "family": "callbacks",
+      "language": "lobo",
+      "arm": "graph",
+      "phase": "comprehension"
+    },
+    {
+      "index": 67,
+      "stage": "graph",
+      "reasoning": "high",
+      "family": "callbacks",
+      "language": "lobo",
+      "arm": "flat",
+      "phase": "comprehension"
+    },
+    {
+      "index": 68,
+      "stage": "graph",
+      "reasoning": "high",
+      "family": "state",
+      "language": "lobo",
+      "arm": "flat",
+      "phase": "comprehension"
+    },
+    {
+      "index": 69,
+      "stage": "graph",
+      "reasoning": "high",
+      "family": "state",
+      "language": "lobo",
+      "arm": "graph",
+      "phase": "comprehension"
+    },
+    {
+      "index": 70,
+      "stage": "graph",
+      "reasoning": "high",
+      "family": "ranges",
+      "language": "lobo",
+      "arm": "graph",
+      "phase": "comprehension"
+    },
+    {
+      "index": 71,
+      "stage": "graph",
+      "reasoning": "high",
+      "family": "ranges",
+      "language": "lobo",
+      "arm": "flat",
+      "phase": "comprehension"
+    },
+    {
+      "index": 72,
+      "stage": "graph",
+      "reasoning": "low",
+      "family": "contracts",
+      "language": "lobo",
+      "arm": "flat",
+      "phase": "comprehension"
+    },
+    {
+      "index": 73,
+      "stage": "graph",
+      "reasoning": "low",
+      "family": "contracts",
+      "language": "lobo",
+      "arm": "graph",
+      "phase": "comprehension"
+    },
+    {
+      "index": 74,
+      "stage": "graph",
+      "reasoning": "low",
+      "family": "propagation",
+      "language": "lobo",
+      "arm": "graph",
+      "phase": "comprehension"
+    },
+    {
+      "index": 75,
+      "stage": "graph",
+      "reasoning": "low",
+      "family": "propagation",
+      "language": "lobo",
+      "arm": "flat",
+      "phase": "comprehension"
+    },
+    {
+      "index": 76,
+      "stage": "graph",
+      "reasoning": "low",
+      "family": "nominal",
+      "language": "lobo",
+      "arm": "flat",
+      "phase": "comprehension"
+    },
+    {
+      "index": 77,
+      "stage": "graph",
+      "reasoning": "low",
+      "family": "nominal",
+      "language": "lobo",
+      "arm": "graph",
+      "phase": "comprehension"
+    },
+    {
+      "index": 78,
+      "stage": "graph",
+      "reasoning": "low",
+      "family": "callbacks",
+      "language": "lobo",
+      "arm": "graph",
+      "phase": "comprehension"
+    },
+    {
+      "index": 79,
+      "stage": "graph",
+      "reasoning": "low",
+      "family": "callbacks",
+      "language": "lobo",
+      "arm": "flat",
+      "phase": "comprehension"
+    },
+    {
+      "index": 80,
+      "stage": "graph",
+      "reasoning": "low",
+      "family": "state",
+      "language": "lobo",
+      "arm": "flat",
+      "phase": "comprehension"
+    },
+    {
+      "index": 81,
+      "stage": "graph",
+      "reasoning": "low",
+      "family": "state",
+      "language": "lobo",
+      "arm": "graph",
+      "phase": "comprehension"
+    },
+    {
+      "index": 82,
+      "stage": "graph",
+      "reasoning": "low",
+      "family": "ranges",
+      "language": "lobo",
+      "arm": "graph",
+      "phase": "comprehension"
+    },
+    {
+      "index": 83,
+      "stage": "graph",
+      "reasoning": "low",
+      "family": "ranges",
+      "language": "lobo",
+      "arm": "flat",
+      "phase": "comprehension"
+    }
+  ],
+  "prompts": {
+    "0": {
+      "sha256": "108c37158607175835424d7134649ea4027d437af2581e6263a2f49e52f7aa41",
+      "bytes": 5176
+    },
+    "1": {
+      "sha256": "12cc14cd368e38e5c8df4c78a0d7fed57ef332ddab0c26aa2458f7fe6eb30d81",
+      "bytes": 6929
+    },
+    "2": {
+      "sha256": "7482b5d1dc97ff4fd4e2017c672b4b377de1f699ab1cbd521b7848820e7dafb5",
+      "bytes": 9549
+    },
+    "3": {
+      "sha256": "829fc5cf1e988e63001c0b05b26b7931970e5214c1694a02c2aeb6800474ba91",
+      "bytes": 7796
+    },
+    "4": {
+      "sha256": "1765fb0cacde4982cdc5ff424704e5bf0fc0472fa7bbda30767a80d7a74e487a",
+      "bytes": 5806
+    },
+    "5": {
+      "sha256": "f8d2fa08c035aca39d88ef3ba790c453a9ab382f4cc9e6990997e62f3e87184e",
+      "bytes": 8231
+    },
+    "6": {
+      "sha256": "82df0f713fda74ce0d0a5758d9420ffc2c01ef7b193009a127671d44f4cbe4a8",
+      "bytes": 11231
+    },
+    "7": {
+      "sha256": "eeb2a66392a789c8cc603157e85e45eca097e236a6cddc5119efd0e13650a774",
+      "bytes": 8806
+    },
+    "8": {
+      "sha256": "6c0279c7fafaaafa0ef69699859b52b7bdb11f5bfe4876880f96c7e88d5bc232",
+      "bytes": 5786
+    },
+    "9": {
+      "sha256": "2081471f92ff5977b6afa9a00601d4ed0179ebb8fb5e899bdec96e0c2a6bf8b7",
+      "bytes": 7951
+    },
+    "10": {
+      "sha256": "16552fd932cd8c3289a7586305e989702566e30bba7c11628ea327767ef34d4b",
+      "bytes": 8029
+    },
+    "11": {
+      "sha256": "38fd163269683a187e27c5feb189f780eb5561392b0feacafad420049e1fc2fc",
+      "bytes": 5604
+    },
+    "12": {
+      "sha256": "292f67e1723a31af52f95a6d622736da9ecbad9f88226599c27e8ba79400eba2",
+      "bytes": 5494
+    },
+    "13": {
+      "sha256": "9179321ad6783e743905c28947fc92a1f1b81b3282f0d1107d705ba066b8a50f",
+      "bytes": 7247
+    },
+    "14": {
+      "sha256": "d70c5dc3f0395e89896f58f74f75e0e94dc997d8f0d5a5fa1b39d2e602829d4b",
+      "bytes": 10321
+    },
+    "15": {
+      "sha256": "b5deb023c0e156231ce261b1a2a4c22960deaf8c972a3f993b183d40144902e2",
+      "bytes": 8156
+    },
+    "16": {
+      "sha256": "7b3f45f600b05e6d4c32e642da51d7dbb82ad00e06c9a4764e572fc5e6557be4",
+      "bytes": 5602
+    },
+    "17": {
+      "sha256": "d0f117929ac943de7679281773811330acf01d264645e0e6dd7d015cf8ab9437",
+      "bytes": 7767
+    },
+    "18": {
+      "sha256": "108c37158607175835424d7134649ea4027d437af2581e6263a2f49e52f7aa41",
+      "bytes": 5176
+    },
+    "19": {
+      "sha256": "12cc14cd368e38e5c8df4c78a0d7fed57ef332ddab0c26aa2458f7fe6eb30d81",
+      "bytes": 6929
+    },
+    "20": {
+      "sha256": "7482b5d1dc97ff4fd4e2017c672b4b377de1f699ab1cbd521b7848820e7dafb5",
+      "bytes": 9549
+    },
+    "21": {
+      "sha256": "829fc5cf1e988e63001c0b05b26b7931970e5214c1694a02c2aeb6800474ba91",
+      "bytes": 7796
+    },
+    "22": {
+      "sha256": "1765fb0cacde4982cdc5ff424704e5bf0fc0472fa7bbda30767a80d7a74e487a",
+      "bytes": 5806
+    },
+    "23": {
+      "sha256": "f8d2fa08c035aca39d88ef3ba790c453a9ab382f4cc9e6990997e62f3e87184e",
+      "bytes": 8231
+    },
+    "24": {
+      "sha256": "82df0f713fda74ce0d0a5758d9420ffc2c01ef7b193009a127671d44f4cbe4a8",
+      "bytes": 11231
+    },
+    "25": {
+      "sha256": "eeb2a66392a789c8cc603157e85e45eca097e236a6cddc5119efd0e13650a774",
+      "bytes": 8806
+    },
+    "26": {
+      "sha256": "6c0279c7fafaaafa0ef69699859b52b7bdb11f5bfe4876880f96c7e88d5bc232",
+      "bytes": 5786
+    },
+    "27": {
+      "sha256": "2081471f92ff5977b6afa9a00601d4ed0179ebb8fb5e899bdec96e0c2a6bf8b7",
+      "bytes": 7951
+    },
+    "28": {
+      "sha256": "16552fd932cd8c3289a7586305e989702566e30bba7c11628ea327767ef34d4b",
+      "bytes": 8029
+    },
+    "29": {
+      "sha256": "38fd163269683a187e27c5feb189f780eb5561392b0feacafad420049e1fc2fc",
+      "bytes": 5604
+    },
+    "30": {
+      "sha256": "292f67e1723a31af52f95a6d622736da9ecbad9f88226599c27e8ba79400eba2",
+      "bytes": 5494
+    },
+    "31": {
+      "sha256": "9179321ad6783e743905c28947fc92a1f1b81b3282f0d1107d705ba066b8a50f",
+      "bytes": 7247
+    },
+    "32": {
+      "sha256": "d70c5dc3f0395e89896f58f74f75e0e94dc997d8f0d5a5fa1b39d2e602829d4b",
+      "bytes": 10321
+    },
+    "33": {
+      "sha256": "b5deb023c0e156231ce261b1a2a4c22960deaf8c972a3f993b183d40144902e2",
+      "bytes": 8156
+    },
+    "34": {
+      "sha256": "7b3f45f600b05e6d4c32e642da51d7dbb82ad00e06c9a4764e572fc5e6557be4",
+      "bytes": 5602
+    },
+    "35": {
+      "sha256": "d0f117929ac943de7679281773811330acf01d264645e0e6dd7d015cf8ab9437",
+      "bytes": 7767
+    },
+    "36": {
+      "sha256": "d563e24a57548403333cad7322a65fdb1a6e4b0235822de8b814921804503271",
+      "bytes": 5592
+    },
+    "37": {
+      "sha256": "ecfbc3823d911e2644a9fdf1e1499ad85a953e7bb02e87cc43c277152b74a08f",
+      "bytes": 19476
+    },
+    "38": {
+      "sha256": "bd189cd9ba16878f6f74a178d6442491476272e09a1a52aaa299e6e114ee68ad",
+      "bytes": 19760
+    },
+    "39": {
+      "sha256": "0e4f8a2134f13fbea22e3443f3fab06f70bb7c76a1a692cc59fb31f499004df5",
+      "bytes": 5876
+    },
+    "40": {
+      "sha256": "d973e7ad3b162fb271f3e8265285c0cb1291d47e300b131c54854baaa0af5901",
+      "bytes": 5885
+    },
+    "41": {
+      "sha256": "20aeb58dd024f152afbc7b3fc774fae25d19cb31590aa6d71b154e6bbdfb2c09",
+      "bytes": 19769
+    },
+    "42": {
+      "sha256": "702feac513ee26f74d106ff67778760cc657880561620dcee48c35c29d1f3ae0",
+      "bytes": 19882
+    },
+    "43": {
+      "sha256": "740575b7a531c329fd7c4cd0485909aec398dbae23738122b127761371816052",
+      "bytes": 5998
+    },
+    "44": {
+      "sha256": "9f60bb15f5f08145c85cc50c836f671badaf7dcb2e5f8e4e206df2f71119ed53",
+      "bytes": 6013
+    },
+    "45": {
+      "sha256": "07ff192ab32988cb0dd7f883939ea976a4771bbfe2c62d12b6d56aa9557604df",
+      "bytes": 19897
+    },
+    "46": {
+      "sha256": "31ddbd7c630404f28a8f5ea5d078aeb5b451495d1fefae5e0273af4cd031c585",
+      "bytes": 19485
+    },
+    "47": {
+      "sha256": "4bf231f8ff00ad8981df9304fe50a3ea1f6a64842e0c8055ce5afc40e7d5e022",
+      "bytes": 5601
+    },
+    "48": {
+      "sha256": "d563e24a57548403333cad7322a65fdb1a6e4b0235822de8b814921804503271",
+      "bytes": 5592
+    },
+    "49": {
+      "sha256": "ecfbc3823d911e2644a9fdf1e1499ad85a953e7bb02e87cc43c277152b74a08f",
+      "bytes": 19476
+    },
+    "50": {
+      "sha256": "bd189cd9ba16878f6f74a178d6442491476272e09a1a52aaa299e6e114ee68ad",
+      "bytes": 19760
+    },
+    "51": {
+      "sha256": "0e4f8a2134f13fbea22e3443f3fab06f70bb7c76a1a692cc59fb31f499004df5",
+      "bytes": 5876
+    },
+    "52": {
+      "sha256": "d973e7ad3b162fb271f3e8265285c0cb1291d47e300b131c54854baaa0af5901",
+      "bytes": 5885
+    },
+    "53": {
+      "sha256": "20aeb58dd024f152afbc7b3fc774fae25d19cb31590aa6d71b154e6bbdfb2c09",
+      "bytes": 19769
+    },
+    "54": {
+      "sha256": "702feac513ee26f74d106ff67778760cc657880561620dcee48c35c29d1f3ae0",
+      "bytes": 19882
+    },
+    "55": {
+      "sha256": "740575b7a531c329fd7c4cd0485909aec398dbae23738122b127761371816052",
+      "bytes": 5998
+    },
+    "56": {
+      "sha256": "9f60bb15f5f08145c85cc50c836f671badaf7dcb2e5f8e4e206df2f71119ed53",
+      "bytes": 6013
+    },
+    "57": {
+      "sha256": "07ff192ab32988cb0dd7f883939ea976a4771bbfe2c62d12b6d56aa9557604df",
+      "bytes": 19897
+    },
+    "58": {
+      "sha256": "31ddbd7c630404f28a8f5ea5d078aeb5b451495d1fefae5e0273af4cd031c585",
+      "bytes": 19485
+    },
+    "59": {
+      "sha256": "4bf231f8ff00ad8981df9304fe50a3ea1f6a64842e0c8055ce5afc40e7d5e022",
+      "bytes": 5601
+    },
+    "60": {
+      "sha256": "b33a1617ea09b694c04f6a4c3db450053c9aee3e4f38f9cc3f6fe9c5bf21d51d",
+      "bytes": 19568
+    },
+    "61": {
+      "sha256": "a0ebbc366ae77914cf2296ef12a4d986ca51e66081c8de9ce39cbf788cad6a8f",
+      "bytes": 25036
+    },
+    "62": {
+      "sha256": "41f72494858a309534b4e88fdf50e494461f40eac4cf740da76497c31216a631",
+      "bytes": 25348
+    },
+    "63": {
+      "sha256": "7065e60a43dde301623e1170cc5bd13fde66ff3e505a7eea5242b46b6ce1080e",
+      "bytes": 19880
+    },
+    "64": {
+      "sha256": "7766af15d200d3474be15a7cf34d7b01d924149b24d35e6ee786beabf34966bf",
+      "bytes": 19846
+    },
+    "65": {
+      "sha256": "bcccb9dc27c5c4e026cd7064862ca63487bde0d5683365e7f6b55bfa90893aa4",
+      "bytes": 25314
+    },
+    "66": {
+      "sha256": "fa7f977e4414e5aa1cfda4459975af0dacea8afd2a5ba75925f53811fc7c6568",
+      "bytes": 25404
+    },
+    "67": {
+      "sha256": "878252e256060c84a9071f9e95b901272be6a4a2d95dab0518abfa48586e5861",
+      "bytes": 19936
+    },
+    "68": {
+      "sha256": "8f446a20dd444026ea8fabac2aa69adfe0b58692af74f22047576d6e18eea000",
+      "bytes": 19926
+    },
+    "69": {
+      "sha256": "ef0d7658807f3d33d56284867925f7b3d6242d35d3ce247165ddf1b70ad7a57a",
+      "bytes": 25394
+    },
+    "70": {
+      "sha256": "75e41477da9f3cac1cae27609d7e2332f34e6ac688bbbdf02d1ca7e199aa2e6e",
+      "bytes": 24963
+    },
+    "71": {
+      "sha256": "b859b141afbad620341e13d5a7fb1b26c84e5d819d4cfd5137cd4d47382b316c",
+      "bytes": 19495
+    },
+    "72": {
+      "sha256": "b33a1617ea09b694c04f6a4c3db450053c9aee3e4f38f9cc3f6fe9c5bf21d51d",
+      "bytes": 19568
+    },
+    "73": {
+      "sha256": "a0ebbc366ae77914cf2296ef12a4d986ca51e66081c8de9ce39cbf788cad6a8f",
+      "bytes": 25036
+    },
+    "74": {
+      "sha256": "41f72494858a309534b4e88fdf50e494461f40eac4cf740da76497c31216a631",
+      "bytes": 25348
+    },
+    "75": {
+      "sha256": "7065e60a43dde301623e1170cc5bd13fde66ff3e505a7eea5242b46b6ce1080e",
+      "bytes": 19880
+    },
+    "76": {
+      "sha256": "7766af15d200d3474be15a7cf34d7b01d924149b24d35e6ee786beabf34966bf",
+      "bytes": 19846
+    },
+    "77": {
+      "sha256": "bcccb9dc27c5c4e026cd7064862ca63487bde0d5683365e7f6b55bfa90893aa4",
+      "bytes": 25314
+    },
+    "78": {
+      "sha256": "fa7f977e4414e5aa1cfda4459975af0dacea8afd2a5ba75925f53811fc7c6568",
+      "bytes": 25404
+    },
+    "79": {
+      "sha256": "878252e256060c84a9071f9e95b901272be6a4a2d95dab0518abfa48586e5861",
+      "bytes": 19936
+    },
+    "80": {
+      "sha256": "8f446a20dd444026ea8fabac2aa69adfe0b58692af74f22047576d6e18eea000",
+      "bytes": 19926
+    },
+    "81": {
+      "sha256": "ef0d7658807f3d33d56284867925f7b3d6242d35d3ce247165ddf1b70ad7a57a",
+      "bytes": 25394
+    },
+    "82": {
+      "sha256": "75e41477da9f3cac1cae27609d7e2332f34e6ac688bbbdf02d1ca7e199aa2e6e",
+      "bytes": 24963
+    },
+    "83": {
+      "sha256": "b859b141afbad620341e13d5a7fb1b26c84e5d819d4cfd5137cd4d47382b316c",
+      "bytes": 19495
+    }
+  },
+  "code": {
+    "benchmarks/matched-study/learning.py": "b41678da7dc3d1c2bdabe27e04281b491f900a5956155ae3a4dfc8a7b41fccf5",
+    "benchmarks/matched-study/learning_corpus.py": "a75bbe1ffefa09525fa5b761daa31576ead4b85b2bd63b632018c38318a52385",
+    "benchmarks/matched-study/response_contract.py": "f37d2afd1a7611e72001bf55515db502dd954f3de1ab005868a151fb0039c2d1",
+    "benchmarks/matched-study/test_learning.py": "a7064b64aa1646c10682106e10ef030ebb47d0448e85653a8337b84a9ad16b84",
+    "benchmarks/matched-study/learning_report.py": "ce0fbd5d968cafcb9e4fd4fe67703399a76b22819b1f7535c0dc14bdae829d0c",
+    "benchmarks/matched-study/test_learning_report.py": "03251faca92b14302932547c2e3cb247cd1762a6a4f6c2bdcffa4d8f50de60fa",
+    "benchmarks/matched-study/context_report.py": "2ae4867a9db65208da8647fab5e7d235bb5f4aafb61dfd9e6032a381f16c74bb",
+    "benchmarks/matched-study/context.py": "05e5c702ff967e00e135368d9e00eb3a0296efbcaf028fcf169b0b81da08d156",
+    "benchmarks/matched-study/luna.py": "5c02b9846c7af3211ad70cf212e8f119b3360bce8e29b2c2032a9792b321509c",
+    "benchmarks/matched-study/study.py": "1c05a60a0c431a9d9336f7b28c9fcfb9f69446cb24ead52f380d1a5d4c838bf0",
+    "research/language_reference.py": "8809a8feb79085560f8e23de576c1eaba4fd25194898dd8ac59d4d5f9c23d290",
+    "docs/agent-reference/1.11.2/concepts.json": "393f075c8bb9db80227461135fa30cfa282de86e39db3f379c841a75dac63f55",
+    "docs/agent-reference/1.11.2/reading-examples.lobo": "8fa7b6507cab932ef797d068718d7180963baae3c149123bc728346b9bf713b3"
+  },
+  "validation": {
+    "path": "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/learning-study-20261124/validation-registered/results.json",
+    "sha256": "a4ee3c21652a06f2a9d34362df8c34a2b0213acb2554902acfef27172aef239a"
+  },
+  "compiler_sha256": "8d9f84530b8d34a6a72597d25befc249a604430a6569656b4184721e1e444d9d",
+  "frozen_version": "1.11.2",
+  "reference_facts_sha256": "857a834c82179859c3cc29af80accd4e2a011aa5877a01e186cddd26a1fc6062",
+  "prior_paper_index_sha256": "9d170993f064acca13f1a65447e65131553132dd89cb294519ab575d3cbfc0e5",
+  "limits": {
+    "wall_s": 120,
+    "tools": 0,
+    "hard_token_cap": null
+  },
+  "analysis": "Analyze stages separately, format validity separately from semantic items and whole-task acceptance; paired discordances, actual usage/cache/wall, all failures and unknowns. No posthoc score replacement. Reference and graph programs/forms differ; compare only within stages.",
+  "failure_policy": "No retries or replacements. One source-free availability check before each stage/effort cohort, excluded from scores and included in costs. Stop that cohort after3 consecutive infrastructure errors and explicitly retain unattempted assignments. No fallback model.",
+  "environment": {
+    "versions": [
+      {
+        "command": [
+          "codex",
+          "--version"
+        ],
+        "stdout": "codex-cli 0.171.0\n",
+        "stderr": "",
+        "executable": "/home/luis/.codex/packages/standalone/releases/0.171.0-x86_64-unknown-linux-musl/bin/codex",
+        "sha256": "b76a027d6b210f9a8da7aaf321dd235c700f0ef7a794d4a5314b9af6c134f0f0"
+      },
+      {
+        "command": [
+          "rustc",
+          "--version"
+        ],
+        "stdout": "rustc 1.92.0 (ded5c06cf 2025-12-08)\n",
+        "stderr": "",
+        "executable": "/home/luis/.cargo/bin/rustup",
+        "sha256": "20a06e644b0d9bd2fbdbfd52d42540bdde820ea7df86e92e533c073da0cdd43c"
+      },
+      {
+        "command": [
+          "clang",
+          "--version"
+        ],
+        "stdout": "Ubuntu clang version 18.1.3 (1ubuntu1)\nTarget: x86_64-pc-linux-gnu\nThread model: posix\nInstalledDir: /usr/bin\n",
+        "stderr": "",
+        "executable": "/usr/lib/llvm-18/bin/clang",
+        "sha256": "8ef402d453d1ba4902e4ee0f0f847f6cfa01400c95aa43c24e97818b9c0e3f45"
+      },
+      {
+        "command": [
+          "python3",
+          "--version"
+        ],
+        "stdout": "Python 3.12.3\n",
+        "stderr": "",
+        "executable": "/usr/bin/python3.12",
+        "sha256": "e50d468e8b0adfb05733f5b87b3cff34829c4a8c1aea50c865aa8bdfe4bb150f"
+      }
+    ],
+    "logical_cpus": 16,
+    "load": [
+      1.09716796875,
+      1.845703125,
+      1.4677734375
+    ],
+    "recorded_unix": 1795527697.1445792
+  },
+  "limitations": [
+    "Three format families and six Lobo microtask topics, one fresh form per topic/stage; descriptive pilot, not powered population inference.",
+    "Format contrasts wording/profile disclosure with a common unchanged strict grader; no native provider schema enforcement.",
+    "Reference adds facts/examples and tokens; graph contrasts presentation of identical facts/examples, not interactive graph retrieval or tool access.",
+    "High precedes low within each stage; alias/caching/service/time drift remain confounds.",
+    "Source-only predictions/static acceptance do not measure repository construction quality.",
+    "Questions authored after earlier outcomes; new instances, not independent blinded holdouts.",
+    "Parent-agent development usage and actual billing unknown."
+  ]
+}

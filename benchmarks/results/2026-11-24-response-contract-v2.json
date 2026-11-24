@@ -1,0 +1,355 @@
+{
+  "format": "lobo-study-response-contract/2",
+  "date": "2026-11-24",
+  "syntax": "One JSON object; duplicate keys forbidden; strict integer tokens; every object closed; optional top-level notes string",
+  "profiles": {
+    "ledger": {
+      "kind": "object",
+      "required": {
+        "predictions": {
+          "kind": "array",
+          "items": {
+            "kind": "object",
+            "required": {
+              "balance": {
+                "kind": "integer",
+                "rule": "JSON integer token, not float or boolean"
+              },
+              "rejected": {
+                "kind": "integer",
+                "rule": "JSON integer token, not float or boolean"
+              },
+              "peak": {
+                "kind": "integer",
+                "rule": "JSON integer token, not float or boolean"
+              },
+              "audit": {
+                "kind": "array",
+                "items": {
+                  "kind": "integer",
+                  "rule": "JSON integer token, not float or boolean"
+                }
+              }
+            },
+            "optional": {},
+            "additional_properties": false
+          },
+          "length": 6
+        },
+        "witness": {
+          "kind": "object",
+          "required": {
+            "initial": {
+              "kind": "integer",
+              "rule": "JSON integer token, not float or boolean"
+            },
+            "events": {
+              "kind": "array",
+              "items": {
+                "kind": "tuple",
+                "items": [
+                  {
+                    "kind": "integer",
+                    "rule": "JSON integer token, not float or boolean"
+                  },
+                  {
+                    "kind": "integer",
+                    "rule": "JSON integer token, not float or boolean"
+                  }
+                ]
+              }
+            }
+          },
+          "optional": {},
+          "additional_properties": false
+        },
+        "direct_calls": {
+          "kind": "array",
+          "items": {
+            "kind": "string"
+          }
+        },
+        "impacted": {
+          "kind": "array",
+          "items": {
+            "kind": "string"
+          }
+        },
+        "fault_location": {
+          "kind": "string"
+        },
+        "counterexample": {
+          "kind": "object",
+          "required": {
+            "initial": {
+              "kind": "integer",
+              "rule": "JSON integer token, not float or boolean"
+            },
+            "events": {
+              "kind": "array",
+              "items": {
+                "kind": "tuple",
+                "items": [
+                  {
+                    "kind": "integer",
+                    "rule": "JSON integer token, not float or boolean"
+                  },
+                  {
+                    "kind": "integer",
+                    "rule": "JSON integer token, not float or boolean"
+                  }
+                ]
+              }
+            }
+          },
+          "optional": {},
+          "additional_properties": false
+        }
+      },
+      "optional": {
+        "notes": {
+          "kind": "string"
+        }
+      },
+      "additional_properties": false
+    },
+    "scheduler": {
+      "kind": "object",
+      "required": {
+        "predictions": {
+          "kind": "array",
+          "items": {
+            "kind": "object",
+            "required": {
+              "order": {
+                "kind": "array",
+                "items": {
+                  "kind": "integer",
+                  "rule": "JSON integer token, not float or boolean"
+                }
+              },
+              "spent": {
+                "kind": "integer",
+                "rule": "JSON integer token, not float or boolean"
+              },
+              "blocked": {
+                "kind": "integer",
+                "rule": "JSON integer token, not float or boolean"
+              }
+            },
+            "optional": {},
+            "additional_properties": false
+          },
+          "length": 6
+        },
+        "witness": {
+          "kind": "object",
+          "required": {
+            "jobs": {
+              "kind": "array",
+              "items": {
+                "kind": "object",
+                "required": {
+                  "id": {
+                    "kind": "integer",
+                    "rule": "JSON integer token, not float or boolean"
+                  },
+                  "cost": {
+                    "kind": "integer",
+                    "rule": "JSON integer token, not float or boolean"
+                  },
+                  "deps": {
+                    "kind": "array",
+                    "items": {
+                      "kind": "integer",
+                      "rule": "JSON integer token, not float or boolean"
+                    }
+                  }
+                },
+                "optional": {},
+                "additional_properties": false
+              }
+            },
+            "budget": {
+              "kind": "integer",
+              "rule": "JSON integer token, not float or boolean"
+            }
+          },
+          "optional": {},
+          "additional_properties": false
+        },
+        "direct_calls": {
+          "kind": "array",
+          "items": {
+            "kind": "string"
+          }
+        },
+        "impacted": {
+          "kind": "array",
+          "items": {
+            "kind": "string"
+          }
+        },
+        "fault_location": {
+          "kind": "string"
+        },
+        "counterexample": {
+          "kind": "object",
+          "required": {
+            "jobs": {
+              "kind": "array",
+              "items": {
+                "kind": "object",
+                "required": {
+                  "id": {
+                    "kind": "integer",
+                    "rule": "JSON integer token, not float or boolean"
+                  },
+                  "cost": {
+                    "kind": "integer",
+                    "rule": "JSON integer token, not float or boolean"
+                  },
+                  "deps": {
+                    "kind": "array",
+                    "items": {
+                      "kind": "integer",
+                      "rule": "JSON integer token, not float or boolean"
+                    }
+                  }
+                },
+                "optional": {},
+                "additional_properties": false
+              }
+            },
+            "budget": {
+              "kind": "integer",
+              "rule": "JSON integer token, not float or boolean"
+            }
+          },
+          "optional": {},
+          "additional_properties": false
+        }
+      },
+      "optional": {
+        "notes": {
+          "kind": "string"
+        }
+      },
+      "additional_properties": false
+    },
+    "frames": {
+      "kind": "object",
+      "required": {
+        "predictions": {
+          "kind": "array",
+          "items": {
+            "kind": "object",
+            "required": {
+              "frames": {
+                "kind": "array",
+                "items": {
+                  "kind": "string",
+                  "pattern": "(?:[0-9a-f]{2})*"
+                }
+              },
+              "consumed": {
+                "kind": "integer",
+                "rule": "JSON integer token, not float or boolean"
+              },
+              "error": {
+                "kind": "integer",
+                "rule": "JSON integer token, not float or boolean"
+              }
+            },
+            "optional": {},
+            "additional_properties": false
+          },
+          "length": 6
+        },
+        "witness": {
+          "kind": "object",
+          "required": {
+            "data": {
+              "kind": "string",
+              "pattern": "(?:[0-9a-fA-F]{2})*"
+            },
+            "limit": {
+              "kind": "integer",
+              "rule": "JSON integer token, not float or boolean"
+            }
+          },
+          "optional": {},
+          "additional_properties": false
+        },
+        "direct_calls": {
+          "kind": "array",
+          "items": {
+            "kind": "string"
+          }
+        },
+        "impacted": {
+          "kind": "array",
+          "items": {
+            "kind": "string"
+          }
+        },
+        "fault_location": {
+          "kind": "string"
+        },
+        "counterexample": {
+          "kind": "object",
+          "required": {
+            "data": {
+              "kind": "string",
+              "pattern": "(?:[0-9a-fA-F]{2})*"
+            },
+            "limit": {
+              "kind": "integer",
+              "rule": "JSON integer token, not float or boolean"
+            }
+          },
+          "optional": {},
+          "additional_properties": false
+        }
+      },
+      "optional": {
+        "notes": {
+          "kind": "string"
+        }
+      },
+      "additional_properties": false
+    },
+    "lobo_reading": {
+      "kind": "object",
+      "required": {
+        "predictions": {
+          "kind": "array",
+          "items": {
+            "kind": "integer",
+            "rule": "JSON integer token, not float or boolean"
+          },
+          "length": 6
+        },
+        "admissions": {
+          "kind": "array",
+          "items": {
+            "kind": "boolean"
+          },
+          "length": 4
+        }
+      },
+      "optional": {
+        "notes": {
+          "kind": "string"
+        }
+      },
+      "additional_properties": false
+    }
+  },
+  "disclosure": {
+    "ledger": "RESPONSE CONTRACT v2. Return exactly one JSON object, without Markdown. All objects in this profile are closed: every required field must occur, unknown fields and duplicate keys are invalid. Integers use integer tokens, never 1.0 or true. witness and counterexample are INPUT objects only; do not put frames, consumed, error, summary, expected, original or mutant explanations inside them unless the field is declared by the input profile. Put any explanation in the optional top-level notes string. Shape validity and semantic correctness are separate checks. Input domain bounds in the task still apply.\n{\"additional_properties\": false, \"kind\": \"object\", \"optional\": {\"notes\": {\"kind\": \"string\"}}, \"required\": {\"counterexample\": {\"additional_properties\": false, \"kind\": \"object\", \"optional\": {}, \"required\": {\"events\": {\"items\": {\"items\": [{\"kind\": \"integer\", \"rule\": \"JSON integer token, not float or boolean\"}, {\"kind\": \"integer\", \"rule\": \"JSON integer token, not float or boolean\"}], \"kind\": \"tuple\"}, \"kind\": \"array\"}, \"initial\": {\"kind\": \"integer\", \"rule\": \"JSON integer token, not float or boolean\"}}}, \"direct_calls\": {\"items\": {\"kind\": \"string\"}, \"kind\": \"array\"}, \"fault_location\": {\"kind\": \"string\"}, \"impacted\": {\"items\": {\"kind\": \"string\"}, \"kind\": \"array\"}, \"predictions\": {\"items\": {\"additional_properties\": false, \"kind\": \"object\", \"optional\": {}, \"required\": {\"audit\": {\"items\": {\"kind\": \"integer\", \"rule\": \"JSON integer token, not float or boolean\"}, \"kind\": \"array\"}, \"balance\": {\"kind\": \"integer\", \"rule\": \"JSON integer token, not float or boolean\"}, \"peak\": {\"kind\": \"integer\", \"rule\": \"JSON integer token, not float or boolean\"}, \"rejected\": {\"kind\": \"integer\", \"rule\": \"JSON integer token, not float or boolean\"}}}, \"kind\": \"array\", \"length\": 6}, \"witness\": {\"additional_properties\": false, \"kind\": \"object\", \"optional\": {}, \"required\": {\"events\": {\"items\": {\"items\": [{\"kind\": \"integer\", \"rule\": \"JSON integer token, not float or boolean\"}, {\"kind\": \"integer\", \"rule\": \"JSON integer token, not float or boolean\"}], \"kind\": \"tuple\"}, \"kind\": \"array\"}, \"initial\": {\"kind\": \"integer\", \"rule\": \"JSON integer token, not float or boolean\"}}}}}\n",
+    "scheduler": "RESPONSE CONTRACT v2. Return exactly one JSON object, without Markdown. All objects in this profile are closed: every required field must occur, unknown fields and duplicate keys are invalid. Integers use integer tokens, never 1.0 or true. witness and counterexample are INPUT objects only; do not put frames, consumed, error, summary, expected, original or mutant explanations inside them unless the field is declared by the input profile. Put any explanation in the optional top-level notes string. Shape validity and semantic correctness are separate checks. Input domain bounds in the task still apply.\n{\"additional_properties\": false, \"kind\": \"object\", \"optional\": {\"notes\": {\"kind\": \"string\"}}, \"required\": {\"counterexample\": {\"additional_properties\": false, \"kind\": \"object\", \"optional\": {}, \"required\": {\"budget\": {\"kind\": \"integer\", \"rule\": \"JSON integer token, not float or boolean\"}, \"jobs\": {\"items\": {\"additional_properties\": false, \"kind\": \"object\", \"optional\": {}, \"required\": {\"cost\": {\"kind\": \"integer\", \"rule\": \"JSON integer token, not float or boolean\"}, \"deps\": {\"items\": {\"kind\": \"integer\", \"rule\": \"JSON integer token, not float or boolean\"}, \"kind\": \"array\"}, \"id\": {\"kind\": \"integer\", \"rule\": \"JSON integer token, not float or boolean\"}}}, \"kind\": \"array\"}}}, \"direct_calls\": {\"items\": {\"kind\": \"string\"}, \"kind\": \"array\"}, \"fault_location\": {\"kind\": \"string\"}, \"impacted\": {\"items\": {\"kind\": \"string\"}, \"kind\": \"array\"}, \"predictions\": {\"items\": {\"additional_properties\": false, \"kind\": \"object\", \"optional\": {}, \"required\": {\"blocked\": {\"kind\": \"integer\", \"rule\": \"JSON integer token, not float or boolean\"}, \"order\": {\"items\": {\"kind\": \"integer\", \"rule\": \"JSON integer token, not float or boolean\"}, \"kind\": \"array\"}, \"spent\": {\"kind\": \"integer\", \"rule\": \"JSON integer token, not float or boolean\"}}}, \"kind\": \"array\", \"length\": 6}, \"witness\": {\"additional_properties\": false, \"kind\": \"object\", \"optional\": {}, \"required\": {\"budget\": {\"kind\": \"integer\", \"rule\": \"JSON integer token, not float or boolean\"}, \"jobs\": {\"items\": {\"additional_properties\": false, \"kind\": \"object\", \"optional\": {}, \"required\": {\"cost\": {\"kind\": \"integer\", \"rule\": \"JSON integer token, not float or boolean\"}, \"deps\": {\"items\": {\"kind\": \"integer\", \"rule\": \"JSON integer token, not float or boolean\"}, \"kind\": \"array\"}, \"id\": {\"kind\": \"integer\", \"rule\": \"JSON integer token, not float or boolean\"}}}, \"kind\": \"array\"}}}}}\n",
+    "frames": "RESPONSE CONTRACT v2. Return exactly one JSON object, without Markdown. All objects in this profile are closed: every required field must occur, unknown fields and duplicate keys are invalid. Integers use integer tokens, never 1.0 or true. witness and counterexample are INPUT objects only; do not put frames, consumed, error, summary, expected, original or mutant explanations inside them unless the field is declared by the input profile. Put any explanation in the optional top-level notes string. Shape validity and semantic correctness are separate checks. Input domain bounds in the task still apply.\n{\"additional_properties\": false, \"kind\": \"object\", \"optional\": {\"notes\": {\"kind\": \"string\"}}, \"required\": {\"counterexample\": {\"additional_properties\": false, \"kind\": \"object\", \"optional\": {}, \"required\": {\"data\": {\"kind\": \"string\", \"pattern\": \"(?:[0-9a-fA-F]{2})*\"}, \"limit\": {\"kind\": \"integer\", \"rule\": \"JSON integer token, not float or boolean\"}}}, \"direct_calls\": {\"items\": {\"kind\": \"string\"}, \"kind\": \"array\"}, \"fault_location\": {\"kind\": \"string\"}, \"impacted\": {\"items\": {\"kind\": \"string\"}, \"kind\": \"array\"}, \"predictions\": {\"items\": {\"additional_properties\": false, \"kind\": \"object\", \"optional\": {}, \"required\": {\"consumed\": {\"kind\": \"integer\", \"rule\": \"JSON integer token, not float or boolean\"}, \"error\": {\"kind\": \"integer\", \"rule\": \"JSON integer token, not float or boolean\"}, \"frames\": {\"items\": {\"kind\": \"string\", \"pattern\": \"(?:[0-9a-f]{2})*\"}, \"kind\": \"array\"}}}, \"kind\": \"array\", \"length\": 6}, \"witness\": {\"additional_properties\": false, \"kind\": \"object\", \"optional\": {}, \"required\": {\"data\": {\"kind\": \"string\", \"pattern\": \"(?:[0-9a-fA-F]{2})*\"}, \"limit\": {\"kind\": \"integer\", \"rule\": \"JSON integer token, not float or boolean\"}}}}}\n",
+    "lobo_reading": "RESPONSE CONTRACT v2. Return exactly one JSON object, without Markdown. All objects in this profile are closed: every required field must occur, unknown fields and duplicate keys are invalid. Integers use integer tokens, never 1.0 or true. Put any explanation in the optional top-level notes string. Shape validity and semantic correctness are separate checks. Input domain bounds in the task still apply.\n{\"additional_properties\": false, \"kind\": \"object\", \"optional\": {\"notes\": {\"kind\": \"string\"}}, \"required\": {\"admissions\": {\"items\": {\"kind\": \"boolean\"}, \"kind\": \"array\", \"length\": 4}, \"predictions\": {\"items\": {\"kind\": \"integer\", \"rule\": \"JSON integer token, not float or boolean\"}, \"kind\": \"array\", \"length\": 6}}}\n"
+  }
+}

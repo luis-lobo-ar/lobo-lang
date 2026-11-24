@@ -1,0 +1,9 @@
+module util;
+record Reverse<T> { pending:List<T>, output:List<T> }
+fn reverse<T>(items:List<T>)->List<T> {
+ let final=fold(i in List::length(items), state:Reverse<T> =Reverse {pending:items,output:List::empty<T>()}) {
+  Reverse {pending:List::tail(state.pending),output:List::prepend(List::head(state.pending),state.output)}
+ };
+ final.output
+}
+identities {module:"study.util",Reverse:"study.util.Reverse",reverse:"study.util.reverse"}

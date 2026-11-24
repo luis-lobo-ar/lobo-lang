@@ -1,0 +1,13 @@
+{
+  "format": "lobo-identities/0.1",
+  "identities": {
+    "module": "learning.callbacks.1.admission0",
+    "plus_b": "learning.callbacks.1.admission0.plus_b",
+    "apply_b": "learning.callbacks.1.admission0.apply_b",
+    "observed_b": "learning.callbacks.1.admission0.observed_b",
+    "invoke_b": "learning.callbacks.1.admission0.invoke_b",
+    "combine_b": "learning.callbacks.1.admission0.combine_b",
+    "with_context_b": "learning.callbacks.1.admission0.with_context_b",
+    "candidate_b": "learning.callbacks.1.admission0.candidate_b"
+  }
+}

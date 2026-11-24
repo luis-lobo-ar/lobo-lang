@@ -1,0 +1,4 @@
+module questions;
+record Cursor_b { pending: List<I64>, total: I64 }
+record State_b { index: I64, total: I64 }
+fn candidate_b()->I64 {fold(i in true,total:I64=0) {total+i}}

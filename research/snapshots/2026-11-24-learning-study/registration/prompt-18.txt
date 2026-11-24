@@ -1,0 +1,42 @@
+Use no tools.
+Use only the supplied task directory. Read TASK.txt, GUIDE.txt and the model/algorithm files. Change only the listed editable files. The app and models are trusted read-only adapters. No dependencies, network, file IO, subprocesses or unsafe code in the algorithm. Standard in-memory collections are allowed. Host-injected instruction/skill reads are permitted when required, but other trials, repository code, private graders and reference solutions are outside scope. Do not inspect the compiler binary or its parent directory. Use python3 check.py to submit a visible check; the host compiles and grades a snapshot, at most six submissions. No direct compiler/test invocation is needed. Initial stubs may compile but are deliberately incorrect. Use checks before and after editing. Build artifacts belong to the host. End with a concise result. All inputs and arithmetic fit signed 64-bit values under the stated bounds; results must preserve exact integers. No output or external side effects in run().
+
+Python 3.12, standard library only. logic.py exports run with the signature in TASK.txt; app.py and model.py are fixed. Import DTOs from model. Ledger uses Event(kind:Kind,amount:int), with Kind.CREDIT/DEBIT/LOCK/UNLOCK (and UNDO in the change model). Scheduler uses Job(id:int,cost:int,deps:list[int]) and change adds priority:int. Summary dataclasses and their field order are in model.py. Input bytes are bytes objects, not strings; the trusted wrapper handles hexadecimal input/output. Use in-memory lists, tuples, sets, dictionaries and ordinary helpers as needed. Keep exact integer results; no float conversion. Imports from model, dataclasses, enum, typing, collections, functools, itertools and math are allowed. No imports for file/network/process IO, open/eval/exec or dynamic import. The host py-compiles and executes the program. Submit with python3 check.py; no application prints or wrapper changes.
+INPUT DOCUMENTATION v1 (identical across languages). Inputs are JSON objects. Integers below are JSON integers, not strings, floats or booleans. Arrays preserve order. The harness converts this wire representation to the run signature; this is not language syntax.
+Fields: limit: integer in [0,64]; data: even-length hexadecimal string encoding at most512 raw bytes, two hexadecimal digits per byte. Input hex accepts either letter case; output bytes use lowercase hex. Decode data before calling run: the string is not UTF-8 payload text, a decimal number, or one byte per digit. An empty string encodes zero bytes. All offsets and lengths in the program count decoded bytes.
+
+Implement run(data,limit)->Summary(frames,consumed,error). data is bytes of length<=512;0<=limit<=64. Each frame is one unsigned length byte n, followed by n payload bytes, followed by one checksum byte equal to (13+sum(payload))%256. Empty payload is valid and needs checksum13. Parse from left to right, retaining payloads in input order. At a frame start: first reject n>limit with error3 EVEN IF payload/checksum is missing; otherwise missing payload/checksum is error1; otherwise wrong checksum is error2. Stop on the first error. consumed is the offending frame's START offset; retain only earlier valid frames. With no error, consumed=len(data),error=0. Empty input succeeds. frames is a list of bytes values, not decoded text.
+Task family: frames. Source-only comprehension. Return one JSON object: predictions (SIX complete normalized Summary objects for the inputs below); witness (any valid input yielding {"frames": ["07", "08090a"], "consumed": 8, "error": 0}; unspecified output fields can vary); direct_calls (application functions directly called by run, ignoring constructors/builtins/standard-library methods and util.reverse); impacted (functions in logic whose output can change for identical direct arguments if length_ok additionally rejects length==3; include the edited predicate itself); fault_location (the predicate responsible for that policy); counterexample (any valid input distinguishing original from that mutant). Use plain function names. Output byte values as lowercase hex. Optional top-level notes is a string. No tools. Return JSON only.
+Inputs: [{"data": "000d", "limit": 4}, {"data": "0301020313", "limit": 4}, {"data": "01041102050618", "limit": 3}, {"data": "01041102050619", "limit": 3}, {"data": "05", "limit": 4}, {"data": "0104110301", "limit": 4}]
+FILE model.py
+from dataclasses import dataclass
+@dataclass
+class Summary:
+ frames:list[bytes]
+ consumed:int
+ error:int
+
+FILE logic.py
+from model import Summary
+
+def header_at(data,start):
+ return data[start],start+1,0
+
+def length_ok(length,limit):
+ return length<=limit
+
+def digest(data):
+ return (13+sum(data))%256
+
+def run(data,limit):
+ frames=[];cursor=0;error=0
+ while cursor<len(data) and error==0:
+  length,payload,header_error=header_at(data,cursor)
+  if header_error:error=header_error
+  elif not length_ok(length,limit):error=3
+  elif len(data)-payload<length+1:error=1
+  else:
+   value=data[payload:payload+length]
+   if digest(value)!=data[payload+length]:error=2
+   else:frames.append(value);cursor=payload+length+1
+ return Summary(frames,cursor,error)

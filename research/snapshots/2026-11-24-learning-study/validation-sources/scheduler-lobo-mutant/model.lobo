@@ -1,0 +1,4 @@
+module model;
+record Job { id:I64,cost:I64,deps:List<I64> }
+record Summary {order:List<I64>,spent:I64,blocked:I64}
+identities {module:"study.scheduler.model",Job:"study.scheduler.Job",Summary:"study.scheduler.Summary"}

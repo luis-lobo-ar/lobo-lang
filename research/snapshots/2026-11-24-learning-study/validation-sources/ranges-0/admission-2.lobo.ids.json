@@ -1,0 +1,7 @@
+{
+  "format": "lobo-identities/0.1",
+  "identities": {
+    "module": "learning.ranges.0.admission2",
+    "candidate": "learning.ranges.0.admission2.candidate"
+  }
+}

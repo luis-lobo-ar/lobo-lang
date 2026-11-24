@@ -1,0 +1,17 @@
+{
+  "format": "lobo-identities/0.1",
+  "identities": {
+    "module": "study.scheduler.app",
+    "model.Summary": "study.scheduler.Summary",
+    "logic.run": "study.scheduler.run",
+    "model.Job": "study.scheduler.Job",
+    "SumCursor": "study.scheduler.app.SumCursor",
+    "FrameCursor": "study.scheduler.app.FrameCursor",
+    "sum_list": "study.scheduler.app.sum_list",
+    "sum_bytes": "study.scheduler.app.sum_bytes",
+    "sum_frames": "study.scheduler.app.sum_frames",
+    "digest_summary": "study.scheduler.app.digest_summary",
+    "entry": "study.scheduler.entry",
+    "bench": "study.scheduler.bench"
+  }
+}

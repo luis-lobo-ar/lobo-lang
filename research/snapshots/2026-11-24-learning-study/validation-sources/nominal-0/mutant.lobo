@@ -1,0 +1,12 @@
+module questions;
+record Box<T> {value:T}
+record Duo {left:I64,right:I64}
+variant Maybe<T> {Missing,Found(T)}
+fn take(item:Maybe<I64>)->I64 {match item {Missing=>-4,Found(value)=>value+4}}
+fn identity<T>(value:T)->T {value}
+fn p0()->I64 {let original=Duo {left:4,right:5}; let updated=Duo {...original,left:7}; 10*updated.left+updated.right}
+fn p1()->I64 {let original=Duo {left:4,right:5}; let copied=Duo {...original}; copied.right}
+fn p2()->I64 {take(Found(5))}
+fn p3()->I64 {take(Missing)}
+fn p4()->I64 {let boxed=Box {value:5}; identity(boxed.value)}
+fn p5()->I64 {let wrapped:Maybe<Box<I64>>=Found(Box {value:4}); match wrapped {Missing=>0,Found(inner)=>inner.value}}

@@ -1,0 +1,18 @@
+{
+  "format": "lobo-identities/0.1",
+  "identities": {
+    "module": "learning.propagation.0.mutant",
+    "Result": "learning.propagation.0.mutant.Result",
+    "gate": "learning.propagation.0.mutant.gate",
+    "decode": "learning.propagation.0.mutant.decode",
+    "work": "learning.propagation.0.mutant.work",
+    "looped": "learning.propagation.0.mutant.looped",
+    "nested": "learning.propagation.0.mutant.nested",
+    "p0": "learning.propagation.0.mutant.p0",
+    "p1": "learning.propagation.0.mutant.p1",
+    "p2": "learning.propagation.0.mutant.p2",
+    "p3": "learning.propagation.0.mutant.p3",
+    "p4": "learning.propagation.0.mutant.p4",
+    "p5": "learning.propagation.0.mutant.p5"
+  }
+}

@@ -1,0 +1,13 @@
+..........F.
+======================================================================
+FAIL: test_shared_admission_declarations_are_supplied_once (test_learning.LearningTests.test_shared_admission_declarations_are_supplied_once)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/matched-study/test_learning.py", line 65, in test_shared_admission_declarations_are_supplied_once
+    self.assertEqual(s.prompt(row).count(s.corpus.micro(topic,form)['head']),1)
+AssertionError: 5 != 1
+
+----------------------------------------------------------------------
+Ran 12 tests in 0.011s
+
+FAILED (failures=1)

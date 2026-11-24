@@ -1,0 +1,642 @@
+Source-only Lobo 1.11.2 comprehension. No tools, execution or delegation.
+Use only the supplied task directory. Read TASK.txt, GUIDE.txt and the model/algorithm files. Change only the listed editable files. The app and models are trusted read-only adapters. No dependencies, network, file IO, subprocesses or unsafe code in the algorithm. Standard in-memory collections are allowed. Host-injected instruction/skill reads are permitted when required, but other trials, repository code, private graders and reference solutions are outside scope. Do not inspect the compiler binary or its parent directory. Use python3 check.py to submit a visible check; the host compiles and grades a snapshot, at most six submissions. No direct compiler/test invocation is needed. Initial stubs may compile but are deliberately incorrect. Use checks before and after editing. Build artifacts belong to the host. End with a concise result. All inputs and arithmetic fit signed 64-bit values under the stated bounds; results must preserve exact integers. No output or external side effects in run().
+
+Lobo 1.11.2 is a native language. There is no projection/interpreter step. model.lobo declares the immutable DTOs. logic.lobo and its adjacent logic.lobo.ids.json are editable; app/model/util sources are fixed. Each block returns its final expression without a trailing semicolon. Use fn f(x:I64)->I64 {x+1}, let x=...; if condition {a} else {b}, &&/||/!, checked I64 arithmetic, and ==/!= comparisons. Names cannot shadow other visible names or function/type declarations. No assignment, break, continue, return keyword or for statement.
+Records: record Pair {left:I64,right:I64}; Pair {left:1,right:2}; pair.left; Pair {...pair,left:3}. Variants: match event {Credit(n)=> expression,Debit(n)=> expression,Lock=> expression,Unlock=> expression}. Every case must occur. Expected types infer case owners. Parenthesize complex match subjects: match (cursor.best) {...}.
+Lists: List<T>, List::empty<I64>(), List::prepend(value,list), List::length(list), List::head(list), List::tail(list). Head/tail require nonempty. Prepend reverses order; the supplied util.reverse<T> restores order and may infer T. Lists are persistent; no indexing, append or mutation operation.
+Counted loops carry one typed value: fold(i in n,total:I64=0) {total+i}. The index runs 0..n-1; zero iterations return the initial state. For multiple variables, carry a record: fold(i in List::length(items),state:Cursor=Cursor {pending:items,total:0}) {Cursor {pending:List::tail(state.pending),total:state.total+List::head(state.pending)}}. State-driven loop: while(state:State=initial; condition_using_state) {new_state}. To stop early, carry a Bool and test it in the loop condition. Finite execution fuel/heap apply; do not use deep recursive traversal.
+Bytes: Bytes::length(data), Bytes::at(data,index) returns 0..255, Bytes::slice(data,start,count), Bytes::empty(), Bytes::push(data,value). Guard bounds before at/slice. List<Bytes> is supported. Remainder uses %, division truncates toward zero. Ordinary expected failures are values in the declared DTO, not runtime faults.
+New functions/records/variants need identity entries. Existing IDs must stay stable. After adding declarations, run the explicit authoring command below (it only updates the managed identity map). Then use python3 check.py.
+
+/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/matched-study-20261123/freeze/lobo identities sync logic.lobo --source model.lobo --source util.lobo
+
+All required stable identity metadata is correctly supplied by the host and omitted here. Do not reject snippets for missing identity metadata.
+RESPONSE CONTRACT v2. Return exactly one JSON object, without Markdown. All objects in this profile are closed: every required field must occur, unknown fields and duplicate keys are invalid. Integers use integer tokens, never 1.0 or true. Put any explanation in the optional top-level notes string. Shape validity and semantic correctness are separate checks. Input domain bounds in the task still apply.
+{"additional_properties": false, "kind": "object", "optional": {"notes": {"kind": "string"}}, "required": {"admissions": {"items": {"kind": "boolean"}, "kind": "array", "length": 4}, "predictions": {"items": {"kind": "integer", "rule": "JSON integer token, not float or boolean"}, "kind": "array", "length": 6}}}
+
+Predict the I64 result of p0,p1,p2,p3,p4,p5 in order, as six JSON integers. Classify whether each of four admission snippets passes static checking, as four JSON booleans. Admission asks TYPE/CHECK acceptance, not successful runtime execution or proof of contracts. For each admission case, keep the shared helper/type declarations in PROGRAM, remove p0..p5, and append only that snippet. Each case is checked independently; no snippet sees another. The host supplies correct metadata for the resulting complete module. Return only the requested JSON.
+PROGRAM:
+module questions;
+fn plus_b(value:I64)->I64 {value+7}
+fn apply_b(callback:Fn(I64)->I64,value:I64)->I64 {callback(value)}
+fn observed_b(value:I64)->I64 actions {study.read} {value*2}
+fn invoke_b(callback:Fn(I64) actions {study.read}->I64,value:I64)->I64 actions {study.read} {callback(value)}
+fn combine_b(context:I64,value:I64)->I64 {context-value}
+fn with_context_b(context:I64,callback:Fn(I64,I64)->I64,value:I64)->I64 {callback(context,value)}
+fn p0()->I64 {apply_b(plus_b,6)}
+fn p1()->I64 {let callback:Fn(I64)->I64=&plus_b;callback(7)}
+fn p2()->I64 actions {study.read} {invoke_b(observed_b,6)}
+fn p3()->I64 actions {study.read} {let callback:Fn(I64) actions {study.read}->I64=&observed_b;callback(7)}
+fn p4()->I64 {with_context_b(7,combine_b,6)}
+fn p5()->I64 {apply_b(plus_b,apply_b(plus_b,6))}
+
+ADMISSION SNIPPETS:
+CASE 0
+fn candidate_b()->Fn(I64)->I64 {&observed_b}
+CASE 1
+fn candidate_b()->Fn(I64) actions {study.read}->I64 {&observed_b}
+CASE 2
+fn candidate_b()->I64 actions {study.write} {invoke_b(observed_b,1)}
+CASE 3
+fn candidate_b()->I64 actions {study.read,study.write} {invoke_b(observed_b,1)}
+{
+  "language_version": "core/1.11",
+  "compiler_version": "1.11.2",
+  "coverage": "Selected implemented rules and high-risk distinctions, not a complete normative specification.",
+  "concepts": [
+    {
+      "id": "blocks",
+      "title": "Blocks and bindings",
+      "category": "language",
+      "status": "implemented",
+      "semantics": "A block returns its final expression. let bindings are immutable. Function boundaries have explicit types.",
+      "pitfalls": [
+        "No assignment or return statement",
+        "Do not shadow visible names"
+      ],
+      "source_refs": [
+        {
+          "path": "spec/core-v1.0.md",
+          "sha256": "8dbc2ca888f49b84125a8faedf39160bb1eab27e0f25b336b1ef8f87f14f3b2b",
+          "anchor": "Functions, recursion"
+        }
+      ]
+    },
+    {
+      "id": "records",
+      "title": "Nominal records",
+      "category": "language",
+      "status": "implemented",
+      "semantics": "A record groups named typed fields. Construction supplies every field. Nominal identity, not field similarity, determines the type.",
+      "pitfalls": [
+        "Records are immutable",
+        "Empty and partial records are not admitted"
+      ],
+      "source_refs": [
+        {
+          "path": "spec/core-v0.4.md",
+          "sha256": "84828c9c83b0c0b70d278e2458d77e01231bfd75899a99193b80a762b78ede83",
+          "anchor": "## Declarations"
+        }
+      ]
+    },
+    {
+      "id": "updates",
+      "title": "Record updates",
+      "category": "language",
+      "status": "implemented",
+      "semantics": "Type { ...base, field: value } constructs a new value. Evaluate the same-nominal base once, then overrides once in written order.",
+      "pitfalls": [
+        "Three dots, one base first",
+        "Empty values replace fields; they are not skipped"
+      ],
+      "source_refs": [
+        {
+          "path": "spec/core-v1.10.md",
+          "sha256": "45d45f48a14fda25275c50ea02d6d65854d14e3fb6989ea56ef6d1aba62ec308",
+          "anchor": "## Immutable record updates"
+        }
+      ]
+    },
+    {
+      "id": "variants",
+      "title": "Variants",
+      "category": "language",
+      "status": "implemented",
+      "semantics": "A nominal variant chooses one named case, optionally carrying a typed payload. Expected types can identify a case owner.",
+      "pitfalls": [
+        "A case is not a record field",
+        "Bare payload-free cases need an identifying expected type"
+      ],
+      "source_refs": [
+        {
+          "path": "spec/core-v1.5.md",
+          "sha256": "dac4877adab3d738fb05fc57c37436106a22206a3069446a00c47de65c1abdda",
+          "anchor": "## Contextual variant cases"
+        }
+      ]
+    },
+    {
+      "id": "match",
+      "title": "Exhaustive match",
+      "category": "language",
+      "status": "implemented",
+      "semantics": "match selects the case of a variant and binds its payload. Every case occurs exactly once and all arm results have the same type.",
+      "pitfalls": [
+        "All arms are checked, even unreachable arms"
+      ],
+      "source_refs": [
+        {
+          "path": "spec/core-v0.5.md",
+          "sha256": "02ad206aa3cf73c38a8c13d082cdd7d0ea61c45a4dd2ab304497df2cc7c326cc",
+          "anchor": "Every arm"
+        }
+      ]
+    },
+    {
+      "id": "try",
+      "title": "Result propagation",
+      "category": "language",
+      "status": "implemented",
+      "semantics": "Prefix try unwraps Ok(T) or returns Err(E) from the enclosing function. Operand and output must each have exactly the payload cases Ok and Err with matching error types.",
+      "pitfalls": [
+        "No implicit resource cleanup",
+        "try(value) remains a function call",
+        "Runtime faults are not caught; postconditions still run"
+      ],
+      "source_refs": [
+        {
+          "path": "spec/core-v1.8.md",
+          "sha256": "422e050a2b5aa621e9b236f003084fa5398995e3144b3781b998092422255eb6",
+          "anchor": "## Type rule"
+        }
+      ]
+    },
+    {
+      "id": "lists",
+      "title": "Persistent lists",
+      "category": "language",
+      "status": "implemented",
+      "semantics": "List<T> is immutable. prepend(value,list) returns a new first element followed by the old list. head/tail require a nonempty list.",
+      "pitfalls": [
+        "Prepending reverses traversal order",
+        "No built-in append or indexing operation"
+      ],
+      "source_refs": [
+        {
+          "path": "spec/core-v0.6.md",
+          "sha256": "3d8737fe0d67ef67916ba63fc6d91386d9ff983c9148d2b2c671048a0cf35245",
+          "anchor": "## Operations"
+        }
+      ]
+    },
+    {
+      "id": "fold",
+      "title": "Counted fold",
+      "category": "language",
+      "status": "implemented",
+      "semantics": "fold(i in n,state:T=initial) returns successive typed states for indices 0 through n-1. Zero iterations return initial.",
+      "pitfalls": [
+        "A record carries multiple state fields",
+        "Count must be nonnegative; fuel still applies"
+      ],
+      "source_refs": [
+        {
+          "path": "spec/core-v0.2.md",
+          "sha256": "9cbdbe1ddd2a55ce69b3333d5984a12d437ed225d856668c69edfbfd2a4b1ad2",
+          "anchor": "## Sequential evaluation"
+        }
+      ]
+    },
+    {
+      "id": "while",
+      "title": "State-driven while",
+      "category": "language",
+      "status": "implemented",
+      "semantics": "while(state:T=initial; condition) repeatedly evaluates a condition and replaces the state with the body value. The result is the last state.",
+      "pitfalls": [
+        "No break or continue statement; carry stop state",
+        "Finite fuel can stop a nonterminating loop"
+      ],
+      "source_refs": [
+        {
+          "path": "spec/core-v0.8.md",
+          "sha256": "790cfe562577be3dafa5ca3d2028e34d8782cbb36731fe45c29560a4badc6887",
+          "anchor": "## Sequential semantics"
+        }
+      ]
+    },
+    {
+      "id": "bytes",
+      "title": "Bytes and byte ranges",
+      "category": "language",
+      "status": "implemented",
+      "semantics": "Bytes stores raw immutable octets. Bytes::at returns an integer 0..255. Bytes::slice(data,start,count) uses a byte count.",
+      "pitfalls": [
+        "The third slice argument is not an end offset",
+        "Empty Bytes is a value; indexing it faults"
+      ],
+      "source_refs": [
+        {
+          "path": "spec/core-v0.7.md",
+          "sha256": "0111fcfce8f7ba3ca9abfa027282113dcb6c31df7fb2d946847260f392efb221",
+          "anchor": "Bytes::slice(xs, start, count)"
+        }
+      ]
+    },
+    {
+      "id": "text",
+      "title": "UTF-8 text",
+      "category": "language",
+      "status": "implemented",
+      "semantics": "Text stores valid UTF-8. Text::length/at/slice index Unicode scalar values. Text::bytes gives the UTF-8 Bytes view.",
+      "pitfalls": [
+        "Scalar positions are not byte offsets or grapheme positions",
+        "There is no implicit Text/Bytes conversion"
+      ],
+      "source_refs": [
+        {
+          "path": "spec/core-v0.7.md",
+          "sha256": "0111fcfce8f7ba3ca9abfa027282113dcb6c31df7fb2d946847260f392efb221",
+          "anchor": "## Explicit operations"
+        }
+      ]
+    },
+    {
+      "id": "generics",
+      "title": "Generic inference",
+      "category": "language",
+      "status": "implemented",
+      "semantics": "Generic functions, records and variants are checked parametrically. Local argument and expected constructor contexts can infer type arguments when they determine every parameter consistently.",
+      "pitfalls": [
+        "Explicit specialization remains available",
+        "No global case-name search or whole-program inference",
+        "Function boundaries still need types"
+      ],
+      "source_refs": [
+        {
+          "path": "spec/core-v1.4.md",
+          "sha256": "01b365a0c8874db2ad9982e1e85dc036cf22cf31521c2b28c943c08888edf9b2",
+          "anchor": "## Generic function calls"
+        },
+        {
+          "path": "spec/core-v1.5.md",
+          "sha256": "dac4877adab3d738fb05fc57c37436106a22206a3069446a00c47de65c1abdda",
+          "anchor": "## Generic constructor arguments"
+        }
+      ]
+    },
+    {
+      "id": "callbacks",
+      "title": "Named callbacks",
+      "category": "language",
+      "status": "implemented",
+      "semantics": "Fn(A) actions { action.id } -> B describes a named function value. Named references capture no environment. Signature parameters, result and action set match exactly.",
+      "pitfalls": [
+        "Omitted action clause means pure",
+        "Pass context as an argument",
+        "No action widening or captured closures"
+      ],
+      "source_refs": [
+        {
+          "path": "spec/core-v1.11.md",
+          "sha256": "d13c38830326c983d336c83ab4a398867bd17858ade3c5f8ecc6d088359182aa",
+          "anchor": "## Callback actions"
+        }
+      ]
+    },
+    {
+      "id": "actions",
+      "title": "Declared actions",
+      "category": "language",
+      "status": "implemented",
+      "semantics": "A function declares an upper bound on its actions. Every direct and callback invocation must fit that bound, including unreachable code.",
+      "pitfalls": [
+        "A declaration does not grant resource authority",
+        "Actionful callbacks are checked by exact declared sets"
+      ],
+      "source_refs": [
+        {
+          "path": "spec/core-v0.3.md",
+          "sha256": "96e39f958c14b082ad0f3a0c72dc0b3318a7c1c442812b35c338d35b00759543",
+          "anchor": "## Checking and purity"
+        },
+        {
+          "path": "spec/core-v1.11.md",
+          "sha256": "d13c38830326c983d336c83ab4a398867bd17858ade3c5f8ecc6d088359182aa",
+          "anchor": "## Callback actions"
+        }
+      ]
+    },
+    {
+      "id": "permissions",
+      "title": "Typed permissions",
+      "category": "library",
+      "status": "implemented",
+      "semantics": "Native and SQL libraries expose typed permission collections for capability restriction. Derived capabilities can remove rights. Launch grants bound root authority.",
+      "pitfalls": [
+        "Permissions are authority, actions are behavior",
+        "Typed collections wrap a closed provider catalog; arbitrary FFI is absent"
+      ],
+      "source_refs": [
+        {
+          "path": "libraries/native/README.md",
+          "sha256": "4de8dd7276b56d529c96f909ba6e4903fda299e255394e1e8e4bef094d104eea",
+          "anchor": "Permission"
+        }
+      ]
+    },
+    {
+      "id": "limits",
+      "title": "Execution limits",
+      "category": "runtime",
+      "status": "implemented",
+      "semantics": "Fuel, heap, depth and native operation/byte limits bound invocations. Native resource operations also obey deadlines and explicit launch grants.",
+      "pitfalls": [
+        "Limits do not prove termination or functional correctness",
+        "Quota exhaustion and typed IO errors have distinct behavior"
+      ],
+      "source_refs": [
+        {
+          "path": "spec/native-interface-v0.1.md",
+          "sha256": "fc98302a3a5e50c8a87079231b9311954e8351383ba872e4223385ff1770934e",
+          "anchor": "## Launch policy and limits"
+        }
+      ]
+    },
+    {
+      "id": "identities",
+      "title": "Stable identities",
+      "category": "tooling",
+      "status": "implemented",
+      "semantics": "Adjacent .lobo.ids.json files bind declaration/import names to persistent IDs. Explicit init/sync/rename authoring commands manage bindings. Checks never allocate IDs.",
+      "pitfalls": [
+        "Preserve ID values when renaming; retarget keys",
+        "Do not derive established identities from names or bodies"
+      ],
+      "source_refs": [
+        {
+          "path": "spec/core-v1.3.md",
+          "sha256": "2ea91b7b4d4c7716a593ceafcfff42227f05f94e45d8500e9ed04e0c956a9118",
+          "anchor": "## Source and identity metadata"
+        }
+      ]
+    },
+    {
+      "id": "imports",
+      "title": "Closed imports",
+      "category": "tooling",
+      "status": "implemented",
+      "semantics": "use group { name }; binds selected declarations by stable identity. Supply every source explicitly. The loader does not discover dependency files by path.",
+      "pitfalls": [
+        "A source spelling is not the persistent identity",
+        "Compilation requires the complete explicit source bundle"
+      ],
+      "source_refs": [
+        {
+          "path": "spec/core-v1.3.md",
+          "sha256": "2ea91b7b4d4c7716a593ceafcfff42227f05f94e45d8500e9ed04e0c956a9118",
+          "anchor": "The loader does not discover"
+        }
+      ]
+    },
+    {
+      "id": "json",
+      "title": "JSON literals",
+      "category": "library",
+      "status": "implemented",
+      "semantics": "JSON literal syntax uses the supplied JSON library builders by stable ID. Json and directly called helpers stay explicit. The compiler records generated builder imports.",
+      "pitfalls": [
+        "Supply the JSON source dependency",
+        "Literal syntax does not imply a database or network grant"
+      ],
+      "source_refs": [
+        {
+          "path": "spec/core-v1.6.md",
+          "sha256": "71967bd60313ce04cabdf740863eb2f1c73c49ecb1f22ea58ed6e9abbcd9c886",
+          "anchor": "## Closed dependencies"
+        }
+      ]
+    },
+    {
+      "id": "native",
+      "title": "Native compilation",
+      "category": "tooling",
+      "status": "implemented",
+      "semantics": "compile/run use machine code by default through the C backend. Direct LLVM is optional. eval is the reference evaluator for correctness comparisons.",
+      "pitfalls": [
+        "No projection step is needed",
+        "The proposed workspace daemon and self-hosting are not implemented"
+      ],
+      "source_refs": [
+        {
+          "path": "docs/native-development.md",
+          "sha256": "5b111489386861c5549f245cb27458667401ff2e900e41be2d1a23b11b9d1ded",
+          "anchor": "##"
+        },
+        {
+          "path": "spec/core-v1.2.md",
+          "sha256": "7d0f42dd9d1bd99b860af5045c960fa82ffc96511d8f6397fefa381964c5b363",
+          "anchor": "## Source selection"
+        },
+        {
+          "path": "README.md",
+          "sha256": "ad2e5f1d96e13509ed67b34588e5ffb1cd3c5087016554989a5638236073fc3c",
+          "anchor": "The language is experimental; the wider workspace, WASM backend, and self-hosting are future work."
+        }
+      ]
+    },
+    {
+      "id": "wire-input",
+      "title": "Study input encoding",
+      "category": "experiment",
+      "status": "study protocol",
+      "semantics": "Input JSON encodings belong to each experiment protocol and its trusted adapters. A hexadecimal JSON string can encode Bytes; this is not a Lobo expression.",
+      "pitfalls": [
+        "Do not infer a wire schema from source types alone",
+        "Schema changes need identical input documentation across comparison languages"
+      ],
+      "source_refs": [
+        {
+          "path": "benchmarks/matched-study/context.py",
+          "sha256": "05e5c702ff967e00e135368d9e00eb3a0296efbcaf028fcf169b0b81da08d156",
+          "anchor": "def input_schema"
+        }
+      ]
+    },
+    {
+      "id": "resources",
+      "title": "Native resource lifetime",
+      "category": "runtime",
+      "status": "implemented",
+      "semantics": "Opaque capability, listener and stream tokens carry generation-checked runtime identity. Explicit close policy and invocation-exit cleanup bound handle lifetime.",
+      "pitfalls": [
+        "Capture an operation result before cleanup",
+        "Prefix try does not close handles when returning an error"
+      ],
+      "source_refs": [
+        {
+          "path": "spec/native-interface-v0.1.md",
+          "sha256": "fc98302a3a5e50c8a87079231b9311954e8351383ba872e4223385ff1770934e",
+          "anchor": "## Authority and resource state"
+        },
+        {
+          "path": "spec/core-v1.8.md",
+          "sha256": "422e050a2b5aa621e9b236f003084fa5398995e3144b3781b998092422255eb6",
+          "anchor": "## Resource ownership"
+        }
+      ]
+    }
+  ],
+  "adjacency": {
+    "blocks": [
+      {
+        "relation": "can invoke",
+        "target": "callbacks"
+      }
+    ],
+    "records": [],
+    "updates": [
+      {
+        "relation": "preserves nominal type",
+        "target": "records"
+      }
+    ],
+    "variants": [
+      {
+        "relation": "handled by",
+        "target": "match"
+      }
+    ],
+    "match": [],
+    "try": [
+      {
+        "relation": "propagates result cases",
+        "target": "variants"
+      },
+      {
+        "relation": "does not implicitly close",
+        "target": "resources"
+      },
+      {
+        "relation": "can exit through",
+        "target": "fold"
+      },
+      {
+        "relation": "can exit through",
+        "target": "while"
+      }
+    ],
+    "lists": [
+      {
+        "relation": "can be traversed by",
+        "target": "fold"
+      }
+    ],
+    "fold": [
+      {
+        "relation": "can carry",
+        "target": "records"
+      }
+    ],
+    "while": [
+      {
+        "relation": "can carry",
+        "target": "records"
+      }
+    ],
+    "bytes": [
+      {
+        "relation": "converts explicitly with",
+        "target": "text"
+      }
+    ],
+    "text": [],
+    "generics": [
+      {
+        "relation": "infers constructor arguments for",
+        "target": "records"
+      },
+      {
+        "relation": "infers contextual owners for",
+        "target": "variants"
+      }
+    ],
+    "callbacks": [
+      {
+        "relation": "declares exact bound of",
+        "target": "actions"
+      }
+    ],
+    "actions": [
+      {
+        "relation": "does not grant",
+        "target": "permissions"
+      }
+    ],
+    "permissions": [
+      {
+        "relation": "constrained by",
+        "target": "limits"
+      },
+      {
+        "relation": "authorizes operations on",
+        "target": "resources"
+      }
+    ],
+    "limits": [],
+    "identities": [],
+    "imports": [
+      {
+        "relation": "pins targets using",
+        "target": "identities"
+      }
+    ],
+    "json": [
+      {
+        "relation": "requires supplied sources through",
+        "target": "imports"
+      }
+    ],
+    "native": [
+      {
+        "relation": "enforces",
+        "target": "limits"
+      }
+    ],
+    "wire-input": [
+      {
+        "relation": "adapts external representation to",
+        "target": "bytes"
+      }
+    ],
+    "resources": [
+      {
+        "relation": "bounded by",
+        "target": "limits"
+      }
+    ]
+  }
+}
+CHECKED EXAMPLES
+module reading_examples;
+
+record Pair { left: I64, right: I64 }
+variant Result<T> { Ok(T), Err(Text) }
+
+fn bump(input: Result<I64>) -> Result<I64> {
+  let value = try input;
+  Ok(value + 1)
+}
+
+fn slice_count() -> I64 {
+  let data = Text::bytes("ABCDE");
+  Bytes::length(Bytes::slice(data, 1, 3))
+}
+
+fn spread() -> I64 {
+  let original = Pair { left: 2, right: 3 };
+  let updated = Pair { ...original, left: 8 };
+  updated.left + updated.right
+}
+
+fn counted() -> I64 {
+  fold(index in 4, total: I64 = 0) { total + index }
+}
+
+fn stopped() -> I64 {
+  while(state: I64 = 0; state < 4) { state + 1 }
+}
+
+fn list_order() -> I64 {
+  let values = List::prepend(2, List::prepend(9, List::empty<I64>()));
+  List::head(values)
+}
+
+fn propagate() -> I64 {
+  match bump(Ok(8)) { Ok(value) => value, Err(error) => -1 }
+}
+
+fn propagate_error() -> Bool {
+  match bump(Err("example")) { Ok(value) => false, Err(error) => error == "example" }
+}

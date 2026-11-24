@@ -1,0 +1,9 @@
+module questions;
+record Cursor_b { pending: List<I64>, total: I64 }
+record State_b { index: I64, total: I64 }
+fn p0()->I64 {fold(i in 7, total:I64=7) { total+i+1 }}
+fn p1()->I64 {fold(i in 0, total:I64=7) { 1/0 }}
+fn p2()->I64 {let final=while(state:State_b=State_b {index:0,total:7};state.index<6) { State_b {index:state.index+1,total:state.total+state.index} }; final.total}
+fn p3()->I64 {List::head(List::prepend(6,List::prepend(7,List::empty<I64>())))}
+fn p4()->I64 {List::head(List::tail(List::prepend(7,List::prepend(6,List::empty<I64>()))))}
+fn p5()->I64 {let final=fold(i in 3,cursor:Cursor_b=Cursor_b {pending:List::prepend(6,List::prepend(7,List::prepend(2,List::empty<I64>()))),total:0}) {Cursor_b {pending:List::tail(cursor.pending),total:10*cursor.total+List::head(cursor.pending)}}; final.total}

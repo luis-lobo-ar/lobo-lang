@@ -1,0 +1,18 @@
+{
+  "format": "lobo-identities/0.1",
+  "identities": {
+    "module": "learning.callbacks.1.mutant",
+    "plus_b": "learning.callbacks.1.mutant.plus_b",
+    "apply_b": "learning.callbacks.1.mutant.apply_b",
+    "observed_b": "learning.callbacks.1.mutant.observed_b",
+    "invoke_b": "learning.callbacks.1.mutant.invoke_b",
+    "combine_b": "learning.callbacks.1.mutant.combine_b",
+    "with_context_b": "learning.callbacks.1.mutant.with_context_b",
+    "p0": "learning.callbacks.1.mutant.p0",
+    "p1": "learning.callbacks.1.mutant.p1",
+    "p2": "learning.callbacks.1.mutant.p2",
+    "p3": "learning.callbacks.1.mutant.p3",
+    "p4": "learning.callbacks.1.mutant.p4",
+    "p5": "learning.callbacks.1.mutant.p5"
+  }
+}

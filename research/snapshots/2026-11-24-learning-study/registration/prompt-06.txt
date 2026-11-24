@@ -1,0 +1,71 @@
+Use no tools.
+Use only the supplied task directory. Read TASK.txt, GUIDE.txt and the model/algorithm files. Change only the listed editable files. The app and models are trusted read-only adapters. No dependencies, network, file IO, subprocesses or unsafe code in the algorithm. Standard in-memory collections are allowed. Host-injected instruction/skill reads are permitted when required, but other trials, repository code, private graders and reference solutions are outside scope. Do not inspect the compiler binary or its parent directory. Use python3 check.py to submit a visible check; the host compiles and grades a snapshot, at most six submissions. No direct compiler/test invocation is needed. Initial stubs may compile but are deliberately incorrect. Use checks before and after editing. Build artifacts belong to the host. End with a concise result. All inputs and arithmetic fit signed 64-bit values under the stated bounds; results must preserve exact integers. No output or external side effects in run().
+
+Lobo 1.11.2 is a native language. There is no projection/interpreter step. model.lobo declares the immutable DTOs. logic.lobo and its adjacent logic.lobo.ids.json are editable; app/model/util sources are fixed. Each block returns its final expression without a trailing semicolon. Use fn f(x:I64)->I64 {x+1}, let x=...; if condition {a} else {b}, &&/||/!, checked I64 arithmetic, and ==/!= comparisons. Names cannot shadow other visible names or function/type declarations. No assignment, break, continue, return keyword or for statement.
+Records: record Pair {left:I64,right:I64}; Pair {left:1,right:2}; pair.left; Pair {...pair,left:3}. Variants: match event {Credit(n)=> expression,Debit(n)=> expression,Lock=> expression,Unlock=> expression}. Every case must occur. Expected types infer case owners. Parenthesize complex match subjects: match (cursor.best) {...}.
+Lists: List<T>, List::empty<I64>(), List::prepend(value,list), List::length(list), List::head(list), List::tail(list). Head/tail require nonempty. Prepend reverses order; the supplied util.reverse<T> restores order and may infer T. Lists are persistent; no indexing, append or mutation operation.
+Counted loops carry one typed value: fold(i in n,total:I64=0) {total+i}. The index runs 0..n-1; zero iterations return the initial state. For multiple variables, carry a record: fold(i in List::length(items),state:Cursor=Cursor {pending:items,total:0}) {Cursor {pending:List::tail(state.pending),total:state.total+List::head(state.pending)}}. State-driven loop: while(state:State=initial; condition_using_state) {new_state}. To stop early, carry a Bool and test it in the loop condition. Finite execution fuel/heap apply; do not use deep recursive traversal.
+Bytes: Bytes::length(data), Bytes::at(data,index) returns 0..255, Bytes::slice(data,start,count), Bytes::empty(), Bytes::push(data,value). Guard bounds before at/slice. List<Bytes> is supported. Remainder uses %, division truncates toward zero. Ordinary expected failures are values in the declared DTO, not runtime faults.
+New functions/records/variants need identity entries. Existing IDs must stay stable. After adding declarations, run the explicit authoring command below (it only updates the managed identity map). Then use python3 check.py.
+
+/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/matched-study-20261123/freeze/lobo identities sync logic.lobo --source model.lobo --source util.lobo
+
+INPUT DOCUMENTATION v1 (identical across languages). Inputs are JSON objects. Integers below are JSON integers, not strings, floats or booleans. Arrays preserve order. The harness converts this wire representation to the run signature; this is not language syntax.
+Fields: budget: integer in [0,512]; jobs: array of at most24 objects, each with exactly id,cost,deps. id: integer, all job IDs together are exactly0..n-1 in any array order. cost: integer in [0,64]. deps: array of at most24 valid job IDs; repeats, self-references and cycles are allowed. deps are IDs, not array positions.
+
+Implement run(jobs,budget)->Summary(order,spent,blocked). Job fields id,cost,deps. Jobs have unique IDs exactly0..n-1, arrive in arbitrary order,0<=n<=24,0<=cost<=64,0<=budget<=512. deps contains valid IDs, may repeat and may contain self-dependencies or cycles. Start with no completed jobs. Repeatedly choose the LOWEST ID among unfinished jobs whose every dependency is completed and whose cost<=remaining budget; execute it, append its ID to order, subtract its cost. A zero-cost job can run at zero budget. If no eligible fitting job remains, stop. spent is total executed cost. blocked counts EVERY unfinished job, whether blocked by dependencies or budget. Do not stop merely because a lower-ID job is unaffordable.
+Task family: scheduler. Source-only comprehension. Return one JSON object: predictions (SIX complete normalized Summary objects for the inputs below); witness (any valid input yielding {"order": [2, 0], "spent": 3, "blocked": 1}; unspecified output fields can vary); direct_calls (application functions directly called by run, ignoring constructors/builtins/standard-library methods and util.reverse); impacted (functions in logic whose output can change for identical direct arguments if affordable changes cost<=remaining to cost+3<=remaining; include the edited predicate itself); fault_location (the predicate responsible for that policy); counterexample (any valid input distinguishing original from that mutant). Use plain function names. Output byte values as lowercase hex. Optional top-level notes is a string. No tools. Return JSON only.
+Inputs: [{"jobs": [{"id": 2, "cost": 1, "deps": []}, {"id": 0, "cost": 3, "deps": []}, {"id": 1, "cost": 1, "deps": [0]}], "budget": 4}, {"jobs": [{"id": 0, "cost": 2, "deps": [2]}, {"id": 2, "cost": 1, "deps": [1]}, {"id": 1, "cost": 0, "deps": []}], "budget": 3}, {"jobs": [{"id": 1, "cost": 0, "deps": [1]}, {"id": 0, "cost": 0, "deps": []}], "budget": 1}, {"jobs": [{"id": 0, "cost": 6, "deps": []}, {"id": 1, "cost": 3, "deps": []}, {"id": 2, "cost": 0, "deps": [1]}], "budget": 3}, {"jobs": [{"id": 1, "cost": 1, "deps": [0]}, {"id": 0, "cost": 1, "deps": [1]}], "budget": 7}, {"jobs": [{"id": 1, "cost": 2, "deps": []}, {"id": 0, "cost": 2, "deps": []}, {"id": 2, "cost": 1, "deps": [0, 0]}], "budget": 3}]
+FILE model.lobo
+module model;
+record Job { id:I64,cost:I64,deps:List<I64> }
+record Summary {order:List<I64>,spent:I64,blocked:I64}
+identities {module:"study.scheduler.model",Job:"study.scheduler.Job",Summary:"study.scheduler.Summary"}
+
+FILE util.lobo
+module util;
+record Reverse<T> { pending:List<T>, output:List<T> }
+fn reverse<T>(items:List<T>)->List<T> {
+ let final=fold(i in List::length(items), state:Reverse<T> =Reverse {pending:items,output:List::empty<T>()}) {
+  Reverse {pending:List::tail(state.pending),output:List::prepend(List::head(state.pending),state.output)}
+ };
+ final.output
+}
+identities {module:"study.util",Reverse:"study.util.Reverse",reverse:"study.util.reverse"}
+
+FILE logic.lobo
+module logic;
+use model {Summary,Job};
+use util {reverse};
+variant Pick {None,Some(Job)}
+record Scan {pending:List<I64>,yes:Bool}
+record Search {pending:List<Job>,best:Pick}
+record State {done:List<I64>,remaining:I64,stopped:Bool}
+fn contains(items:List<I64>,value:I64)->Bool {
+ let final=fold(i in List::length(items),cursor:Scan=Scan {pending:items,yes:false}) {Scan {pending:List::tail(cursor.pending),yes:cursor.yes || List::head(cursor.pending)==value}};
+ final.yes
+}
+fn available(job:Job,done:List<I64>)->Bool {
+ let final=fold(i in List::length(job.deps),cursor:Scan=Scan {pending:job.deps,yes:true}) {Scan {pending:List::tail(cursor.pending),yes:cursor.yes && contains(done,List::head(cursor.pending))}};
+ final.yes
+}
+fn affordable(cost:I64,remaining:I64)->Bool {cost<=remaining}
+fn select_job(jobs:List<Job>,done:List<I64>,remaining:I64)->Pick {
+ let final=fold(i in List::length(jobs),cursor:Search=Search {pending:jobs,best:None}) {
+  let item=List::head(cursor.pending);
+  let best=if contains(done,item.id) || !available(item,done) || !affordable(item.cost,remaining) {cursor.best} else {
+   match (cursor.best) {None=> Pick::Some(item),Some(old)=> if item.id<old.id {Pick::Some(item)} else {cursor.best}}
+  };
+  Search {pending:List::tail(cursor.pending),best:best}
+ };
+ final.best
+}
+fn run(jobs:List<Job>,budget:I64)->Summary {
+ let final=while(state:State=State {done:List::empty<I64>(),remaining:budget,stopped:false};!state.stopped) {
+  match select_job(jobs,state.done,state.remaining) {None=> State {...state,stopped:true},Some(job)=> State {...state,done:List::prepend(job.id,state.done),remaining:state.remaining-job.cost}}
+ };
+ Summary {order:reverse(final.done),spent:budget-final.remaining,blocked:List::length(jobs)-List::length(final.done)}
+}
+
+RESPONSE CONTRACT v2. Return exactly one JSON object, without Markdown. All objects in this profile are closed: every required field must occur, unknown fields and duplicate keys are invalid. Integers use integer tokens, never 1.0 or true. witness and counterexample are INPUT objects only; do not put frames, consumed, error, summary, expected, original or mutant explanations inside them unless the field is declared by the input profile. Put any explanation in the optional top-level notes string. Shape validity and semantic correctness are separate checks. Input domain bounds in the task still apply.
+{"additional_properties": false, "kind": "object", "optional": {"notes": {"kind": "string"}}, "required": {"counterexample": {"additional_properties": false, "kind": "object", "optional": {}, "required": {"budget": {"kind": "integer", "rule": "JSON integer token, not float or boolean"}, "jobs": {"items": {"additional_properties": false, "kind": "object", "optional": {}, "required": {"cost": {"kind": "integer", "rule": "JSON integer token, not float or boolean"}, "deps": {"items": {"kind": "integer", "rule": "JSON integer token, not float or boolean"}, "kind": "array"}, "id": {"kind": "integer", "rule": "JSON integer token, not float or boolean"}}}, "kind": "array"}}}, "direct_calls": {"items": {"kind": "string"}, "kind": "array"}, "fault_location": {"kind": "string"}, "impacted": {"items": {"kind": "string"}, "kind": "array"}, "predictions": {"items": {"additional_properties": false, "kind": "object", "optional": {}, "required": {"blocked": {"kind": "integer", "rule": "JSON integer token, not float or boolean"}, "order": {"items": {"kind": "integer", "rule": "JSON integer token, not float or boolean"}, "kind": "array"}, "spent": {"kind": "integer", "rule": "JSON integer token, not float or boolean"}}}, "kind": "array", "length": 6}, "witness": {"additional_properties": false, "kind": "object", "optional": {}, "required": {"budget": {"kind": "integer", "rule": "JSON integer token, not float or boolean"}, "jobs": {"items": {"additional_properties": false, "kind": "object", "optional": {}, "required": {"cost": {"kind": "integer", "rule": "JSON integer token, not float or boolean"}, "deps": {"items": {"kind": "integer", "rule": "JSON integer token, not float or boolean"}, "kind": "array"}, "id": {"kind": "integer", "rule": "JSON integer token, not float or boolean"}}}, "kind": "array"}}}}}

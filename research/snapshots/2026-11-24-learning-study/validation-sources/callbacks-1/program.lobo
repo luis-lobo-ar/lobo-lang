@@ -1,0 +1,13 @@
+module questions;
+fn plus_b(value:I64)->I64 {value+7}
+fn apply_b(callback:Fn(I64)->I64,value:I64)->I64 {callback(value)}
+fn observed_b(value:I64)->I64 actions {study.read} {value*2}
+fn invoke_b(callback:Fn(I64) actions {study.read}->I64,value:I64)->I64 actions {study.read} {callback(value)}
+fn combine_b(context:I64,value:I64)->I64 {context-value}
+fn with_context_b(context:I64,callback:Fn(I64,I64)->I64,value:I64)->I64 {callback(context,value)}
+fn p0()->I64 {apply_b(plus_b,6)}
+fn p1()->I64 {let callback:Fn(I64)->I64=&plus_b;callback(7)}
+fn p2()->I64 actions {study.read} {invoke_b(observed_b,6)}
+fn p3()->I64 actions {study.read} {let callback:Fn(I64) actions {study.read}->I64=&observed_b;callback(7)}
+fn p4()->I64 {with_context_b(7,combine_b,6)}
+fn p5()->I64 {apply_b(plus_b,apply_b(plus_b,6))}

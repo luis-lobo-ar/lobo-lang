@@ -1,0 +1,14 @@
+{
+  "format": "lobo-identities/0.1",
+  "identities": {
+    "module": "study.frames.logic",
+    "model.Summary": "study.frames.Summary",
+    "util.reverse": "study.util.reverse",
+    "Header": "study.frames.Header",
+    "State": "study.frames.State",
+    "header_at": "study.frames.read_header",
+    "length_ok": "study.frames.fits",
+    "digest": "study.frames.checksum",
+    "run": "study.frames.run"
+  }
+}
