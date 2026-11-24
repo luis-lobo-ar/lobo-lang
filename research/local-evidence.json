@@ -1256,6 +1256,48 @@
         "Equal compute from matching reasoning labels, a hard token cap, billed-dollar savings or total study-development cost",
         "Correctness beyond the finite observations, or a new runtime speed claim for generated programs"
       ]
+    },
+    {
+      "id": "local-040",
+      "date": "2026-11-23",
+      "title": "Offline comprehension failure attribution and proposed improvements",
+      "evidence_kind": "retrospective response/source/prompt audit with independent copied-program replay",
+      "status": "completed analysis; prompt defects confirmed, causal attribution unresolved; improvements not implemented",
+      "files": [
+        {
+          "path": "research/comprehension-failure-analysis-2026-11-23.md",
+          "sha256": "e8aa58137c7c87a8d1607685479fffed8ec6ddc7f4b28b7473d8cf6224fe6b6b"
+        },
+        {
+          "path": "benchmarks/results/2026-11-23-comprehension-failure-audit.json",
+          "sha256": "eee6226d293b8faa28ee6ca389d0ab3a0179b21fcda105fda28796590ba2b256"
+        },
+        {
+          "path": "research/snapshots/2026-11-23-comprehension-audit/prompts.json",
+          "sha256": "314d75683497efa11869b8398eb2b5186ed7d57fd29919ebab2f0f32478eee75"
+        },
+        {
+          "path": "research/snapshots/2026-11-23-comprehension-audit/analysis-code.json",
+          "sha256": "9ecc9b3da28fd63e5953b0b7422e197e303ea43354cf094c88109a697acc4963"
+        },
+        {
+          "path": "benchmarks/results/2026-11-23-comprehension-audit-verification.json",
+          "sha256": "1f1be980ee95c88945c66371452ecfb7c0cee12a3868eaeb305d0f556d8a54c8"
+        }
+      ],
+      "supports": [
+        "Every failed Lobo item mapped to its response, requirement and canonical result",
+        "54 canonical prediction outputs agree with their frozen expected values; copied impact mutation changes fits and run",
+        "Task/guide duplicated in all 54 source-only user prompts, with irrelevant check/authoring material",
+        "Five of nine Lobo failed items also fail in another language when pooling configurations; four share a same-configuration counterpart",
+        "Observed model/configuration sensitivity and explicit proposal priorities without language or guide edits"
+      ],
+      "does_not_establish": [
+        "Causal percentages attributable to language, documentation, model weights or familiarity",
+        "A compiler defect or the need for new syntax",
+        "Improved comprehension or token savings from the proposed prompt/documentation/API changes",
+        "A new model trial, rescored outcome, human-comprehension result or population ranking"
+      ]
     }
   ],
   "backend_recommendation": {

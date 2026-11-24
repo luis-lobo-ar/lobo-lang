@@ -1,5 +1,14 @@
 # Local evidence for the Lobo paper
 
+## Comprehension failure audit
+
+Paper local-040 adds [the failure analysis](comprehension-failure-analysis-2026-11-23.md),
+[the complete offline audit](../benchmarks/results/2026-11-23-comprehension-failure-audit.json) and
+[verification](../benchmarks/results/2026-11-23-comprehension-audit-verification.json). Nine incorrect Lobo
+items are traced to their responses and tested semantics. Duplicated task/guide text is confirmed; its
+accuracy effect and language/model causal shares remain unmeasured. All implementation proposals are
+deferred. The previous 39 entries and 118 pins remain unchanged.
+
 ## Luna reasoning follow-up
 
 Paper local-039 adds [the completed high/low study](luna-reasoning-study-2026-11-23.md),

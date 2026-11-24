@@ -1,5 +1,13 @@
 # Lobo research record
 
+## Comprehension failure attribution and proposed improvements
+
+The [offline failure analysis](comprehension-failure-analysis-2026-11-23.md) examines every Lobo miss,
+compares other languages, replays predictions and audits the delivered prompts. It finds model/configuration
+sensitivity, definite duplicated and irrelevant context, and plausible API/presentation risks. Causal shares
+are unknown. Improvements remain proposals: no guide, language or grader change, and no new model trial.
+See paper local-040 and [the audit data](../benchmarks/results/2026-11-23-comprehension-failure-audit.json).
+
 ## Luna high/low reasoning follow-up
 
 The [completed 108-attempt follow-up](luna-reasoning-study-2026-11-23.md) repeats the frozen tasks with

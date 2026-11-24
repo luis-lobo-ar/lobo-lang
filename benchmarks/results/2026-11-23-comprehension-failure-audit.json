@@ -1,0 +1,4280 @@
+{
+  "date": "2026-11-23",
+  "format": "lobo-comprehension-failure-audit/1",
+  "scope": "Offline analysis and copied-program diagnostics only; no participant calls, changed guides, rescoring or product edits.",
+  "controller_sha256": "1c05a60a0c431a9d9336f7b28c9fcfb9f69446cb24ead52f380d1a5d4c838bf0",
+  "analyzer_sha256": "98d1e9be3d84a1ddb39c00947988199d36b56ac1a1c72448dbbf58431d67c677",
+  "input_artifacts": [
+    {
+      "path": "benchmarks/results/2026-11-23-matched-agent-study.json",
+      "sha256": "187f5212d8de30173340c313156621e3eee46407dbb87d322f5eaa2778e3776d"
+    },
+    {
+      "path": "benchmarks/results/2026-11-23-luna-reasoning-study.json",
+      "sha256": "4ffc450b263bb564847e60d6358244419322f8653614ddbe4c3d1c202a476023"
+    }
+  ],
+  "groups": [
+    {
+      "configuration": "sol-high",
+      "language": "lobo",
+      "attempted": 6,
+      "accepted": 6,
+      "items_passed": 66,
+      "items_total": 66,
+      "failed_item_counts": {}
+    },
+    {
+      "configuration": "sol-high",
+      "language": "rust",
+      "attempted": 6,
+      "accepted": 6,
+      "items_passed": 66,
+      "items_total": 66,
+      "failed_item_counts": {}
+    },
+    {
+      "configuration": "sol-high",
+      "language": "python",
+      "attempted": 6,
+      "accepted": 6,
+      "items_passed": 66,
+      "items_total": 66,
+      "failed_item_counts": {}
+    },
+    {
+      "configuration": "luna-high",
+      "language": "lobo",
+      "attempted": 6,
+      "accepted": 3,
+      "items_passed": 62,
+      "items_total": 66,
+      "failed_item_counts": {
+        "prediction_1": 1,
+        "impacted": 1,
+        "prediction_5": 1,
+        "witness": 1
+      }
+    },
+    {
+      "configuration": "luna-high",
+      "language": "rust",
+      "attempted": 6,
+      "accepted": 5,
+      "items_passed": 65,
+      "items_total": 66,
+      "failed_item_counts": {
+        "prediction_1": 1
+      }
+    },
+    {
+      "configuration": "luna-high",
+      "language": "python",
+      "attempted": 6,
+      "accepted": 5,
+      "items_passed": 65,
+      "items_total": 66,
+      "failed_item_counts": {
+        "witness": 1
+      }
+    },
+    {
+      "configuration": "luna-low",
+      "language": "lobo",
+      "attempted": 6,
+      "accepted": 2,
+      "items_passed": 61,
+      "items_total": 66,
+      "failed_item_counts": {
+        "prediction_1": 2,
+        "prediction_2": 1,
+        "prediction_5": 2
+      }
+    },
+    {
+      "configuration": "luna-low",
+      "language": "rust",
+      "attempted": 6,
+      "accepted": 5,
+      "items_passed": 64,
+      "items_total": 66,
+      "failed_item_counts": {
+        "prediction_1": 1,
+        "witness": 1
+      }
+    },
+    {
+      "configuration": "luna-low",
+      "language": "python",
+      "attempted": 6,
+      "accepted": 2,
+      "items_passed": 62,
+      "items_total": 66,
+      "failed_item_counts": {
+        "prediction_1": 2,
+        "prediction_5": 2
+      }
+    }
+  ],
+  "comprehension_attempts": 54,
+  "failed_attempts": 14,
+  "failed_items": [
+    {
+      "configuration": "luna-high",
+      "index": 15,
+      "repeat": 0,
+      "family": "frames",
+      "phase": "comprehension",
+      "language": "lobo",
+      "item": "prediction_1",
+      "answer": {
+        "frames": [
+          "",
+          ""
+        ],
+        "consumed": 4,
+        "error": 0
+      },
+      "input": {
+        "data": "0000",
+        "limit": 0
+      },
+      "expected": {
+        "frames": [
+          ""
+        ],
+        "consumed": 2,
+        "error": 0
+      },
+      "canonical_actual": {
+        "frames": [
+          ""
+        ],
+        "consumed": 2,
+        "error": 0
+      },
+      "other_languages_with_same_failed_item": [
+        "python",
+        "rust"
+      ],
+      "source_bundle": "benchmarks/fixtures/luna-study-20261123/high/trial-15.json",
+      "same_configuration_other_languages": [
+        "rust"
+      ]
+    },
+    {
+      "configuration": "luna-high",
+      "index": 15,
+      "repeat": 0,
+      "family": "frames",
+      "phase": "comprehension",
+      "language": "lobo",
+      "item": "impacted",
+      "answer": [
+        "run"
+      ],
+      "expected": [
+        "fits",
+        "run"
+      ],
+      "other_languages_with_same_failed_item": [],
+      "source_bundle": "benchmarks/fixtures/luna-study-20261123/high/trial-15.json",
+      "same_configuration_other_languages": []
+    },
+    {
+      "configuration": "luna-high",
+      "index": 16,
+      "repeat": 0,
+      "family": "frames",
+      "phase": "comprehension",
+      "language": "rust",
+      "item": "prediction_1",
+      "answer": {
+        "frames": [],
+        "consumed": 2,
+        "error": 0
+      },
+      "input": {
+        "data": "0000",
+        "limit": 0
+      },
+      "expected": {
+        "frames": [
+          ""
+        ],
+        "consumed": 2,
+        "error": 0
+      },
+      "canonical_actual": {
+        "frames": [
+          ""
+        ],
+        "consumed": 2,
+        "error": 0
+      },
+      "other_languages_with_same_failed_item": [
+        "lobo",
+        "python"
+      ],
+      "source_bundle": "benchmarks/fixtures/luna-study-20261123/high/trial-16.json",
+      "same_configuration_other_languages": [
+        "lobo"
+      ]
+    },
+    {
+      "configuration": "luna-high",
+      "index": 17,
+      "repeat": 0,
+      "family": "frames",
+      "phase": "comprehension",
+      "language": "python",
+      "item": "witness",
+      "answer": {
+        "data": "010101020202",
+        "limit": 1
+      },
+      "expected_constraints": {
+        "frames": [
+          "01",
+          "02"
+        ],
+        "consumed": 6,
+        "error": 0
+      },
+      "valid_input": true,
+      "canonical_actual": {
+        "frames": [
+          "01"
+        ],
+        "consumed": 3,
+        "error": 3
+      },
+      "other_languages_with_same_failed_item": [
+        "rust"
+      ],
+      "source_bundle": "benchmarks/fixtures/luna-study-20261123/high/trial-17.json",
+      "same_configuration_other_languages": []
+    },
+    {
+      "configuration": "luna-high",
+      "index": 28,
+      "repeat": 1,
+      "family": "ledger",
+      "phase": "comprehension",
+      "language": "lobo",
+      "item": "prediction_5",
+      "answer": {
+        "balance": 0,
+        "rejected": 0,
+        "peak": 1000001,
+        "audit": [
+          1000000,
+          1000001,
+          0
+        ]
+      },
+      "input": {
+        "initial": 0,
+        "events": [
+          [
+            0,
+            1000000
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            1000001
+          ]
+        ]
+      },
+      "expected": {
+        "balance": 1000001,
+        "rejected": 1,
+        "peak": 1000001,
+        "audit": [
+          1000000,
+          1000001,
+          1000001
+        ]
+      },
+      "canonical_actual": {
+        "balance": 1000001,
+        "rejected": 1,
+        "peak": 1000001,
+        "audit": [
+          1000000,
+          1000001,
+          1000001
+        ]
+      },
+      "other_languages_with_same_failed_item": [
+        "python"
+      ],
+      "source_bundle": "benchmarks/fixtures/luna-study-20261123/high/trial-28.json",
+      "same_configuration_other_languages": []
+    },
+    {
+      "configuration": "luna-high",
+      "index": 38,
+      "repeat": 0,
+      "family": "ledger",
+      "phase": "comprehension",
+      "language": "lobo",
+      "item": "witness",
+      "answer": {
+        "initial": 9,
+        "events": [
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ]
+        ]
+      },
+      "expected_constraints": {
+        "balance": 7,
+        "rejected": 1,
+        "peak": 9
+      },
+      "valid_input": true,
+      "canonical_actual": {
+        "balance": 4,
+        "rejected": 0,
+        "peak": 9,
+        "audit": [
+          7,
+          4
+        ]
+      },
+      "other_languages_with_same_failed_item": [],
+      "source_bundle": "benchmarks/fixtures/luna-study-20261123/high/trial-38.json",
+      "same_configuration_other_languages": []
+    },
+    {
+      "configuration": "luna-low",
+      "index": 15,
+      "repeat": 0,
+      "family": "frames",
+      "phase": "comprehension",
+      "language": "lobo",
+      "item": "prediction_1",
+      "answer": {
+        "frames": [],
+        "consumed": 2,
+        "error": 0
+      },
+      "input": {
+        "data": "0000",
+        "limit": 0
+      },
+      "expected": {
+        "frames": [
+          ""
+        ],
+        "consumed": 2,
+        "error": 0
+      },
+      "canonical_actual": {
+        "frames": [
+          ""
+        ],
+        "consumed": 2,
+        "error": 0
+      },
+      "other_languages_with_same_failed_item": [
+        "python",
+        "rust"
+      ],
+      "source_bundle": "benchmarks/fixtures/luna-study-20261123/low/trial-15.json",
+      "same_configuration_other_languages": [
+        "python",
+        "rust"
+      ]
+    },
+    {
+      "configuration": "luna-low",
+      "index": 15,
+      "repeat": 0,
+      "family": "frames",
+      "phase": "comprehension",
+      "language": "lobo",
+      "item": "prediction_2",
+      "answer": {
+        "frames": [
+          "01"
+        ],
+        "consumed": 4,
+        "error": 0
+      },
+      "input": {
+        "data": "02010203",
+        "limit": 2
+      },
+      "expected": {
+        "frames": [
+          "0102"
+        ],
+        "consumed": 4,
+        "error": 0
+      },
+      "canonical_actual": {
+        "frames": [
+          "0102"
+        ],
+        "consumed": 4,
+        "error": 0
+      },
+      "other_languages_with_same_failed_item": [],
+      "source_bundle": "benchmarks/fixtures/luna-study-20261123/low/trial-15.json",
+      "same_configuration_other_languages": []
+    },
+    {
+      "configuration": "luna-low",
+      "index": 16,
+      "repeat": 0,
+      "family": "frames",
+      "phase": "comprehension",
+      "language": "rust",
+      "item": "prediction_1",
+      "answer": {
+        "frames": [],
+        "consumed": 2,
+        "error": 0
+      },
+      "input": {
+        "data": "0000",
+        "limit": 0
+      },
+      "expected": {
+        "frames": [
+          ""
+        ],
+        "consumed": 2,
+        "error": 0
+      },
+      "canonical_actual": {
+        "frames": [
+          ""
+        ],
+        "consumed": 2,
+        "error": 0
+      },
+      "other_languages_with_same_failed_item": [
+        "lobo",
+        "python"
+      ],
+      "source_bundle": "benchmarks/fixtures/luna-study-20261123/low/trial-16.json",
+      "same_configuration_other_languages": [
+        "lobo",
+        "python"
+      ]
+    },
+    {
+      "configuration": "luna-low",
+      "index": 16,
+      "repeat": 0,
+      "family": "frames",
+      "phase": "comprehension",
+      "language": "rust",
+      "item": "witness",
+      "answer": {
+        "data": "010101020202",
+        "limit": 1
+      },
+      "expected_constraints": {
+        "frames": [
+          "01",
+          "02"
+        ],
+        "consumed": 6,
+        "error": 0
+      },
+      "valid_input": true,
+      "canonical_actual": {
+        "frames": [
+          "01"
+        ],
+        "consumed": 3,
+        "error": 3
+      },
+      "other_languages_with_same_failed_item": [
+        "python"
+      ],
+      "source_bundle": "benchmarks/fixtures/luna-study-20261123/low/trial-16.json",
+      "same_configuration_other_languages": []
+    },
+    {
+      "configuration": "luna-low",
+      "index": 17,
+      "repeat": 0,
+      "family": "frames",
+      "phase": "comprehension",
+      "language": "python",
+      "item": "prediction_1",
+      "answer": {
+        "frames": [],
+        "consumed": 2,
+        "error": 0
+      },
+      "input": {
+        "data": "0000",
+        "limit": 0
+      },
+      "expected": {
+        "frames": [
+          ""
+        ],
+        "consumed": 2,
+        "error": 0
+      },
+      "canonical_actual": {
+        "frames": [
+          ""
+        ],
+        "consumed": 2,
+        "error": 0
+      },
+      "other_languages_with_same_failed_item": [
+        "lobo",
+        "rust"
+      ],
+      "source_bundle": "benchmarks/fixtures/luna-study-20261123/low/trial-17.json",
+      "same_configuration_other_languages": [
+        "lobo",
+        "rust"
+      ]
+    },
+    {
+      "configuration": "luna-low",
+      "index": 28,
+      "repeat": 1,
+      "family": "ledger",
+      "phase": "comprehension",
+      "language": "lobo",
+      "item": "prediction_5",
+      "answer": {
+        "balance": 0,
+        "rejected": 0,
+        "peak": 1000001,
+        "audit": [
+          1000000,
+          1000001,
+          0
+        ]
+      },
+      "input": {
+        "initial": 0,
+        "events": [
+          [
+            0,
+            1000000
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            1000001
+          ]
+        ]
+      },
+      "expected": {
+        "balance": 1000001,
+        "rejected": 1,
+        "peak": 1000001,
+        "audit": [
+          1000000,
+          1000001,
+          1000001
+        ]
+      },
+      "canonical_actual": {
+        "balance": 1000001,
+        "rejected": 1,
+        "peak": 1000001,
+        "audit": [
+          1000000,
+          1000001,
+          1000001
+        ]
+      },
+      "other_languages_with_same_failed_item": [
+        "python"
+      ],
+      "source_bundle": "benchmarks/fixtures/luna-study-20261123/low/trial-28.json",
+      "same_configuration_other_languages": [
+        "python"
+      ]
+    },
+    {
+      "configuration": "luna-low",
+      "index": 29,
+      "repeat": 1,
+      "family": "ledger",
+      "phase": "comprehension",
+      "language": "python",
+      "item": "prediction_5",
+      "answer": {
+        "balance": 0,
+        "rejected": 0,
+        "peak": 1000001,
+        "audit": [
+          1000000,
+          1000001,
+          0
+        ]
+      },
+      "input": {
+        "initial": 0,
+        "events": [
+          [
+            0,
+            1000000
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            1000001
+          ]
+        ]
+      },
+      "expected": {
+        "balance": 1000001,
+        "rejected": 1,
+        "peak": 1000001,
+        "audit": [
+          1000000,
+          1000001,
+          1000001
+        ]
+      },
+      "canonical_actual": {
+        "balance": 1000001,
+        "rejected": 1,
+        "peak": 1000001,
+        "audit": [
+          1000000,
+          1000001,
+          1000001
+        ]
+      },
+      "other_languages_with_same_failed_item": [
+        "lobo"
+      ],
+      "source_bundle": "benchmarks/fixtures/luna-study-20261123/low/trial-29.json",
+      "same_configuration_other_languages": [
+        "lobo"
+      ]
+    },
+    {
+      "configuration": "luna-low",
+      "index": 37,
+      "repeat": 0,
+      "family": "ledger",
+      "phase": "comprehension",
+      "language": "python",
+      "item": "prediction_5",
+      "answer": {
+        "balance": 0,
+        "rejected": 0,
+        "peak": 1000001,
+        "audit": [
+          1000000,
+          1000001,
+          0
+        ]
+      },
+      "input": {
+        "initial": 0,
+        "events": [
+          [
+            0,
+            1000000
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            1000001
+          ]
+        ]
+      },
+      "expected": {
+        "balance": 1000001,
+        "rejected": 1,
+        "peak": 1000001,
+        "audit": [
+          1000000,
+          1000001,
+          1000001
+        ]
+      },
+      "canonical_actual": {
+        "balance": 1000001,
+        "rejected": 1,
+        "peak": 1000001,
+        "audit": [
+          1000000,
+          1000001,
+          1000001
+        ]
+      },
+      "other_languages_with_same_failed_item": [
+        "lobo"
+      ],
+      "source_bundle": "benchmarks/fixtures/luna-study-20261123/low/trial-37.json",
+      "same_configuration_other_languages": [
+        "lobo"
+      ]
+    },
+    {
+      "configuration": "luna-low",
+      "index": 38,
+      "repeat": 0,
+      "family": "ledger",
+      "phase": "comprehension",
+      "language": "lobo",
+      "item": "prediction_5",
+      "answer": {
+        "balance": 0,
+        "rejected": 0,
+        "peak": 1000001,
+        "audit": [
+          1000000,
+          1000001,
+          0
+        ]
+      },
+      "input": {
+        "initial": 0,
+        "events": [
+          [
+            0,
+            1000000
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            1000001
+          ]
+        ]
+      },
+      "expected": {
+        "balance": 1000001,
+        "rejected": 1,
+        "peak": 1000001,
+        "audit": [
+          1000000,
+          1000001,
+          1000001
+        ]
+      },
+      "canonical_actual": {
+        "balance": 1000001,
+        "rejected": 1,
+        "peak": 1000001,
+        "audit": [
+          1000000,
+          1000001,
+          1000001
+        ]
+      },
+      "other_languages_with_same_failed_item": [
+        "python"
+      ],
+      "source_bundle": "benchmarks/fixtures/luna-study-20261123/low/trial-38.json",
+      "same_configuration_other_languages": [
+        "python"
+      ]
+    },
+    {
+      "configuration": "luna-low",
+      "index": 44,
+      "repeat": 1,
+      "family": "scheduler",
+      "phase": "comprehension",
+      "language": "lobo",
+      "item": "prediction_1",
+      "answer": {
+        "order": [
+          1
+        ],
+        "spent": 1,
+        "blocked": 2
+      },
+      "input": {
+        "jobs": [
+          {
+            "id": 2,
+            "cost": 1,
+            "deps": [
+              0
+            ]
+          },
+          {
+            "id": 0,
+            "cost": 2,
+            "deps": []
+          },
+          {
+            "id": 1,
+            "cost": 1,
+            "deps": []
+          }
+        ],
+        "budget": 2
+      },
+      "expected": {
+        "order": [
+          0
+        ],
+        "spent": 2,
+        "blocked": 2
+      },
+      "canonical_actual": {
+        "order": [
+          0
+        ],
+        "spent": 2,
+        "blocked": 2
+      },
+      "other_languages_with_same_failed_item": [],
+      "source_bundle": "benchmarks/fixtures/luna-study-20261123/low/trial-44.json",
+      "same_configuration_other_languages": []
+    },
+    {
+      "configuration": "luna-low",
+      "index": 46,
+      "repeat": 1,
+      "family": "frames",
+      "phase": "comprehension",
+      "language": "python",
+      "item": "prediction_1",
+      "answer": {
+        "frames": [],
+        "consumed": 2,
+        "error": 0
+      },
+      "input": {
+        "data": "0000",
+        "limit": 0
+      },
+      "expected": {
+        "frames": [
+          ""
+        ],
+        "consumed": 2,
+        "error": 0
+      },
+      "canonical_actual": {
+        "frames": [
+          ""
+        ],
+        "consumed": 2,
+        "error": 0
+      },
+      "other_languages_with_same_failed_item": [
+        "lobo",
+        "rust"
+      ],
+      "source_bundle": "benchmarks/fixtures/luna-study-20261123/low/trial-46.json",
+      "same_configuration_other_languages": [
+        "lobo",
+        "rust"
+      ]
+    }
+  ],
+  "lobo_failed_attempts": 7,
+  "lobo_failed_items": 9,
+  "lobo_items_also_failed_in_other_languages": 5,
+  "prompt_observations": [
+    {
+      "configuration": "sol-high",
+      "index": 0,
+      "repeat": 0,
+      "family": "scheduler",
+      "phase": "comprehension",
+      "language": "python",
+      "prompt_bytes": 10248,
+      "task_bytes": 2496,
+      "guide_bytes": 1922,
+      "task_occurrences": 2,
+      "guide_occurrences": 2,
+      "duplicate_task_guide_bytes": 4418,
+      "contains_check_client": true,
+      "contains_agent_file_copy": true,
+      "contains_authoring_command": false,
+      "token_saving": null,
+      "interpretation": "Byte counts only. No token-saving or comprehension-improvement estimate.",
+      "prompt_sha256": "3317ee9e32ae1a96ae5a486933c2a0b3dc5884b83fe17ad1979492198e0061c5"
+    },
+    {
+      "configuration": "sol-high",
+      "index": 1,
+      "repeat": 0,
+      "family": "scheduler",
+      "phase": "comprehension",
+      "language": "lobo",
+      "prompt_bytes": 14997,
+      "task_bytes": 2509,
+      "guide_bytes": 3443,
+      "task_occurrences": 2,
+      "guide_occurrences": 2,
+      "duplicate_task_guide_bytes": 5952,
+      "contains_check_client": true,
+      "contains_agent_file_copy": true,
+      "contains_authoring_command": true,
+      "token_saving": null,
+      "interpretation": "Byte counts only. No token-saving or comprehension-improvement estimate.",
+      "prompt_sha256": "f72605b37d404131aaaf23c9c58e268ddbdeec6c13dfc696dc8a694b2a1c9a53"
+    },
+    {
+      "configuration": "sol-high",
+      "index": 2,
+      "repeat": 0,
+      "family": "scheduler",
+      "phase": "comprehension",
+      "language": "rust",
+      "prompt_bytes": 10534,
+      "task_bytes": 2506,
+      "guide_bytes": 1986,
+      "task_occurrences": 2,
+      "guide_occurrences": 2,
+      "duplicate_task_guide_bytes": 4492,
+      "contains_check_client": true,
+      "contains_agent_file_copy": true,
+      "contains_authoring_command": false,
+      "token_saving": null,
+      "interpretation": "Byte counts only. No token-saving or comprehension-improvement estimate.",
+      "prompt_sha256": "1db19987a83af4aef3e211bd18011b9c87d118ea901db602781d0fac5accae48"
+    },
+    {
+      "configuration": "sol-high",
+      "index": 15,
+      "repeat": 0,
+      "family": "frames",
+      "phase": "comprehension",
+      "language": "lobo",
+      "prompt_bytes": 13448,
+      "task_bytes": 2027,
+      "guide_bytes": 3443,
+      "task_occurrences": 2,
+      "guide_occurrences": 2,
+      "duplicate_task_guide_bytes": 5470,
+      "contains_check_client": true,
+      "contains_agent_file_copy": true,
+      "contains_authoring_command": true,
+      "token_saving": null,
+      "interpretation": "Byte counts only. No token-saving or comprehension-improvement estimate.",
+      "prompt_sha256": "2a4d5ecf259990717200141a78aa70170560469b50f1894995cc2c5dd4deb0cb"
+    },
+    {
+      "configuration": "sol-high",
+      "index": 16,
+      "repeat": 0,
+      "family": "frames",
+      "phase": "comprehension",
+      "language": "rust",
+      "prompt_bytes": 9689,
+      "task_bytes": 2027,
+      "guide_bytes": 1986,
+      "task_occurrences": 2,
+      "guide_occurrences": 2,
+      "duplicate_task_guide_bytes": 4013,
+      "contains_check_client": true,
+      "contains_agent_file_copy": true,
+      "contains_authoring_command": false,
+      "token_saving": null,
+      "interpretation": "Byte counts only. No token-saving or comprehension-improvement estimate.",
+      "prompt_sha256": "bf7ee9c41886a9aa8f769dd1b618ab4c46fe8757245b3e1f361d5df579ad36b2"
+    },
+    {
+      "configuration": "sol-high",
+      "index": 17,
+      "repeat": 0,
+      "family": "frames",
+      "phase": "comprehension",
+      "language": "python",
+      "prompt_bytes": 9285,
+      "task_bytes": 2018,
+      "guide_bytes": 1922,
+      "task_occurrences": 2,
+      "guide_occurrences": 2,
+      "duplicate_task_guide_bytes": 3940,
+      "contains_check_client": true,
+      "contains_agent_file_copy": true,
+      "contains_authoring_command": false,
+      "token_saving": null,
+      "interpretation": "Byte counts only. No token-saving or comprehension-improvement estimate.",
+      "prompt_sha256": "9f76f81fadbd24764d57454d17101d677714297c8bc09200077e37688e1e9373"
+    },
+    {
+      "configuration": "sol-high",
+      "index": 27,
+      "repeat": 1,
+      "family": "ledger",
+      "phase": "comprehension",
+      "language": "rust",
+      "prompt_bytes": 10384,
+      "task_bytes": 2325,
+      "guide_bytes": 1986,
+      "task_occurrences": 2,
+      "guide_occurrences": 2,
+      "duplicate_task_guide_bytes": 4311,
+      "contains_check_client": true,
+      "contains_agent_file_copy": true,
+      "contains_authoring_command": false,
+      "token_saving": null,
+      "interpretation": "Byte counts only. No token-saving or comprehension-improvement estimate.",
+      "prompt_sha256": "46b70ab036acfee50352944f2abd041b78b787c2fda669fe4892b3d07acd2014"
+    },
+    {
+      "configuration": "sol-high",
+      "index": 28,
+      "repeat": 1,
+      "family": "ledger",
+      "phase": "comprehension",
+      "language": "lobo",
+      "prompt_bytes": 14217,
+      "task_bytes": 2328,
+      "guide_bytes": 3443,
+      "task_occurrences": 2,
+      "guide_occurrences": 2,
+      "duplicate_task_guide_bytes": 5771,
+      "contains_check_client": true,
+      "contains_agent_file_copy": true,
+      "contains_authoring_command": true,
+      "token_saving": null,
+      "interpretation": "Byte counts only. No token-saving or comprehension-improvement estimate.",
+      "prompt_sha256": "b496ad53eb74ac5b9b8b3a17baf79c8d94358054d34a1a0abae702d857144cd2"
+    },
+    {
+      "configuration": "sol-high",
+      "index": 29,
+      "repeat": 1,
+      "family": "ledger",
+      "phase": "comprehension",
+      "language": "python",
+      "prompt_bytes": 10109,
+      "task_bytes": 2313,
+      "guide_bytes": 1922,
+      "task_occurrences": 2,
+      "guide_occurrences": 2,
+      "duplicate_task_guide_bytes": 4235,
+      "contains_check_client": true,
+      "contains_agent_file_copy": true,
+      "contains_authoring_command": false,
+      "token_saving": null,
+      "interpretation": "Byte counts only. No token-saving or comprehension-improvement estimate.",
+      "prompt_sha256": "1f1161b62e08d15639d3f64aa8eab311298f0ed559c6184f1bbe57846da61169"
+    },
+    {
+      "configuration": "sol-high",
+      "index": 36,
+      "repeat": 0,
+      "family": "ledger",
+      "phase": "comprehension",
+      "language": "rust",
+      "prompt_bytes": 10384,
+      "task_bytes": 2325,
+      "guide_bytes": 1986,
+      "task_occurrences": 2,
+      "guide_occurrences": 2,
+      "duplicate_task_guide_bytes": 4311,
+      "contains_check_client": true,
+      "contains_agent_file_copy": true,
+      "contains_authoring_command": false,
+      "token_saving": null,
+      "interpretation": "Byte counts only. No token-saving or comprehension-improvement estimate.",
+      "prompt_sha256": "46b70ab036acfee50352944f2abd041b78b787c2fda669fe4892b3d07acd2014"
+    },
+    {
+      "configuration": "sol-high",
+      "index": 37,
+      "repeat": 0,
+      "family": "ledger",
+      "phase": "comprehension",
+      "language": "python",
+      "prompt_bytes": 10109,
+      "task_bytes": 2313,
+      "guide_bytes": 1922,
+      "task_occurrences": 2,
+      "guide_occurrences": 2,
+      "duplicate_task_guide_bytes": 4235,
+      "contains_check_client": true,
+      "contains_agent_file_copy": true,
+      "contains_authoring_command": false,
+      "token_saving": null,
+      "interpretation": "Byte counts only. No token-saving or comprehension-improvement estimate.",
+      "prompt_sha256": "1f1161b62e08d15639d3f64aa8eab311298f0ed559c6184f1bbe57846da61169"
+    },
+    {
+      "configuration": "sol-high",
+      "index": 38,
+      "repeat": 0,
+      "family": "ledger",
+      "phase": "comprehension",
+      "language": "lobo",
+      "prompt_bytes": 14217,
+      "task_bytes": 2328,
+      "guide_bytes": 3443,
+      "task_occurrences": 2,
+      "guide_occurrences": 2,
+      "duplicate_task_guide_bytes": 5771,
+      "contains_check_client": true,
+      "contains_agent_file_copy": true,
+      "contains_authoring_command": true,
+      "token_saving": null,
+      "interpretation": "Byte counts only. No token-saving or comprehension-improvement estimate.",
+      "prompt_sha256": "b496ad53eb74ac5b9b8b3a17baf79c8d94358054d34a1a0abae702d857144cd2"
+    },
+    {
+      "configuration": "sol-high",
+      "index": 42,
+      "repeat": 1,
+      "family": "scheduler",
+      "phase": "comprehension",
+      "language": "python",
+      "prompt_bytes": 10248,
+      "task_bytes": 2496,
+      "guide_bytes": 1922,
+      "task_occurrences": 2,
+      "guide_occurrences": 2,
+      "duplicate_task_guide_bytes": 4418,
+      "contains_check_client": true,
+      "contains_agent_file_copy": true,
+      "contains_authoring_command": false,
+      "token_saving": null,
+      "interpretation": "Byte counts only. No token-saving or comprehension-improvement estimate.",
+      "prompt_sha256": "3317ee9e32ae1a96ae5a486933c2a0b3dc5884b83fe17ad1979492198e0061c5"
+    },
+    {
+      "configuration": "sol-high",
+      "index": 43,
+      "repeat": 1,
+      "family": "scheduler",
+      "phase": "comprehension",
+      "language": "rust",
+      "prompt_bytes": 10534,
+      "task_bytes": 2506,
+      "guide_bytes": 1986,
+      "task_occurrences": 2,
+      "guide_occurrences": 2,
+      "duplicate_task_guide_bytes": 4492,
+      "contains_check_client": true,
+      "contains_agent_file_copy": true,
+      "contains_authoring_command": false,
+      "token_saving": null,
+      "interpretation": "Byte counts only. No token-saving or comprehension-improvement estimate.",
+      "prompt_sha256": "1db19987a83af4aef3e211bd18011b9c87d118ea901db602781d0fac5accae48"
+    },
+    {
+      "configuration": "sol-high",
+      "index": 44,
+      "repeat": 1,
+      "family": "scheduler",
+      "phase": "comprehension",
+      "language": "lobo",
+      "prompt_bytes": 14997,
+      "task_bytes": 2509,
+      "guide_bytes": 3443,
+      "task_occurrences": 2,
+      "guide_occurrences": 2,
+      "duplicate_task_guide_bytes": 5952,
+      "contains_check_client": true,
+      "contains_agent_file_copy": true,
+      "contains_authoring_command": true,
+      "token_saving": null,
+      "interpretation": "Byte counts only. No token-saving or comprehension-improvement estimate.",
+      "prompt_sha256": "f72605b37d404131aaaf23c9c58e268ddbdeec6c13dfc696dc8a694b2a1c9a53"
+    },
+    {
+      "configuration": "sol-high",
+      "index": 45,
+      "repeat": 1,
+      "family": "frames",
+      "phase": "comprehension",
+      "language": "lobo",
+      "prompt_bytes": 13448,
+      "task_bytes": 2027,
+      "guide_bytes": 3443,
+      "task_occurrences": 2,
+      "guide_occurrences": 2,
+      "duplicate_task_guide_bytes": 5470,
+      "contains_check_client": true,
+      "contains_agent_file_copy": true,
+      "contains_authoring_command": true,
+      "token_saving": null,
+      "interpretation": "Byte counts only. No token-saving or comprehension-improvement estimate.",
+      "prompt_sha256": "2a4d5ecf259990717200141a78aa70170560469b50f1894995cc2c5dd4deb0cb"
+    },
+    {
+      "configuration": "sol-high",
+      "index": 46,
+      "repeat": 1,
+      "family": "frames",
+      "phase": "comprehension",
+      "language": "python",
+      "prompt_bytes": 9285,
+      "task_bytes": 2018,
+      "guide_bytes": 1922,
+      "task_occurrences": 2,
+      "guide_occurrences": 2,
+      "duplicate_task_guide_bytes": 3940,
+      "contains_check_client": true,
+      "contains_agent_file_copy": true,
+      "contains_authoring_command": false,
+      "token_saving": null,
+      "interpretation": "Byte counts only. No token-saving or comprehension-improvement estimate.",
+      "prompt_sha256": "9f76f81fadbd24764d57454d17101d677714297c8bc09200077e37688e1e9373"
+    },
+    {
+      "configuration": "sol-high",
+      "index": 47,
+      "repeat": 1,
+      "family": "frames",
+      "phase": "comprehension",
+      "language": "rust",
+      "prompt_bytes": 9689,
+      "task_bytes": 2027,
+      "guide_bytes": 1986,
+      "task_occurrences": 2,
+      "guide_occurrences": 2,
+      "duplicate_task_guide_bytes": 4013,
+      "contains_check_client": true,
+      "contains_agent_file_copy": true,
+      "contains_authoring_command": false,
+      "token_saving": null,
+      "interpretation": "Byte counts only. No token-saving or comprehension-improvement estimate.",
+      "prompt_sha256": "bf7ee9c41886a9aa8f769dd1b618ab4c46fe8757245b3e1f361d5df579ad36b2"
+    },
+    {
+      "configuration": "luna-high",
+      "index": 0,
+      "repeat": 0,
+      "family": "scheduler",
+      "phase": "comprehension",
+      "language": "python",
+      "prompt_bytes": 10248,
+      "task_bytes": 2496,
+      "guide_bytes": 1922,
+      "task_occurrences": 2,
+      "guide_occurrences": 2,
+      "duplicate_task_guide_bytes": 4418,
+      "contains_check_client": true,
+      "contains_agent_file_copy": true,
+      "contains_authoring_command": false,
+      "token_saving": null,
+      "interpretation": "Byte counts only. No token-saving or comprehension-improvement estimate.",
+      "prompt_sha256": "3317ee9e32ae1a96ae5a486933c2a0b3dc5884b83fe17ad1979492198e0061c5"
+    },
+    {
+      "configuration": "luna-high",
+      "index": 1,
+      "repeat": 0,
+      "family": "scheduler",
+      "phase": "comprehension",
+      "language": "lobo",
+      "prompt_bytes": 14997,
+      "task_bytes": 2509,
+      "guide_bytes": 3443,
+      "task_occurrences": 2,
+      "guide_occurrences": 2,
+      "duplicate_task_guide_bytes": 5952,
+      "contains_check_client": true,
+      "contains_agent_file_copy": true,
+      "contains_authoring_command": true,
+      "token_saving": null,
+      "interpretation": "Byte counts only. No token-saving or comprehension-improvement estimate.",
+      "prompt_sha256": "f72605b37d404131aaaf23c9c58e268ddbdeec6c13dfc696dc8a694b2a1c9a53"
+    },
+    {
+      "configuration": "luna-high",
+      "index": 2,
+      "repeat": 0,
+      "family": "scheduler",
+      "phase": "comprehension",
+      "language": "rust",
+      "prompt_bytes": 10534,
+      "task_bytes": 2506,
+      "guide_bytes": 1986,
+      "task_occurrences": 2,
+      "guide_occurrences": 2,
+      "duplicate_task_guide_bytes": 4492,
+      "contains_check_client": true,
+      "contains_agent_file_copy": true,
+      "contains_authoring_command": false,
+      "token_saving": null,
+      "interpretation": "Byte counts only. No token-saving or comprehension-improvement estimate.",
+      "prompt_sha256": "1db19987a83af4aef3e211bd18011b9c87d118ea901db602781d0fac5accae48"
+    },
+    {
+      "configuration": "luna-high",
+      "index": 15,
+      "repeat": 0,
+      "family": "frames",
+      "phase": "comprehension",
+      "language": "lobo",
+      "prompt_bytes": 13448,
+      "task_bytes": 2027,
+      "guide_bytes": 3443,
+      "task_occurrences": 2,
+      "guide_occurrences": 2,
+      "duplicate_task_guide_bytes": 5470,
+      "contains_check_client": true,
+      "contains_agent_file_copy": true,
+      "contains_authoring_command": true,
+      "token_saving": null,
+      "interpretation": "Byte counts only. No token-saving or comprehension-improvement estimate.",
+      "prompt_sha256": "2a4d5ecf259990717200141a78aa70170560469b50f1894995cc2c5dd4deb0cb"
+    },
+    {
+      "configuration": "luna-high",
+      "index": 16,
+      "repeat": 0,
+      "family": "frames",
+      "phase": "comprehension",
+      "language": "rust",
+      "prompt_bytes": 9689,
+      "task_bytes": 2027,
+      "guide_bytes": 1986,
+      "task_occurrences": 2,
+      "guide_occurrences": 2,
+      "duplicate_task_guide_bytes": 4013,
+      "contains_check_client": true,
+      "contains_agent_file_copy": true,
+      "contains_authoring_command": false,
+      "token_saving": null,
+      "interpretation": "Byte counts only. No token-saving or comprehension-improvement estimate.",
+      "prompt_sha256": "bf7ee9c41886a9aa8f769dd1b618ab4c46fe8757245b3e1f361d5df579ad36b2"
+    },
+    {
+      "configuration": "luna-high",
+      "index": 17,
+      "repeat": 0,
+      "family": "frames",
+      "phase": "comprehension",
+      "language": "python",
+      "prompt_bytes": 9285,
+      "task_bytes": 2018,
+      "guide_bytes": 1922,
+      "task_occurrences": 2,
+      "guide_occurrences": 2,
+      "duplicate_task_guide_bytes": 3940,
+      "contains_check_client": true,
+      "contains_agent_file_copy": true,
+      "contains_authoring_command": false,
+      "token_saving": null,
+      "interpretation": "Byte counts only. No token-saving or comprehension-improvement estimate.",
+      "prompt_sha256": "9f76f81fadbd24764d57454d17101d677714297c8bc09200077e37688e1e9373"
+    },
+    {
+      "configuration": "luna-high",
+      "index": 27,
+      "repeat": 1,
+      "family": "ledger",
+      "phase": "comprehension",
+      "language": "rust",
+      "prompt_bytes": 10384,
+      "task_bytes": 2325,
+      "guide_bytes": 1986,
+      "task_occurrences": 2,
+      "guide_occurrences": 2,
+      "duplicate_task_guide_bytes": 4311,
+      "contains_check_client": true,
+      "contains_agent_file_copy": true,
+      "contains_authoring_command": false,
+      "token_saving": null,
+      "interpretation": "Byte counts only. No token-saving or comprehension-improvement estimate.",
+      "prompt_sha256": "46b70ab036acfee50352944f2abd041b78b787c2fda669fe4892b3d07acd2014"
+    },
+    {
+      "configuration": "luna-high",
+      "index": 28,
+      "repeat": 1,
+      "family": "ledger",
+      "phase": "comprehension",
+      "language": "lobo",
+      "prompt_bytes": 14217,
+      "task_bytes": 2328,
+      "guide_bytes": 3443,
+      "task_occurrences": 2,
+      "guide_occurrences": 2,
+      "duplicate_task_guide_bytes": 5771,
+      "contains_check_client": true,
+      "contains_agent_file_copy": true,
+      "contains_authoring_command": true,
+      "token_saving": null,
+      "interpretation": "Byte counts only. No token-saving or comprehension-improvement estimate.",
+      "prompt_sha256": "b496ad53eb74ac5b9b8b3a17baf79c8d94358054d34a1a0abae702d857144cd2"
+    },
+    {
+      "configuration": "luna-high",
+      "index": 29,
+      "repeat": 1,
+      "family": "ledger",
+      "phase": "comprehension",
+      "language": "python",
+      "prompt_bytes": 10109,
+      "task_bytes": 2313,
+      "guide_bytes": 1922,
+      "task_occurrences": 2,
+      "guide_occurrences": 2,
+      "duplicate_task_guide_bytes": 4235,
+      "contains_check_client": true,
+      "contains_agent_file_copy": true,
+      "contains_authoring_command": false,
+      "token_saving": null,
+      "interpretation": "Byte counts only. No token-saving or comprehension-improvement estimate.",
+      "prompt_sha256": "1f1161b62e08d15639d3f64aa8eab311298f0ed559c6184f1bbe57846da61169"
+    },
+    {
+      "configuration": "luna-high",
+      "index": 36,
+      "repeat": 0,
+      "family": "ledger",
+      "phase": "comprehension",
+      "language": "rust",
+      "prompt_bytes": 10384,
+      "task_bytes": 2325,
+      "guide_bytes": 1986,
+      "task_occurrences": 2,
+      "guide_occurrences": 2,
+      "duplicate_task_guide_bytes": 4311,
+      "contains_check_client": true,
+      "contains_agent_file_copy": true,
+      "contains_authoring_command": false,
+      "token_saving": null,
+      "interpretation": "Byte counts only. No token-saving or comprehension-improvement estimate.",
+      "prompt_sha256": "46b70ab036acfee50352944f2abd041b78b787c2fda669fe4892b3d07acd2014"
+    },
+    {
+      "configuration": "luna-high",
+      "index": 37,
+      "repeat": 0,
+      "family": "ledger",
+      "phase": "comprehension",
+      "language": "python",
+      "prompt_bytes": 10109,
+      "task_bytes": 2313,
+      "guide_bytes": 1922,
+      "task_occurrences": 2,
+      "guide_occurrences": 2,
+      "duplicate_task_guide_bytes": 4235,
+      "contains_check_client": true,
+      "contains_agent_file_copy": true,
+      "contains_authoring_command": false,
+      "token_saving": null,
+      "interpretation": "Byte counts only. No token-saving or comprehension-improvement estimate.",
+      "prompt_sha256": "1f1161b62e08d15639d3f64aa8eab311298f0ed559c6184f1bbe57846da61169"
+    },
+    {
+      "configuration": "luna-high",
+      "index": 38,
+      "repeat": 0,
+      "family": "ledger",
+      "phase": "comprehension",
+      "language": "lobo",
+      "prompt_bytes": 14217,
+      "task_bytes": 2328,
+      "guide_bytes": 3443,
+      "task_occurrences": 2,
+      "guide_occurrences": 2,
+      "duplicate_task_guide_bytes": 5771,
+      "contains_check_client": true,
+      "contains_agent_file_copy": true,
+      "contains_authoring_command": true,
+      "token_saving": null,
+      "interpretation": "Byte counts only. No token-saving or comprehension-improvement estimate.",
+      "prompt_sha256": "b496ad53eb74ac5b9b8b3a17baf79c8d94358054d34a1a0abae702d857144cd2"
+    },
+    {
+      "configuration": "luna-high",
+      "index": 42,
+      "repeat": 1,
+      "family": "scheduler",
+      "phase": "comprehension",
+      "language": "python",
+      "prompt_bytes": 10248,
+      "task_bytes": 2496,
+      "guide_bytes": 1922,
+      "task_occurrences": 2,
+      "guide_occurrences": 2,
+      "duplicate_task_guide_bytes": 4418,
+      "contains_check_client": true,
+      "contains_agent_file_copy": true,
+      "contains_authoring_command": false,
+      "token_saving": null,
+      "interpretation": "Byte counts only. No token-saving or comprehension-improvement estimate.",
+      "prompt_sha256": "3317ee9e32ae1a96ae5a486933c2a0b3dc5884b83fe17ad1979492198e0061c5"
+    },
+    {
+      "configuration": "luna-high",
+      "index": 43,
+      "repeat": 1,
+      "family": "scheduler",
+      "phase": "comprehension",
+      "language": "rust",
+      "prompt_bytes": 10534,
+      "task_bytes": 2506,
+      "guide_bytes": 1986,
+      "task_occurrences": 2,
+      "guide_occurrences": 2,
+      "duplicate_task_guide_bytes": 4492,
+      "contains_check_client": true,
+      "contains_agent_file_copy": true,
+      "contains_authoring_command": false,
+      "token_saving": null,
+      "interpretation": "Byte counts only. No token-saving or comprehension-improvement estimate.",
+      "prompt_sha256": "1db19987a83af4aef3e211bd18011b9c87d118ea901db602781d0fac5accae48"
+    },
+    {
+      "configuration": "luna-high",
+      "index": 44,
+      "repeat": 1,
+      "family": "scheduler",
+      "phase": "comprehension",
+      "language": "lobo",
+      "prompt_bytes": 14997,
+      "task_bytes": 2509,
+      "guide_bytes": 3443,
+      "task_occurrences": 2,
+      "guide_occurrences": 2,
+      "duplicate_task_guide_bytes": 5952,
+      "contains_check_client": true,
+      "contains_agent_file_copy": true,
+      "contains_authoring_command": true,
+      "token_saving": null,
+      "interpretation": "Byte counts only. No token-saving or comprehension-improvement estimate.",
+      "prompt_sha256": "f72605b37d404131aaaf23c9c58e268ddbdeec6c13dfc696dc8a694b2a1c9a53"
+    },
+    {
+      "configuration": "luna-high",
+      "index": 45,
+      "repeat": 1,
+      "family": "frames",
+      "phase": "comprehension",
+      "language": "lobo",
+      "prompt_bytes": 13448,
+      "task_bytes": 2027,
+      "guide_bytes": 3443,
+      "task_occurrences": 2,
+      "guide_occurrences": 2,
+      "duplicate_task_guide_bytes": 5470,
+      "contains_check_client": true,
+      "contains_agent_file_copy": true,
+      "contains_authoring_command": true,
+      "token_saving": null,
+      "interpretation": "Byte counts only. No token-saving or comprehension-improvement estimate.",
+      "prompt_sha256": "2a4d5ecf259990717200141a78aa70170560469b50f1894995cc2c5dd4deb0cb"
+    },
+    {
+      "configuration": "luna-high",
+      "index": 46,
+      "repeat": 1,
+      "family": "frames",
+      "phase": "comprehension",
+      "language": "python",
+      "prompt_bytes": 9285,
+      "task_bytes": 2018,
+      "guide_bytes": 1922,
+      "task_occurrences": 2,
+      "guide_occurrences": 2,
+      "duplicate_task_guide_bytes": 3940,
+      "contains_check_client": true,
+      "contains_agent_file_copy": true,
+      "contains_authoring_command": false,
+      "token_saving": null,
+      "interpretation": "Byte counts only. No token-saving or comprehension-improvement estimate.",
+      "prompt_sha256": "9f76f81fadbd24764d57454d17101d677714297c8bc09200077e37688e1e9373"
+    },
+    {
+      "configuration": "luna-high",
+      "index": 47,
+      "repeat": 1,
+      "family": "frames",
+      "phase": "comprehension",
+      "language": "rust",
+      "prompt_bytes": 9689,
+      "task_bytes": 2027,
+      "guide_bytes": 1986,
+      "task_occurrences": 2,
+      "guide_occurrences": 2,
+      "duplicate_task_guide_bytes": 4013,
+      "contains_check_client": true,
+      "contains_agent_file_copy": true,
+      "contains_authoring_command": false,
+      "token_saving": null,
+      "interpretation": "Byte counts only. No token-saving or comprehension-improvement estimate.",
+      "prompt_sha256": "bf7ee9c41886a9aa8f769dd1b618ab4c46fe8757245b3e1f361d5df579ad36b2"
+    },
+    {
+      "configuration": "luna-low",
+      "index": 0,
+      "repeat": 0,
+      "family": "scheduler",
+      "phase": "comprehension",
+      "language": "python",
+      "prompt_bytes": 10248,
+      "task_bytes": 2496,
+      "guide_bytes": 1922,
+      "task_occurrences": 2,
+      "guide_occurrences": 2,
+      "duplicate_task_guide_bytes": 4418,
+      "contains_check_client": true,
+      "contains_agent_file_copy": true,
+      "contains_authoring_command": false,
+      "token_saving": null,
+      "interpretation": "Byte counts only. No token-saving or comprehension-improvement estimate.",
+      "prompt_sha256": "3317ee9e32ae1a96ae5a486933c2a0b3dc5884b83fe17ad1979492198e0061c5"
+    },
+    {
+      "configuration": "luna-low",
+      "index": 1,
+      "repeat": 0,
+      "family": "scheduler",
+      "phase": "comprehension",
+      "language": "lobo",
+      "prompt_bytes": 14997,
+      "task_bytes": 2509,
+      "guide_bytes": 3443,
+      "task_occurrences": 2,
+      "guide_occurrences": 2,
+      "duplicate_task_guide_bytes": 5952,
+      "contains_check_client": true,
+      "contains_agent_file_copy": true,
+      "contains_authoring_command": true,
+      "token_saving": null,
+      "interpretation": "Byte counts only. No token-saving or comprehension-improvement estimate.",
+      "prompt_sha256": "f72605b37d404131aaaf23c9c58e268ddbdeec6c13dfc696dc8a694b2a1c9a53"
+    },
+    {
+      "configuration": "luna-low",
+      "index": 2,
+      "repeat": 0,
+      "family": "scheduler",
+      "phase": "comprehension",
+      "language": "rust",
+      "prompt_bytes": 10534,
+      "task_bytes": 2506,
+      "guide_bytes": 1986,
+      "task_occurrences": 2,
+      "guide_occurrences": 2,
+      "duplicate_task_guide_bytes": 4492,
+      "contains_check_client": true,
+      "contains_agent_file_copy": true,
+      "contains_authoring_command": false,
+      "token_saving": null,
+      "interpretation": "Byte counts only. No token-saving or comprehension-improvement estimate.",
+      "prompt_sha256": "1db19987a83af4aef3e211bd18011b9c87d118ea901db602781d0fac5accae48"
+    },
+    {
+      "configuration": "luna-low",
+      "index": 15,
+      "repeat": 0,
+      "family": "frames",
+      "phase": "comprehension",
+      "language": "lobo",
+      "prompt_bytes": 13448,
+      "task_bytes": 2027,
+      "guide_bytes": 3443,
+      "task_occurrences": 2,
+      "guide_occurrences": 2,
+      "duplicate_task_guide_bytes": 5470,
+      "contains_check_client": true,
+      "contains_agent_file_copy": true,
+      "contains_authoring_command": true,
+      "token_saving": null,
+      "interpretation": "Byte counts only. No token-saving or comprehension-improvement estimate.",
+      "prompt_sha256": "2a4d5ecf259990717200141a78aa70170560469b50f1894995cc2c5dd4deb0cb"
+    },
+    {
+      "configuration": "luna-low",
+      "index": 16,
+      "repeat": 0,
+      "family": "frames",
+      "phase": "comprehension",
+      "language": "rust",
+      "prompt_bytes": 9689,
+      "task_bytes": 2027,
+      "guide_bytes": 1986,
+      "task_occurrences": 2,
+      "guide_occurrences": 2,
+      "duplicate_task_guide_bytes": 4013,
+      "contains_check_client": true,
+      "contains_agent_file_copy": true,
+      "contains_authoring_command": false,
+      "token_saving": null,
+      "interpretation": "Byte counts only. No token-saving or comprehension-improvement estimate.",
+      "prompt_sha256": "bf7ee9c41886a9aa8f769dd1b618ab4c46fe8757245b3e1f361d5df579ad36b2"
+    },
+    {
+      "configuration": "luna-low",
+      "index": 17,
+      "repeat": 0,
+      "family": "frames",
+      "phase": "comprehension",
+      "language": "python",
+      "prompt_bytes": 9285,
+      "task_bytes": 2018,
+      "guide_bytes": 1922,
+      "task_occurrences": 2,
+      "guide_occurrences": 2,
+      "duplicate_task_guide_bytes": 3940,
+      "contains_check_client": true,
+      "contains_agent_file_copy": true,
+      "contains_authoring_command": false,
+      "token_saving": null,
+      "interpretation": "Byte counts only. No token-saving or comprehension-improvement estimate.",
+      "prompt_sha256": "9f76f81fadbd24764d57454d17101d677714297c8bc09200077e37688e1e9373"
+    },
+    {
+      "configuration": "luna-low",
+      "index": 27,
+      "repeat": 1,
+      "family": "ledger",
+      "phase": "comprehension",
+      "language": "rust",
+      "prompt_bytes": 10384,
+      "task_bytes": 2325,
+      "guide_bytes": 1986,
+      "task_occurrences": 2,
+      "guide_occurrences": 2,
+      "duplicate_task_guide_bytes": 4311,
+      "contains_check_client": true,
+      "contains_agent_file_copy": true,
+      "contains_authoring_command": false,
+      "token_saving": null,
+      "interpretation": "Byte counts only. No token-saving or comprehension-improvement estimate.",
+      "prompt_sha256": "46b70ab036acfee50352944f2abd041b78b787c2fda669fe4892b3d07acd2014"
+    },
+    {
+      "configuration": "luna-low",
+      "index": 28,
+      "repeat": 1,
+      "family": "ledger",
+      "phase": "comprehension",
+      "language": "lobo",
+      "prompt_bytes": 14217,
+      "task_bytes": 2328,
+      "guide_bytes": 3443,
+      "task_occurrences": 2,
+      "guide_occurrences": 2,
+      "duplicate_task_guide_bytes": 5771,
+      "contains_check_client": true,
+      "contains_agent_file_copy": true,
+      "contains_authoring_command": true,
+      "token_saving": null,
+      "interpretation": "Byte counts only. No token-saving or comprehension-improvement estimate.",
+      "prompt_sha256": "b496ad53eb74ac5b9b8b3a17baf79c8d94358054d34a1a0abae702d857144cd2"
+    },
+    {
+      "configuration": "luna-low",
+      "index": 29,
+      "repeat": 1,
+      "family": "ledger",
+      "phase": "comprehension",
+      "language": "python",
+      "prompt_bytes": 10109,
+      "task_bytes": 2313,
+      "guide_bytes": 1922,
+      "task_occurrences": 2,
+      "guide_occurrences": 2,
+      "duplicate_task_guide_bytes": 4235,
+      "contains_check_client": true,
+      "contains_agent_file_copy": true,
+      "contains_authoring_command": false,
+      "token_saving": null,
+      "interpretation": "Byte counts only. No token-saving or comprehension-improvement estimate.",
+      "prompt_sha256": "1f1161b62e08d15639d3f64aa8eab311298f0ed559c6184f1bbe57846da61169"
+    },
+    {
+      "configuration": "luna-low",
+      "index": 36,
+      "repeat": 0,
+      "family": "ledger",
+      "phase": "comprehension",
+      "language": "rust",
+      "prompt_bytes": 10384,
+      "task_bytes": 2325,
+      "guide_bytes": 1986,
+      "task_occurrences": 2,
+      "guide_occurrences": 2,
+      "duplicate_task_guide_bytes": 4311,
+      "contains_check_client": true,
+      "contains_agent_file_copy": true,
+      "contains_authoring_command": false,
+      "token_saving": null,
+      "interpretation": "Byte counts only. No token-saving or comprehension-improvement estimate.",
+      "prompt_sha256": "46b70ab036acfee50352944f2abd041b78b787c2fda669fe4892b3d07acd2014"
+    },
+    {
+      "configuration": "luna-low",
+      "index": 37,
+      "repeat": 0,
+      "family": "ledger",
+      "phase": "comprehension",
+      "language": "python",
+      "prompt_bytes": 10109,
+      "task_bytes": 2313,
+      "guide_bytes": 1922,
+      "task_occurrences": 2,
+      "guide_occurrences": 2,
+      "duplicate_task_guide_bytes": 4235,
+      "contains_check_client": true,
+      "contains_agent_file_copy": true,
+      "contains_authoring_command": false,
+      "token_saving": null,
+      "interpretation": "Byte counts only. No token-saving or comprehension-improvement estimate.",
+      "prompt_sha256": "1f1161b62e08d15639d3f64aa8eab311298f0ed559c6184f1bbe57846da61169"
+    },
+    {
+      "configuration": "luna-low",
+      "index": 38,
+      "repeat": 0,
+      "family": "ledger",
+      "phase": "comprehension",
+      "language": "lobo",
+      "prompt_bytes": 14217,
+      "task_bytes": 2328,
+      "guide_bytes": 3443,
+      "task_occurrences": 2,
+      "guide_occurrences": 2,
+      "duplicate_task_guide_bytes": 5771,
+      "contains_check_client": true,
+      "contains_agent_file_copy": true,
+      "contains_authoring_command": true,
+      "token_saving": null,
+      "interpretation": "Byte counts only. No token-saving or comprehension-improvement estimate.",
+      "prompt_sha256": "b496ad53eb74ac5b9b8b3a17baf79c8d94358054d34a1a0abae702d857144cd2"
+    },
+    {
+      "configuration": "luna-low",
+      "index": 42,
+      "repeat": 1,
+      "family": "scheduler",
+      "phase": "comprehension",
+      "language": "python",
+      "prompt_bytes": 10248,
+      "task_bytes": 2496,
+      "guide_bytes": 1922,
+      "task_occurrences": 2,
+      "guide_occurrences": 2,
+      "duplicate_task_guide_bytes": 4418,
+      "contains_check_client": true,
+      "contains_agent_file_copy": true,
+      "contains_authoring_command": false,
+      "token_saving": null,
+      "interpretation": "Byte counts only. No token-saving or comprehension-improvement estimate.",
+      "prompt_sha256": "3317ee9e32ae1a96ae5a486933c2a0b3dc5884b83fe17ad1979492198e0061c5"
+    },
+    {
+      "configuration": "luna-low",
+      "index": 43,
+      "repeat": 1,
+      "family": "scheduler",
+      "phase": "comprehension",
+      "language": "rust",
+      "prompt_bytes": 10534,
+      "task_bytes": 2506,
+      "guide_bytes": 1986,
+      "task_occurrences": 2,
+      "guide_occurrences": 2,
+      "duplicate_task_guide_bytes": 4492,
+      "contains_check_client": true,
+      "contains_agent_file_copy": true,
+      "contains_authoring_command": false,
+      "token_saving": null,
+      "interpretation": "Byte counts only. No token-saving or comprehension-improvement estimate.",
+      "prompt_sha256": "1db19987a83af4aef3e211bd18011b9c87d118ea901db602781d0fac5accae48"
+    },
+    {
+      "configuration": "luna-low",
+      "index": 44,
+      "repeat": 1,
+      "family": "scheduler",
+      "phase": "comprehension",
+      "language": "lobo",
+      "prompt_bytes": 14997,
+      "task_bytes": 2509,
+      "guide_bytes": 3443,
+      "task_occurrences": 2,
+      "guide_occurrences": 2,
+      "duplicate_task_guide_bytes": 5952,
+      "contains_check_client": true,
+      "contains_agent_file_copy": true,
+      "contains_authoring_command": true,
+      "token_saving": null,
+      "interpretation": "Byte counts only. No token-saving or comprehension-improvement estimate.",
+      "prompt_sha256": "f72605b37d404131aaaf23c9c58e268ddbdeec6c13dfc696dc8a694b2a1c9a53"
+    },
+    {
+      "configuration": "luna-low",
+      "index": 45,
+      "repeat": 1,
+      "family": "frames",
+      "phase": "comprehension",
+      "language": "lobo",
+      "prompt_bytes": 13448,
+      "task_bytes": 2027,
+      "guide_bytes": 3443,
+      "task_occurrences": 2,
+      "guide_occurrences": 2,
+      "duplicate_task_guide_bytes": 5470,
+      "contains_check_client": true,
+      "contains_agent_file_copy": true,
+      "contains_authoring_command": true,
+      "token_saving": null,
+      "interpretation": "Byte counts only. No token-saving or comprehension-improvement estimate.",
+      "prompt_sha256": "2a4d5ecf259990717200141a78aa70170560469b50f1894995cc2c5dd4deb0cb"
+    },
+    {
+      "configuration": "luna-low",
+      "index": 46,
+      "repeat": 1,
+      "family": "frames",
+      "phase": "comprehension",
+      "language": "python",
+      "prompt_bytes": 9285,
+      "task_bytes": 2018,
+      "guide_bytes": 1922,
+      "task_occurrences": 2,
+      "guide_occurrences": 2,
+      "duplicate_task_guide_bytes": 3940,
+      "contains_check_client": true,
+      "contains_agent_file_copy": true,
+      "contains_authoring_command": false,
+      "token_saving": null,
+      "interpretation": "Byte counts only. No token-saving or comprehension-improvement estimate.",
+      "prompt_sha256": "9f76f81fadbd24764d57454d17101d677714297c8bc09200077e37688e1e9373"
+    },
+    {
+      "configuration": "luna-low",
+      "index": 47,
+      "repeat": 1,
+      "family": "frames",
+      "phase": "comprehension",
+      "language": "rust",
+      "prompt_bytes": 9689,
+      "task_bytes": 2027,
+      "guide_bytes": 1986,
+      "task_occurrences": 2,
+      "guide_occurrences": 2,
+      "duplicate_task_guide_bytes": 4013,
+      "contains_check_client": true,
+      "contains_agent_file_copy": true,
+      "contains_authoring_command": false,
+      "token_saving": null,
+      "interpretation": "Byte counts only. No token-saving or comprehension-improvement estimate.",
+      "prompt_sha256": "bf7ee9c41886a9aa8f769dd1b618ab4c46fe8757245b3e1f361d5df579ad36b2"
+    }
+  ],
+  "prompt_snapshot": {
+    "path": "research/snapshots/2026-11-23-comprehension-audit/prompts.json",
+    "sha256": "314d75683497efa11869b8398eb2b5186ed7d57fd29919ebab2f0f32478eee75"
+  },
+  "source_metrics": [
+    {
+      "family": "scheduler",
+      "language": "python",
+      "logic_bytes": 566,
+      "logic_nonblank_lines": 18,
+      "function_declarations": 4,
+      "record_or_struct_declarations": 0,
+      "note": "Lexical descriptions, not language-normalized complexity or token measurements."
+    },
+    {
+      "family": "scheduler",
+      "language": "lobo",
+      "logic_bytes": 1742,
+      "logic_nonblank_lines": 32,
+      "function_declarations": 5,
+      "record_or_struct_declarations": 3,
+      "note": "Lexical descriptions, not language-normalized complexity or token measurements."
+    },
+    {
+      "family": "scheduler",
+      "language": "rust",
+      "logic_bytes": 728,
+      "logic_nonblank_lines": 14,
+      "function_declarations": 4,
+      "record_or_struct_declarations": 0,
+      "note": "Lexical descriptions, not language-normalized complexity or token measurements."
+    },
+    {
+      "family": "frames",
+      "language": "lobo",
+      "logic_bytes": 1231,
+      "logic_nonblank_lines": 20,
+      "function_declarations": 4,
+      "record_or_struct_declarations": 2,
+      "note": "Lexical descriptions, not language-normalized complexity or token measurements."
+    },
+    {
+      "family": "frames",
+      "language": "rust",
+      "logic_bytes": 911,
+      "logic_nonblank_lines": 17,
+      "function_declarations": 4,
+      "record_or_struct_declarations": 1,
+      "note": "Lexical descriptions, not language-normalized complexity or token measurements."
+    },
+    {
+      "family": "frames",
+      "language": "python",
+      "logic_bytes": 624,
+      "logic_nonblank_lines": 19,
+      "function_declarations": 4,
+      "record_or_struct_declarations": 0,
+      "note": "Lexical descriptions, not language-normalized complexity or token measurements."
+    },
+    {
+      "family": "ledger",
+      "language": "rust",
+      "logic_bytes": 931,
+      "logic_nonblank_lines": 16,
+      "function_declarations": 3,
+      "record_or_struct_declarations": 1,
+      "note": "Lexical descriptions, not language-normalized complexity or token measurements."
+    },
+    {
+      "family": "ledger",
+      "language": "lobo",
+      "logic_bytes": 1305,
+      "logic_nonblank_lines": 20,
+      "function_declarations": 3,
+      "record_or_struct_declarations": 2,
+      "note": "Lexical descriptions, not language-normalized complexity or token measurements."
+    },
+    {
+      "family": "ledger",
+      "language": "python",
+      "logic_bytes": 704,
+      "logic_nonblank_lines": 19,
+      "function_declarations": 3,
+      "record_or_struct_declarations": 0,
+      "note": "Lexical descriptions, not language-normalized complexity or token measurements."
+    }
+  ],
+  "canonical_builds": [
+    {
+      "family": "ledger",
+      "language": "lobo",
+      "build": {
+        "ok": true,
+        "command": [
+          "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/matched-study-20261123/freeze/lobo",
+          "compile",
+          "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/comprehension-audit-20261123/base-ledger-lobo/app.lobo",
+          "--source",
+          "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/comprehension-audit-20261123/base-ledger-lobo/model.lobo",
+          "--source",
+          "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/comprehension-audit-20261123/base-ledger-lobo/util.lobo",
+          "--source",
+          "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/comprehension-audit-20261123/base-ledger-lobo/logic.lobo",
+          "-o",
+          "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/comprehension-audit-20261123/base-ledger-lobo/program"
+        ],
+        "exit_code": 0,
+        "stdout": "{\"artifact\":\"/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/comprehension-audit-20261123/base-ledger-lobo/program\",\"entries\":[\"study.ledger.app.sum_list\",\"study.ledger.app.sum_bytes\",\"study.ledger.app.sum_frames\",\"study.ledger.app.digest_summary\",\"study.ledger.entry\",\"study.ledger.bench\",\"study.ledger.valid_amount\",\"study.ledger.step\",\"study.ledger.run\",\"lobo.generic.acb4643a9210982d1063492e82df1c15\"],\"format\":\"native\",\"status\":\"ok\"}\n",
+        "stderr": ""
+      }
+    },
+    {
+      "family": "ledger",
+      "language": "rust",
+      "build": {
+        "ok": true,
+        "command": [
+          "rustc",
+          "--edition=2021",
+          "-C",
+          "opt-level=3",
+          "-C",
+          "overflow-checks=yes",
+          "-C",
+          "panic=abort",
+          "-C",
+          "strip=symbols",
+          "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/comprehension-audit-20261123/base-ledger-rust/app.rs",
+          "-o",
+          "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/comprehension-audit-20261123/base-ledger-rust/program"
+        ],
+        "exit_code": 0,
+        "stdout": "",
+        "stderr": ""
+      }
+    },
+    {
+      "family": "ledger",
+      "language": "python",
+      "build": {
+        "ok": true,
+        "command": [
+          "python3",
+          "-m",
+          "py_compile",
+          "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/comprehension-audit-20261123/base-ledger-python/app.py",
+          "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/comprehension-audit-20261123/base-ledger-python/model.py",
+          "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/comprehension-audit-20261123/base-ledger-python/logic.py"
+        ],
+        "exit_code": 0,
+        "stdout": "",
+        "stderr": ""
+      }
+    },
+    {
+      "family": "scheduler",
+      "language": "lobo",
+      "build": {
+        "ok": true,
+        "command": [
+          "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/matched-study-20261123/freeze/lobo",
+          "compile",
+          "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/comprehension-audit-20261123/base-scheduler-lobo/app.lobo",
+          "--source",
+          "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/comprehension-audit-20261123/base-scheduler-lobo/model.lobo",
+          "--source",
+          "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/comprehension-audit-20261123/base-scheduler-lobo/util.lobo",
+          "--source",
+          "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/comprehension-audit-20261123/base-scheduler-lobo/logic.lobo",
+          "-o",
+          "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/comprehension-audit-20261123/base-scheduler-lobo/program"
+        ],
+        "exit_code": 0,
+        "stdout": "{\"artifact\":\"/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/comprehension-audit-20261123/base-scheduler-lobo/program\",\"entries\":[\"study.scheduler.app.sum_list\",\"study.scheduler.app.sum_bytes\",\"study.scheduler.app.sum_frames\",\"study.scheduler.app.digest_summary\",\"study.scheduler.entry\",\"study.scheduler.bench\",\"study.scheduler.contains\",\"study.scheduler.ready\",\"study.scheduler.fits\",\"study.scheduler.choose\",\"study.scheduler.run\",\"lobo.generic.acb4643a9210982d1063492e82df1c15\"],\"format\":\"native\",\"status\":\"ok\"}\n",
+        "stderr": ""
+      }
+    },
+    {
+      "family": "scheduler",
+      "language": "rust",
+      "build": {
+        "ok": true,
+        "command": [
+          "rustc",
+          "--edition=2021",
+          "-C",
+          "opt-level=3",
+          "-C",
+          "overflow-checks=yes",
+          "-C",
+          "panic=abort",
+          "-C",
+          "strip=symbols",
+          "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/comprehension-audit-20261123/base-scheduler-rust/app.rs",
+          "-o",
+          "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/comprehension-audit-20261123/base-scheduler-rust/program"
+        ],
+        "exit_code": 0,
+        "stdout": "",
+        "stderr": ""
+      }
+    },
+    {
+      "family": "scheduler",
+      "language": "python",
+      "build": {
+        "ok": true,
+        "command": [
+          "python3",
+          "-m",
+          "py_compile",
+          "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/comprehension-audit-20261123/base-scheduler-python/app.py",
+          "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/comprehension-audit-20261123/base-scheduler-python/model.py",
+          "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/comprehension-audit-20261123/base-scheduler-python/logic.py"
+        ],
+        "exit_code": 0,
+        "stdout": "",
+        "stderr": ""
+      }
+    },
+    {
+      "family": "frames",
+      "language": "lobo",
+      "build": {
+        "ok": true,
+        "command": [
+          "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/matched-study-20261123/freeze/lobo",
+          "compile",
+          "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/comprehension-audit-20261123/base-frames-lobo/app.lobo",
+          "--source",
+          "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/comprehension-audit-20261123/base-frames-lobo/model.lobo",
+          "--source",
+          "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/comprehension-audit-20261123/base-frames-lobo/util.lobo",
+          "--source",
+          "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/comprehension-audit-20261123/base-frames-lobo/logic.lobo",
+          "-o",
+          "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/comprehension-audit-20261123/base-frames-lobo/program"
+        ],
+        "exit_code": 0,
+        "stdout": "{\"artifact\":\"/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/comprehension-audit-20261123/base-frames-lobo/program\",\"entries\":[\"study.frames.app.sum_list\",\"study.frames.app.sum_bytes\",\"study.frames.app.sum_frames\",\"study.frames.app.digest_summary\",\"study.frames.entry\",\"study.frames.bench\",\"study.frames.read_header\",\"study.frames.fits\",\"study.frames.checksum\",\"study.frames.run\",\"lobo.generic.2efd80a063f712cef2b53840a34ee7f3\"],\"format\":\"native\",\"status\":\"ok\"}\n",
+        "stderr": ""
+      }
+    },
+    {
+      "family": "frames",
+      "language": "rust",
+      "build": {
+        "ok": true,
+        "command": [
+          "rustc",
+          "--edition=2021",
+          "-C",
+          "opt-level=3",
+          "-C",
+          "overflow-checks=yes",
+          "-C",
+          "panic=abort",
+          "-C",
+          "strip=symbols",
+          "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/comprehension-audit-20261123/base-frames-rust/app.rs",
+          "-o",
+          "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/comprehension-audit-20261123/base-frames-rust/program"
+        ],
+        "exit_code": 0,
+        "stdout": "",
+        "stderr": ""
+      }
+    },
+    {
+      "family": "frames",
+      "language": "python",
+      "build": {
+        "ok": true,
+        "command": [
+          "python3",
+          "-m",
+          "py_compile",
+          "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/comprehension-audit-20261123/base-frames-python/app.py",
+          "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/comprehension-audit-20261123/base-frames-python/model.py",
+          "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/comprehension-audit-20261123/base-frames-python/logic.py"
+        ],
+        "exit_code": 0,
+        "stdout": "",
+        "stderr": ""
+      }
+    }
+  ],
+  "prediction_replays": [
+    {
+      "family": "ledger",
+      "language": "lobo",
+      "item": "prediction_0",
+      "input": {
+        "initial": 0,
+        "events": [
+          [
+            0,
+            5
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            0,
+            1
+          ]
+        ]
+      },
+      "actual": {
+        "balance": 4,
+        "rejected": 0,
+        "peak": 5,
+        "audit": [
+          5,
+          3,
+          4
+        ]
+      },
+      "expected": {
+        "balance": 4,
+        "rejected": 0,
+        "peak": 5,
+        "audit": [
+          5,
+          3,
+          4
+        ]
+      },
+      "ok": true
+    },
+    {
+      "family": "ledger",
+      "language": "lobo",
+      "item": "prediction_1",
+      "input": {
+        "initial": 3,
+        "events": [
+          [
+            2,
+            0
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            3,
+            0
+          ],
+          [
+            1,
+            5
+          ]
+        ]
+      },
+      "actual": {
+        "balance": 0,
+        "rejected": 1,
+        "peak": 5,
+        "audit": [
+          3,
+          3,
+          5,
+          5,
+          0
+        ]
+      },
+      "expected": {
+        "balance": 0,
+        "rejected": 1,
+        "peak": 5,
+        "audit": [
+          3,
+          3,
+          5,
+          5,
+          0
+        ]
+      },
+      "ok": true
+    },
+    {
+      "family": "ledger",
+      "language": "lobo",
+      "item": "prediction_2",
+      "input": {
+        "initial": 1,
+        "events": [
+          [
+            0,
+            -1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            1
+          ]
+        ]
+      },
+      "actual": {
+        "balance": 0,
+        "rejected": 2,
+        "peak": 1,
+        "audit": [
+          1,
+          1,
+          0
+        ]
+      },
+      "expected": {
+        "balance": 0,
+        "rejected": 2,
+        "peak": 1,
+        "audit": [
+          1,
+          1,
+          0
+        ]
+      },
+      "ok": true
+    },
+    {
+      "family": "ledger",
+      "language": "lobo",
+      "item": "prediction_3",
+      "input": {
+        "initial": 0,
+        "events": [
+          [
+            0,
+            0
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            3,
+            0
+          ]
+        ]
+      },
+      "actual": {
+        "balance": 0,
+        "rejected": 0,
+        "peak": 0,
+        "audit": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "expected": {
+        "balance": 0,
+        "rejected": 0,
+        "peak": 0,
+        "audit": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "ok": true
+    },
+    {
+      "family": "ledger",
+      "language": "lobo",
+      "item": "prediction_4",
+      "input": {
+        "initial": 7,
+        "events": [
+          [
+            1,
+            0
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            1,
+            1
+          ]
+        ]
+      },
+      "actual": {
+        "balance": 7,
+        "rejected": 1,
+        "peak": 7,
+        "audit": [
+          7,
+          7,
+          7,
+          7
+        ]
+      },
+      "expected": {
+        "balance": 7,
+        "rejected": 1,
+        "peak": 7,
+        "audit": [
+          7,
+          7,
+          7,
+          7
+        ]
+      },
+      "ok": true
+    },
+    {
+      "family": "ledger",
+      "language": "lobo",
+      "item": "prediction_5",
+      "input": {
+        "initial": 0,
+        "events": [
+          [
+            0,
+            1000000
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            1000001
+          ]
+        ]
+      },
+      "actual": {
+        "balance": 1000001,
+        "rejected": 1,
+        "peak": 1000001,
+        "audit": [
+          1000000,
+          1000001,
+          1000001
+        ]
+      },
+      "expected": {
+        "balance": 1000001,
+        "rejected": 1,
+        "peak": 1000001,
+        "audit": [
+          1000000,
+          1000001,
+          1000001
+        ]
+      },
+      "ok": true
+    },
+    {
+      "family": "ledger",
+      "language": "rust",
+      "item": "prediction_0",
+      "input": {
+        "initial": 0,
+        "events": [
+          [
+            0,
+            5
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            0,
+            1
+          ]
+        ]
+      },
+      "actual": {
+        "balance": 4,
+        "rejected": 0,
+        "peak": 5,
+        "audit": [
+          5,
+          3,
+          4
+        ]
+      },
+      "expected": {
+        "balance": 4,
+        "rejected": 0,
+        "peak": 5,
+        "audit": [
+          5,
+          3,
+          4
+        ]
+      },
+      "ok": true
+    },
+    {
+      "family": "ledger",
+      "language": "rust",
+      "item": "prediction_1",
+      "input": {
+        "initial": 3,
+        "events": [
+          [
+            2,
+            0
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            3,
+            0
+          ],
+          [
+            1,
+            5
+          ]
+        ]
+      },
+      "actual": {
+        "balance": 0,
+        "rejected": 1,
+        "peak": 5,
+        "audit": [
+          3,
+          3,
+          5,
+          5,
+          0
+        ]
+      },
+      "expected": {
+        "balance": 0,
+        "rejected": 1,
+        "peak": 5,
+        "audit": [
+          3,
+          3,
+          5,
+          5,
+          0
+        ]
+      },
+      "ok": true
+    },
+    {
+      "family": "ledger",
+      "language": "rust",
+      "item": "prediction_2",
+      "input": {
+        "initial": 1,
+        "events": [
+          [
+            0,
+            -1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            1
+          ]
+        ]
+      },
+      "actual": {
+        "balance": 0,
+        "rejected": 2,
+        "peak": 1,
+        "audit": [
+          1,
+          1,
+          0
+        ]
+      },
+      "expected": {
+        "balance": 0,
+        "rejected": 2,
+        "peak": 1,
+        "audit": [
+          1,
+          1,
+          0
+        ]
+      },
+      "ok": true
+    },
+    {
+      "family": "ledger",
+      "language": "rust",
+      "item": "prediction_3",
+      "input": {
+        "initial": 0,
+        "events": [
+          [
+            0,
+            0
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            3,
+            0
+          ]
+        ]
+      },
+      "actual": {
+        "balance": 0,
+        "rejected": 0,
+        "peak": 0,
+        "audit": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "expected": {
+        "balance": 0,
+        "rejected": 0,
+        "peak": 0,
+        "audit": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "ok": true
+    },
+    {
+      "family": "ledger",
+      "language": "rust",
+      "item": "prediction_4",
+      "input": {
+        "initial": 7,
+        "events": [
+          [
+            1,
+            0
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            1,
+            1
+          ]
+        ]
+      },
+      "actual": {
+        "balance": 7,
+        "rejected": 1,
+        "peak": 7,
+        "audit": [
+          7,
+          7,
+          7,
+          7
+        ]
+      },
+      "expected": {
+        "balance": 7,
+        "rejected": 1,
+        "peak": 7,
+        "audit": [
+          7,
+          7,
+          7,
+          7
+        ]
+      },
+      "ok": true
+    },
+    {
+      "family": "ledger",
+      "language": "rust",
+      "item": "prediction_5",
+      "input": {
+        "initial": 0,
+        "events": [
+          [
+            0,
+            1000000
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            1000001
+          ]
+        ]
+      },
+      "actual": {
+        "balance": 1000001,
+        "rejected": 1,
+        "peak": 1000001,
+        "audit": [
+          1000000,
+          1000001,
+          1000001
+        ]
+      },
+      "expected": {
+        "balance": 1000001,
+        "rejected": 1,
+        "peak": 1000001,
+        "audit": [
+          1000000,
+          1000001,
+          1000001
+        ]
+      },
+      "ok": true
+    },
+    {
+      "family": "ledger",
+      "language": "python",
+      "item": "prediction_0",
+      "input": {
+        "initial": 0,
+        "events": [
+          [
+            0,
+            5
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            0,
+            1
+          ]
+        ]
+      },
+      "actual": {
+        "balance": 4,
+        "rejected": 0,
+        "peak": 5,
+        "audit": [
+          5,
+          3,
+          4
+        ]
+      },
+      "expected": {
+        "balance": 4,
+        "rejected": 0,
+        "peak": 5,
+        "audit": [
+          5,
+          3,
+          4
+        ]
+      },
+      "ok": true
+    },
+    {
+      "family": "ledger",
+      "language": "python",
+      "item": "prediction_1",
+      "input": {
+        "initial": 3,
+        "events": [
+          [
+            2,
+            0
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            3,
+            0
+          ],
+          [
+            1,
+            5
+          ]
+        ]
+      },
+      "actual": {
+        "balance": 0,
+        "rejected": 1,
+        "peak": 5,
+        "audit": [
+          3,
+          3,
+          5,
+          5,
+          0
+        ]
+      },
+      "expected": {
+        "balance": 0,
+        "rejected": 1,
+        "peak": 5,
+        "audit": [
+          3,
+          3,
+          5,
+          5,
+          0
+        ]
+      },
+      "ok": true
+    },
+    {
+      "family": "ledger",
+      "language": "python",
+      "item": "prediction_2",
+      "input": {
+        "initial": 1,
+        "events": [
+          [
+            0,
+            -1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            1
+          ]
+        ]
+      },
+      "actual": {
+        "balance": 0,
+        "rejected": 2,
+        "peak": 1,
+        "audit": [
+          1,
+          1,
+          0
+        ]
+      },
+      "expected": {
+        "balance": 0,
+        "rejected": 2,
+        "peak": 1,
+        "audit": [
+          1,
+          1,
+          0
+        ]
+      },
+      "ok": true
+    },
+    {
+      "family": "ledger",
+      "language": "python",
+      "item": "prediction_3",
+      "input": {
+        "initial": 0,
+        "events": [
+          [
+            0,
+            0
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            3,
+            0
+          ]
+        ]
+      },
+      "actual": {
+        "balance": 0,
+        "rejected": 0,
+        "peak": 0,
+        "audit": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "expected": {
+        "balance": 0,
+        "rejected": 0,
+        "peak": 0,
+        "audit": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "ok": true
+    },
+    {
+      "family": "ledger",
+      "language": "python",
+      "item": "prediction_4",
+      "input": {
+        "initial": 7,
+        "events": [
+          [
+            1,
+            0
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            1,
+            1
+          ]
+        ]
+      },
+      "actual": {
+        "balance": 7,
+        "rejected": 1,
+        "peak": 7,
+        "audit": [
+          7,
+          7,
+          7,
+          7
+        ]
+      },
+      "expected": {
+        "balance": 7,
+        "rejected": 1,
+        "peak": 7,
+        "audit": [
+          7,
+          7,
+          7,
+          7
+        ]
+      },
+      "ok": true
+    },
+    {
+      "family": "ledger",
+      "language": "python",
+      "item": "prediction_5",
+      "input": {
+        "initial": 0,
+        "events": [
+          [
+            0,
+            1000000
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            1000001
+          ]
+        ]
+      },
+      "actual": {
+        "balance": 1000001,
+        "rejected": 1,
+        "peak": 1000001,
+        "audit": [
+          1000000,
+          1000001,
+          1000001
+        ]
+      },
+      "expected": {
+        "balance": 1000001,
+        "rejected": 1,
+        "peak": 1000001,
+        "audit": [
+          1000000,
+          1000001,
+          1000001
+        ]
+      },
+      "ok": true
+    },
+    {
+      "family": "scheduler",
+      "language": "lobo",
+      "item": "prediction_0",
+      "input": {
+        "jobs": [
+          {
+            "id": 0,
+            "cost": 2,
+            "deps": [
+              1
+            ]
+          },
+          {
+            "id": 1,
+            "cost": 1,
+            "deps": []
+          }
+        ],
+        "budget": 3
+      },
+      "actual": {
+        "order": [
+          1,
+          0
+        ],
+        "spent": 3,
+        "blocked": 0
+      },
+      "expected": {
+        "order": [
+          1,
+          0
+        ],
+        "spent": 3,
+        "blocked": 0
+      },
+      "ok": true
+    },
+    {
+      "family": "scheduler",
+      "language": "lobo",
+      "item": "prediction_1",
+      "input": {
+        "jobs": [
+          {
+            "id": 2,
+            "cost": 1,
+            "deps": [
+              0
+            ]
+          },
+          {
+            "id": 0,
+            "cost": 2,
+            "deps": []
+          },
+          {
+            "id": 1,
+            "cost": 1,
+            "deps": []
+          }
+        ],
+        "budget": 2
+      },
+      "actual": {
+        "order": [
+          0
+        ],
+        "spent": 2,
+        "blocked": 2
+      },
+      "expected": {
+        "order": [
+          0
+        ],
+        "spent": 2,
+        "blocked": 2
+      },
+      "ok": true
+    },
+    {
+      "family": "scheduler",
+      "language": "lobo",
+      "item": "prediction_2",
+      "input": {
+        "jobs": [
+          {
+            "id": 0,
+            "cost": 0,
+            "deps": [
+              0
+            ]
+          },
+          {
+            "id": 1,
+            "cost": 0,
+            "deps": []
+          }
+        ],
+        "budget": 0
+      },
+      "actual": {
+        "order": [
+          1
+        ],
+        "spent": 0,
+        "blocked": 1
+      },
+      "expected": {
+        "order": [
+          1
+        ],
+        "spent": 0,
+        "blocked": 1
+      },
+      "ok": true
+    },
+    {
+      "family": "scheduler",
+      "language": "lobo",
+      "item": "prediction_3",
+      "input": {
+        "jobs": [
+          {
+            "id": 0,
+            "cost": 1,
+            "deps": [
+              1
+            ]
+          },
+          {
+            "id": 1,
+            "cost": 1,
+            "deps": [
+              2
+            ]
+          },
+          {
+            "id": 2,
+            "cost": 1,
+            "deps": [
+              0
+            ]
+          }
+        ],
+        "budget": 10
+      },
+      "actual": {
+        "order": [],
+        "spent": 0,
+        "blocked": 3
+      },
+      "expected": {
+        "order": [],
+        "spent": 0,
+        "blocked": 3
+      },
+      "ok": true
+    },
+    {
+      "family": "scheduler",
+      "language": "lobo",
+      "item": "prediction_4",
+      "input": {
+        "jobs": [
+          {
+            "id": 0,
+            "cost": 5,
+            "deps": []
+          },
+          {
+            "id": 1,
+            "cost": 2,
+            "deps": []
+          }
+        ],
+        "budget": 2
+      },
+      "actual": {
+        "order": [
+          1
+        ],
+        "spent": 2,
+        "blocked": 1
+      },
+      "expected": {
+        "order": [
+          1
+        ],
+        "spent": 2,
+        "blocked": 1
+      },
+      "ok": true
+    },
+    {
+      "family": "scheduler",
+      "language": "lobo",
+      "item": "prediction_5",
+      "input": {
+        "jobs": [
+          {
+            "id": 0,
+            "cost": 1,
+            "deps": []
+          },
+          {
+            "id": 1,
+            "cost": 1,
+            "deps": [
+              0,
+              0
+            ]
+          },
+          {
+            "id": 2,
+            "cost": 0,
+            "deps": [
+              1
+            ]
+          }
+        ],
+        "budget": 2
+      },
+      "actual": {
+        "order": [
+          0,
+          1,
+          2
+        ],
+        "spent": 2,
+        "blocked": 0
+      },
+      "expected": {
+        "order": [
+          0,
+          1,
+          2
+        ],
+        "spent": 2,
+        "blocked": 0
+      },
+      "ok": true
+    },
+    {
+      "family": "scheduler",
+      "language": "rust",
+      "item": "prediction_0",
+      "input": {
+        "jobs": [
+          {
+            "id": 0,
+            "cost": 2,
+            "deps": [
+              1
+            ]
+          },
+          {
+            "id": 1,
+            "cost": 1,
+            "deps": []
+          }
+        ],
+        "budget": 3
+      },
+      "actual": {
+        "order": [
+          1,
+          0
+        ],
+        "spent": 3,
+        "blocked": 0
+      },
+      "expected": {
+        "order": [
+          1,
+          0
+        ],
+        "spent": 3,
+        "blocked": 0
+      },
+      "ok": true
+    },
+    {
+      "family": "scheduler",
+      "language": "rust",
+      "item": "prediction_1",
+      "input": {
+        "jobs": [
+          {
+            "id": 2,
+            "cost": 1,
+            "deps": [
+              0
+            ]
+          },
+          {
+            "id": 0,
+            "cost": 2,
+            "deps": []
+          },
+          {
+            "id": 1,
+            "cost": 1,
+            "deps": []
+          }
+        ],
+        "budget": 2
+      },
+      "actual": {
+        "order": [
+          0
+        ],
+        "spent": 2,
+        "blocked": 2
+      },
+      "expected": {
+        "order": [
+          0
+        ],
+        "spent": 2,
+        "blocked": 2
+      },
+      "ok": true
+    },
+    {
+      "family": "scheduler",
+      "language": "rust",
+      "item": "prediction_2",
+      "input": {
+        "jobs": [
+          {
+            "id": 0,
+            "cost": 0,
+            "deps": [
+              0
+            ]
+          },
+          {
+            "id": 1,
+            "cost": 0,
+            "deps": []
+          }
+        ],
+        "budget": 0
+      },
+      "actual": {
+        "order": [
+          1
+        ],
+        "spent": 0,
+        "blocked": 1
+      },
+      "expected": {
+        "order": [
+          1
+        ],
+        "spent": 0,
+        "blocked": 1
+      },
+      "ok": true
+    },
+    {
+      "family": "scheduler",
+      "language": "rust",
+      "item": "prediction_3",
+      "input": {
+        "jobs": [
+          {
+            "id": 0,
+            "cost": 1,
+            "deps": [
+              1
+            ]
+          },
+          {
+            "id": 1,
+            "cost": 1,
+            "deps": [
+              2
+            ]
+          },
+          {
+            "id": 2,
+            "cost": 1,
+            "deps": [
+              0
+            ]
+          }
+        ],
+        "budget": 10
+      },
+      "actual": {
+        "order": [],
+        "spent": 0,
+        "blocked": 3
+      },
+      "expected": {
+        "order": [],
+        "spent": 0,
+        "blocked": 3
+      },
+      "ok": true
+    },
+    {
+      "family": "scheduler",
+      "language": "rust",
+      "item": "prediction_4",
+      "input": {
+        "jobs": [
+          {
+            "id": 0,
+            "cost": 5,
+            "deps": []
+          },
+          {
+            "id": 1,
+            "cost": 2,
+            "deps": []
+          }
+        ],
+        "budget": 2
+      },
+      "actual": {
+        "order": [
+          1
+        ],
+        "spent": 2,
+        "blocked": 1
+      },
+      "expected": {
+        "order": [
+          1
+        ],
+        "spent": 2,
+        "blocked": 1
+      },
+      "ok": true
+    },
+    {
+      "family": "scheduler",
+      "language": "rust",
+      "item": "prediction_5",
+      "input": {
+        "jobs": [
+          {
+            "id": 0,
+            "cost": 1,
+            "deps": []
+          },
+          {
+            "id": 1,
+            "cost": 1,
+            "deps": [
+              0,
+              0
+            ]
+          },
+          {
+            "id": 2,
+            "cost": 0,
+            "deps": [
+              1
+            ]
+          }
+        ],
+        "budget": 2
+      },
+      "actual": {
+        "order": [
+          0,
+          1,
+          2
+        ],
+        "spent": 2,
+        "blocked": 0
+      },
+      "expected": {
+        "order": [
+          0,
+          1,
+          2
+        ],
+        "spent": 2,
+        "blocked": 0
+      },
+      "ok": true
+    },
+    {
+      "family": "scheduler",
+      "language": "python",
+      "item": "prediction_0",
+      "input": {
+        "jobs": [
+          {
+            "id": 0,
+            "cost": 2,
+            "deps": [
+              1
+            ]
+          },
+          {
+            "id": 1,
+            "cost": 1,
+            "deps": []
+          }
+        ],
+        "budget": 3
+      },
+      "actual": {
+        "order": [
+          1,
+          0
+        ],
+        "spent": 3,
+        "blocked": 0
+      },
+      "expected": {
+        "order": [
+          1,
+          0
+        ],
+        "spent": 3,
+        "blocked": 0
+      },
+      "ok": true
+    },
+    {
+      "family": "scheduler",
+      "language": "python",
+      "item": "prediction_1",
+      "input": {
+        "jobs": [
+          {
+            "id": 2,
+            "cost": 1,
+            "deps": [
+              0
+            ]
+          },
+          {
+            "id": 0,
+            "cost": 2,
+            "deps": []
+          },
+          {
+            "id": 1,
+            "cost": 1,
+            "deps": []
+          }
+        ],
+        "budget": 2
+      },
+      "actual": {
+        "order": [
+          0
+        ],
+        "spent": 2,
+        "blocked": 2
+      },
+      "expected": {
+        "order": [
+          0
+        ],
+        "spent": 2,
+        "blocked": 2
+      },
+      "ok": true
+    },
+    {
+      "family": "scheduler",
+      "language": "python",
+      "item": "prediction_2",
+      "input": {
+        "jobs": [
+          {
+            "id": 0,
+            "cost": 0,
+            "deps": [
+              0
+            ]
+          },
+          {
+            "id": 1,
+            "cost": 0,
+            "deps": []
+          }
+        ],
+        "budget": 0
+      },
+      "actual": {
+        "order": [
+          1
+        ],
+        "spent": 0,
+        "blocked": 1
+      },
+      "expected": {
+        "order": [
+          1
+        ],
+        "spent": 0,
+        "blocked": 1
+      },
+      "ok": true
+    },
+    {
+      "family": "scheduler",
+      "language": "python",
+      "item": "prediction_3",
+      "input": {
+        "jobs": [
+          {
+            "id": 0,
+            "cost": 1,
+            "deps": [
+              1
+            ]
+          },
+          {
+            "id": 1,
+            "cost": 1,
+            "deps": [
+              2
+            ]
+          },
+          {
+            "id": 2,
+            "cost": 1,
+            "deps": [
+              0
+            ]
+          }
+        ],
+        "budget": 10
+      },
+      "actual": {
+        "order": [],
+        "spent": 0,
+        "blocked": 3
+      },
+      "expected": {
+        "order": [],
+        "spent": 0,
+        "blocked": 3
+      },
+      "ok": true
+    },
+    {
+      "family": "scheduler",
+      "language": "python",
+      "item": "prediction_4",
+      "input": {
+        "jobs": [
+          {
+            "id": 0,
+            "cost": 5,
+            "deps": []
+          },
+          {
+            "id": 1,
+            "cost": 2,
+            "deps": []
+          }
+        ],
+        "budget": 2
+      },
+      "actual": {
+        "order": [
+          1
+        ],
+        "spent": 2,
+        "blocked": 1
+      },
+      "expected": {
+        "order": [
+          1
+        ],
+        "spent": 2,
+        "blocked": 1
+      },
+      "ok": true
+    },
+    {
+      "family": "scheduler",
+      "language": "python",
+      "item": "prediction_5",
+      "input": {
+        "jobs": [
+          {
+            "id": 0,
+            "cost": 1,
+            "deps": []
+          },
+          {
+            "id": 1,
+            "cost": 1,
+            "deps": [
+              0,
+              0
+            ]
+          },
+          {
+            "id": 2,
+            "cost": 0,
+            "deps": [
+              1
+            ]
+          }
+        ],
+        "budget": 2
+      },
+      "actual": {
+        "order": [
+          0,
+          1,
+          2
+        ],
+        "spent": 2,
+        "blocked": 0
+      },
+      "expected": {
+        "order": [
+          0,
+          1,
+          2
+        ],
+        "spent": 2,
+        "blocked": 0
+      },
+      "ok": true
+    },
+    {
+      "family": "frames",
+      "language": "lobo",
+      "item": "prediction_0",
+      "input": {
+        "data": "",
+        "limit": 0
+      },
+      "actual": {
+        "frames": [],
+        "consumed": 0,
+        "error": 0
+      },
+      "expected": {
+        "frames": [],
+        "consumed": 0,
+        "error": 0
+      },
+      "ok": true
+    },
+    {
+      "family": "frames",
+      "language": "lobo",
+      "item": "prediction_1",
+      "input": {
+        "data": "0000",
+        "limit": 0
+      },
+      "actual": {
+        "frames": [
+          ""
+        ],
+        "consumed": 2,
+        "error": 0
+      },
+      "expected": {
+        "frames": [
+          ""
+        ],
+        "consumed": 2,
+        "error": 0
+      },
+      "ok": true
+    },
+    {
+      "family": "frames",
+      "language": "lobo",
+      "item": "prediction_2",
+      "input": {
+        "data": "02010203",
+        "limit": 2
+      },
+      "actual": {
+        "frames": [
+          "0102"
+        ],
+        "consumed": 4,
+        "error": 0
+      },
+      "expected": {
+        "frames": [
+          "0102"
+        ],
+        "consumed": 4,
+        "error": 0
+      },
+      "ok": true
+    },
+    {
+      "family": "frames",
+      "language": "lobo",
+      "item": "prediction_3",
+      "input": {
+        "data": "02010204",
+        "limit": 2
+      },
+      "actual": {
+        "frames": [],
+        "consumed": 0,
+        "error": 2
+      },
+      "expected": {
+        "frames": [],
+        "consumed": 0,
+        "error": 2
+      },
+      "ok": true
+    },
+    {
+      "family": "frames",
+      "language": "lobo",
+      "item": "prediction_4",
+      "input": {
+        "data": "03",
+        "limit": 2
+      },
+      "actual": {
+        "frames": [],
+        "consumed": 0,
+        "error": 3
+      },
+      "expected": {
+        "frames": [],
+        "consumed": 0,
+        "error": 3
+      },
+      "ok": true
+    },
+    {
+      "family": "frames",
+      "language": "lobo",
+      "item": "prediction_5",
+      "input": {
+        "data": "0101010201",
+        "limit": 2
+      },
+      "actual": {
+        "frames": [
+          "01"
+        ],
+        "consumed": 3,
+        "error": 1
+      },
+      "expected": {
+        "frames": [
+          "01"
+        ],
+        "consumed": 3,
+        "error": 1
+      },
+      "ok": true
+    },
+    {
+      "family": "frames",
+      "language": "rust",
+      "item": "prediction_0",
+      "input": {
+        "data": "",
+        "limit": 0
+      },
+      "actual": {
+        "frames": [],
+        "consumed": 0,
+        "error": 0
+      },
+      "expected": {
+        "frames": [],
+        "consumed": 0,
+        "error": 0
+      },
+      "ok": true
+    },
+    {
+      "family": "frames",
+      "language": "rust",
+      "item": "prediction_1",
+      "input": {
+        "data": "0000",
+        "limit": 0
+      },
+      "actual": {
+        "frames": [
+          ""
+        ],
+        "consumed": 2,
+        "error": 0
+      },
+      "expected": {
+        "frames": [
+          ""
+        ],
+        "consumed": 2,
+        "error": 0
+      },
+      "ok": true
+    },
+    {
+      "family": "frames",
+      "language": "rust",
+      "item": "prediction_2",
+      "input": {
+        "data": "02010203",
+        "limit": 2
+      },
+      "actual": {
+        "frames": [
+          "0102"
+        ],
+        "consumed": 4,
+        "error": 0
+      },
+      "expected": {
+        "frames": [
+          "0102"
+        ],
+        "consumed": 4,
+        "error": 0
+      },
+      "ok": true
+    },
+    {
+      "family": "frames",
+      "language": "rust",
+      "item": "prediction_3",
+      "input": {
+        "data": "02010204",
+        "limit": 2
+      },
+      "actual": {
+        "frames": [],
+        "consumed": 0,
+        "error": 2
+      },
+      "expected": {
+        "frames": [],
+        "consumed": 0,
+        "error": 2
+      },
+      "ok": true
+    },
+    {
+      "family": "frames",
+      "language": "rust",
+      "item": "prediction_4",
+      "input": {
+        "data": "03",
+        "limit": 2
+      },
+      "actual": {
+        "frames": [],
+        "consumed": 0,
+        "error": 3
+      },
+      "expected": {
+        "frames": [],
+        "consumed": 0,
+        "error": 3
+      },
+      "ok": true
+    },
+    {
+      "family": "frames",
+      "language": "rust",
+      "item": "prediction_5",
+      "input": {
+        "data": "0101010201",
+        "limit": 2
+      },
+      "actual": {
+        "frames": [
+          "01"
+        ],
+        "consumed": 3,
+        "error": 1
+      },
+      "expected": {
+        "frames": [
+          "01"
+        ],
+        "consumed": 3,
+        "error": 1
+      },
+      "ok": true
+    },
+    {
+      "family": "frames",
+      "language": "python",
+      "item": "prediction_0",
+      "input": {
+        "data": "",
+        "limit": 0
+      },
+      "actual": {
+        "frames": [],
+        "consumed": 0,
+        "error": 0
+      },
+      "expected": {
+        "frames": [],
+        "consumed": 0,
+        "error": 0
+      },
+      "ok": true
+    },
+    {
+      "family": "frames",
+      "language": "python",
+      "item": "prediction_1",
+      "input": {
+        "data": "0000",
+        "limit": 0
+      },
+      "actual": {
+        "frames": [
+          ""
+        ],
+        "consumed": 2,
+        "error": 0
+      },
+      "expected": {
+        "frames": [
+          ""
+        ],
+        "consumed": 2,
+        "error": 0
+      },
+      "ok": true
+    },
+    {
+      "family": "frames",
+      "language": "python",
+      "item": "prediction_2",
+      "input": {
+        "data": "02010203",
+        "limit": 2
+      },
+      "actual": {
+        "frames": [
+          "0102"
+        ],
+        "consumed": 4,
+        "error": 0
+      },
+      "expected": {
+        "frames": [
+          "0102"
+        ],
+        "consumed": 4,
+        "error": 0
+      },
+      "ok": true
+    },
+    {
+      "family": "frames",
+      "language": "python",
+      "item": "prediction_3",
+      "input": {
+        "data": "02010204",
+        "limit": 2
+      },
+      "actual": {
+        "frames": [],
+        "consumed": 0,
+        "error": 2
+      },
+      "expected": {
+        "frames": [],
+        "consumed": 0,
+        "error": 2
+      },
+      "ok": true
+    },
+    {
+      "family": "frames",
+      "language": "python",
+      "item": "prediction_4",
+      "input": {
+        "data": "03",
+        "limit": 2
+      },
+      "actual": {
+        "frames": [],
+        "consumed": 0,
+        "error": 3
+      },
+      "expected": {
+        "frames": [],
+        "consumed": 0,
+        "error": 3
+      },
+      "ok": true
+    },
+    {
+      "family": "frames",
+      "language": "python",
+      "item": "prediction_5",
+      "input": {
+        "data": "0101010201",
+        "limit": 2
+      },
+      "actual": {
+        "frames": [
+          "01"
+        ],
+        "consumed": 3,
+        "error": 1
+      },
+      "expected": {
+        "frames": [
+          "01"
+        ],
+        "consumed": 3,
+        "error": 1
+      },
+      "ok": true
+    }
+  ],
+  "impact_diagnostic": {
+    "question_definition": "Functions in logic whose output can change for identical direct arguments; include the changed function.",
+    "base_fits": true,
+    "strict_fits": false,
+    "base_run": {
+      "frames": [
+        ""
+      ],
+      "consumed": 2,
+      "error": 0
+    },
+    "strict_run": {
+      "frames": [],
+      "consumed": 0,
+      "error": 3
+    },
+    "direct_input": {
+      "data": "0000",
+      "limit": 0
+    },
+    "expected_functions": [
+      "fits",
+      "run"
+    ],
+    "proof_scope": "Concrete output witnesses plus reviewed source relationships, not a general formal proof."
+  },
+  "all_source_only_items_without_execution_tools": true,
+  "attribution": "Observational model/configuration sensitivity; documented prompt defects and API differences are plausible contributors. No intervention identified a causal share.",
+  "token_saving_estimate": null,
+  "lobo_items_also_failed_in_other_languages_same_configuration": 4
+}

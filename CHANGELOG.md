@@ -1,5 +1,14 @@
 # Lobo change ledger
 
+## 2026-11-23 — Analyze comprehension failures before changing behavior
+
+Completed an offline audit of all 54 comprehension attempts and nine wrong Lobo items. All 54 canonical
+predictions match execution. The delivered task and guide occur twice, with irrelevant authoring/check
+material in source-only tasks. Model/configuration sensitivity and possible API/presentation risks are
+documented without causal attribution. Prompt, schema and presentation improvements are proposals only;
+no language, guide, grader, score or model run changed. New evidence local-040 preserves all 39 prior
+entries and 118 pins. See [the analysis](research/comprehension-failure-analysis-2026-11-23.md).
+
 ## 2026-11-23 — Compare Luna high and low reasoning
 
 Completed both user-requested 54-assignment cohorts, high before low, using the frozen 1.11.2 controller,

@@ -5,6 +5,11 @@ Use the GitHub account luis-lobo-ar for this repository. Commit author and commi
 active gh account may belong to another project. Keep user-facing examples on the lobo CLI. Cargo commands
 belong in compiler build/test instructions. Preserve frozen research documents and fixtures.
 
+Decision 0065 records the requested offline comprehension-failure audit. Read
+research/comprehension-failure-analysis-2026-11-23.md before selecting follow-up work. Prompt cleanup,
+common schemas, clearer examples and API ideas are proposals only. The user requested review before
+implementation; do not implement those changes, rerun agents or unfreeze 1.11.2 without new selection.
+
 Decision 0064 is complete: Luna/high 49/54 and Luna/low 44/54 on the frozen comparison. See
 research/luna-reasoning-study-2026-11-23.md and paper local-039. Preserve all outcomes and old pins;
 do not automatically start more model trials or unfreeze product scope.
