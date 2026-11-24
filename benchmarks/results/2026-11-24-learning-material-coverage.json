@@ -1,0 +1,84 @@
+{
+  "date": "2026-11-24",
+  "format": "lobo-learning-material-coverage/1",
+  "created_after_registration_before_reference_and_graph_outcomes": true,
+  "completed_format_attempts_at_review": 13,
+  "scope": "Descriptive material limitations; no prompt, question, grader, item denominator or primary score changes",
+  "topics": {
+    "state": {
+      "reference_nodes": [
+        "blocks",
+        "records",
+        "updates",
+        "lists",
+        "fold",
+        "while"
+      ],
+      "limits": [
+        "Only small finite traversals; does not test large-data memory management"
+      ]
+    },
+    "ranges": {
+      "reference_nodes": [
+        "bytes",
+        "text"
+      ],
+      "limits": [
+        "The packet states scalar/byte rules but has no full builtin signature table",
+        "One p2 prediction in form B requires the numeric code point of a CJK character, not supplied as a numeric legend; background Unicode knowledge can affect this item"
+      ]
+    },
+    "nominal": {
+      "reference_nodes": [
+        "records",
+        "updates",
+        "generics",
+        "variants",
+        "match"
+      ],
+      "limits": [
+        "Bounded local inference cases, not whole-program inference"
+      ]
+    },
+    "propagation": {
+      "reference_nodes": [
+        "try",
+        "variants",
+        "fold",
+        "while",
+        "resources"
+      ],
+      "limits": [
+        "No native handle cleanup is executed in this task"
+      ]
+    },
+    "callbacks": {
+      "reference_nodes": [
+        "callbacks",
+        "actions",
+        "permissions"
+      ],
+      "limits": [
+        "Action declarations have no actual native IO here; this tests static signatures, not OS security"
+      ]
+    },
+    "contracts": {
+      "reference_nodes": [
+        "match",
+        "generics",
+        "actions",
+        "try",
+        "limits"
+      ],
+      "limits": [
+        "The 22-concept reference has no dedicated contract node or complete contract grammar. Its coverage of static contract checking versus proof is incomplete; normative source references are listed but cannot be fetched in source-only trials"
+      ]
+    }
+  },
+  "global_limits": [
+    "Flat/reference additions include irrelevant concepts and provenance overhead as well as useful facts",
+    "Graph test presents complete adjacency data in the prompt; no interactive traversal/retrieval is measured",
+    "Forms share language laws while runtime constants and admission examples differ",
+    "Do not silently remove difficult or uncovered items or reinterpret score differences as universal language/reference quality"
+  ]
+}
