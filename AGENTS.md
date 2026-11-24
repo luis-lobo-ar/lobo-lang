@@ -5,6 +5,10 @@ Use the GitHub account luis-lobo-ar for this repository. Commit author and commi
 active gh account may belong to another project. Keep user-facing examples on the lobo CLI. Cargo commands
 belong in compiler build/test instructions. Preserve frozen research documents and fixtures.
 
+The user selected decision0064: repeat the frozen54 assignments with GPT-5.6-Luna/high, then Luna/low.
+Only model/reasoning configuration changes; preserve all old evidence and product files. Register both
+cohorts, retain every result/unknown/unattempted assignment and stop after these108 scored assignments.
+
 The decision-0063 study is complete; see research/matched-agent-study-2026-11-23.md and paper entry
 local-038. Do not automatically rerun model experiments or unfreeze the language. New scope requires
 user selection; preserve all primary/original-cohort outcomes, unknown usage and old paper pins.
