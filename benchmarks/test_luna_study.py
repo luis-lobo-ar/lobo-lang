@@ -14,7 +14,12 @@ class LunaStudyTests(unittest.TestCase):
     expected=[m.MODEL if x==base.MODEL else 'model_reasoning_effort="'+effort+'"' if x=='model_reasoning_effort="high"' else x for x in old]
     self.assertEqual(configured.command(Path('/tmp/work'),row,Path('/tmp/last')),expected)
  def test_all_registered_task_source_guide_hashes_are_identical(self):
-  self.assertEqual(m.fixture_hashes(m.load_base()),m.baseline_registration()['files'])
+  module=m.load_base()
+  # The registered guide embeds the original compiler path; replay its literal fixture on any checkout.
+  baseline=json.loads((m.ROOT/'benchmarks/results/2026-11-23-matched-agent-study.json').read_text())
+  candidate=next(r for r in baseline['attempts'] if r['assignment']['language']=='lobo' and r['assignment']['phase']=='construction')
+  module.COMPILER=Path(candidate['grading']['build']['command'][0])
+  self.assertEqual(m.fixture_hashes(module),m.baseline_registration()['files'])
  def test_compile_and_budget_failure_do_not_trigger_infrastructure_stop(self):
   for status in ['completed','wall_limit','tool_limit']:
    self.assertFalse(m.infrastructure_failure({'status':status,'grading':{'accepted':False}}))
