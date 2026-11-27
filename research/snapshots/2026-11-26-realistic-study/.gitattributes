@@ -1,3 +1,5 @@
 *.json -diff
 *.txt -diff
 registration/** -whitespace
+development/** -whitespace
+validation/** -whitespace

@@ -1,0 +1,17 @@
+{
+  "date": "2026-11-26",
+  "new_or_modified_json_files_parsed": 518,
+  "all_paper_entries": 47,
+  "all_paper_file_pins_verified": 177,
+  "repository_link_check": {
+    "exit_code": 0,
+    "output": "check: JSON, JSONL, and local Markdown links are valid\n"
+  },
+  "post_append_research_tests": {
+    "exit_code": 0,
+    "output": "...............\n----------------------------------------------------------------------\nRan 15 tests in 0.552s\n\nOK\n"
+  },
+  "diff_check_passed": true,
+  "full_compiler_suite_reused_not_rerun": true,
+  "raw_archive_closed_before_these_checks": true
+}

@@ -1,0 +1,156 @@
+[
+  {
+    "index": 0,
+    "check": 0,
+    "end_s": 61.0990567621775,
+    "after_deadline": false,
+    "same_editable_bytes_as_previous": null
+  },
+  {
+    "index": 0,
+    "check": 1,
+    "end_s": 86.13310075318441,
+    "after_deadline": false,
+    "same_editable_bytes_as_previous": false
+  },
+  {
+    "index": 1,
+    "check": 0,
+    "end_s": 40.288038284983486,
+    "after_deadline": false,
+    "same_editable_bytes_as_previous": null
+  },
+  {
+    "index": 1,
+    "check": 1,
+    "end_s": 63.42778131389059,
+    "after_deadline": false,
+    "same_editable_bytes_as_previous": false
+  },
+  {
+    "index": 2,
+    "check": 0,
+    "end_s": 73.80231179716066,
+    "after_deadline": false,
+    "same_editable_bytes_as_previous": null
+  },
+  {
+    "index": 2,
+    "check": 1,
+    "end_s": 112.46551393903792,
+    "after_deadline": false,
+    "same_editable_bytes_as_previous": false
+  },
+  {
+    "index": 3,
+    "check": 0,
+    "end_s": 91.15044290805236,
+    "after_deadline": false,
+    "same_editable_bytes_as_previous": null
+  },
+  {
+    "index": 4,
+    "check": 0,
+    "end_s": 37.88989384099841,
+    "after_deadline": false,
+    "same_editable_bytes_as_previous": null
+  },
+  {
+    "index": 4,
+    "check": 1,
+    "end_s": 50.42367103300057,
+    "after_deadline": false,
+    "same_editable_bytes_as_previous": false
+  },
+  {
+    "index": 5,
+    "check": 0,
+    "end_s": 67.35244476981461,
+    "after_deadline": false,
+    "same_editable_bytes_as_previous": null
+  },
+  {
+    "index": 6,
+    "check": 0,
+    "end_s": 66.35002547013573,
+    "after_deadline": false,
+    "same_editable_bytes_as_previous": null
+  },
+  {
+    "index": 6,
+    "check": 1,
+    "end_s": 103.75552755920216,
+    "after_deadline": false,
+    "same_editable_bytes_as_previous": false
+  },
+  {
+    "index": 7,
+    "check": 0,
+    "end_s": 56.362285514129326,
+    "after_deadline": false,
+    "same_editable_bytes_as_previous": null
+  },
+  {
+    "index": 7,
+    "check": 1,
+    "end_s": 91.73207438713871,
+    "after_deadline": false,
+    "same_editable_bytes_as_previous": false
+  },
+  {
+    "index": 8,
+    "check": 0,
+    "end_s": 51.719886870123446,
+    "after_deadline": false,
+    "same_editable_bytes_as_previous": null
+  },
+  {
+    "index": 9,
+    "check": 0,
+    "end_s": 26.795743410941213,
+    "after_deadline": false,
+    "same_editable_bytes_as_previous": null
+  },
+  {
+    "index": 9,
+    "check": 1,
+    "end_s": 44.52333054388873,
+    "after_deadline": false,
+    "same_editable_bytes_as_previous": false
+  },
+  {
+    "index": 9,
+    "check": 2,
+    "end_s": 61.475515848957,
+    "after_deadline": false,
+    "same_editable_bytes_as_previous": false
+  },
+  {
+    "index": 9,
+    "check": 3,
+    "end_s": 99.85380796599202,
+    "after_deadline": false,
+    "same_editable_bytes_as_previous": false
+  },
+  {
+    "index": 10,
+    "check": 0,
+    "end_s": 103.70812798989937,
+    "after_deadline": false,
+    "same_editable_bytes_as_previous": null
+  },
+  {
+    "index": 11,
+    "check": 0,
+    "end_s": 85.75763395614922,
+    "after_deadline": false,
+    "same_editable_bytes_as_previous": null
+  },
+  {
+    "index": 11,
+    "check": 1,
+    "end_s": 143.33887815708295,
+    "after_deadline": true,
+    "same_editable_bytes_as_previous": false
+  }
+]

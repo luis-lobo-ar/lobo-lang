@@ -1,0 +1,2373 @@
+{
+  "issues": [],
+  "build": {
+    "command": [
+      "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/matched-study-20261123/freeze/lobo",
+      "compile",
+      "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/realistic-study-20261126/validation/transfer-mutant-check/source/app.lobo",
+      "--source",
+      "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/realistic-study-20261126/validation/transfer-mutant-check/source/logic.lobo",
+      "--source",
+      "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/realistic-study-20261126/validation/transfer-mutant-check/source/policy.lobo",
+      "--source",
+      "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/realistic-study-20261126/validation/transfer-mutant-check/source/model.lobo",
+      "--source",
+      "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/realistic-study-20261126/validation/transfer-mutant-check/source/lib/sql.lobo",
+      "-o",
+      "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/realistic-study-20261126/validation/transfer-mutant-check/program"
+    ],
+    "exit_code": 0,
+    "stdout": "{\"artifact\":\"/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/realistic-study-20261126/validation/transfer-mutant-check/program\",\"entries\":[\"lobo.66a2a8e53fd4163a2e038a2fe5b68546\",\"lobo.a066d2d1100c7d222d8c4c9a6891123a\",\"lobo.0c1ef938c6325139c192f42ef8b9870a\",\"lobo.51fecacad709be4603162cf590b4d26f\",\"lobo.sql.error_kind\",\"lobo.sql.error_details\",\"lobo.sql.bool_result\",\"lobo.sql.open\",\"lobo.sql.restrict\",\"lobo.886c4b0a3dabfb731412c11d8f6510e9\",\"lobo.fac29eae9b9d398b7a2658f35d3bc68c\",\"lobo.sql.close\",\"lobo.sql.begin\",\"lobo.sql.commit\",\"lobo.sql.rollback\",\"lobo.sql.no_params\",\"lobo.sql.params1\",\"lobo.sql.params2\",\"lobo.sql.bind_value\",\"lobo.sql.bind_all\",\"lobo.sql.read_value\",\"lobo.sql.read_row\",\"lobo.sql.read_rows\",\"lobo.sql.run_query\",\"lobo.sql.query_raw\",\"lobo.sql.query\",\"lobo.sql.run_execute\",\"lobo.sql.execute_raw\",\"lobo.sql.execute\",\"lobo.sql.error_code\",\"lobo.sql.expect_columns\",\"lobo.sql.cell_at\",\"lobo.sql.integer_at\",\"lobo.sql.decimal_at\",\"lobo.sql.text_at\",\"lobo.sql.bytes_at\",\"realistic.transfer.app.main\",\"realistic.transfer.logic.receipt\",\"realistic.transfer.logic.perform\",\"realistic.transfer.logic.apply\",\"realistic.transfer.policy.valid\",\"realistic.transfer.policy.params\",\"lobo.generic.d4d68ac65536c25f9a8bb20c33abde90\",\"lobo.generic.e0a8dbd7134945c65b425e06c06f5862\"],\"format\":\"native\",\"status\":\"ok\"}\n",
+    "stderr": "",
+    "wall_s": 22.34793749707751,
+    "ok": true
+  },
+  "cases": [
+    {
+      "input": {
+        "accounts": [
+          [
+            1,
+            10
+          ],
+          [
+            2,
+            0
+          ]
+        ],
+        "operations": [
+          [
+            1,
+            2,
+            3,
+            "a"
+          ],
+          [
+            1,
+            2,
+            3,
+            "a"
+          ],
+          [
+            1,
+            2,
+            4,
+            "a"
+          ]
+        ]
+      },
+      "expected": [
+        {
+          "reply": {
+            "case": "Ok",
+            "payload": {
+              "applied": true,
+              "replay": false,
+              "reason": "applied"
+            }
+          },
+          "clean": true,
+          "accounts": [
+            [
+              1,
+              7
+            ],
+            [
+              2,
+              3
+            ]
+          ],
+          "requests": [
+            [
+              "a",
+              1,
+              2,
+              3
+            ]
+          ]
+        },
+        {
+          "reply": {
+            "case": "Ok",
+            "payload": {
+              "applied": false,
+              "replay": true,
+              "reason": "replay"
+            }
+          },
+          "clean": true,
+          "accounts": [
+            [
+              1,
+              7
+            ],
+            [
+              2,
+              3
+            ]
+          ],
+          "requests": [
+            [
+              "a",
+              1,
+              2,
+              3
+            ]
+          ]
+        },
+        {
+          "reply": {
+            "case": "Ok",
+            "payload": {
+              "applied": false,
+              "replay": false,
+              "reason": "conflict"
+            }
+          },
+          "clean": true,
+          "accounts": [
+            [
+              1,
+              7
+            ],
+            [
+              2,
+              3
+            ]
+          ],
+          "requests": [
+            [
+              "a",
+              1,
+              2,
+              3
+            ]
+          ]
+        }
+      ],
+      "actual": [
+        {
+          "reply": {
+            "case": "Ok",
+            "payload": {
+              "applied": true,
+              "replay": false,
+              "reason": "applied"
+            }
+          },
+          "clean": true,
+          "accounts": [
+            [
+              1,
+              7
+            ],
+            [
+              2,
+              3
+            ]
+          ],
+          "requests": []
+        },
+        {
+          "reply": {
+            "case": "Ok",
+            "payload": {
+              "applied": true,
+              "replay": false,
+              "reason": "applied"
+            }
+          },
+          "clean": true,
+          "accounts": [
+            [
+              1,
+              4
+            ],
+            [
+              2,
+              6
+            ]
+          ],
+          "requests": []
+        },
+        {
+          "reply": {
+            "case": "Ok",
+            "payload": {
+              "applied": true,
+              "replay": false,
+              "reason": "applied"
+            }
+          },
+          "clean": true,
+          "accounts": [
+            [
+              1,
+              0
+            ],
+            [
+              2,
+              10
+            ]
+          ],
+          "requests": []
+        }
+      ],
+      "error": null,
+      "ok": false,
+      "executed": true
+    },
+    {
+      "input": {
+        "accounts": [
+          [
+            1,
+            10
+          ],
+          [
+            2,
+            0
+          ]
+        ],
+        "operations": [
+          [
+            1,
+            2,
+            11,
+            "b"
+          ]
+        ]
+      },
+      "expected": [
+        {
+          "reply": {
+            "case": "Ok",
+            "payload": {
+              "applied": false,
+              "replay": false,
+              "reason": "funds"
+            }
+          },
+          "clean": true,
+          "accounts": [
+            [
+              1,
+              10
+            ],
+            [
+              2,
+              0
+            ]
+          ],
+          "requests": []
+        }
+      ],
+      "actual": [
+        {
+          "reply": {
+            "case": "Ok",
+            "payload": {
+              "applied": false,
+              "replay": false,
+              "reason": "funds"
+            }
+          },
+          "clean": true,
+          "accounts": [
+            [
+              1,
+              10
+            ],
+            [
+              2,
+              0
+            ]
+          ],
+          "requests": []
+        }
+      ],
+      "error": null,
+      "ok": true,
+      "executed": true
+    },
+    {
+      "input": {
+        "accounts": [
+          [
+            1,
+            10
+          ],
+          [
+            2,
+            0
+          ]
+        ],
+        "operations": [
+          [
+            1,
+            9,
+            1,
+            "c"
+          ]
+        ]
+      },
+      "expected": [
+        {
+          "reply": {
+            "case": "Ok",
+            "payload": {
+              "applied": false,
+              "replay": false,
+              "reason": "missing"
+            }
+          },
+          "clean": true,
+          "accounts": [
+            [
+              1,
+              10
+            ],
+            [
+              2,
+              0
+            ]
+          ],
+          "requests": []
+        }
+      ],
+      "actual": [
+        {
+          "reply": {
+            "case": "Ok",
+            "payload": {
+              "applied": false,
+              "replay": false,
+              "reason": "missing"
+            }
+          },
+          "clean": true,
+          "accounts": [
+            [
+              1,
+              10
+            ],
+            [
+              2,
+              0
+            ]
+          ],
+          "requests": []
+        }
+      ],
+      "error": null,
+      "ok": true,
+      "executed": true
+    },
+    {
+      "input": {
+        "accounts": [
+          [
+            1,
+            10
+          ],
+          [
+            2,
+            0
+          ]
+        ],
+        "operations": [
+          [
+            1,
+            2,
+            1,
+            ""
+          ]
+        ]
+      },
+      "expected": [
+        {
+          "reply": {
+            "case": "Ok",
+            "payload": {
+              "applied": false,
+              "replay": false,
+              "reason": "invalid"
+            }
+          },
+          "clean": true,
+          "accounts": [
+            [
+              1,
+              10
+            ],
+            [
+              2,
+              0
+            ]
+          ],
+          "requests": []
+        }
+      ],
+      "actual": [
+        {
+          "reply": {
+            "case": "Ok",
+            "payload": {
+              "applied": false,
+              "replay": false,
+              "reason": "invalid"
+            }
+          },
+          "clean": true,
+          "accounts": [
+            [
+              1,
+              10
+            ],
+            [
+              2,
+              0
+            ]
+          ],
+          "requests": []
+        }
+      ],
+      "error": null,
+      "ok": true,
+      "executed": true
+    },
+    {
+      "input": {
+        "accounts": [
+          [
+            1,
+            10
+          ],
+          [
+            2,
+            999999
+          ]
+        ],
+        "operations": [
+          [
+            1,
+            2,
+            2,
+            "cap"
+          ]
+        ]
+      },
+      "expected": [
+        {
+          "reply": {
+            "case": "Err",
+            "payload": {
+              "kind": {
+                "case": "Constraint",
+                "payload": null
+              },
+              "backend_code": 275
+            }
+          },
+          "clean": true,
+          "accounts": [
+            [
+              1,
+              10
+            ],
+            [
+              2,
+              999999
+            ]
+          ],
+          "requests": []
+        }
+      ],
+      "actual": [
+        {
+          "reply": {
+            "case": "Err",
+            "payload": {
+              "kind": {
+                "case": "Constraint",
+                "payload": null
+              },
+              "backend_code": 275
+            }
+          },
+          "clean": true,
+          "accounts": [
+            [
+              1,
+              10
+            ],
+            [
+              2,
+              999999
+            ]
+          ],
+          "requests": []
+        }
+      ],
+      "error": null,
+      "ok": true,
+      "executed": true
+    },
+    {
+      "input": {
+        "accounts": [
+          [
+            1,
+            10
+          ],
+          [
+            2,
+            0
+          ]
+        ],
+        "operations": [
+          [
+            1,
+            2,
+            1,
+            "x' OR 1=1--"
+          ],
+          [
+            1,
+            2,
+            1,
+            "x' OR 1=1--"
+          ]
+        ]
+      },
+      "expected": [
+        {
+          "reply": {
+            "case": "Ok",
+            "payload": {
+              "applied": true,
+              "replay": false,
+              "reason": "applied"
+            }
+          },
+          "clean": true,
+          "accounts": [
+            [
+              1,
+              9
+            ],
+            [
+              2,
+              1
+            ]
+          ],
+          "requests": [
+            [
+              "x' OR 1=1--",
+              1,
+              2,
+              1
+            ]
+          ]
+        },
+        {
+          "reply": {
+            "case": "Ok",
+            "payload": {
+              "applied": false,
+              "replay": true,
+              "reason": "replay"
+            }
+          },
+          "clean": true,
+          "accounts": [
+            [
+              1,
+              9
+            ],
+            [
+              2,
+              1
+            ]
+          ],
+          "requests": [
+            [
+              "x' OR 1=1--",
+              1,
+              2,
+              1
+            ]
+          ]
+        }
+      ],
+      "actual": [
+        {
+          "reply": {
+            "case": "Ok",
+            "payload": {
+              "applied": true,
+              "replay": false,
+              "reason": "applied"
+            }
+          },
+          "clean": true,
+          "accounts": [
+            [
+              1,
+              9
+            ],
+            [
+              2,
+              1
+            ]
+          ],
+          "requests": []
+        },
+        {
+          "reply": {
+            "case": "Ok",
+            "payload": {
+              "applied": true,
+              "replay": false,
+              "reason": "applied"
+            }
+          },
+          "clean": true,
+          "accounts": [
+            [
+              1,
+              8
+            ],
+            [
+              2,
+              2
+            ]
+          ],
+          "requests": []
+        }
+      ],
+      "error": null,
+      "ok": false,
+      "executed": true
+    },
+    {
+      "input": {
+        "accounts": [
+          [
+            1,
+            10
+          ],
+          [
+            2,
+            0
+          ]
+        ],
+        "operations": [
+          [
+            1,
+            2,
+            1,
+            "\u591c\u591c\u591c\u591c\u591c\u591c\u591c\u591c\u591c\u591c\u591c\u591c\u591c\u591c\u591c\u591c\u591c\u591c\u591c\u591c\u591c\u591c\u591c\u591c"
+          ]
+        ]
+      },
+      "expected": [
+        {
+          "reply": {
+            "case": "Ok",
+            "payload": {
+              "applied": true,
+              "replay": false,
+              "reason": "applied"
+            }
+          },
+          "clean": true,
+          "accounts": [
+            [
+              1,
+              9
+            ],
+            [
+              2,
+              1
+            ]
+          ],
+          "requests": [
+            [
+              "\u591c\u591c\u591c\u591c\u591c\u591c\u591c\u591c\u591c\u591c\u591c\u591c\u591c\u591c\u591c\u591c\u591c\u591c\u591c\u591c\u591c\u591c\u591c\u591c",
+              1,
+              2,
+              1
+            ]
+          ]
+        }
+      ],
+      "actual": [
+        {
+          "reply": {
+            "case": "Ok",
+            "payload": {
+              "applied": true,
+              "replay": false,
+              "reason": "applied"
+            }
+          },
+          "clean": true,
+          "accounts": [
+            [
+              1,
+              9
+            ],
+            [
+              2,
+              1
+            ]
+          ],
+          "requests": []
+        }
+      ],
+      "error": null,
+      "ok": false,
+      "executed": true
+    },
+    {
+      "input": {
+        "accounts": [
+          [
+            1,
+            10
+          ],
+          [
+            2,
+            0
+          ]
+        ],
+        "operations": [
+          [
+            1,
+            2,
+            1,
+            "\u591c\u591c\u591c\u591c\u591c\u591c\u591c\u591c\u591c\u591c\u591c\u591c\u591c\u591c\u591c\u591c\u591c\u591c\u591c\u591c\u591c\u591c\u591c\u591c\u591c"
+          ]
+        ]
+      },
+      "expected": [
+        {
+          "reply": {
+            "case": "Ok",
+            "payload": {
+              "applied": false,
+              "replay": false,
+              "reason": "invalid"
+            }
+          },
+          "clean": true,
+          "accounts": [
+            [
+              1,
+              10
+            ],
+            [
+              2,
+              0
+            ]
+          ],
+          "requests": []
+        }
+      ],
+      "actual": [
+        {
+          "reply": {
+            "case": "Ok",
+            "payload": {
+              "applied": false,
+              "replay": false,
+              "reason": "invalid"
+            }
+          },
+          "clean": true,
+          "accounts": [
+            [
+              1,
+              10
+            ],
+            [
+              2,
+              0
+            ]
+          ],
+          "requests": []
+        }
+      ],
+      "error": null,
+      "ok": true,
+      "executed": true
+    },
+    {
+      "input": {
+        "accounts": [
+          [
+            1,
+            10
+          ],
+          [
+            2,
+            0
+          ]
+        ],
+        "operations": [
+          [
+            1,
+            2,
+            1,
+            "x\u0000y"
+          ],
+          [
+            1,
+            2,
+            1,
+            "x\u0000z"
+          ]
+        ]
+      },
+      "expected": [
+        {
+          "reply": {
+            "case": "Ok",
+            "payload": {
+              "applied": true,
+              "replay": false,
+              "reason": "applied"
+            }
+          },
+          "clean": true,
+          "accounts": [
+            [
+              1,
+              9
+            ],
+            [
+              2,
+              1
+            ]
+          ],
+          "requests": [
+            [
+              "x\u0000y",
+              1,
+              2,
+              1
+            ]
+          ]
+        },
+        {
+          "reply": {
+            "case": "Ok",
+            "payload": {
+              "applied": true,
+              "replay": false,
+              "reason": "applied"
+            }
+          },
+          "clean": true,
+          "accounts": [
+            [
+              1,
+              8
+            ],
+            [
+              2,
+              2
+            ]
+          ],
+          "requests": [
+            [
+              "x\u0000y",
+              1,
+              2,
+              1
+            ],
+            [
+              "x\u0000z",
+              1,
+              2,
+              1
+            ]
+          ]
+        }
+      ],
+      "actual": [
+        {
+          "reply": {
+            "case": "Ok",
+            "payload": {
+              "applied": true,
+              "replay": false,
+              "reason": "applied"
+            }
+          },
+          "clean": true,
+          "accounts": [
+            [
+              1,
+              9
+            ],
+            [
+              2,
+              1
+            ]
+          ],
+          "requests": []
+        },
+        {
+          "reply": {
+            "case": "Ok",
+            "payload": {
+              "applied": true,
+              "replay": false,
+              "reason": "applied"
+            }
+          },
+          "clean": true,
+          "accounts": [
+            [
+              1,
+              8
+            ],
+            [
+              2,
+              2
+            ]
+          ],
+          "requests": []
+        }
+      ],
+      "error": null,
+      "ok": false,
+      "executed": true
+    },
+    {
+      "input": {
+        "accounts": [
+          [
+            1,
+            10
+          ],
+          [
+            2,
+            0
+          ]
+        ],
+        "operations": [
+          [
+            1,
+            2,
+            10,
+            "all"
+          ],
+          [
+            1,
+            2,
+            10,
+            "all"
+          ]
+        ]
+      },
+      "expected": [
+        {
+          "reply": {
+            "case": "Ok",
+            "payload": {
+              "applied": true,
+              "replay": false,
+              "reason": "applied"
+            }
+          },
+          "clean": true,
+          "accounts": [
+            [
+              1,
+              0
+            ],
+            [
+              2,
+              10
+            ]
+          ],
+          "requests": [
+            [
+              "all",
+              1,
+              2,
+              10
+            ]
+          ]
+        },
+        {
+          "reply": {
+            "case": "Ok",
+            "payload": {
+              "applied": false,
+              "replay": true,
+              "reason": "replay"
+            }
+          },
+          "clean": true,
+          "accounts": [
+            [
+              1,
+              0
+            ],
+            [
+              2,
+              10
+            ]
+          ],
+          "requests": [
+            [
+              "all",
+              1,
+              2,
+              10
+            ]
+          ]
+        }
+      ],
+      "actual": [
+        {
+          "reply": {
+            "case": "Ok",
+            "payload": {
+              "applied": true,
+              "replay": false,
+              "reason": "applied"
+            }
+          },
+          "clean": true,
+          "accounts": [
+            [
+              1,
+              0
+            ],
+            [
+              2,
+              10
+            ]
+          ],
+          "requests": []
+        },
+        {
+          "reply": {
+            "case": "Ok",
+            "payload": {
+              "applied": false,
+              "replay": false,
+              "reason": "funds"
+            }
+          },
+          "clean": true,
+          "accounts": [
+            [
+              1,
+              0
+            ],
+            [
+              2,
+              10
+            ]
+          ],
+          "requests": []
+        }
+      ],
+      "error": null,
+      "ok": false,
+      "executed": true
+    },
+    {
+      "input": {
+        "accounts": [
+          [
+            1,
+            10
+          ],
+          [
+            2,
+            0
+          ]
+        ],
+        "operations": [
+          [
+            1,
+            2,
+            1,
+            "K"
+          ],
+          [
+            1,
+            2,
+            2,
+            "k"
+          ]
+        ]
+      },
+      "expected": [
+        {
+          "reply": {
+            "case": "Ok",
+            "payload": {
+              "applied": true,
+              "replay": false,
+              "reason": "applied"
+            }
+          },
+          "clean": true,
+          "accounts": [
+            [
+              1,
+              9
+            ],
+            [
+              2,
+              1
+            ]
+          ],
+          "requests": [
+            [
+              "K",
+              1,
+              2,
+              1
+            ]
+          ]
+        },
+        {
+          "reply": {
+            "case": "Ok",
+            "payload": {
+              "applied": true,
+              "replay": false,
+              "reason": "applied"
+            }
+          },
+          "clean": true,
+          "accounts": [
+            [
+              1,
+              7
+            ],
+            [
+              2,
+              3
+            ]
+          ],
+          "requests": [
+            [
+              "K",
+              1,
+              2,
+              1
+            ],
+            [
+              "k",
+              1,
+              2,
+              2
+            ]
+          ]
+        }
+      ],
+      "actual": [
+        {
+          "reply": {
+            "case": "Ok",
+            "payload": {
+              "applied": true,
+              "replay": false,
+              "reason": "applied"
+            }
+          },
+          "clean": true,
+          "accounts": [
+            [
+              1,
+              9
+            ],
+            [
+              2,
+              1
+            ]
+          ],
+          "requests": []
+        },
+        {
+          "reply": {
+            "case": "Ok",
+            "payload": {
+              "applied": true,
+              "replay": false,
+              "reason": "applied"
+            }
+          },
+          "clean": true,
+          "accounts": [
+            [
+              1,
+              7
+            ],
+            [
+              2,
+              3
+            ]
+          ],
+          "requests": []
+        }
+      ],
+      "error": null,
+      "ok": false,
+      "executed": true
+    },
+    {
+      "input": {
+        "accounts": [
+          [
+            1,
+            10
+          ],
+          [
+            2,
+            0
+          ]
+        ],
+        "operations": [
+          [
+            1,
+            2,
+            3,
+            "x"
+          ],
+          [
+            2,
+            1,
+            3,
+            "x"
+          ]
+        ]
+      },
+      "expected": [
+        {
+          "reply": {
+            "case": "Ok",
+            "payload": {
+              "applied": true,
+              "replay": false,
+              "reason": "applied"
+            }
+          },
+          "clean": true,
+          "accounts": [
+            [
+              1,
+              7
+            ],
+            [
+              2,
+              3
+            ]
+          ],
+          "requests": [
+            [
+              "x",
+              1,
+              2,
+              3
+            ]
+          ]
+        },
+        {
+          "reply": {
+            "case": "Ok",
+            "payload": {
+              "applied": false,
+              "replay": false,
+              "reason": "conflict"
+            }
+          },
+          "clean": true,
+          "accounts": [
+            [
+              1,
+              7
+            ],
+            [
+              2,
+              3
+            ]
+          ],
+          "requests": [
+            [
+              "x",
+              1,
+              2,
+              3
+            ]
+          ]
+        }
+      ],
+      "actual": [
+        {
+          "reply": {
+            "case": "Ok",
+            "payload": {
+              "applied": true,
+              "replay": false,
+              "reason": "applied"
+            }
+          },
+          "clean": true,
+          "accounts": [
+            [
+              1,
+              7
+            ],
+            [
+              2,
+              3
+            ]
+          ],
+          "requests": []
+        },
+        {
+          "reply": {
+            "case": "Ok",
+            "payload": {
+              "applied": true,
+              "replay": false,
+              "reason": "applied"
+            }
+          },
+          "clean": true,
+          "accounts": [
+            [
+              1,
+              10
+            ],
+            [
+              2,
+              0
+            ]
+          ],
+          "requests": []
+        }
+      ],
+      "error": null,
+      "ok": false,
+      "executed": true
+    },
+    {
+      "input": {
+        "accounts": [
+          [
+            1,
+            10
+          ],
+          [
+            2,
+            0
+          ]
+        ],
+        "operations": [
+          [
+            1,
+            2,
+            3,
+            "x"
+          ],
+          [
+            1,
+            2,
+            0,
+            "x"
+          ]
+        ]
+      },
+      "expected": [
+        {
+          "reply": {
+            "case": "Ok",
+            "payload": {
+              "applied": true,
+              "replay": false,
+              "reason": "applied"
+            }
+          },
+          "clean": true,
+          "accounts": [
+            [
+              1,
+              7
+            ],
+            [
+              2,
+              3
+            ]
+          ],
+          "requests": [
+            [
+              "x",
+              1,
+              2,
+              3
+            ]
+          ]
+        },
+        {
+          "reply": {
+            "case": "Ok",
+            "payload": {
+              "applied": false,
+              "replay": false,
+              "reason": "invalid"
+            }
+          },
+          "clean": true,
+          "accounts": [
+            [
+              1,
+              7
+            ],
+            [
+              2,
+              3
+            ]
+          ],
+          "requests": [
+            [
+              "x",
+              1,
+              2,
+              3
+            ]
+          ]
+        }
+      ],
+      "actual": [
+        {
+          "reply": {
+            "case": "Ok",
+            "payload": {
+              "applied": true,
+              "replay": false,
+              "reason": "applied"
+            }
+          },
+          "clean": true,
+          "accounts": [
+            [
+              1,
+              7
+            ],
+            [
+              2,
+              3
+            ]
+          ],
+          "requests": []
+        },
+        {
+          "reply": {
+            "case": "Ok",
+            "payload": {
+              "applied": false,
+              "replay": false,
+              "reason": "invalid"
+            }
+          },
+          "clean": true,
+          "accounts": [
+            [
+              1,
+              7
+            ],
+            [
+              2,
+              3
+            ]
+          ],
+          "requests": []
+        }
+      ],
+      "error": null,
+      "ok": false,
+      "executed": true
+    },
+    {
+      "input": {
+        "accounts": [
+          [
+            1,
+            10
+          ],
+          [
+            2,
+            0
+          ]
+        ],
+        "operations": [
+          [
+            0,
+            2,
+            1,
+            "x"
+          ],
+          [
+            1,
+            1,
+            1,
+            "y"
+          ]
+        ]
+      },
+      "expected": [
+        {
+          "reply": {
+            "case": "Ok",
+            "payload": {
+              "applied": false,
+              "replay": false,
+              "reason": "invalid"
+            }
+          },
+          "clean": true,
+          "accounts": [
+            [
+              1,
+              10
+            ],
+            [
+              2,
+              0
+            ]
+          ],
+          "requests": []
+        },
+        {
+          "reply": {
+            "case": "Ok",
+            "payload": {
+              "applied": false,
+              "replay": false,
+              "reason": "invalid"
+            }
+          },
+          "clean": true,
+          "accounts": [
+            [
+              1,
+              10
+            ],
+            [
+              2,
+              0
+            ]
+          ],
+          "requests": []
+        }
+      ],
+      "actual": [
+        {
+          "reply": {
+            "case": "Ok",
+            "payload": {
+              "applied": false,
+              "replay": false,
+              "reason": "invalid"
+            }
+          },
+          "clean": true,
+          "accounts": [
+            [
+              1,
+              10
+            ],
+            [
+              2,
+              0
+            ]
+          ],
+          "requests": []
+        },
+        {
+          "reply": {
+            "case": "Ok",
+            "payload": {
+              "applied": false,
+              "replay": false,
+              "reason": "invalid"
+            }
+          },
+          "clean": true,
+          "accounts": [
+            [
+              1,
+              10
+            ],
+            [
+              2,
+              0
+            ]
+          ],
+          "requests": []
+        }
+      ],
+      "error": null,
+      "ok": true,
+      "executed": true
+    },
+    {
+      "input": {
+        "accounts": [
+          [
+            1,
+            10
+          ],
+          [
+            2,
+            0
+          ]
+        ],
+        "operations": [
+          [
+            1,
+            2,
+            -1,
+            "x"
+          ],
+          [
+            1,
+            2,
+            1000001,
+            "y"
+          ]
+        ]
+      },
+      "expected": [
+        {
+          "reply": {
+            "case": "Ok",
+            "payload": {
+              "applied": false,
+              "replay": false,
+              "reason": "invalid"
+            }
+          },
+          "clean": true,
+          "accounts": [
+            [
+              1,
+              10
+            ],
+            [
+              2,
+              0
+            ]
+          ],
+          "requests": []
+        },
+        {
+          "reply": {
+            "case": "Ok",
+            "payload": {
+              "applied": false,
+              "replay": false,
+              "reason": "invalid"
+            }
+          },
+          "clean": true,
+          "accounts": [
+            [
+              1,
+              10
+            ],
+            [
+              2,
+              0
+            ]
+          ],
+          "requests": []
+        }
+      ],
+      "actual": [
+        {
+          "reply": {
+            "case": "Ok",
+            "payload": {
+              "applied": false,
+              "replay": false,
+              "reason": "invalid"
+            }
+          },
+          "clean": true,
+          "accounts": [
+            [
+              1,
+              10
+            ],
+            [
+              2,
+              0
+            ]
+          ],
+          "requests": []
+        },
+        {
+          "reply": {
+            "case": "Ok",
+            "payload": {
+              "applied": false,
+              "replay": false,
+              "reason": "invalid"
+            }
+          },
+          "clean": true,
+          "accounts": [
+            [
+              1,
+              10
+            ],
+            [
+              2,
+              0
+            ]
+          ],
+          "requests": []
+        }
+      ],
+      "error": null,
+      "ok": true,
+      "executed": true
+    },
+    {
+      "input": {
+        "accounts": [
+          [
+            1,
+            10
+          ],
+          [
+            2,
+            0
+          ]
+        ],
+        "operations": [
+          [
+            9,
+            2,
+            1,
+            "x"
+          ],
+          [
+            1,
+            2,
+            1,
+            "x"
+          ]
+        ]
+      },
+      "expected": [
+        {
+          "reply": {
+            "case": "Ok",
+            "payload": {
+              "applied": false,
+              "replay": false,
+              "reason": "missing"
+            }
+          },
+          "clean": true,
+          "accounts": [
+            [
+              1,
+              10
+            ],
+            [
+              2,
+              0
+            ]
+          ],
+          "requests": []
+        },
+        {
+          "reply": {
+            "case": "Ok",
+            "payload": {
+              "applied": true,
+              "replay": false,
+              "reason": "applied"
+            }
+          },
+          "clean": true,
+          "accounts": [
+            [
+              1,
+              9
+            ],
+            [
+              2,
+              1
+            ]
+          ],
+          "requests": [
+            [
+              "x",
+              1,
+              2,
+              1
+            ]
+          ]
+        }
+      ],
+      "actual": [
+        {
+          "reply": {
+            "case": "Ok",
+            "payload": {
+              "applied": false,
+              "replay": false,
+              "reason": "missing"
+            }
+          },
+          "clean": true,
+          "accounts": [
+            [
+              1,
+              10
+            ],
+            [
+              2,
+              0
+            ]
+          ],
+          "requests": []
+        },
+        {
+          "reply": {
+            "case": "Ok",
+            "payload": {
+              "applied": true,
+              "replay": false,
+              "reason": "applied"
+            }
+          },
+          "clean": true,
+          "accounts": [
+            [
+              1,
+              9
+            ],
+            [
+              2,
+              1
+            ]
+          ],
+          "requests": []
+        }
+      ],
+      "error": null,
+      "ok": false,
+      "executed": true
+    },
+    {
+      "input": {
+        "accounts": [
+          [
+            1,
+            10
+          ],
+          [
+            2,
+            0
+          ]
+        ],
+        "operations": [
+          [
+            1,
+            2,
+            11,
+            "x"
+          ],
+          [
+            1,
+            2,
+            2,
+            "x"
+          ]
+        ]
+      },
+      "expected": [
+        {
+          "reply": {
+            "case": "Ok",
+            "payload": {
+              "applied": false,
+              "replay": false,
+              "reason": "funds"
+            }
+          },
+          "clean": true,
+          "accounts": [
+            [
+              1,
+              10
+            ],
+            [
+              2,
+              0
+            ]
+          ],
+          "requests": []
+        },
+        {
+          "reply": {
+            "case": "Ok",
+            "payload": {
+              "applied": true,
+              "replay": false,
+              "reason": "applied"
+            }
+          },
+          "clean": true,
+          "accounts": [
+            [
+              1,
+              8
+            ],
+            [
+              2,
+              2
+            ]
+          ],
+          "requests": [
+            [
+              "x",
+              1,
+              2,
+              2
+            ]
+          ]
+        }
+      ],
+      "actual": [
+        {
+          "reply": {
+            "case": "Ok",
+            "payload": {
+              "applied": false,
+              "replay": false,
+              "reason": "funds"
+            }
+          },
+          "clean": true,
+          "accounts": [
+            [
+              1,
+              10
+            ],
+            [
+              2,
+              0
+            ]
+          ],
+          "requests": []
+        },
+        {
+          "reply": {
+            "case": "Ok",
+            "payload": {
+              "applied": true,
+              "replay": false,
+              "reason": "applied"
+            }
+          },
+          "clean": true,
+          "accounts": [
+            [
+              1,
+              8
+            ],
+            [
+              2,
+              2
+            ]
+          ],
+          "requests": []
+        }
+      ],
+      "error": null,
+      "ok": false,
+      "executed": true
+    },
+    {
+      "input": {
+        "accounts": [
+          [
+            1,
+            10
+          ],
+          [
+            2,
+            0
+          ]
+        ],
+        "operations": [
+          [
+            1,
+            2,
+            2,
+            "a"
+          ],
+          [
+            1,
+            2,
+            3,
+            "b"
+          ],
+          [
+            1,
+            2,
+            2,
+            "a"
+          ]
+        ]
+      },
+      "expected": [
+        {
+          "reply": {
+            "case": "Ok",
+            "payload": {
+              "applied": true,
+              "replay": false,
+              "reason": "applied"
+            }
+          },
+          "clean": true,
+          "accounts": [
+            [
+              1,
+              8
+            ],
+            [
+              2,
+              2
+            ]
+          ],
+          "requests": [
+            [
+              "a",
+              1,
+              2,
+              2
+            ]
+          ]
+        },
+        {
+          "reply": {
+            "case": "Ok",
+            "payload": {
+              "applied": true,
+              "replay": false,
+              "reason": "applied"
+            }
+          },
+          "clean": true,
+          "accounts": [
+            [
+              1,
+              5
+            ],
+            [
+              2,
+              5
+            ]
+          ],
+          "requests": [
+            [
+              "a",
+              1,
+              2,
+              2
+            ],
+            [
+              "b",
+              1,
+              2,
+              3
+            ]
+          ]
+        },
+        {
+          "reply": {
+            "case": "Ok",
+            "payload": {
+              "applied": false,
+              "replay": true,
+              "reason": "replay"
+            }
+          },
+          "clean": true,
+          "accounts": [
+            [
+              1,
+              5
+            ],
+            [
+              2,
+              5
+            ]
+          ],
+          "requests": [
+            [
+              "a",
+              1,
+              2,
+              2
+            ],
+            [
+              "b",
+              1,
+              2,
+              3
+            ]
+          ]
+        }
+      ],
+      "actual": [
+        {
+          "reply": {
+            "case": "Ok",
+            "payload": {
+              "applied": true,
+              "replay": false,
+              "reason": "applied"
+            }
+          },
+          "clean": true,
+          "accounts": [
+            [
+              1,
+              8
+            ],
+            [
+              2,
+              2
+            ]
+          ],
+          "requests": []
+        },
+        {
+          "reply": {
+            "case": "Ok",
+            "payload": {
+              "applied": true,
+              "replay": false,
+              "reason": "applied"
+            }
+          },
+          "clean": true,
+          "accounts": [
+            [
+              1,
+              5
+            ],
+            [
+              2,
+              5
+            ]
+          ],
+          "requests": []
+        },
+        {
+          "reply": {
+            "case": "Ok",
+            "payload": {
+              "applied": true,
+              "replay": false,
+              "reason": "applied"
+            }
+          },
+          "clean": true,
+          "accounts": [
+            [
+              1,
+              3
+            ],
+            [
+              2,
+              7
+            ]
+          ],
+          "requests": []
+        }
+      ],
+      "error": null,
+      "ok": false,
+      "executed": true
+    },
+    {
+      "input": {
+        "accounts": [
+          [
+            1,
+            10
+          ],
+          [
+            2,
+            1000000
+          ]
+        ],
+        "operations": [
+          [
+            1,
+            2,
+            1,
+            "cap"
+          ]
+        ]
+      },
+      "expected": [
+        {
+          "reply": {
+            "case": "Err",
+            "payload": {
+              "kind": {
+                "case": "Constraint",
+                "payload": null
+              },
+              "backend_code": 275
+            }
+          },
+          "clean": true,
+          "accounts": [
+            [
+              1,
+              10
+            ],
+            [
+              2,
+              1000000
+            ]
+          ],
+          "requests": []
+        }
+      ],
+      "actual": [
+        {
+          "reply": {
+            "case": "Err",
+            "payload": {
+              "kind": {
+                "case": "Constraint",
+                "payload": null
+              },
+              "backend_code": 275
+            }
+          },
+          "clean": true,
+          "accounts": [
+            [
+              1,
+              10
+            ],
+            [
+              2,
+              1000000
+            ]
+          ],
+          "requests": []
+        }
+      ],
+      "error": null,
+      "ok": true,
+      "executed": true
+    },
+    {
+      "input": {
+        "accounts": [
+          [
+            1,
+            "bad"
+          ],
+          [
+            2,
+            0
+          ]
+        ],
+        "operations": [
+          [
+            1,
+            2,
+            1,
+            "decode"
+          ]
+        ]
+      },
+      "expected": [
+        {
+          "reply": {
+            "case": "Err",
+            "payload": {
+              "kind": {
+                "case": "Decode",
+                "payload": null
+              },
+              "backend_code": 0
+            }
+          },
+          "clean": true,
+          "accounts": [
+            [
+              1,
+              "bad"
+            ],
+            [
+              2,
+              0
+            ]
+          ],
+          "requests": []
+        }
+      ],
+      "actual": [
+        {
+          "reply": {
+            "case": "Err",
+            "payload": {
+              "kind": {
+                "case": "Decode",
+                "payload": null
+              },
+              "backend_code": 0
+            }
+          },
+          "clean": true,
+          "accounts": [
+            [
+              1,
+              "bad"
+            ],
+            [
+              2,
+              0
+            ]
+          ],
+          "requests": []
+        }
+      ],
+      "error": null,
+      "ok": true,
+      "executed": true
+    }
+  ],
+  "accepted": false,
+  "passed": 9,
+  "total": 20
+}

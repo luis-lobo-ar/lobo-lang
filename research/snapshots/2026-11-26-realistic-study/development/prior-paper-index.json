@@ -1,0 +1,1668 @@
+{
+  "format": "lobo-local-paper-evidence/0.1",
+  "recorded_on": "2026-11-04",
+  "scope": "Versioned local evidence for the future paper; each entry retains its original scope and limitations",
+  "entries": [
+    {
+      "id": "local-001",
+      "date": "2026-10-10",
+      "title": "Execution baseline",
+      "evidence_kind": "execution microbenchmark",
+      "status": "recorded observations; original limits apply",
+      "files": [
+        {
+          "path": "benchmarks/results/2026-10-10-execution-baseline.json",
+          "sha256": "14c0ea75f2209633ae95441c0f0b4c430344944bbd29234ad49e4bc5d21aac39"
+        }
+      ],
+      "supports": [
+        "Scoped native/evaluator/Rust observations on the stated programs."
+      ],
+      "does_not_establish": [
+        "Agent construction or comprehension advantage",
+        "General language speed ranking"
+      ]
+    },
+    {
+      "id": "local-002",
+      "date": "2026-10-18",
+      "title": "Affected verification prototype",
+      "evidence_kind": "scripted tooling validation",
+      "status": "recorded observations; original limits apply",
+      "files": [
+        {
+          "path": "benchmarks/results/2026-10-18-agent-testing-prototype.json",
+          "sha256": "4fbe7f54531045dbf15175c13894f63579d06639c97755c72c9ff7d5689ab6a8"
+        }
+      ],
+      "supports": [
+        "Agreement and execution reuse on the recorded scripted scenarios."
+      ],
+      "does_not_establish": [
+        "Observed agent productivity"
+      ]
+    },
+    {
+      "id": "local-003",
+      "date": "2026-11-03",
+      "title": "Within-Lobo repair and onboarding studies",
+      "evidence_kind": "small controlled agent-workflow studies",
+      "status": "recorded observations; original limits apply",
+      "files": [
+        {
+          "path": "benchmarks/results/2026-11-03-agent-repair-pilot.md",
+          "sha256": "398bec9a1799bd19b6ab7a0c1be284a474486db1665ac5cb75bee00d19ba9a3d"
+        },
+        {
+          "path": "benchmarks/results/2026-11-03-agent-repair-pilot.json",
+          "sha256": "b4cdb41625ff78d58386c25b6907ecc017c101c0a970c874d6d155a2437d1e86"
+        },
+        {
+          "path": "benchmarks/results/2026-11-03-library-repair-study.md",
+          "sha256": "77295fde66d803fc2b97a0fb61fcb9f1437a1dbe372abbf9a852fdb7974d951e"
+        },
+        {
+          "path": "benchmarks/results/2026-11-03-library-repair-study.json",
+          "sha256": "68b2ad7f4e50ada235ef0735b5c9fbf5cf70892b986168b74a51683a46db36c9"
+        },
+        {
+          "path": "benchmarks/results/2026-11-03-skill-evaluation.md",
+          "sha256": "f5b97aee55097b92879b222f7b444daf3ee94cd2703a5579931251b292be97f3"
+        },
+        {
+          "path": "benchmarks/results/2026-11-03-skill-evaluation.json",
+          "sha256": "902bcda39c495d3e27b83a850e4150907ef3cc211fe2dba262286d8197170236"
+        },
+        {
+          "path": "benchmarks/results/2026-11-03-skill-evaluation-audit.json",
+          "sha256": "8b76ad6121eafb945c6285fd4bd73cfaf3c07496ed2cb420b1aea7f90b207ed7"
+        }
+      ],
+      "supports": [
+        "Within-Lobo workflow/knowledge-package findings, including negative, interrupted and deviating attempts."
+      ],
+      "does_not_establish": [
+        "Application-language causal effects",
+        "General agent superiority",
+        "Consistent skill cost or accuracy advantage"
+      ]
+    },
+    {
+      "id": "local-004",
+      "date": "2026-11-03",
+      "title": "Representation and comprehension-grader calibration",
+      "evidence_kind": "compiler/behavior/grader calibration",
+      "status": "recorded observations; original limits apply",
+      "files": [
+        {
+          "path": "benchmarks/results/2026-11-03-language-comparison-fixtures.md",
+          "sha256": "ca2ada34711260f596d81f743ab8a6de71b8905ac23e670d718ae3af45943daa"
+        },
+        {
+          "path": "benchmarks/results/2026-11-03-language-comparison-fixtures.json",
+          "sha256": "5da81ea501685a02ac1fc8d0bb4732f8eabaf228cf641a47626e2dd8244f2177"
+        }
+      ],
+      "supports": [
+        "Behavior matching and rejection of selected representation defects; grader calibration."
+      ],
+      "does_not_establish": [
+        "Agent or human comprehension scores",
+        "Observed agent construction advantage"
+      ]
+    },
+    {
+      "id": "local-005",
+      "date": "2026-11-04",
+      "title": "Core 0.10 recursive values",
+      "evidence_kind": "implementation/conformance evidence",
+      "status": "recorded observations; original limits apply",
+      "files": [
+        {
+          "path": "benchmarks/results/2026-11-04-core010-verification.md",
+          "sha256": "e187f6256948e42f8c80b896d9ea402748e344989231b14483ccdfb8eef8bf1b"
+        },
+        {
+          "path": "benchmarks/results/2026-11-04-core010-verification.json",
+          "sha256": "97a52b91876af23dec34584012acd08e2c32d64fa89b7e1f4502c2e5ca6e75c7"
+        },
+        {
+          "path": "benchmarks/results/2026-11-04-recursive-ast-native.json",
+          "sha256": "ca013e01925ac8c86ae33b4320394f87a463f4a16d64bcaa4c2a23aa4df03e79"
+        },
+        {
+          "path": "benchmarks/results/2026-11-04-recursive-ast-test-session.json",
+          "sha256": "f535c8ce83869c91340e4c40a0b9a888d0554851d760f48f8eecb5d828ed251a"
+        },
+        {
+          "path": "benchmarks/results/2026-11-04-core09-language-baseline.json",
+          "sha256": "f661aef5581bf45fbd20321deec6af5c4496765af2cc47153fedaf93719e69b7"
+        }
+      ],
+      "supports": [
+        "Public AST expressibility and finite native/reference/resource/tooling acceptance."
+      ],
+      "does_not_establish": [
+        "H2 agent abstraction benefit",
+        "Arbitrary program correctness"
+      ]
+    },
+    {
+      "id": "local-006",
+      "date": "2026-11-04",
+      "title": "Core 0.11 explicit generic functions",
+      "evidence_kind": "implementation/conformance evidence",
+      "status": "recorded observations; original limits apply",
+      "files": [
+        {
+          "path": "benchmarks/results/2026-11-04-core011-verification.md",
+          "sha256": "0c2b8648dbdd907d5fb858b2d3eea5bc33fa425a03216023bf3a3aee61a54080"
+        },
+        {
+          "path": "benchmarks/results/2026-11-04-core011-verification.json",
+          "sha256": "4debacbb75783b2c182aac234c80f5750fe309c6a959313d40e3dd8d41932705"
+        },
+        {
+          "path": "benchmarks/results/2026-11-04-generic-reuse-native.json",
+          "sha256": "31d0c6e1fe17f70a2a2183bcd443078f503400cc1244f3a6b5c9d99a62e0ef9e"
+        },
+        {
+          "path": "benchmarks/results/2026-11-04-generic-reuse-test-session.json",
+          "sha256": "dfa0586837601c32b6ba0da21364457b39b449cb3b63e6622ebb80eba09c294e"
+        },
+        {
+          "path": "benchmarks/results/2026-11-04-core010-language-baseline.json",
+          "sha256": "55d589f3e0954116c820d3f153b5e91ab2c9bd3a53769122bcbc43c104c90689"
+        }
+      ],
+      "supports": [
+        "Concrete cross-type/module reuse and dependent verification invalidation."
+      ],
+      "does_not_establish": [
+        "Universally checked templates",
+        "Agent construction or comprehension benefit"
+      ]
+    },
+    {
+      "id": "local-007",
+      "date": "2026-11-04",
+      "title": "Compiler 0.11.1 direct LLVM route",
+      "evidence_kind": "implementation and differential verification",
+      "status": "recorded observations; original limits apply",
+      "files": [
+        {
+          "path": "benchmarks/results/2026-11-04-llvm-backend-verification.md",
+          "sha256": "ab82629b2035294d1714560937c8bcf97678f172b8be4c6e534993de465edadc"
+        },
+        {
+          "path": "benchmarks/results/2026-11-04-llvm-backend-verification.json",
+          "sha256": "609394cec2fef3270e0857f386237d9e178fdf9ec368abdc31e06e059060d53c"
+        },
+        {
+          "path": "benchmarks/results/2026-11-04-core011-before-llvm-baseline.json",
+          "sha256": "60da79b876c0f250b9baf061cd6765ad397e89846eca7224041fd9074542b9d7"
+        }
+      ],
+      "supports": [
+        "Implemented direct application LLVM lowering and finite verifier/oracle/sanitizer acceptance."
+      ],
+      "does_not_establish": [
+        "Semantic equivalence proof",
+        "Agent construction or comprehension benefit"
+      ]
+    },
+    {
+      "id": "local-008",
+      "date": "2026-11-04",
+      "title": "C versus direct LLVM",
+      "evidence_kind": "paired local execution/toolchain comparison",
+      "status": "recorded observations; original limits apply",
+      "files": [
+        {
+          "path": "benchmarks/results/2026-11-04-llvm-backend-comparison.json",
+          "sha256": "3c40d6d0080bf851113b95235a81d4ee0539e564ae592a8f3ca487092051b26a"
+        }
+      ],
+      "supports": [
+        "No runtime gain demonstrated on four public workloads; higher direct-LLVM compile medians, equal or eight-byte-larger files."
+      ],
+      "does_not_establish": [
+        "Universal backend superiority",
+        "H1/H2/H3 agent effects",
+        "Code comprehension or token-efficiency improvement"
+      ]
+    },
+    {
+      "id": "local-009",
+      "date": "2026-11-04",
+      "title": "Bounded language 1.0 local release",
+      "evidence_kind": "language implementation and public conformance verification",
+      "status": "passed local release; no controlled agent experiment",
+      "files": [
+        {
+          "path": "benchmarks/results/2026-11-04-language-v1-release.md",
+          "sha256": "0826c00daf19f79b85467e5859644c7eb51094dc53b37a9aebb9f484489d6426"
+        },
+        {
+          "path": "benchmarks/results/2026-11-04-language-v1-release.json",
+          "sha256": "d947999bf821774c379b9c5b7dfc06cc834b208951a524c073fc605d511d921a"
+        }
+      ],
+      "supports": [
+        "Generic records/variants, definition-time parametric checking, pure noncapturing function values and F64 implemented on evaluator/C/LLVM.",
+        "Six frozen public baseline/change configurations pass five execution/sanitizer routes under original criteria.",
+        "185 Rust, 30 Python, 122 editor tests, optimized floating profile, real editor host and JSONL F64/function-input integration pass.",
+        "Optimized local compiler, test tool, VSIX and twelve ELF program binaries have verified hashes and retained source/command/output evidence."
+      ],
+      "does_not_establish": [
+        "Independent agent software-construction, comprehension or token-efficiency advantage",
+        "Runtime speed comparison for language 1.0",
+        "Universal correctness or production readiness",
+        "Workspace/ecosystem completion or a published release"
+      ],
+      "preservation": "benchmarks/private-evidence/language-v1-final-20261104",
+      "interpretation": "Repeated suites/configurations overlap; retain original denominators and failed attempts. Earlier entry hashes and paper archive are historical and unchanged."
+    },
+    {
+      "id": "local-010",
+      "date": "2026-11-05",
+      "title": "Native web-server application sample",
+      "evidence_kind": "public application integration and resource-bound regression",
+      "status": "implemented and verified; loopback demo running",
+      "files": [
+        {
+          "path": "benchmarks/results/2026-11-05-web-server.md",
+          "sha256": "73764d950ffc02826bd9ddaaabaaa44a0d025fbd62b888886f87cfc76f447003"
+        },
+        {
+          "path": "benchmarks/results/2026-11-05-web-server.json",
+          "sha256": "47d873f88604a4d5d0bdd15e8a1703c2f518c617d33dd291f07401367839a272"
+        }
+      ],
+      "supports": [
+        "Compiled Lobo routing/response construction works through a native Rust HTTP host using the existing typed CLI.",
+        "C and LLVM route cases and real HTTP/HEAD/UTF-8/error/boundary tests pass.",
+        "The maximum accepted target fits unchanged fuel/heap limits after removing repeated UTF-8 scans.",
+        "All frozen 1.0 artifacts and core/editor source identities remain unchanged."
+      ],
+      "does_not_establish": [
+        "Lobo socket or FFI support",
+        "Production or OS-sandbox guarantees",
+        "Throughput/latency advantage",
+        "Independent agent construction/comprehension/token-efficiency advantage"
+      ],
+      "preservation": "benchmarks/private-evidence/web-server-20261105"
+    },
+    {
+      "id": "local-011",
+      "date": "2026-11-05",
+      "title": "Reusable pure HTTP source helpers",
+      "evidence_kind": "source library and integration/conformance checks",
+      "status": "implemented and verified",
+      "files": [
+        {
+          "path": "benchmarks/results/2026-11-05-http-helpers.md",
+          "sha256": "523d964aa38fa029dd324f20c2308a7a471e9af4927e9a157b3c48b015738702"
+        },
+        {
+          "path": "benchmarks/results/2026-11-05-http-helpers.json",
+          "sha256": "d6046e66cf2af93574ee77f64c1f9bc28bedbd1bab06c9e82635339d2d7e0136"
+        }
+      ],
+      "supports": [
+        "Typed response/prefix/quoting helpers work in evaluator/C/LLVM and sanitized native routes.",
+        "Moving a declaration preserves stable response identity and native host compatibility.",
+        "Existing HTTP maximum-target budgets still pass after migration.",
+        "188 Rust, 31 Python and 123 editor tests plus actual editor host checks pass.",
+        "Release source capture now includes the library needed by compiler tests."
+      ],
+      "does_not_establish": [
+        "Language-level network or JSON-parser APIs",
+        "Independent agent construction/comprehension/token-efficiency improvement",
+        "Runtime performance improvement"
+      ],
+      "preservation": "benchmarks/private-evidence/http-helpers-20261105"
+    },
+    {
+      "id": "local-012",
+      "date": "2026-11-08",
+      "title": "Language 1.1 typed operator bindings",
+      "evidence_kind": "language implementation and native/editor conformance checks",
+      "status": "implemented and verified",
+      "files": [
+        {
+          "path": "benchmarks/results/2026-11-08-operators.md",
+          "sha256": "42461d87e44e6a86e0de02f5d7c9182400305300d6c9d331a701253a67ee1003"
+        },
+        {
+          "path": "benchmarks/results/2026-11-08-operators.json",
+          "sha256": "3fb4f4e27c364243e1b00aa9a617168d390826ab18774ce4b9f473d2bb8e23f8"
+        }
+      ],
+      "supports": [
+        "Exact typed arithmetic bindings lower to existing canonical calls with contracts and resource behavior.",
+        "Text addition lowers to the existing concatenation intrinsic.",
+        "196 Rust, 130 editor, 31 Python and six frozen-host HTTP sample tests pass, including real VS Code operator navigation.",
+        "All five evaluator/native/sanitizer routes pass focused operator fixtures.",
+        "All 86 frozen 1.0 release artifact hashes were reverified."
+      ],
+      "unmeasured": [
+        "Independent agent software-construction quality",
+        "Code comprehension",
+        "Agent token efficiency",
+        "Runtime speed"
+      ],
+      "preservation": "benchmarks/private-evidence/operators-20261108"
+    },
+    {
+      "id": "local-013",
+      "date": "2026-11-14",
+      "title": "Typed JSON source construction and serialization",
+      "evidence_kind": "source library and native/editor conformance",
+      "status": "implemented and verified",
+      "files": [
+        {
+          "path": "benchmarks/results/2026-11-14-json-helpers.md",
+          "sha256": "d524c60ca8675952282aaa28c581b52b9f7f8faa1f9cc7210c06d5aa28e2ef8b"
+        },
+        {
+          "path": "benchmarks/results/2026-11-14-json-helpers.json",
+          "sha256": "1d1867a145eac3d45d45c146f4ffff4e0e676a5e96de43232f9ab09061e451d9"
+        }
+      ],
+      "supports": [
+        "Typed objects, arrays, strings, booleans, null, full I64 values and validated decimal text serialize under ordinary language budgets.",
+        "Four focused tests cover evaluator, C, LLVM and both native sanitizer routes, including 1000 nested arrays and duplicate-key/number rejection.",
+        "200 Rust, 131 editor and 31 Python tests plus the actual VS Code host pass.",
+        "MVC controller behavior remains tested at 10000 fuel and heap while the view now returns typed Json."
+      ],
+      "unmeasured": [
+        "Independent agent software-construction quality",
+        "Code comprehension",
+        "Agent token efficiency",
+        "Comparative runtime speed"
+      ],
+      "preservation": "benchmarks/private-evidence/json-helpers-20261114"
+    },
+    {
+      "id": "local-014",
+      "date": "2026-11-14",
+      "title": "Compact MVC source projection prototype",
+      "evidence_kind": "public development-fixture engineering validation",
+      "status": "engineering acceptance passed; agent outcomes unmeasured",
+      "files": [
+        {
+          "path": "benchmarks/results/2026-11-14-compact-syntax.md",
+          "sha256": "bfb03c1c94e748d7aaae108f0bd152ae3d05ea7b8053c264690f05fbecccc015"
+        },
+        {
+          "path": "benchmarks/results/2026-11-14-compact-syntax.json",
+          "sha256": "7896bc0dd5a4f550bd0659f80d24b19b4254b0a45df82a2c459216e15d91e8ec"
+        }
+      ],
+      "supports": [
+        "Exact serialized checked MVC artifact equality after compact source projection",
+        "Native 200/404 response and resource-exhaustion parity across reference/C/LLVM/sanitizer routes",
+        "Shared projector with original-range editor navigation and mapped unsaved diagnostics"
+      ],
+      "does_not_support": [
+        "Improved agent construction quality or comprehension",
+        "Reduced agent tokens, repair cost or elapsed time",
+        "General compact grammar adoption or runtime performance superiority"
+      ],
+      "agent_outcomes": {
+        "construction": null,
+        "comprehension": null,
+        "total_tokens": null
+      },
+      "preservation": "benchmarks/private-evidence/compact-syntax-20261114"
+    },
+    {
+      "id": "local-015",
+      "date": "2026-11-14",
+      "title": "Native modern syntax and legacy-source deprecation",
+      "evidence_kind": "public engineering conformance and migration validation",
+      "status": "engineering acceptance passed; agent outcomes unknown",
+      "files": [
+        {
+          "path": "benchmarks/results/2026-11-14-native-syntax.md",
+          "sha256": "20dee30018d30423fcd7ee998a6f99b60afc6aa55259d250855117162d486311"
+        },
+        {
+          "path": "benchmarks/results/2026-11-14-native-syntax.json",
+          "sha256": "9cdfd1033acb95004d4730367d3cd9781aaa9e19f9832d531a0e328968d0b84a"
+        }
+      ],
+      "supports": [
+        "Stock Rust compiler accepts modern source without a marker or Node.js projection",
+        "Exact checked MVC and migrated skill-example equality with native response/resource parity",
+        "Original-source diagnostics and synchronized modern/legacy editor support",
+        "Documented frozen deprecated read compatibility with shared semantics and backends"
+      ],
+      "does_not_support": [
+        "Agent construction quality, comprehension or token-efficiency improvement",
+        "Runtime or compiler performance superiority",
+        "A separate legacy runtime or a scheduled syntax removal"
+      ],
+      "agent_outcomes": {
+        "construction": null,
+        "comprehension": null,
+        "total_tokens": null
+      },
+      "preservation": "benchmarks/private-evidence/native-syntax-20261114"
+    },
+    {
+      "id": "local-016",
+      "date": "2026-11-14",
+      "title": "Maintained-source migration preserving identities and frozen research inputs",
+      "evidence_kind": "source/workflow migration with checked-program equivalence",
+      "status": "engineering acceptance passed; agent outcomes unknown",
+      "files": [
+        {
+          "path": "benchmarks/results/2026-11-14-source-migration.md",
+          "sha256": "de178c0aade4488930ee4fc176118e3cf3177e132289d7242627750068519ce3"
+        },
+        {
+          "path": "benchmarks/results/2026-11-14-source-migration.json",
+          "sha256": "df2642e2d2d133a0743f7855d40d31489736c34ac7fb50a36dd61b2aa94102cc"
+        }
+      ],
+      "supports": [
+        "23 maintained source bundles and three embedded programs retain exact checked-program fingerprints",
+        "157 module/declaration IDs and 18 import bindings preserved",
+        "Research fixture bytes decoupled from mutable examples by a path-only driver update",
+        "Modern source works with maintained native web and editor tooling"
+      ],
+      "does_not_support": [
+        "Improved agent construction, comprehension, repair efficiency or token efficiency",
+        "New language semantics or runtime performance superiority",
+        "Removal of deprecated parsing or rewriting historical study results"
+      ],
+      "agent_outcomes": {
+        "construction": null,
+        "comprehension": null,
+        "total_tokens": null
+      },
+      "preservation": "benchmarks/private-evidence/source-migration-20261114"
+    },
+    {
+      "id": "local-017",
+      "date": "2026-11-22",
+      "title": "Managed persistent identities and explicit agent metadata snapshots",
+      "evidence_kind": "engineering implementation and regression acceptance",
+      "status": "engineering acceptance passed; agent outcomes unknown",
+      "files": [
+        {
+          "path": "benchmarks/results/2026-11-22-managed-identities.md",
+          "sha256": "e6fbbe8f251302cafda3246bed43b98ee3ad560f5475d1948dde3463bf831ebf"
+        },
+        {
+          "path": "benchmarks/results/2026-11-22-managed-identities.json",
+          "sha256": "c1a76afa1e967e9760c0bf63a68557b8e919b8d15631bf3acd98bf30ea0df899"
+        }
+      ],
+      "supports": [
+        "The maintained MVC retains twelve bindings and exact checked/native behavior with external identity state.",
+        "Explicit authoring allocates IDs once and preserves values through metadata renames and source/sidecar moves.",
+        "Editor and foreground agent testing consume supplied metadata; changed identity dependencies invalidate affected evidence."
+      ],
+      "does_not_support": [
+        "Improved agent construction quality, comprehension or token efficiency.",
+        "Automatic semantic source refactoring or a transactional semantic workspace.",
+        "Runtime speed superiority."
+      ],
+      "agent_outcomes": {
+        "construction": null,
+        "comprehension": null,
+        "total_tokens": null
+      },
+      "preservation": "benchmarks/private-evidence/managed-identities-20261122"
+    },
+    {
+      "id": "local-018",
+      "date": "2026-11-22",
+      "title": "Local generic call inference and contextual named callbacks",
+      "evidence_kind": "engineering implementation and native/editor acceptance",
+      "status": "engineering acceptance passed; agent outcomes unknown",
+      "files": [
+        {
+          "path": "benchmarks/results/2026-11-22-call-inference.md",
+          "sha256": "ec24de600497b09e40df696a0e5ea10b9448a799ce415b4bd6e6dbac3f240381"
+        },
+        {
+          "path": "benchmarks/results/2026-11-22-call-inference.json",
+          "sha256": "db194a66b152f6171936a7ae773d21bdaae0a58b7f58d4f2f55fcb449573aa75"
+        }
+      ],
+      "supports": [
+        "The simpler MVC call lowers to the same checked program as explicit spelling across retained 1.3 and current 1.4 compilers.",
+        "Bounded source inference preserves existing parametric, purity, native and artifact checks.",
+        "Extension and skill maintenance accompany new language syntax."
+      ],
+      "does_not_support": [
+        "Improved software construction, comprehension or token efficiency by agents.",
+        "Full bidirectional or whole-program inference.",
+        "A runtime performance advantage."
+      ],
+      "agent_outcomes": {
+        "construction": null,
+        "comprehension": null,
+        "total_tokens": null
+      },
+      "preservation": "benchmarks/private-evidence/call-inference-20261122"
+    },
+    {
+      "id": "local-019",
+      "date": "2026-11-22",
+      "title": "Constructor inference and expected-type-directed case names",
+      "evidence_kind": "engineering implementation, differential native and editor acceptance",
+      "status": "engineering acceptance passed; agent outcomes unknown",
+      "files": [
+        {
+          "path": "benchmarks/results/2026-11-22-constructor-inference.md",
+          "sha256": "21e486ea79bd5aa501f3493e3a9553df0672d51af291b592be353ea1f5b6b5c7"
+        },
+        {
+          "path": "benchmarks/results/2026-11-22-constructor-inference.json",
+          "sha256": "886db49427dc39efe90c68110b9573377e1d0fd2337596470f1da807f69d1c62"
+        }
+      ],
+      "supports": [
+        "The shorter MVC and skill constructors retain complete checked programs against compiler 1.4 inputs.",
+        "Expected nominal identities resolve case names without global case search.",
+        "TDD, bounded type growth, editor/host checks and frozen-input preservation accompany the feature."
+      ],
+      "does_not_support": [
+        "Improved agent construction quality, comprehension or token efficiency.",
+        "Full bidirectional or whole-program inference.",
+        "Runtime performance superiority."
+      ],
+      "agent_outcomes": {
+        "construction": null,
+        "comprehension": null,
+        "total_tokens": null
+      },
+      "preservation": "benchmarks/private-evidence/constructor-inference-20261122"
+    },
+    {
+      "id": "local-020",
+      "date": "2026-11-22",
+      "title": "Automatic JSON literal builder dependencies",
+      "evidence_kind": "engineering conformance and tooling verification",
+      "status": "engineering acceptance passed; agent outcomes unmeasured",
+      "files": [
+        {
+          "path": "benchmarks/results/2026-11-22-json-auto-helpers.md",
+          "sha256": "5a1d318c25406f061bcf9df48d2bda4207b321b6942ace8d4c6e7b52db32bd1b"
+        },
+        {
+          "path": "benchmarks/results/2026-11-22-json-auto-helpers.json",
+          "sha256": "b95de43685260e7fe7ce5339f77c88e51fcf8ef8e072c34771fe3abda9e08bb4"
+        },
+        {
+          "path": "decisions/0047-json-literal-helper-dependencies.md",
+          "sha256": "ffc9a8c14d0cb7bf823df1605fa2f621ec61cc234ce97786be014373181c99de"
+        },
+        {
+          "path": "spec/core-v1.6.md",
+          "sha256": "71967bd60313ce04cabdf740863eb2f1c73c49ecb1f22ea58ed6e9abbcd9c886"
+        }
+      ],
+      "supports": [
+        "JSON builder imports can be omitted with preserved checked operations after helper alias/import-order normalization.",
+        "Closed dependency, type/action, native/sanitizer and original-range editor checks pass.",
+        "Retained MVC identity values and historical evidence stay unchanged."
+      ],
+      "does_not_establish": [
+        "Agent construction or comprehension advantage",
+        "Token-efficiency improvement",
+        "Runtime-speed improvement",
+        "Legacy export support for generic-call/constructor inference"
+      ]
+    },
+    {
+      "id": "local-021",
+      "date": "2026-11-22",
+      "title": "Native library and operating-system interface review",
+      "evidence_kind": "primary-documentation scoping review; unimplemented design proposal",
+      "status": "documented; no implementation or empirical comparison",
+      "files": [
+        {
+          "path": "research/native-interop-2026-11-22.md",
+          "sha256": "5526a4fac82fa9aa899dc4aecdccb0c561c0ca9536b7121b2ab15b6c1fd6856d"
+        },
+        {
+          "path": "research/native-interop-2026-11-22.json",
+          "sha256": "2f7489a05687b003958a81089fc1f40934fba1bd20fd8ab43cf3a06235e5418e"
+        }
+      ],
+      "supports": [
+        "Documents native-call mechanisms for the November 2026 TIOBE ten, with provider-specific SQL and VB.NET scope.",
+        "Motivates a typed native adapter and linked application packaging as a candidate for Lobo."
+      ],
+      "does_not_establish": [
+        "Implemented native bindings, OS capability enforcement, Google authentication or Angular application",
+        "Safety or performance superiority of the proposed boundary",
+        "Agent construction, comprehension or token-efficiency improvement"
+      ]
+    },
+    {
+      "id": "local-022",
+      "date": "2026-11-22",
+      "title": "Typed native OS boundary",
+      "evidence_kind": "public development engineering validation with adapted upstream cases and adversarial provider tests",
+      "status": "implemented and locally verified within closed Linux scope",
+      "files": [
+        {
+          "path": "benchmarks/results/2026-11-22-native-boundary.md",
+          "sha256": "b5085bbf10453c3e4b7c2267a30a9992ffe4ab1147397bd8acb86fbdd0f592b0"
+        },
+        {
+          "path": "benchmarks/results/2026-11-22-native-boundary.json",
+          "sha256": "598b0b00b9367937c1c992e775f1dbec30a3eb88110ab37737922fcba8539d26"
+        }
+      ],
+      "supports": [
+        "Compiler 1.7 closed typed native ABI, explicit capability grants, bounded loopback clock/random/TCP behavior and retained legacy IDs.",
+        "Recorded failing-first corrections, pinned borrowed-test provenance, backend/sanitizer/editor acceptance and local source preservation."
+      ],
+      "does_not_establish": [
+        "General FFI, TLS/HTTP serving, Google authentication or Angular application completion.",
+        "Production readiness, formal security proof, independent audit or performance superiority.",
+        "Agent construction, comprehension or token-efficiency improvement."
+      ]
+    },
+    {
+      "id": "local-023",
+      "date": "2026-11-22",
+      "title": "Native state-model verification and C counterexamples",
+      "evidence_kind": "finite TLA+ design checking, implementation witness/mutation validation and reproduced runtime correction",
+      "status": "implemented and locally verified under explicit bounds and assumptions",
+      "files": [
+        {
+          "path": "benchmarks/results/2026-11-22-native-formal-verification.md",
+          "sha256": "6f24048a0938039e26295472b8f0ebc5f5df234ea22a1d14964352899360eb05"
+        },
+        {
+          "path": "benchmarks/results/2026-11-22-native-formal-verification.json",
+          "sha256": "73a2dc596d991e26e3e15c85701e780c88f3aa49f0e99029ce4acfb150f00a8c"
+        }
+      ],
+      "supports": [
+        "Completed finite authority/operation model checks, expected invariant violations and representative real C mutation rejection.",
+        "A reproduced pre-publication descriptor cleanup contract defect corrected in compiler 1.7.1.",
+        "A maintained source-linked verification gate with negative checker tests, documented model/C mapping and retained attempts."
+      ],
+      "does_not_establish": [
+        "Unbounded or whole-language correctness, a mechanical C refinement proof, production security or independent audit.",
+        "General FFI/network/TLS/HTTP/OAuth scope.",
+        "Agent construction, comprehension, token-efficiency or runtime-performance advantage."
+      ]
+    },
+    {
+      "id": "local-024",
+      "date": "2026-11-22",
+      "title": "Standalone Windows snapshot artifact",
+      "evidence_kind": "bounded Windows provider/application packaging and Wine compatibility validation",
+      "status": "PE artifact built and exercised under Wine; actual Windows execution unknown",
+      "files": [
+        {
+          "path": "benchmarks/results/2026-11-22-windows-snapshot.md",
+          "sha256": "9bfa25af66620891a7fd5b709097559adba2067c6a939a537b5779d5bec267bb"
+        },
+        {
+          "path": "benchmarks/results/2026-11-22-windows-snapshot.json",
+          "sha256": "de2cd216f5d4cc131893f89adb08a17e601b5d6ebd3937df6dd4b920994ea695"
+        }
+      ],
+      "supports": [
+        "The same Lobo snapshot source and IDs compile into a PE x64 program using Windows clock/random APIs.",
+        "Recorded Wine permission/quota/fault checks and unchanged Linux provider/model verification."
+      ],
+      "does_not_establish": [
+        "Actual Windows hardware compatibility, signed/public release or production security.",
+        "Full Windows compiler/socket support or Windows formal verification.",
+        "Agent construction/comprehension/token efficiency or runtime speed advantage."
+      ]
+    },
+    {
+      "id": "local-025",
+      "date": "2026-11-22",
+      "title": "Windows 10 snapshot user run",
+      "evidence_kind": "user-reported execution",
+      "status": "User reports Windows 10 and supplies successful typed snapshot output",
+      "files": [
+        {
+          "path": "benchmarks/results/2026-11-22-windows10-user-run.json",
+          "sha256": "25371bc5e91c12432f2f485b705c301b8a64e8a9312ea9d4019ae0f814a3649e"
+        }
+      ],
+      "supports": [
+        "One user-reported Windows 10 snapshot success, parsed as Ok with 16 random bytes."
+      ],
+      "does_not_establish": [
+        "Independently verified executable hash, exit code, Windows build or complete Windows regression coverage."
+      ]
+    },
+    {
+      "id": "local-026",
+      "date": "2026-11-22",
+      "title": "Standalone native REST API",
+      "evidence_kind": "bounded application/runtime engineering and platform compatibility validation",
+      "status": "Lobo REST API compiled; Linux and Wine scenarios pass, actual Windows REST execution unobserved",
+      "files": [
+        {
+          "path": "benchmarks/results/2026-11-22-native-rest.md",
+          "sha256": "43143e15607e2814f43b9636882bcdfeecc70c641e2e4ce4644e5a235d0c39cb"
+        },
+        {
+          "path": "benchmarks/results/2026-11-22-native-rest.json",
+          "sha256": "d269e83fd1dd51bc5f5a2a606f6dadec451a5d9361dc78b45ad0503c58f77df6"
+        }
+      ],
+      "supports": [
+        "Fully compiled Lobo HTTP parsing, controller, JSON generation and transport in a standalone PE x64 application.",
+        "A reproduced and corrected Windows close-failure ownership defect, with retained negative/positive tests.",
+        "Scoped Linux/Wine protocol, partial IO, capability, cleanup and editor evidence."
+      ],
+      "does_not_establish": [
+        "Actual Windows REST execution, full HTTP/TLS/auth/storage/concurrency or production security.",
+        "Windows formal refinement, performance, agent construction, comprehension or token-efficiency improvement."
+      ]
+    },
+    {
+      "id": "local-027",
+      "date": "2026-11-22",
+      "title": "Try result propagation",
+      "evidence_kind": "bounded language/compiler/editor conformance and regression validation",
+      "status": "Core/compiler/extension 1.8 implemented and locally checked; agent effects unmeasured",
+      "files": [
+        {
+          "path": "benchmarks/results/2026-11-22-try-propagation.md",
+          "sha256": "67af3935c1f1c16d3ac5629293d022257370b37b5f92d9104a57496e435b3a34"
+        },
+        {
+          "path": "benchmarks/results/2026-11-22-try-propagation.json",
+          "sha256": "2d17d21bdfb23bedbe76c8a3dc60c3e6ad12885cb4c5830a384b8bcd76bb2a41"
+        }
+      ],
+      "supports": [
+        "Prefix try is checked and executes in evaluator, C and LLVM with explicit function-return and postcondition semantics.",
+        "Retained failing-before syntax/editor and inferred-import regressions, with passing-after tests and preserved snapshot IDs.",
+        "Recorded native single evaluation, caller cleanup, editor and Windows/Wine application validation."
+      ],
+      "does_not_establish": [
+        "Agent construction, comprehension, token-efficiency or runtime-performance gain.",
+        "Automatic resource cleanup, whole-language proof or actual Windows execution of the new binary."
+      ]
+    },
+    {
+      "id": "local-028",
+      "date": "2026-11-22",
+      "title": "Maintained Core 1.8 source modernization",
+      "evidence_kind": "compiler-checked source migration and native/editor regression validation",
+      "status": "completed engineering validation; agent and performance outcomes unmeasured",
+      "files": [
+        {
+          "path": "benchmarks/results/2026-11-22-modernize-source.md",
+          "sha256": "7542a8f45ed02acd2b2319f0cffc4dd5ab2e727db9f12aefa41b1c04db1c3e18"
+        },
+        {
+          "path": "benchmarks/results/2026-11-22-modernize-source.json",
+          "sha256": "71ed3ec3224615c5c0b451809eb9a5c819b9cfd51fad38e43e63d926249605e6"
+        }
+      ],
+      "supports": [
+        "38 maintained files reviewed; 20 source files modernized with stable declaration identities.",
+        "Mechanical rewrites preserve resolved checked programs; manual try flows preserve tested cleanup/error behavior.",
+        "274 Rust and166 editor tests, real VS Code host, Linux before/after REST equivalence and Wine REST/loopback regressions pass.",
+        "Earlier paper results, research fixtures, compiler/provider sources and frozen 1.0 artifacts preserved."
+      ],
+      "does_not_establish": [
+        "Agent construction, comprehension or token-efficiency benefit",
+        "Runtime-performance improvement or a larger language contract",
+        "Actual Windows execution of the new artifacts or formal Windows networking verification",
+        "Exact expression-fuel equivalence for manually migrated try flows"
+      ]
+    },
+    {
+      "id": "local-029",
+      "date": "2026-11-23",
+      "title": "Database access and driver architecture proposal",
+      "evidence_kind": "primary-documentation review and architecture proposal; no experiment",
+      "status": "proposal only; no driver implemented",
+      "files": [
+        {
+          "path": "research/database-access-2026-11-23.json",
+          "sha256": "8a210ebad7e85ebebc14e1f5ccfb6ed2167c026faddcff954f4a2873ffea7806"
+        },
+        {
+          "path": "research/verification-database-access-2026-11-23.json",
+          "sha256": "594d7f6920b19d7bf45d5f776386d6ba0098afa3a069633fea48fe484254481a"
+        }
+      ],
+      "supports": [
+        "Eight official sources inform a SQLite-first SQL adapter recommendation.",
+        "Separate SQL, key-value and document interfaces with shared applicable resource-policy conventions are proposed.",
+        "Current closed native catalog lacks database/file/remote transport support; future implementation needs a bounded native extension.",
+        "Ownership, typed parameters/rows, transactions, cleanup, permissions, native limits and TDD acceptance gates are recorded."
+      ],
+      "does_not_establish": [
+        "A selected or implemented database milestone",
+        "SQL/NoSQL interchangeability or portable SQL dialect translation",
+        "Database correctness, security isolation or formal verification",
+        "Agent construction/comprehension/token or runtime-performance benefit"
+      ]
+    },
+    {
+      "id": "local-030",
+      "date": "2026-11-23",
+      "title": "First native SQLite driver and persistent REST sample",
+      "evidence_kind": "native implementation, finite lifecycle checks and executable validation",
+      "status": "bounded acceptance passed; Wine distinct from actual Windows",
+      "files": [
+        {
+          "path": "benchmarks/results/2026-11-23-sqlite-driver.md",
+          "sha256": "09e26ba8fcefbbcd626bd9d6a8c5096fb170c3d67ebb216c119fa450e9c82208"
+        },
+        {
+          "path": "benchmarks/results/2026-11-23-sqlite-driver.json",
+          "sha256": "4ee89d690d1d3cb3ddc8c5a1d624dd78c708573b068bd55ad56a2ec9fdc8c64e"
+        }
+      ],
+      "supports": [
+        "Closed SQLite authority, binding, ownership, cleanup and persistence under stated tests",
+        "Finite lifecycle invariants and matching deliberate C defects",
+        "Standalone native Linux/Windows artifact construction and Wine execution"
+      ],
+      "does_not_establish": [
+        "Agent construction/comprehension gains or token savings",
+        "Runtime speed ranking",
+        "Engine/OS correctness, crash durability, unbounded refinement or production security",
+        "Actual Windows hardware coverage"
+      ]
+    },
+    {
+      "id": "local-031",
+      "date": "2026-11-23",
+      "title": "DX review and strict SQL row utilities",
+      "evidence_kind": "static pattern inventory, compiler/editor probes and native implementation validation",
+      "status": "bounded review and implementation checks passed; agent outcomes not measured",
+      "files": [
+        {
+          "path": "docs/dx-review-2026-11-23.md",
+          "sha256": "677227c8681528c4169750e6760ed16756936b499e0547834c2238e8c73b5aae"
+        },
+        {
+          "path": "benchmarks/results/2026-11-23-dx-review.json",
+          "sha256": "82c06c4fa384e03a6728f8a313aa5de388021224b0fdec37a815f94d1d71c2bc"
+        },
+        {
+          "path": "decisions/0056-dx-review-and-row-utilities.md",
+          "sha256": "fa6c44f461aed06539f536e774a55f5a2f86c67f178057f1a887dc8630238804"
+        }
+      ],
+      "supports": [
+        "Reproducible lexical patterns in the stated baseline corpus",
+        "Strict row helpers preserve the stated types, errors and HTTP behavior under recorded tests",
+        "Existing source/action/result contracts constrain proposed library and language alternatives"
+      ],
+      "does_not_establish": [
+        "Complete manual review or security audit of all code/upstream engine",
+        "Measured improvement in agent construction, comprehension, token use or runtime speed",
+        "Implementation of proposed syntax/project/symbol-query features",
+        "Actual Windows hardware compatibility"
+      ]
+    },
+    {
+      "id": "local-032",
+      "date": "2026-11-23",
+      "title": "Record-update spelling comparison",
+      "evidence_kind": "primary-documentation review and language proposal",
+      "status": "three-dot spelling recommended; standalone try preference recorded; neither implemented",
+      "files": [
+        {
+          "path": "decisions/0057-record-update-spelling-proposal.md",
+          "sha256": "69ac53babc6d6e4cda3b3f451f22848b84543dfa2466a97de46dc10e2c60234b"
+        },
+        {
+          "path": "research/record-update-spelling-2026-11-23.json",
+          "sha256": "00f287dad603f68f8ff20aee7b624119be66f3bfc6574be1993d6dbe72b0eeb9"
+        }
+      ],
+      "supports": [
+        "Rust and JavaScript syntax precedents",
+        "Recorded recommendation and user preference"
+      ],
+      "does_not_establish": [
+        "Compiler support or adopted final grammar",
+        "Measured agent/token/comprehension or runtime advantage"
+      ]
+    },
+    {
+      "id": "local-033",
+      "date": "2026-11-23",
+      "title": "Core 1.10 record updates and standalone try",
+      "evidence_kind": "versioned source implementation and native/editor conformance",
+      "status": "bounded acceptance passed; no measured agent outcome",
+      "files": [
+        {
+          "path": "spec/core-v1.10.md",
+          "sha256": "45d45f48a14fda25275c50ea02d6d65854d14e3fb6989ea56ef6d1aba62ec308"
+        },
+        {
+          "path": "decisions/0058-record-updates-and-standalone-try.md",
+          "sha256": "aa3fa0ab2d83e153dc59ff757d730112bba6f2d4496ed178080eaa3a10d4f677"
+        },
+        {
+          "path": "benchmarks/results/2026-11-23-source-conveniences.md",
+          "sha256": "7e6c46992176ea8f47f92b3d80379c3f1aa7ec5b3e7a33ef1bc49026e645e0d6"
+        },
+        {
+          "path": "benchmarks/results/2026-11-23-source-conveniences.json",
+          "sha256": "daf4bc43c367632ebd40c86fdd6d6dbf92c49937b89fa24c34d04f6741483bf6"
+        }
+      ],
+      "supports": [
+        "One-evaluation ordered same-type updates and existing try semantics under the recorded tests",
+        "C/LLVM/sanitizer, actual old-compiler checked execution and editor host behavior",
+        "Preservation of stated source/ABI/model/fixture boundaries"
+      ],
+      "does_not_establish": [
+        "Agent construction, comprehension or token savings",
+        "Runtime speedup or identical fuel to handwritten source",
+        "Partial/dynamic object merging or automatic resource cleanup",
+        "Actual Windows hardware compatibility or new formal refinement proof"
+      ]
+    },
+    {
+      "id": "local-034",
+      "date": "2026-11-23",
+      "title": "Action-bound callbacks and HTTP library extraction",
+      "evidence_kind": "language and library engineering verification",
+      "status": "verified local bounded milestone",
+      "files": [
+        {
+          "path": "benchmarks/results/2026-11-23-action-callbacks.md",
+          "sha256": "0e06d19f70731edb98e3becdeb5a963f563ea80794a079ffd3b81e911229a708"
+        },
+        {
+          "path": "benchmarks/results/2026-11-23-action-callbacks.json",
+          "sha256": "9d9c783f6c980fcdd544e25b6288b373c4bfdebe330d95e09c50a1e7b6d2af39"
+        },
+        {
+          "path": "spec/core-v1.11.md",
+          "sha256": "d13c38830326c983d336c83ab4a398867bd17858ade3c5f8ecc6d088359182aa"
+        },
+        {
+          "path": "decisions/0059-action-bound-callbacks-and-http-library.md",
+          "sha256": "b618dfeb626a390eaf8bfcfe72947fad4546923b23ab2351a43cc059c7a5c859"
+        },
+        {
+          "path": "benchmarks/results/2026-11-23-http-library-boundary.json",
+          "sha256": "644a5f70e1d753dfe1d658d387e59b75f3d376236b945e42a08bedde45f14fb2"
+        },
+        {
+          "path": "benchmarks/results/2026-11-23-mvc-sample-refresh.json",
+          "sha256": "c1c6c4af19cca8b6acdbc225e33e8fcf41d733510163bbf24fb596463f750f1b"
+        }
+      ],
+      "supports": [
+        "Explicit-context callbacks with exact declared action bounds on the recorded source/artifact/invocation tests",
+        "Native C/LLVM/sanitizer and editor-host behavior, with actual Linux/Wine HTTP and persistence checks",
+        "Preservation of stated identities, provider/model/fixture inputs and previous paper reports"
+      ],
+      "does_not_establish": [
+        "Agent construction, comprehension or token-efficiency benefit",
+        "Runtime speedup, identical fuel usage, or general callback action polymorphism",
+        "Actual Windows hardware behavior or a new formal refinement proof"
+      ]
+    },
+    {
+      "id": "local-035",
+      "date": "2026-11-23",
+      "title": "Maintained HTTP refactor and tooling reproducibility correction",
+      "evidence_kind": "library/tooling engineering verification",
+      "status": "verified local bounded refactor",
+      "files": [
+        {
+          "path": "benchmarks/results/2026-11-23-maintained-http-refactor.md",
+          "sha256": "e122a49d726d025f5bf22a21a442a7badf8e1073a7583edc77cbfc099778f8f7"
+        },
+        {
+          "path": "benchmarks/results/2026-11-23-maintained-http-refactor.json",
+          "sha256": "415a7ab61d4d258d9ec93352f2a2711e89fb96c0539a7a9e0b097d99c51306f9"
+        },
+        {
+          "path": "decisions/0060-complete-maintained-http-refactor.md",
+          "sha256": "f244121f4bb09bf24d2ea265216a90cf8199826b57ce2b5014e27f12c0107a95"
+        },
+        {
+          "path": "benchmarks/results/2026-11-23-http-refactor-scope.json",
+          "sha256": "514fbe1565ea79b2bac983c26c8fde429ae440ef9cc725ee63a248f37d0bc4a8"
+        }
+      ],
+      "supports": [
+        "Shared HTTP policy and library-owned listeners under the recorded action/lifetime/IO checks",
+        "Stable ID/old-caller compatibility and old/current compiler agreement on the maintained source set",
+        "A falsifiable poll-limit test and installed-tool metadata guard, with historical metadata corrections retained"
+      ],
+      "does_not_establish": [
+        "Agent construction, comprehension, token savings or runtime speedup",
+        "One arbitrary-action generic callback driver or new language expressiveness",
+        "Actual Windows hardware behavior or a new formal refinement proof",
+        "Fresh offline installation of the historical or repaired toolchain"
+      ]
+    },
+    {
+      "id": "local-036",
+      "date": "2026-11-23",
+      "title": "Typed permissions and maintained capability migration",
+      "evidence_kind": "library and tooling engineering verification",
+      "status": "verified local bounded migration",
+      "files": [
+        {
+          "path": "benchmarks/results/2026-11-23-typed-permissions.md",
+          "sha256": "f61876423e8ac9514c39761aaa668a9e2c7573bf3b13a11650aa96cfd4ef1cc3"
+        },
+        {
+          "path": "benchmarks/results/2026-11-23-typed-permissions.json",
+          "sha256": "a80a84ad5628730cc8869793abd9895208932b812c465037b3c9cd50f01a2938"
+        },
+        {
+          "path": "decisions/0062-typed-permissions.md",
+          "sha256": "c1b1d5c7e92b1a04a60fe8ed5c33393677ae398b30a705b0fd5c7736e8c0909d"
+        }
+      ],
+      "supports": [
+        "Finite typed OS/SQL permission requests and unchanged provider subset/denial semantics under exhaustive bounded cases",
+        "Preserved raw IDs, old-caller/native compiler compatibility and frozen-source/paper-evidence hashes",
+        "Maintained-source raw-call guard and editor navigation/unsaved type diagnostics"
+      ],
+      "does_not_establish": [
+        "Improved agent software construction, comprehension or token efficiency",
+        "A new native sandbox, formal refinement proof, language construct or performance improvement",
+        "Actual Windows hardware behavior for this patch"
+      ]
+    },
+    {
+      "id": "local-037",
+      "date": "2026-11-23",
+      "title": "Research reassessment across Lobo iterations",
+      "evidence_kind": "historical evidence audit, current local replication and representation accounting",
+      "status": "completed local reassessment; comparative agent effects remain unknown",
+      "files": [
+        {
+          "path": "research/reassessment-2026-11-23.md",
+          "sha256": "de917f726a65f08e4ed18ad672e1e58b424d7237540aa5d0005db4f3713d36e3"
+        },
+        {
+          "path": "benchmarks/results/2026-11-23-research-reassessment.json",
+          "sha256": "1bdda6d5f34dfdb3687902148a303f644ae3405d4ccf6230ea6f1ec8e27e31fa"
+        },
+        {
+          "path": "benchmarks/results/2026-11-23-research-reassessment-calibration.json",
+          "sha256": "472f9197a12ec872320bd9c692353fbeeda57d33dafe681e81bd4f6119cbe80b"
+        },
+        {
+          "path": "benchmarks/results/2026-11-23-research-reassessment-selection.json",
+          "sha256": "9e025325e82c52dc71432a551592b6c605d447c2b6f6c348421bade316d2fe49"
+        },
+        {
+          "path": "benchmarks/results/2026-11-23-research-reassessment-llvm.json",
+          "sha256": "bbdc9fe875f27c7fc944ad88564a088e39e2a730297290e10c8d4f4474643e84"
+        },
+        {
+          "path": "benchmarks/results/2026-11-23-research-reassessment-fiveway.json",
+          "sha256": "f7f6644adc4f24ae4f2afd2a8625e8bcf8c8f360f38f0ee0de2edb47dc2fc86f"
+        },
+        {
+          "path": "benchmarks/results/2026-11-23-research-reassessment-accounting.json",
+          "sha256": "b6973d74fb6b33f9aea365ebbdf4dff4e0b782067423273709204aab106fe682"
+        },
+        {
+          "path": "research/snapshots/2026-11-23-reassessment/knowledge.json",
+          "sha256": "3f4985d639d50327c0898c7de0fe859a9bb5527596cd7119063de8fe84f136d1"
+        }
+      ],
+      "supports": [
+        "Current reproduction of the selected state-checking and affected-verification mechanisms",
+        "Scoped native/backend observations under recorded inputs, repetitions and limits",
+        "Measured source/metadata and hash-matched onboarding-input size tradeoffs",
+        "A versioned assessment of implemented mechanisms and remaining agent-evaluation gaps"
+      ],
+      "does_not_establish": [
+        "A current Lobo advantage in agent construction, comprehension or billed-token cost",
+        "A controlled longitudinal speed regression or general language runtime ranking",
+        "New model-backed trials, human comprehension measurements or universal safety proofs"
+      ]
+    },
+    {
+      "id": "local-038",
+      "date": "2026-11-23",
+      "title": "Frozen 1.11.2 matched agent pilot and runtime comparison",
+      "evidence_kind": "locally registered exploratory comparative agent study and repeated native/Python runtime observations",
+      "status": "completed; quality ceiling, higher median Lobo construction cost, profiling limits and infrastructure restart retained",
+      "files": [
+        {
+          "path": "research/matched-agent-study-2026-11-23.md",
+          "sha256": "57c0b20e2107abc6e419609a2187e2189fb0c8e02013b061f31ca753046a6491"
+        },
+        {
+          "path": "benchmarks/results/2026-11-23-matched-agent-study.json",
+          "sha256": "187f5212d8de30173340c313156621e3eee46407dbb87d322f5eaa2778e3776d"
+        },
+        {
+          "path": "benchmarks/results/2026-11-23-matched-performance.json",
+          "sha256": "b5f4d58265aac82983e5e6497a2a679f583129d6e446353eaa11a32c69de5876"
+        },
+        {
+          "path": "benchmarks/results/2026-11-23-matched-study-preflight.json",
+          "sha256": "f6f5552aa2a41da7c00ed5f3e221316edaf04ae2c2377199acdf7792bf2e8cd7"
+        },
+        {
+          "path": "benchmarks/results/2026-11-23-matched-study-registration.json",
+          "sha256": "4587626f7e6e01a96a2cdf678ff677d662a8bc705d478cf3794489f0a053632a"
+        },
+        {
+          "path": "benchmarks/results/2026-11-23-matched-study-registration-amendment-1.json",
+          "sha256": "3bd72c150d0efdb36791fec17d4699cf94f264764d09a6a419e24fd297aec7b2"
+        },
+        {
+          "path": "benchmarks/results/2026-11-23-matched-study-amendment-1.json",
+          "sha256": "10a9d3663ebee1c11b3c6a97cd0d7488dd65f6b23230ec4dd05299816ae8e1ab"
+        },
+        {
+          "path": "benchmarks/results/2026-11-23-matched-performance-registration.json",
+          "sha256": "22f4ce39e98e8e7829a1c2be9c2b3e4a3479a4b26a01e4ffb72e7c0cbd2a3705"
+        },
+        {
+          "path": "benchmarks/results/2026-11-23-matched-study-verification.json",
+          "sha256": "6e4242ad444bc24cb02feee73e18d98f44769f3d3f0e3539080ca771ca186e4f"
+        },
+        {
+          "path": "benchmarks/results/2026-11-23-matched-raw-evidence-manifest.json",
+          "sha256": "8920f5f4105dc8c574f873270a1b3706f08b4a3f31ec03822eb97c04b5dcc3d5"
+        },
+        {
+          "path": "research/snapshots/2026-11-23-matched-study/harnesses.json",
+          "sha256": "61503ec63a6c5d385148ae26529db2e5a26c7a58745ba581d2431f68f0cd98bb"
+        }
+      ],
+      "supports": [
+        "54/54 primary attempts accepted across three languages and phases under equal time/tool/check limits",
+        "Reported paired construction, comprehension and change costs for the selected model/guides/tasks",
+        "Scoped optimized native/Python process timings, compile times and artifact sizes with correct outputs",
+        "A concrete reserved-name/identity-synchronization diagnostic interaction and recorded recovery",
+        "Complete retention of the original interrupted cohort, unknown participant usage and excluded canaries"
+      ],
+      "does_not_establish": [
+        "A Lobo quality or token-efficiency advantage",
+        "General software-construction/comprehension equality or a population language ranking",
+        "Causal attribution to H1/H2/H3, syntax alone, or a complete programming-skill ablation",
+        "An isolated native function/instruction speedup or native CPU-hotspot attribution",
+        "A hard-token-matched experiment, total study-development token cost or billed-dollar saving",
+        "A controlled longitudinal improvement over older language iterations or immutable model weights"
+      ]
+    },
+    {
+      "id": "local-039",
+      "date": "2026-11-23",
+      "title": "Luna high/low reasoning comparison on frozen 1.11.2 tasks",
+      "evidence_kind": "registered ordered model/reasoning cohorts, independent grading and post-hoc diagnostic replay",
+      "status": "completed; high 49/54 and low 44/54 accepted, all 110 invocations usage-known; failures and prior evidence preserved",
+      "files": [
+        {
+          "path": "research/luna-reasoning-study-2026-11-23.md",
+          "sha256": "049a846a535b3ff18162c5c17bfb44ce29925fd2783a6d5ccd3de209804e6b64"
+        },
+        {
+          "path": "benchmarks/results/2026-11-23-luna-reasoning-study.json",
+          "sha256": "4ffc450b263bb564847e60d6358244419322f8653614ddbe4c3d1c202a476023"
+        },
+        {
+          "path": "benchmarks/results/2026-11-23-luna-study-registration.json",
+          "sha256": "bd4a2eb994484b0c0e4df538a09eaf370260fa473660463c91fa954bba7d4840"
+        },
+        {
+          "path": "benchmarks/results/2026-11-23-luna-study-diagnostics.json",
+          "sha256": "d7b9ee1787e141beda30209b3717ed0d6d718c911db468f8df7ee5425ff60621"
+        },
+        {
+          "path": "benchmarks/results/2026-11-23-luna-study-verification.json",
+          "sha256": "14488766af582ed50ef0e99866c96d9e15e4fd7b9292c486dc7a7a128cbe6878"
+        },
+        {
+          "path": "benchmarks/results/2026-11-23-luna-raw-evidence-manifest.json",
+          "sha256": "e48c89dcefe1c17dbbfd9bc7b1dd39245ccd1329d5fc81941dde7a3324bbd418"
+        },
+        {
+          "path": "research/snapshots/2026-11-23-luna-study/harnesses.json",
+          "sha256": "9649127c4f58acd9c2e60acea8b3185b5ec8209332369e5caa1c174fa80afc4c"
+        }
+      ],
+      "supports": [
+        "108 completed scored assignments under unchanged frozen input bytes, graders and limits",
+        "Luna high 36/36 and low 35/36 construction/change acceptance, including all 12 Lobo code-writing assignments at each setting",
+        "High 13/18 and low 9/18 comprehension acceptance, with 192/198 and 187/198 items correct",
+        "A compiled low-reasoning Rust scheduler failed unordered-ID dependency cases; public replay and minimal counterexample reproduce the defect",
+        "Observed participant time/token reductions at low effort alongside more unsuccessful responses",
+        "Exact input/prompt/command audits, public source bundles and preservation of all previous 38 entries/111 pins"
+      ],
+      "does_not_establish": [
+        "A population language/model ranking or a provably weakest available model",
+        "A causal reasoning/model-size effect independent of chronology, cache, host instructions or provider behavior",
+        "A Lobo quality/token advantage in general software construction or source comprehension",
+        "Equal compute from matching reasoning labels, a hard token cap, billed-dollar savings or total study-development cost",
+        "Correctness beyond the finite observations, or a new runtime speed claim for generated programs"
+      ]
+    },
+    {
+      "id": "local-040",
+      "date": "2026-11-23",
+      "title": "Offline comprehension failure attribution and proposed improvements",
+      "evidence_kind": "retrospective response/source/prompt audit with independent copied-program replay",
+      "status": "completed analysis; prompt defects confirmed, causal attribution unresolved; improvements not implemented",
+      "files": [
+        {
+          "path": "research/comprehension-failure-analysis-2026-11-23.md",
+          "sha256": "e8aa58137c7c87a8d1607685479fffed8ec6ddc7f4b28b7473d8cf6224fe6b6b"
+        },
+        {
+          "path": "benchmarks/results/2026-11-23-comprehension-failure-audit.json",
+          "sha256": "eee6226d293b8faa28ee6ca389d0ab3a0179b21fcda105fda28796590ba2b256"
+        },
+        {
+          "path": "research/snapshots/2026-11-23-comprehension-audit/prompts.json",
+          "sha256": "314d75683497efa11869b8398eb2b5186ed7d57fd29919ebab2f0f32478eee75"
+        },
+        {
+          "path": "research/snapshots/2026-11-23-comprehension-audit/analysis-code.json",
+          "sha256": "9ecc9b3da28fd63e5953b0b7422e197e303ea43354cf094c88109a697acc4963"
+        },
+        {
+          "path": "benchmarks/results/2026-11-23-comprehension-audit-verification.json",
+          "sha256": "1f1be980ee95c88945c66371452ecfb7c0cee12a3868eaeb305d0f556d8a54c8"
+        }
+      ],
+      "supports": [
+        "Every failed Lobo item mapped to its response, requirement and canonical result",
+        "54 canonical prediction outputs agree with their frozen expected values; copied impact mutation changes fits and run",
+        "Task/guide duplicated in all 54 source-only user prompts, with irrelevant check/authoring material",
+        "Five of nine Lobo failed items also fail in another language when pooling configurations; four share a same-configuration counterpart",
+        "Observed model/configuration sensitivity and explicit proposal priorities without language or guide edits"
+      ],
+      "does_not_establish": [
+        "Causal percentages attributable to language, documentation, model weights or familiarity",
+        "A compiler defect or the need for new syntax",
+        "Improved comprehension or token savings from the proposed prompt/documentation/API changes",
+        "A new model trial, rescored outcome, human-comprehension result or population ranking"
+      ]
+    },
+    {
+      "id": "local-041",
+      "date": "2026-11-23",
+      "title": "Isolated prompt and input-documentation treatments with a separate language reference",
+      "evidence_kind": "Registered source-only model pilot; separately labeled posthoc response-format sensitivity and reference validation",
+      "status": "72 attempts completed; no primary acceptance improvement established; product frozen",
+      "files": [
+        {
+          "path": "research/context-factorial-study-2026-11-23.md",
+          "sha256": "7febf4b53969063d776053c5f5a4d33bd5ddd39aca6e6712e1b3721d53e87cd7"
+        },
+        {
+          "path": "benchmarks/results/2026-11-23-context-factorial-study.json",
+          "sha256": "23cf36c5af6ea6ac9ab037f0bef6400f16b862851d834f84f5e028e1a9a775b3"
+        },
+        {
+          "path": "benchmarks/results/2026-11-23-context-format-sensitivity.json",
+          "sha256": "795e0e261adfb24eb9a230dc54e5773b4e9f50838e3545628bac9f8bcc0dc9ce"
+        },
+        {
+          "path": "benchmarks/results/2026-11-23-context-study-verification.json",
+          "sha256": "bd9727462ef52b20de3de75c7e375c500fe84928c3c093a336eb21e79633e4c0"
+        },
+        {
+          "path": "benchmarks/results/2026-11-23-context-reference-validation.json",
+          "sha256": "82be3f8e905554116ec8575cc88bf6c0f43b9f8e185487023efe7041472d14f9"
+        },
+        {
+          "path": "docs/agent-reference/1.11.2/concepts.json",
+          "sha256": "393f075c8bb9db80227461135fa30cfa282de86e39db3f379c841a75dac63f55"
+        },
+        {
+          "path": "research/snapshots/2026-11-23-context-study/registration/manifest.json",
+          "sha256": "1af7d0e1b672be5d0d17bab48051442984632475c259a740538aa3056a10ab35"
+        },
+        {
+          "path": "research/snapshots/2026-11-23-context-study/evidence-manifest.json",
+          "sha256": "066a381518a7be147f8c0d4e12614c2547752fa442033d227e513f2bb9b2177b"
+        }
+      ],
+      "supports": [
+        "All four arms accept12/18 under the unchanged registered strict grader; every outcome is retained",
+        "Deduplication reduces median paired reported input-plus-output tokens about6.8% across18 pairs",
+        "A documented closed-input policy omission affects seven items; secondary projection accepts52/72 versus primary48/72",
+        "Every delivered prompt, initial input, grade and no-tool condition replays; all74 invocations have terminal usage",
+        "Eighteen reference/mutant builds agree with1908 oracle comparisons; nine compiled policy mutants are killed;69 concrete failure replays agree",
+        "An additive22-concept,22-relationship source-pinned reading reference, editable map and bounded lookup are validated separately",
+        "All40 earlier entries and123 pins are preserved"
+      ],
+      "does_not_establish": [
+        "Improved comprehension, quality equivalence/noninferiority or a general language/model ranking",
+        "A graph/retrieval/reference benefit; those materials were excluded from trial prompts",
+        "A causal reasoning-level comparison or immutable model identity",
+        "Billing savings, parent-agent usage, inference-speed improvement or runtime performance",
+        "A compiler defect, a new language construct or authorization for additional trials",
+        "That secondary metadata projection replaces the preregistered primary scores"
+      ]
+    },
+    {
+      "id": "local-042",
+      "date": "2026-11-24",
+      "title": "Separate response-contract reference and graph-presentation studies",
+      "evidence_kind": "Three registered source-only participant comparisons with native/static validation",
+      "status": "All84 attempts completed; tested product/materials remain frozen",
+      "files": [
+        {
+          "path": "research/learning-study-2026-11-24.md",
+          "sha256": "8f1034b7f2fba2371eae33e2675ca52eff8374df9dc5eeecc1deecf0d736f82b"
+        },
+        {
+          "path": "benchmarks/results/2026-11-24-learning-study.json",
+          "sha256": "88bf9c26c93bb201f8d0ceec168f2ccf99b0ee200cd4b7e9fdcf307d5972e97f"
+        },
+        {
+          "path": "benchmarks/results/2026-11-24-learning-diagnostics.json",
+          "sha256": "b70974819a83916c77dbdd47e2363b8a01aca57b9ff3ae7e88289070f0c331d8"
+        },
+        {
+          "path": "benchmarks/results/2026-11-24-learning-observed-input-replays.json",
+          "sha256": "4228d3ed4b14eaf30d3266579a5205753c798649ff4a50f4f3e46f11a7db5b18"
+        },
+        {
+          "path": "benchmarks/results/2026-11-24-learning-verification.json",
+          "sha256": "1634de4dc7092742c16ebdc06a11a6d59e3542461482802197f41ea0893100b4"
+        },
+        {
+          "path": "benchmarks/results/2026-11-24-response-contract-v2.json",
+          "sha256": "e82f266178e4cb34ba461f95195d11226973860a45f1565b6a639400903438e2"
+        },
+        {
+          "path": "benchmarks/results/2026-11-24-learning-validation.json",
+          "sha256": "a4ee3c21652a06f2a9d34362df8c34a2b0213acb2554902acfef27172aef239a"
+        },
+        {
+          "path": "benchmarks/results/2026-11-24-learning-material-coverage.json",
+          "sha256": "e8e15b9a094ba57634ddc16521947a560da6c4a3919d0b3a1ea71d671f626fa6"
+        },
+        {
+          "path": "research/snapshots/2026-11-24-learning-study/registration/manifest.json",
+          "sha256": "b5d039aa1620453f6bf9fe044fa37ea584af2df8f70f1bcbaf7d1701885ae740"
+        },
+        {
+          "path": "research/snapshots/2026-11-24-learning-study/evidence-manifest.json",
+          "sha256": "e0eb2760d19381dd18257ed0c8adf321c671c70d49c7d2d4c7bf14d17822cbc0"
+        }
+      ],
+      "supports": [
+        "An executable v2 closed response profile with optional top-level notes and explicit lexical/type rules fixes the earlier specification omission without altering old scores",
+        "Explicit disclosure gives17/18 valid shapes versus15/18 under ambiguous wording; whole-task acceptance is9/18 each",
+        "Flat reference yields118/120 task items and10/12 tasks versus116/120 and9/12 base, with mixed high/low results",
+        "Graph organization of identical facts yields109/120 items and5/12 tasks versus110/120 and4/12 flat on a different fresh form; no consistent advantage",
+        "Median paired reported tokens increase2.5%,24.2%,6.8% in the three comparisons; all90 CLI conversations have known usage",
+        "Incomplete builtin/contextual/constructor/contract coverage and remaining errors on provided facts are documented with every failed reply",
+        "All297 admissible observed-input replays agree; final1908 format observations,144 native/evaluator values,48 static admissions and21 compiled mutation checks pass",
+        "All41 prior entries and131 pins remain unchanged"
+      ],
+      "does_not_establish": [
+        "A general language/reference/graph/model superiority or quality equivalence result",
+        "Causal contributions of particular words, facts, model weights or pretraining",
+        "That graphs supply missing facts or improve interactive retrieval/traversal",
+        "Repository construction quality, human comprehension, native runtime speed or production safety",
+        "Billing savings, total study-development usage or immutable model identity",
+        "Permission to change tested materials, run more trials or unfreeze the language"
+      ]
+    },
+    {
+      "id": "local-043",
+      "date": "2026-11-24",
+      "title": "Small reading-guide and checked-topic-card pilot",
+      "evidence_kind": "Three registered source-only context contrasts with native/static calibration",
+      "status": "All24 attempts completed; product and tested materials remain frozen",
+      "files": [
+        {
+          "path": "research/compact-pilot-2026-11-24.md",
+          "sha256": "761a1fc994e8bdf6865f293fc37728aab95932c49d67a9ea23907a1de352ef25"
+        },
+        {
+          "path": "benchmarks/results/2026-11-24-compact-pilot.json",
+          "sha256": "1916e89b225a13e313cfe2f59efae1c808169a8667a0d43aebadda820570f1d3"
+        },
+        {
+          "path": "benchmarks/results/2026-11-24-compact-verification.json",
+          "sha256": "10856803931973a79877f8cc518c20bbe5af7b6d27b0b2e397271312d2307058"
+        },
+        {
+          "path": "benchmarks/results/2026-11-24-compact-validation.json",
+          "sha256": "20df7822149f4babdb64dbc46b1a852d5ed79ba414047fbcf19b9757464a4e5f"
+        },
+        {
+          "path": "benchmarks/results/2026-11-24-compact-signature-probes.json",
+          "sha256": "df5323f87af018880a4d4850ad5057b022fd01731b5735cd818d0f42a25bfb78"
+        },
+        {
+          "path": "docs/agent-reference/compact-pilot-2026-11-24/cards.json",
+          "sha256": "c0a288cc94f5ea717beee3bdc27de2068fe6f213de384d8acdfc837f079da64c"
+        },
+        {
+          "path": "docs/agent-reference/compact-pilot-2026-11-24/reading-guide.txt",
+          "sha256": "22573988b598fdbf9e2602500b834f60493d0cc8898d82ee99922585396de9cb"
+        },
+        {
+          "path": "research/snapshots/2026-11-24-compact-pilot/registration/manifest.json",
+          "sha256": "5a0a4c4036c1ab9ea8e1cd80f77f95c5998fb9577c0b34680f630430ce83bd2f"
+        },
+        {
+          "path": "research/snapshots/2026-11-24-compact-pilot/evidence-manifest.json",
+          "sha256": "6dd840cd430a6447debf54fad23583b42960e34df3db019b677cf849ec76b61b"
+        }
+      ],
+      "supports": [
+        "Existing/clean/targeted arms give68/80,67/80,80/80 items and0/8,0/8,8/8 strict whole tasks on four selected fresh program instances",
+        "Targeted cards give4/4 complete high-reasoning and4/4 low-reasoning tasks; errors in other arms concentrate in static admissions",
+        "Guide cleanup alone does not improve accuracy; additional checked facts conditional on cleanup give13 more correct items",
+        "Combined targeted/existing median paired reported token ratio0.9778; targeted/clean1.0009. Wall ratios are descriptive, billing unknown",
+        "All24 strict outcomes,25 failed item checks,26 known usage records and exact prompts/answers retained",
+        "New TDD/harness/native/evaluator/static/signature/mutation checks pass; unchanged earlier312-pass compiler receipt is reused rather than newly run",
+        "All42 previous entries and141 pins remain unchanged"
+      ],
+      "does_not_establish": [
+        "General-language comprehension, independent blind-holdout performance, statistical noninferiority or a general model/language advantage",
+        "Which individual sentence causes an improvement or any causal reasoning-level difference",
+        "Better repository construction, human comprehension, Rust/Python superiority, production safety or native execution speed",
+        "Billing savings, parent development usage, provider request counts or immutable model weights",
+        "Permission for additional model trials, tested-material edits or product unfreeze"
+      ]
+    },
+    {
+      "id": "local-044",
+      "date": "2026-11-24",
+      "title": "Focused development skill packaging and deterministic verification",
+      "evidence_kind": "Skill implementation and local structure/reference/native-tool checks; no agent experiment",
+      "status": "Implemented, locally installed and checked",
+      "files": [
+        {
+          "path": "benchmarks/results/2026-11-24-development-skill.json",
+          "sha256": "d21461e6309130e1ec23aec2a26533ac5a3c8ad44043348434570710c397dff3"
+        },
+        {
+          "path": "decisions/0069-focused-lobo-development-skill.md",
+          "sha256": "286174c9e2add723463a82e096224cda6431bf98846f1ff442bc8e96a2c1fd53"
+        },
+        {
+          "path": "research/snapshots/2026-11-24-development-skill/evidence-manifest.json",
+          "sha256": "a3cda3ee9f8c7487e02e85656596cfd24eed1303e0a7118ea64106f4fad51544"
+        }
+      ],
+      "supports": [
+        "New lobo-development skill routes to relevant checked rules and explicit native TDD workflow without changing the frozen programming skill/cards/product",
+        "Repository and installed symlink validate; all13 references resolve; UI metadata carries the matching invocation",
+        "A two-source native smoke check detects intentional208 versus expected207, then passes five known-answer cases with stable IDs",
+        "40 harness tests and15 final research tests pass; initial README provenance failure is retained and corrected by moving usage docs to a new file",
+        "All43 prior evidence entries and150 file pins remain unchanged"
+      ],
+      "does_not_establish": [
+        "Agent compliance, implicit skill discovery, construction quality or productivity gains",
+        "Comprehension or token benefits of this new skill; earlier card results remain a separate experiment",
+        "Standalone packaging, installation on another host, or availability without the accompanying checkout",
+        "New compiler/editor regression runs, product evolution or authorization for more model trials"
+      ]
+    },
+    {
+      "id": "local-045",
+      "date": "2026-11-24",
+      "title": "Matched new-skill/control development pilot",
+      "evidence_kind": "Preregistered tool-assisted native development comparison; same model/reasoning/budgets",
+      "status": "All12 scheduled attempts retained;11 normal completions and one timeout",
+      "files": [
+        {
+          "path": "research/development-skill-study-2026-11-24.md",
+          "sha256": "7ff2b5fd751dbfe755549a2494be8b1edc47948ee8ca22e9e545f99b3b77bc4a"
+        },
+        {
+          "path": "benchmarks/results/2026-11-24-development-study.json",
+          "sha256": "84042ad547847830977460b12471231cb246362c6c4c50eca2b26d1137b05475"
+        },
+        {
+          "path": "benchmarks/results/2026-11-24-development-study-audit.json",
+          "sha256": "fab58582c5ac17e2b59f1a288f24b5977557fdfa412f6857fd3edf10f7f171bc"
+        },
+        {
+          "path": "benchmarks/results/2026-11-24-development-study-verification.json",
+          "sha256": "bfda8c23d270b8ff6bc8111d6b9c0186729c406ee3a1661b14ba3389059a688e"
+        },
+        {
+          "path": "benchmarks/results/2026-11-24-development-study-validation.json",
+          "sha256": "28d66d04013ed149e2024b3c8577abe2add6fc6a248e38db68956fde168aa4ab"
+        },
+        {
+          "path": "research/snapshots/2026-11-24-development-study/registration/manifest.json",
+          "sha256": "1ae5142e7033776847296199845cbf7a976e37188efd4f3ed1f8206c6b3f9f8b"
+        },
+        {
+          "path": "research/snapshots/2026-11-24-development-study/evidence-manifest.json",
+          "sha256": "4172857a8fd2ce186d963b7b7260850ec2289a6db847f1b3e6e7679d8a7e288f"
+        }
+      ],
+      "supports": [
+        "Control6/6 and skill5/6 accepted across3 fresh tasks with2 repetitions; no development-quality gain demonstrated",
+        "All complete known token pairs cost more with skill: median reported skill/control1.4119 across5 pairs; sixth skill usage unknown",
+        "Six wall pairs have median ratio1.1136 and mixed individual outcomes; no reliable latency ranking",
+        "One skill batch attempt times out after nested-if/reserved-name authoring errors prevent ID synchronization; no retry or score repair",
+        "Both arms share78 reference files and native feedback; only treatment entrypoint/invocation differ; all6 skill traces and0 control traces reference new skill path",
+        "Skill attempts show more checking, including3 untouched-starter checks versus0 controls; this does not improve primary acceptance",
+        "Final suites5 public+65 private cases: control420/420 full or390/390 private; skill350/420 full or325/390 private, with one uncompiled suite rather than70 runtime mistakes",
+        "All770 final executed native observations and required source signatures audited;50 harness and15 research checks pass; calibration630 observations catches3 compiled defects",
+        "Reference packet has incomplete transitive links; raw exports preserve registered bytes/logical paths and initial publication failures",
+        "All44 prior entries and153 pins remain unchanged; product,skills,cards and old drivers stay frozen"
+      ],
+      "does_not_establish": [
+        "A general skill disadvantage, language/model superiority, population success rate or statistically reliable speed difference",
+        "Causal contributions of particular workflow sentences, documentation, model reasoning or language design",
+        "Complete reference-chain availability, fully observed host instructions, OS read isolation or implicit discovery behavior",
+        "Full participant token total, billing or parent development usage; missing timeout usage is unknown",
+        "Fresh full compiler/editor regression runs, production correctness or native program runtime advantages",
+        "Permission for more trials, skill repair or language unfreeze"
+      ]
+    },
+    {
+      "id": "local-046",
+      "date": "2026-11-26",
+      "title": "Grammar-first development skill revision and fresh three-arm pilot",
+      "evidence_kind": "Versioned skill improvement, native grammar/sync probes and preregistered matched agent comparison",
+      "status": "All12 assignments retained; revised/control4/4 budget completion, original2/4; all candidates pass",
+      "files": [
+        {
+          "path": "research/skill-revision-study-2026-11-26.md",
+          "sha256": "afbefb112266b9bd7d7867f88fff85148c7feedd2c3d42f70f96724f3e22640b"
+        },
+        {
+          "path": "benchmarks/results/2026-11-26-skill-revision-study.json",
+          "sha256": "4bcceaf9af5da4bf567f115a6b32f2b590ad10b11ad5093db46d1f41114b8fcc"
+        },
+        {
+          "path": "benchmarks/results/2026-11-26-skill-revision-audit.json",
+          "sha256": "7fadafe7b142eec1bb8c0ce59f97fa7788457dc490b9a3094ae8510f0ca60f1f"
+        },
+        {
+          "path": "benchmarks/results/2026-11-26-skill-revision-verification.json",
+          "sha256": "b4294e69d5cc19cb16a22e34fc29d1904ffedc1f19b38176a2a9b267d14ffc4f"
+        },
+        {
+          "path": "benchmarks/results/2026-11-26-skill-revision-validation.json",
+          "sha256": "33fd78fbebcad0818b9422c6f7cb914e7555bfcda22d54491dbfb58745e6b2cf"
+        },
+        {
+          "path": "benchmarks/results/2026-11-26-skill-revision-probes.json",
+          "sha256": "cdb937f84763cc39c94e0e51fccc166af59b9d9e4c7eb45f1363bd457946db67"
+        },
+        {
+          "path": "research/snapshots/2026-11-26-skill-revision/registration/manifest.json",
+          "sha256": "c3a6f84049cdf664e14b4cc8c31bc5be3be9c7c7591a518d6f3145a98a8cb39f"
+        },
+        {
+          "path": "research/snapshots/2026-11-26-skill-revision/evidence-manifest.json",
+          "sha256": "92e2866495529c242160376253e1d49b591c4b17d9fbb49f7bf718de1afc63b7"
+        }
+      ],
+      "supports": [
+        "Additive lobo-development-v2 is3138bytes versus4799original; verified grammar/identity recovery rules replace repeated workflow detail while original remains unchanged",
+        "Two fresh tasks with2 repetitions and3 arms use identical configured Luna/high,120s,16 commands and6 visible checks; same78 references and native grader",
+        "Revised/control complete4/4 each, original2/4; two original search sessions time out despite correct candidates; primary acceptance is not rescored",
+        "All12 candidates pass840 native suite observations:780 private and60 repeated public; all required source signatures match",
+        "Known revised/original token pairs are only two coalescing repetitions, medianratio0.6912; two original timeout usagesunknown",
+        "Revised/control paired token median0.9977 across4pairs is mixed with wide range; no consistent skill-over-control token or quality benefit demonstrated",
+        "Revised has0 visible compiler/authoring failures, original2visible+2authoring andcontrol3visible; combined revision does not identify individual rule causality",
+        "59harness and15research tests pass;420calibration observations catch2compiled defects; grammar/sync probes and initial incorrect function-call-match assumption retained",
+        "All45 earlier evidence entries and160 pins remain unchanged; exact raw document bytes, logical-path map and local archive retained"
+      ],
+      "does_not_establish": [
+        "General productivity, language/model superiority, population completion rates or statistical noninferiority",
+        "Higher final candidate test correctness in revised arm; all arms candidates pass",
+        "Causal attribution to grammar wording, text length, named activation, workflow or provider latency individually",
+        "Complete original-arm/participant token total, billing or parent development costs",
+        "A reliable speed/inference/native-runtime ranking; timeout windows are censored and only two task instances used",
+        "Complete transitive reference closure, fully observed host instructions or OS-level read isolation",
+        "A fresh full compiler/editor suite or permission for additional trials, version edits or language unfreeze"
+      ]
+    }
+  ],
+  "backend_recommendation": {
+    "selected_default": "c",
+    "scope": "Current implemented routes on the four public development workloads, not universal backend superiority",
+    "llvm_compile_median_increase_percent": {
+      "minimum": 18.265752219888288,
+      "maximum": 30.541485215985187
+    },
+    "runtime_improvement": "not demonstrated; small differences inconclusive",
+    "sizes": "equal or eight bytes larger for direct LLVM",
+    "benchmark_failures_per_retained_round": 0,
+    "agent_construction_effect": null,
+    "agent_comprehension_effect": null,
+    "agent_token_effect": null
+  },
+  "external_literature": "research/findings.json",
+  "primary_literature_manifest": "research/sources.json",
+  "paper_plan": "research/paper-plan.md",
+  "preservation_receipt": "research/verification-local-evidence.json",
+  "interpretation_rules": [
+    "Entries group linked investigations, not independent tasks or observations.",
+    "Do not sum overlapping compiler test suites or repeated task attempts as independent samples.",
+    "Unknown agent-level effects are not zero effects.",
+    "Preserve original task/attempt denominators, versions, failures, corrections and unmeasured outcomes.",
+    "Public development fixtures are excluded from claims of unseen confirmatory evaluation."
+  ],
+  "updated_on": "2026-11-24",
+  "last_updated_on": "2026-11-26"
+}

@@ -1,0 +1,10 @@
+{
+  "format": "lobo-identities/0.1",
+  "identities": {
+    "module": "realistic.transfer.policy",
+    "valid": "realistic.transfer.policy.valid",
+    "params": "realistic.transfer.policy.params",
+    "sql.Cell": "lobo.sql.Cell",
+    "sql.params1": "lobo.sql.params1"
+  }
+}

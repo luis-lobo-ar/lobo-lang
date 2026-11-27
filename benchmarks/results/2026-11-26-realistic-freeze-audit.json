@@ -1,0 +1,31 @@
+{
+  "format": "lobo-realistic-freeze-audit/1",
+  "date": "2026-11-26",
+  "baseline_commit": "db34d9db57b51180db7981ed92e24cc87a2b4c2b",
+  "registration_commit": "878329fae1a72c89bd18a9426bca81447f645708",
+  "all_registered_code_hashes_match": true,
+  "registered_code_pins": 22,
+  "compiler_sha256": "8d9f84530b8d34a6a72597d25befc249a604430a6569656b4184721e1e444d9d",
+  "compiler_regression_receipt": "benchmarks/results/2026-11-24-learning-verification.json",
+  "compiler_regression_receipt_sha256": "1634de4dc7092742c16ebdc06a11a6d59e3542461482802197f41ea0893100b4",
+  "full_compiler_suite_reused_pass_count": 312,
+  "new_full_compiler_or_editor_suite": false,
+  "product_paths_unchanged": [
+    "README.md",
+    "Cargo.toml",
+    "Cargo.lock",
+    "src",
+    "spec",
+    "libraries",
+    "editors",
+    ".agents/skills",
+    "docs"
+  ],
+  "prior_paper_entry_objects_unchanged": 46,
+  "prior_file_pins_verified": 168,
+  "all_existing_editable_declarations_preserved": true,
+  "all12_registered_input_prompt_grade_usage_labels_verified": true,
+  "all_exported_documents_verified": true,
+  "all_final_http_server_exit_codes_zero": true,
+  "posthoc_strict_json_type_outcomes_changed": 0
+}

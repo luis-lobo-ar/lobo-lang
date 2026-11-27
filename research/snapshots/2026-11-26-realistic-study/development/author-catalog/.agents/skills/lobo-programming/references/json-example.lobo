@@ -1,0 +1,13 @@
+module json_example;
+use json { Json, stringify };
+
+fn encode(text: Text) -> Text {
+  json.stringify(json { "text": text })
+}
+
+identities {
+  module: "skill.json",
+  json.Json: "lobo.json.value",
+  json.stringify: "lobo.json.stringify",
+  encode: "skill.json.encode"
+}

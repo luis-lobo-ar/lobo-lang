@@ -1,0 +1,27 @@
+{
+  "format": "lobo-identities/0.1",
+  "identities": {
+    "module": "realistic.transfer.logic",
+    "receipt": "realistic.transfer.logic.receipt",
+    "perform": "realistic.transfer.logic.perform",
+    "apply": "realistic.transfer.logic.apply",
+    "model.Receipt": "realistic.transfer.model.Receipt",
+    "policy.valid": "realistic.transfer.policy.valid",
+    "policy.params": "realistic.transfer.policy.params",
+    "sql.Cell": "lobo.sql.Cell",
+    "sql.Row": "lobo.sql.Row",
+    "sql.SqlResult": "lobo.sql.SqlResult",
+    "sql.SqlError": "lobo.sql.SqlError",
+    "sql.query": "lobo.sql.query",
+    "sql.execute": "lobo.sql.execute",
+    "sql.begin": "lobo.sql.begin",
+    "sql.commit": "lobo.sql.commit",
+    "sql.rollback": "lobo.sql.rollback",
+    "sql.no_params": "lobo.sql.no_params",
+    "sql.params1": "lobo.sql.params1",
+    "sql.params2": "lobo.sql.params2",
+    "sql.integer_at": "lobo.sql.integer_at",
+    "sql.text_at": "lobo.sql.text_at",
+    "sql.expect_columns": "lobo.sql.expect_columns"
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "format": "lobo-identities/0.1",
+  "identities": {
+    "module": "realistic.catalog.model",
+    "Product": "realistic.catalog.model.Product",
+    "catalog": "realistic.catalog.model.catalog"
+  }
+}

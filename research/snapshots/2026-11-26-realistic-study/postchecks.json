@@ -1,0 +1,11 @@
+{
+  "date": "2026-11-26",
+  "harness_tests": 69,
+  "new_harness_tests": 10,
+  "research_tests": 15,
+  "calibration_scenarios": 170,
+  "compiled_mutants_killed": 3,
+  "final_candidate_scenarios": 300,
+  "all_registered_inputs_and_product_hashes_match": true,
+  "previous312_compiler_passes_reused": true
+}

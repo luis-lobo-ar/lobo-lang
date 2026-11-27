@@ -1,0 +1,26 @@
+CANARY True
+START {'index': 0, 'repeat': 0, 'family': 'catalog', 'arm': 'control', 'language': 'lobo', 'reasoning': 'high', 'phase': 'application-change'}
+END 0 completed True 30 {'input_tokens': 215802, 'cached_input_tokens': 196736, 'cache_write_input_tokens': 0, 'output_tokens': 4962, 'reasoning_output_tokens': 3246}
+START {'index': 1, 'repeat': 0, 'family': 'catalog', 'arm': 'v2', 'language': 'lobo', 'reasoning': 'high', 'phase': 'application-change'}
+END 1 completed True 30 {'input_tokens': 225772, 'cached_input_tokens': 185216, 'cache_write_input_tokens': 0, 'output_tokens': 3926, 'reasoning_output_tokens': 2319}
+START {'index': 2, 'repeat': 0, 'family': 'transfer', 'arm': 'v2', 'language': 'lobo', 'reasoning': 'high', 'phase': 'application-change'}
+END 2 wall_limit False 20 None
+START {'index': 3, 'repeat': 0, 'family': 'transfer', 'arm': 'control', 'language': 'lobo', 'reasoning': 'high', 'phase': 'application-change'}
+END 3 completed True 20 {'input_tokens': 127293, 'cached_input_tokens': 115456, 'cache_write_input_tokens': 0, 'output_tokens': 4048, 'reasoning_output_tokens': 2805}
+START {'index': 4, 'repeat': 1, 'family': 'catalog', 'arm': 'v2', 'language': 'lobo', 'reasoning': 'high', 'phase': 'application-change'}
+END 4 completed True 30 {'input_tokens': 141977, 'cached_input_tokens': 119680, 'cache_write_input_tokens': 0, 'output_tokens': 3202, 'reasoning_output_tokens': 1838}
+START {'index': 5, 'repeat': 1, 'family': 'catalog', 'arm': 'control', 'language': 'lobo', 'reasoning': 'high', 'phase': 'application-change'}
+END 5 completed True 30 {'input_tokens': 166113, 'cached_input_tokens': 149760, 'cache_write_input_tokens': 0, 'output_tokens': 4176, 'reasoning_output_tokens': 2615}
+START {'index': 6, 'repeat': 1, 'family': 'transfer', 'arm': 'control', 'language': 'lobo', 'reasoning': 'high', 'phase': 'application-change'}
+END 6 wall_limit False 20 None
+START {'index': 7, 'repeat': 1, 'family': 'transfer', 'arm': 'v2', 'language': 'lobo', 'reasoning': 'high', 'phase': 'application-change'}
+END 7 completed True 20 {'input_tokens': 202500, 'cached_input_tokens': 183424, 'cache_write_input_tokens': 0, 'output_tokens': 4244, 'reasoning_output_tokens': 2411}
+START {'index': 8, 'repeat': 2, 'family': 'catalog', 'arm': 'control', 'language': 'lobo', 'reasoning': 'high', 'phase': 'application-change'}
+END 8 completed True 30 {'input_tokens': 141914, 'cached_input_tokens': 128896, 'cache_write_input_tokens': 0, 'output_tokens': 3647, 'reasoning_output_tokens': 2549}
+START {'index': 9, 'repeat': 2, 'family': 'catalog', 'arm': 'v2', 'language': 'lobo', 'reasoning': 'high', 'phase': 'application-change'}
+END 9 completed True 30 {'input_tokens': 242830, 'cached_input_tokens': 228224, 'cache_write_input_tokens': 0, 'output_tokens': 4809, 'reasoning_output_tokens': 2767}
+START {'index': 10, 'repeat': 2, 'family': 'transfer', 'arm': 'v2', 'language': 'lobo', 'reasoning': 'high', 'phase': 'application-change'}
+END 10 wall_limit False 20 None
+START {'index': 11, 'repeat': 2, 'family': 'transfer', 'arm': 'control', 'language': 'lobo', 'reasoning': 'high', 'phase': 'application-change'}
+END 11 wall_limit False 20 None
+FINISHED 12

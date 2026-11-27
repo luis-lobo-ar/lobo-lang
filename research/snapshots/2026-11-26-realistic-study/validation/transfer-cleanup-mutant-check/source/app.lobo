@@ -1,0 +1,13 @@
+module app;
+use sql {SqlResult,open,close,begin,rollback}; use logic {apply}; use model {Receipt};
+record Audit {outcome:SqlResult<Receipt>,clean:Bool}
+fn main(source_id:I64,target_id:I64,amount:I64,key:Text)->SqlResult<Audit>
+actions {native.authorize,db.open,db.close,db.transaction,db.execute,db.read}
+{
+ let db=try open(Native::sqlite_capability());
+ let outcome=apply(db,source_id,target_id,amount,key);
+ let probe=begin(db);
+ let clean=match probe {Err(error)=>false,Ok(done)=>{let ignored=rollback(db);true}};
+ try close(db);
+ Ok(Audit {outcome:outcome,clean:clean})
+}

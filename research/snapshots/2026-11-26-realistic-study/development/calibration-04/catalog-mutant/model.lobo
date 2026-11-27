@@ -1,0 +1,3 @@
+module model;
+record Product {id:I64,name:Text,stock:I64,enabled:Bool}
+fn catalog()->List<Product> {List::prepend(Product {id:2,name:"Tea \"夜\"",stock:3,enabled:true},List::prepend(Product {id:7,name:"Line\nBack\\",stock:0,enabled:true},List::prepend(Product {id:11,name:"hidden",stock:9,enabled:false},List::empty<Product>())))}

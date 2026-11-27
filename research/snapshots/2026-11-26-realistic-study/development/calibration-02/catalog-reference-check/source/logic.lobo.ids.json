@@ -1,0 +1,24 @@
+{
+  "format": "lobo-identities/0.1",
+  "identities": {
+    "module": "realistic.catalog.logic",
+    "Items": "realistic.catalog.logic.Items",
+    "product_json": "realistic.catalog.logic.product_json",
+    "products_json": "realistic.catalog.logic.products_json",
+    "handle": "realistic.catalog.logic.handle",
+    "model.Product": "realistic.catalog.model.Product",
+    "model.catalog": "realistic.catalog.model.catalog",
+    "policy.Key": "realistic.catalog.policy.Key",
+    "policy.read_id": "realistic.catalog.policy.read_id",
+    "http.Request": "lobo.http.server.Request",
+    "http.Response": "example.web.response",
+    "http.json_response": "lobo.http.server.json_response",
+    "http.error_response": "lobo.http.server.error_response",
+    "json.Json": "lobo.json.value",
+    "json.JsonArray": "lobo.json.array_type",
+    "json.object": "lobo.json.object",
+    "json.field": "lobo.json.field",
+    "json.array": "lobo.json.array",
+    "json.append": "lobo.json.append"
+  }
+}

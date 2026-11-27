@@ -1,0 +1,4 @@
+module policy;
+use sql {Cell,params1};
+fn valid(source_id:I64,target_id:I64,amount:I64,key:Text)->Bool {source_id>0 && target_id>0 && source_id!=target_id && amount>=1 && amount<=1000000 && Text::length(key)>=1 && Text::length(key)<=24}
+fn params(key:Text,source_id:I64,target_id:I64,amount:I64)->List<Cell> {List::prepend(Cell::String(key),List::prepend(Cell::Integer(source_id),List::prepend(Cell::Integer(target_id),params1(Cell::Integer(amount)))))}

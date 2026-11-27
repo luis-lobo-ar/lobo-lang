@@ -1,0 +1,103 @@
+[
+  {
+    "input": {
+      "method": "GET",
+      "path": "/health"
+    },
+    "expected": {
+      "status": 200,
+      "body": {
+        "status": "ready"
+      },
+      "head_empty": true,
+      "length_ok": true,
+      "content_type": "application/json",
+      "allow": null
+    }
+  },
+  {
+    "input": {
+      "method": "GET",
+      "path": "/api/products"
+    },
+    "expected": {
+      "status": 200,
+      "body": {
+        "items": [
+          {
+            "id": 2,
+            "name": "Tea \"\u591c\"",
+            "stock": 3
+          },
+          {
+            "id": 7,
+            "name": "Line\nBack\\",
+            "stock": 0
+          }
+        ],
+        "total": 2
+      },
+      "head_empty": true,
+      "length_ok": true,
+      "content_type": "application/json",
+      "allow": null
+    }
+  },
+  {
+    "input": {
+      "method": "GET",
+      "path": "/api/products/available"
+    },
+    "expected": {
+      "status": 200,
+      "body": {
+        "items": [
+          {
+            "id": 2,
+            "name": "Tea \"\u591c\"",
+            "stock": 3
+          }
+        ],
+        "total": 1
+      },
+      "head_empty": true,
+      "length_ok": true,
+      "content_type": "application/json",
+      "allow": null
+    }
+  },
+  {
+    "input": {
+      "method": "GET",
+      "path": "/api/products/02"
+    },
+    "expected": {
+      "status": 404,
+      "body": {
+        "error": "not found"
+      },
+      "head_empty": true,
+      "length_ok": true,
+      "content_type": "application/json",
+      "allow": null
+    }
+  },
+  {
+    "input": {
+      "method": "HEAD",
+      "path": "/api/products/2"
+    },
+    "expected": {
+      "status": 200,
+      "body": {
+        "id": 2,
+        "name": "Tea \"\u591c\"",
+        "stock": 3
+      },
+      "head_empty": true,
+      "length_ok": true,
+      "content_type": "application/json",
+      "allow": null
+    }
+  }
+]

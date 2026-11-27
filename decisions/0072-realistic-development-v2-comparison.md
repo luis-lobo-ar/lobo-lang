@@ -1,6 +1,6 @@
 # 0072 — Realistic application changes with and without v2
 
-Date: 2026-11-26. Status: registered scope; results pending.
+Date: 2026-11-26. Status: complete; all12 assignments preserved.
 
 The user selected a matched comparison on more complex realistic Lobo development tasks with and
 without the existing v2 skill. Keep language/compiler/extension1.11.2/Core1.11, all libraries, both
@@ -53,3 +53,13 @@ as .md.txt with a logical-path/hash map from the beginning; preserve actual priv
 Keep raw events, edits, source snapshots, diagnostics, wire responses and SQLite state observations.
 Append result/decision/changelog/paper records, with prior entry-object and hash preservation checks.
 Stop at this experiment; findings may motivate proposals, never automatic product/skill changes.
+
+## Observed result
+
+Both arms complete4/6 within budget; HTTP3/3 and SQLite1/3 each. All12 final candidates pass300
+native scenarios. Four timeout usages are unknown. Three complete token pairs are all HTTP, median
+v2/control1.0405 with mixed variation; no SQLite complete token pairs and no overall cost ranking.
+All timeouts occur after a passing public check; one pending control check drains at143.34 seconds
+after agent termination without granting extra usable time. No measured skill advantage. Both arms
+repair a visible transitive db.close action error; v2 has one further authoring diagnostic. Keep the
+skill and product frozen. See [the report](../research/realistic-development-study-2026-11-26.md).

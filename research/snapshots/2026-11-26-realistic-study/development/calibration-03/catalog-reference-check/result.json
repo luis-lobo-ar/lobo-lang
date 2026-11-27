@@ -1,0 +1,37 @@
+{
+  "issues": [],
+  "build": {
+    "command": [
+      "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/matched-study-20261123/freeze/lobo",
+      "compile",
+      "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/realistic-study-20261126/development/calibration-03/catalog-reference-check/source/app.lobo",
+      "--source",
+      "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/realistic-study-20261126/development/calibration-03/catalog-reference-check/source/logic.lobo",
+      "--source",
+      "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/realistic-study-20261126/development/calibration-03/catalog-reference-check/source/policy.lobo",
+      "--source",
+      "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/realistic-study-20261126/development/calibration-03/catalog-reference-check/source/model.lobo",
+      "--source",
+      "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/realistic-study-20261126/development/calibration-03/catalog-reference-check/source/lib/http.lobo",
+      "--source",
+      "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/realistic-study-20261126/development/calibration-03/catalog-reference-check/source/lib/io.lobo",
+      "--source",
+      "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/realistic-study-20261126/development/calibration-03/catalog-reference-check/source/lib/helpers.lobo",
+      "--source",
+      "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/realistic-study-20261126/development/calibration-03/catalog-reference-check/source/lib/json.lobo",
+      "--source",
+      "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/realistic-study-20261126/development/calibration-03/catalog-reference-check/source/lib/access.lobo",
+      "-o",
+      "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/realistic-study-20261126/development/calibration-03/catalog-reference-check/program"
+    ],
+    "exit_code": 1,
+    "stdout": "{\"diagnostic\":{\"code\":\"compile.type.unknown\",\"message\":\"unknown record type lobo.json.value\",\"phase\":\"check\",\"range\":{\"end\":{\"byte\":1066,\"character\":104,\"line\":18},\"start\":{\"byte\":1033,\"character\":71,\"line\":18}},\"source\":\"/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/realistic-study-20261126/development/calibration-03/catalog-reference-check/source/logic.lobo\",\"subject\":\"realistic.catalog.logic.handle\"},\"kind\":\"compile_error\",\"status\":\"error\"}\n",
+    "stderr": "",
+    "wall_s": 0.019109224900603294,
+    "ok": false
+  },
+  "cases": [],
+  "accepted": false,
+  "passed": 0,
+  "total": 30
+}

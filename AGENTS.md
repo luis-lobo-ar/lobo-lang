@@ -5,11 +5,13 @@ Use the GitHub account luis-lobo-ar for this repository. Commit author and commi
 active gh account may belong to another project. Keep user-facing examples on the lobo CLI. Cargo commands
 belong in compiler build/test instructions. Preserve frozen research documents and fixtures.
 
-Decision0072 is selected:12 realistic application-change attempts, two tasks x3 repeats xcontrol/v2.
-Keep the existing language, libraries, skills, cards and all old evidence frozen. Register/push before
-participant calls, same Luna/high120s/16commands/6checks, no retries or replacements. Report timely
-completion separately from candidate correctness and include unknown usage. Reuse312-pass compiler
-receipt honestly; preserve46 paper entries/168 pins. See decisions/0072-realistic-development-v2-comparison.md.
+Decision0072 is complete:12 realistic app-change attempts, same Luna/high120s/16commands/6checks.
+Both arms complete4/6 (HTTP3/3, SQLite1/3); all12 candidates pass300 native scenarios. Four timeout
+usages are unknown; only3 complete token pairs, allHTTP, medianv2/control1.0405 and mixed. No skill
+advantage demonstrated. Read research/realistic-development-study-2026-11-26.md; distinguish correct
+timeout candidates, late drained checks and completion. Keep product, libraries, skills/cards and old
+studies frozen; preserve local-047 and all prior pins. Reused312-pass receipt is not a new full suite.
+Stop at12; proposals do not authorize skill changes, caching, new budgets or more participant calls.
 
 Decision0071 is complete:12 fresh three-arm Luna/high attempts at the same120s/16-command/6-check
 limits. Revised4/4 and control4/4 complete; original2/4, with two search timeouts whose candidates still

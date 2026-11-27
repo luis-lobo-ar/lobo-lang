@@ -1,0 +1,684 @@
+{
+  "label": "Supplemental descriptive process audit, no score changes",
+  "records": [
+    {
+      "assignment": {
+        "index": 0,
+        "repeat": 0,
+        "family": "catalog",
+        "arm": "control",
+        "language": "lobo",
+        "reasoning": "high",
+        "phase": "application-change"
+      },
+      "status": "completed",
+      "candidate_correct": true,
+      "timely_complete": true,
+      "known_usage": true,
+      "command_items": 7,
+      "checks": [
+        {
+          "index": 0,
+          "start_s": 59.04320801910944,
+          "end_s": 61.0990567621775,
+          "status": "fail",
+          "edited_files": [
+            "logic.lobo",
+            "policy.lobo"
+          ],
+          "build_s": 2.040123060811311
+        },
+        {
+          "index": 1,
+          "start_s": 84.08446455607191,
+          "end_s": 86.13310075318441,
+          "status": "pass",
+          "edited_files": [
+            "logic.lobo",
+            "policy.lobo"
+          ],
+          "build_s": 2.02436943189241
+        }
+      ],
+      "first_edited_visible_pass_s": 86.13310075318441,
+      "seconds_after_visible_pass": 19.488969470839947,
+      "visible_build_s": 4.064492492703721,
+      "direct_command_diagnostics": [],
+      "skill_path_in_commands": false,
+      "external_skill_path_commands": [],
+      "all_commands": [
+        "/usr/bin/zsh -lc \"pwd && sed -n '1,240p' TASK.txt && printf '\\\\n--- GUIDE.txt ---\\\\n' && sed -n '1,260p' GUIDE.txt && printf '\\\\n--- top-level files ---\\\\n' && rg --files -g '\"'!.*'\"' -g '\"'!**/.git/**'\"' | sed -n '1,160p'\"",
+        "/usr/bin/zsh -lc \"printf '%s\\\\n' '--- logic.lobo ---' && sed -n '1,260p' logic.lobo && printf '%s\\\\n' '--- policy.lobo ---' && sed -n '1,320p' policy.lobo && printf '%s\\\\n' '--- model.lobo ---' && sed -n '1,260p' model.lobo && printf '%s\\\\n' '--- app.lobo ---' && sed -n '1,260p' app.lobo && printf '%s\\\\n' '--- BUNDLE.json ---' && sed -n '1,180p' BUNDLE.json && printf '%s\\\\n' '--- identity files ---' && sed -n '1,240p' logic.lobo.ids.json && sed -n '1,240p' policy.lobo.ids.json\"",
+        "/usr/bin/zsh -lc \"printf '%s\\\\n' '--- lib/http.lobo ---' && sed -n '1,260p' lib/http.lobo && printf '%s\\\\n' '--- lib/json.lobo ---' && sed -n '1,300p' lib/json.lobo && printf '%s\\\\n' '--- lib/helpers.lobo ---' && sed -n '1,220p' lib/helpers.lobo && printf '%s\\\\n' '--- VISIBLE.json ---' && sed -n '1,320p' VISIBLE.json && printf '%s\\\\n' '--- author.py relevant ---' && sed -n '1,260p' author.py && printf '%s\\\\n' '--- check.py relevant ---' && sed -n '1,320p' check.py\"",
+        "/usr/bin/zsh -lc 'python3 author.py'",
+        "/usr/bin/zsh -lc 'python3 check.py'",
+        "/usr/bin/zsh -lc \"sed -n '1,180p' logic.lobo && git diff -- logic.lobo policy.lobo logic.lobo.ids.json policy.lobo.ids.json\"",
+        "/usr/bin/zsh -lc 'python3 check.py'"
+      ]
+    },
+    {
+      "assignment": {
+        "index": 1,
+        "repeat": 0,
+        "family": "catalog",
+        "arm": "v2",
+        "language": "lobo",
+        "reasoning": "high",
+        "phase": "application-change"
+      },
+      "status": "completed",
+      "candidate_correct": true,
+      "timely_complete": true,
+      "known_usage": true,
+      "command_items": 8,
+      "checks": [
+        {
+          "index": 0,
+          "start_s": 38.28249434707686,
+          "end_s": 40.288038284983486,
+          "status": "fail",
+          "edited_files": [],
+          "build_s": 1.981727214064449
+        },
+        {
+          "index": 1,
+          "start_s": 60.87180811306462,
+          "end_s": 63.42778131389059,
+          "status": "pass",
+          "edited_files": [
+            "logic.lobo",
+            "policy.lobo"
+          ],
+          "build_s": 2.530658135889098
+        }
+      ],
+      "first_edited_visible_pass_s": 63.42778131389059,
+      "seconds_after_visible_pass": 27.057099901139736,
+      "visible_build_s": 4.512385349953547,
+      "direct_command_diagnostics": [],
+      "skill_path_in_commands": true,
+      "external_skill_path_commands": [],
+      "all_commands": [
+        "/usr/bin/zsh -lc \"sed -n '1,240p' .agents/skills/lobo-development-v2/SKILL.md && printf '\\\\n--- TASK ---\\\\n' && sed -n '1,240p' TASK.txt && printf '\\\\n--- GUIDE ---\\\\n' && sed -n '1,260p' GUIDE.txt\"",
+        "/usr/bin/zsh -lc \"rg --files -g 'logic.lobo' -g 'policy.lobo' -g '*.ids.json' -g 'VISIBLE.json' -g 'BUNDLE.json' -g 'author.py' -g 'check.py' -g 'model.lobo' -g 'lib.lobo' -g 'client.lobo' -g 'reference*'\"",
+        "/usr/bin/zsh -lc \"printf '%s\\\\n' '--- logic ---'; sed -n '1,260p' logic.lobo; printf '%s\\\\n' '--- policy ---'; sed -n '1,260p' policy.lobo; printf '%s\\\\n' '--- logic ids ---'; cat logic.lobo.ids.json; printf '%s\\\\n' '--- policy ids ---'; cat policy.lobo.ids.json; printf '%s\\\\n' '--- model ---'; sed -n '1,260p' model.lobo; printf '%s\\\\n' '--- bundle ---'; cat BUNDLE.json; printf '%s\\\\n' '--- visible ---'; cat VISIBLE.json\"",
+        "/usr/bin/zsh -lc \"printf '%s\\\\n' '--- app ---'; sed -n '1,240p' app.lobo; printf '%s\\\\n' '--- http lib ---'; sed -n '1,280p' lib/http.lobo; printf '%s\\\\n' '--- json lib ---'; sed -n '1,300p' lib/json.lobo; printf '%s\\\\n' '--- access ---'; sed -n '1,220p' lib/access.lobo; printf '%s\\\\n' '--- helpers ---'; sed -n '1,220p' lib/helpers.lobo; printf '%s\\\\n' '--- io ---'; sed -n '1,180p' lib/io.lobo\"",
+        "/usr/bin/zsh -lc 'python3 check.py'",
+        "/usr/bin/zsh -lc 'git diff -- logic.lobo policy.lobo logic.lobo.ids.json policy.lobo.ids.json && python3 check.py'",
+        "/usr/bin/zsh -lc 'python3 check.py'",
+        "/usr/bin/zsh -lc \"sed -n '1,320p' check.py; printf '\\\\n--- final editable sources ---\\\\n'; sed -n '1,180p' logic.lobo; sed -n '1,140p' policy.lobo; printf '\\\\n--- sidecars unchanged shape ---\\\\n'; cat logic.lobo.ids.json; cat policy.lobo.ids.json\""
+      ]
+    },
+    {
+      "assignment": {
+        "index": 2,
+        "repeat": 0,
+        "family": "transfer",
+        "arm": "v2",
+        "language": "lobo",
+        "reasoning": "high",
+        "phase": "application-change"
+      },
+      "status": "wall_limit",
+      "candidate_correct": true,
+      "timely_complete": false,
+      "known_usage": false,
+      "command_items": 6,
+      "checks": [
+        {
+          "index": 0,
+          "start_s": 39.76048357319087,
+          "end_s": 73.80231179716066,
+          "status": "fail",
+          "edited_files": [],
+          "build_s": 33.753043715143576
+        },
+        {
+          "index": 1,
+          "start_s": 88.71624991111457,
+          "end_s": 112.46551393903792,
+          "status": "pass",
+          "edited_files": [
+            "logic.lobo",
+            "policy.lobo"
+          ],
+          "build_s": 23.478213594062254
+        }
+      ],
+      "first_edited_visible_pass_s": 112.46551393903792,
+      "seconds_after_visible_pass": 7.634300985140726,
+      "visible_build_s": 57.23125730920583,
+      "direct_command_diagnostics": [],
+      "skill_path_in_commands": true,
+      "external_skill_path_commands": [],
+      "all_commands": [
+        "/usr/bin/zsh -lc \"sed -n '1,240p' .agents/skills/lobo-development-v2/SKILL.md && printf '\\\\n--- TASK ---\\\\n' && sed -n '1,240p' TASK.txt && printf '\\\\n--- GUIDE ---\\\\n' && sed -n '1,260p' GUIDE.txt && printf '\\\\n--- files ---\\\\n' && rg --files -g '\"'!*'\"' | sed -n '1,160p'\"",
+        "/usr/bin/zsh -lc \"find . -maxdepth 1 -type f -printf '%f\\\\n' | sort && printf '\\\\n--- logic ---\\\\n' && sed -n '1,260p' logic.lobo && printf '\\\\n--- policy ---\\\\n' && sed -n '1,260p' policy.lobo && printf '\\\\n--- ids ---\\\\n' && for f in logic.ids.json policy.ids.json; do echo \\\"[\"'$f]\"; sed -n '\"'1,260p' \\\"\"'$f\"; done && printf '\"'\\\\n--- visible ---\\\\n' && sed -n '1,260p' VISIBLE.json\"",
+        "/usr/bin/zsh -lc \"printf '%s\\\\n' '--- logic ids ---'; sed -n '1,300p' logic.lobo.ids.json; printf '%s\\\\n' '--- policy ids ---'; sed -n '1,300p' policy.lobo.ids.json; printf '%s\\\\n' '--- visible ---'; sed -n '1,320p' VISIBLE.json; printf '%s\\\\n' '--- bundle ---'; sed -n '1,220p' BUNDLE.json\"",
+        "/usr/bin/zsh -lc \"rg -n \\\"Text::|length\\\\(\\\" --glob '*.lobo' --glob '*.txt' --glob '*.json' .\"",
+        "/usr/bin/zsh -lc 'python3 check.py'",
+        "/usr/bin/zsh -lc 'python3 check.py'"
+      ]
+    },
+    {
+      "assignment": {
+        "index": 3,
+        "repeat": 0,
+        "family": "transfer",
+        "arm": "control",
+        "language": "lobo",
+        "reasoning": "high",
+        "phase": "application-change"
+      },
+      "status": "completed",
+      "candidate_correct": true,
+      "timely_complete": true,
+      "known_usage": true,
+      "command_items": 5,
+      "checks": [
+        {
+          "index": 0,
+          "start_s": 57.70572455204092,
+          "end_s": 91.15044290805236,
+          "status": "pass",
+          "edited_files": [
+            "logic.lobo",
+            "policy.lobo"
+          ],
+          "build_s": 33.28079392993823
+        }
+      ],
+      "first_edited_visible_pass_s": 91.15044290805236,
+      "seconds_after_visible_pass": 23.10001257294789,
+      "visible_build_s": 33.28079392993823,
+      "direct_command_diagnostics": [],
+      "skill_path_in_commands": false,
+      "external_skill_path_commands": [],
+      "all_commands": [
+        "/usr/bin/zsh -lc 'ls -la'",
+        "/usr/bin/zsh -lc \"sed -n '1,240p' TASK.txt GUIDE.txt\"",
+        "/usr/bin/zsh -lc \"sed -n '1,260p' GUIDE.txt\"",
+        "/usr/bin/zsh -lc \"sed -n '1,280p' logic.lobo policy.lobo logic.lobo.ids.json policy.lobo.ids.json\"",
+        "/usr/bin/zsh -lc 'python3 check.py'"
+      ]
+    },
+    {
+      "assignment": {
+        "index": 4,
+        "repeat": 1,
+        "family": "catalog",
+        "arm": "v2",
+        "language": "lobo",
+        "reasoning": "high",
+        "phase": "application-change"
+      },
+      "status": "completed",
+      "candidate_correct": true,
+      "timely_complete": true,
+      "known_usage": true,
+      "command_items": 6,
+      "checks": [
+        {
+          "index": 0,
+          "start_s": 35.87756179505959,
+          "end_s": 37.88989384099841,
+          "status": "fail",
+          "edited_files": [],
+          "build_s": 1.9880133499391377
+        },
+        {
+          "index": 1,
+          "start_s": 48.429513425100595,
+          "end_s": 50.42367103300057,
+          "status": "pass",
+          "edited_files": [
+            "logic.lobo",
+            "policy.lobo"
+          ],
+          "build_s": 1.969867177074775
+        }
+      ],
+      "first_edited_visible_pass_s": 50.42367103300057,
+      "seconds_after_visible_pass": 19.594924514181912,
+      "visible_build_s": 3.957880527013913,
+      "direct_command_diagnostics": [],
+      "skill_path_in_commands": true,
+      "external_skill_path_commands": [],
+      "all_commands": [
+        "/usr/bin/zsh -lc \"pwd && sed -n '1,240p' TASK.txt && printf '\\\\n--- GUIDE ---\\\\n' && sed -n '1,260p' GUIDE.txt && printf '\\\\n--- SKILL ---\\\\n' && sed -n '1,260p' .agents/skills/lobo-development-v2/SKILL.md && printf '\\\\n--- FILES ---\\\\n' && rg --files -g '\"'!*'\"' | sed -n '1,120p'\"",
+        "/usr/bin/zsh -lc \"find . -maxdepth 1 -type f -printf '%f\\\\n' | sort && printf '\\\\n--- logic ---\\\\n' && sed -n '1,260p' logic.lobo && printf '\\\\n--- policy ---\\\\n' && sed -n '1,260p' policy.lobo && printf '\\\\n--- identity files ---\\\\n' && for f in logic.ids.json policy.ids.json; do echo \\\"### \"'$f\"; sed -n '\"'1,240p' \\\"\"'$f\"; done'",
+        "/usr/bin/zsh -lc \"printf '%s\\\\n' '--- logic ids ---' && sed -n '1,260p' logic.lobo.ids.json && printf '%s\\\\n' '--- policy ids ---' && sed -n '1,260p' policy.lobo.ids.json && printf '%s\\\\n' '--- model ---' && sed -n '1,260p' model.lobo && printf '%s\\\\n' '--- app ---' && sed -n '1,320p' app.lobo && printf '%s\\\\n' '--- bundle ---' && sed -n '1,260p' BUNDLE.json && printf '%s\\\\n' '--- visible ---' && sed -n '1,320p' VISIBLE.json\"",
+        "/usr/bin/zsh -lc 'python3 check.py'",
+        "/usr/bin/zsh -lc 'python3 check.py'",
+        "/usr/bin/zsh -lc \"git diff -- logic.lobo policy.lobo logic.lobo.ids.json policy.lobo.ids.json && printf '\\\\n--- status ---\\\\n' && git status --short\""
+      ]
+    },
+    {
+      "assignment": {
+        "index": 5,
+        "repeat": 1,
+        "family": "catalog",
+        "arm": "control",
+        "language": "lobo",
+        "reasoning": "high",
+        "phase": "application-change"
+      },
+      "status": "completed",
+      "candidate_correct": true,
+      "timely_complete": true,
+      "known_usage": true,
+      "command_items": 7,
+      "checks": [
+        {
+          "index": 0,
+          "start_s": 65.31828139792196,
+          "end_s": 67.35244476981461,
+          "status": "pass",
+          "edited_files": [
+            "logic.lobo",
+            "policy.lobo"
+          ],
+          "build_s": 2.0088285009842366
+        }
+      ],
+      "first_edited_visible_pass_s": 67.35244476981461,
+      "seconds_after_visible_pass": 21.816032871138304,
+      "visible_build_s": 2.0088285009842366,
+      "direct_command_diagnostics": [],
+      "skill_path_in_commands": false,
+      "external_skill_path_commands": [],
+      "all_commands": [
+        "/usr/bin/zsh -lc \"pwd && sed -n '1,240p' TASK.txt && printf '\\\\n--- GUIDE ---\\\\n' && sed -n '1,260p' GUIDE.txt\"",
+        "/usr/bin/zsh -lc \"ls -la && printf '\\\\n--- logic.lobo ---\\\\n' && sed -n '1,260p' logic.lobo && printf '\\\\n--- policy.lobo ---\\\\n' && sed -n '1,260p' policy.lobo && printf '\\\\n--- identity files ---\\\\n' && for f in logic.ids.json policy.ids.json; do echo \\\"[\"'$f]\"; sed -n '\"'1,240p' \\\"\"'$f\"; done'",
+        "/usr/bin/zsh -lc \"printf '%s\\\\n' '--- logic.lobo.ids.json ---' && sed -n '1,260p' logic.lobo.ids.json && printf '%s\\\\n' '--- policy.lobo.ids.json ---' && sed -n '1,260p' policy.lobo.ids.json && printf '%s\\\\n' '--- model.lobo ---' && sed -n '1,220p' model.lobo && printf '%s\\\\n' '--- app.lobo ---' && sed -n '1,220p' app.lobo && printf '%s\\\\n' '--- VISIBLE.json ---' && sed -n '1,260p' VISIBLE.json\"",
+        "/usr/bin/zsh -lc \"rg -n \\\"error_response|json_response|record Response|Allow|method not allowed\\\" libraries spec docs --glob '*.lobo' --glob '*.md' --glob '*.txt' | head -120\"",
+        "/usr/bin/zsh -lc \"sed -n '80,105p' libraries/http-server/server.lobo && sed -n '1,80p' libraries/json/README.md && sed -n '1,75p' libraries/http/README.md && sed -n '1,45p' libraries/json/json.lobo\"",
+        "/usr/bin/zsh -lc 'python3 check.py'",
+        "/usr/bin/zsh -lc 'git diff -- logic.lobo policy.lobo logic.lobo.ids.json policy.lobo.ids.json && git status --short'"
+      ]
+    },
+    {
+      "assignment": {
+        "index": 6,
+        "repeat": 1,
+        "family": "transfer",
+        "arm": "control",
+        "language": "lobo",
+        "reasoning": "high",
+        "phase": "application-change"
+      },
+      "status": "wall_limit",
+      "candidate_correct": true,
+      "timely_complete": false,
+      "known_usage": false,
+      "command_items": 8,
+      "checks": [
+        {
+          "index": 0,
+          "start_s": 66.3282442910131,
+          "end_s": 66.35002547013573,
+          "status": "compile_error",
+          "edited_files": [
+            "logic.lobo",
+            "policy.lobo"
+          ],
+          "build_s": 0.010059378109872341
+        },
+        {
+          "index": 1,
+          "start_s": 82.10938250506297,
+          "end_s": 103.75552755920216,
+          "status": "pass",
+          "edited_files": [
+            "logic.lobo",
+            "policy.lobo"
+          ],
+          "build_s": 21.51331277587451
+        }
+      ],
+      "first_edited_visible_pass_s": 103.75552755920216,
+      "seconds_after_visible_pass": 16.296915183775127,
+      "visible_build_s": 21.523372153984383,
+      "direct_command_diagnostics": [],
+      "skill_path_in_commands": false,
+      "external_skill_path_commands": [],
+      "all_commands": [
+        "/usr/bin/zsh -lc \"pwd && sed -n '1,240p' TASK.txt && printf '\\\\n--- GUIDE ---\\\\n' && sed -n '1,260p' GUIDE.txt\"",
+        "/usr/bin/zsh -lc \"ls -l logic.lobo policy.lobo logic.ids.json policy.ids.json && printf '\\\\n--- logic.lobo ---\\\\n' && sed -n '1,320p' logic.lobo && printf '\\\\n--- policy.lobo ---\\\\n' && sed -n '1,320p' policy.lobo && printf '\\\\n--- logic.ids.json ---\\\\n' && sed -n '1,240p' logic.ids.json && printf '\\\\n--- policy.ids.json ---\\\\n' && sed -n '1,240p' policy.ids.json\"",
+        "/usr/bin/zsh -lc \"rg --files -g 'logic*' -g 'policy*' -g '\"'!*/'\"' | sort && printf '\\\\n--- logic.lobo ---\\\\n' && sed -n '1,320p' logic.lobo && printf '\\\\n--- policy.lobo ---\\\\n' && sed -n '1,320p' policy.lobo\"",
+        "/usr/bin/zsh -lc \"printf '%s\\\\n' '--- logic.lobo.ids.json ---' && sed -n '1,260p' logic.lobo.ids.json && printf '%s\\\\n' '--- policy.lobo.ids.json ---' && sed -n '1,260p' policy.lobo.ids.json\"",
+        "/usr/bin/zsh -lc 'python3 check.py'",
+        "/usr/bin/zsh -lc \"nl -ba logic.lobo | sed -n '1,120p'\"",
+        "/usr/bin/zsh -lc 'python3 check.py'",
+        "/usr/bin/zsh -lc 'git diff -- logic.lobo policy.lobo logic.lobo.ids.json policy.lobo.ids.json'"
+      ]
+    },
+    {
+      "assignment": {
+        "index": 7,
+        "repeat": 1,
+        "family": "transfer",
+        "arm": "v2",
+        "language": "lobo",
+        "reasoning": "high",
+        "phase": "application-change"
+      },
+      "status": "completed",
+      "candidate_correct": true,
+      "timely_complete": true,
+      "known_usage": true,
+      "command_items": 6,
+      "checks": [
+        {
+          "index": 0,
+          "start_s": 56.341482882155105,
+          "end_s": 56.362285514129326,
+          "status": "compile_error",
+          "edited_files": [
+            "logic.lobo",
+            "policy.lobo"
+          ],
+          "build_s": 0.009966538054868579
+        },
+        {
+          "index": 1,
+          "start_s": 65.75366745819338,
+          "end_s": 91.73207438713871,
+          "status": "pass",
+          "edited_files": [
+            "logic.lobo",
+            "policy.lobo"
+          ],
+          "build_s": 25.832381098996848
+        }
+      ],
+      "first_edited_visible_pass_s": 91.73207438713871,
+      "seconds_after_visible_pass": 20.26827260898426,
+      "visible_build_s": 25.842347637051716,
+      "direct_command_diagnostics": [],
+      "skill_path_in_commands": true,
+      "external_skill_path_commands": [],
+      "all_commands": [
+        "/usr/bin/zsh -lc \"sed -n '1,240p' .agents/skills/lobo-development-v2/SKILL.md && sed -n '1,240p' TASK.txt && sed -n '1,260p' GUIDE.txt && printf '\\\\n-- files --\\\\n' && rg --files -g '*.lobo' -g 'TASK.txt' -g 'GUIDE.txt' -g 'AGENTS.md' | sort\"",
+        "/usr/bin/zsh -lc \"printf '%s\\\\n' '-- root --'; ls -la; printf '%s\\\\n' '-- guide --'; sed -n '1,260p' GUIDE.txt; printf '%s\\\\n' '-- logic --'; sed -n '1,300p' logic.lobo; printf '%s\\\\n' '-- policy --'; sed -n '1,300p' policy.lobo; printf '%s\\\\n' '-- sidecars --'; for f in logic.lobo.ids.json policy.lobo.ids.json; do [ -f \\\"\"'$f\" ] && { echo \"### $f\"; sed -n '\"'1,240p' \\\"\"'$f\"; }; done'",
+        "/usr/bin/zsh -lc \"printf '%s\\\\n' '-- app --'; sed -n '1,260p' app.lobo; printf '%s\\\\n' '-- model --'; sed -n '1,200p' model.lobo; printf '%s\\\\n' '-- sql api --'; sed -n '1,360p' lib/sql.lobo; printf '%s\\\\n' '-- bundle --'; sed -n '1,120p' BUNDLE.json; printf '%s\\\\n' '-- visible --'; sed -n '1,320p' VISIBLE.json\"",
+        "/usr/bin/zsh -lc \"rg -n \\\"Text::|scalar|Unicode|length\\\\(\\\" docs/agent-reference/compact-pilot-2026-11-24 spec libraries .agents/skills/lobo-programming/references 2>/dev/null | head -160\"",
+        "/usr/bin/zsh -lc 'python3 check.py'",
+        "/usr/bin/zsh -lc 'python3 check.py'"
+      ]
+    },
+    {
+      "assignment": {
+        "index": 8,
+        "repeat": 2,
+        "family": "catalog",
+        "arm": "control",
+        "language": "lobo",
+        "reasoning": "high",
+        "phase": "application-change"
+      },
+      "status": "completed",
+      "candidate_correct": true,
+      "timely_complete": true,
+      "known_usage": true,
+      "command_items": 7,
+      "checks": [
+        {
+          "index": 0,
+          "start_s": 49.76861093612388,
+          "end_s": 51.719886870123446,
+          "status": "pass",
+          "edited_files": [
+            "logic.lobo",
+            "policy.lobo"
+          ],
+          "build_s": 1.927461356157437
+        }
+      ],
+      "first_edited_visible_pass_s": 51.719886870123446,
+      "seconds_after_visible_pass": 25.163251121994108,
+      "visible_build_s": 1.927461356157437,
+      "direct_command_diagnostics": [],
+      "skill_path_in_commands": false,
+      "external_skill_path_commands": [],
+      "all_commands": [
+        "/usr/bin/zsh -lc \"pwd; sed -n '1,240p' TASK.txt; sed -n '1,260p' GUIDE.txt\"",
+        "/usr/bin/zsh -lc \"sed -n '1,260p' logic.lobo; sed -n '1,260p' policy.lobo; sed -n '1,240p' logic.ids.json; sed -n '1,240p' policy.ids.json\"",
+        "/usr/bin/zsh -lc \"rg --files -g 'logic*' -g 'policy*' -g '*.ids.json' .\"",
+        "/usr/bin/zsh -lc \"sed -n '1,240p' logic.lobo.ids.json; sed -n '1,240p' policy.lobo.ids.json\"",
+        "/usr/bin/zsh -lc \"sed -n '1,220p' model.lobo; sed -n '1,260p' VISIBLE.json\"",
+        "/usr/bin/zsh -lc 'python3 check.py'",
+        "/usr/bin/zsh -lc 'git diff --check; git diff -- logic.lobo policy.lobo logic.lobo.ids.json policy.lobo.ids.json'"
+      ]
+    },
+    {
+      "assignment": {
+        "index": 9,
+        "repeat": 2,
+        "family": "catalog",
+        "arm": "v2",
+        "language": "lobo",
+        "reasoning": "high",
+        "phase": "application-change"
+      },
+      "status": "completed",
+      "candidate_correct": true,
+      "timely_complete": true,
+      "known_usage": true,
+      "command_items": 9,
+      "checks": [
+        {
+          "index": 0,
+          "start_s": 24.883792938897386,
+          "end_s": 26.795743410941213,
+          "status": "fail",
+          "edited_files": [],
+          "build_s": 1.8871939450036734
+        },
+        {
+          "index": 1,
+          "start_s": 42.10466215899214,
+          "end_s": 44.52333054388873,
+          "status": "pass",
+          "edited_files": [
+            "logic.lobo",
+            "policy.lobo"
+          ],
+          "build_s": 2.3941946579143405
+        },
+        {
+          "index": 2,
+          "start_s": 59.49048775387928,
+          "end_s": 61.475515848957,
+          "status": "pass",
+          "edited_files": [
+            "logic.lobo",
+            "policy.lobo"
+          ],
+          "build_s": 1.9612687770277262
+        },
+        {
+          "index": 3,
+          "start_s": 97.89137993194163,
+          "end_s": 99.85380796599202,
+          "status": "pass",
+          "edited_files": [
+            "logic.lobo",
+            "policy.lobo"
+          ],
+          "build_s": 1.938362394925207
+        }
+      ],
+      "first_edited_visible_pass_s": 44.52333054388873,
+      "seconds_after_visible_pass": 63.87815381400287,
+      "visible_build_s": 8.181019774870947,
+      "direct_command_diagnostics": [],
+      "skill_path_in_commands": true,
+      "external_skill_path_commands": [],
+      "all_commands": [
+        "/usr/bin/zsh -lc \"sed -n '1,240p' .agents/skills/lobo-development-v2/SKILL.md && printf '\\\\n--- TASK ---\\\\n' && sed -n '1,240p' TASK.txt && printf '\\\\n--- GUIDE ---\\\\n' && sed -n '1,280p' GUIDE.txt\"",
+        "/usr/bin/zsh -lc \"printf '%s\\\\n' '--- editable files ---' && rg --files -g 'logic.lobo' -g 'policy.lobo' -g 'logic.ids.json' -g 'policy.ids.json' -g 'VISIBLE.json' -g 'BUNDLE.json' -g 'model.lobo' -g 'lib.lobo' -g 'app.lobo' && for f in logic.lobo policy.lobo logic.ids.json policy.ids.json VISIBLE.json BUNDLE.json; do if test -f \\\"\"'$f\"; then printf '\"'\\\\n--- %s ---\\\\n' \\\"\"'$f\"; sed -n '\"'1,280p' \\\"\"'$f\"; fi; done'",
+        "/usr/bin/zsh -lc \"ls -la logic.lobo policy.lobo logic.ids.json policy.ids.json 2>&1; printf '\\\\n--- model ---\\\\n'; sed -n '1,180p' model.lobo; printf '\\\\n--- root scripts ---\\\\n'; rg --files -g 'author.py' -g 'check.py' -g 'client*' -g 'VISIBLE.json' -g 'TASK.txt' -g 'GUIDE.txt' -g 'BUNDLE.json'\"",
+        "/usr/bin/zsh -lc 'python3 check.py'",
+        "/usr/bin/zsh -lc 'python3 check.py'",
+        "/usr/bin/zsh -lc 'python3 check.py'",
+        "/usr/bin/zsh -lc 'git diff --check -- logic.lobo policy.lobo && git status --short -- logic.lobo policy.lobo logic.ids.json policy.ids.json && git diff -- logic.lobo policy.lobo'",
+        "/usr/bin/zsh -lc \"sed -n '1,220p' logic.lobo && printf '\\\\n--- policy ---\\\\n' && sed -n '1,180p' policy.lobo\"",
+        "/usr/bin/zsh -lc 'python3 check.py'"
+      ]
+    },
+    {
+      "assignment": {
+        "index": 10,
+        "repeat": 2,
+        "family": "transfer",
+        "arm": "v2",
+        "language": "lobo",
+        "reasoning": "high",
+        "phase": "application-change"
+      },
+      "status": "wall_limit",
+      "candidate_correct": true,
+      "timely_complete": false,
+      "known_usage": false,
+      "command_items": 9,
+      "checks": [
+        {
+          "index": 0,
+          "start_s": 75.62015188392252,
+          "end_s": 103.70812798989937,
+          "status": "pass",
+          "edited_files": [
+            "logic.lobo",
+            "policy.lobo"
+          ],
+          "build_s": 27.949617275968194
+        }
+      ],
+      "first_edited_visible_pass_s": 103.70812798989937,
+      "seconds_after_visible_pass": 16.36712366505526,
+      "visible_build_s": 27.949617275968194,
+      "direct_command_diagnostics": [
+        {
+          "command": "/usr/bin/zsh -lc 'python3 author.py'",
+          "diagnostic": {
+            "code": "compile.action.undeclared",
+            "message": "caller must declare db.close",
+            "phase": "check",
+            "range": {
+              "end": {
+                "byte": 555,
+                "character": 113,
+                "line": 7
+              },
+              "start": {
+                "byte": 456,
+                "character": 14,
+                "line": 7
+              }
+            },
+            "source": "logic.lobo",
+            "subject": "realistic.transfer.logic.perform"
+          }
+        }
+      ],
+      "skill_path_in_commands": true,
+      "external_skill_path_commands": [],
+      "all_commands": [
+        "/usr/bin/zsh -lc \"sed -n '1,240p' TASK.txt && printf '\\\\n--- GUIDE ---\\\\n' && sed -n '1,260p' GUIDE.txt && printf '\\\\n--- SKILL ---\\\\n' && sed -n '1,260p' .agents/skills/lobo-development-v2/SKILL.md\"",
+        "/usr/bin/zsh -lc \"printf '%s\\\\n' '--- logic.lobo ---' && sed -n '1,280p' logic.lobo && printf '%s\\\\n' '--- policy.lobo ---' && sed -n '1,280p' policy.lobo && printf '%s\\\\n' '--- identity sidecars ---' && for f in logic.ids.json policy.ids.json; do echo \\\"--- \"'$f ---\"; sed -n '\"'1,240p' \\\"\"'$f\"; done'",
+        "/usr/bin/zsh -lc \"rg --files -g 'logic*' -g 'policy*' -g 'TASK.txt' -g 'GUIDE.txt' -g 'VISIBLE.json' -g 'BUNDLE.json' -g 'author.py' -g 'check.py' -g '*.lobo' -g '*.ids.json' | sort\"",
+        "/usr/bin/zsh -lc \"printf '%s\\\\n' '--- logic ids ---' && sed -n '1,240p' logic.lobo.ids.json && printf '%s\\\\n' '--- policy ids ---' && sed -n '1,240p' policy.lobo.ids.json && printf '%s\\\\n' '--- model ---' && sed -n '1,180p' model.lobo && printf '%s\\\\n' '--- sql wrapper ---' && sed -n '1,300p' lib/sql.lobo && printf '%s\\\\n' '--- visible ---' && sed -n '1,320p' VISIBLE.json && printf '%s\\\\n' '--- bundle ---' && sed -n '1,220p' BUNDLE.json\"",
+        "/usr/bin/zsh -lc \"printf '%s\\\\n' '--- language text/conditions ---' && rg -n -C 3 'Text::|Unicode|scalar|length|match|try|SqlResult|transaction' .agents/skills/lobo-programming/references/language.md docs/agent-reference/compact-pilot-2026-11-24/ranges.txt docs/agent-reference/compact-pilot-2026-11-24/nominal.txt docs/agent-reference/compact-pilot-2026-11-24/propagation.txt | sed -n '1,260p'\"",
+        "/usr/bin/zsh -lc 'python3 author.py'",
+        "/usr/bin/zsh -lc 'python3 author.py'",
+        "/usr/bin/zsh -lc 'python3 check.py'",
+        "/usr/bin/zsh -lc \"git diff -- logic.lobo policy.lobo logic.lobo.ids.json policy.lobo.ids.json && printf '\\\\n--- final sources ---\\\\n' && sed -n '1,220p' logic.lobo && sed -n '1,120p' policy.lobo\""
+      ]
+    },
+    {
+      "assignment": {
+        "index": 11,
+        "repeat": 2,
+        "family": "transfer",
+        "arm": "control",
+        "language": "lobo",
+        "reasoning": "high",
+        "phase": "application-change"
+      },
+      "status": "wall_limit",
+      "candidate_correct": true,
+      "timely_complete": false,
+      "known_usage": false,
+      "command_items": 10,
+      "checks": [
+        {
+          "index": 0,
+          "start_s": 57.910868817940354,
+          "end_s": 85.75763395614922,
+          "status": "pass",
+          "edited_files": [
+            "logic.lobo",
+            "policy.lobo"
+          ],
+          "build_s": 27.699511784827337
+        },
+        {
+          "index": 1,
+          "start_s": 114.77465771511197,
+          "end_s": 143.33887815708295,
+          "status": "pass",
+          "edited_files": [
+            "logic.lobo",
+            "policy.lobo"
+          ],
+          "build_s": 28.364177994895726
+        }
+      ],
+      "first_edited_visible_pass_s": 85.75763395614922,
+      "seconds_after_visible_pass": 34.35072665777989,
+      "visible_build_s": 56.06368977972306,
+      "direct_command_diagnostics": [],
+      "skill_path_in_commands": false,
+      "external_skill_path_commands": [],
+      "all_commands": [
+        "/usr/bin/zsh -lc \"pwd; rg --files -g 'TASK.txt' -g 'GUIDE.txt' -g 'AGENTS.md' -g '\"'!.*'\"' -g '*.py' -g '*.js' -g '*.ts' -g '*.java' -g '*.cpp' -g '*.c' -g '*.rs' -g '*.go'\"",
+        "/usr/bin/zsh -lc \"sed -n '1,240p' TASK.txt; printf '\\\\n--- GUIDE ---\\\\n'; sed -n '1,260p' GUIDE.txt; printf '\\\\n--- ALGORITHM FILES ---\\\\n'; sed -n '1,260p' author.py; printf '\\\\n--- CHECKER ---\\\\n'; sed -n '1,260p' check.py\"",
+        "/usr/bin/zsh -lc \"ls -l logic.lobo policy.lobo logic.ids.json policy.ids.json; printf '\\\\n--- logic ---\\\\n'; sed -n '1,320p' logic.lobo; printf '\\\\n--- policy ---\\\\n'; sed -n '1,320p' policy.lobo; printf '\\\\n--- ids ---\\\\n'; sed -n '1,240p' logic.ids.json; sed -n '1,240p' policy.ids.json\"",
+        "/usr/bin/zsh -lc \"rg --files -g 'logic*' -g 'policy*' -g '*.ids.json' -g '\"'!*/'\"' | sort\"",
+        "/usr/bin/zsh -lc \"sed -n '1,260p' logic.lobo.ids.json; printf '\\\\n--- policy ids ---\\\\n'; sed -n '1,260p' policy.lobo.ids.json\"",
+        "/usr/bin/zsh -lc 'python3 author.py'",
+        "/usr/bin/zsh -lc 'python3 check.py'",
+        "/usr/bin/zsh -lc \"git diff -- logic.lobo policy.lobo logic.lobo.ids.json policy.lobo.ids.json; printf '\\\\n--- status ---\\\\n'; git status --short\"",
+        "/usr/bin/zsh -lc \"sed -n '1,260p' logic.lobo; printf '\\\\n--- policy ---\\\\n'; sed -n '1,120p' policy.lobo; printf '\\\\n--- sidecars ---\\\\n'; sed -n '1,220p' logic.lobo.ids.json; sed -n '1,160p' policy.lobo.ids.json\"",
+        "/usr/bin/zsh -lc 'python3 check.py'"
+      ]
+    }
+  ],
+  "groups": [
+    {
+      "arm": "control",
+      "visible_status_counts": {
+        "fail": 1,
+        "pass": 7,
+        "compile_error": 1
+      },
+      "direct_diagnostic_codes": {},
+      "skill_path_observed": 0,
+      "timeouts_after_visible_pass": 2
+    },
+    {
+      "arm": "v2",
+      "visible_status_counts": {
+        "fail": 4,
+        "pass": 8,
+        "compile_error": 1
+      },
+      "direct_diagnostic_codes": {
+        "compile.action.undeclared": 1
+      },
+      "skill_path_observed": 6,
+      "timeouts_after_visible_pass": 2
+    }
+  ]
+}

@@ -1,0 +1,1 @@
+The registration diff check reported trailing blank lines in four byte-identical copied compact-example.lobo reference files. Preserve the frozen bytes. As in prior snapshots, scope Git whitespace exemption to raw registration copies only; no delivered input, harness or product change. Corrected before participant calls.

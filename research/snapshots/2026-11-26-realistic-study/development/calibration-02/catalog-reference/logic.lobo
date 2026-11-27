@@ -1,0 +1,36 @@
+module logic;
+use model {Product,catalog}; use policy {Key,read_id}; use http {Request,Response,json_response,error_response};
+use json {Json,JsonArray,object,field,array,append};
+record Items {values:JsonArray,count:I64}
+fn product_json(product:Product)->Json {
+ let a=field(object(),"id",Json::Integer(product.id));
+ let b=field(a,"name",Json::String(product.name));
+ Json::Object(field(b,"stock",Json::Integer(product.stock)))
+}
+fn products_json(available:Bool)->Json {
+ let products=catalog();
+ let done=fold(i in List::length(products),state:Items=Items {values:array(),count:0}) {
+  let item=List::head(fold(j in i,rest:List<Product> =products) {List::tail(rest)});
+  if item.enabled && (!available || item.stock>0) {Items {values:append(state.values,product_json(item)),count:state.count+1}} else {state}
+ };
+ Json::Object(field(field(object(),"items",Json::Array(done.values)),"total",Json::Integer(done.count)))
+}
+fn handle(request:Request)->Response {
+ if request.method!="GET" && request.method!="HEAD" {error_response(405,"method not allowed")} else {
+  if request.path=="/health" {json_response(200,Json {status:"ready"})} else {
+   if request.path=="/api/products" || request.path=="/api/products/available" {json_response(200,products_json(request.path=="/api/products/available"))} else {
+    match read_id(request.path) {
+     Missing=>error_response(404,"not found"),
+     Found(id)=> {
+      let products=catalog();
+      let found=fold(i in List::length(products),pick:List<Product> =List::empty<Product>()) {
+       let item=List::head(fold(j in i,rest:List<Product> =products) {List::tail(rest)});
+       if item.id==id && item.enabled {List::prepend(item,pick)} else {pick}
+      };
+      if List::length(found)==0 {error_response(404,"not found")} else {json_response(200,product_json(List::head(found)))}
+     }
+    }
+   }
+  }
+ }
+}

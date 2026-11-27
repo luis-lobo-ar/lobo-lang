@@ -1,0 +1,55 @@
+{
+  "format": "lobo-realistic-verification/1",
+  "date": "2026-11-26",
+  "registration_commit": "878329fae1a72c89bd18a9426bca81447f645708",
+  "compiler_version": "1.11.2",
+  "core": "1.11",
+  "compiler_sha256": "8d9f84530b8d34a6a72597d25befc249a604430a6569656b4184721e1e444d9d",
+  "scheduled": 12,
+  "attempted": 12,
+  "completed": 8,
+  "wall_limit": 4,
+  "unattempted": 0,
+  "correct_candidates": 12,
+  "final_scenarios": 300,
+  "distinct_scenarios": 50,
+  "final_public_scenario_observations": 60,
+  "final_private_scenario_observations": 240,
+  "native_http_connections": 216,
+  "native_sqlite_operations": 204,
+  "primary_control": 4,
+  "primary_v2": 4,
+  "complete_token_pairs": 3,
+  "complete_sqlite_token_pairs": 0,
+  "known_usage_records_including_availability": 9,
+  "unknown_usage_records": 4,
+  "known_input_plus_output_tokens": 1508407,
+  "checks": {
+    "harness": 69,
+    "new_harness": 10,
+    "research": 15,
+    "calibration_scenarios": 170,
+    "compiled_mutants_killed": 3,
+    "strict_json_type_sensitivity_scenarios": 300,
+    "type_sensitivity_score_changes": 0
+  },
+  "late_drained_public_checks": [
+    {
+      "index": 11,
+      "check": 1,
+      "end_s": 143.33887815708295,
+      "grants_extra_agent_window": false
+    }
+  ],
+  "compiler_regression": "Unchanged SHA and prior312-pass receipt reused; new harness/calibration/TDD/research checks run. Full compiler/editor suite not rerun.",
+  "all_freeze_audits_pass": true,
+  "raw_archive": {
+    "format": "lobo-realistic-raw/1",
+    "archive": "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/realistic-study-20261126-raw.tar.gz",
+    "sha256": "84c66952a75ac3d4153dfbb0ea453dbe0cddc798b3ec043257971044db3d46a0",
+    "bytes": 18742138,
+    "members": 3454,
+    "all_member_hashes_verified": true,
+    "limits": "Local ignored archive, not off-device backup. Authentication home was outside evidence and removed. Frozen compiler retained separately at registered path/hash. Final link/index checks retained outside closed directory."
+  }
+}

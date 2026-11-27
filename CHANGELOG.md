@@ -1152,3 +1152,16 @@ final whole-repository checks and version 1.0 remain pending. The running eviden
   [0006](decisions/0006-native-machine-code-is-the-default.md).
 - Independent differential and sanitizer gates:
   [0007](decisions/0007-native-differential-and-sanitizer-gates.md).
+
+## 2026-11-26 — Realistic application skill comparison (decision0072)
+
+- Registered and published12 fresh native HTTP/JSON and transactional SQLite application changes,
+  control versus unchanged v2, using the same GPT-5.6-Luna/high120s/16-command/6-check limits.
+- Both arms complete4/6 on time; all12 final candidates pass300 repeated scenarios. Four timeouts
+  follow public passes and have unknown usage. Three complete token pairs are all HTTP, median
+  v2/control1.0405 with mixed results; no skill benefit or complete SQLite cost comparison demonstrated.
+- Preserve native wire/state observations, every candidate/error/calibration, prompts, process/type audits
+  and a verified3454-member local raw archive.69 harness and15research tests pass;3 compiled mutants fail.
+  Reuse the pinned312-pass compiler receipt, without claiming a new full compiler/editor run.
+- Append paper local-047 preserving46 prior entry objects/168 pins. Product, libraries, skills, cards
+  and old studies remain unchanged. See [the report](research/realistic-development-study-2026-11-26.md).

@@ -1,0 +1,9 @@
+{
+  "format": "lobo-identities/0.1",
+  "identities": {
+    "module": "realistic.catalog.policy",
+    "Key": "realistic.catalog.policy.Key",
+    "Digits": "realistic.catalog.policy.Digits",
+    "read_id": "realistic.catalog.policy.read_id"
+  }
+}

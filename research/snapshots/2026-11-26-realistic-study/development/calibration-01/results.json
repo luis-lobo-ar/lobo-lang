@@ -1,0 +1,43 @@
+[
+  {
+    "task": "catalog",
+    "kind": "reference",
+    "result": {
+      "issues": [],
+      "build": {
+        "command": [
+          "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/matched-study-20261123/freeze/lobo",
+          "compile",
+          "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/realistic-study-20261126/development/calibration-01/catalog-reference-check/source/app.lobo",
+          "--source",
+          "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/realistic-study-20261126/development/calibration-01/catalog-reference-check/source/logic.lobo",
+          "--source",
+          "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/realistic-study-20261126/development/calibration-01/catalog-reference-check/source/policy.lobo",
+          "--source",
+          "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/realistic-study-20261126/development/calibration-01/catalog-reference-check/source/model.lobo",
+          "--source",
+          "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/realistic-study-20261126/development/calibration-01/catalog-reference-check/source/lib/http.lobo",
+          "--source",
+          "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/realistic-study-20261126/development/calibration-01/catalog-reference-check/source/lib/io.lobo",
+          "--source",
+          "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/realistic-study-20261126/development/calibration-01/catalog-reference-check/source/lib/helpers.lobo",
+          "--source",
+          "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/realistic-study-20261126/development/calibration-01/catalog-reference-check/source/lib/json.lobo",
+          "--source",
+          "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/realistic-study-20261126/development/calibration-01/catalog-reference-check/source/lib/access.lobo",
+          "-o",
+          "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/realistic-study-20261126/development/calibration-01/catalog-reference-check/program"
+        ],
+        "exit_code": 1,
+        "stdout": "{\"diagnostic\":{\"code\":\"compile.syntax.invalid\",\"message\":\"unterminated quoted string\",\"phase\":\"parse\",\"range\":{\"end\":{\"byte\":334,\"character\":0,\"line\":5},\"start\":{\"byte\":281,\"character\":178,\"line\":3}},\"source\":\"/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/realistic-study-20261126/development/calibration-01/catalog-reference-check/source/model.lobo\"},\"kind\":\"compile_error\",\"status\":\"error\"}\n",
+        "stderr": "",
+        "wall_s": 0.007707796059548855,
+        "ok": false
+      },
+      "cases": [],
+      "accepted": false,
+      "passed": 0,
+      "total": 30
+    }
+  }
+]

@@ -1,0 +1,187 @@
+module json_helpers;
+
+use deps { Response, json_string, json_document };
+
+record JsonObject { fields: List<JsonMember> }
+record JsonArray { values: List<Json> }
+record JsonMember { name: Text, value: Json }
+variant Json {
+  Null, Boolean(Bool), Integer(I64), Number(Text), String(Text), Array(JsonArray), Object(JsonObject)
+}
+
+fn object() -> JsonObject { JsonObject {fields:List::empty<JsonMember>()} }
+fn field(document:JsonObject, name:Text, value:Json) -> JsonObject
+requires { !has_key(document.fields,name) }
+{ JsonObject {fields:List::prepend(JsonMember {name:name,value:value},document.fields)} }
+fn array() -> JsonArray {JsonArray {values:List::empty<Json>()}}
+fn append(items:JsonArray, value:Json) -> JsonArray {
+  JsonArray {values:List::prepend(value,items.values)}
+}
+
+record JsonFieldScan { remaining:List<JsonMember>, found:Bool }
+fn has_key(members:List<JsonMember>, name:Text) -> Bool {
+  let done = while(state:JsonFieldScan = JsonFieldScan {remaining:members,found:false};
+    List::length(state.remaining)>0 && !state.found) {
+    JsonFieldScan {remaining:List::tail(state.remaining),found:List::head(state.remaining).name==name}
+  };
+  done.found
+}
+fn unique_fields(members:List<JsonMember>) -> Bool {
+  let done = while(state:JsonFieldScan = JsonFieldScan {remaining:members,found:false};
+    List::length(state.remaining)>0 && !state.found) {
+    JsonFieldScan {remaining:List::tail(state.remaining),
+      found:has_key(List::tail(state.remaining),List::head(state.remaining).name)}
+  };
+  !done.found
+}
+
+fn skip_digits(bytes:Bytes, start:I64) -> I64
+requires { start>=0 && start<=Bytes::length(bytes) }
+{
+  while(index:I64 = start; index<Bytes::length(bytes) && Bytes::at(bytes,index)>=48 && Bytes::at(bytes,index)<=57) {
+    index+1
+  }
+}
+fn is_number(value:Text) -> Bool {
+  let bytes = Text::bytes(value);
+  let count = Bytes::length(bytes);
+  let start = if count>0 && Bytes::at(bytes,0)==45 {1} else {0};
+  let integer_end = if start>=count {-1} else {
+    if Bytes::at(bytes,start)==48 {start+1} else {
+      if Bytes::at(bytes,start)>=49 && Bytes::at(bytes,start)<=57 {skip_digits(bytes,start+1)} else {-1}
+    }
+  };
+  let fraction_end = if integer_end<0 {-1} else {
+    if integer_end<count && Bytes::at(bytes,integer_end)==46 {
+      let end = skip_digits(bytes,integer_end+1);
+      if end>integer_end+1 {end} else {-1}
+    } else {integer_end}
+  };
+  let exponent_end = if fraction_end<0 {-1} else {
+    if fraction_end<count && (Bytes::at(bytes,fraction_end)==101 || Bytes::at(bytes,fraction_end)==69) {
+      let next = fraction_end+1;
+      let digits = if next<count && (Bytes::at(bytes,next)==43 || Bytes::at(bytes,next)==45) {next+1} else {next};
+      let end = skip_digits(bytes,digits);
+      if end>digits {end} else {-1}
+    } else {fraction_end}
+  };
+  exponent_end==count && count>0
+}
+fn number_token(value:Text) -> Text
+requires {is_number(value)}
+{value}
+
+record JsonDigits { remaining:I64, bytes:List<I64> }
+fn integer_text(number:I64) -> Text {
+  if number==0 {"0"} else {
+    let negative = if number>0 {-number} else {number};
+    let digits = while(state:JsonDigits = JsonDigits {remaining:negative,bytes:List::empty<I64>()}; state.remaining<0) {
+      JsonDigits {remaining:state.remaining/10,bytes:List::prepend(48-state.remaining%10,state.bytes)}
+    };
+    let signed = if number<0 {List::prepend(45,digits.bytes)} else {digits.bytes};
+    Text::from_bytes(Bytes::from_list(signed))
+  }
+}
+
+variant JsonTask { Emit(Text), Visit(Json) }
+record JsonEncoding { pending:List<JsonTask>, chunks:List<Text> }
+record JsonArraySchedule { remaining:List<Json>, pending:List<JsonTask>, first:Bool }
+record JsonObjectSchedule { remaining:List<JsonMember>, pending:List<JsonTask>, first:Bool }
+record JsonFlatten { remaining:List<Text>, bytes:List<I64> }
+
+fn array_tasks(items:JsonArray, rest:List<JsonTask>) -> List<JsonTask> {
+  let closing = List::prepend(JsonTask::Emit("]"),rest);
+  let done = while(state:JsonArraySchedule = JsonArraySchedule {remaining:items.values,pending:closing,first:true};
+    List::length(state.remaining)>0) {
+    let separated = if state.first {state.pending} else {List::prepend(JsonTask::Emit(","),state.pending)};
+    JsonArraySchedule {remaining:List::tail(state.remaining),
+      pending:List::prepend(JsonTask::Visit(List::head(state.remaining)),separated),first:false}
+  };
+  List::prepend(JsonTask::Emit("["),done.pending)
+}
+fn object_tasks(document:JsonObject, rest:List<JsonTask>) -> List<JsonTask>
+requires {unique_fields(document.fields)}
+{
+  let closing = List::prepend(JsonTask::Emit("}"),rest);
+  let done = while(state:JsonObjectSchedule = JsonObjectSchedule {remaining:document.fields,pending:closing,first:true};
+    List::length(state.remaining)>0) {
+    let current = List::head(state.remaining);
+    let separated = if state.first {state.pending} else {List::prepend(JsonTask::Emit(","),state.pending)};
+    let payload = List::prepend(JsonTask::Visit(current.value),separated);
+    let colon = List::prepend(JsonTask::Emit(":"),payload);
+    let named = List::prepend(JsonTask::Emit(json_string(current.name)),colon);
+    JsonObjectSchedule {remaining:List::tail(state.remaining),pending:named,first:false}
+  };
+  List::prepend(JsonTask::Emit("{"),done.pending)
+}
+fn flatten(chunks:List<Text>) -> Text {
+  let done = while(state:JsonFlatten = JsonFlatten {remaining:chunks,bytes:List::empty<I64>()};
+    List::length(state.remaining)>0) {
+    let bytes = Text::bytes(List::head(state.remaining));
+    let count = Bytes::length(bytes);
+    let combined = fold(index in count, output:List<I64> = state.bytes) {
+      List::prepend(Bytes::at(bytes,count-1-index),output)
+    };
+    JsonFlatten {remaining:List::tail(state.remaining),bytes:combined}
+  };
+  Text::from_bytes(Bytes::from_list(done.bytes))
+}
+fn stringify(value:Json) -> Text {
+  let initial = List::prepend(JsonTask::Visit(value),List::empty<JsonTask>());
+  let done = while(state:JsonEncoding = JsonEncoding {pending:initial,chunks:List::empty<Text>()};
+    List::length(state.pending)>0) {
+    let rest = List::tail(state.pending);
+    match(List::head(state.pending)) {
+      Emit(token) => JsonEncoding {pending:rest,chunks:List::prepend(token,state.chunks)},
+      Visit(current) => {
+        let scheduled = match current {
+          Null => List::prepend(JsonTask::Emit("null"),rest),
+          Boolean(flag) => List::prepend(JsonTask::Emit(if flag {"true"} else {"false"}),rest),
+          Integer(number) => List::prepend(JsonTask::Emit(integer_text(number)),rest),
+          Number(decimal) => List::prepend(JsonTask::Emit(number_token(decimal)),rest),
+          String(content) => List::prepend(JsonTask::Emit(json_string(content)),rest),
+          Array(items) => array_tasks(items,rest),
+          Object(document) => object_tasks(document,rest)
+        };
+        JsonEncoding {pending:scheduled,chunks:state.chunks}
+      }
+    }
+  };
+  flatten(done.chunks)
+}
+fn json_response(status:I64, value:Json) -> Response
+requires { status==200 || status==404 || status==405 }
+{json_document(status,stringify(value))}
+
+identities {
+  module: "lobo.json.helpers",
+  deps.Response: "example.web.response",
+  deps.json_string: "lobo.http.json_string",
+  deps.json_document: "lobo.http.json_document",
+  JsonObject: "lobo.json.object_type",
+  JsonArray: "lobo.json.array_type",
+  JsonMember: "lobo.json.member",
+  Json: "lobo.json.value",
+  object: "lobo.json.object",
+  field: "lobo.json.field",
+  array: "lobo.json.array",
+  append: "lobo.json.append",
+  JsonFieldScan: "lobo.json.field_scan",
+  has_key: "lobo.json.has_key",
+  unique_fields: "lobo.json.unique_fields",
+  skip_digits: "lobo.json.skip_digits",
+  is_number: "lobo.json.is_number",
+  number_token: "lobo.json.number_token",
+  JsonDigits: "lobo.json.digits",
+  integer_text: "lobo.json.integer_text",
+  JsonTask: "lobo.json.task",
+  JsonEncoding: "lobo.json.encoding",
+  JsonArraySchedule: "lobo.json.array_schedule",
+  JsonObjectSchedule: "lobo.json.object_schedule",
+  JsonFlatten: "lobo.json.flatten_state",
+  array_tasks: "lobo.json.array_tasks",
+  object_tasks: "lobo.json.object_tasks",
+  flatten: "lobo.json.flatten",
+  stringify: "lobo.json.stringify",
+  json_response: "lobo.json.response"
+}

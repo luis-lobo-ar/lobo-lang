@@ -1,0 +1,15 @@
+{
+  "command": [
+    "benchmarks/private-evidence/matched-study-20261123/freeze/lobo",
+    "compile",
+    "examples/native/sqlite/users.lobo",
+    "--source",
+    "libraries/sql/sql.lobo",
+    "-o",
+    "benchmarks/private-evidence/realistic-study-20261126/sqlite-preflight"
+  ],
+  "exit_code": 0,
+  "stdout": "{\"artifact\":\"benchmarks/private-evidence/realistic-study-20261126/sqlite-preflight\",\"entries\":[\"example.sqlite.users.setup_data\",\"example.sqlite.users.setup\",\"example.sqlite.users.find\",\"example.sqlite.users.all\",\"example.sqlite.users.save_data\",\"example.sqlite.users.save\",\"example.sqlite.users.get\",\"example.sqlite.users.list\",\"example.sqlite.users.undo_data\",\"example.sqlite.users.undo\",\"example.sqlite.users.typed\",\"lobo.66a2a8e53fd4163a2e038a2fe5b68546\",\"lobo.a066d2d1100c7d222d8c4c9a6891123a\",\"lobo.0c1ef938c6325139c192f42ef8b9870a\",\"lobo.51fecacad709be4603162cf590b4d26f\",\"lobo.sql.error_kind\",\"lobo.sql.error_details\",\"lobo.sql.bool_result\",\"lobo.sql.open\",\"lobo.sql.restrict\",\"lobo.886c4b0a3dabfb731412c11d8f6510e9\",\"lobo.fac29eae9b9d398b7a2658f35d3bc68c\",\"lobo.sql.close\",\"lobo.sql.begin\",\"lobo.sql.commit\",\"lobo.sql.rollback\",\"lobo.sql.no_params\",\"lobo.sql.params1\",\"lobo.sql.params2\",\"lobo.sql.bind_value\",\"lobo.sql.bind_all\",\"lobo.sql.read_value\",\"lobo.sql.read_row\",\"lobo.sql.read_rows\",\"lobo.sql.run_query\",\"lobo.sql.query_raw\",\"lobo.sql.query\",\"lobo.sql.run_execute\",\"lobo.sql.execute_raw\",\"lobo.sql.execute\",\"lobo.sql.error_code\",\"lobo.sql.expect_columns\",\"lobo.sql.cell_at\",\"lobo.sql.integer_at\",\"lobo.sql.decimal_at\",\"lobo.sql.text_at\",\"lobo.sql.bytes_at\",\"lobo.generic.d4d68ac65536c25f9a8bb20c33abde90\",\"lobo.generic.e0a8dbd7134945c65b425e06c06f5862\"],\"format\":\"native\",\"status\":\"ok\"}\n",
+  "stderr": "",
+  "wall_s": 25.769078760175034
+}

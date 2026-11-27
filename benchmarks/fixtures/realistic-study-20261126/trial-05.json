@@ -1,0 +1,1779 @@
+{
+  "result": {
+    "assignment": {
+      "index": 5,
+      "repeat": 1,
+      "family": "catalog",
+      "arm": "control",
+      "language": "lobo",
+      "reasoning": "high",
+      "phase": "application-change"
+    },
+    "command": [
+      "codex",
+      "exec",
+      "--ignore-user-config",
+      "--ephemeral",
+      "--json",
+      "--sandbox",
+      "workspace-write",
+      "--skip-git-repo-check",
+      "--disable",
+      "multi_agent",
+      "--disable",
+      "multi_agent_v2",
+      "--disable",
+      "apps",
+      "--disable",
+      "plugins",
+      "--disable",
+      "memories",
+      "-C",
+      "/tmp/lobo-matched-cf1lpcen",
+      "-m",
+      "gpt-5.6-luna",
+      "-c",
+      "model_reasoning_effort=\"high\"",
+      "-c",
+      "approval_policy=\"never\"",
+      "--output-last-message",
+      "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/realistic-study-20261126/run/trial-05/last-message.txt",
+      "-"
+    ],
+    "deadline_s": 120,
+    "tool_limit": 16,
+    "check_limit": 6,
+    "started_unix": 1795754842.3522508,
+    "load_before": [
+      4.32177734375,
+      6.43408203125,
+      6.9345703125
+    ],
+    "status": "completed",
+    "exit_code": 0,
+    "agent_wall_s": 89.16847764095291,
+    "usage": {
+      "input_tokens": 166113,
+      "cached_input_tokens": 149760,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 4176,
+      "reasoning_output_tokens": 2615
+    },
+    "command_tool_items": 7,
+    "check_requests": 1,
+    "checks": [
+      {
+        "index": 0,
+        "start_s": 65.31828139792196,
+        "end_s": 67.35244476981461,
+        "feedback": {
+          "status": "pass",
+          "passed": 5,
+          "total": 5,
+          "failures": []
+        }
+      }
+    ],
+    "item_types": [
+      "agent_message",
+      "command_execution",
+      "command_execution",
+      "command_execution",
+      "agent_message",
+      "command_execution",
+      "command_execution",
+      "file_change",
+      "agent_message",
+      "command_execution",
+      "command_execution",
+      "agent_message"
+    ],
+    "load_after": [
+      3.57177734375,
+      5.76904296875,
+      6.66064453125
+    ],
+    "grading": {
+      "issues": [],
+      "build": {
+        "command": [
+          "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/matched-study-20261123/freeze/lobo",
+          "compile",
+          "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/realistic-study-20261126/run/trial-05/heldout/source/app.lobo",
+          "--source",
+          "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/realistic-study-20261126/run/trial-05/heldout/source/logic.lobo",
+          "--source",
+          "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/realistic-study-20261126/run/trial-05/heldout/source/policy.lobo",
+          "--source",
+          "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/realistic-study-20261126/run/trial-05/heldout/source/model.lobo",
+          "--source",
+          "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/realistic-study-20261126/run/trial-05/heldout/source/lib/http.lobo",
+          "--source",
+          "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/realistic-study-20261126/run/trial-05/heldout/source/lib/io.lobo",
+          "--source",
+          "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/realistic-study-20261126/run/trial-05/heldout/source/lib/helpers.lobo",
+          "--source",
+          "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/realistic-study-20261126/run/trial-05/heldout/source/lib/json.lobo",
+          "--source",
+          "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/realistic-study-20261126/run/trial-05/heldout/source/lib/access.lobo",
+          "-o",
+          "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/realistic-study-20261126/run/trial-05/heldout/program"
+        ],
+        "exit_code": 0,
+        "stdout": "{\"artifact\":\"/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/realistic-study-20261126/run/trial-05/heldout/program\",\"entries\":[\"lobo.http.text_response\",\"lobo.http.json_document\",\"lobo.http.not_found\",\"lobo.http.method_not_allowed\",\"lobo.http.read_method\",\"lobo.http.strip_prefix\",\"lobo.http.quote_byte\",\"lobo.http.json_string\",\"lobo.http.server.line_end\",\"lobo.http.server.header_end\",\"lobo.http.server.find_byte\",\"lobo.http.server.token\",\"lobo.http.server.token_range\",\"lobo.http.server.lower\",\"lobo.http.server.header_name\",\"lobo.http.server.whitespace\",\"lobo.http.server.trim_start\",\"lobo.http.server.trim_end\",\"lobo.http.server.visible_value\",\"lobo.http.server.host_value\",\"lobo.http.server.length_value\",\"lobo.http.server.next_header\",\"lobo.http.server.parse\",\"lobo.http.server.reason\",\"lobo.http.server.json_response\",\"lobo.http.server.error_response\",\"lobo.http.server.wire\",\"lobo.http.server.respond\",\"lobo.http.transport.receive\",\"lobo.http.transport.send_all\",\"lobo.38aa8ce7f12ae34d85c2d13f0fd2e28c\",\"lobo.66f68b42c4adeae5acf0b3216b3eb9ce\",\"lobo.bcfd9ba61989fa8f4c6d0f7b03215317\",\"lobo.f56b0cbe0a96c4c9a372ea7f199aac15\",\"lobo.902d01e286cd89f72ff730d0e625215c\",\"lobo.292bec26a2e715e93a50f16e1abdca42\",\"lobo.bcae73410f94fbd16a9d5c65c3b8f724\",\"lobo.9208dfdc80f89314742515856200df08\",\"lobo.http.transport.serve_one\",\"lobo.http.transport.serve\",\"lobo.c53cea940d336abcf43be7003bfc003b\",\"lobo.852b35fdd21c1b3ce25a6ae27fbf6148\",\"lobo.0935a528ddd246a79a5f2cd965cced31\",\"lobo.json.object\",\"lobo.json.field\",\"lobo.json.array\",\"lobo.json.append\",\"lobo.json.has_key\",\"lobo.json.unique_fields\",\"lobo.json.skip_digits\",\"lobo.json.is_number\",\"lobo.json.number_token\",\"lobo.json.integer_text\",\"lobo.json.array_tasks\",\"lobo.json.object_tasks\",\"lobo.json.flatten\",\"lobo.json.stringify\",\"lobo.json.response\",\"lobo.permissions.none\",\"lobo.permissions.one\",\"lobo.permissions.allow\",\"lobo.permissions.abi_mask\",\"lobo.permissions.restrict\",\"realistic.catalog.app.main\",\"realistic.catalog.logic.product_json\",\"realistic.catalog.logic.products_json\",\"realistic.catalog.logic.handle\",\"realistic.catalog.model.catalog\",\"realistic.catalog.policy.read_id\"],\"format\":\"native\",\"status\":\"ok\"}\n",
+        "stderr": "",
+        "wall_s": 2.0879872979130596,
+        "ok": true
+      },
+      "cases": [
+        {
+          "input": {
+            "method": "GET",
+            "path": "/health"
+          },
+          "expected": {
+            "status": 200,
+            "body": {
+              "status": "ready"
+            },
+            "head_empty": true,
+            "length_ok": true,
+            "content_type": "application/json",
+            "allow": null
+          },
+          "actual": {
+            "status": 200,
+            "body": {
+              "status": "ready"
+            },
+            "head_empty": true,
+            "length_ok": true,
+            "content_type": "application/json",
+            "allow": null
+          },
+          "error": null,
+          "ok": true,
+          "executed": true
+        },
+        {
+          "input": {
+            "method": "GET",
+            "path": "/api/products"
+          },
+          "expected": {
+            "status": 200,
+            "body": {
+              "items": [
+                {
+                  "id": 2,
+                  "name": "Tea \"\u591c\"",
+                  "stock": 3
+                },
+                {
+                  "id": 7,
+                  "name": "Line\nBack\\",
+                  "stock": 0
+                }
+              ],
+              "total": 2
+            },
+            "head_empty": true,
+            "length_ok": true,
+            "content_type": "application/json",
+            "allow": null
+          },
+          "actual": {
+            "status": 200,
+            "body": {
+              "items": [
+                {
+                  "id": 2,
+                  "name": "Tea \"\u591c\"",
+                  "stock": 3
+                },
+                {
+                  "id": 7,
+                  "name": "Line\nBack\\",
+                  "stock": 0
+                }
+              ],
+              "total": 2
+            },
+            "head_empty": true,
+            "length_ok": true,
+            "content_type": "application/json",
+            "allow": null
+          },
+          "error": null,
+          "ok": true,
+          "executed": true
+        },
+        {
+          "input": {
+            "method": "GET",
+            "path": "/api/products/available"
+          },
+          "expected": {
+            "status": 200,
+            "body": {
+              "items": [
+                {
+                  "id": 2,
+                  "name": "Tea \"\u591c\"",
+                  "stock": 3
+                }
+              ],
+              "total": 1
+            },
+            "head_empty": true,
+            "length_ok": true,
+            "content_type": "application/json",
+            "allow": null
+          },
+          "actual": {
+            "status": 200,
+            "body": {
+              "items": [
+                {
+                  "id": 2,
+                  "name": "Tea \"\u591c\"",
+                  "stock": 3
+                }
+              ],
+              "total": 1
+            },
+            "head_empty": true,
+            "length_ok": true,
+            "content_type": "application/json",
+            "allow": null
+          },
+          "error": null,
+          "ok": true,
+          "executed": true
+        },
+        {
+          "input": {
+            "method": "GET",
+            "path": "/api/products/02"
+          },
+          "expected": {
+            "status": 404,
+            "body": {
+              "error": "not found"
+            },
+            "head_empty": true,
+            "length_ok": true,
+            "content_type": "application/json",
+            "allow": null
+          },
+          "actual": {
+            "status": 404,
+            "body": {
+              "error": "not found"
+            },
+            "head_empty": true,
+            "length_ok": true,
+            "content_type": "application/json",
+            "allow": null
+          },
+          "error": null,
+          "ok": true,
+          "executed": true
+        },
+        {
+          "input": {
+            "method": "HEAD",
+            "path": "/api/products/2"
+          },
+          "expected": {
+            "status": 200,
+            "body": {
+              "id": 2,
+              "name": "Tea \"\u591c\"",
+              "stock": 3
+            },
+            "head_empty": true,
+            "length_ok": true,
+            "content_type": "application/json",
+            "allow": null
+          },
+          "actual": {
+            "status": 200,
+            "body": {
+              "id": 2,
+              "name": "Tea \"\u591c\"",
+              "stock": 3
+            },
+            "head_empty": true,
+            "length_ok": true,
+            "content_type": "application/json",
+            "allow": null
+          },
+          "error": null,
+          "ok": true,
+          "executed": true
+        },
+        {
+          "input": {
+            "method": "GET",
+            "path": "/api/products/2"
+          },
+          "expected": {
+            "status": 200,
+            "body": {
+              "id": 2,
+              "name": "Tea \"\u591c\"",
+              "stock": 3
+            },
+            "head_empty": true,
+            "length_ok": true,
+            "content_type": "application/json",
+            "allow": null
+          },
+          "actual": {
+            "status": 200,
+            "body": {
+              "id": 2,
+              "name": "Tea \"\u591c\"",
+              "stock": 3
+            },
+            "head_empty": true,
+            "length_ok": true,
+            "content_type": "application/json",
+            "allow": null
+          },
+          "error": null,
+          "ok": true,
+          "executed": true
+        },
+        {
+          "input": {
+            "method": "GET",
+            "path": "/api/products/7"
+          },
+          "expected": {
+            "status": 200,
+            "body": {
+              "id": 7,
+              "name": "Line\nBack\\",
+              "stock": 0
+            },
+            "head_empty": true,
+            "length_ok": true,
+            "content_type": "application/json",
+            "allow": null
+          },
+          "actual": {
+            "status": 200,
+            "body": {
+              "id": 7,
+              "name": "Line\nBack\\",
+              "stock": 0
+            },
+            "head_empty": true,
+            "length_ok": true,
+            "content_type": "application/json",
+            "allow": null
+          },
+          "error": null,
+          "ok": true,
+          "executed": true
+        },
+        {
+          "input": {
+            "method": "GET",
+            "path": "/api/products/11"
+          },
+          "expected": {
+            "status": 404,
+            "body": {
+              "error": "not found"
+            },
+            "head_empty": true,
+            "length_ok": true,
+            "content_type": "application/json",
+            "allow": null
+          },
+          "actual": {
+            "status": 404,
+            "body": {
+              "error": "not found"
+            },
+            "head_empty": true,
+            "length_ok": true,
+            "content_type": "application/json",
+            "allow": null
+          },
+          "error": null,
+          "ok": true,
+          "executed": true
+        },
+        {
+          "input": {
+            "method": "GET",
+            "path": "/api/products/1"
+          },
+          "expected": {
+            "status": 404,
+            "body": {
+              "error": "not found"
+            },
+            "head_empty": true,
+            "length_ok": true,
+            "content_type": "application/json",
+            "allow": null
+          },
+          "actual": {
+            "status": 404,
+            "body": {
+              "error": "not found"
+            },
+            "head_empty": true,
+            "length_ok": true,
+            "content_type": "application/json",
+            "allow": null
+          },
+          "error": null,
+          "ok": true,
+          "executed": true
+        },
+        {
+          "input": {
+            "method": "GET",
+            "path": "/api/products/"
+          },
+          "expected": {
+            "status": 404,
+            "body": {
+              "error": "not found"
+            },
+            "head_empty": true,
+            "length_ok": true,
+            "content_type": "application/json",
+            "allow": null
+          },
+          "actual": {
+            "status": 404,
+            "body": {
+              "error": "not found"
+            },
+            "head_empty": true,
+            "length_ok": true,
+            "content_type": "application/json",
+            "allow": null
+          },
+          "error": null,
+          "ok": true,
+          "executed": true
+        },
+        {
+          "input": {
+            "method": "GET",
+            "path": "/api/products/0"
+          },
+          "expected": {
+            "status": 404,
+            "body": {
+              "error": "not found"
+            },
+            "head_empty": true,
+            "length_ok": true,
+            "content_type": "application/json",
+            "allow": null
+          },
+          "actual": {
+            "status": 404,
+            "body": {
+              "error": "not found"
+            },
+            "head_empty": true,
+            "length_ok": true,
+            "content_type": "application/json",
+            "allow": null
+          },
+          "error": null,
+          "ok": true,
+          "executed": true
+        },
+        {
+          "input": {
+            "method": "GET",
+            "path": "/api/products/-2"
+          },
+          "expected": {
+            "status": 404,
+            "body": {
+              "error": "not found"
+            },
+            "head_empty": true,
+            "length_ok": true,
+            "content_type": "application/json",
+            "allow": null
+          },
+          "actual": {
+            "status": 404,
+            "body": {
+              "error": "not found"
+            },
+            "head_empty": true,
+            "length_ok": true,
+            "content_type": "application/json",
+            "allow": null
+          },
+          "error": null,
+          "ok": true,
+          "executed": true
+        },
+        {
+          "input": {
+            "method": "GET",
+            "path": "/api/products/+2"
+          },
+          "expected": {
+            "status": 404,
+            "body": {
+              "error": "not found"
+            },
+            "head_empty": true,
+            "length_ok": true,
+            "content_type": "application/json",
+            "allow": null
+          },
+          "actual": {
+            "status": 404,
+            "body": {
+              "error": "not found"
+            },
+            "head_empty": true,
+            "length_ok": true,
+            "content_type": "application/json",
+            "allow": null
+          },
+          "error": null,
+          "ok": true,
+          "executed": true
+        },
+        {
+          "input": {
+            "method": "GET",
+            "path": "/api/products/2/"
+          },
+          "expected": {
+            "status": 404,
+            "body": {
+              "error": "not found"
+            },
+            "head_empty": true,
+            "length_ok": true,
+            "content_type": "application/json",
+            "allow": null
+          },
+          "actual": {
+            "status": 404,
+            "body": {
+              "error": "not found"
+            },
+            "head_empty": true,
+            "length_ok": true,
+            "content_type": "application/json",
+            "allow": null
+          },
+          "error": null,
+          "ok": true,
+          "executed": true
+        },
+        {
+          "input": {
+            "method": "GET",
+            "path": "/api/products/2?x=1"
+          },
+          "expected": {
+            "status": 404,
+            "body": {
+              "error": "not found"
+            },
+            "head_empty": true,
+            "length_ok": true,
+            "content_type": "application/json",
+            "allow": null
+          },
+          "actual": {
+            "status": 404,
+            "body": {
+              "error": "not found"
+            },
+            "head_empty": true,
+            "length_ok": true,
+            "content_type": "application/json",
+            "allow": null
+          },
+          "error": null,
+          "ok": true,
+          "executed": true
+        },
+        {
+          "input": {
+            "method": "GET",
+            "path": "/api/products/%32"
+          },
+          "expected": {
+            "status": 404,
+            "body": {
+              "error": "not found"
+            },
+            "head_empty": true,
+            "length_ok": true,
+            "content_type": "application/json",
+            "allow": null
+          },
+          "actual": {
+            "status": 404,
+            "body": {
+              "error": "not found"
+            },
+            "head_empty": true,
+            "length_ok": true,
+            "content_type": "application/json",
+            "allow": null
+          },
+          "error": null,
+          "ok": true,
+          "executed": true
+        },
+        {
+          "input": {
+            "method": "GET",
+            "path": "/api/products/9223372036854775808"
+          },
+          "expected": {
+            "status": 404,
+            "body": {
+              "error": "not found"
+            },
+            "head_empty": true,
+            "length_ok": true,
+            "content_type": "application/json",
+            "allow": null
+          },
+          "actual": {
+            "status": 404,
+            "body": {
+              "error": "not found"
+            },
+            "head_empty": true,
+            "length_ok": true,
+            "content_type": "application/json",
+            "allow": null
+          },
+          "error": null,
+          "ok": true,
+          "executed": true
+        },
+        {
+          "input": {
+            "method": "GET",
+            "path": "/api/products/9223372036854775807"
+          },
+          "expected": {
+            "status": 404,
+            "body": {
+              "error": "not found"
+            },
+            "head_empty": true,
+            "length_ok": true,
+            "content_type": "application/json",
+            "allow": null
+          },
+          "actual": {
+            "status": 404,
+            "body": {
+              "error": "not found"
+            },
+            "head_empty": true,
+            "length_ok": true,
+            "content_type": "application/json",
+            "allow": null
+          },
+          "error": null,
+          "ok": true,
+          "executed": true
+        },
+        {
+          "input": {
+            "method": "GET",
+            "path": "/api/products/0002"
+          },
+          "expected": {
+            "status": 404,
+            "body": {
+              "error": "not found"
+            },
+            "head_empty": true,
+            "length_ok": true,
+            "content_type": "application/json",
+            "allow": null
+          },
+          "actual": {
+            "status": 404,
+            "body": {
+              "error": "not found"
+            },
+            "head_empty": true,
+            "length_ok": true,
+            "content_type": "application/json",
+            "allow": null
+          },
+          "error": null,
+          "ok": true,
+          "executed": true
+        },
+        {
+          "input": {
+            "method": "GET",
+            "path": "/api/Products"
+          },
+          "expected": {
+            "status": 404,
+            "body": {
+              "error": "not found"
+            },
+            "head_empty": true,
+            "length_ok": true,
+            "content_type": "application/json",
+            "allow": null
+          },
+          "actual": {
+            "status": 404,
+            "body": {
+              "error": "not found"
+            },
+            "head_empty": true,
+            "length_ok": true,
+            "content_type": "application/json",
+            "allow": null
+          },
+          "error": null,
+          "ok": true,
+          "executed": true
+        },
+        {
+          "input": {
+            "method": "GET",
+            "path": "/health/"
+          },
+          "expected": {
+            "status": 404,
+            "body": {
+              "error": "not found"
+            },
+            "head_empty": true,
+            "length_ok": true,
+            "content_type": "application/json",
+            "allow": null
+          },
+          "actual": {
+            "status": 404,
+            "body": {
+              "error": "not found"
+            },
+            "head_empty": true,
+            "length_ok": true,
+            "content_type": "application/json",
+            "allow": null
+          },
+          "error": null,
+          "ok": true,
+          "executed": true
+        },
+        {
+          "input": {
+            "method": "POST",
+            "path": "/health"
+          },
+          "expected": {
+            "status": 405,
+            "body": {
+              "error": "method not allowed"
+            },
+            "head_empty": true,
+            "length_ok": true,
+            "content_type": "application/json",
+            "allow": "GET, HEAD"
+          },
+          "actual": {
+            "status": 405,
+            "body": {
+              "error": "method not allowed"
+            },
+            "head_empty": true,
+            "length_ok": true,
+            "content_type": "application/json",
+            "allow": "GET, HEAD"
+          },
+          "error": null,
+          "ok": true,
+          "executed": true
+        },
+        {
+          "input": {
+            "method": "POST",
+            "path": "/unknown"
+          },
+          "expected": {
+            "status": 405,
+            "body": {
+              "error": "method not allowed"
+            },
+            "head_empty": true,
+            "length_ok": true,
+            "content_type": "application/json",
+            "allow": "GET, HEAD"
+          },
+          "actual": {
+            "status": 405,
+            "body": {
+              "error": "method not allowed"
+            },
+            "head_empty": true,
+            "length_ok": true,
+            "content_type": "application/json",
+            "allow": "GET, HEAD"
+          },
+          "error": null,
+          "ok": true,
+          "executed": true
+        },
+        {
+          "input": {
+            "method": "PUT",
+            "path": "/api/products"
+          },
+          "expected": {
+            "status": 405,
+            "body": {
+              "error": "method not allowed"
+            },
+            "head_empty": true,
+            "length_ok": true,
+            "content_type": "application/json",
+            "allow": "GET, HEAD"
+          },
+          "actual": {
+            "status": 405,
+            "body": {
+              "error": "method not allowed"
+            },
+            "head_empty": true,
+            "length_ok": true,
+            "content_type": "application/json",
+            "allow": "GET, HEAD"
+          },
+          "error": null,
+          "ok": true,
+          "executed": true
+        },
+        {
+          "input": {
+            "method": "HEAD",
+            "path": "/health"
+          },
+          "expected": {
+            "status": 200,
+            "body": {
+              "status": "ready"
+            },
+            "head_empty": true,
+            "length_ok": true,
+            "content_type": "application/json",
+            "allow": null
+          },
+          "actual": {
+            "status": 200,
+            "body": {
+              "status": "ready"
+            },
+            "head_empty": true,
+            "length_ok": true,
+            "content_type": "application/json",
+            "allow": null
+          },
+          "error": null,
+          "ok": true,
+          "executed": true
+        },
+        {
+          "input": {
+            "method": "HEAD",
+            "path": "/api/products"
+          },
+          "expected": {
+            "status": 200,
+            "body": {
+              "items": [
+                {
+                  "id": 2,
+                  "name": "Tea \"\u591c\"",
+                  "stock": 3
+                },
+                {
+                  "id": 7,
+                  "name": "Line\nBack\\",
+                  "stock": 0
+                }
+              ],
+              "total": 2
+            },
+            "head_empty": true,
+            "length_ok": true,
+            "content_type": "application/json",
+            "allow": null
+          },
+          "actual": {
+            "status": 200,
+            "body": {
+              "items": [
+                {
+                  "id": 2,
+                  "name": "Tea \"\u591c\"",
+                  "stock": 3
+                },
+                {
+                  "id": 7,
+                  "name": "Line\nBack\\",
+                  "stock": 0
+                }
+              ],
+              "total": 2
+            },
+            "head_empty": true,
+            "length_ok": true,
+            "content_type": "application/json",
+            "allow": null
+          },
+          "error": null,
+          "ok": true,
+          "executed": true
+        },
+        {
+          "input": {
+            "method": "HEAD",
+            "path": "/api/products/available"
+          },
+          "expected": {
+            "status": 200,
+            "body": {
+              "items": [
+                {
+                  "id": 2,
+                  "name": "Tea \"\u591c\"",
+                  "stock": 3
+                }
+              ],
+              "total": 1
+            },
+            "head_empty": true,
+            "length_ok": true,
+            "content_type": "application/json",
+            "allow": null
+          },
+          "actual": {
+            "status": 200,
+            "body": {
+              "items": [
+                {
+                  "id": 2,
+                  "name": "Tea \"\u591c\"",
+                  "stock": 3
+                }
+              ],
+              "total": 1
+            },
+            "head_empty": true,
+            "length_ok": true,
+            "content_type": "application/json",
+            "allow": null
+          },
+          "error": null,
+          "ok": true,
+          "executed": true
+        },
+        {
+          "input": {
+            "method": "HEAD",
+            "path": "/api/products/11"
+          },
+          "expected": {
+            "status": 404,
+            "body": {
+              "error": "not found"
+            },
+            "head_empty": true,
+            "length_ok": true,
+            "content_type": "application/json",
+            "allow": null
+          },
+          "actual": {
+            "status": 404,
+            "body": {
+              "error": "not found"
+            },
+            "head_empty": true,
+            "length_ok": true,
+            "content_type": "application/json",
+            "allow": null
+          },
+          "error": null,
+          "ok": true,
+          "executed": true
+        },
+        {
+          "input": {
+            "method": "GET",
+            "path": "/api/products/available/"
+          },
+          "expected": {
+            "status": 404,
+            "body": {
+              "error": "not found"
+            },
+            "head_empty": true,
+            "length_ok": true,
+            "content_type": "application/json",
+            "allow": null
+          },
+          "actual": {
+            "status": 404,
+            "body": {
+              "error": "not found"
+            },
+            "head_empty": true,
+            "length_ok": true,
+            "content_type": "application/json",
+            "allow": null
+          },
+          "error": null,
+          "ok": true,
+          "executed": true
+        },
+        {
+          "input": {
+            "method": "GET",
+            "path": "/api/products/2a"
+          },
+          "expected": {
+            "status": 404,
+            "body": {
+              "error": "not found"
+            },
+            "head_empty": true,
+            "length_ok": true,
+            "content_type": "application/json",
+            "allow": null
+          },
+          "actual": {
+            "status": 404,
+            "body": {
+              "error": "not found"
+            },
+            "head_empty": true,
+            "length_ok": true,
+            "content_type": "application/json",
+            "allow": null
+          },
+          "error": null,
+          "ok": true,
+          "executed": true
+        }
+      ],
+      "accepted": true,
+      "passed": 30,
+      "total": 30
+    },
+    "accepted": true,
+    "workspace": "/tmp/lobo-matched-cf1lpcen"
+  },
+  "prompt": "Complete TASK.txt following GUIDE.txt. The limits are 120 seconds, 16 command-execution tool items and 6 visible check submissions. All build/check work counts in wall time. Do not delegate.\n",
+  "last_message": "Completed TASK.txt.\n\n- Updated product filtering and detail visibility.\n- Enforced canonical positive numeric IDs.\n- Preserved existing declarations and identity sidecars.\n- Public native checks passed: 5/5.",
+  "detail": {
+    "assignment": {
+      "index": 5,
+      "repeat": 1,
+      "family": "catalog",
+      "arm": "control",
+      "language": "lobo",
+      "reasoning": "high",
+      "phase": "application-change"
+    },
+    "timely_complete": true,
+    "candidate_correct": true,
+    "status": "completed",
+    "skill_present": false,
+    "skill_path_in_commands": false,
+    "external_skill_commands": [],
+    "commands": [
+      "/usr/bin/zsh -lc \"pwd && sed -n '1,240p' TASK.txt && printf '\\\\n--- GUIDE ---\\\\n' && sed -n '1,260p' GUIDE.txt\"",
+      "/usr/bin/zsh -lc \"ls -la && printf '\\\\n--- logic.lobo ---\\\\n' && sed -n '1,260p' logic.lobo && printf '\\\\n--- policy.lobo ---\\\\n' && sed -n '1,260p' policy.lobo && printf '\\\\n--- identity files ---\\\\n' && for f in logic.ids.json policy.ids.json; do echo \\\"[\"'$f]\"; sed -n '\"'1,240p' \\\"\"'$f\"; done'",
+      "/usr/bin/zsh -lc \"printf '%s\\\\n' '--- logic.lobo.ids.json ---' && sed -n '1,260p' logic.lobo.ids.json && printf '%s\\\\n' '--- policy.lobo.ids.json ---' && sed -n '1,260p' policy.lobo.ids.json && printf '%s\\\\n' '--- model.lobo ---' && sed -n '1,220p' model.lobo && printf '%s\\\\n' '--- app.lobo ---' && sed -n '1,220p' app.lobo && printf '%s\\\\n' '--- VISIBLE.json ---' && sed -n '1,260p' VISIBLE.json\"",
+      "/usr/bin/zsh -lc \"rg -n \\\"error_response|json_response|record Response|Allow|method not allowed\\\" libraries spec docs --glob '*.lobo' --glob '*.md' --glob '*.txt' | head -120\"",
+      "/usr/bin/zsh -lc \"sed -n '80,105p' libraries/http-server/server.lobo && sed -n '1,80p' libraries/json/README.md && sed -n '1,75p' libraries/http/README.md && sed -n '1,45p' libraries/json/json.lobo\"",
+      "/usr/bin/zsh -lc 'python3 check.py'",
+      "/usr/bin/zsh -lc 'git diff -- logic.lobo policy.lobo logic.lobo.ids.json policy.lobo.ids.json && git status --short'"
+    ],
+    "visible_feedback": [
+      {
+        "status": "pass",
+        "passed": 5,
+        "total": 5,
+        "failures": []
+      }
+    ],
+    "build_times": [
+      {
+        "stage": "heldout",
+        "wall_s": 2.0879872979130596
+      },
+      {
+        "stage": "visible-0",
+        "wall_s": 2.0088285009842366
+      }
+    ]
+  },
+  "final_sources": {
+    "policy.lobo.ids.json": "{\n  \"format\": \"lobo-identities/0.1\",\n  \"identities\": {\n    \"module\": \"realistic.catalog.policy\",\n    \"Key\": \"realistic.catalog.policy.Key\",\n    \"Digits\": \"realistic.catalog.policy.Digits\",\n    \"read_id\": \"realistic.catalog.policy.read_id\"\n  }\n}\n",
+    "app.lobo.ids.json": "{\n  \"format\": \"lobo-identities/0.1\",\n  \"identities\": {\n    \"module\": \"realistic.catalog.app\",\n    \"main\": \"realistic.catalog.app.main\",\n    \"access.restrict\": \"lobo.permissions.restrict\",\n    \"io.server_permissions\": \"lobo.0935a528ddd246a79a5f2cd965cced31\",\n    \"io.serve\": \"lobo.852b35fdd21c1b3ce25a6ae27fbf6148\",\n    \"http.Request\": \"lobo.http.server.Request\",\n    \"http.Response\": \"example.web.response\",\n    \"logic.handle\": \"realistic.catalog.logic.handle\"\n  }\n}\n",
+    "logic.lobo.ids.json": "{\n  \"format\": \"lobo-identities/0.1\",\n  \"identities\": {\n    \"module\": \"realistic.catalog.logic\",\n    \"Items\": \"realistic.catalog.logic.Items\",\n    \"product_json\": \"realistic.catalog.logic.product_json\",\n    \"products_json\": \"realistic.catalog.logic.products_json\",\n    \"handle\": \"realistic.catalog.logic.handle\",\n    \"model.Product\": \"realistic.catalog.model.Product\",\n    \"model.catalog\": \"realistic.catalog.model.catalog\",\n    \"policy.Key\": \"realistic.catalog.policy.Key\",\n    \"policy.read_id\": \"realistic.catalog.policy.read_id\",\n    \"http.Request\": \"lobo.http.server.Request\",\n    \"http.Response\": \"example.web.response\",\n    \"http.json_response\": \"lobo.http.server.json_response\",\n    \"http.error_response\": \"lobo.http.server.error_response\",\n    \"json.Json\": \"lobo.json.value\",\n    \"json.JsonArray\": \"lobo.json.array_type\",\n    \"json.object\": \"lobo.json.object\",\n    \"json.field\": \"lobo.json.field\",\n    \"json.array\": \"lobo.json.array\",\n    \"json.append\": \"lobo.json.append\"\n  }\n}\n",
+    "BUNDLE.json": "[\n  \"app.lobo\",\n  \"logic.lobo\",\n  \"policy.lobo\",\n  \"model.lobo\",\n  \"lib/http.lobo\",\n  \"lib/io.lobo\",\n  \"lib/helpers.lobo\",\n  \"lib/json.lobo\",\n  \"lib/access.lobo\"\n]\n",
+    "app.lobo": "module app;\nuse access {restrict}; use io {server_permissions,serve}; use http {Request,Response}; use logic {handle};\nfn main(port:I64,max_requests:I64)->Native::I64Result\nactions {native.authorize,clock.read,net.listen,net.accept,net.read,net.write,net.close}\nrequires {port>=1 && port<=65535 && max_requests>=1 && max_requests<=128}\n{let cap=try restrict(Native::capability(),server_permissions());serve(cap,port,max_requests,handle)}\n",
+    "policy.lobo": "module policy;\nvariant Key {Found(I64),Missing}\nrecord Digits {value:I64,valid:Bool}\nfn read_id(path:Text)->Key {\n let prefix=\"/api/products/\";\n if Text::length(path)<=Text::length(prefix) || Text::slice(path,0,Text::length(prefix))!=prefix {Missing} else {\n  let token=Text::slice(path,Text::length(prefix),Text::length(path)-Text::length(prefix));\n  let bytes=Text::bytes(token);\n  let parsed=fold(i in Bytes::length(bytes),state:Digits=Digits {value:0,valid:true}) {\n   let digit=Bytes::at(bytes,i)-48;\n   if !state.valid || digit<0 || digit>9 || (i==0 && digit==0) || state.value>(9223372036854775807-digit)/10 {Digits {value:0,valid:false}} else {Digits {value:state.value*10+digit,valid:true}}\n  };\n  if parsed.valid && parsed.value>0 {Found(parsed.value)} else {Missing}\n }\n}\n",
+    "logic.lobo": "module logic;\nuse model {Product,catalog}; use policy {Key,read_id}; use http {Request,Response,json_response,error_response};\nuse json {Json,JsonArray,object,field,array,append};\nrecord Items {values:JsonArray,count:I64}\nfn product_json(product:Product)->Json {\n let a=field(object(),\"id\",Json::Integer(product.id));\n let b=field(a,\"name\",Json::String(product.name));\n Json::Object(field(b,\"stock\",Json::Integer(product.stock)))\n}\nfn products_json(available:Bool)->Json {\n let products=catalog();\n let done=fold(i in List::length(products),state:Items=Items {values:array(),count:0}) {\n  let item=List::head(fold(j in i,rest:List<Product> =products) {List::tail(rest)});\n  if item.enabled && (!available || item.stock>0) {Items {values:append(state.values,product_json(item)),count:state.count+1}} else {state}\n };\n Json::Object(field(field(object(),\"items\",Json::Array(done.values)),\"total\",Json::Integer(done.count)))\n}\nfn handle(request:Request)->Response {\n if request.method!=\"GET\" && request.method!=\"HEAD\" {json_response(405,json {\"error\":\"method not allowed\"})} else {\n  if request.path==\"/health\" {json_response(200,json {\"status\":\"ready\"})} else {\n   if request.path==\"/api/products\" || request.path==\"/api/products/available\" {json_response(200,products_json(request.path==\"/api/products/available\"))} else {\n    match read_id(request.path) {\n     Missing=>json_response(404,json {\"error\":\"not found\"}),\n     Found(id)=> {\n      let products=catalog();\n      let found=fold(i in List::length(products),pick:List<Product> =List::empty<Product>()) {\n       let item=List::head(fold(j in i,rest:List<Product> =products) {List::tail(rest)});\n       if item.enabled && item.id==id {List::prepend(item,pick)} else {pick}\n      };\n      if List::length(found)==0 {json_response(404,json {\"error\":\"not found\"})} else {json_response(200,product_json(List::head(found)))}\n     }\n    }\n   }\n  }\n }\n}\n",
+    "model.lobo": "module model;\nrecord Product {id:I64,name:Text,stock:I64,enabled:Bool}\nfn catalog()->List<Product> {List::prepend(Product {id:2,name:\"Tea \\\"\u591c\\\"\",stock:3,enabled:true},List::prepend(Product {id:7,name:\"Line\\nBack\\\\\",stock:0,enabled:true},List::prepend(Product {id:11,name:\"hidden\",stock:9,enabled:false},List::empty<Product>())))}\n",
+    "model.lobo.ids.json": "{\n  \"format\": \"lobo-identities/0.1\",\n  \"identities\": {\n    \"module\": \"realistic.catalog.model\",\n    \"Product\": \"realistic.catalog.model.Product\",\n    \"catalog\": \"realistic.catalog.model.catalog\"\n  }\n}\n",
+    "lib/io.lobo": "module http_transport;\nuse access {Permission,Permissions,one,allow};\nuse http { Request, Response, RequestResult, header_end, parse, wire, error_response };\nrecord ReceiveState { data:Bytes, status:I64, error:I64, done:Bool }\nrecord SendState { offset:I64, error:I64 }\nrecord ServeState { handled:I64, polls:I64, error:I64 }\n\nfn receive(stream:Native::Stream,cap:Native::Capability,deadline:I64)->ReceiveState actions {clock.read,net.read} {\n  while(state:ReceiveState=ReceiveState {data:Bytes::empty(),status:0,error:0,done:false};!state.done) {\n    match Native::monotonic_ms(cap) {\n      Err(code)=> ReceiveState {data:state.data,status:0,error:code,done:true},\n      Ok(now)=> if now>=deadline {ReceiveState {data:state.data,status:408,error:0,done:true}} else {\n        let remaining=4096-Bytes::length(state.data);\n        let count=if remaining<512 {remaining} else {512};\n        match Native::read(stream,count,deadline-now) {\n          Err(code)=> ReceiveState {data:state.data,status:if code==6 {408} else {0},error:if code==6 {0} else {code},done:true},\n          Ok(chunk)=> {\n            let data=Bytes::concat(state.data,chunk);\n            let complete=header_end(data)>=0;\n            let status=if Bytes::length(chunk)==0 {400} else {if !complete && Bytes::length(data)>=4096 {431} else {0}};\n            ReceiveState {data:data,status:status,error:0,done:complete || status!=0}\n          }\n        }\n      }\n    }\n  }\n}\nfn send_all(stream:Native::Stream,cap:Native::Capability,data:Bytes,deadline:I64)->I64 actions {clock.read,net.write} {\n  let final_state=while(state:SendState=SendState {offset:0,error:0};state.offset<Bytes::length(data) && state.error==0) {\n    match Native::monotonic_ms(cap) {\n      Err(code)=> SendState {offset:state.offset,error:code},\n      Ok(now)=> if now>=deadline {SendState {offset:state.offset,error:6}} else {\n        match Native::write(stream,Bytes::slice(data,state.offset,Bytes::length(data)-state.offset),deadline-now) {\n          Err(code)=> SendState {offset:state.offset,error:code},\n          Ok(count)=> SendState {offset:state.offset+count,error:if count==0 {5} else {0}}\n        }\n      }\n    }\n  };\n  final_state.error\n}\n// Both serving APIs share deadlines, framing failures and stream cleanup.\nfn receive_request(stream: Native::Stream, cap: Native::Capability) -> ReceiveState\nactions { clock.read, net.read }\n{\n  match Native::monotonic_ms(cap) {\n    Err(code) => ReceiveState { data: Bytes::empty(), status: 0, error: code, done: true },\n    Ok(start) => receive(stream, cap, start + 2000)\n  }\n}\n\nfn send_response(stream: Native::Stream, cap: Native::Capability, response: Bytes) -> I64\nactions { clock.read, net.write }\n{\n  match Native::monotonic_ms(cap) {\n    Err(code) => code,\n    Ok(now) => send_all(stream, cap, response, now + 2000)\n  }\n}\n\nfn finish_connection(stream: Native::Stream, outcome: I64, state: ServeState) -> ServeState\nactions { net.close }\n{\n  let closed = Native::close_stream(stream);\n  let error = match closed {\n    Err(code) => code,\n    Ok(done) => if outcome == 11 { 11 } else { 0 }\n  };\n  ServeState { handled: state.handled + 1, polls: state.polls + 1, error: error }\n}\n\nfn accept_error(state: ServeState, code: I64) -> ServeState {\n  ServeState { ...state, polls: state.polls + 1, error: if code == 6 { 0 } else { code } }\n}\n\nrecord Connection { stream: Native::Stream, state: ServeState }\nvariant AcceptState { Retry(ServeState), Accepted(Connection) }\nvariant Prepared { Failed(I64), Respond(Bytes), Handle(Request) }\n\nfn serving(state: ServeState, count: I64) -> Bool {\n  state.handled < count && state.polls < 1024 && state.error == 0\n}\n\nfn retrying(next: AcceptState, count: I64) -> Bool {\n  match next { Retry(state) => serving(state, count), Accepted(connection) => false }\n}\n\n// The only accept/retry loop. Callback adapters receive the updated progress.\nfn next_connection(listener: Native::Listener, state: ServeState, count: I64) -> AcceptState\nactions { net.accept }\n{\n  while(next: AcceptState = Retry(state); retrying(next, count)) {\n    match next {\n      Retry(progress) => match Native::accept(listener, 2000) {\n        Err(code) => Retry(accept_error(progress, code)),\n        Ok(stream) => Accepted(Connection { stream: stream, state: progress })\n      },\n      Accepted(connection) => next\n    }\n  }\n}\n\n// Read faults and automatic HTTP responses never invoke application callbacks.\nfn prepare_request(stream: Native::Stream, cap: Native::Capability) -> Prepared\nactions { clock.read, net.read }\n{\n  let request = receive_request(stream, cap);\n  if request.error != 0 {\n    Failed(request.error)\n  } else {\n    let parsed: RequestResult = if request.status == 0 { parse(request.data) }\n    else { Rejected(request.status) };\n    match parsed {\n      Rejected(status) => Respond(wire(error_response(status), false)),\n      Parsed(value) => Handle(value)\n    }\n  }\n}\n\nfn serve_one(stream: Native::Stream, cap: Native::Capability, handle: Fn(Request) -> Response) -> I64\nactions { clock.read, net.read, net.write }\n{\n  match prepare_request(stream, cap) {\n    Failed(code) => code,\n    Respond(bytes) => send_response(stream, cap, bytes),\n    Handle(request) => send_response(stream, cap, wire(handle(request), request.method == \"HEAD\"))\n  }\n}\n\nfn serve_listener(listener: Native::Listener, cap: Native::Capability, count: I64,\n  handle: Fn(Request) -> Response) -> Native::I64Result\nactions { net.accept, net.read, net.write, net.close, clock.read }\n{\n  let final = while(state: ServeState = ServeState { handled: 0, polls: 0, error: 0 };\n    serving(state, count)) {\n    match next_connection(listener, state, count) {\n      Retry(stopped) => stopped,\n      Accepted(connection) => finish_connection(connection.stream,\n        serve_one(connection.stream, cap, handle), connection.state)\n    }\n  };\n  if final.error != 0 { Err(final.error) } else { Ok(final.handled) }\n}\n\nfn serve_one_with<C>(context: C, stream: Native::Stream, cap: Native::Capability,\n  handle: Fn(C, Request) actions { db.execute, db.read, db.close } -> Response) -> I64\nactions { clock.read, net.read, net.write, db.execute, db.read, db.close }\n{\n  match prepare_request(stream, cap) {\n    Failed(code) => code,\n    Respond(bytes) => send_response(stream, cap, bytes),\n    Handle(request) => send_response(stream, cap, wire(handle(context, request), request.method == \"HEAD\"))\n  }\n}\n\nfn serve_context<C>(context: C, listener: Native::Listener, cap: Native::Capability, count: I64,\n  handle: Fn(C, Request) actions { db.execute, db.read, db.close } -> Response) -> Native::I64Result\nactions { net.accept, net.read, net.write, net.close, clock.read, db.execute, db.read, db.close }\n{\n  let final = while(state: ServeState = ServeState { handled: 0, polls: 0, error: 0 };\n    serving(state, count)) {\n    match next_connection(listener, state, count) {\n      Retry(stopped) => stopped,\n      Accepted(connection) => finish_connection(connection.stream,\n        serve_one_with(context, connection.stream, cap, handle), connection.state)\n    }\n  };\n  if final.error != 0 { Err(final.error) } else { Ok(final.handled) }\n}\n\nfn finish_listener(listener: Native::Listener, outcome: Native::I64Result) -> Native::I64Result\nactions { net.close }\n{\n  try Native::close_listener(listener);\n  outcome\n}\n\nfn serve(cap: Native::Capability, port: I64, count: I64,\n  handle: Fn(Request) -> Response) -> Native::I64Result\nactions { net.listen, net.accept, net.read, net.write, net.close, clock.read }\n{\n  let listener = try Native::listen(cap, port);\n  let outcome = serve_listener(listener, cap, count, handle);\n  finish_listener(listener, outcome)\n}\n\nfn serve_with<C>(cap: Native::Capability, port: I64, count: I64, context: C,\n  handle: Fn(C, Request) actions { db.execute, db.read, db.close } -> Response) -> Native::I64Result\nactions { net.listen, net.accept, net.read, net.write, net.close, clock.read, db.execute, db.read, db.close }\n{\n  let listener = try Native::listen(cap, port);\n  let outcome = serve_context(context, listener, cap, count, handle);\n  finish_listener(listener, outcome)\n}\n\nfn server_permissions()->Permissions {allow(one(ClockRead),Listen)}\n",
+    "lib/http.lobo": "module http_server;\nuse http { Response };\nuse json { Json, stringify, integer_text };\n\nrecord Request { method:Text, path:Text }\nvariant RequestResult { Parsed(Request), Rejected(I64) }\nrecord Headers { cursor:I64, hosts:I64, lengths:I64, body:Bool, status:I64 }\n\nfn line_end(data:Bytes,start:I64)->I64 {\n  while(index:I64=start;index+1<Bytes::length(data) && !(Bytes::at(data,index)==13 && Bytes::at(data,index+1)==10)) {index+1}\n}\nfn header_end(data:Bytes)->I64 {\n  let size=Bytes::length(data);\n  let index=while(i:I64=0;i+3<size && !(Bytes::at(data,i)==13 && Bytes::at(data,i+1)==10 && Bytes::at(data,i+2)==13 && Bytes::at(data,i+3)==10)) {i+1};\n  if index+3<size {index+4} else {-1}\n}\nfn find_byte(data:Bytes,start:I64,end:I64,byte:I64)->I64 {\n  while(index:I64=start;index<end && Bytes::at(data,index)!=byte) {index+1}\n}\nfn token(byte:I64)->Bool {\n  byte>=48 && byte<=57 || byte>=65 && byte<=90 || byte>=97 && byte<=122 ||\n  byte==33 || byte==35 || byte==36 || byte==37 || byte==38 || byte==39 || byte==42 || byte==43 || byte==45 || byte==46 || byte==94 || byte==95 || byte==96 || byte==124 || byte==126\n}\nfn token_range(data:Bytes,start:I64,end:I64)->Bool {\n  start<end && fold(i in end-start, valid:Bool=true) {valid && token(Bytes::at(data,start+i))}\n}\nfn lower(byte:I64)->I64 {if byte>=65 && byte<=90 {byte+32} else {byte}}\nfn header_name(data:Bytes,start:I64,end:I64,name:Text)->Bool {\n  let expected=Text::bytes(name);\n  end-start==Bytes::length(expected) && fold(i in end-start,same:Bool=true) {same && lower(Bytes::at(data,start+i))==Bytes::at(expected,i)}\n}\nfn whitespace(byte:I64)->Bool {byte==32 || byte==9}\nfn trim_start(data:Bytes,start:I64,end:I64)->I64 {while(i:I64=start;i<end && whitespace(Bytes::at(data,i))) {i+1}}\nfn trim_end(data:Bytes,start:I64,end:I64)->I64 {while(i:I64=end;i>start && whitespace(Bytes::at(data,i-1))) {i-1}}\nfn visible_value(data:Bytes,start:I64,end:I64)->Bool {\n  fold(i in end-start,valid:Bool=true) {let byte=Bytes::at(data,start+i);valid && (byte==9 || byte>=32 && byte<=126)}\n}\nfn host_value(data:Bytes,start:I64,end:I64)->Bool {\n  start<end && fold(i in end-start,valid:Bool=true) {\n    let byte=Bytes::at(data,start+i);\n    valid && (byte>=48 && byte<=57 || byte>=65 && byte<=90 || byte>=97 && byte<=122 || byte==46 || byte==45 || byte==58 || byte==91 || byte==93)\n  }\n}\nfn length_value(data:Bytes,start:I64,end:I64)->I64 {\n  if start==end {-1} else {fold(i in end-start,value:I64=0) {\n      let byte=Bytes::at(data,start+i);\n      if value<0 || byte<48 || byte>57 {-1} else {if value>0 || byte!=48 {1} else {0}}\n  }}\n}\nfn next_header(data:Bytes,state:Headers)->Headers {\n  let end=line_end(data,state.cursor);\n  let colon=find_byte(data,state.cursor,end,58);\n  let start=trim_start(data,colon+1,end);\n  let stop=trim_end(data,start,end);\n  let valid=colon<end && token_range(data,state.cursor,colon) && visible_value(data,colon+1,end);\n  if !valid {Headers {cursor:end+2,hosts:state.hosts,lengths:state.lengths,body:state.body,status:400}} else {\n    if header_name(data,state.cursor,colon,\"host\") {\n      Headers {cursor:end+2,hosts:state.hosts+1,lengths:state.lengths,body:state.body,status:if state.hosts>0 || !host_value(data,start,stop) {400} else {0}}\n    } else {if header_name(data,state.cursor,colon,\"content-length\") {\n        let length=length_value(data,start,stop);\n        Headers {cursor:end+2,hosts:state.hosts,lengths:state.lengths+1,body:state.body || length>0,status:if state.lengths>0 || length<0 {400} else {0}}\n      } else {if header_name(data,state.cursor,colon,\"transfer-encoding\") {\n          Headers {cursor:end+2,hosts:state.hosts,lengths:state.lengths,body:state.body,status:400}\n        } else {if header_name(data,state.cursor,colon,\"expect\") {\n            Headers {cursor:end+2,hosts:state.hosts,lengths:state.lengths,body:state.body,status:417}\n          } else {Headers {cursor:end+2,hosts:state.hosts,lengths:state.lengths,body:state.body,status:0}}}}}\n  }\n}\nfn parse(request:Bytes)->RequestResult {\n  let end=header_end(request);\n  if end>4096 || end<0 && Bytes::length(request)>=4096 {Rejected(431)} else {if end<0 {Rejected(400)} else {\n      let first=line_end(request,0);\n      let method_end=find_byte(request,0,first,32);\n      let path_end=find_byte(request,method_end+1,first,32);\n      let target_start=method_end+1;\n      let valid_path=path_end>target_start && Bytes::at(request,target_start)==47 && fold(i in path_end-target_start,valid:Bool=true) {\n        let byte=Bytes::at(request,target_start+i);valid && byte>32 && byte<=126 && byte!=35\n      };\n      let valid=method_end<first && path_end<first && token_range(request,0,method_end) && valid_path && Bytes::slice(request,path_end+1,first-path_end-1)==Text::bytes(\"HTTP/1.1\");\n      if !valid {Rejected(400)} else {\n        let headers=while(state:Headers=Headers {cursor:first+2,hosts:0,lengths:0,body:false,status:0};state.cursor<end-2 && state.status==0) {next_header(request,state)};\n        if headers.status!=0 {Rejected(headers.status)} else {if headers.hosts!=1 {Rejected(400)} else {if headers.body {Rejected(413)} else {\n              Parsed(Request {method:Text::from_bytes(Bytes::slice(request,0,method_end)),path:Text::from_bytes(Bytes::slice(request,target_start,path_end-target_start))})\n        }}}\n      }\n  }}\n}\nfn reason(status:I64)->Text {\n  if status==200 {\"OK\"} else {if status==400 {\"Bad Request\"} else {if status==404 {\"Not Found\"} else {if status==405 {\"Method Not Allowed\"} else {if status==408 {\"Request Timeout\"} else {if status==413 {\"Content Too Large\"} else {if status==417 {\"Expectation Failed\"} else {\"Request Header Fields Too Large\"}}}}}}}\n}\nfn json_response(status:I64,value:Json)->Response {Response {status:status,content_type:\"application/json\",body:stringify(value)}}\nfn error_response(status:I64)->Response {json_response(status,json {\"error\":reason(status)})}\nfn wire(response:Response,head:Bool)->Bytes {\n  let allow=if response.status==405 {\"Allow: GET, HEAD\\r\\n\"} else {\"\"};\n  Text::bytes(\"HTTP/1.1 \"+integer_text(response.status)+\" \"+reason(response.status)+\"\\r\\nContent-Type: application/json\\r\\nContent-Length: \"+integer_text(Bytes::length(Text::bytes(response.body)))+\"\\r\\nConnection: close\\r\\n\"+allow+\"\\r\\n\"+if head {\"\"} else {response.body})\n}\nfn respond(request:Bytes,handle:Fn(Request)->Response)->Bytes {\n  match parse(request) {Rejected(status)=> wire(error_response(status),false),Parsed(value)=> wire(handle(value),value.method==\"HEAD\")}\n}\n\n// Explicit context keeps application resources outside the callback value.\nfn respond_with<C>(context: C, request: Bytes,\n  handle: Fn(C, Request) actions { db.execute, db.read, db.close } -> Response) -> Bytes\nactions { db.execute, db.read, db.close }\n{\n  match parse(request) {\n    Rejected(status) => wire(error_response(status), false),\n    Parsed(value) => wire(handle(context, value), value.method == \"HEAD\")\n  }\n}\n",
+    "lib/io.lobo.ids.json": "{\n  \"format\": \"lobo-identities/0.1\",\n  \"identities\": {\n    \"AcceptState\": \"lobo.95e2173c2d0c2846576085c988e32742\",\n    \"Connection\": \"lobo.4ae4eeb53df6b7e522d75924dd21bbeb\",\n    \"Prepared\": \"lobo.62f85d01d8e51b0209eb2fafa443c5ae\",\n    \"ReceiveState\": \"lobo.http.transport.ReceiveState\",\n    \"SendState\": \"lobo.http.transport.SendState\",\n    \"ServeState\": \"lobo.http.transport.ServeState\",\n    \"accept_error\": \"lobo.f56b0cbe0a96c4c9a372ea7f199aac15\",\n    \"access.Permission\": \"lobo.permissions.Permission\",\n    \"access.Permissions\": \"lobo.permissions.Permissions\",\n    \"access.allow\": \"lobo.permissions.allow\",\n    \"access.one\": \"lobo.permissions.one\",\n    \"finish_connection\": \"lobo.bcfd9ba61989fa8f4c6d0f7b03215317\",\n    \"finish_listener\": \"lobo.c53cea940d336abcf43be7003bfc003b\",\n    \"http.Request\": \"lobo.http.server.Request\",\n    \"http.RequestResult\": \"lobo.http.server.RequestResult\",\n    \"http.Response\": \"example.web.response\",\n    \"http.error_response\": \"lobo.http.server.error_response\",\n    \"http.header_end\": \"lobo.http.server.header_end\",\n    \"http.parse\": \"lobo.http.server.parse\",\n    \"http.wire\": \"lobo.http.server.wire\",\n    \"module\": \"lobo.http.transport\",\n    \"next_connection\": \"lobo.bcae73410f94fbd16a9d5c65c3b8f724\",\n    \"prepare_request\": \"lobo.9208dfdc80f89314742515856200df08\",\n    \"receive\": \"lobo.http.transport.receive\",\n    \"receive_request\": \"lobo.38aa8ce7f12ae34d85c2d13f0fd2e28c\",\n    \"retrying\": \"lobo.292bec26a2e715e93a50f16e1abdca42\",\n    \"send_all\": \"lobo.http.transport.send_all\",\n    \"send_response\": \"lobo.66f68b42c4adeae5acf0b3216b3eb9ce\",\n    \"serve\": \"lobo.852b35fdd21c1b3ce25a6ae27fbf6148\",\n    \"serve_context\": \"example.sqlite.rest.serve\",\n    \"serve_listener\": \"lobo.http.transport.serve\",\n    \"serve_one\": \"lobo.http.transport.serve_one\",\n    \"serve_one_with\": \"example.sqlite.rest.serve_one\",\n    \"serve_with\": \"example.sqlite.rest.with_database\",\n    \"server_permissions\": \"lobo.0935a528ddd246a79a5f2cd965cced31\",\n    \"serving\": \"lobo.902d01e286cd89f72ff730d0e625215c\"\n  }\n}",
+    "lib/http.lobo.ids.json": "{\n  \"format\": \"lobo-identities/0.1\",\n  \"identities\": {\n    \"module\": \"lobo.http.server\",\n    \"http.Response\": \"example.web.response\",\n    \"json.Json\": \"lobo.json.value\",\n    \"json.stringify\": \"lobo.json.stringify\",\n    \"json.integer_text\": \"lobo.json.integer_text\",\n    \"Request\": \"lobo.http.server.Request\",\n    \"RequestResult\": \"lobo.http.server.RequestResult\",\n    \"Headers\": \"lobo.http.server.Headers\",\n    \"line_end\": \"lobo.http.server.line_end\",\n    \"header_end\": \"lobo.http.server.header_end\",\n    \"find_byte\": \"lobo.http.server.find_byte\",\n    \"token\": \"lobo.http.server.token\",\n    \"token_range\": \"lobo.http.server.token_range\",\n    \"lower\": \"lobo.http.server.lower\",\n    \"header_name\": \"lobo.http.server.header_name\",\n    \"whitespace\": \"lobo.http.server.whitespace\",\n    \"trim_start\": \"lobo.http.server.trim_start\",\n    \"trim_end\": \"lobo.http.server.trim_end\",\n    \"visible_value\": \"lobo.http.server.visible_value\",\n    \"host_value\": \"lobo.http.server.host_value\",\n    \"length_value\": \"lobo.http.server.length_value\",\n    \"next_header\": \"lobo.http.server.next_header\",\n    \"parse\": \"lobo.http.server.parse\",\n    \"reason\": \"lobo.http.server.reason\",\n    \"json_response\": \"lobo.http.server.json_response\",\n    \"error_response\": \"lobo.http.server.error_response\",\n    \"wire\": \"lobo.http.server.wire\",\n    \"respond\": \"lobo.http.server.respond\",\n    \"respond_with\": \"example.sqlite.rest.dispatch\"\n  }\n}\n",
+    "lib/helpers.lobo": "module http_helpers;\n\nrecord Response { status: I64, content_type: Text, body: Text }\nvariant PathMatch { NoMatch, Matched(Text) }\nrecord ByteCursor { remaining: List<I64>, output: List<I64> }\n\nfn text_response(status: I64, body: Text) -> Response\nrequires { status == 200 || status == 404 || status == 405 }\n{\n  Response { status: status, content_type: \"text/plain; charset=utf-8\", body: body }\n}\nfn json_document(status: I64, document: Text) -> Response\nrequires { status == 200 || status == 404 || status == 405 }\n{\n  Response { status: status, content_type: \"application/json\", body: document }\n}\nfn not_found() -> Response { text_response(404,\"Not found\\n\") }\nfn method_not_allowed() -> Response { text_response(405,\"Method not allowed\\n\") }\nfn read_method(method: Text) -> Bool { method == \"GET\" || method == \"HEAD\" }\n\nfn strip_prefix(value: Text, prefix: Text) -> PathMatch {\n  let bytes = Text::bytes(value);\n  let start = Text::bytes(prefix);\n  let length = Bytes::length(bytes);\n  let count = Bytes::length(start);\n  if count <= length && Bytes::slice(bytes,0,count) == start {\n    Matched(Text::from_bytes(Bytes::slice(bytes,count,length-count)))\n  } else { NoMatch }\n}\n\nfn quote_byte(byte: I64, reversed: List<I64>) -> List<I64>\nrequires { byte >= 0 && byte <= 255 }\n{\n  if byte == 34 || byte == 92 { List::prepend(byte,List::prepend(92,reversed)) } else {\n    if byte < 32 {\n      let hex = Text::bytes(\"0123456789abcdef\");\n      let high = Bytes::at(hex,byte / 16);\n      let low = Bytes::at(hex,byte % 16);\n      List::prepend(low,List::prepend(high,List::prepend(48,List::prepend(48,List::prepend(117,List::prepend(92,reversed))))))\n    } else { List::prepend(byte,reversed) }\n  }\n}\n\nfn json_string(value: Text) -> Text {\n  let bytes = Text::bytes(value);\n  let escaped = fold(i in Bytes::length(bytes), reversed: List<I64> = List::prepend(34,List::empty<I64>())) {\n    quote_byte(Bytes::at(bytes,i),reversed)\n  };\n  let closed = List::prepend(34,escaped);\n  let done = while(state: ByteCursor = ByteCursor { remaining: closed, output: List::empty<I64>() }; List::length(state.remaining) > 0) {\n    ByteCursor { remaining: List::tail(state.remaining), output: List::prepend(List::head(state.remaining),state.output) }\n  };\n  Text::from_bytes(Bytes::from_list(done.output))\n}\n\nidentities {\n  module: \"lobo.http.helpers\",\n  Response: \"example.web.response\",\n  PathMatch: \"lobo.http.path_match\",\n  ByteCursor: \"lobo.http.byte_cursor\",\n  text_response: \"lobo.http.text_response\",\n  json_document: \"lobo.http.json_document\",\n  not_found: \"lobo.http.not_found\",\n  method_not_allowed: \"lobo.http.method_not_allowed\",\n  read_method: \"lobo.http.read_method\",\n  strip_prefix: \"lobo.http.strip_prefix\",\n  quote_byte: \"lobo.http.quote_byte\",\n  json_string: \"lobo.http.json_string\"\n}\n",
+    "lib/access.lobo": "module access;\n\nvariant Permission { ClockRead, RandomRead, Listen, Connect }\nrecord Permissions { clock:Bool, random:Bool, listen:Bool, connect:Bool }\n\nfn none()->Permissions {Permissions { clock:false, random:false, listen:false, connect:false }}\nfn one(permission:Permission)->Permissions {allow(none(),permission)}\nfn allow(permissions:Permissions,permission:Permission)->Permissions {\n  match permission {\n    ClockRead=> Permissions { ...permissions,clock:true },\n    RandomRead=> Permissions { ...permissions,random:true },\n    Listen=> Permissions { ...permissions,listen:true },\n    Connect=> Permissions { ...permissions,connect:true }\n  }\n}\nfn abi_mask(permissions:Permissions)->I64 {\n  if permissions.clock { 1 } else { 0 } + if permissions.random { 2 } else { 0 } + if permissions.listen { 4 } else { 0 } + if permissions.connect { 8 } else { 0 }\n}\n\nfn restrict(cap:Native::Capability,permissions:Permissions)->Native::CapabilityResult actions {native.authorize} {\n  Native::restrict_capability(cap,abi_mask(permissions))\n}\n\nidentities {\n  module:\"lobo.permissions\",\n  Permission:\"lobo.permissions.Permission\",\n  Permissions:\"lobo.permissions.Permissions\",\n  none:\"lobo.permissions.none\",\n  one:\"lobo.permissions.one\",\n  allow:\"lobo.permissions.allow\",\n  abi_mask:\"lobo.permissions.abi_mask\",\n  restrict:\"lobo.permissions.restrict\"\n}\n",
+    "lib/json.lobo": "module json_helpers;\n\nuse deps { Response, json_string, json_document };\n\nrecord JsonObject { fields: List<JsonMember> }\nrecord JsonArray { values: List<Json> }\nrecord JsonMember { name: Text, value: Json }\nvariant Json {\n  Null, Boolean(Bool), Integer(I64), Number(Text), String(Text), Array(JsonArray), Object(JsonObject)\n}\n\nfn object() -> JsonObject { JsonObject {fields:List::empty<JsonMember>()} }\nfn field(document:JsonObject, name:Text, value:Json) -> JsonObject\nrequires { !has_key(document.fields,name) }\n{ JsonObject {fields:List::prepend(JsonMember {name:name,value:value},document.fields)} }\nfn array() -> JsonArray {JsonArray {values:List::empty<Json>()}}\nfn append(items:JsonArray, value:Json) -> JsonArray {\n  JsonArray {values:List::prepend(value,items.values)}\n}\n\nrecord JsonFieldScan { remaining:List<JsonMember>, found:Bool }\nfn has_key(members:List<JsonMember>, name:Text) -> Bool {\n  let done = while(state:JsonFieldScan = JsonFieldScan {remaining:members,found:false};\n    List::length(state.remaining)>0 && !state.found) {\n    JsonFieldScan {remaining:List::tail(state.remaining),found:List::head(state.remaining).name==name}\n  };\n  done.found\n}\nfn unique_fields(members:List<JsonMember>) -> Bool {\n  let done = while(state:JsonFieldScan = JsonFieldScan {remaining:members,found:false};\n    List::length(state.remaining)>0 && !state.found) {\n    JsonFieldScan {remaining:List::tail(state.remaining),\n      found:has_key(List::tail(state.remaining),List::head(state.remaining).name)}\n  };\n  !done.found\n}\n\nfn skip_digits(bytes:Bytes, start:I64) -> I64\nrequires { start>=0 && start<=Bytes::length(bytes) }\n{\n  while(index:I64 = start; index<Bytes::length(bytes) && Bytes::at(bytes,index)>=48 && Bytes::at(bytes,index)<=57) {\n    index+1\n  }\n}\nfn is_number(value:Text) -> Bool {\n  let bytes = Text::bytes(value);\n  let count = Bytes::length(bytes);\n  let start = if count>0 && Bytes::at(bytes,0)==45 {1} else {0};\n  let integer_end = if start>=count {-1} else {\n    if Bytes::at(bytes,start)==48 {start+1} else {\n      if Bytes::at(bytes,start)>=49 && Bytes::at(bytes,start)<=57 {skip_digits(bytes,start+1)} else {-1}\n    }\n  };\n  let fraction_end = if integer_end<0 {-1} else {\n    if integer_end<count && Bytes::at(bytes,integer_end)==46 {\n      let end = skip_digits(bytes,integer_end+1);\n      if end>integer_end+1 {end} else {-1}\n    } else {integer_end}\n  };\n  let exponent_end = if fraction_end<0 {-1} else {\n    if fraction_end<count && (Bytes::at(bytes,fraction_end)==101 || Bytes::at(bytes,fraction_end)==69) {\n      let next = fraction_end+1;\n      let digits = if next<count && (Bytes::at(bytes,next)==43 || Bytes::at(bytes,next)==45) {next+1} else {next};\n      let end = skip_digits(bytes,digits);\n      if end>digits {end} else {-1}\n    } else {fraction_end}\n  };\n  exponent_end==count && count>0\n}\nfn number_token(value:Text) -> Text\nrequires {is_number(value)}\n{value}\n\nrecord JsonDigits { remaining:I64, bytes:List<I64> }\nfn integer_text(number:I64) -> Text {\n  if number==0 {\"0\"} else {\n    let negative = if number>0 {-number} else {number};\n    let digits = while(state:JsonDigits = JsonDigits {remaining:negative,bytes:List::empty<I64>()}; state.remaining<0) {\n      JsonDigits {remaining:state.remaining/10,bytes:List::prepend(48-state.remaining%10,state.bytes)}\n    };\n    let signed = if number<0 {List::prepend(45,digits.bytes)} else {digits.bytes};\n    Text::from_bytes(Bytes::from_list(signed))\n  }\n}\n\nvariant JsonTask { Emit(Text), Visit(Json) }\nrecord JsonEncoding { pending:List<JsonTask>, chunks:List<Text> }\nrecord JsonArraySchedule { remaining:List<Json>, pending:List<JsonTask>, first:Bool }\nrecord JsonObjectSchedule { remaining:List<JsonMember>, pending:List<JsonTask>, first:Bool }\nrecord JsonFlatten { remaining:List<Text>, bytes:List<I64> }\n\nfn array_tasks(items:JsonArray, rest:List<JsonTask>) -> List<JsonTask> {\n  let closing = List::prepend(JsonTask::Emit(\"]\"),rest);\n  let done = while(state:JsonArraySchedule = JsonArraySchedule {remaining:items.values,pending:closing,first:true};\n    List::length(state.remaining)>0) {\n    let separated = if state.first {state.pending} else {List::prepend(JsonTask::Emit(\",\"),state.pending)};\n    JsonArraySchedule {remaining:List::tail(state.remaining),\n      pending:List::prepend(JsonTask::Visit(List::head(state.remaining)),separated),first:false}\n  };\n  List::prepend(JsonTask::Emit(\"[\"),done.pending)\n}\nfn object_tasks(document:JsonObject, rest:List<JsonTask>) -> List<JsonTask>\nrequires {unique_fields(document.fields)}\n{\n  let closing = List::prepend(JsonTask::Emit(\"}\"),rest);\n  let done = while(state:JsonObjectSchedule = JsonObjectSchedule {remaining:document.fields,pending:closing,first:true};\n    List::length(state.remaining)>0) {\n    let current = List::head(state.remaining);\n    let separated = if state.first {state.pending} else {List::prepend(JsonTask::Emit(\",\"),state.pending)};\n    let payload = List::prepend(JsonTask::Visit(current.value),separated);\n    let colon = List::prepend(JsonTask::Emit(\":\"),payload);\n    let named = List::prepend(JsonTask::Emit(json_string(current.name)),colon);\n    JsonObjectSchedule {remaining:List::tail(state.remaining),pending:named,first:false}\n  };\n  List::prepend(JsonTask::Emit(\"{\"),done.pending)\n}\nfn flatten(chunks:List<Text>) -> Text {\n  let done = while(state:JsonFlatten = JsonFlatten {remaining:chunks,bytes:List::empty<I64>()};\n    List::length(state.remaining)>0) {\n    let bytes = Text::bytes(List::head(state.remaining));\n    let count = Bytes::length(bytes);\n    let combined = fold(index in count, output:List<I64> = state.bytes) {\n      List::prepend(Bytes::at(bytes,count-1-index),output)\n    };\n    JsonFlatten {remaining:List::tail(state.remaining),bytes:combined}\n  };\n  Text::from_bytes(Bytes::from_list(done.bytes))\n}\nfn stringify(value:Json) -> Text {\n  let initial = List::prepend(JsonTask::Visit(value),List::empty<JsonTask>());\n  let done = while(state:JsonEncoding = JsonEncoding {pending:initial,chunks:List::empty<Text>()};\n    List::length(state.pending)>0) {\n    let rest = List::tail(state.pending);\n    match(List::head(state.pending)) {\n      Emit(token) => JsonEncoding {pending:rest,chunks:List::prepend(token,state.chunks)},\n      Visit(current) => {\n        let scheduled = match current {\n          Null => List::prepend(JsonTask::Emit(\"null\"),rest),\n          Boolean(flag) => List::prepend(JsonTask::Emit(if flag {\"true\"} else {\"false\"}),rest),\n          Integer(number) => List::prepend(JsonTask::Emit(integer_text(number)),rest),\n          Number(decimal) => List::prepend(JsonTask::Emit(number_token(decimal)),rest),\n          String(content) => List::prepend(JsonTask::Emit(json_string(content)),rest),\n          Array(items) => array_tasks(items,rest),\n          Object(document) => object_tasks(document,rest)\n        };\n        JsonEncoding {pending:scheduled,chunks:state.chunks}\n      }\n    }\n  };\n  flatten(done.chunks)\n}\nfn json_response(status:I64, value:Json) -> Response\nrequires { status==200 || status==404 || status==405 }\n{json_document(status,stringify(value))}\n\nidentities {\n  module: \"lobo.json.helpers\",\n  deps.Response: \"example.web.response\",\n  deps.json_string: \"lobo.http.json_string\",\n  deps.json_document: \"lobo.http.json_document\",\n  JsonObject: \"lobo.json.object_type\",\n  JsonArray: \"lobo.json.array_type\",\n  JsonMember: \"lobo.json.member\",\n  Json: \"lobo.json.value\",\n  object: \"lobo.json.object\",\n  field: \"lobo.json.field\",\n  array: \"lobo.json.array\",\n  append: \"lobo.json.append\",\n  JsonFieldScan: \"lobo.json.field_scan\",\n  has_key: \"lobo.json.has_key\",\n  unique_fields: \"lobo.json.unique_fields\",\n  skip_digits: \"lobo.json.skip_digits\",\n  is_number: \"lobo.json.is_number\",\n  number_token: \"lobo.json.number_token\",\n  JsonDigits: \"lobo.json.digits\",\n  integer_text: \"lobo.json.integer_text\",\n  JsonTask: \"lobo.json.task\",\n  JsonEncoding: \"lobo.json.encoding\",\n  JsonArraySchedule: \"lobo.json.array_schedule\",\n  JsonObjectSchedule: \"lobo.json.object_schedule\",\n  JsonFlatten: \"lobo.json.flatten_state\",\n  array_tasks: \"lobo.json.array_tasks\",\n  object_tasks: \"lobo.json.object_tasks\",\n  flatten: \"lobo.json.flatten\",\n  stringify: \"lobo.json.stringify\",\n  json_response: \"lobo.json.response\"\n}\n"
+  },
+  "candidate_changes": [
+    {
+      "path": "policy.lobo",
+      "sha256": "eddad79f64f2ef1ed3047510a53582d1a28eb90171abc1260902b85d52af6a6b",
+      "bytes": 783
+    },
+    {
+      "path": "logic.lobo",
+      "sha256": "5a89f9dc477833960341aae0cd04ad84673afd6eef3d454f5413ab0bdf498177",
+      "bytes": 1901
+    },
+    {
+      "path": ".check-io/8d224632d91641978bab52d99312d0de.response.json",
+      "sha256": "60a602d00feeb3d46f3379852326cb88933d020ac5f380409c02c66ffa68f323",
+      "bytes": 70
+    },
+    {
+      "path": ".check-io/8d224632d91641978bab52d99312d0de.request.json",
+      "sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+      "bytes": 2
+    }
+  ],
+  "raw_file_hashes": {
+    "assignment.json": {
+      "sha256": "7cae1e457ee306092ec0bf532956564551cb504f1ea554b7048e89d1e9a0ee6b",
+      "bytes": 153
+    },
+    "stderr.txt": {
+      "sha256": "06359b78726dbfad8e4ca43b792a1b2dbbdd726fc7fb4e59d3c243d26f396bcc",
+      "bytes": 207
+    },
+    "command.json": {
+      "sha256": "60e0350b1a2a25832ac8dc85e74be17422ccbf1bc0e32f1e77ce6f4bec0de94f",
+      "bytes": 596
+    },
+    "prompt.txt": {
+      "sha256": "8b1c09bfc6b2642d237a8cc652ac42bf0e729c9fe0d2c22cadd3c1c91d6bdedf",
+      "bytes": 191
+    },
+    "events.jsonl": {
+      "sha256": "d625e567aee023036be4ff87f891b8bc6e8d00fe9570a618b1223fefc1397277",
+      "bytes": 44168
+    },
+    "result.json": {
+      "sha256": "ce32c1098c0d66585186b85d1e86bd431f7ad71ea59c0993427a3a9434c26a6e",
+      "bytes": 28913
+    },
+    "last-message.txt": {
+      "sha256": "3056aa3f6859a4cff2a5c59bd8acdc73c82d7bef9b3d5a5e3ddf52c551a76294",
+      "bytes": 207
+    },
+    "heldout/transport.json": {
+      "sha256": "e807c09dfbdbf12f27f322c78d1234758b945f39545f3d02c920dab025cefd01",
+      "bytes": 21255
+    },
+    "heldout/program": {
+      "sha256": "8e40377a4d02456ae86e8c381a4d4158cee848da019f6faf02c8fc82ae889a2c",
+      "bytes": 158288
+    },
+    "heldout/result.json": {
+      "sha256": "8929c941a27487bc5b28664ad6cf12cf6030228014952e097f3df1dd309cfd7d",
+      "bytes": 24882
+    },
+    "initial/policy.lobo.ids.json": {
+      "sha256": "4b3ea2e7747d37d22972068fe4047907139beaa83d36a15f7b4549c14b0f6268",
+      "bytes": 245
+    },
+    "initial/app.lobo.ids.json": {
+      "sha256": "043acc68ba1d7e82e68c4307367057a3ca5a869da0b5d08ed2e904cab9e9561f",
+      "bytes": 467
+    },
+    "initial/logic.lobo.ids.json": {
+      "sha256": "1e602291c582b18b278544ce634b2bbbde8924cf65229722a63ddfd821a5d9de",
+      "bytes": 986
+    },
+    "initial/check.py": {
+      "sha256": "19cfc08bd63439e1487ff9ee80fc4a013b804feb6b424788b2fc62fb63bd278f",
+      "bytes": 385
+    },
+    "initial/AGENTS.md": {
+      "sha256": "3c8c8fce33c21a65ee4b8a44fe408af1f260accb220adba4fb6a75e331e7ea11",
+      "bytes": 153
+    },
+    "initial/BUNDLE.json": {
+      "sha256": "50dde78efbe2b5e57599aea6614fc786b99eddae022251375a89cf38462e0796",
+      "bytes": 164
+    },
+    "initial/app.lobo": {
+      "sha256": "ad4be6ca50721405d232fcf8291b35ba3cc67a0da94b090eb9ff3aa9e38c6ef5",
+      "bytes": 438
+    },
+    "initial/author.py": {
+      "sha256": "c31ac704d3aba83ce54af3b87bbc95fdfb9ca8f8a0218204b6459c231b1b319d",
+      "bytes": 513
+    },
+    "initial/policy.lobo": {
+      "sha256": "ea1a74da23665295949b89c50bc1013b87b05ce06cdbb9d015a3ec497d9dd73d",
+      "bytes": 761
+    },
+    "initial/logic.lobo": {
+      "sha256": "dbafdba0a63ec123cff551aa9139b5ddbeeaf89fb72ccec8a995a83763c4b9c1",
+      "bytes": 1845
+    },
+    "initial/VISIBLE.json": {
+      "sha256": "aa08a7a06ff56f5c6423acf239c56e4bfe058f882f941711be085764f7fc8cbd",
+      "bytes": 1888
+    },
+    "initial/GUIDE.txt": {
+      "sha256": "8d1dc35be37d60644abe21b562d419508d0afd02618286b5889e20e7194883d4",
+      "bytes": 3163
+    },
+    "initial/model.lobo": {
+      "sha256": "f65d9ba6e774283baf286b4f2af2d3dc8ea6cdef1994dfcb68c3e735d853574b",
+      "bytes": 332
+    },
+    "initial/model.lobo.ids.json": {
+      "sha256": "e6461b1aeba91155b865fc9723e6b33a31005d1e341ddf4bfb4eaac5b6586d04",
+      "bytes": 201
+    },
+    "initial/TASK.txt": {
+      "sha256": "ce0daacb51956feecbccab2adc87d60c6a2d5877205dc5aab3f658e3cd6a758e",
+      "bytes": 1793
+    },
+    "candidate-final/policy.lobo": {
+      "sha256": "eddad79f64f2ef1ed3047510a53582d1a28eb90171abc1260902b85d52af6a6b",
+      "bytes": 783
+    },
+    "candidate-final/logic.lobo": {
+      "sha256": "5a89f9dc477833960341aae0cd04ad84673afd6eef3d454f5413ab0bdf498177",
+      "bytes": 1901
+    },
+    "check-00/transport.json": {
+      "sha256": "95f949b563710b771dcf814ae851fba195c7417ad98d6748284e669e34276a03",
+      "bytes": 4914
+    },
+    "check-00/program": {
+      "sha256": "8e40377a4d02456ae86e8c381a4d4158cee848da019f6faf02c8fc82ae889a2c",
+      "bytes": 158288
+    },
+    "check-00/result.json": {
+      "sha256": "bdc7dfff12d4fdfd830eabd245c22c5a828b85aa54819346f7b0c8dc1fa40b09",
+      "bytes": 8198
+    },
+    "heldout/source/policy.lobo.ids.json": {
+      "sha256": "4b3ea2e7747d37d22972068fe4047907139beaa83d36a15f7b4549c14b0f6268",
+      "bytes": 245
+    },
+    "heldout/source/app.lobo.ids.json": {
+      "sha256": "043acc68ba1d7e82e68c4307367057a3ca5a869da0b5d08ed2e904cab9e9561f",
+      "bytes": 467
+    },
+    "heldout/source/logic.lobo.ids.json": {
+      "sha256": "1e602291c582b18b278544ce634b2bbbde8924cf65229722a63ddfd821a5d9de",
+      "bytes": 986
+    },
+    "heldout/source/BUNDLE.json": {
+      "sha256": "50dde78efbe2b5e57599aea6614fc786b99eddae022251375a89cf38462e0796",
+      "bytes": 164
+    },
+    "heldout/source/app.lobo": {
+      "sha256": "ad4be6ca50721405d232fcf8291b35ba3cc67a0da94b090eb9ff3aa9e38c6ef5",
+      "bytes": 438
+    },
+    "heldout/source/policy.lobo": {
+      "sha256": "eddad79f64f2ef1ed3047510a53582d1a28eb90171abc1260902b85d52af6a6b",
+      "bytes": 783
+    },
+    "heldout/source/logic.lobo": {
+      "sha256": "5a89f9dc477833960341aae0cd04ad84673afd6eef3d454f5413ab0bdf498177",
+      "bytes": 1901
+    },
+    "heldout/source/model.lobo": {
+      "sha256": "f65d9ba6e774283baf286b4f2af2d3dc8ea6cdef1994dfcb68c3e735d853574b",
+      "bytes": 332
+    },
+    "heldout/source/model.lobo.ids.json": {
+      "sha256": "e6461b1aeba91155b865fc9723e6b33a31005d1e341ddf4bfb4eaac5b6586d04",
+      "bytes": 201
+    },
+    "heldout/source/lib/io.lobo": {
+      "sha256": "ac5af9a0ceed5f7a446450c0248c7b6c284931908dc27b25ea1a69cb6517a52b",
+      "bytes": 8145
+    },
+    "heldout/source/lib/http.lobo": {
+      "sha256": "3aeac600d4131e544a7054f0f751efb5945e1616c84b210cfdabf5d936912a1e",
+      "bytes": 6880
+    },
+    "heldout/source/lib/io.lobo.ids.json": {
+      "sha256": "9163bf4fbd4215230030857e386d89b9a38843f233d4ca357e119f93779cc68d",
+      "bytes": 2021
+    },
+    "heldout/source/lib/http.lobo.ids.json": {
+      "sha256": "27cc7a4a712b98b29bd3fbae6e38616ed1713fb9cf07cc4e6c371d0823f3e640",
+      "bytes": 1408
+    },
+    "heldout/source/lib/helpers.lobo": {
+      "sha256": "ea9b9d87e15321e06ca67932258b60451c3da04a815e97d234ef2b36a91dba9f",
+      "bytes": 2787
+    },
+    "heldout/source/lib/access.lobo": {
+      "sha256": "c3148d6d50d3d8e2f326b771b76353fed490ba06cfd8cad21deb5d7f8f070e12",
+      "bytes": 1347
+    },
+    "heldout/source/lib/json.lobo": {
+      "sha256": "3ed68fee975a46affca613dd6da60fbe6ea297fc447b8c91a76fbe7b2406ac39",
+      "bytes": 8228
+    },
+    "initial/lib/io.lobo": {
+      "sha256": "ac5af9a0ceed5f7a446450c0248c7b6c284931908dc27b25ea1a69cb6517a52b",
+      "bytes": 8145
+    },
+    "initial/lib/http.lobo": {
+      "sha256": "3aeac600d4131e544a7054f0f751efb5945e1616c84b210cfdabf5d936912a1e",
+      "bytes": 6880
+    },
+    "initial/lib/io.lobo.ids.json": {
+      "sha256": "9163bf4fbd4215230030857e386d89b9a38843f233d4ca357e119f93779cc68d",
+      "bytes": 2021
+    },
+    "initial/lib/http.lobo.ids.json": {
+      "sha256": "27cc7a4a712b98b29bd3fbae6e38616ed1713fb9cf07cc4e6c371d0823f3e640",
+      "bytes": 1408
+    },
+    "initial/lib/helpers.lobo": {
+      "sha256": "ea9b9d87e15321e06ca67932258b60451c3da04a815e97d234ef2b36a91dba9f",
+      "bytes": 2787
+    },
+    "initial/lib/access.lobo": {
+      "sha256": "c3148d6d50d3d8e2f326b771b76353fed490ba06cfd8cad21deb5d7f8f070e12",
+      "bytes": 1347
+    },
+    "initial/lib/json.lobo": {
+      "sha256": "3ed68fee975a46affca613dd6da60fbe6ea297fc447b8c91a76fbe7b2406ac39",
+      "bytes": 8228
+    },
+    "initial/spec/core-v1.1.md": {
+      "sha256": "98c9b16d2bd72229464751f1d6c03790efde00a234bf7d2add2306f30b785361",
+      "bytes": 4694
+    },
+    "initial/spec/language-milestone-workloads.md": {
+      "sha256": "f0be02538657fc901e9241049314b75d03b0472bc776ad3748d63c5c847a2b4d",
+      "bytes": 6656
+    },
+    "initial/spec/core-v1.4.md": {
+      "sha256": "01b365a0c8874db2ad9982e1e85dc036cf22cf31521c2b28c943c08888edf9b2",
+      "bytes": 5603
+    },
+    "initial/spec/core-v0.7.md": {
+      "sha256": "0111fcfce8f7ba3ca9abfa027282113dcb6c31df7fb2d946847260f392efb221",
+      "bytes": 7169
+    },
+    "initial/spec/checked-artifact-v0.2.md": {
+      "sha256": "b13203846b1eb62eeb73445ef422cb526f7ae33d1e6804ecdef20e33c6365ff7",
+      "bytes": 1413
+    },
+    "initial/spec/core-v0.10.md": {
+      "sha256": "2ca585067a2c5113ce335847f433489c79a71d63471c2443786157038b60953e",
+      "bytes": 3093
+    },
+    "initial/spec/native-v0.1.md": {
+      "sha256": "befed14019840eea1988bf6ff982d531df105bb0d1b057e765e820ed72cdc0b6",
+      "bytes": 6568
+    },
+    "initial/spec/core-v0.8.md": {
+      "sha256": "790cfe562577be3dafa5ca3d2028e34d8782cbb36731fe45c29560a4badc6887",
+      "bytes": 5329
+    },
+    "initial/spec/core-v1.0.md": {
+      "sha256": "8dbc2ca888f49b84125a8faedf39160bb1eab27e0f25b336b1ef8f87f14f3b2b",
+      "bytes": 5242
+    },
+    "initial/spec/core-v1.11.md": {
+      "sha256": "d13c38830326c983d336c83ab4a398867bd17858ade3c5f8ecc6d088359182aa",
+      "bytes": 2968
+    },
+    "initial/spec/agent-testing-v0.1.md": {
+      "sha256": "dc9c1fb4b7f3aca5cc70a2cb844139190ec16218ee3ddb7759653f2d0fc4ab0e",
+      "bytes": 11933
+    },
+    "initial/spec/compact-source-v0.1.md": {
+      "sha256": "d7035fbf81ff5c83f84a34dd5c73a1617f1a49176019a2693ba56c501955a94f",
+      "bytes": 5994
+    },
+    "initial/spec/core-v1.8.md": {
+      "sha256": "422e050a2b5aa621e9b236f003084fa5398995e3144b3781b998092422255eb6",
+      "bytes": 5772
+    },
+    "initial/spec/core-v1.2.md": {
+      "sha256": "7d0f42dd9d1bd99b860af5045c960fa82ffc96511d8f6397fefa381964c5b363",
+      "bytes": 5534
+    },
+    "initial/spec/core-v1.7.md": {
+      "sha256": "2123fbea05d172cf4723e683afc4216c64e9bc0a62495f25e06b7ebc83311ed3",
+      "bytes": 3510
+    },
+    "initial/spec/generic-reuse-workload.md": {
+      "sha256": "53e5d3097494f3deb5379c77a343997dfa52f47edb6c3915006dac05082b244f",
+      "bytes": 2596
+    },
+    "initial/spec/core-v0.6.md": {
+      "sha256": "3d8737fe0d67ef67916ba63fc6d91386d9ff983c9148d2b2c671048a0cf35245",
+      "bytes": 7076
+    },
+    "initial/spec/core-v1.6.md": {
+      "sha256": "71967bd60313ce04cabdf740863eb2f1c73c49ecb1f22ea58ed6e9abbcd9c886",
+      "bytes": 4447
+    },
+    "initial/spec/core-v0.12.md": {
+      "sha256": "f02ddafe0a6196c15671a51e08aa12105ce216df1edb1a8354f54cfccc9e15c4",
+      "bytes": 7895
+    },
+    "initial/spec/recursive-ast-workload.md": {
+      "sha256": "3138f238b71d5d12001391dc3d2f8cf054a1a59622608699732bcc05441c7a3a",
+      "bytes": 1600
+    },
+    "initial/spec/README.md": {
+      "sha256": "e8b911e1997d93f0ede12e14c97851f8e08843ca19e84a1eb5a4319108e82653",
+      "bytes": 4757
+    },
+    "initial/spec/language-v1-acceptance.md": {
+      "sha256": "33e7c84c36db6bcf74059f57e08e3eaa550e1235955d77eae4e6ca4afbed5f33",
+      "bytes": 6645
+    },
+    "initial/spec/core-v0.2.md": {
+      "sha256": "9cbdbe1ddd2a55ce69b3333d5984a12d437ed225d856668c69edfbfd2a4b1ad2",
+      "bytes": 6391
+    },
+    "initial/spec/core-v1.5.md": {
+      "sha256": "dac4877adab3d738fb05fc57c37436106a22206a3069446a00c47de65c1abdda",
+      "bytes": 4557
+    },
+    "initial/spec/core-v0.11.md": {
+      "sha256": "275105a2b66f5f0f6ddb12828d3e30db47f8603933654ea92b6bb3d5597ba8f9",
+      "bytes": 6042
+    },
+    "initial/spec/core-v0.4.md": {
+      "sha256": "84828c9c83b0c0b70d278e2458d77e01231bfd75899a99193b80a762b78ede83",
+      "bytes": 5039
+    },
+    "initial/spec/native-llvm-v0.1.md": {
+      "sha256": "580611e7fc27523e4aed69b9064a7c688096c8254eecf9a53541f93994045b21",
+      "bytes": 5632
+    },
+    "initial/spec/native-interface-v0.1.md": {
+      "sha256": "fc98302a3a5e50c8a87079231b9311954e8351383ba872e4223385ff1770934e",
+      "bytes": 10000
+    },
+    "initial/spec/checked-artifact-v0.3.md": {
+      "sha256": "4874fc7ba430389d8d3bf4df3c6fc34b2b5bb949ecfe646383e3f6fc04652b15",
+      "bytes": 1147
+    },
+    "initial/spec/core-v0.3.md": {
+      "sha256": "96e39f958c14b082ad0f3a0c72dc0b3318a7c1c442812b35c338d35b00759543",
+      "bytes": 4396
+    },
+    "initial/spec/core-v1.9.md": {
+      "sha256": "c84dc7e6b555fc92458d632c0b92fb31052abd023e58b0201c735c6019ec225b",
+      "bytes": 2560
+    },
+    "initial/spec/checked-artifact-v0.1.md": {
+      "sha256": "8e85e37b7a89812f135ccb796e083ea95771032d267e55bc9c0d18f53fa56cdf",
+      "bytes": 4094
+    },
+    "initial/spec/core-v1.10.md": {
+      "sha256": "45d45f48a14fda25275c50ea02d6d65854d14e3fb6989ea56ef6d1aba62ec308",
+      "bytes": 4925
+    },
+    "initial/spec/source-diagnostics-v0.1.md": {
+      "sha256": "d531df2c57fdd4ec2917fb029a8fc54f441f6632fbfb7c2b4cfe3b8168e6eb3b",
+      "bytes": 3894
+    },
+    "initial/spec/core-v0.9.md": {
+      "sha256": "4bc8977f5151c72df856a06da8cc1ff136a9fb355681b47075bbd17d570d5379",
+      "bytes": 7360
+    },
+    "initial/spec/core-v0.1.md": {
+      "sha256": "c3fe3c05e21bd22c9df8f9ff78c65f3c645f127b10350c93a888c5f133f16854",
+      "bytes": 13060
+    },
+    "initial/spec/core-v1.3.md": {
+      "sha256": "2ea91b7b4d4c7716a593ceafcfff42227f05f94e45d8500e9ed04e0c956a9118",
+      "bytes": 6183
+    },
+    "initial/spec/core-v0.5.md": {
+      "sha256": "02ad206aa3cf73c38a8c13d082cdd7d0ea61c45a4dd2ab304497df2cc7c326cc",
+      "bytes": 6607
+    },
+    "initial/spec/sqlite-interface-v0.1.md": {
+      "sha256": "19de3da7153b874edc5518ded812515c2ce32dc67a4d1226307c7a0c8b612bdf",
+      "bytes": 9003
+    },
+    "initial/research/compact-pilot-2026-11-24.md": {
+      "sha256": "761a1fc994e8bdf6865f293fc37728aab95932c49d67a9ea23907a1de352ef25",
+      "bytes": 9416
+    },
+    "initial/spec/schemas/request-envelope.schema.json": {
+      "sha256": "2abad3a1e8bbbb980cfa0fbe2c9c38a789ba94215bd6481f677d15cfe7c24409",
+      "bytes": 1964
+    },
+    "initial/spec/schemas/tool-descriptor.schema.json": {
+      "sha256": "2e375db03b357fee59094e46252dcd847a3adf3fc04fae39457bf98a62bc17ef",
+      "bytes": 1727
+    },
+    "initial/spec/schemas/response-envelope.schema.json": {
+      "sha256": "a4e7d16a8bc25e06d5a571259df750f7c024319922e419bae57a8d66c64e7ca4",
+      "bytes": 3614
+    },
+    "initial/spec/schemas/conformance-case.schema.json": {
+      "sha256": "ef3a27dd2a0caa8249c1f1439eb0abf96983350456db4efaabfdd2e2cc24c443",
+      "bytes": 2269
+    },
+    "initial/spec/conformance/core-cases.json": {
+      "sha256": "076f50cc9a45b7588eed4d150bb289fcdf04b0dcc7435dd871e71ef388cf71df",
+      "bytes": 4968
+    },
+    "initial/docs/agent-reference/compact-pilot-2026-11-24/nominal.txt": {
+      "sha256": "9810070ea2f016955293106bc0f7bf2f9fbb718619ad5b8372f34fbc380a0510",
+      "bytes": 819
+    },
+    "initial/docs/agent-reference/compact-pilot-2026-11-24/contracts.txt": {
+      "sha256": "86a129a75ffba8cb447f0a97b513cc92abb806b932609fc253273909aae868aa",
+      "bytes": 796
+    },
+    "initial/docs/agent-reference/compact-pilot-2026-11-24/ranges.txt": {
+      "sha256": "633eac0a1b432389d842277929b485519962a646c07bbe97a69a403b5d217478",
+      "bytes": 934
+    },
+    "initial/docs/agent-reference/compact-pilot-2026-11-24/propagation.txt": {
+      "sha256": "d204f387ce82c1a0c1106ec337db631c06ec084c51f7b583f7eb9b45fb38c43f",
+      "bytes": 744
+    },
+    "initial/.agents/skills/lobo-programming/references/conveniences.lobo": {
+      "sha256": "ffb3bcfaa7fa99fca865d6498238b4c81b857a01e2744d46d5a6f0308765e9c9",
+      "bytes": 301
+    },
+    "initial/.agents/skills/lobo-programming/references/compact-example.lobo": {
+      "sha256": "d2376c69b774da83073a98883e91794750d59f99ed3fa380d9aaa673d1950954",
+      "bytes": 231
+    },
+    "initial/.agents/skills/lobo-programming/references/try-example.lobo": {
+      "sha256": "2f6b5750d060c929eae94cb9b001b3ea9154f9ddaa369c0934c1953cce21770a",
+      "bytes": 412
+    },
+    "initial/.agents/skills/lobo-programming/references/sqlite-example.lobo": {
+      "sha256": "855f210acb18bc4568aad97373a8633cd9b7053d368980172317c76fab74927a",
+      "bytes": 303
+    },
+    "initial/.agents/skills/lobo-programming/references/compact-example.lobo.ids.json": {
+      "sha256": "2dbc359fba6b65d4fa0667b91bd80e8c4f150b38ecb26c00c21e743332906d0e",
+      "bytes": 298
+    },
+    "initial/.agents/skills/lobo-programming/references/json-example.lobo": {
+      "sha256": "e45bbda6b893e09f021821bd500195c4e27a827e81edcc249458cef53c3cc712",
+      "bytes": 269
+    },
+    "initial/.agents/skills/lobo-programming/references/tools.md": {
+      "sha256": "1913a1fceffba4c09f72625d9bc1e8d8104e35025ad674988a73405ba8eb8429",
+      "bytes": 8694
+    },
+    "initial/.agents/skills/lobo-programming/references/callbacks.lobo": {
+      "sha256": "a106cf1e51354df3296e755d882d6f0fc6ce7690b761914cca0f76cc0c0bf63e",
+      "bytes": 406
+    },
+    "initial/.agents/skills/lobo-programming/references/sqlite-example.lobo.ids.json": {
+      "sha256": "18ae22c6bf9c71e6b1f7633bd7fcd847883b919ab27f7b34d18feca3f455a2e6",
+      "bytes": 343
+    },
+    "initial/.agents/skills/lobo-programming/references/conveniences.lobo.ids.json": {
+      "sha256": "eb25455ebf8d705ecd0d1d2261623cb5930cd4ea9bb3bf04de2d2e7bb0921817",
+      "bytes": 337
+    },
+    "initial/.agents/skills/lobo-programming/references/language.md": {
+      "sha256": "f007469320ec5054db07dac9302f8b6ac9a9dc976099ffd566c1ea963ab36562",
+      "bytes": 12554
+    },
+    "initial/.agents/skills/lobo-programming/references/examples.lobo": {
+      "sha256": "cf65d2cdc47a1bb15e154f94fe2e70d92e58eb15d405c8a2fb68261c294a1b3c",
+      "bytes": 2028
+    },
+    "initial/.agents/skills/lobo-programming/references/native-example.lobo": {
+      "sha256": "79c44e86db8aa77322b4d99a424a25a0b2d37ced37e3e65af344c6a02d03737c",
+      "bytes": 300
+    },
+    "initial/.agents/skills/lobo-programming/references/callbacks.lobo.ids.json": {
+      "sha256": "7cf6c0e2a287692417905cb0fb94a3ab5f04cb517695ad597f2404e5888b11cc",
+      "bytes": 334
+    },
+    "initial/libraries/json/README.md": {
+      "sha256": "fcc2d6742f11f4a53fbe1f26ce7a390e477e0de88a983e4a348884f6983d4959",
+      "bytes": 5305
+    },
+    "initial/libraries/json/json.lobo": {
+      "sha256": "3ed68fee975a46affca613dd6da60fbe6ea297fc447b8c91a76fbe7b2406ac39",
+      "bytes": 8228
+    },
+    "initial/libraries/native/README.md": {
+      "sha256": "4de8dd7276b56d529c96f909ba6e4903fda299e255394e1e8e4bef094d104eea",
+      "bytes": 3872
+    },
+    "initial/libraries/native/native.lobo": {
+      "sha256": "ee7ba249a414ff9421cc36d3373f412b6ce63e62d696d1bdd0f9ce111e9027d1",
+      "bytes": 4649
+    },
+    "initial/libraries/native/permissions.lobo": {
+      "sha256": "c3148d6d50d3d8e2f326b771b76353fed490ba06cfd8cad21deb5d7f8f070e12",
+      "bytes": 1347
+    },
+    "initial/libraries/sql/sql.lobo.ids.json": {
+      "sha256": "67fc9cd6d80fed595e0efdffeb36b7153d865236ab188d2da776ed8effd643d4",
+      "bytes": 2033
+    },
+    "initial/libraries/sql/sql.lobo": {
+      "sha256": "5704a8abcf1e1d0ee435b09aa7219c9c809bc1aaa304f3fe61b3de41d903a133",
+      "bytes": 9348
+    },
+    "initial/libraries/sql/README.md": {
+      "sha256": "85f5ec08131d902d2ed64014ebd687462def277aa5f0876599c1058cfd71fad5",
+      "bytes": 4514
+    },
+    "initial/libraries/http/http.lobo": {
+      "sha256": "ea9b9d87e15321e06ca67932258b60451c3da04a815e97d234ef2b36a91dba9f",
+      "bytes": 2787
+    },
+    "initial/libraries/http/README.md": {
+      "sha256": "c4dd34349e63538c79fe003c6cff87c3e4d27a624bc2d3146ed4fe08c4626774",
+      "bytes": 4399
+    },
+    "initial/libraries/http-server/server.lobo": {
+      "sha256": "3aeac600d4131e544a7054f0f751efb5945e1616c84b210cfdabf5d936912a1e",
+      "bytes": 6880
+    },
+    "initial/libraries/http-server/transport.lobo.ids.json": {
+      "sha256": "9163bf4fbd4215230030857e386d89b9a38843f233d4ca357e119f93779cc68d",
+      "bytes": 2021
+    },
+    "initial/libraries/http-server/README.md": {
+      "sha256": "7f695c6966c1a31adf74d2d620760857a07ac28c0763a65fc8a6001800b6bde2",
+      "bytes": 7886
+    },
+    "initial/libraries/http-server/server.lobo.ids.json": {
+      "sha256": "27cc7a4a712b98b29bd3fbae6e38616ed1713fb9cf07cc4e6c371d0823f3e640",
+      "bytes": 1408
+    },
+    "initial/libraries/http-server/transport.lobo": {
+      "sha256": "ac5af9a0ceed5f7a446450c0248c7b6c284931908dc27b25ea1a69cb6517a52b",
+      "bytes": 8145
+    },
+    "candidate-final/.check-io/8d224632d91641978bab52d99312d0de.response.json": {
+      "sha256": "60a602d00feeb3d46f3379852326cb88933d020ac5f380409c02c66ffa68f323",
+      "bytes": 70
+    },
+    "candidate-final/.check-io/8d224632d91641978bab52d99312d0de.request.json": {
+      "sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+      "bytes": 2
+    },
+    "check-00/source/policy.lobo.ids.json": {
+      "sha256": "4b3ea2e7747d37d22972068fe4047907139beaa83d36a15f7b4549c14b0f6268",
+      "bytes": 245
+    },
+    "check-00/source/app.lobo.ids.json": {
+      "sha256": "043acc68ba1d7e82e68c4307367057a3ca5a869da0b5d08ed2e904cab9e9561f",
+      "bytes": 467
+    },
+    "check-00/source/logic.lobo.ids.json": {
+      "sha256": "1e602291c582b18b278544ce634b2bbbde8924cf65229722a63ddfd821a5d9de",
+      "bytes": 986
+    },
+    "check-00/source/BUNDLE.json": {
+      "sha256": "50dde78efbe2b5e57599aea6614fc786b99eddae022251375a89cf38462e0796",
+      "bytes": 164
+    },
+    "check-00/source/app.lobo": {
+      "sha256": "ad4be6ca50721405d232fcf8291b35ba3cc67a0da94b090eb9ff3aa9e38c6ef5",
+      "bytes": 438
+    },
+    "check-00/source/policy.lobo": {
+      "sha256": "eddad79f64f2ef1ed3047510a53582d1a28eb90171abc1260902b85d52af6a6b",
+      "bytes": 783
+    },
+    "check-00/source/logic.lobo": {
+      "sha256": "5a89f9dc477833960341aae0cd04ad84673afd6eef3d454f5413ab0bdf498177",
+      "bytes": 1901
+    },
+    "check-00/source/model.lobo": {
+      "sha256": "f65d9ba6e774283baf286b4f2af2d3dc8ea6cdef1994dfcb68c3e735d853574b",
+      "bytes": 332
+    },
+    "check-00/source/model.lobo.ids.json": {
+      "sha256": "e6461b1aeba91155b865fc9723e6b33a31005d1e341ddf4bfb4eaac5b6586d04",
+      "bytes": 201
+    },
+    "check-00/source/lib/io.lobo": {
+      "sha256": "ac5af9a0ceed5f7a446450c0248c7b6c284931908dc27b25ea1a69cb6517a52b",
+      "bytes": 8145
+    },
+    "check-00/source/lib/http.lobo": {
+      "sha256": "3aeac600d4131e544a7054f0f751efb5945e1616c84b210cfdabf5d936912a1e",
+      "bytes": 6880
+    },
+    "check-00/source/lib/io.lobo.ids.json": {
+      "sha256": "9163bf4fbd4215230030857e386d89b9a38843f233d4ca357e119f93779cc68d",
+      "bytes": 2021
+    },
+    "check-00/source/lib/http.lobo.ids.json": {
+      "sha256": "27cc7a4a712b98b29bd3fbae6e38616ed1713fb9cf07cc4e6c371d0823f3e640",
+      "bytes": 1408
+    },
+    "check-00/source/lib/helpers.lobo": {
+      "sha256": "ea9b9d87e15321e06ca67932258b60451c3da04a815e97d234ef2b36a91dba9f",
+      "bytes": 2787
+    },
+    "check-00/source/lib/access.lobo": {
+      "sha256": "c3148d6d50d3d8e2f326b771b76353fed490ba06cfd8cad21deb5d7f8f070e12",
+      "bytes": 1347
+    },
+    "check-00/source/lib/json.lobo": {
+      "sha256": "3ed68fee975a46affca613dd6da60fbe6ea297fc447b8c91a76fbe7b2406ac39",
+      "bytes": 8228
+    }
+  }
+}

@@ -1,0 +1,8 @@
+module sqlite_skill;
+use sql { Row, SqlResult, open, close, query, no_params };
+fn read()->SqlResult<List<Row>> actions {native.authorize,db.open,db.close,db.execute,db.read} {
+  let db=try open(Native::sqlite_capability());
+  let outcome=query(db,"SELECT 42",no_params());
+  try close(db);
+  outcome
+}

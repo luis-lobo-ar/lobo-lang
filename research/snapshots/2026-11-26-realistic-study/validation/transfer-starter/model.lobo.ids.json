@@ -1,0 +1,7 @@
+{
+  "format": "lobo-identities/0.1",
+  "identities": {
+    "module": "realistic.transfer.model",
+    "Receipt": "realistic.transfer.model.Receipt"
+  }
+}

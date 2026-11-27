@@ -1,0 +1,6 @@
+module app;
+use access {restrict}; use io {server_permissions,serve}; use http {Request,Response}; use logic {handle};
+fn main(port:I64,max_requests:I64)->Native::I64Result
+actions {native.authorize,clock.read,net.listen,net.accept,net.read,net.write,net.close}
+requires {port>=1 && port<=65535 && max_requests>=1 && max_requests<=128}
+{let cap=try restrict(Native::capability(),server_permissions());serve(cap,port,max_requests,handle)}

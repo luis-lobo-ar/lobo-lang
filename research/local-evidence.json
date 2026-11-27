@@ -1636,6 +1636,70 @@
         "Complete transitive reference closure, fully observed host instructions or OS-level read isolation",
         "A fresh full compiler/editor suite or permission for additional trials, version edits or language unfreeze"
       ]
+    },
+    {
+      "id": "local-047",
+      "date": "2026-11-26",
+      "title": "Realistic native application development with and without v2",
+      "evidence_kind": "Preregistered matched application-change experiment with live HTTP and persistent SQLite state oracles",
+      "status": "All12 attempts retained; both arms4/6 timely completions, all12 candidates correct; four usage unknowns",
+      "files": [
+        {
+          "path": "research/realistic-development-study-2026-11-26.md",
+          "sha256": "c68fa53fc201de88f877b3cc76f97d39413153ade399dadb38da2561b795ef9d"
+        },
+        {
+          "path": "benchmarks/results/2026-11-26-realistic-study.json",
+          "sha256": "9293fab2881f3cc18cb9a78e7f08e49d6b835df00a8eb873380f9550ff646780"
+        },
+        {
+          "path": "benchmarks/results/2026-11-26-realistic-process-audit.json",
+          "sha256": "2fb4273198d19be03811b9d59dd1c8b5867879aa93feae3d14814bca2ea7aaeb"
+        },
+        {
+          "path": "benchmarks/results/2026-11-26-realistic-type-audit.json",
+          "sha256": "8934ea8e2bdb45783ffba45ad02ea5b05be89fb64fd72f8083b6cd54f55bf096"
+        },
+        {
+          "path": "benchmarks/results/2026-11-26-realistic-freeze-audit.json",
+          "sha256": "8c4b36f5ac62195be2b1775740c835e84437e7aa25965a5332c9a8e3553886e7"
+        },
+        {
+          "path": "benchmarks/results/2026-11-26-realistic-verification.json",
+          "sha256": "b0e5054f49a5176709b5c0594744e5a38f3854b1b68d21ba08e8f186fbf3da8b"
+        },
+        {
+          "path": "benchmarks/results/2026-11-26-realistic-validation.json",
+          "sha256": "0db096f346d77313a599116ab30b1bd6a6e9d29066d990e771adb7329eed9d78"
+        },
+        {
+          "path": "research/snapshots/2026-11-26-realistic-study/registration/manifest.json",
+          "sha256": "32f728dfcdb82a0c09f2c7b070bb4087940a9da00cb9c9598a9c4d8a973f7e1f"
+        },
+        {
+          "path": "research/snapshots/2026-11-26-realistic-study/evidence-manifest.json",
+          "sha256": "f5d200a19b0cf86646ddaee2dd2334151d6759c93020f82a524cbef5dd83c9f3"
+        }
+      ],
+      "supports": [
+        "Two fresh multi-module application changes x3 repeats x2 arms; same configured GPT-5.6-Luna/high120s/16commands/6checks; only frozen v2 availability/invocation differs",
+        "Both arms HTTP3/3 and SQLite1/3 timely acceptance,4/6 overall; all12 final candidates pass300 repeated native scenarios",
+        "All four timeouts already had a public pass; correct candidates remain primary failures, including one late drained public check after agent termination",
+        "Three complete token pairs are all HTTP: medianv2/control1.0405, mixed range0.8525\u20131.7013; zero complete SQLite token pairs",
+        "Known subtotal including source-free availability1508407 across9/13 calls; four unknown costs retained, no imputed zeros",
+        "69harness and15research tests pass,170calibration scenario observations catch3compiled defects,300posthoc strict-type audits change zero outcomes",
+        "Product1.11.2, libraries, both skills, cards and old studies remain frozen; prior312-pass compiler receipt reused honestly",
+        "All46 earlier entry objects/168 pins unchanged; full local raw archive3454 members/18742138bytes verified and public manifest retained"
+      ],
+      "does_not_establish": [
+        "General skill advantage, population completion rates or statistical equivalence",
+        "Overall/SQLite token-efficiency ranking with all SQLite pairs incomplete",
+        "Incorrect final application code as the cause of these timeouts",
+        "Causal allocation among skill wording, retrieval, model/provider turnaround or build cost",
+        "Complete production security/concurrency/TLS/deployment coverage or formal correctness",
+        "Billing, parent-development costs, immutable model weights or a native-runtime speed ranking",
+        "A fresh full compiler/editor suite or authorization for more trials, skill/library/compiler changes or budget/caching changes"
+      ]
     }
   ],
   "backend_recommendation": {

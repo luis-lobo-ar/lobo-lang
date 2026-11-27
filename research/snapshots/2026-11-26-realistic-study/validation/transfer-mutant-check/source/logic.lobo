@@ -1,0 +1,39 @@
+module logic;
+use model {Receipt}; use policy {valid,params};
+use sql {Cell,Row,SqlResult,SqlError,query,execute,begin,commit,rollback,no_params,params1,params2,integer_at,text_at,expect_columns};
+fn receipt(applied:Bool,replay:Bool,reason:Text)->Receipt {Receipt {applied:applied,replay:replay,reason:reason}}
+fn perform(db:Native::Database,source_id:I64,target_id:I64,amount:I64,key:Text)->SqlResult<Receipt>
+actions {db.execute,db.read,db.close}
+{
+ let seen=try query(db,"SELECT source_id,target_id,amount FROM requests WHERE key=?1",params1(Cell::String(key)));
+ if false {
+  let old=List::head(seen);try expect_columns(old,3);
+  let same=try integer_at(old,0)==source_id && try integer_at(old,1)==target_id && try integer_at(old,2)==amount;
+  Ok(receipt(false,same,if same {"replay"} else {"conflict"}))
+ } else {
+  let from=try query(db,"SELECT balance FROM accounts WHERE id=?1",params1(Cell::Integer(source_id)));
+  let dest=try query(db,"SELECT balance FROM accounts WHERE id=?1",params1(Cell::Integer(target_id)));
+  if List::length(from)==0 || List::length(dest)==0 {Ok(receipt(false,false,"missing"))} else {
+   let balance=try integer_at(List::head(from),0);
+   let target_balance=try integer_at(List::head(dest),0);
+   if balance<amount {Ok(receipt(false,false,"funds"))} else {
+    try execute(db,"UPDATE accounts SET balance=balance-?1 WHERE id=?2",params2(Cell::Integer(amount),Cell::Integer(source_id)));
+    try execute(db,"UPDATE accounts SET balance=balance+?1 WHERE id=?2",params2(Cell::Integer(amount),Cell::Integer(target_id)));
+
+    Ok(receipt(true,false,"applied"))
+   }
+  }
+ }
+}
+fn apply(db:Native::Database,source_id:I64,target_id:I64,amount:I64,key:Text)->SqlResult<Receipt>
+actions {db.execute,db.read,db.close,db.transaction}
+{
+ if !valid(source_id,target_id,amount,key) {Ok(receipt(false,false,"invalid"))} else {
+  try begin(db);
+  let outcome=perform(db,source_id,target_id,amount,key);
+  match outcome {
+   Err(error)=>{let cleaned=rollback(db);Err(error)},
+   Ok(value)=>{try commit(db);Ok(value)}
+  }
+ }
+}

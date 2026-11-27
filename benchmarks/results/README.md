@@ -121,3 +121,15 @@ and [hash/evidence receipt](2026-11-04-language-v1-release.json). All four famil
 configurations pass, with 185 Rust / 30 Python / 122 editor tests and the actual editor host. Earlier progress
 and checkpoint entries remain historical. No independent agent construction/comprehension/token result.
 
+
+- 2026-11-26: [Realistic development study](2026-11-26-realistic-study.json),
+  [process audit](2026-11-26-realistic-process-audit.json),
+  [type sensitivity](2026-11-26-realistic-type-audit.json),
+  [freeze audit](2026-11-26-realistic-freeze-audit.json),
+  [verification](2026-11-26-realistic-verification.json),
+  [native calibration](2026-11-26-realistic-validation.json) and
+  [paper preservation](2026-11-26-realistic-paper-preservation.json).
+  Two native application changes x3 repetitions xcontrol/v2 at identical Luna/high120s/16commands/6checks.
+  Both arms4/6 timely completions; all12 candidates pass300 repeated scenarios. Four unknown usages;
+  only3 complete token pairs, all HTTP. No demonstrated v2 advantage. See
+  [the report](../../research/realistic-development-study-2026-11-26.md); keep product/skills frozen.

@@ -1,0 +1,69 @@
+module http_helpers;
+
+record Response { status: I64, content_type: Text, body: Text }
+variant PathMatch { NoMatch, Matched(Text) }
+record ByteCursor { remaining: List<I64>, output: List<I64> }
+
+fn text_response(status: I64, body: Text) -> Response
+requires { status == 200 || status == 404 || status == 405 }
+{
+  Response { status: status, content_type: "text/plain; charset=utf-8", body: body }
+}
+fn json_document(status: I64, document: Text) -> Response
+requires { status == 200 || status == 404 || status == 405 }
+{
+  Response { status: status, content_type: "application/json", body: document }
+}
+fn not_found() -> Response { text_response(404,"Not found\n") }
+fn method_not_allowed() -> Response { text_response(405,"Method not allowed\n") }
+fn read_method(method: Text) -> Bool { method == "GET" || method == "HEAD" }
+
+fn strip_prefix(value: Text, prefix: Text) -> PathMatch {
+  let bytes = Text::bytes(value);
+  let start = Text::bytes(prefix);
+  let length = Bytes::length(bytes);
+  let count = Bytes::length(start);
+  if count <= length && Bytes::slice(bytes,0,count) == start {
+    Matched(Text::from_bytes(Bytes::slice(bytes,count,length-count)))
+  } else { NoMatch }
+}
+
+fn quote_byte(byte: I64, reversed: List<I64>) -> List<I64>
+requires { byte >= 0 && byte <= 255 }
+{
+  if byte == 34 || byte == 92 { List::prepend(byte,List::prepend(92,reversed)) } else {
+    if byte < 32 {
+      let hex = Text::bytes("0123456789abcdef");
+      let high = Bytes::at(hex,byte / 16);
+      let low = Bytes::at(hex,byte % 16);
+      List::prepend(low,List::prepend(high,List::prepend(48,List::prepend(48,List::prepend(117,List::prepend(92,reversed))))))
+    } else { List::prepend(byte,reversed) }
+  }
+}
+
+fn json_string(value: Text) -> Text {
+  let bytes = Text::bytes(value);
+  let escaped = fold(i in Bytes::length(bytes), reversed: List<I64> = List::prepend(34,List::empty<I64>())) {
+    quote_byte(Bytes::at(bytes,i),reversed)
+  };
+  let closed = List::prepend(34,escaped);
+  let done = while(state: ByteCursor = ByteCursor { remaining: closed, output: List::empty<I64>() }; List::length(state.remaining) > 0) {
+    ByteCursor { remaining: List::tail(state.remaining), output: List::prepend(List::head(state.remaining),state.output) }
+  };
+  Text::from_bytes(Bytes::from_list(done.output))
+}
+
+identities {
+  module: "lobo.http.helpers",
+  Response: "example.web.response",
+  PathMatch: "lobo.http.path_match",
+  ByteCursor: "lobo.http.byte_cursor",
+  text_response: "lobo.http.text_response",
+  json_document: "lobo.http.json_document",
+  not_found: "lobo.http.not_found",
+  method_not_allowed: "lobo.http.method_not_allowed",
+  read_method: "lobo.http.read_method",
+  strip_prefix: "lobo.http.strip_prefix",
+  quote_byte: "lobo.http.quote_byte",
+  json_string: "lobo.http.json_string"
+}

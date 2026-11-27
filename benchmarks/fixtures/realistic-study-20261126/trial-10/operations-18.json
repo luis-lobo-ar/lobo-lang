@@ -1,0 +1,37 @@
+[
+  {
+    "command": [
+      "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/realistic-study-20261126/run/trial-10/heldout/program",
+      "--entry",
+      "realistic.transfer.app.main",
+      "--arg",
+      "I64:1",
+      "--arg",
+      "I64:2",
+      "--arg",
+      "I64:1",
+      "--arg",
+      "Text:636170",
+      "--sqlite-file",
+      "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/realistic-study-20261126/run/trial-10/heldout/database-18.sqlite",
+      "--sqlite-mode",
+      "write",
+      "--sqlite-calls",
+      "1024",
+      "--sqlite-steps",
+      "1000000",
+      "--sqlite-rows",
+      "128",
+      "--sqlite-handles",
+      "3",
+      "--fuel",
+      "100000000",
+      "--heap-cells",
+      "16000000"
+    ],
+    "exit_code": 0,
+    "stdout": "{\"status\":\"ok\",\"kind\":\"value\",\"value\":{\"type\":\"Variant\",\"value\":{\"id\":\"lobo.generic.type.b795a9d517a03732ad08b87fb558dd3a\",\"case\":\"Ok\",\"payload\":{\"type\":\"Record\",\"value\":{\"id\":\"realistic.transfer.app.Audit\",\"fields\":{\"outcome\":{\"type\":\"Variant\",\"value\":{\"id\":\"lobo.generic.type.e3e78ff8237ba1a1f4c821051c50e4c3\",\"case\":\"Err\",\"payload\":{\"type\":\"Record\",\"value\":{\"id\":\"lobo.sql.SqlError\",\"fields\":{\"kind\":{\"type\":\"Variant\",\"value\":{\"id\":\"lobo.sql.ErrorKind\",\"case\":\"Constraint\",\"payload\":null}},\"backend_code\":{\"type\":\"I64\",\"value\":\"275\"}}}}}},\"clean\":{\"type\":\"Bool\",\"value\":true}}}}}}}\n",
+    "stderr": "",
+    "wall_s": 0.0019425940699875355
+  }
+]

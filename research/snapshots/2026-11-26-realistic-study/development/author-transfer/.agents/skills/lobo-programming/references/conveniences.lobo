@@ -1,0 +1,9 @@
+module convenience_example;
+record Settings { timeout:I64, enabled:Bool }
+variant Outcome<T> { Ok(T), Err(Text) }
+fn validate()->Outcome<Bool> {Ok(true)}
+fn main()->Outcome<Settings> {
+  try validate();
+  let defaults=Settings {timeout:10,enabled:false};
+  Ok(Settings { ...defaults,enabled:true })
+}

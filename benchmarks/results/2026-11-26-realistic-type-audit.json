@@ -1,0 +1,1809 @@
+{
+  "label": "Post-registration sensitivity audit, not primary score change",
+  "reason": "Python equality can equate booleans with integers; additionally verify exact nested JSON types.",
+  "property_checks": 3,
+  "observed_scenarios": 300,
+  "changed_case_outcomes": 0,
+  "rows": [
+    {
+      "index": 0,
+      "scenario": 0,
+      "primary": true,
+      "strict_type_match": true
+    },
+    {
+      "index": 0,
+      "scenario": 1,
+      "primary": true,
+      "strict_type_match": true
+    },
+    {
+      "index": 0,
+      "scenario": 2,
+      "primary": true,
+      "strict_type_match": true
+    },
+    {
+      "index": 0,
+      "scenario": 3,
+      "primary": true,
+      "strict_type_match": true
+    },
+    {
+      "index": 0,
+      "scenario": 4,
+      "primary": true,
+      "strict_type_match": true
+    },
+    {
+      "index": 0,
+      "scenario": 5,
+      "primary": true,
+      "strict_type_match": true
+    },
+    {
+      "index": 0,
+      "scenario": 6,
+      "primary": true,
+      "strict_type_match": true
+    },
+    {
+      "index": 0,
+      "scenario": 7,
+      "primary": true,
+      "strict_type_match": true
+    },
+    {
+      "index": 0,
+      "scenario": 8,
+      "primary": true,
+      "strict_type_match": true
+    },
+    {
+      "index": 0,
+      "scenario": 9,
+      "primary": true,
+      "strict_type_match": true
+    },
+    {
+      "index": 0,
+      "scenario": 10,
+      "primary": true,
+      "strict_type_match": true
+    },
+    {
+      "index": 0,
+      "scenario": 11,
+      "primary": true,
+      "strict_type_match": true
+    },
+    {
+      "index": 0,
+      "scenario": 12,
+      "primary": true,
+      "strict_type_match": true
+    },
+    {
+      "index": 0,
+      "scenario": 13,
+      "primary": true,
+      "strict_type_match": true
+    },
+    {
+      "index": 0,
+      "scenario": 14,
+      "primary": true,
+      "strict_type_match": true
+    },
+    {
+      "index": 0,
+      "scenario": 15,
+      "primary": true,
+      "strict_type_match": true
+    },
+    {
+      "index": 0,
+      "scenario": 16,
+      "primary": true,
+      "strict_type_match": true
+    },
+    {
+      "index": 0,
+      "scenario": 17,
+      "primary": true,
+      "strict_type_match": true
+    },
+    {
+      "index": 0,
+      "scenario": 18,
+      "primary": true,
+      "strict_type_match": true
+    },
+    {
+      "index": 0,
+      "scenario": 19,
+      "primary": true,
+      "strict_type_match": true
+    },
+    {
+      "index": 0,
+      "scenario": 20,
+      "primary": true,
+      "strict_type_match": true
+    },
+    {
+      "index": 0,
+      "scenario": 21,
+      "primary": true,
+      "strict_type_match": true
+    },
+    {
+      "index": 0,
+      "scenario": 22,
+      "primary": true,
+      "strict_type_match": true
+    },
+    {
+      "index": 0,
+      "scenario": 23,
+      "primary": true,
+      "strict_type_match": true
+    },
+    {
+      "index": 0,
+      "scenario": 24,
+      "primary": true,
+      "strict_type_match": true
+    },
+    {
+      "index": 0,
+      "scenario": 25,
+      "primary": true,
+      "strict_type_match": true
+    },
+    {
+      "index": 0,
+      "scenario": 26,
+      "primary": true,
+      "strict_type_match": true
+    },
+    {
+      "index": 0,
+      "scenario": 27,
+      "primary": true,
+      "strict_type_match": true
+    },
+    {
+      "index": 0,
+      "scenario": 28,
+      "primary": true,
+      "strict_type_match": true
+    },
+    {
+      "index": 0,
+      "scenario": 29,
+      "primary": true,
+      "strict_type_match": true
+    },
+    {
+      "index": 1,
+      "scenario": 0,
+      "primary": true,
+      "strict_type_match": true
+    },
+    {
+      "index": 1,
+      "scenario": 1,
+      "primary": true,
+      "strict_type_match": true
+    },
+    {
+      "index": 1,
+      "scenario": 2,
+      "primary": true,
+      "strict_type_match": true
+    },
+    {
+      "index": 1,
+      "scenario": 3,
+      "primary": true,
+      "strict_type_match": true
+    },
+    {
+      "index": 1,
+      "scenario": 4,
+      "primary": true,
+      "strict_type_match": true
+    },
+    {
+      "index": 1,
+      "scenario": 5,
+      "primary": true,
+      "strict_type_match": true
+    },
+    {
+      "index": 1,
+      "scenario": 6,
+      "primary": true,
+      "strict_type_match": true
+    },
+    {
+      "index": 1,
+      "scenario": 7,
+      "primary": true,
+      "strict_type_match": true
+    },
+    {
+      "index": 1,
+      "scenario": 8,
+      "primary": true,
+      "strict_type_match": true
+    },
+    {
+      "index": 1,
+      "scenario": 9,
+      "primary": true,
+      "strict_type_match": true
+    },
+    {
+      "index": 1,
+      "scenario": 10,
+      "primary": true,
+      "strict_type_match": true
+    },
+    {
+      "index": 1,
+      "scenario": 11,
+      "primary": true,
+      "strict_type_match": true
+    },
+    {
+      "index": 1,
+      "scenario": 12,
+      "primary": true,
+      "strict_type_match": true
+    },
+    {
+      "index": 1,
+      "scenario": 13,
+      "primary": true,
+      "strict_type_match": true
+    },
+    {
+      "index": 1,
+      "scenario": 14,
+      "primary": true,
+      "strict_type_match": true
+    },
+    {
+      "index": 1,
+      "scenario": 15,
+      "primary": true,
+      "strict_type_match": true
+    },
+    {
+      "index": 1,
+      "scenario": 16,
+      "primary": true,
+      "strict_type_match": true
+    },
+    {
+      "index": 1,
+      "scenario": 17,
+      "primary": true,
+      "strict_type_match": true
+    },
+    {
+      "index": 1,
+      "scenario": 18,
+      "primary": true,
+      "strict_type_match": true
+    },
+    {
+      "index": 1,
+      "scenario": 19,
+      "primary": true,
+      "strict_type_match": true
+    },
+    {
+      "index": 1,
+      "scenario": 20,
+      "primary": true,
+      "strict_type_match": true
+    },
+    {
+      "index": 1,
+      "scenario": 21,
+      "primary": true,
+      "strict_type_match": true
+    },
+    {
+      "index": 1,
+      "scenario": 22,
+      "primary": true,
+      "strict_type_match": true
+    },
+    {
+      "index": 1,
+      "scenario": 23,
+      "primary": true,
+      "strict_type_match": true
+    },
+    {
+      "index": 1,
+      "scenario": 24,
+      "primary": true,
+      "strict_type_match": true
+    },
+    {
+      "index": 1,
+      "scenario": 25,
+      "primary": true,
+      "strict_type_match": true
+    },
+    {
+      "index": 1,
+      "scenario": 26,
+      "primary": true,
+      "strict_type_match": true
+    },
+    {
+      "index": 1,
+      "scenario": 27,
+      "primary": true,
+      "strict_type_match": true
+    },
+    {
+      "index": 1,
+      "scenario": 28,
+      "primary": true,
+      "strict_type_match": true
+    },
+    {
+      "index": 1,
+      "scenario": 29,
+      "primary": true,
+      "strict_type_match": true
+    },
+    {
+      "index": 2,
+      "scenario": 0,
+      "primary": true,
+      "strict_type_match": true
+    },
+    {
+      "index": 2,
+      "scenario": 1,
+      "primary": true,
+      "strict_type_match": true
+    },
+    {
+      "index": 2,
+      "scenario": 2,
+      "primary": true,
+      "strict_type_match": true
+    },
+    {
+      "index": 2,
+      "scenario": 3,
+      "primary": true,
+      "strict_type_match": true
+    },
+    {
+      "index": 2,
+      "scenario": 4,
+      "primary": true,
+      "strict_type_match": true
+    },
+    {
+      "index": 2,
+      "scenario": 5,
+      "primary": true,
+      "strict_type_match": true
+    },
+    {
+      "index": 2,
+      "scenario": 6,
+      "primary": true,
+      "strict_type_match": true
+    },
+    {
+      "index": 2,
+      "scenario": 7,
+      "primary": true,
+      "strict_type_match": true
+    },
+    {
+      "index": 2,
+      "scenario": 8,
+      "primary": true,
+      "strict_type_match": true
+    },
+    {
+      "index": 2,
+      "scenario": 9,
+      "primary": true,
+      "strict_type_match": true
+    },
+    {
+      "index": 2,
+      "scenario": 10,
+      "primary": true,
+      "strict_type_match": true
+    },
+    {
+      "index": 2,
+      "scenario": 11,
+      "primary": true,
+      "strict_type_match": true
+    },
+    {
+      "index": 2,
+      "scenario": 12,
+      "primary": true,
+      "strict_type_match": true
+    },
+    {
+      "index": 2,
+      "scenario": 13,
+      "primary": true,
+      "strict_type_match": true
+    },
+    {
+      "index": 2,
+      "scenario": 14,
+      "primary": true,
+      "strict_type_match": true
+    },
+    {
+      "index": 2,
+      "scenario": 15,
+      "primary": true,
+      "strict_type_match": true
+    },
+    {
+      "index": 2,
+      "scenario": 16,
+      "primary": true,
+      "strict_type_match": true
+    },
+    {
+      "index": 2,
+      "scenario": 17,
+      "primary": true,
+      "strict_type_match": true
+    },
+    {
+      "index": 2,
+      "scenario": 18,
+      "primary": true,
+      "strict_type_match": true
+    },
+    {
+      "index": 2,
+      "scenario": 19,
+      "primary": true,
+      "strict_type_match": true
+    },
+    {
+      "index": 3,
+      "scenario": 0,
+      "primary": true,
+      "strict_type_match": true
+    },
+    {
+      "index": 3,
+      "scenario": 1,
+      "primary": true,
+      "strict_type_match": true
+    },
+    {
+      "index": 3,
+      "scenario": 2,
+      "primary": true,
+      "strict_type_match": true
+    },
+    {
+      "index": 3,
+      "scenario": 3,
+      "primary": true,
+      "strict_type_match": true
+    },
+    {
+      "index": 3,
+      "scenario": 4,
+      "primary": true,
+      "strict_type_match": true
+    },
+    {
+      "index": 3,
+      "scenario": 5,
+      "primary": true,
+      "strict_type_match": true
+    },
+    {
+      "index": 3,
+      "scenario": 6,
+      "primary": true,
+      "strict_type_match": true
+    },
+    {
+      "index": 3,
+      "scenario": 7,
+      "primary": true,
+      "strict_type_match": true
+    },
+    {
+      "index": 3,
+      "scenario": 8,
+      "primary": true,
+      "strict_type_match": true
+    },
+    {
+      "index": 3,
+      "scenario": 9,
+      "primary": true,
+      "strict_type_match": true
+    },
+    {
+      "index": 3,
+      "scenario": 10,
+      "primary": true,
+      "strict_type_match": true
+    },
+    {
+      "index": 3,
+      "scenario": 11,
+      "primary": true,
+      "strict_type_match": true
+    },
+    {
+      "index": 3,
+      "scenario": 12,
+      "primary": true,
+      "strict_type_match": true
+    },
+    {
+      "index": 3,
+      "scenario": 13,
+      "primary": true,
+      "strict_type_match": true
+    },
+    {
+      "index": 3,
+      "scenario": 14,
+      "primary": true,
+      "strict_type_match": true
+    },
+    {
+      "index": 3,
+      "scenario": 15,
+      "primary": true,
+      "strict_type_match": true
+    },
+    {
+      "index": 3,
+      "scenario": 16,
+      "primary": true,
+      "strict_type_match": true
+    },
+    {
+      "index": 3,
+      "scenario": 17,
+      "primary": true,
+      "strict_type_match": true
+    },
+    {
+      "index": 3,
+      "scenario": 18,
+      "primary": true,
+      "strict_type_match": true
+    },
+    {
+      "index": 3,
+      "scenario": 19,
+      "primary": true,
+      "strict_type_match": true
+    },
+    {
+      "index": 4,
+      "scenario": 0,
+      "primary": true,
+      "strict_type_match": true
+    },
+    {
+      "index": 4,
+      "scenario": 1,
+      "primary": true,
+      "strict_type_match": true
+    },
+    {
+      "index": 4,
+      "scenario": 2,
+      "primary": true,
+      "strict_type_match": true
+    },
+    {
+      "index": 4,
+      "scenario": 3,
+      "primary": true,
+      "strict_type_match": true
+    },
+    {
+      "index": 4,
+      "scenario": 4,
+      "primary": true,
+      "strict_type_match": true
+    },
+    {
+      "index": 4,
+      "scenario": 5,
+      "primary": true,
+      "strict_type_match": true
+    },
+    {
+      "index": 4,
+      "scenario": 6,
+      "primary": true,
+      "strict_type_match": true
+    },
+    {
+      "index": 4,
+      "scenario": 7,
+      "primary": true,
+      "strict_type_match": true
+    },
+    {
+      "index": 4,
+      "scenario": 8,
+      "primary": true,
+      "strict_type_match": true
+    },
+    {
+      "index": 4,
+      "scenario": 9,
+      "primary": true,
+      "strict_type_match": true
+    },
+    {
+      "index": 4,
+      "scenario": 10,
+      "primary": true,
+      "strict_type_match": true
+    },
+    {
+      "index": 4,
+      "scenario": 11,
+      "primary": true,
+      "strict_type_match": true
+    },
+    {
+      "index": 4,
+      "scenario": 12,
+      "primary": true,
+      "strict_type_match": true
+    },
+    {
+      "index": 4,
+      "scenario": 13,
+      "primary": true,
+      "strict_type_match": true
+    },
+    {
+      "index": 4,
+      "scenario": 14,
+      "primary": true,
+      "strict_type_match": true
+    },
+    {
+      "index": 4,
+      "scenario": 15,
+      "primary": true,
+      "strict_type_match": true
+    },
+    {
+      "index": 4,
+      "scenario": 16,
+      "primary": true,
+      "strict_type_match": true
+    },
+    {
+      "index": 4,
+      "scenario": 17,
+      "primary": true,
+      "strict_type_match": true
+    },
+    {
+      "index": 4,
+      "scenario": 18,
+      "primary": true,
+      "strict_type_match": true
+    },
+    {
+      "index": 4,
+      "scenario": 19,
+      "primary": true,
+      "strict_type_match": true
+    },
+    {
+      "index": 4,
+      "scenario": 20,
+      "primary": true,
+      "strict_type_match": true
+    },
+    {
+      "index": 4,
+      "scenario": 21,
+      "primary": true,
+      "strict_type_match": true
+    },
+    {
+      "index": 4,
+      "scenario": 22,
+      "primary": true,
+      "strict_type_match": true
+    },
+    {
+      "index": 4,
+      "scenario": 23,
+      "primary": true,
+      "strict_type_match": true
+    },
+    {
+      "index": 4,
+      "scenario": 24,
+      "primary": true,
+      "strict_type_match": true
+    },
+    {
+      "index": 4,
+      "scenario": 25,
+      "primary": true,
+      "strict_type_match": true
+    },
+    {
+      "index": 4,
+      "scenario": 26,
+      "primary": true,
+      "strict_type_match": true
+    },
+    {
+      "index": 4,
+      "scenario": 27,
+      "primary": true,
+      "strict_type_match": true
+    },
+    {
+      "index": 4,
+      "scenario": 28,
+      "primary": true,
+      "strict_type_match": true
+    },
+    {
+      "index": 4,
+      "scenario": 29,
+      "primary": true,
+      "strict_type_match": true
+    },
+    {
+      "index": 5,
+      "scenario": 0,
+      "primary": true,
+      "strict_type_match": true
+    },
+    {
+      "index": 5,
+      "scenario": 1,
+      "primary": true,
+      "strict_type_match": true
+    },
+    {
+      "index": 5,
+      "scenario": 2,
+      "primary": true,
+      "strict_type_match": true
+    },
+    {
+      "index": 5,
+      "scenario": 3,
+      "primary": true,
+      "strict_type_match": true
+    },
+    {
+      "index": 5,
+      "scenario": 4,
+      "primary": true,
+      "strict_type_match": true
+    },
+    {
+      "index": 5,
+      "scenario": 5,
+      "primary": true,
+      "strict_type_match": true
+    },
+    {
+      "index": 5,
+      "scenario": 6,
+      "primary": true,
+      "strict_type_match": true
+    },
+    {
+      "index": 5,
+      "scenario": 7,
+      "primary": true,
+      "strict_type_match": true
+    },
+    {
+      "index": 5,
+      "scenario": 8,
+      "primary": true,
+      "strict_type_match": true
+    },
+    {
+      "index": 5,
+      "scenario": 9,
+      "primary": true,
+      "strict_type_match": true
+    },
+    {
+      "index": 5,
+      "scenario": 10,
+      "primary": true,
+      "strict_type_match": true
+    },
+    {
+      "index": 5,
+      "scenario": 11,
+      "primary": true,
+      "strict_type_match": true
+    },
+    {
+      "index": 5,
+      "scenario": 12,
+      "primary": true,
+      "strict_type_match": true
+    },
+    {
+      "index": 5,
+      "scenario": 13,
+      "primary": true,
+      "strict_type_match": true
+    },
+    {
+      "index": 5,
+      "scenario": 14,
+      "primary": true,
+      "strict_type_match": true
+    },
+    {
+      "index": 5,
+      "scenario": 15,
+      "primary": true,
+      "strict_type_match": true
+    },
+    {
+      "index": 5,
+      "scenario": 16,
+      "primary": true,
+      "strict_type_match": true
+    },
+    {
+      "index": 5,
+      "scenario": 17,
+      "primary": true,
+      "strict_type_match": true
+    },
+    {
+      "index": 5,
+      "scenario": 18,
+      "primary": true,
+      "strict_type_match": true
+    },
+    {
+      "index": 5,
+      "scenario": 19,
+      "primary": true,
+      "strict_type_match": true
+    },
+    {
+      "index": 5,
+      "scenario": 20,
+      "primary": true,
+      "strict_type_match": true
+    },
+    {
+      "index": 5,
+      "scenario": 21,
+      "primary": true,
+      "strict_type_match": true
+    },
+    {
+      "index": 5,
+      "scenario": 22,
+      "primary": true,
+      "strict_type_match": true
+    },
+    {
+      "index": 5,
+      "scenario": 23,
+      "primary": true,
+      "strict_type_match": true
+    },
+    {
+      "index": 5,
+      "scenario": 24,
+      "primary": true,
+      "strict_type_match": true
+    },
+    {
+      "index": 5,
+      "scenario": 25,
+      "primary": true,
+      "strict_type_match": true
+    },
+    {
+      "index": 5,
+      "scenario": 26,
+      "primary": true,
+      "strict_type_match": true
+    },
+    {
+      "index": 5,
+      "scenario": 27,
+      "primary": true,
+      "strict_type_match": true
+    },
+    {
+      "index": 5,
+      "scenario": 28,
+      "primary": true,
+      "strict_type_match": true
+    },
+    {
+      "index": 5,
+      "scenario": 29,
+      "primary": true,
+      "strict_type_match": true
+    },
+    {
+      "index": 6,
+      "scenario": 0,
+      "primary": true,
+      "strict_type_match": true
+    },
+    {
+      "index": 6,
+      "scenario": 1,
+      "primary": true,
+      "strict_type_match": true
+    },
+    {
+      "index": 6,
+      "scenario": 2,
+      "primary": true,
+      "strict_type_match": true
+    },
+    {
+      "index": 6,
+      "scenario": 3,
+      "primary": true,
+      "strict_type_match": true
+    },
+    {
+      "index": 6,
+      "scenario": 4,
+      "primary": true,
+      "strict_type_match": true
+    },
+    {
+      "index": 6,
+      "scenario": 5,
+      "primary": true,
+      "strict_type_match": true
+    },
+    {
+      "index": 6,
+      "scenario": 6,
+      "primary": true,
+      "strict_type_match": true
+    },
+    {
+      "index": 6,
+      "scenario": 7,
+      "primary": true,
+      "strict_type_match": true
+    },
+    {
+      "index": 6,
+      "scenario": 8,
+      "primary": true,
+      "strict_type_match": true
+    },
+    {
+      "index": 6,
+      "scenario": 9,
+      "primary": true,
+      "strict_type_match": true
+    },
+    {
+      "index": 6,
+      "scenario": 10,
+      "primary": true,
+      "strict_type_match": true
+    },
+    {
+      "index": 6,
+      "scenario": 11,
+      "primary": true,
+      "strict_type_match": true
+    },
+    {
+      "index": 6,
+      "scenario": 12,
+      "primary": true,
+      "strict_type_match": true
+    },
+    {
+      "index": 6,
+      "scenario": 13,
+      "primary": true,
+      "strict_type_match": true
+    },
+    {
+      "index": 6,
+      "scenario": 14,
+      "primary": true,
+      "strict_type_match": true
+    },
+    {
+      "index": 6,
+      "scenario": 15,
+      "primary": true,
+      "strict_type_match": true
+    },
+    {
+      "index": 6,
+      "scenario": 16,
+      "primary": true,
+      "strict_type_match": true
+    },
+    {
+      "index": 6,
+      "scenario": 17,
+      "primary": true,
+      "strict_type_match": true
+    },
+    {
+      "index": 6,
+      "scenario": 18,
+      "primary": true,
+      "strict_type_match": true
+    },
+    {
+      "index": 6,
+      "scenario": 19,
+      "primary": true,
+      "strict_type_match": true
+    },
+    {
+      "index": 7,
+      "scenario": 0,
+      "primary": true,
+      "strict_type_match": true
+    },
+    {
+      "index": 7,
+      "scenario": 1,
+      "primary": true,
+      "strict_type_match": true
+    },
+    {
+      "index": 7,
+      "scenario": 2,
+      "primary": true,
+      "strict_type_match": true
+    },
+    {
+      "index": 7,
+      "scenario": 3,
+      "primary": true,
+      "strict_type_match": true
+    },
+    {
+      "index": 7,
+      "scenario": 4,
+      "primary": true,
+      "strict_type_match": true
+    },
+    {
+      "index": 7,
+      "scenario": 5,
+      "primary": true,
+      "strict_type_match": true
+    },
+    {
+      "index": 7,
+      "scenario": 6,
+      "primary": true,
+      "strict_type_match": true
+    },
+    {
+      "index": 7,
+      "scenario": 7,
+      "primary": true,
+      "strict_type_match": true
+    },
+    {
+      "index": 7,
+      "scenario": 8,
+      "primary": true,
+      "strict_type_match": true
+    },
+    {
+      "index": 7,
+      "scenario": 9,
+      "primary": true,
+      "strict_type_match": true
+    },
+    {
+      "index": 7,
+      "scenario": 10,
+      "primary": true,
+      "strict_type_match": true
+    },
+    {
+      "index": 7,
+      "scenario": 11,
+      "primary": true,
+      "strict_type_match": true
+    },
+    {
+      "index": 7,
+      "scenario": 12,
+      "primary": true,
+      "strict_type_match": true
+    },
+    {
+      "index": 7,
+      "scenario": 13,
+      "primary": true,
+      "strict_type_match": true
+    },
+    {
+      "index": 7,
+      "scenario": 14,
+      "primary": true,
+      "strict_type_match": true
+    },
+    {
+      "index": 7,
+      "scenario": 15,
+      "primary": true,
+      "strict_type_match": true
+    },
+    {
+      "index": 7,
+      "scenario": 16,
+      "primary": true,
+      "strict_type_match": true
+    },
+    {
+      "index": 7,
+      "scenario": 17,
+      "primary": true,
+      "strict_type_match": true
+    },
+    {
+      "index": 7,
+      "scenario": 18,
+      "primary": true,
+      "strict_type_match": true
+    },
+    {
+      "index": 7,
+      "scenario": 19,
+      "primary": true,
+      "strict_type_match": true
+    },
+    {
+      "index": 8,
+      "scenario": 0,
+      "primary": true,
+      "strict_type_match": true
+    },
+    {
+      "index": 8,
+      "scenario": 1,
+      "primary": true,
+      "strict_type_match": true
+    },
+    {
+      "index": 8,
+      "scenario": 2,
+      "primary": true,
+      "strict_type_match": true
+    },
+    {
+      "index": 8,
+      "scenario": 3,
+      "primary": true,
+      "strict_type_match": true
+    },
+    {
+      "index": 8,
+      "scenario": 4,
+      "primary": true,
+      "strict_type_match": true
+    },
+    {
+      "index": 8,
+      "scenario": 5,
+      "primary": true,
+      "strict_type_match": true
+    },
+    {
+      "index": 8,
+      "scenario": 6,
+      "primary": true,
+      "strict_type_match": true
+    },
+    {
+      "index": 8,
+      "scenario": 7,
+      "primary": true,
+      "strict_type_match": true
+    },
+    {
+      "index": 8,
+      "scenario": 8,
+      "primary": true,
+      "strict_type_match": true
+    },
+    {
+      "index": 8,
+      "scenario": 9,
+      "primary": true,
+      "strict_type_match": true
+    },
+    {
+      "index": 8,
+      "scenario": 10,
+      "primary": true,
+      "strict_type_match": true
+    },
+    {
+      "index": 8,
+      "scenario": 11,
+      "primary": true,
+      "strict_type_match": true
+    },
+    {
+      "index": 8,
+      "scenario": 12,
+      "primary": true,
+      "strict_type_match": true
+    },
+    {
+      "index": 8,
+      "scenario": 13,
+      "primary": true,
+      "strict_type_match": true
+    },
+    {
+      "index": 8,
+      "scenario": 14,
+      "primary": true,
+      "strict_type_match": true
+    },
+    {
+      "index": 8,
+      "scenario": 15,
+      "primary": true,
+      "strict_type_match": true
+    },
+    {
+      "index": 8,
+      "scenario": 16,
+      "primary": true,
+      "strict_type_match": true
+    },
+    {
+      "index": 8,
+      "scenario": 17,
+      "primary": true,
+      "strict_type_match": true
+    },
+    {
+      "index": 8,
+      "scenario": 18,
+      "primary": true,
+      "strict_type_match": true
+    },
+    {
+      "index": 8,
+      "scenario": 19,
+      "primary": true,
+      "strict_type_match": true
+    },
+    {
+      "index": 8,
+      "scenario": 20,
+      "primary": true,
+      "strict_type_match": true
+    },
+    {
+      "index": 8,
+      "scenario": 21,
+      "primary": true,
+      "strict_type_match": true
+    },
+    {
+      "index": 8,
+      "scenario": 22,
+      "primary": true,
+      "strict_type_match": true
+    },
+    {
+      "index": 8,
+      "scenario": 23,
+      "primary": true,
+      "strict_type_match": true
+    },
+    {
+      "index": 8,
+      "scenario": 24,
+      "primary": true,
+      "strict_type_match": true
+    },
+    {
+      "index": 8,
+      "scenario": 25,
+      "primary": true,
+      "strict_type_match": true
+    },
+    {
+      "index": 8,
+      "scenario": 26,
+      "primary": true,
+      "strict_type_match": true
+    },
+    {
+      "index": 8,
+      "scenario": 27,
+      "primary": true,
+      "strict_type_match": true
+    },
+    {
+      "index": 8,
+      "scenario": 28,
+      "primary": true,
+      "strict_type_match": true
+    },
+    {
+      "index": 8,
+      "scenario": 29,
+      "primary": true,
+      "strict_type_match": true
+    },
+    {
+      "index": 9,
+      "scenario": 0,
+      "primary": true,
+      "strict_type_match": true
+    },
+    {
+      "index": 9,
+      "scenario": 1,
+      "primary": true,
+      "strict_type_match": true
+    },
+    {
+      "index": 9,
+      "scenario": 2,
+      "primary": true,
+      "strict_type_match": true
+    },
+    {
+      "index": 9,
+      "scenario": 3,
+      "primary": true,
+      "strict_type_match": true
+    },
+    {
+      "index": 9,
+      "scenario": 4,
+      "primary": true,
+      "strict_type_match": true
+    },
+    {
+      "index": 9,
+      "scenario": 5,
+      "primary": true,
+      "strict_type_match": true
+    },
+    {
+      "index": 9,
+      "scenario": 6,
+      "primary": true,
+      "strict_type_match": true
+    },
+    {
+      "index": 9,
+      "scenario": 7,
+      "primary": true,
+      "strict_type_match": true
+    },
+    {
+      "index": 9,
+      "scenario": 8,
+      "primary": true,
+      "strict_type_match": true
+    },
+    {
+      "index": 9,
+      "scenario": 9,
+      "primary": true,
+      "strict_type_match": true
+    },
+    {
+      "index": 9,
+      "scenario": 10,
+      "primary": true,
+      "strict_type_match": true
+    },
+    {
+      "index": 9,
+      "scenario": 11,
+      "primary": true,
+      "strict_type_match": true
+    },
+    {
+      "index": 9,
+      "scenario": 12,
+      "primary": true,
+      "strict_type_match": true
+    },
+    {
+      "index": 9,
+      "scenario": 13,
+      "primary": true,
+      "strict_type_match": true
+    },
+    {
+      "index": 9,
+      "scenario": 14,
+      "primary": true,
+      "strict_type_match": true
+    },
+    {
+      "index": 9,
+      "scenario": 15,
+      "primary": true,
+      "strict_type_match": true
+    },
+    {
+      "index": 9,
+      "scenario": 16,
+      "primary": true,
+      "strict_type_match": true
+    },
+    {
+      "index": 9,
+      "scenario": 17,
+      "primary": true,
+      "strict_type_match": true
+    },
+    {
+      "index": 9,
+      "scenario": 18,
+      "primary": true,
+      "strict_type_match": true
+    },
+    {
+      "index": 9,
+      "scenario": 19,
+      "primary": true,
+      "strict_type_match": true
+    },
+    {
+      "index": 9,
+      "scenario": 20,
+      "primary": true,
+      "strict_type_match": true
+    },
+    {
+      "index": 9,
+      "scenario": 21,
+      "primary": true,
+      "strict_type_match": true
+    },
+    {
+      "index": 9,
+      "scenario": 22,
+      "primary": true,
+      "strict_type_match": true
+    },
+    {
+      "index": 9,
+      "scenario": 23,
+      "primary": true,
+      "strict_type_match": true
+    },
+    {
+      "index": 9,
+      "scenario": 24,
+      "primary": true,
+      "strict_type_match": true
+    },
+    {
+      "index": 9,
+      "scenario": 25,
+      "primary": true,
+      "strict_type_match": true
+    },
+    {
+      "index": 9,
+      "scenario": 26,
+      "primary": true,
+      "strict_type_match": true
+    },
+    {
+      "index": 9,
+      "scenario": 27,
+      "primary": true,
+      "strict_type_match": true
+    },
+    {
+      "index": 9,
+      "scenario": 28,
+      "primary": true,
+      "strict_type_match": true
+    },
+    {
+      "index": 9,
+      "scenario": 29,
+      "primary": true,
+      "strict_type_match": true
+    },
+    {
+      "index": 10,
+      "scenario": 0,
+      "primary": true,
+      "strict_type_match": true
+    },
+    {
+      "index": 10,
+      "scenario": 1,
+      "primary": true,
+      "strict_type_match": true
+    },
+    {
+      "index": 10,
+      "scenario": 2,
+      "primary": true,
+      "strict_type_match": true
+    },
+    {
+      "index": 10,
+      "scenario": 3,
+      "primary": true,
+      "strict_type_match": true
+    },
+    {
+      "index": 10,
+      "scenario": 4,
+      "primary": true,
+      "strict_type_match": true
+    },
+    {
+      "index": 10,
+      "scenario": 5,
+      "primary": true,
+      "strict_type_match": true
+    },
+    {
+      "index": 10,
+      "scenario": 6,
+      "primary": true,
+      "strict_type_match": true
+    },
+    {
+      "index": 10,
+      "scenario": 7,
+      "primary": true,
+      "strict_type_match": true
+    },
+    {
+      "index": 10,
+      "scenario": 8,
+      "primary": true,
+      "strict_type_match": true
+    },
+    {
+      "index": 10,
+      "scenario": 9,
+      "primary": true,
+      "strict_type_match": true
+    },
+    {
+      "index": 10,
+      "scenario": 10,
+      "primary": true,
+      "strict_type_match": true
+    },
+    {
+      "index": 10,
+      "scenario": 11,
+      "primary": true,
+      "strict_type_match": true
+    },
+    {
+      "index": 10,
+      "scenario": 12,
+      "primary": true,
+      "strict_type_match": true
+    },
+    {
+      "index": 10,
+      "scenario": 13,
+      "primary": true,
+      "strict_type_match": true
+    },
+    {
+      "index": 10,
+      "scenario": 14,
+      "primary": true,
+      "strict_type_match": true
+    },
+    {
+      "index": 10,
+      "scenario": 15,
+      "primary": true,
+      "strict_type_match": true
+    },
+    {
+      "index": 10,
+      "scenario": 16,
+      "primary": true,
+      "strict_type_match": true
+    },
+    {
+      "index": 10,
+      "scenario": 17,
+      "primary": true,
+      "strict_type_match": true
+    },
+    {
+      "index": 10,
+      "scenario": 18,
+      "primary": true,
+      "strict_type_match": true
+    },
+    {
+      "index": 10,
+      "scenario": 19,
+      "primary": true,
+      "strict_type_match": true
+    },
+    {
+      "index": 11,
+      "scenario": 0,
+      "primary": true,
+      "strict_type_match": true
+    },
+    {
+      "index": 11,
+      "scenario": 1,
+      "primary": true,
+      "strict_type_match": true
+    },
+    {
+      "index": 11,
+      "scenario": 2,
+      "primary": true,
+      "strict_type_match": true
+    },
+    {
+      "index": 11,
+      "scenario": 3,
+      "primary": true,
+      "strict_type_match": true
+    },
+    {
+      "index": 11,
+      "scenario": 4,
+      "primary": true,
+      "strict_type_match": true
+    },
+    {
+      "index": 11,
+      "scenario": 5,
+      "primary": true,
+      "strict_type_match": true
+    },
+    {
+      "index": 11,
+      "scenario": 6,
+      "primary": true,
+      "strict_type_match": true
+    },
+    {
+      "index": 11,
+      "scenario": 7,
+      "primary": true,
+      "strict_type_match": true
+    },
+    {
+      "index": 11,
+      "scenario": 8,
+      "primary": true,
+      "strict_type_match": true
+    },
+    {
+      "index": 11,
+      "scenario": 9,
+      "primary": true,
+      "strict_type_match": true
+    },
+    {
+      "index": 11,
+      "scenario": 10,
+      "primary": true,
+      "strict_type_match": true
+    },
+    {
+      "index": 11,
+      "scenario": 11,
+      "primary": true,
+      "strict_type_match": true
+    },
+    {
+      "index": 11,
+      "scenario": 12,
+      "primary": true,
+      "strict_type_match": true
+    },
+    {
+      "index": 11,
+      "scenario": 13,
+      "primary": true,
+      "strict_type_match": true
+    },
+    {
+      "index": 11,
+      "scenario": 14,
+      "primary": true,
+      "strict_type_match": true
+    },
+    {
+      "index": 11,
+      "scenario": 15,
+      "primary": true,
+      "strict_type_match": true
+    },
+    {
+      "index": 11,
+      "scenario": 16,
+      "primary": true,
+      "strict_type_match": true
+    },
+    {
+      "index": 11,
+      "scenario": 17,
+      "primary": true,
+      "strict_type_match": true
+    },
+    {
+      "index": 11,
+      "scenario": 18,
+      "primary": true,
+      "strict_type_match": true
+    },
+    {
+      "index": 11,
+      "scenario": 19,
+      "primary": true,
+      "strict_type_match": true
+    }
+  ]
+}
