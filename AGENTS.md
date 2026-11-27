@@ -5,6 +5,13 @@ Use the GitHub account luis-lobo-ar for this repository. Commit author and commi
 active gh account may belong to another project. Keep user-facing examples on the lobo CLI. Cargo commands
 belong in compiler build/test instructions. Preserve frozen research documents and fixtures.
 
+Decision0073 is selected: add v3 alongside frozen v2 and isolate requirement/resource/finish additions
+on two fresh harder native apps x2 repeats x5 arms (20attempts), same Luna/high120s/16commands/6checks.
+Common experimental skill name/path/prompt holds activation equal; only selected blocks differ. Register
+and push before calls; no retries, replacements, skill tuning or extra trials. Preserve Lobo1.11.2,
+v2/old skills/cards/studies,47 prior paper entries/177pins. Reuse312-pass compiler receipt honestly.
+See decisions/0073-isolate-v3-correctness-skill-changes.md. Correctness/completion/cost stay separate.
+
 Decision0072 is complete:12 realistic app-change attempts, same Luna/high120s/16commands/6checks.
 Both arms complete4/6 (HTTP3/3, SQLite1/3); all12 candidates pass300 native scenarios. Four timeout
 usages are unknown; only3 complete token pairs, allHTTP, medianv2/control1.0405 and mixed. No skill

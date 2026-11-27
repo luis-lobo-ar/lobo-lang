@@ -1,0 +1,2 @@
+Complete TASK.txt following GUIDE.txt. The limits are 120 seconds, 16 command-execution tool items and 6 visible check submissions. All build/check work counts in wall time. Do not delegate.
+Use $lobo-development-study at .agents/skills/lobo-development-study/SKILL.md.

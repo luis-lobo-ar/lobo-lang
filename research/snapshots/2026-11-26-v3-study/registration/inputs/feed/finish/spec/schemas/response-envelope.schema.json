@@ -1,0 +1,141 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://lobo-lang.invalid/spec/ltp/0.2/response-envelope.schema.json",
+  "title": "Lobo Tool Protocol response envelope",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["ltp", "request_id", "status", "result", "diagnostics", "evidence", "usage"],
+  "properties": {
+    "ltp": {
+      "const": "0.2"
+    },
+    "request_id": {
+      "$ref": "#/$defs/identifier"
+    },
+    "status": {
+      "enum": ["accepted", "running", "succeeded", "rejected", "failed", "cancelled"]
+    },
+    "result": {
+      "type": ["object", "array", "string", "number", "boolean", "null"]
+    },
+    "diagnostics": {
+      "type": "array",
+      "maxItems": 1000,
+      "items": {
+        "$ref": "#/$defs/diagnostic"
+      }
+    },
+    "evidence": {
+      "type": "array",
+      "maxItems": 1000,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["id", "kind", "subject", "artifact"],
+        "properties": {
+          "id": {
+            "$ref": "#/$defs/identifier"
+          },
+          "kind": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 128
+          },
+          "subject": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 256
+          },
+          "artifact": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 512
+          }
+        }
+      }
+    },
+    "usage": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["wall_time_ms", "output_bytes"],
+      "properties": {
+        "wall_time_ms": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "output_bytes": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "operations": {
+          "type": "integer",
+          "minimum": 0
+        }
+      }
+    }
+  },
+  "$defs": {
+    "identifier": {
+      "type": "string",
+      "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]{0,127}$"
+    },
+    "diagnostic": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["code", "category", "severity", "message"],
+      "properties": {
+        "code": {
+          "type": "string",
+          "pattern": "^[a-z][a-z0-9_]*(\\.[a-z][a-z0-9_]*)+$",
+          "maxLength": 128
+        },
+        "category": {
+          "enum": [
+            "invalid_request",
+            "permission_denied",
+            "revision_conflict",
+            "budget_exhausted",
+            "verification_failed",
+            "tool_unavailable",
+            "internal_error"
+          ]
+        },
+        "severity": {
+          "enum": ["info", "warning", "error"]
+        },
+        "subject": {
+          "type": "string",
+          "maxLength": 256
+        },
+        "message": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 4096
+        },
+        "counterexample": {
+          "type": ["object", "array", "string", "number", "boolean", "null"]
+        },
+        "repairs": {
+          "type": "array",
+          "maxItems": 32,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["operation", "arguments"],
+            "properties": {
+              "operation": {
+                "type": "string",
+                "pattern": "^[a-z][a-z0-9_]*(\\.[a-z][a-z0-9_]*)+$",
+                "maxLength": 128
+              },
+              "arguments": {
+                "type": "object"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+

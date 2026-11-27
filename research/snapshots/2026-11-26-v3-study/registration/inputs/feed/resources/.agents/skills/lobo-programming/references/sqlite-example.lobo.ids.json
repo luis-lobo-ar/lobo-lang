@@ -1,0 +1,13 @@
+{
+  "format": "lobo-identities/0.1",
+  "identities": {
+    "module": "skill.sqlite",
+    "read": "skill.sqlite.read",
+    "sql.Row": "lobo.sql.Row",
+    "sql.SqlResult": "lobo.sql.SqlResult",
+    "sql.open": "lobo.sql.open",
+    "sql.close": "lobo.sql.close",
+    "sql.query": "lobo.sql.query",
+    "sql.no_params": "lobo.sql.no_params"
+  }
+}

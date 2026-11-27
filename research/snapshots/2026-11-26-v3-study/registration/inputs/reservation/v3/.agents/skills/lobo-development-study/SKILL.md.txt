@@ -1,0 +1,65 @@
+---
+name: lobo-development-study
+description: Implement and repair Lobo application code with grammar reminders, diagnostic recovery and native tests. Use for .lobo features and fixes; compiler internals and research trials have separate workflows.
+---
+
+# Develop Lobo 1.11.2 / Core 1.11
+
+Follow the project's scope and test contract. Use editing/tools for authorized development; keep
+comprehension-only requests read-only. Resolve references from this file's physical directory.
+
+## Grammar to keep in view
+
+Blocks yield their last expression; bindings/collections are immutable. Carry state through fold/while.
+Use braced else branches: `if a { x } else { if b { y } else { z } }`. Unbraced `else if` is invalid.
+Do not bind a local named `result`; it is reserved for contracts. Do not shadow visible declarations.
+Parenthesize field/compound match subjects: `match (state.choice) { ... }`.
+Generic function arguments infer from call arguments, not just the expected return type. Constructors
+can use an expected nominal type; otherwise provide an annotation or qualify the case's owner.
+
+## Work from feedback
+
+Read the task and affected declarations. Run a requirement-based failing behavior check, implement,
+then verify natively using the supplied client and required regressions. Keep expected outcomes independent.
+Reuse successful observations; repeat checks when code changes or a concern remains. Read typed JSON
+and diagnostics, not just exit status. Skip unrelated packaging/repository chores in isolated tasks.
+
+Preserve declarations' stable IDs and adjacent sidecars. Use the project's supplied compiler/authoring
+command to sync IDs after adding helpers. If sync fails, fix its FIRST diagnostic before retrying.
+A later missing-ID error can follow failed sync; do not discard existing IDs or invent replacement IDs.
+Compilation requires all explicit source dependencies and a fresh output path. No package discovery.
+Actions declare operations; grants provide authority. Prefix try propagates exact errors, without cleanup.
+Capture outcomes before resource teardown. Checking does not prove contracts true or runtime correctness.
+
+Read only the rules needed for the change; avoid repeatedly loading whole manuals:
+
+- [Syntax/iteration](../lobo-programming/references/language.md), [native tools/identities](../lobo-programming/references/tools.md).
+- [Text/Bytes](../../../docs/agent-reference/compact-pilot-2026-11-24/ranges.txt), [nominals/inference](../../../docs/agent-reference/compact-pilot-2026-11-24/nominal.txt), [try](../../../docs/agent-reference/compact-pilot-2026-11-24/propagation.txt), [contracts](../../../docs/agent-reference/compact-pilot-2026-11-24/contracts.txt).
+- [Callback action bounds](../../../spec/core-v1.11.md); relevant [JSON](../../../libraries/json/README.md), [HTTP](../../../libraries/http/README.md), [OS](../../../libraries/native/README.md) or [SQL](../../../libraries/sql/README.md) API source/guide.
+
+Stop at the task's acceptance gate and report observed results, failures and unchecked limits.
+These selected reminders are not a complete manual or a measured productivity guarantee.
+
+## Cover the requirements
+
+Before implementation, connect each requirement to observable evidence: normal behavior, boundaries,
+validation priority and state after failure. Keep this map concise in scratch notes or tests. Choose a
+requirement-based failing check before its fix; derive expectations independently of the implementation.
+Supplied examples may cover only part of the contract. Check uncovered requirements with focused tests
+or an explicit code review, and distinguish tested behavior from assumptions in the final report.
+
+## Preserve resource and action contracts
+
+Use callees' declared actions, including cleanup performed inside helpers. Do not narrow action bounds
+from the operations visibly spelled in the caller alone. Identify borrowed versus owned resources.
+Prefix try does not roll back or release anything: capture outcomes before teardown, release owned
+resources on every relevant return, and preserve the original failure when cleanup is secondary.
+Verify state after an error and repeated invocation, not just the returned value.
+
+## Finish against evidence
+
+Identify the task's acceptance gate before editing. Use remaining time and observed check duration to
+plan required verification and a concise handoff. After required checks and requirement review, if no
+concrete contract gap remains, stop editing and report the evidence. A passing sample alone is not full
+acceptance. Further edits need an identified unmet requirement or observed defect. Do not weaken tests
+or skip required verification to meet a deadline; report an incomplete check honestly when time runs out.

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Lobo Development v3"
+  short_description: "Develop Lobo with requirement and resource checks"
+  default_prompt: "Use $lobo-development-v3 to implement this change with requirement-based tests, resource checks and native verification."

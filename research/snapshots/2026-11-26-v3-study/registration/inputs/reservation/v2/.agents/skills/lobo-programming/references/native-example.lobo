@@ -1,0 +1,7 @@
+module native_skill;
+fn copied(data:Bytes)->Bytes {Native::copy_bytes(data)}
+fn clock()->Native::I64Result actions {native.authorize,clock.read} {
+  let cap=Native::capability();
+  Native::monotonic_ms(cap)
+}
+identities {module:"skill.native",copied:"skill.native.copied",clock:"skill.native.clock"}
