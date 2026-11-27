@@ -1,0 +1,30 @@
+module logic;
+use model {Event,events}; use policy {Page,Query,read_query}; use http {Request,Response,json_response};
+use json {Json,JsonArray,object,field,array,append};
+record Items {values:JsonArray,count:I64,last:I64,more:Bool}
+fn event_json(event:Event)->Json {Json::Object(field(field(field(object(),"id",Json::Integer(event.id)),"kind",Json::String(event.kind)),"message",Json::String(event.message)))}
+fn insert(event:Event,sorted:List<Event>)->List<Event> {
+ if List::length(sorted)==0 {List::prepend(event,sorted)} else {
+  if event.id<List::head(sorted).id {List::prepend(event,sorted)} else {List::prepend(List::head(sorted),insert(event,List::tail(sorted)))}
+ }
+}
+fn ordered(values:List<Event>)->List<Event> {
+ if List::length(values)==0 {values} else {insert(List::head(values),ordered(List::tail(values)))}
+}
+fn page_json(page:Page)->Json {
+ let values=ordered(events());
+ let done=fold(i in List::length(values),state:Items=Items {values:array(),count:0,last:0,more:false}) {
+  let event=List::head(fold(j in i,rest:List<Event> =values) {List::tail(rest)});
+  if event.published && event.id>page.after && (page.kind=="" || event.kind==page.kind) {
+   if state.count<page.limit {Items {values:append(state.values,event_json(event)),count:state.count+1,last:event.id,more:state.more}} else {Items {...state,more:true}}
+  } else {state}
+ };
+ Json::Object(field(field(field(object(),"items",Json::Array(done.values)),"count",Json::Integer(done.count)),"next",if done.more {Json::Integer(done.last)} else {Json::Null}))
+}
+fn handle(request:Request)->Response {
+ if request.method!="GET" && request.method!="HEAD" {json_response(405,json {"error":"method not allowed"})} else {
+  if request.path=="/health" {json_response(200,json {"status":"ready"})} else {
+   match read_query(request.path) {Missing=>json_response(404,json {"error":"not found"}),Bad=>json_response(400,json {"error":"bad query"}),Ready(page)=>json_response(200,page_json(page))}
+  }
+ }
+}

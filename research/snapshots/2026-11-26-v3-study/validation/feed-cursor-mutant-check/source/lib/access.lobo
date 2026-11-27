@@ -1,0 +1,33 @@
+module access;
+
+variant Permission { ClockRead, RandomRead, Listen, Connect }
+record Permissions { clock:Bool, random:Bool, listen:Bool, connect:Bool }
+
+fn none()->Permissions {Permissions { clock:false, random:false, listen:false, connect:false }}
+fn one(permission:Permission)->Permissions {allow(none(),permission)}
+fn allow(permissions:Permissions,permission:Permission)->Permissions {
+  match permission {
+    ClockRead=> Permissions { ...permissions,clock:true },
+    RandomRead=> Permissions { ...permissions,random:true },
+    Listen=> Permissions { ...permissions,listen:true },
+    Connect=> Permissions { ...permissions,connect:true }
+  }
+}
+fn abi_mask(permissions:Permissions)->I64 {
+  if permissions.clock { 1 } else { 0 } + if permissions.random { 2 } else { 0 } + if permissions.listen { 4 } else { 0 } + if permissions.connect { 8 } else { 0 }
+}
+
+fn restrict(cap:Native::Capability,permissions:Permissions)->Native::CapabilityResult actions {native.authorize} {
+  Native::restrict_capability(cap,abi_mask(permissions))
+}
+
+identities {
+  module:"lobo.permissions",
+  Permission:"lobo.permissions.Permission",
+  Permissions:"lobo.permissions.Permissions",
+  none:"lobo.permissions.none",
+  one:"lobo.permissions.one",
+  allow:"lobo.permissions.allow",
+  abi_mask:"lobo.permissions.abi_mask",
+  restrict:"lobo.permissions.restrict"
+}

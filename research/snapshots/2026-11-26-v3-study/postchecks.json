@@ -1,0 +1,20 @@
+{
+  "date": "2026-11-27",
+  "study_date": "2026-11-26",
+  "registered_harness_tests": 80,
+  "new_harness_tests": 11,
+  "research_tests": 15,
+  "all_registered_hashes_match": true,
+  "full_compiler_suite_reused_passes": 312,
+  "new_full_compiler_editor_suite": false,
+  "final_native_observed": 610,
+  "final_native_planned": 700,
+  "final_native_passed": 256,
+  "calibration_scenarios": 310,
+  "compiled_mutants_killed": 5,
+  "attempted": 20,
+  "wall_limit": 20,
+  "unattempted": 0,
+  "known_scored_usage": 0,
+  "unknown_scored_usage": 20
+}

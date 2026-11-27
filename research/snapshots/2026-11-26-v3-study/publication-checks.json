@@ -1,0 +1,12 @@
+{
+  "date": "2026-11-27",
+  "study_date": "2026-11-26",
+  "new_modified_json_files_validated": 687,
+  "paper_entry_objects": 48,
+  "paper_file_pins_verified": 186,
+  "skill_ui_yaml_checked": true,
+  "global_v3_link_verified": true,
+  "post_append_research_tests_output": "...............\n----------------------------------------------------------------------\nRan 15 tests in 0.549s\n\nOK\n",
+  "post_append_link_check_output": "check: JSON, JSONL, and local Markdown links are valid\n",
+  "raw_directory_closed_before_publication_checks": true
+}

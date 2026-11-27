@@ -1,0 +1,9 @@
+{
+  "format": "lobo-identities/0.1",
+  "identities": {
+    "module": "realistic.reservation.model",
+    "Line": "realistic.reservation.model.Line",
+    "Cart": "realistic.reservation.model.Cart",
+    "Receipt": "realistic.reservation.model.Receipt"
+  }
+}

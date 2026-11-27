@@ -1,0 +1,39 @@
+[
+  {
+    "command": [
+      "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/v3-study-20261126/validation/reservation-reference-check/program",
+      "--entry",
+      "realistic.reservation.app.main",
+      "--arg",
+      "I64:0",
+      "--arg",
+      "I64:1",
+      "--arg",
+      "I64:2",
+      "--arg",
+      "I64:1",
+      "--arg",
+      "Text:736b75",
+      "--sqlite-file",
+      "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/v3-study-20261126/validation/reservation-reference-check/database-15.sqlite",
+      "--sqlite-mode",
+      "write",
+      "--sqlite-calls",
+      "1024",
+      "--sqlite-steps",
+      "1000000",
+      "--sqlite-rows",
+      "128",
+      "--sqlite-handles",
+      "3",
+      "--fuel",
+      "100000000",
+      "--heap-cells",
+      "16000000"
+    ],
+    "exit_code": 0,
+    "stdout": "{\"status\":\"ok\",\"kind\":\"value\",\"value\":{\"type\":\"Variant\",\"value\":{\"id\":\"lobo.generic.type.75b39ccdf20ab0db71107adc51b9ea3f\",\"case\":\"Ok\",\"payload\":{\"type\":\"Record\",\"value\":{\"id\":\"realistic.reservation.app.Audit\",\"fields\":{\"outcome\":{\"type\":\"Variant\",\"value\":{\"id\":\"lobo.generic.type.09fa5f6246e50b61ea25474be6161d9a\",\"case\":\"Ok\",\"payload\":{\"type\":\"Record\",\"value\":{\"id\":\"realistic.reservation.model.Receipt\",\"fields\":{\"applied\":{\"type\":\"Bool\",\"value\":false},\"replay\":{\"type\":\"Bool\",\"value\":false},\"reason\":{\"type\":\"Text\",\"value\":\"invalid\"}}}}}},\"clean\":{\"type\":\"Bool\",\"value\":true}}}}}}}\n",
+    "stderr": "",
+    "wall_s": 0.0021786740981042385
+  }
+]

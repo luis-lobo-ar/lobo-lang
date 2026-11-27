@@ -1,0 +1,14 @@
+[
+  {
+    "task": "feed",
+    "exit_code": 0,
+    "stdout": "{\"manifests\":[\"policy.lobo.ids.json\",\"model.lobo.ids.json\",\"lib/http.lobo.ids.json\",\"lib/io.lobo.ids.json\"],\"operation\":\"sync\",\"status\":\"ok\"}\n{\"manifests\":[\"logic.lobo.ids.json\",\"policy.lobo.ids.json\",\"model.lobo.ids.json\",\"lib/http.lobo.ids.json\",\"lib/io.lobo.ids.json\"],\"operation\":\"sync\",\"status\":\"ok\"}\n",
+    "stderr": ""
+  },
+  {
+    "task": "reservation",
+    "exit_code": 0,
+    "stdout": "{\"manifests\":[\"policy.lobo.ids.json\",\"model.lobo.ids.json\",\"lib/sql.lobo.ids.json\"],\"operation\":\"sync\",\"status\":\"ok\"}\n{\"manifests\":[\"logic.lobo.ids.json\",\"policy.lobo.ids.json\",\"model.lobo.ids.json\",\"lib/sql.lobo.ids.json\"],\"operation\":\"sync\",\"status\":\"ok\"}\n",
+    "stderr": ""
+  }
+]

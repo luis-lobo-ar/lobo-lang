@@ -1,0 +1,28 @@
+{
+  "format": "lobo-identities/0.1",
+  "identities": {
+    "module": "realistic.reservation.logic",
+    "receipt": "realistic.reservation.logic.receipt",
+    "perform": "realistic.reservation.logic.perform",
+    "apply": "realistic.reservation.logic.apply",
+    "model.Line": "realistic.reservation.model.Line",
+    "model.Cart": "realistic.reservation.model.Cart",
+    "model.Receipt": "realistic.reservation.model.Receipt",
+    "policy.Plan": "realistic.reservation.policy.Plan",
+    "policy.plan": "realistic.reservation.policy.plan",
+    "policy.params": "realistic.reservation.policy.params",
+    "sql.Cell": "lobo.sql.Cell",
+    "sql.Row": "lobo.sql.Row",
+    "sql.SqlResult": "lobo.sql.SqlResult",
+    "sql.SqlError": "lobo.sql.SqlError",
+    "sql.query": "lobo.sql.query",
+    "sql.execute": "lobo.sql.execute",
+    "sql.begin": "lobo.sql.begin",
+    "sql.commit": "lobo.sql.commit",
+    "sql.rollback": "lobo.sql.rollback",
+    "sql.params1": "lobo.sql.params1",
+    "sql.params2": "lobo.sql.params2",
+    "sql.integer_at": "lobo.sql.integer_at",
+    "sql.expect_columns": "lobo.sql.expect_columns"
+  }
+}

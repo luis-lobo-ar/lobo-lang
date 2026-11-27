@@ -1,0 +1,15 @@
+{
+  "format": "lobo-identities/0.1",
+  "identities": {
+    "module": "realistic.reservation.app",
+    "Audit": "realistic.reservation.app.Audit",
+    "main": "realistic.reservation.app.main",
+    "sql.SqlResult": "lobo.sql.SqlResult",
+    "sql.open": "lobo.sql.open",
+    "sql.close": "lobo.sql.close",
+    "sql.begin": "lobo.sql.begin",
+    "sql.rollback": "lobo.sql.rollback",
+    "logic.apply": "realistic.reservation.logic.apply",
+    "model.Receipt": "realistic.reservation.model.Receipt"
+  }
+}

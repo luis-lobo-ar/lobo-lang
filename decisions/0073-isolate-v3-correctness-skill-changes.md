@@ -1,6 +1,6 @@
 # 0073 — Isolate v3 correctness, resource and finish instructions
 
-Date: 2026-11-26. Status: registered scope; results pending.
+Date: 2026-11-26. Status: complete2026-11-27; all20 outcomes preserved.
 
 The user authorized creating v3 and testing each proposed change separately on fresh harder tasks,
 with Lobo/v2 frozen, same model/budgets and all results documented. Add lobo-development-v3 alongside
@@ -80,3 +80,12 @@ evaluations and five compiled defects killed. Two earlier fixture-authoring fail
 ordered function; unbound if-expression followed by semicolon) are preserved and corrected before calls.
 Author-helper probes and skill validation pass. The common alias sizes are3141/3679/3665/3687/4749
 bytes for v2/requirements/resources/finish/v3. Appended blocks only differ in delivered skill bytes.
+
+## Observed result
+
+All20 attempts time out; every arm0/4 primary acceptance. v2/fullv3 each have1/4 whole-suite-passing
+candidates, allisolated additions0/4.12sources remain unchanged,3edited SQLite candidates do not
+compile;610of700 planned native scenarios execute,256pass. All20 scored usage records unknown;
+no token pairs, only excluded availability11187known. No demonstrated v3 advantage. Preserve
+compile/behavior/unchanged stages and late checks, not just aggregate scores. Keep v3 as tested and
+v2/product frozen; no further trials/edits. Read [the report](../research/v3-skill-study-2026-11-26.md).

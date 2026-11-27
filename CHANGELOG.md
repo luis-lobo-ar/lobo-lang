@@ -1165,3 +1165,17 @@ final whole-repository checks and version 1.0 remain pending. The running eviden
   Reuse the pinned312-pass compiler receipt, without claiming a new full compiler/editor run.
 - Append paper local-047 preserving46 prior entry objects/168 pins. Product, libraries, skills, cards
   and old studies remain unchanged. See [the report](research/realistic-development-study-2026-11-26.md).
+
+## 2026-11-27 — Isolated v3 skill instruction tests (decision0073)
+
+- Add lobo-development-v3 alongside frozen v2, with requirement coverage, resource/action contracts
+  and evidence-based finishing. Validate skill/UI/references; common experimental alias isolates body changes.
+- Preserve all20 preregistered fresh Luna/high attempts across2 harder native applications,2repeats,5arms.
+  Same120s/16commands/6checks. All time out:0/4 timely acceptance per arm; v2/fullv3 each1/4 passing
+  candidates, isolated additions0/4. All20 usagesunknown; no token comparison. No demonstrated v3 gain.
+- Distinguish12unchanged sources,3compilefailures and610 executed/700 planned native scenarios;256pass.
+  Preserve every candidate/diagnostic, wire/DB observation and5323-member verified local raw archive.
+- 80harness and15research tests pass;310native calibration scenarios catch5compiled defects. Reuse the
+  pinned312-pass compiler receipt honestly. Append paperlocal-048, preserving47prior objects/177pins.
+  Product, libraries, editor, old skills/cards/studies unchanged. No post-outcome edits or extra trials.
+  See [the report](research/v3-skill-study-2026-11-26.md); artifact dates retain the26th study-start tag.

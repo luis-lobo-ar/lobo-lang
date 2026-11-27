@@ -1,0 +1,2 @@
+module model; record Event {id:I64,kind:Text,message:Text,published:Bool}
+fn events()->List<Event> {List::prepend(Event {id:9,kind:"info",message:"Tea \"夜\"",published:true},List::prepend(Event {id:3,kind:"audit",message:"Line\nBack\\",published:true},List::prepend(Event {id:7,kind:"info",message:"hidden",published:false},List::prepend(Event {id:1,kind:"info",message:"start",published:true},List::prepend(Event {id:12,kind:"audit",message:"",published:true},List::prepend(Event {id:9223372036854775807,kind:"info",message:"last",published:true},List::empty<Event>()))))))}

@@ -1,0 +1,15 @@
+{
+  "format": "lobo-identities/0.1",
+  "identities": {
+    "module": "realistic.feed.policy",
+    "Page": "realistic.feed.policy.Page",
+    "Query": "realistic.feed.policy.Query",
+    "Number": "realistic.feed.policy.Number",
+    "Digits": "realistic.feed.policy.Digits",
+    "Fields": "realistic.feed.policy.Fields",
+    "Scan": "realistic.feed.policy.Scan",
+    "natural": "realistic.feed.policy.natural",
+    "field_value": "realistic.feed.policy.field_value",
+    "read_query": "realistic.feed.policy.read_query"
+  }
+}

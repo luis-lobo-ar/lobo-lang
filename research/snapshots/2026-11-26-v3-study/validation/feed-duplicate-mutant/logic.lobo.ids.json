@@ -1,0 +1,26 @@
+{
+  "format": "lobo-identities/0.1",
+  "identities": {
+    "module": "realistic.feed.logic",
+    "Items": "realistic.feed.logic.Items",
+    "event_json": "realistic.feed.logic.event_json",
+    "insert": "realistic.feed.logic.insert",
+    "ordered": "realistic.feed.logic.ordered",
+    "page_json": "realistic.feed.logic.page_json",
+    "handle": "realistic.feed.logic.handle",
+    "model.Event": "realistic.feed.model.Event",
+    "model.events": "realistic.feed.model.events",
+    "policy.Page": "realistic.feed.policy.Page",
+    "policy.Query": "realistic.feed.policy.Query",
+    "policy.read_query": "realistic.feed.policy.read_query",
+    "http.Request": "lobo.http.server.Request",
+    "http.Response": "example.web.response",
+    "http.json_response": "lobo.http.server.json_response",
+    "json.Json": "lobo.json.value",
+    "json.JsonArray": "lobo.json.array_type",
+    "json.object": "lobo.json.object",
+    "json.field": "lobo.json.field",
+    "json.array": "lobo.json.array",
+    "json.append": "lobo.json.append"
+  }
+}

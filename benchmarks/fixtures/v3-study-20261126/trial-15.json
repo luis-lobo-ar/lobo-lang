@@ -1,0 +1,631 @@
+{
+  "result": {
+    "assignment": {
+      "index": 15,
+      "repeat": 1,
+      "family": "reservation",
+      "arm": "resources",
+      "language": "lobo",
+      "reasoning": "high",
+      "phase": "application-change"
+    },
+    "command": [
+      "codex",
+      "exec",
+      "--ignore-user-config",
+      "--ephemeral",
+      "--json",
+      "--sandbox",
+      "workspace-write",
+      "--skip-git-repo-check",
+      "--disable",
+      "multi_agent",
+      "--disable",
+      "multi_agent_v2",
+      "--disable",
+      "apps",
+      "--disable",
+      "plugins",
+      "--disable",
+      "memories",
+      "-C",
+      "/tmp/lobo-matched-r2ytsdyl",
+      "-m",
+      "gpt-5.6-luna",
+      "-c",
+      "model_reasoning_effort=\"high\"",
+      "-c",
+      "approval_policy=\"never\"",
+      "--output-last-message",
+      "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/v3-study-20261126/run/trial-15/last-message.txt",
+      "-"
+    ],
+    "deadline_s": 120,
+    "tool_limit": 16,
+    "check_limit": 6,
+    "started_unix": 1795758960.497003,
+    "load_before": [
+      3.287109375,
+      4.19775390625,
+      4.81787109375
+    ],
+    "status": "wall_limit",
+    "exit_code": -15,
+    "agent_wall_s": 120.02277621487156,
+    "usage": null,
+    "command_tool_items": 5,
+    "check_requests": 0,
+    "checks": [],
+    "item_types": [
+      "agent_message",
+      "command_execution",
+      "command_execution",
+      "command_execution",
+      "command_execution",
+      "agent_message",
+      "command_execution",
+      "agent_message",
+      "file_change"
+    ],
+    "load_after": [
+      3.16650390625,
+      3.9267578125,
+      4.6474609375
+    ],
+    "grading": {
+      "issues": [],
+      "build": {
+        "command": [
+          "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/matched-study-20261123/freeze/lobo",
+          "compile",
+          "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/v3-study-20261126/run/trial-15/heldout/source/app.lobo",
+          "--source",
+          "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/v3-study-20261126/run/trial-15/heldout/source/logic.lobo",
+          "--source",
+          "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/v3-study-20261126/run/trial-15/heldout/source/policy.lobo",
+          "--source",
+          "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/v3-study-20261126/run/trial-15/heldout/source/model.lobo",
+          "--source",
+          "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/v3-study-20261126/run/trial-15/heldout/source/lib/sql.lobo",
+          "-o",
+          "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/v3-study-20261126/run/trial-15/heldout/program"
+        ],
+        "exit_code": 1,
+        "stdout": "{\"diagnostic\":{\"code\":\"compile.syntax.invalid\",\"message\":\"expected }, got Symbol(\\\";\\\")\",\"phase\":\"parse\",\"range\":{\"end\":{\"byte\":2152,\"character\":22,\"line\":28},\"start\":{\"byte\":2151,\"character\":21,\"line\":28}},\"source\":\"/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/v3-study-20261126/run/trial-15/heldout/source/logic.lobo\"},\"kind\":\"compile_error\",\"status\":\"error\"}\n",
+        "stderr": "",
+        "wall_s": 0.0032869151327759027,
+        "ok": false
+      },
+      "cases": [],
+      "accepted": false,
+      "passed": 0,
+      "total": 30
+    },
+    "accepted": false,
+    "workspace": "/tmp/lobo-matched-r2ytsdyl"
+  },
+  "detail": {
+    "assignment": {
+      "index": 15,
+      "repeat": 1,
+      "family": "reservation",
+      "arm": "resources",
+      "language": "lobo",
+      "reasoning": "high",
+      "phase": "application-change"
+    },
+    "timely_complete": false,
+    "candidate_correct": false,
+    "status": "wall_limit",
+    "skill_path_observed": true,
+    "external_skill_commands": [],
+    "commands": [
+      "/usr/bin/zsh -lc \"pwd && sed -n '1,240p' TASK.txt && printf '\\\\n--- GUIDE ---\\\\n' && sed -n '1,260p' GUIDE.txt && printf '\\\\n--- SKILL ---\\\\n' && sed -n '1,260p' .agents/skills/lobo-development-study/SKILL.md && printf '\\\\n--- FILES ---\\\\n' && rg --files -g '\"'!*/*'\"' -g '*.lobo' -g '*.lob' -g 'TASK.txt' -g 'GUIDE.txt'\"",
+      "/usr/bin/zsh -lc \"printf '%s\\\\n' '--- logic.lobo ---' && sed -n '1,320p' logic.lobo && printf '%s\\\\n' '--- policy.lobo ---' && sed -n '1,320p' policy.lobo && printf '%s\\\\n' '--- adjacent IDs ---' && for f in logic.ids.json policy.ids.json; do if [ -f \\\"\"'$f\" ]; then echo \"--- $f ---\"; sed -n '\"'1,260p' \\\"\"'$f\"; fi; done && printf '\"'%s\\\\n' '--- VISIBLE ---' && sed -n '1,320p' VISIBLE.json && printf '%s\\\\n' '--- BUNDLE ---' && sed -n '1,260p' BUNDLE.json && printf '%s\\\\n' '--- model/app/sql ---' && sed -n '1,260p' model.lobo && sed -n '1,320p' app.lobo && sed -n '1,360p' lib/sql.lobo\"",
+      "/usr/bin/zsh -lc \"printf '%s\\\\n' '--- root files ---' && rg --files -g '\"'! .git/**'\"' -g '\"'! .agents/**'\"' -g '\"'! .codex/**'\"' | sort && printf '%s\\\\n' '--- visible summary ---' && python3 - <<'PY'\nimport json\nv=json.load(open('VISIBLE.json'))\nfor i,x in enumerate(v):\n print(i, x['input']['operations'], '=>', [e['reply'] for e in x['expected']])\nPY\nprintf '%s\\\\n' '--- visible tail ---' && sed -n '240,700p' VISIBLE.json\"",
+      "/usr/bin/zsh -lc \"printf '%s\\\\n' '--- logic.ids.json ---' && sed -n '1,320p' logic.lobo.ids.json && printf '%s\\\\n' '--- policy.ids.json ---' && sed -n '1,320p' policy.lobo.ids.json && printf '%s\\\\n' '--- author usage ---' && sed -n '1,260p' author.py && printf '%s\\\\n' '--- checker usage ---' && sed -n '1,300p' check.py\"",
+      "/usr/bin/zsh -lc \"printf '%s\\\\n' '--- SQL README ---' && sed -n '1,320p' libraries/sql/README.md && printf '%s\\\\n' '--- SQL reference declarations ---' && sed -n '1,300p' libraries/sql/sql.lobo && printf '%s\\\\n' '--- propagation ---' && sed -n '1,260p' docs/agent-reference/compact-pilot-2026-11-24/propagation.txt && printf '%s\\\\n' '--- ranges ---' && sed -n '1,220p' docs/agent-reference/compact-pilot-2026-11-24/ranges.txt\""
+    ],
+    "direct_command_diagnostics": [],
+    "visible": [],
+    "first_edited_public_pass_s": null,
+    "seconds_after_first_public_pass": null
+  },
+  "prompt": "Complete TASK.txt following GUIDE.txt. The limits are 120 seconds, 16 command-execution tool items and 6 visible check submissions. All build/check work counts in wall time. Do not delegate.\nUse $lobo-development-study at .agents/skills/lobo-development-study/SKILL.md.\n",
+  "last_message": "",
+  "final_sources": {
+    "policy.lobo.ids.json": "{\n  \"format\": \"lobo-identities/0.1\",\n  \"identities\": {\n    \"module\": \"realistic.reservation.policy\",\n    \"Plan\": \"realistic.reservation.policy.Plan\",\n    \"plan\": \"realistic.reservation.policy.plan\",\n    \"params\": \"realistic.reservation.policy.params\",\n    \"model.Line\": \"realistic.reservation.model.Line\",\n    \"model.Cart\": \"realistic.reservation.model.Cart\",\n    \"sql.Cell\": \"lobo.sql.Cell\",\n    \"sql.params1\": \"lobo.sql.params1\"\n  }\n}\n",
+    "app.lobo.ids.json": "{\n  \"format\": \"lobo-identities/0.1\",\n  \"identities\": {\n    \"module\": \"realistic.reservation.app\",\n    \"Audit\": \"realistic.reservation.app.Audit\",\n    \"main\": \"realistic.reservation.app.main\",\n    \"sql.SqlResult\": \"lobo.sql.SqlResult\",\n    \"sql.open\": \"lobo.sql.open\",\n    \"sql.close\": \"lobo.sql.close\",\n    \"sql.begin\": \"lobo.sql.begin\",\n    \"sql.rollback\": \"lobo.sql.rollback\",\n    \"logic.apply\": \"realistic.reservation.logic.apply\",\n    \"model.Receipt\": \"realistic.reservation.model.Receipt\"\n  }\n}\n",
+    "logic.lobo.ids.json": "{\n  \"format\": \"lobo-identities/0.1\",\n  \"identities\": {\n    \"module\": \"realistic.reservation.logic\",\n    \"receipt\": \"realistic.reservation.logic.receipt\",\n    \"perform\": \"realistic.reservation.logic.perform\",\n    \"apply\": \"realistic.reservation.logic.apply\",\n    \"model.Line\": \"realistic.reservation.model.Line\",\n    \"model.Cart\": \"realistic.reservation.model.Cart\",\n    \"model.Receipt\": \"realistic.reservation.model.Receipt\",\n    \"policy.Plan\": \"realistic.reservation.policy.Plan\",\n    \"policy.plan\": \"realistic.reservation.policy.plan\",\n    \"policy.params\": \"realistic.reservation.policy.params\",\n    \"sql.Cell\": \"lobo.sql.Cell\",\n    \"sql.Row\": \"lobo.sql.Row\",\n    \"sql.SqlResult\": \"lobo.sql.SqlResult\",\n    \"sql.SqlError\": \"lobo.sql.SqlError\",\n    \"sql.query\": \"lobo.sql.query\",\n    \"sql.execute\": \"lobo.sql.execute\",\n    \"sql.begin\": \"lobo.sql.begin\",\n    \"sql.commit\": \"lobo.sql.commit\",\n    \"sql.rollback\": \"lobo.sql.rollback\",\n    \"sql.params1\": \"lobo.sql.params1\",\n    \"sql.params2\": \"lobo.sql.params2\",\n    \"sql.integer_at\": \"lobo.sql.integer_at\",\n    \"sql.expect_columns\": \"lobo.sql.expect_columns\"\n  }\n}\n",
+    "BUNDLE.json": "[\n  \"app.lobo\",\n  \"logic.lobo\",\n  \"policy.lobo\",\n  \"model.lobo\",\n  \"lib/sql.lobo\"\n]\n",
+    "app.lobo": "module app;\nuse sql {SqlResult,open,close,begin,rollback}; use logic {apply}; use model {Receipt};\nrecord Audit {outcome:SqlResult<Receipt>,clean:Bool}\nfn main(sku1:I64,qty1:I64,sku2:I64,qty2:I64,key:Text)->SqlResult<Audit>\nactions {native.authorize,db.open,db.close,db.transaction,db.execute,db.read}\n{\n let db=try open(Native::sqlite_capability());let outcome=apply(db,sku1,qty1,sku2,qty2,key);\n let probe=begin(db);let clean=match probe {Err(error)=>false,Ok(done)=>{let ignored=rollback(db);true}};\n try close(db);Ok(Audit {outcome:outcome,clean:clean})\n}\n",
+    "policy.lobo": "module policy;\nuse model {Line,Cart}; use sql {Cell,params1};\nvariant Plan {Ready(Cart),Invalid}\nfn plan(sku1:I64,qty1:I64,sku2:I64,qty2:I64,key:Text)->Plan {\n if Text::length(key)<1 || Text::length(key)>24 || qty1<0 || qty1>1000000 || qty2<0 || qty2>1000000 || (qty1>0 && sku1<=0) || (qty2>0 && sku2<=0) || (qty1==0 && qty2==0) {Invalid} else {\n  let a=Line {sku:sku1,qty:qty1};let b=Line {sku:sku2,qty:qty2};let empty=Line {sku:0,qty:0};\n  if qty1==0 {Ready(Cart {first:b,second:empty})} else {\n   if qty2==0 {Ready(Cart {first:a,second:empty})} else {\n    if sku1==sku2 {\n     if qty1>1000000-qty2 {Invalid} else {Ready(Cart {first:Line {sku:sku1,qty:qty1+qty2},second:empty})}\n    } else {if sku1<sku2 {Ready(Cart {first:a,second:b})} else {Ready(Cart {first:b,second:a})}}\n   }\n  }\n }\n}\nfn params(key:Text,cart:Cart)->List<Cell> {List::prepend(Cell::String(key),List::prepend(Cell::Integer(cart.first.sku),List::prepend(Cell::Integer(cart.first.qty),List::prepend(Cell::Integer(cart.second.sku),params1(Cell::Integer(cart.second.qty))))))}\n",
+    "logic.lobo": "module logic;\nuse model {Line,Cart,Receipt}; use policy {Plan,plan,params};\nuse sql {Cell,Row,SqlResult,query,execute,begin,commit,rollback,params1,integer_at,expect_columns};\nfn receipt(applied:Bool,replay:Bool,reason:Text)->Receipt {Receipt {applied:applied,replay:replay,reason:reason}}\nfn perform(db:Native::Database,cart:Cart,key:Text)->SqlResult<Receipt> actions {db.execute,db.read,db.close} {\n let prior=try query(db,\"SELECT sku1,qty1,sku2,qty2 FROM requests WHERE key=?1\",params1(Cell::String(key)));\n if List::length(prior)>0 {\n  let row=List::head(prior);\n  try expect_columns(row,4);\n  let old_sku1=try integer_at(row,0);let old_qty1=try integer_at(row,1);\n  let old_sku2=try integer_at(row,2);let old_qty2=try integer_at(row,3);\n  if old_sku1==cart.first.sku && old_qty1==cart.first.qty && old_sku2==cart.second.sku && old_qty2==cart.second.qty {\n   Ok(receipt(false,true,\"replay\"))\n  } else {Ok(receipt(false,false,\"conflict\"))}\n } else {\n  let first_rows=try query(db,\"SELECT available FROM inventory WHERE sku=?1\",params1(Cell::Integer(cart.first.sku)));\n  let second_rows=if cart.second.qty==0 {List::empty<Row>()} else {\n   query(db,\"SELECT available FROM inventory WHERE sku=?1\",params1(Cell::Integer(cart.second.sku)))\n  };\n  if List::length(first_rows)==0 || (cart.second.qty>0 && List::length(second_rows)==0) {Ok(receipt(false,false,\"missing\"))} else {\n   let first_row=List::head(first_rows);try expect_columns(first_row,1);let first_available=try integer_at(first_row,0);\n   let second_available=if cart.second.qty==0 {0} else {\n    let second_row=List::head(second_rows);try expect_columns(second_row,1);try integer_at(second_row,0)\n   };\n   if first_available<cart.first.qty || (cart.second.qty>0 && second_available<cart.second.qty) {Ok(receipt(false,false,\"stock\"))} else {\n    try execute(db,\"UPDATE inventory SET available=available-?1 WHERE sku=?2\",params2(Cell::Integer(cart.first.qty),Cell::Integer(cart.first.sku)));\n    if cart.second.qty>0 {\n     try execute(db,\"UPDATE inventory SET available=available-?1 WHERE sku=?2\",params2(Cell::Integer(cart.second.qty),Cell::Integer(cart.second.sku)))\n    } else {Ok(true)};\n    try execute(db,\"INSERT INTO requests(key,sku1,qty1,sku2,qty2) VALUES(?1,?2,?3,?4,?5)\",params(key,cart));\n    Ok(receipt(true,false,\"reserved\"))\n   }\n  }\n }\n}\nfn apply(db:Native::Database,sku1:I64,qty1:I64,sku2:I64,qty2:I64,key:Text)->SqlResult<Receipt>\nactions {db.execute,db.read,db.close,db.transaction}\n{\n match plan(sku1,qty1,sku2,qty2,key) {\n  Invalid=>Ok(receipt(false,false,\"invalid\")),\n  Ready(cart)=> {\n   match begin(db) {\n    Err(error)=>Err(error),\n    Ok(started)=> {\n     let outcome=perform(db,cart,key);\n     match outcome {\n      Err(error)=> {let ignored=rollback(db);Err(error)},\n      Ok(value)=> {\n       match commit(db) {\n        Ok(done)=>Ok(value),\n        Err(error)=> {let ignored=rollback(db);Err(error)}\n       }\n      }\n     }\n    }\n   }\n  }\n }\n}\n",
+    "model.lobo": "module model; record Line {sku:I64,qty:I64} record Cart {first:Line,second:Line} record Receipt {applied:Bool,replay:Bool,reason:Text}\n",
+    "model.lobo.ids.json": "{\n  \"format\": \"lobo-identities/0.1\",\n  \"identities\": {\n    \"module\": \"realistic.reservation.model\",\n    \"Line\": \"realistic.reservation.model.Line\",\n    \"Cart\": \"realistic.reservation.model.Cart\",\n    \"Receipt\": \"realistic.reservation.model.Receipt\"\n  }\n}\n",
+    "lib/sql.lobo.ids.json": "{\n  \"format\": \"lobo-identities/0.1\",\n  \"identities\": {\n    \"Cell\": \"lobo.sql.Cell\",\n    \"Columns\": \"lobo.sql.Columns\",\n    \"ErrorKind\": \"lobo.sql.ErrorKind\",\n    \"Permission\": \"lobo.5ef1f873f38ab1532a2039039c50d0a0\",\n    \"Permissions\": \"lobo.10121f078f570ec657f9f98c9d5f64de\",\n    \"RawResult\": \"lobo.sql.RawResult\",\n    \"Reverse\": \"lobo.sql.Reverse\",\n    \"Row\": \"lobo.sql.Row\",\n    \"Rows\": \"lobo.sql.Rows\",\n    \"SqlError\": \"lobo.sql.SqlError\",\n    \"SqlResult\": \"lobo.sql.SqlResult\",\n    \"abi_mask\": \"lobo.51fecacad709be4603162cf590b4d26f\",\n    \"allow\": \"lobo.0c1ef938c6325139c192f42ef8b9870a\",\n    \"begin\": \"lobo.sql.begin\",\n    \"bind_all\": \"lobo.sql.bind_all\",\n    \"bind_value\": \"lobo.sql.bind_value\",\n    \"bool_result\": \"lobo.sql.bool_result\",\n    \"bytes_at\": \"lobo.sql.bytes_at\",\n    \"cell_at\": \"lobo.sql.cell_at\",\n    \"close\": \"lobo.sql.close\",\n    \"commit\": \"lobo.sql.commit\",\n    \"decimal_at\": \"lobo.sql.decimal_at\",\n    \"error_code\": \"lobo.sql.error_code\",\n    \"error_details\": \"lobo.sql.error_details\",\n    \"error_kind\": \"lobo.sql.error_kind\",\n    \"execute\": \"lobo.sql.execute\",\n    \"execute_raw\": \"lobo.sql.execute_raw\",\n    \"expect_columns\": \"lobo.sql.expect_columns\",\n    \"integer_at\": \"lobo.sql.integer_at\",\n    \"module\": \"lobo.sql\",\n    \"no_params\": \"lobo.sql.no_params\",\n    \"none\": \"lobo.66a2a8e53fd4163a2e038a2fe5b68546\",\n    \"one\": \"lobo.a066d2d1100c7d222d8c4c9a6891123a\",\n    \"open\": \"lobo.sql.open\",\n    \"params1\": \"lobo.sql.params1\",\n    \"params2\": \"lobo.sql.params2\",\n    \"query\": \"lobo.sql.query\",\n    \"query_raw\": \"lobo.sql.query_raw\",\n    \"read_row\": \"lobo.sql.read_row\",\n    \"read_rows\": \"lobo.sql.read_rows\",\n    \"read_value\": \"lobo.sql.read_value\",\n    \"restrict\": \"lobo.fac29eae9b9d398b7a2658f35d3bc68c\",\n    \"restrict_mask\": \"lobo.sql.restrict\",\n    \"restrict_native\": \"lobo.886c4b0a3dabfb731412c11d8f6510e9\",\n    \"reverse\": \"lobo.sql.reverse\",\n    \"rollback\": \"lobo.sql.rollback\",\n    \"run_execute\": \"lobo.sql.run_execute\",\n    \"run_query\": \"lobo.sql.run_query\",\n    \"text_at\": \"lobo.sql.text_at\"\n  }\n}\n",
+    "lib/sql.lobo": "module sql;\nvariant Permission { Read, Write, Schema }\nrecord Permissions { read:Bool, write:Bool, schema:Bool }\n\nfn none()->Permissions {Permissions { read:false, write:false, schema:false }}\nfn one(permission:Permission)->Permissions {allow(none(),permission)}\nfn allow(permissions:Permissions,permission:Permission)->Permissions {\n  match permission {\n    Read=> Permissions { ...permissions,read:true },\n    Write=> Permissions { ...permissions,write:true },\n    Schema=> Permissions { ...permissions,schema:true }\n  }\n}\nfn abi_mask(permissions:Permissions)->I64 {\n  if permissions.read { 1 } else { 0 } + if permissions.write { 2 } else { 0 } + if permissions.schema { 4 } else { 0 }\n}\n\nvariant Cell { Null, Integer(I64), Decimal(F64), String(Text), Binary(Bytes) }\nrecord Row { values:List<Cell> }\nvariant ErrorKind { Denied, InvalidInput, InvalidHandle, WrongKind, Closed, Busy, Constraint, Decode, Io, Limit, Sql, State }\nrecord SqlError { kind:ErrorKind, backend_code:I64 }\nvariant SqlResult<T> { Ok(T), Err(SqlError) }\nvariant RawResult<T> { Ok(T), Err(I64) }\nrecord Reverse<T> { remaining:List<T>, values:List<T> }\nrecord Columns { reversed:List<Cell>, error:I64 }\nrecord Rows { reversed:List<Row>, error:I64, done:Bool }\n\nfn error_kind(code:I64)->ErrorKind {\n  if code==1 {Denied} else {if code==2 {InvalidInput} else {if code==3 {InvalidHandle} else {\n        if code==4 {WrongKind} else {if code==5 {Closed} else {if code==7 {Busy} else {\n              if code==8 {Constraint} else {if code==9 {Decode} else {if code==10 {Io} else {\n                    if code==11 {Limit} else {if code==13 {State} else {Sql}}\n  }}}}}}}}}\n}\nfn error_details(raw:I64)->SqlError {SqlError {kind:error_kind(raw%65536),backend_code:raw/65536}}\nfn bool_result(outcome:Native::BoolResult)->SqlResult<Bool> {\n  match outcome {Ok(value)=> Ok(value),Err(code)=> Err(error_details(code))}\n}\nfn open(cap:Native::SqliteCapability)->SqlResult<Native::Database> actions {db.open} {\n  match Native::sqlite_open(cap) {Ok(db)=> Ok(db),Err(code)=> Err(error_details(code))}\n}\nfn restrict_mask(cap:Native::SqliteCapability,mask:I64)->SqlResult<Native::SqliteCapability> actions {native.authorize} {\n  match Native::sqlite_restrict(cap,mask) {Ok(child)=> Ok(child),Err(code)=> Err(error_details(code))}\n}\nfn restrict_native(cap:Native::SqliteCapability,permissions:Permissions)->Native::SqliteCapabilityResult actions {native.authorize} {\n  Native::sqlite_restrict(cap,abi_mask(permissions))\n}\nfn restrict(cap:Native::SqliteCapability,permissions:Permissions)->SqlResult<Native::SqliteCapability> actions {native.authorize} {\n  match restrict_native(cap,permissions) {Ok(child)=> Ok(child),Err(code)=> Err(error_details(code))}\n}\nfn close(db:Native::Database)->SqlResult<Bool> actions {db.close} {bool_result(Native::sqlite_close(db))}\nfn begin(db:Native::Database)->SqlResult<Bool> actions {db.transaction} {bool_result(Native::sqlite_begin(db))}\nfn commit(db:Native::Database)->SqlResult<Bool> actions {db.transaction} {bool_result(Native::sqlite_commit(db))}\nfn rollback(db:Native::Database)->SqlResult<Bool> actions {db.transaction} {bool_result(Native::sqlite_rollback(db))}\nfn no_params()->List<Cell> {List::empty<Cell>()}\nfn params1(first:Cell)->List<Cell> {List::prepend(first,no_params())}\nfn params2(first:Cell,second:Cell)->List<Cell> {List::prepend(first,params1(second))}\nfn reverse<T>(values:List<T>)->List<T> {\n  let final=fold(i in List::length(values),state:Reverse<T> =Reverse {remaining:values,values:List::empty<T>()}) {\n    Reverse {remaining:List::tail(state.remaining),values:List::prepend(List::head(state.remaining),state.values)}\n  };\n  final.values\n}\nfn bind_value(statement:Native::Statement,index:I64,value:Cell)->Native::BoolResult actions {db.execute} {\n  match value {\n    Null=> Native::sqlite_bind_null(statement,index),\n    Integer(n)=> Native::sqlite_bind_i64(statement,index,n),\n    Decimal(n)=> Native::sqlite_bind_f64(statement,index,n),\n    String(t)=> Native::sqlite_bind_text(statement,index,t),\n    Binary(b)=> Native::sqlite_bind_bytes(statement,index,b)\n  }\n}\nfn bind_all(statement:Native::Statement,parameters:List<Cell>,index:I64)->Native::BoolResult actions {db.execute} {\n  if List::length(parameters)==0 {Ok(true)} else {\n    try bind_value(statement,index,List::head(parameters));\n    bind_all(statement,List::tail(parameters),index+1)\n  }\n}\nfn read_value(statement:Native::Statement,index:I64)->RawResult<Cell> actions {db.read} {\n  let kind=try Native::sqlite_column_type(statement,index);\n  if kind==5 {Ok(Null)} else {if kind==1 {Ok(Integer(try Native::sqlite_column_i64(statement,index)))} else {\n      if kind==2 {Ok(Decimal(try Native::sqlite_column_f64(statement,index)))} else {\n        if kind==3 {Ok(String(try Native::sqlite_column_text(statement,index)))} else {\n          if kind==4 {Ok(Binary(try Native::sqlite_column_bytes(statement,index)))} else {Err(9)}\n  }}}}\n}\nfn read_row(statement:Native::Statement,count:I64)->RawResult<Row> actions {db.read} {\n  let final=fold(i in count,state:Columns=Columns {reversed:List::empty<Cell>(),error:0}) {\n    if state.error!=0 {state} else {\n      match read_value(statement,i) {\n        Err(code)=> Columns { ...state,error:code },\n        Ok(value)=> Columns {reversed:List::prepend(value,state.reversed),error:0}\n      }\n    }\n  };\n  if final.error!=0 {Err(final.error)} else {Ok(Row {values:reverse(final.reversed)})}\n}\nfn read_rows(statement:Native::Statement,count:I64)->RawResult<List<Row>> actions {db.execute,db.read} {\n  let final=while(state:Rows=Rows {reversed:List::empty<Row>(),error:0,done:false};!state.done) {\n    match Native::sqlite_step(statement) {\n      Err(code)=> Rows { ...state,error:code,done:true },\n      Ok(row)=> if !row {Rows { ...state,error:0,done:true }} else {\n        match read_row(statement,count) {\n          Err(code)=> Rows { ...state,error:code,done:true },\n          Ok(value)=> Rows {reversed:List::prepend(value,state.reversed),error:0,done:false}\n        }\n      }\n    }\n  };\n  if final.error!=0 {Err(final.error)} else {Ok(reverse(final.reversed))}\n}\nfn run_query(statement:Native::Statement,parameters:List<Cell>)->RawResult<List<Row>> actions {db.execute,db.read} {\n  try bind_all(statement,parameters,1);\n  let columns=try Native::sqlite_column_count(statement);\n  if columns==0 {Err(2)} else {read_rows(statement,columns)}\n}\nfn query_raw(db:Native::Database,sql:Text,parameters:List<Cell>)->RawResult<List<Row>> actions {db.execute,db.read,db.close} {\n  let statement=try Native::sqlite_prepare(db,sql);\n  let outcome=run_query(statement,parameters);\n  try Native::sqlite_finalize(statement);\n  outcome\n}\nfn query(db:Native::Database,statement:Text,parameters:List<Cell>)->SqlResult<List<Row>> actions {db.execute,db.read,db.close} {\n  match query_raw(db,statement,parameters) {Ok(rows)=> Ok(rows),Err(code)=> Err(error_details(code))}\n}\nfn run_execute(statement:Native::Statement,parameters:List<Cell>)->Native::BoolResult actions {db.execute,db.read} {\n  let columns=try Native::sqlite_column_count(statement);\n  if columns!=0 {Err(2)} else {\n    try bind_all(statement,parameters,1);\n    let row=try Native::sqlite_step(statement);\n    if row {Err(2)} else {Ok(true)}\n  }\n}\nfn execute_raw(db:Native::Database,sql:Text,parameters:List<Cell>)->Native::BoolResult actions {db.execute,db.read,db.close} {\n  let statement=try Native::sqlite_prepare(db,sql);\n  let outcome=run_execute(statement,parameters);\n  try Native::sqlite_finalize(statement);\n  outcome\n}\nfn execute(db:Native::Database,statement:Text,parameters:List<Cell>)->SqlResult<Bool> actions {db.execute,db.read,db.close} {\n  bool_result(execute_raw(db,statement,parameters))\n}\nfn error_code(error:SqlError)->I64 {\n  let code=match(error.kind) {Denied=> 1,InvalidInput=> 2,InvalidHandle=> 3,WrongKind=> 4,Closed=> 5,Busy=> 7,Constraint=> 8,Decode=> 9,Io=> 10,Limit=> 11,Sql=> 12,State=> 13};\n  error.backend_code*65536+code\n}\n\nfn expect_columns(row:Row,count:I64)->SqlResult<Bool> {\n  if List::length(row.values)==count {Ok(true)} else {Err(error_details(9))}\n}\nfn cell_at(row:Row,index:I64)->SqlResult<Cell> {\n  if index<0 || index>=List::length(row.values) {Err(error_details(9))} else {\n    let remaining=fold(i in index,cells:List<Cell> =row.values) {List::tail(cells)};\n    Ok(List::head(remaining))\n  }\n}\nfn integer_at(row:Row,index:I64)->SqlResult<I64> {\n  match (try cell_at(row,index)) {\n    Integer(value)=> Ok(value),Null=> Err(error_details(9)),Decimal(n)=> Err(error_details(9)),\n    String(t)=> Err(error_details(9)),Binary(b)=> Err(error_details(9))\n  }\n}\nfn decimal_at(row:Row,index:I64)->SqlResult<F64> {\n  match (try cell_at(row,index)) {\n    Decimal(value)=> Ok(value),Null=> Err(error_details(9)),Integer(n)=> Err(error_details(9)),\n    String(t)=> Err(error_details(9)),Binary(b)=> Err(error_details(9))\n  }\n}\nfn text_at(row:Row,index:I64)->SqlResult<Text> {\n  match (try cell_at(row,index)) {\n    String(value)=> Ok(value),Null=> Err(error_details(9)),Integer(n)=> Err(error_details(9)),\n    Decimal(n)=> Err(error_details(9)),Binary(b)=> Err(error_details(9))\n  }\n}\nfn bytes_at(row:Row,index:I64)->SqlResult<Bytes> {\n  match (try cell_at(row,index)) {\n    Binary(value)=> Ok(value),Null=> Err(error_details(9)),Integer(n)=> Err(error_details(9)),\n    Decimal(n)=> Err(error_details(9)),String(t)=> Err(error_details(9))\n  }\n}\n"
+  },
+  "candidate_changes": [
+    {
+      "path": "policy.lobo",
+      "sha256": "3790cad09ac358c5997d19d801c7e63bf851799279e59a10221392b22ccb75ac",
+      "bytes": 1045
+    },
+    {
+      "path": "logic.lobo",
+      "sha256": "8d667391beb2811da1d1eda71be9074b112185e89d8f2d73562ae54c1fea9537",
+      "bytes": 2934
+    }
+  ],
+  "raw_file_hashes": {
+    "assignment.json": {
+      "sha256": "d36c20a57a0f6deae51da6b984d9d2c850f12f418ef55715ef47d7756b6c3a48",
+      "bytes": 160
+    },
+    "stderr.txt": {
+      "sha256": "5bf7fd9b088767f1661867e0001186e59468cdc4ff1a5b73f3d66b9f448d6461",
+      "bytes": 200
+    },
+    "command.json": {
+      "sha256": "0f379cdbe128965083c03f83a1c420b432cdc6ebfe9d6db8f24a1f30a55520bc",
+      "bytes": 589
+    },
+    "prompt.txt": {
+      "sha256": "060e406324b52bc57b754c0c590d8fb5e48b4c0fd9abe574b718a3ee523281e7",
+      "bytes": 270
+    },
+    "events.jsonl": {
+      "sha256": "454112fc52a188ba23f81d27638480376762981f288d7073cc0095df3127cd50",
+      "bytes": 59700
+    },
+    "result.json": {
+      "sha256": "46c9a69e7bb0accf28e13449a2d7cf796146c6768907b41f9aa6d946d9a9931d",
+      "bytes": 3265
+    },
+    "last-message.txt": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "heldout/result.json": {
+      "sha256": "e2421d6051db7c8056d014695229e739bbf7b12c14c7ca706ae37e6c753c8688",
+      "bytes": 1621
+    },
+    "initial/policy.lobo.ids.json": {
+      "sha256": "67f8821005e3158b45a0de2d7504da4497b97b238dda9a74961cd9ca4832d57a",
+      "bytes": 437
+    },
+    "initial/app.lobo.ids.json": {
+      "sha256": "7cf211be43176e3e14a6dcf86c0c0eb7273f56c09e2f53f78527048a68139020",
+      "bytes": 500
+    },
+    "initial/logic.lobo.ids.json": {
+      "sha256": "0db8e5ce9b1a506296b1e8c7d2602eda56bdd9f4d3f438ceed6535e004e51265",
+      "bytes": 1114
+    },
+    "initial/check.py": {
+      "sha256": "19cfc08bd63439e1487ff9ee80fc4a013b804feb6b424788b2fc62fb63bd278f",
+      "bytes": 385
+    },
+    "initial/AGENTS.md": {
+      "sha256": "3c8c8fce33c21a65ee4b8a44fe408af1f260accb220adba4fb6a75e331e7ea11",
+      "bytes": 153
+    },
+    "initial/BUNDLE.json": {
+      "sha256": "5abf5f17a8036a5a0184282a96cbecee90daa1c06745ca5a8daded3cd7df9e87",
+      "bytes": 84
+    },
+    "initial/app.lobo": {
+      "sha256": "bbd956628b1278646692c15b6f3f5891223c164c80a60df513d2742a537c9684",
+      "bytes": 560
+    },
+    "initial/author.py": {
+      "sha256": "c31ac704d3aba83ce54af3b87bbc95fdfb9ca8f8a0218204b6459c231b1b319d",
+      "bytes": 513
+    },
+    "initial/policy.lobo": {
+      "sha256": "23e78d5ba5bdd3b2b00d9339ea05509234a9eb1dacad9fc74bbea077f4b37d3b",
+      "bytes": 979
+    },
+    "initial/logic.lobo": {
+      "sha256": "28e7c5fbffcebc13fca6abc62caa8429f7ee99a2366a80cabf96a177b1eb5c77",
+      "bytes": 1258
+    },
+    "initial/VISIBLE.json": {
+      "sha256": "6443052ae0af92ba75d1779c58de59a793242faa762f5ae2440f8b5d4f2b7e2e",
+      "bytes": 6109
+    },
+    "initial/GUIDE.txt": {
+      "sha256": "8d1dc35be37d60644abe21b562d419508d0afd02618286b5889e20e7194883d4",
+      "bytes": 3163
+    },
+    "initial/model.lobo": {
+      "sha256": "f94e35c6dd82c56c65aa4c27034bf783953649fcbee6f8e97b4b2ee2d6d67d8b",
+      "bytes": 135
+    },
+    "initial/model.lobo.ids.json": {
+      "sha256": "6f651c34b8410bfb4f2e5f31ed344998d4c85556445a64ad74ab6cc6af2f3704",
+      "bytes": 255
+    },
+    "initial/TASK.txt": {
+      "sha256": "14bbfdeb44d98db22ffa7cf7e293a9ae94df33bece50e5380ac007fea756760b",
+      "bytes": 2650
+    },
+    "candidate-final/policy.lobo": {
+      "sha256": "3790cad09ac358c5997d19d801c7e63bf851799279e59a10221392b22ccb75ac",
+      "bytes": 1045
+    },
+    "candidate-final/logic.lobo": {
+      "sha256": "8d667391beb2811da1d1eda71be9074b112185e89d8f2d73562ae54c1fea9537",
+      "bytes": 2934
+    },
+    "heldout/source/policy.lobo.ids.json": {
+      "sha256": "67f8821005e3158b45a0de2d7504da4497b97b238dda9a74961cd9ca4832d57a",
+      "bytes": 437
+    },
+    "heldout/source/app.lobo.ids.json": {
+      "sha256": "7cf211be43176e3e14a6dcf86c0c0eb7273f56c09e2f53f78527048a68139020",
+      "bytes": 500
+    },
+    "heldout/source/logic.lobo.ids.json": {
+      "sha256": "0db8e5ce9b1a506296b1e8c7d2602eda56bdd9f4d3f438ceed6535e004e51265",
+      "bytes": 1114
+    },
+    "heldout/source/BUNDLE.json": {
+      "sha256": "5abf5f17a8036a5a0184282a96cbecee90daa1c06745ca5a8daded3cd7df9e87",
+      "bytes": 84
+    },
+    "heldout/source/app.lobo": {
+      "sha256": "bbd956628b1278646692c15b6f3f5891223c164c80a60df513d2742a537c9684",
+      "bytes": 560
+    },
+    "heldout/source/policy.lobo": {
+      "sha256": "3790cad09ac358c5997d19d801c7e63bf851799279e59a10221392b22ccb75ac",
+      "bytes": 1045
+    },
+    "heldout/source/logic.lobo": {
+      "sha256": "8d667391beb2811da1d1eda71be9074b112185e89d8f2d73562ae54c1fea9537",
+      "bytes": 2934
+    },
+    "heldout/source/model.lobo": {
+      "sha256": "f94e35c6dd82c56c65aa4c27034bf783953649fcbee6f8e97b4b2ee2d6d67d8b",
+      "bytes": 135
+    },
+    "heldout/source/model.lobo.ids.json": {
+      "sha256": "6f651c34b8410bfb4f2e5f31ed344998d4c85556445a64ad74ab6cc6af2f3704",
+      "bytes": 255
+    },
+    "heldout/source/lib/sql.lobo.ids.json": {
+      "sha256": "67fc9cd6d80fed595e0efdffeb36b7153d865236ab188d2da776ed8effd643d4",
+      "bytes": 2033
+    },
+    "heldout/source/lib/sql.lobo": {
+      "sha256": "5704a8abcf1e1d0ee435b09aa7219c9c809bc1aaa304f3fe61b3de41d903a133",
+      "bytes": 9348
+    },
+    "initial/lib/sql.lobo.ids.json": {
+      "sha256": "67fc9cd6d80fed595e0efdffeb36b7153d865236ab188d2da776ed8effd643d4",
+      "bytes": 2033
+    },
+    "initial/lib/sql.lobo": {
+      "sha256": "5704a8abcf1e1d0ee435b09aa7219c9c809bc1aaa304f3fe61b3de41d903a133",
+      "bytes": 9348
+    },
+    "initial/spec/core-v1.1.md": {
+      "sha256": "98c9b16d2bd72229464751f1d6c03790efde00a234bf7d2add2306f30b785361",
+      "bytes": 4694
+    },
+    "initial/spec/language-milestone-workloads.md": {
+      "sha256": "f0be02538657fc901e9241049314b75d03b0472bc776ad3748d63c5c847a2b4d",
+      "bytes": 6656
+    },
+    "initial/spec/core-v1.4.md": {
+      "sha256": "01b365a0c8874db2ad9982e1e85dc036cf22cf31521c2b28c943c08888edf9b2",
+      "bytes": 5603
+    },
+    "initial/spec/core-v0.7.md": {
+      "sha256": "0111fcfce8f7ba3ca9abfa027282113dcb6c31df7fb2d946847260f392efb221",
+      "bytes": 7169
+    },
+    "initial/spec/checked-artifact-v0.2.md": {
+      "sha256": "b13203846b1eb62eeb73445ef422cb526f7ae33d1e6804ecdef20e33c6365ff7",
+      "bytes": 1413
+    },
+    "initial/spec/core-v0.10.md": {
+      "sha256": "2ca585067a2c5113ce335847f433489c79a71d63471c2443786157038b60953e",
+      "bytes": 3093
+    },
+    "initial/spec/native-v0.1.md": {
+      "sha256": "befed14019840eea1988bf6ff982d531df105bb0d1b057e765e820ed72cdc0b6",
+      "bytes": 6568
+    },
+    "initial/spec/core-v0.8.md": {
+      "sha256": "790cfe562577be3dafa5ca3d2028e34d8782cbb36731fe45c29560a4badc6887",
+      "bytes": 5329
+    },
+    "initial/spec/core-v1.0.md": {
+      "sha256": "8dbc2ca888f49b84125a8faedf39160bb1eab27e0f25b336b1ef8f87f14f3b2b",
+      "bytes": 5242
+    },
+    "initial/spec/core-v1.11.md": {
+      "sha256": "d13c38830326c983d336c83ab4a398867bd17858ade3c5f8ecc6d088359182aa",
+      "bytes": 2968
+    },
+    "initial/spec/agent-testing-v0.1.md": {
+      "sha256": "dc9c1fb4b7f3aca5cc70a2cb844139190ec16218ee3ddb7759653f2d0fc4ab0e",
+      "bytes": 11933
+    },
+    "initial/spec/compact-source-v0.1.md": {
+      "sha256": "d7035fbf81ff5c83f84a34dd5c73a1617f1a49176019a2693ba56c501955a94f",
+      "bytes": 5994
+    },
+    "initial/spec/core-v1.8.md": {
+      "sha256": "422e050a2b5aa621e9b236f003084fa5398995e3144b3781b998092422255eb6",
+      "bytes": 5772
+    },
+    "initial/spec/core-v1.2.md": {
+      "sha256": "7d0f42dd9d1bd99b860af5045c960fa82ffc96511d8f6397fefa381964c5b363",
+      "bytes": 5534
+    },
+    "initial/spec/core-v1.7.md": {
+      "sha256": "2123fbea05d172cf4723e683afc4216c64e9bc0a62495f25e06b7ebc83311ed3",
+      "bytes": 3510
+    },
+    "initial/spec/generic-reuse-workload.md": {
+      "sha256": "53e5d3097494f3deb5379c77a343997dfa52f47edb6c3915006dac05082b244f",
+      "bytes": 2596
+    },
+    "initial/spec/core-v0.6.md": {
+      "sha256": "3d8737fe0d67ef67916ba63fc6d91386d9ff983c9148d2b2c671048a0cf35245",
+      "bytes": 7076
+    },
+    "initial/spec/core-v1.6.md": {
+      "sha256": "71967bd60313ce04cabdf740863eb2f1c73c49ecb1f22ea58ed6e9abbcd9c886",
+      "bytes": 4447
+    },
+    "initial/spec/core-v0.12.md": {
+      "sha256": "f02ddafe0a6196c15671a51e08aa12105ce216df1edb1a8354f54cfccc9e15c4",
+      "bytes": 7895
+    },
+    "initial/spec/recursive-ast-workload.md": {
+      "sha256": "3138f238b71d5d12001391dc3d2f8cf054a1a59622608699732bcc05441c7a3a",
+      "bytes": 1600
+    },
+    "initial/spec/README.md": {
+      "sha256": "e8b911e1997d93f0ede12e14c97851f8e08843ca19e84a1eb5a4319108e82653",
+      "bytes": 4757
+    },
+    "initial/spec/language-v1-acceptance.md": {
+      "sha256": "33e7c84c36db6bcf74059f57e08e3eaa550e1235955d77eae4e6ca4afbed5f33",
+      "bytes": 6645
+    },
+    "initial/spec/core-v0.2.md": {
+      "sha256": "9cbdbe1ddd2a55ce69b3333d5984a12d437ed225d856668c69edfbfd2a4b1ad2",
+      "bytes": 6391
+    },
+    "initial/spec/core-v1.5.md": {
+      "sha256": "dac4877adab3d738fb05fc57c37436106a22206a3069446a00c47de65c1abdda",
+      "bytes": 4557
+    },
+    "initial/spec/core-v0.11.md": {
+      "sha256": "275105a2b66f5f0f6ddb12828d3e30db47f8603933654ea92b6bb3d5597ba8f9",
+      "bytes": 6042
+    },
+    "initial/spec/core-v0.4.md": {
+      "sha256": "84828c9c83b0c0b70d278e2458d77e01231bfd75899a99193b80a762b78ede83",
+      "bytes": 5039
+    },
+    "initial/spec/native-llvm-v0.1.md": {
+      "sha256": "580611e7fc27523e4aed69b9064a7c688096c8254eecf9a53541f93994045b21",
+      "bytes": 5632
+    },
+    "initial/spec/native-interface-v0.1.md": {
+      "sha256": "fc98302a3a5e50c8a87079231b9311954e8351383ba872e4223385ff1770934e",
+      "bytes": 10000
+    },
+    "initial/spec/checked-artifact-v0.3.md": {
+      "sha256": "4874fc7ba430389d8d3bf4df3c6fc34b2b5bb949ecfe646383e3f6fc04652b15",
+      "bytes": 1147
+    },
+    "initial/spec/core-v0.3.md": {
+      "sha256": "96e39f958c14b082ad0f3a0c72dc0b3318a7c1c442812b35c338d35b00759543",
+      "bytes": 4396
+    },
+    "initial/spec/core-v1.9.md": {
+      "sha256": "c84dc7e6b555fc92458d632c0b92fb31052abd023e58b0201c735c6019ec225b",
+      "bytes": 2560
+    },
+    "initial/spec/checked-artifact-v0.1.md": {
+      "sha256": "8e85e37b7a89812f135ccb796e083ea95771032d267e55bc9c0d18f53fa56cdf",
+      "bytes": 4094
+    },
+    "initial/spec/core-v1.10.md": {
+      "sha256": "45d45f48a14fda25275c50ea02d6d65854d14e3fb6989ea56ef6d1aba62ec308",
+      "bytes": 4925
+    },
+    "initial/spec/source-diagnostics-v0.1.md": {
+      "sha256": "d531df2c57fdd4ec2917fb029a8fc54f441f6632fbfb7c2b4cfe3b8168e6eb3b",
+      "bytes": 3894
+    },
+    "initial/spec/core-v0.9.md": {
+      "sha256": "4bc8977f5151c72df856a06da8cc1ff136a9fb355681b47075bbd17d570d5379",
+      "bytes": 7360
+    },
+    "initial/spec/core-v0.1.md": {
+      "sha256": "c3fe3c05e21bd22c9df8f9ff78c65f3c645f127b10350c93a888c5f133f16854",
+      "bytes": 13060
+    },
+    "initial/spec/core-v1.3.md": {
+      "sha256": "2ea91b7b4d4c7716a593ceafcfff42227f05f94e45d8500e9ed04e0c956a9118",
+      "bytes": 6183
+    },
+    "initial/spec/core-v0.5.md": {
+      "sha256": "02ad206aa3cf73c38a8c13d082cdd7d0ea61c45a4dd2ab304497df2cc7c326cc",
+      "bytes": 6607
+    },
+    "initial/spec/sqlite-interface-v0.1.md": {
+      "sha256": "19de3da7153b874edc5518ded812515c2ce32dc67a4d1226307c7a0c8b612bdf",
+      "bytes": 9003
+    },
+    "initial/research/compact-pilot-2026-11-24.md": {
+      "sha256": "761a1fc994e8bdf6865f293fc37728aab95932c49d67a9ea23907a1de352ef25",
+      "bytes": 9416
+    },
+    "initial/spec/schemas/request-envelope.schema.json": {
+      "sha256": "2abad3a1e8bbbb980cfa0fbe2c9c38a789ba94215bd6481f677d15cfe7c24409",
+      "bytes": 1964
+    },
+    "initial/spec/schemas/tool-descriptor.schema.json": {
+      "sha256": "2e375db03b357fee59094e46252dcd847a3adf3fc04fae39457bf98a62bc17ef",
+      "bytes": 1727
+    },
+    "initial/spec/schemas/response-envelope.schema.json": {
+      "sha256": "a4e7d16a8bc25e06d5a571259df750f7c024319922e419bae57a8d66c64e7ca4",
+      "bytes": 3614
+    },
+    "initial/spec/schemas/conformance-case.schema.json": {
+      "sha256": "ef3a27dd2a0caa8249c1f1439eb0abf96983350456db4efaabfdd2e2cc24c443",
+      "bytes": 2269
+    },
+    "initial/spec/conformance/core-cases.json": {
+      "sha256": "076f50cc9a45b7588eed4d150bb289fcdf04b0dcc7435dd871e71ef388cf71df",
+      "bytes": 4968
+    },
+    "initial/docs/agent-reference/compact-pilot-2026-11-24/nominal.txt": {
+      "sha256": "9810070ea2f016955293106bc0f7bf2f9fbb718619ad5b8372f34fbc380a0510",
+      "bytes": 819
+    },
+    "initial/docs/agent-reference/compact-pilot-2026-11-24/contracts.txt": {
+      "sha256": "86a129a75ffba8cb447f0a97b513cc92abb806b932609fc253273909aae868aa",
+      "bytes": 796
+    },
+    "initial/docs/agent-reference/compact-pilot-2026-11-24/ranges.txt": {
+      "sha256": "633eac0a1b432389d842277929b485519962a646c07bbe97a69a403b5d217478",
+      "bytes": 934
+    },
+    "initial/docs/agent-reference/compact-pilot-2026-11-24/propagation.txt": {
+      "sha256": "d204f387ce82c1a0c1106ec337db631c06ec084c51f7b583f7eb9b45fb38c43f",
+      "bytes": 744
+    },
+    "initial/.agents/skills/lobo-development-study/SKILL.md": {
+      "sha256": "3a9130f96e5c223e9c1d331b401188c181d562caf23bca7cd935485050cf97e4",
+      "bytes": 3665
+    },
+    "initial/.agents/skills/lobo-programming/references/conveniences.lobo": {
+      "sha256": "ffb3bcfaa7fa99fca865d6498238b4c81b857a01e2744d46d5a6f0308765e9c9",
+      "bytes": 301
+    },
+    "initial/.agents/skills/lobo-programming/references/compact-example.lobo": {
+      "sha256": "d2376c69b774da83073a98883e91794750d59f99ed3fa380d9aaa673d1950954",
+      "bytes": 231
+    },
+    "initial/.agents/skills/lobo-programming/references/try-example.lobo": {
+      "sha256": "2f6b5750d060c929eae94cb9b001b3ea9154f9ddaa369c0934c1953cce21770a",
+      "bytes": 412
+    },
+    "initial/.agents/skills/lobo-programming/references/sqlite-example.lobo": {
+      "sha256": "855f210acb18bc4568aad97373a8633cd9b7053d368980172317c76fab74927a",
+      "bytes": 303
+    },
+    "initial/.agents/skills/lobo-programming/references/compact-example.lobo.ids.json": {
+      "sha256": "2dbc359fba6b65d4fa0667b91bd80e8c4f150b38ecb26c00c21e743332906d0e",
+      "bytes": 298
+    },
+    "initial/.agents/skills/lobo-programming/references/json-example.lobo": {
+      "sha256": "e45bbda6b893e09f021821bd500195c4e27a827e81edcc249458cef53c3cc712",
+      "bytes": 269
+    },
+    "initial/.agents/skills/lobo-programming/references/tools.md": {
+      "sha256": "1913a1fceffba4c09f72625d9bc1e8d8104e35025ad674988a73405ba8eb8429",
+      "bytes": 8694
+    },
+    "initial/.agents/skills/lobo-programming/references/callbacks.lobo": {
+      "sha256": "a106cf1e51354df3296e755d882d6f0fc6ce7690b761914cca0f76cc0c0bf63e",
+      "bytes": 406
+    },
+    "initial/.agents/skills/lobo-programming/references/sqlite-example.lobo.ids.json": {
+      "sha256": "18ae22c6bf9c71e6b1f7633bd7fcd847883b919ab27f7b34d18feca3f455a2e6",
+      "bytes": 343
+    },
+    "initial/.agents/skills/lobo-programming/references/conveniences.lobo.ids.json": {
+      "sha256": "eb25455ebf8d705ecd0d1d2261623cb5930cd4ea9bb3bf04de2d2e7bb0921817",
+      "bytes": 337
+    },
+    "initial/.agents/skills/lobo-programming/references/language.md": {
+      "sha256": "f007469320ec5054db07dac9302f8b6ac9a9dc976099ffd566c1ea963ab36562",
+      "bytes": 12554
+    },
+    "initial/.agents/skills/lobo-programming/references/examples.lobo": {
+      "sha256": "cf65d2cdc47a1bb15e154f94fe2e70d92e58eb15d405c8a2fb68261c294a1b3c",
+      "bytes": 2028
+    },
+    "initial/.agents/skills/lobo-programming/references/native-example.lobo": {
+      "sha256": "79c44e86db8aa77322b4d99a424a25a0b2d37ced37e3e65af344c6a02d03737c",
+      "bytes": 300
+    },
+    "initial/.agents/skills/lobo-programming/references/callbacks.lobo.ids.json": {
+      "sha256": "7cf6c0e2a287692417905cb0fb94a3ab5f04cb517695ad597f2404e5888b11cc",
+      "bytes": 334
+    },
+    "initial/libraries/json/README.md": {
+      "sha256": "fcc2d6742f11f4a53fbe1f26ce7a390e477e0de88a983e4a348884f6983d4959",
+      "bytes": 5305
+    },
+    "initial/libraries/json/json.lobo": {
+      "sha256": "3ed68fee975a46affca613dd6da60fbe6ea297fc447b8c91a76fbe7b2406ac39",
+      "bytes": 8228
+    },
+    "initial/libraries/native/README.md": {
+      "sha256": "4de8dd7276b56d529c96f909ba6e4903fda299e255394e1e8e4bef094d104eea",
+      "bytes": 3872
+    },
+    "initial/libraries/native/native.lobo": {
+      "sha256": "ee7ba249a414ff9421cc36d3373f412b6ce63e62d696d1bdd0f9ce111e9027d1",
+      "bytes": 4649
+    },
+    "initial/libraries/native/permissions.lobo": {
+      "sha256": "c3148d6d50d3d8e2f326b771b76353fed490ba06cfd8cad21deb5d7f8f070e12",
+      "bytes": 1347
+    },
+    "initial/libraries/sql/sql.lobo.ids.json": {
+      "sha256": "67fc9cd6d80fed595e0efdffeb36b7153d865236ab188d2da776ed8effd643d4",
+      "bytes": 2033
+    },
+    "initial/libraries/sql/sql.lobo": {
+      "sha256": "5704a8abcf1e1d0ee435b09aa7219c9c809bc1aaa304f3fe61b3de41d903a133",
+      "bytes": 9348
+    },
+    "initial/libraries/sql/README.md": {
+      "sha256": "85f5ec08131d902d2ed64014ebd687462def277aa5f0876599c1058cfd71fad5",
+      "bytes": 4514
+    },
+    "initial/libraries/http/http.lobo": {
+      "sha256": "ea9b9d87e15321e06ca67932258b60451c3da04a815e97d234ef2b36a91dba9f",
+      "bytes": 2787
+    },
+    "initial/libraries/http/README.md": {
+      "sha256": "c4dd34349e63538c79fe003c6cff87c3e4d27a624bc2d3146ed4fe08c4626774",
+      "bytes": 4399
+    },
+    "initial/libraries/http-server/server.lobo": {
+      "sha256": "3aeac600d4131e544a7054f0f751efb5945e1616c84b210cfdabf5d936912a1e",
+      "bytes": 6880
+    },
+    "initial/libraries/http-server/transport.lobo.ids.json": {
+      "sha256": "9163bf4fbd4215230030857e386d89b9a38843f233d4ca357e119f93779cc68d",
+      "bytes": 2021
+    },
+    "initial/libraries/http-server/README.md": {
+      "sha256": "7f695c6966c1a31adf74d2d620760857a07ac28c0763a65fc8a6001800b6bde2",
+      "bytes": 7886
+    },
+    "initial/libraries/http-server/server.lobo.ids.json": {
+      "sha256": "27cc7a4a712b98b29bd3fbae6e38616ed1713fb9cf07cc4e6c371d0823f3e640",
+      "bytes": 1408
+    },
+    "initial/libraries/http-server/transport.lobo": {
+      "sha256": "ac5af9a0ceed5f7a446450c0248c7b6c284931908dc27b25ea1a69cb6517a52b",
+      "bytes": 8145
+    }
+  }
+}

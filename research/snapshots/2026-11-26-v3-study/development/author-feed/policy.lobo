@@ -1,0 +1,32 @@
+module policy;
+record Page {after:I64,limit:I64,kind:Text}
+variant Query {Ready(Page),Bad,Missing}
+variant Number {Valid(I64),Invalid}
+record Digits {value:I64,valid:Bool}
+record Fields {after:I64,limit:I64,kind:Text,seen_after:Bool,seen_limit:Bool,seen_kind:Bool,valid:Bool}
+record Scan {start:I64,fields:Fields}
+fn natural(token:Text)->Number {
+ let bytes=Text::bytes(token);
+ if Bytes::length(bytes)==0 || (Bytes::length(bytes)>1 && Bytes::at(bytes,0)==48) {Invalid} else {
+  let done=fold(i in Bytes::length(bytes),state:Digits=Digits {value:0,valid:true}) {
+   let digit=Bytes::at(bytes,i)-48;
+   if !state.valid || digit<0 || digit>9 || state.value>(9223372036854775807-digit)/10 {Digits {value:0,valid:false}} else {Digits {value:state.value*10+digit,valid:true}}
+  };
+  if done.valid {Valid(done.value)} else {Invalid}
+ }
+}
+fn field_value(part:Text,fields:Fields)->Fields {fields}
+fn read_query(path:Text)->Query {
+ if path=="/api/events" {Ready(Page {after:0,limit:2,kind:""})} else {
+  if Text::length(path)<12 || Text::slice(path,0,12)!="/api/events?" {Missing} else {
+   let query=Text::slice(path,12,Text::length(path)-12);let bytes=Text::bytes(query);
+   let initial=Fields {after:0,limit:2,kind:"",seen_after:false,seen_limit:false,seen_kind:false,valid:true};
+   let done=fold(i in Bytes::length(bytes)+1,state:Scan=Scan {start:0,fields:initial}) {
+    if i==Bytes::length(bytes) || Bytes::at(bytes,i)==38 {
+     Scan {start:i+1,fields:field_value(Text::slice(query,state.start,i-state.start),state.fields)}
+    } else {state}
+   };
+   Ready(Page {after:0,limit:2,kind:""})
+  }
+ }
+}

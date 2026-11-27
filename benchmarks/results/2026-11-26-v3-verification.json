@@ -1,0 +1,82 @@
+{
+  "format": "lobo-v3-verification/1",
+  "study_date": "2026-11-26",
+  "completed_on": "2026-11-27",
+  "registration_commit": "4e071e274a920eb16e28951d79e20d7dee6a19fa",
+  "compiler_version": "1.11.2",
+  "core": "1.11",
+  "compiler_sha256": "8d9f84530b8d34a6a72597d25befc249a604430a6569656b4184721e1e444d9d",
+  "v2_unchanged_sha256": "e7877b0ce0ab304eaf60fc9f6f9435b254519d43655a0a18c1d569d1bfc4a352",
+  "v3_sha256": "9b635ae596915aee28ff692884156eac85379d62c661b08c25c366ef0ec22b20",
+  "registered_code_pins": 30,
+  "all_registered_hashes_match": true,
+  "scheduled": 20,
+  "attempted": 20,
+  "wall_limit": 20,
+  "primary_acceptance_by_arm": {
+    "v2": 0,
+    "requirements": 0,
+    "resources": 0,
+    "finish": 0,
+    "v3": 0
+  },
+  "correct_candidates_by_arm": {
+    "v2": 1,
+    "requirements": 0,
+    "resources": 0,
+    "finish": 0,
+    "v3": 1
+  },
+  "unattempted": 0,
+  "source_unchanged": 12,
+  "compile_failure_candidates": 3,
+  "final_planned_scenarios": 700,
+  "final_observed_scenarios": 610,
+  "final_passing_scenarios": 256,
+  "distinct_scenarios": 70,
+  "final_native_http_connections": 450,
+  "final_native_sqlite_operations": 301,
+  "known_scored_usage": 0,
+  "unknown_scored_usage": 20,
+  "complete_token_pairs_all_contrasts": 0,
+  "known_availability_only_input_plus_output": 11187,
+  "checks": {
+    "harness_tests": 80,
+    "new_harness_tests": 11,
+    "research_tests": 15,
+    "native_calibration_scenarios": 310,
+    "compiled_mutants_killed": 5,
+    "skill_frontmatter_ui_and_reference_validation": true,
+    "all_input_prompt_usage_case_labels_validated": true,
+    "existing_declarations_and_ids_preserved": true
+  },
+  "late_public_checks": [
+    {
+      "assignment": {
+        "index": 3,
+        "repeat": 0,
+        "family": "feed",
+        "arm": "finish",
+        "language": "lobo",
+        "reasoning": "high",
+        "phase": "application-change"
+      },
+      "checks": [
+        {
+          "index": 2,
+          "end_s": 120.75145926093683
+        }
+      ]
+    }
+  ],
+  "compiler_regression": "Unchanged SHA and prior312-pass receipt reused; new harness/calibration/TDD/research checks run. Full compiler/editor suite not rerun.",
+  "raw_archive": {
+    "format": "lobo-v3-raw/1",
+    "archive": "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/v3-study-20261126-raw.tar.gz",
+    "sha256": "be2576f92012751c2373c95618f5019db316b76d98e53f282db514fdee0f93cc",
+    "bytes": 21584431,
+    "members": 5323,
+    "all_member_hashes_verified": true,
+    "limits": "Local ignored archive, not off-device backup. Authentication home was outside evidence and removed. Frozen compiler retained separately at registered path/hash. Final link/index checks retained outside closed directory."
+  }
+}

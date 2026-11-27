@@ -1700,6 +1700,71 @@
         "Billing, parent-development costs, immutable model weights or a native-runtime speed ranking",
         "A fresh full compiler/editor suite or authorization for more trials, skill/library/compiler changes or budget/caching changes"
       ]
+    },
+    {
+      "id": "local-048",
+      "date": "2026-11-27",
+      "title": "Separate v3 instruction additions on fresh harder native application changes",
+      "evidence_kind": "Versioned skill creation and preregistered five-arm instruction ablation with independent native HTTP/SQLite oracles",
+      "status": "All20 attempts retained; every arm0/4 timely acceptance, v2/fullv3 each1/4 passing candidates; all20 scored usages unknown",
+      "files": [
+        {
+          "path": "research/v3-skill-study-2026-11-26.md",
+          "sha256": "a5e6544c89355b70f1fa56ffd61e679a81511a0f4b066aeb4bc139fe884f775c"
+        },
+        {
+          "path": "benchmarks/results/2026-11-26-v3-study.json",
+          "sha256": "c65754df0948dbd9ecf731da58edeb0ee90a5b1331e28eb544821ad30aee93a3"
+        },
+        {
+          "path": "benchmarks/results/2026-11-26-v3-audit.json",
+          "sha256": "d4062f37b4567fa7085c1ba2f08cf554a1c62c39ebce664b1ab92b85ff8c6cb1"
+        },
+        {
+          "path": "benchmarks/results/2026-11-26-v3-verification.json",
+          "sha256": "315dd980d973ca86fbc4d99a4c5dbb500010e19a4a4d76ef09610d391800d88a"
+        },
+        {
+          "path": "benchmarks/results/2026-11-26-v3-validation.json",
+          "sha256": "2ef77bf01d1ecfd2f164da7fb3dd1c8ceb5b90e8896c006876b73156f04b3000"
+        },
+        {
+          "path": "research/snapshots/2026-11-26-v3-study/registration/manifest.json",
+          "sha256": "042986daa4b8f62dbe5ff96083c379e746ea8a60b5fb9e36965676e21b9c1d17"
+        },
+        {
+          "path": "research/snapshots/2026-11-26-v3-study/evidence-manifest.json",
+          "sha256": "9a72714bda67ea3aa3a2cf91e57316fb16e5ff7340c88deb3dbe4ad65abbd6f5"
+        },
+        {
+          "path": ".agents/skills/lobo-development-v3/SKILL.md",
+          "sha256": "9b635ae596915aee28ff692884156eac85379d62c661b08c25c366ef0ec22b20"
+        },
+        {
+          "path": "benchmarks/matched-study/v3_parts.json",
+          "sha256": "d986d12a53e1586de561cc7a3a2634649f34779526a7e79987ea4c3d6f88a9af"
+        }
+      ],
+      "supports": [
+        "Create v3 alongside unchanged v2, appending generic requirements/resources/finish blocks; common alias/frontmatter/prompt holds activation equal across baseline/single-addition/combined arms",
+        "Two fresh harder application tasks x2repeats x5arms, identical configured GPT-5.6-Luna/high120s/16commands/6checks; all20 assignments time out with no retries/replacements",
+        "Candidate suite passes: v2 andfullv3 each1/4, each isolated addition0/4; no observed gain, no equivalence/general-inferiority claim",
+        "12candidate sources unchanged,3edited SQLite candidates do not compile;610of700 planned native scenarios execute,256pass; inherited starter passes are not implementation gains",
+        "Three34/40 HTTP candidates reverse array order despite a rule already in shared JSON documentation; first SQLite diagnostics include conditional sequencing syntax and unresolved Ok",
+        "All20 scored terminal usagesunknown; zero token pairs in all contrasts. Only source-free availability known11187 tokens; no cost estimate or imputation",
+        "80harness/15research tests,310native calibration observations catch5compiled defects; reused pinned312-pass compiler receipt is not a new suite",
+        "450real HTTP connections and301SQLite request invocations in final grading; full local raw archive5323members21584431bytes verified",
+        "All47 earlier entry objects/177pins unchanged; product/editor/libs/old skills/cards/studies frozen, v3 remains as tested and stops at20"
+      ],
+      "does_not_establish": [
+        "General skill superiority/inferiority, equivalence or population completion rates; primary has a budget floor on two authored tasks",
+        "A causal attribution to individual instructions versus extra text, latency, attention or provider conditions; factorial interactions incomplete",
+        "Correct resource reasoning when attempts did not reach source edits or stopped at parsing/resolution",
+        "Token-efficiency rankings, complete experiment cost, billing or parent development costs",
+        "Hundreds of independent tasks, whole-contract formal proof or production concurrency/security/TLS coverage",
+        "A causal cross-study difficulty/skill effect, immutable model weights or native-runtime speed ranking",
+        "A new full compiler/editor run or permission for further tuning, trials, caching/telemetry/budget changes or language evolution"
+      ]
     }
   ],
   "backend_recommendation": {

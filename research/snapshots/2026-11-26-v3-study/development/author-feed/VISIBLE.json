@@ -1,0 +1,124 @@
+[
+  {
+    "input": {
+      "method": "GET",
+      "path": "/health"
+    },
+    "expected": {
+      "status": 200,
+      "body": {
+        "status": "ready"
+      },
+      "head_empty": true,
+      "length_ok": true,
+      "content_type": "application/json",
+      "allow": null
+    }
+  },
+  {
+    "input": {
+      "method": "GET",
+      "path": "/api/events"
+    },
+    "expected": {
+      "status": 200,
+      "body": {
+        "items": [
+          {
+            "id": 1,
+            "kind": "info",
+            "message": "start"
+          },
+          {
+            "id": 3,
+            "kind": "audit",
+            "message": "Line\nBack\\"
+          }
+        ],
+        "count": 2,
+        "next": 3
+      },
+      "head_empty": true,
+      "length_ok": true,
+      "content_type": "application/json",
+      "allow": null
+    }
+  },
+  {
+    "input": {
+      "method": "GET",
+      "path": "/api/events?after=3&limit=2"
+    },
+    "expected": {
+      "status": 200,
+      "body": {
+        "items": [
+          {
+            "id": 9,
+            "kind": "info",
+            "message": "Tea \"\u591c\""
+          },
+          {
+            "id": 12,
+            "kind": "audit",
+            "message": ""
+          }
+        ],
+        "count": 2,
+        "next": 12
+      },
+      "head_empty": true,
+      "length_ok": true,
+      "content_type": "application/json",
+      "allow": null
+    }
+  },
+  {
+    "input": {
+      "method": "GET",
+      "path": "/api/events?kind=audit&limit=1"
+    },
+    "expected": {
+      "status": 200,
+      "body": {
+        "items": [
+          {
+            "id": 3,
+            "kind": "audit",
+            "message": "Line\nBack\\"
+          }
+        ],
+        "count": 1,
+        "next": 3
+      },
+      "head_empty": true,
+      "length_ok": true,
+      "content_type": "application/json",
+      "allow": null
+    }
+  },
+  {
+    "input": {
+      "method": "HEAD",
+      "path": "/api/events?after=12"
+    },
+    "expected": {
+      "status": 200,
+      "body": {
+        "items": [
+          {
+            "id": 9223372036854775807,
+            "kind": "info",
+            "message": "last"
+          }
+        ],
+        "count": 1,
+        "next": null
+      },
+      "head_empty": true,
+      "length_ok": true,
+      "content_type": "application/json",
+      "allow": null
+    }
+  }
+]

@@ -1,0 +1,24 @@
+module logic;
+use model {Line,Cart,Receipt}; use policy {Plan,plan,params};
+use sql {Cell,Row,SqlResult,SqlError,query,execute,begin,commit,rollback,params1,params2,integer_at,expect_columns};
+fn receipt(applied:Bool,replay:Bool,reason:Text)->Receipt {Receipt {applied:applied,replay:replay,reason:reason}}
+fn perform(db:Native::Database,cart:Cart,key:Text)->SqlResult<Receipt> actions {db.execute,db.read,db.close} {
+ let rows=try query(db,"SELECT available FROM inventory WHERE sku=?1",params1(Cell::Integer(cart.first.sku)));
+ if List::length(rows)==0 {Ok(receipt(false,false,"missing"))} else {
+  let available=try integer_at(List::head(rows),0);
+  if available<cart.first.qty {Ok(receipt(false,false,"stock"))} else {
+   try execute(db,"UPDATE inventory SET available=available-?1 WHERE sku=?2",params2(Cell::Integer(cart.first.qty),Cell::Integer(cart.first.sku)));
+   Ok(receipt(true,false,"reserved"))
+  }
+ }
+}
+fn apply(db:Native::Database,sku1:I64,qty1:I64,sku2:I64,qty2:I64,key:Text)->SqlResult<Receipt>
+actions {db.execute,db.read,db.close,db.transaction}
+{
+ match plan(sku1,qty1,sku2,qty2,key) {
+  Invalid=>Ok(receipt(false,false,"invalid")),
+  Ready(cart)=> {
+   try begin(db);let value=try perform(db,cart,key);try commit(db);Ok(value)
+  }
+ }
+}

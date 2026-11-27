@@ -1,0 +1,13 @@
+{
+  "format": "lobo-identities/0.1",
+  "identities": {
+    "module": "realistic.feed.app",
+    "main": "realistic.feed.app.main",
+    "access.restrict": "lobo.permissions.restrict",
+    "io.server_permissions": "lobo.0935a528ddd246a79a5f2cd965cced31",
+    "io.serve": "lobo.852b35fdd21c1b3ce25a6ae27fbf6148",
+    "http.Request": "lobo.http.server.Request",
+    "http.Response": "example.web.response",
+    "logic.handle": "realistic.feed.logic.handle"
+  }
+}

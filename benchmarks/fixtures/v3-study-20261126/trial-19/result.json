@@ -1,0 +1,3577 @@
+{
+  "issues": [],
+  "build": {
+    "command": [
+      "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/matched-study-20261123/freeze/lobo",
+      "compile",
+      "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/v3-study-20261126/run/trial-19/heldout/source/app.lobo",
+      "--source",
+      "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/v3-study-20261126/run/trial-19/heldout/source/logic.lobo",
+      "--source",
+      "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/v3-study-20261126/run/trial-19/heldout/source/policy.lobo",
+      "--source",
+      "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/v3-study-20261126/run/trial-19/heldout/source/model.lobo",
+      "--source",
+      "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/v3-study-20261126/run/trial-19/heldout/source/lib/sql.lobo",
+      "-o",
+      "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/v3-study-20261126/run/trial-19/heldout/program"
+    ],
+    "exit_code": 0,
+    "stdout": "{\"artifact\":\"/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/v3-study-20261126/run/trial-19/heldout/program\",\"entries\":[\"lobo.66a2a8e53fd4163a2e038a2fe5b68546\",\"lobo.a066d2d1100c7d222d8c4c9a6891123a\",\"lobo.0c1ef938c6325139c192f42ef8b9870a\",\"lobo.51fecacad709be4603162cf590b4d26f\",\"lobo.sql.error_kind\",\"lobo.sql.error_details\",\"lobo.sql.bool_result\",\"lobo.sql.open\",\"lobo.sql.restrict\",\"lobo.886c4b0a3dabfb731412c11d8f6510e9\",\"lobo.fac29eae9b9d398b7a2658f35d3bc68c\",\"lobo.sql.close\",\"lobo.sql.begin\",\"lobo.sql.commit\",\"lobo.sql.rollback\",\"lobo.sql.no_params\",\"lobo.sql.params1\",\"lobo.sql.params2\",\"lobo.sql.bind_value\",\"lobo.sql.bind_all\",\"lobo.sql.read_value\",\"lobo.sql.read_row\",\"lobo.sql.read_rows\",\"lobo.sql.run_query\",\"lobo.sql.query_raw\",\"lobo.sql.query\",\"lobo.sql.run_execute\",\"lobo.sql.execute_raw\",\"lobo.sql.execute\",\"lobo.sql.error_code\",\"lobo.sql.expect_columns\",\"lobo.sql.cell_at\",\"lobo.sql.integer_at\",\"lobo.sql.decimal_at\",\"lobo.sql.text_at\",\"lobo.sql.bytes_at\",\"realistic.reservation.app.main\",\"realistic.reservation.logic.receipt\",\"realistic.reservation.logic.perform\",\"realistic.reservation.logic.apply\",\"realistic.reservation.policy.plan\",\"realistic.reservation.policy.params\",\"lobo.generic.d4d68ac65536c25f9a8bb20c33abde90\",\"lobo.generic.e0a8dbd7134945c65b425e06c06f5862\"],\"format\":\"native\",\"status\":\"ok\"}\n",
+    "stderr": "",
+    "wall_s": 21.118648025905713,
+    "ok": true
+  },
+  "cases": [
+    {
+      "input": {
+        "inventory": [
+          [
+            1,
+            10
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            3,
+            0
+          ]
+        ],
+        "operations": [
+          [
+            1,
+            2,
+            2,
+            1,
+            "a"
+          ],
+          [
+            2,
+            1,
+            1,
+            2,
+            "a"
+          ]
+        ]
+      },
+      "expected": [
+        {
+          "reply": {
+            "case": "Ok",
+            "payload": {
+              "applied": true,
+              "replay": false,
+              "reason": "reserved"
+            }
+          },
+          "clean": true,
+          "inventory": [
+            [
+              1,
+              8
+            ],
+            [
+              2,
+              4
+            ],
+            [
+              3,
+              0
+            ]
+          ],
+          "requests": [
+            [
+              "a",
+              1,
+              2,
+              2,
+              1
+            ]
+          ]
+        },
+        {
+          "reply": {
+            "case": "Ok",
+            "payload": {
+              "applied": false,
+              "replay": true,
+              "reason": "replay"
+            }
+          },
+          "clean": true,
+          "inventory": [
+            [
+              1,
+              8
+            ],
+            [
+              2,
+              4
+            ],
+            [
+              3,
+              0
+            ]
+          ],
+          "requests": [
+            [
+              "a",
+              1,
+              2,
+              2,
+              1
+            ]
+          ]
+        }
+      ],
+      "actual": [
+        {
+          "reply": {
+            "case": "Ok",
+            "payload": {
+              "applied": true,
+              "replay": false,
+              "reason": "reserved"
+            }
+          },
+          "clean": true,
+          "inventory": [
+            [
+              1,
+              8
+            ],
+            [
+              2,
+              5
+            ],
+            [
+              3,
+              0
+            ]
+          ],
+          "requests": []
+        },
+        {
+          "reply": {
+            "case": "Ok",
+            "payload": {
+              "applied": true,
+              "replay": false,
+              "reason": "reserved"
+            }
+          },
+          "clean": true,
+          "inventory": [
+            [
+              1,
+              6
+            ],
+            [
+              2,
+              5
+            ],
+            [
+              3,
+              0
+            ]
+          ],
+          "requests": []
+        }
+      ],
+      "error": null,
+      "ok": false,
+      "executed": true
+    },
+    {
+      "input": {
+        "inventory": [
+          [
+            1,
+            10
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            3,
+            0
+          ]
+        ],
+        "operations": [
+          [
+            1,
+            2,
+            1,
+            3,
+            "b"
+          ],
+          [
+            1,
+            5,
+            0,
+            0,
+            "b"
+          ]
+        ]
+      },
+      "expected": [
+        {
+          "reply": {
+            "case": "Ok",
+            "payload": {
+              "applied": true,
+              "replay": false,
+              "reason": "reserved"
+            }
+          },
+          "clean": true,
+          "inventory": [
+            [
+              1,
+              5
+            ],
+            [
+              2,
+              5
+            ],
+            [
+              3,
+              0
+            ]
+          ],
+          "requests": [
+            [
+              "b",
+              1,
+              5,
+              0,
+              0
+            ]
+          ]
+        },
+        {
+          "reply": {
+            "case": "Ok",
+            "payload": {
+              "applied": false,
+              "replay": true,
+              "reason": "replay"
+            }
+          },
+          "clean": true,
+          "inventory": [
+            [
+              1,
+              5
+            ],
+            [
+              2,
+              5
+            ],
+            [
+              3,
+              0
+            ]
+          ],
+          "requests": [
+            [
+              "b",
+              1,
+              5,
+              0,
+              0
+            ]
+          ]
+        }
+      ],
+      "actual": [
+        {
+          "reply": {
+            "case": "Ok",
+            "payload": {
+              "applied": true,
+              "replay": false,
+              "reason": "reserved"
+            }
+          },
+          "clean": true,
+          "inventory": [
+            [
+              1,
+              8
+            ],
+            [
+              2,
+              5
+            ],
+            [
+              3,
+              0
+            ]
+          ],
+          "requests": []
+        },
+        {
+          "reply": {
+            "case": "Ok",
+            "payload": {
+              "applied": true,
+              "replay": false,
+              "reason": "reserved"
+            }
+          },
+          "clean": true,
+          "inventory": [
+            [
+              1,
+              3
+            ],
+            [
+              2,
+              5
+            ],
+            [
+              3,
+              0
+            ]
+          ],
+          "requests": []
+        }
+      ],
+      "error": null,
+      "ok": false,
+      "executed": true
+    },
+    {
+      "input": {
+        "inventory": [
+          [
+            1,
+            10
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            3,
+            0
+          ]
+        ],
+        "operations": [
+          [
+            1,
+            1,
+            2,
+            6,
+            "c"
+          ]
+        ]
+      },
+      "expected": [
+        {
+          "reply": {
+            "case": "Ok",
+            "payload": {
+              "applied": false,
+              "replay": false,
+              "reason": "stock"
+            }
+          },
+          "clean": true,
+          "inventory": [
+            [
+              1,
+              10
+            ],
+            [
+              2,
+              5
+            ],
+            [
+              3,
+              0
+            ]
+          ],
+          "requests": []
+        }
+      ],
+      "actual": [
+        {
+          "reply": {
+            "case": "Ok",
+            "payload": {
+              "applied": true,
+              "replay": false,
+              "reason": "reserved"
+            }
+          },
+          "clean": true,
+          "inventory": [
+            [
+              1,
+              9
+            ],
+            [
+              2,
+              5
+            ],
+            [
+              3,
+              0
+            ]
+          ],
+          "requests": []
+        }
+      ],
+      "error": null,
+      "ok": false,
+      "executed": true
+    },
+    {
+      "input": {
+        "inventory": [
+          [
+            1,
+            10
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            3,
+            0
+          ]
+        ],
+        "operations": [
+          [
+            1,
+            0,
+            2,
+            0,
+            "d"
+          ]
+        ]
+      },
+      "expected": [
+        {
+          "reply": {
+            "case": "Ok",
+            "payload": {
+              "applied": false,
+              "replay": false,
+              "reason": "invalid"
+            }
+          },
+          "clean": true,
+          "inventory": [
+            [
+              1,
+              10
+            ],
+            [
+              2,
+              5
+            ],
+            [
+              3,
+              0
+            ]
+          ],
+          "requests": []
+        }
+      ],
+      "actual": [
+        {
+          "reply": {
+            "case": "Ok",
+            "payload": {
+              "applied": false,
+              "replay": false,
+              "reason": "invalid"
+            }
+          },
+          "clean": true,
+          "inventory": [
+            [
+              1,
+              10
+            ],
+            [
+              2,
+              5
+            ],
+            [
+              3,
+              0
+            ]
+          ],
+          "requests": []
+        }
+      ],
+      "error": null,
+      "ok": true,
+      "executed": true
+    },
+    {
+      "input": {
+        "inventory": [
+          [
+            1,
+            10
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            3,
+            0
+          ]
+        ],
+        "operations": [
+          [
+            1,
+            2,
+            2,
+            1,
+            "e"
+          ],
+          [
+            1,
+            2,
+            2,
+            2,
+            "e"
+          ]
+        ]
+      },
+      "expected": [
+        {
+          "reply": {
+            "case": "Ok",
+            "payload": {
+              "applied": true,
+              "replay": false,
+              "reason": "reserved"
+            }
+          },
+          "clean": true,
+          "inventory": [
+            [
+              1,
+              8
+            ],
+            [
+              2,
+              4
+            ],
+            [
+              3,
+              0
+            ]
+          ],
+          "requests": [
+            [
+              "e",
+              1,
+              2,
+              2,
+              1
+            ]
+          ]
+        },
+        {
+          "reply": {
+            "case": "Ok",
+            "payload": {
+              "applied": false,
+              "replay": false,
+              "reason": "conflict"
+            }
+          },
+          "clean": true,
+          "inventory": [
+            [
+              1,
+              8
+            ],
+            [
+              2,
+              4
+            ],
+            [
+              3,
+              0
+            ]
+          ],
+          "requests": [
+            [
+              "e",
+              1,
+              2,
+              2,
+              1
+            ]
+          ]
+        }
+      ],
+      "actual": [
+        {
+          "reply": {
+            "case": "Ok",
+            "payload": {
+              "applied": true,
+              "replay": false,
+              "reason": "reserved"
+            }
+          },
+          "clean": true,
+          "inventory": [
+            [
+              1,
+              8
+            ],
+            [
+              2,
+              5
+            ],
+            [
+              3,
+              0
+            ]
+          ],
+          "requests": []
+        },
+        {
+          "reply": {
+            "case": "Ok",
+            "payload": {
+              "applied": true,
+              "replay": false,
+              "reason": "reserved"
+            }
+          },
+          "clean": true,
+          "inventory": [
+            [
+              1,
+              6
+            ],
+            [
+              2,
+              5
+            ],
+            [
+              3,
+              0
+            ]
+          ],
+          "requests": []
+        }
+      ],
+      "error": null,
+      "ok": false,
+      "executed": true
+    },
+    {
+      "input": {
+        "inventory": [
+          [
+            1,
+            10
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            3,
+            0
+          ]
+        ],
+        "operations": [
+          [
+            1,
+            2,
+            2,
+            1,
+            "reject"
+          ]
+        ]
+      },
+      "expected": [
+        {
+          "reply": {
+            "case": "Err",
+            "payload": {
+              "kind": {
+                "case": "Constraint",
+                "payload": null
+              },
+              "backend_code": 275
+            }
+          },
+          "clean": true,
+          "inventory": [
+            [
+              1,
+              10
+            ],
+            [
+              2,
+              5
+            ],
+            [
+              3,
+              0
+            ]
+          ],
+          "requests": []
+        }
+      ],
+      "actual": [
+        {
+          "reply": {
+            "case": "Ok",
+            "payload": {
+              "applied": true,
+              "replay": false,
+              "reason": "reserved"
+            }
+          },
+          "clean": true,
+          "inventory": [
+            [
+              1,
+              8
+            ],
+            [
+              2,
+              5
+            ],
+            [
+              3,
+              0
+            ]
+          ],
+          "requests": []
+        }
+      ],
+      "error": null,
+      "ok": false,
+      "executed": true
+    },
+    {
+      "input": {
+        "inventory": [
+          [
+            1,
+            10
+          ],
+          [
+            2,
+            "bad"
+          ]
+        ],
+        "operations": [
+          [
+            1,
+            2,
+            2,
+            1,
+            "decode"
+          ]
+        ]
+      },
+      "expected": [
+        {
+          "reply": {
+            "case": "Err",
+            "payload": {
+              "kind": {
+                "case": "Decode",
+                "payload": null
+              },
+              "backend_code": 0
+            }
+          },
+          "clean": true,
+          "inventory": [
+            [
+              1,
+              10
+            ],
+            [
+              2,
+              "bad"
+            ]
+          ],
+          "requests": []
+        }
+      ],
+      "actual": [
+        {
+          "reply": {
+            "case": "Ok",
+            "payload": {
+              "applied": true,
+              "replay": false,
+              "reason": "reserved"
+            }
+          },
+          "clean": true,
+          "inventory": [
+            [
+              1,
+              8
+            ],
+            [
+              2,
+              "bad"
+            ]
+          ],
+          "requests": []
+        }
+      ],
+      "error": null,
+      "ok": false,
+      "executed": true
+    },
+    {
+      "input": {
+        "inventory": [
+          [
+            1,
+            10
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            3,
+            0
+          ]
+        ],
+        "operations": [
+          [
+            1,
+            11,
+            9,
+            1,
+            "priority"
+          ]
+        ]
+      },
+      "expected": [
+        {
+          "reply": {
+            "case": "Ok",
+            "payload": {
+              "applied": false,
+              "replay": false,
+              "reason": "missing"
+            }
+          },
+          "clean": true,
+          "inventory": [
+            [
+              1,
+              10
+            ],
+            [
+              2,
+              5
+            ],
+            [
+              3,
+              0
+            ]
+          ],
+          "requests": []
+        }
+      ],
+      "actual": [
+        {
+          "reply": {
+            "case": "Ok",
+            "payload": {
+              "applied": false,
+              "replay": false,
+              "reason": "stock"
+            }
+          },
+          "clean": true,
+          "inventory": [
+            [
+              1,
+              10
+            ],
+            [
+              2,
+              5
+            ],
+            [
+              3,
+              0
+            ]
+          ],
+          "requests": []
+        }
+      ],
+      "error": null,
+      "ok": false,
+      "executed": true
+    },
+    {
+      "input": {
+        "inventory": [
+          [
+            1,
+            10
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            3,
+            0
+          ]
+        ],
+        "operations": [
+          [
+            1,
+            11,
+            2,
+            1,
+            "stock"
+          ]
+        ]
+      },
+      "expected": [
+        {
+          "reply": {
+            "case": "Ok",
+            "payload": {
+              "applied": false,
+              "replay": false,
+              "reason": "stock"
+            }
+          },
+          "clean": true,
+          "inventory": [
+            [
+              1,
+              10
+            ],
+            [
+              2,
+              5
+            ],
+            [
+              3,
+              0
+            ]
+          ],
+          "requests": []
+        }
+      ],
+      "actual": [
+        {
+          "reply": {
+            "case": "Ok",
+            "payload": {
+              "applied": false,
+              "replay": false,
+              "reason": "stock"
+            }
+          },
+          "clean": true,
+          "inventory": [
+            [
+              1,
+              10
+            ],
+            [
+              2,
+              5
+            ],
+            [
+              3,
+              0
+            ]
+          ],
+          "requests": []
+        }
+      ],
+      "error": null,
+      "ok": true,
+      "executed": true
+    },
+    {
+      "input": {
+        "inventory": [
+          [
+            1,
+            10
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            3,
+            0
+          ]
+        ],
+        "operations": [
+          [
+            1,
+            2,
+            3,
+            1,
+            "zero"
+          ]
+        ]
+      },
+      "expected": [
+        {
+          "reply": {
+            "case": "Ok",
+            "payload": {
+              "applied": false,
+              "replay": false,
+              "reason": "stock"
+            }
+          },
+          "clean": true,
+          "inventory": [
+            [
+              1,
+              10
+            ],
+            [
+              2,
+              5
+            ],
+            [
+              3,
+              0
+            ]
+          ],
+          "requests": []
+        }
+      ],
+      "actual": [
+        {
+          "reply": {
+            "case": "Ok",
+            "payload": {
+              "applied": true,
+              "replay": false,
+              "reason": "reserved"
+            }
+          },
+          "clean": true,
+          "inventory": [
+            [
+              1,
+              8
+            ],
+            [
+              2,
+              5
+            ],
+            [
+              3,
+              0
+            ]
+          ],
+          "requests": []
+        }
+      ],
+      "error": null,
+      "ok": false,
+      "executed": true
+    },
+    {
+      "input": {
+        "inventory": [
+          [
+            1,
+            10
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            3,
+            0
+          ]
+        ],
+        "operations": [
+          [
+            0,
+            0,
+            2,
+            2,
+            "ignore"
+          ]
+        ]
+      },
+      "expected": [
+        {
+          "reply": {
+            "case": "Ok",
+            "payload": {
+              "applied": true,
+              "replay": false,
+              "reason": "reserved"
+            }
+          },
+          "clean": true,
+          "inventory": [
+            [
+              1,
+              10
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              3,
+              0
+            ]
+          ],
+          "requests": [
+            [
+              "ignore",
+              2,
+              2,
+              0,
+              0
+            ]
+          ]
+        }
+      ],
+      "actual": [
+        {
+          "reply": {
+            "case": "Ok",
+            "payload": {
+              "applied": true,
+              "replay": false,
+              "reason": "reserved"
+            }
+          },
+          "clean": true,
+          "inventory": [
+            [
+              1,
+              10
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              3,
+              0
+            ]
+          ],
+          "requests": []
+        }
+      ],
+      "error": null,
+      "ok": false,
+      "executed": true
+    },
+    {
+      "input": {
+        "inventory": [
+          [
+            1,
+            10
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            3,
+            0
+          ]
+        ],
+        "operations": [
+          [
+            2,
+            2,
+            -9223372036854775808,
+            0,
+            "ignore"
+          ]
+        ]
+      },
+      "expected": [
+        {
+          "reply": {
+            "case": "Ok",
+            "payload": {
+              "applied": true,
+              "replay": false,
+              "reason": "reserved"
+            }
+          },
+          "clean": true,
+          "inventory": [
+            [
+              1,
+              10
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              3,
+              0
+            ]
+          ],
+          "requests": [
+            [
+              "ignore",
+              2,
+              2,
+              0,
+              0
+            ]
+          ]
+        }
+      ],
+      "actual": [
+        {
+          "reply": {
+            "case": "Ok",
+            "payload": {
+              "applied": true,
+              "replay": false,
+              "reason": "reserved"
+            }
+          },
+          "clean": true,
+          "inventory": [
+            [
+              1,
+              10
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              3,
+              0
+            ]
+          ],
+          "requests": []
+        }
+      ],
+      "error": null,
+      "ok": false,
+      "executed": true
+    },
+    {
+      "input": {
+        "inventory": [
+          [
+            1,
+            10
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            3,
+            0
+          ]
+        ],
+        "operations": [
+          [
+            1,
+            2,
+            1,
+            9223372036854775807,
+            "overflow"
+          ]
+        ]
+      },
+      "expected": [
+        {
+          "reply": {
+            "case": "Ok",
+            "payload": {
+              "applied": false,
+              "replay": false,
+              "reason": "invalid"
+            }
+          },
+          "clean": true,
+          "inventory": [
+            [
+              1,
+              10
+            ],
+            [
+              2,
+              5
+            ],
+            [
+              3,
+              0
+            ]
+          ],
+          "requests": []
+        }
+      ],
+      "actual": [
+        {
+          "reply": {
+            "case": "Ok",
+            "payload": {
+              "applied": false,
+              "replay": false,
+              "reason": "invalid"
+            }
+          },
+          "clean": true,
+          "inventory": [
+            [
+              1,
+              10
+            ],
+            [
+              2,
+              5
+            ],
+            [
+              3,
+              0
+            ]
+          ],
+          "requests": []
+        }
+      ],
+      "error": null,
+      "ok": true,
+      "executed": true
+    },
+    {
+      "input": {
+        "inventory": [
+          [
+            1,
+            10
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            3,
+            0
+          ]
+        ],
+        "operations": [
+          [
+            1,
+            600000,
+            1,
+            600000,
+            "sum"
+          ]
+        ]
+      },
+      "expected": [
+        {
+          "reply": {
+            "case": "Ok",
+            "payload": {
+              "applied": false,
+              "replay": false,
+              "reason": "invalid"
+            }
+          },
+          "clean": true,
+          "inventory": [
+            [
+              1,
+              10
+            ],
+            [
+              2,
+              5
+            ],
+            [
+              3,
+              0
+            ]
+          ],
+          "requests": []
+        }
+      ],
+      "actual": [
+        {
+          "reply": {
+            "case": "Ok",
+            "payload": {
+              "applied": false,
+              "replay": false,
+              "reason": "stock"
+            }
+          },
+          "clean": true,
+          "inventory": [
+            [
+              1,
+              10
+            ],
+            [
+              2,
+              5
+            ],
+            [
+              3,
+              0
+            ]
+          ],
+          "requests": []
+        }
+      ],
+      "error": null,
+      "ok": false,
+      "executed": true
+    },
+    {
+      "input": {
+        "inventory": [
+          [
+            1,
+            10
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            3,
+            0
+          ]
+        ],
+        "operations": [
+          [
+            1,
+            -1,
+            2,
+            1,
+            "neg"
+          ]
+        ]
+      },
+      "expected": [
+        {
+          "reply": {
+            "case": "Ok",
+            "payload": {
+              "applied": false,
+              "replay": false,
+              "reason": "invalid"
+            }
+          },
+          "clean": true,
+          "inventory": [
+            [
+              1,
+              10
+            ],
+            [
+              2,
+              5
+            ],
+            [
+              3,
+              0
+            ]
+          ],
+          "requests": []
+        }
+      ],
+      "actual": [
+        {
+          "reply": {
+            "case": "Ok",
+            "payload": {
+              "applied": false,
+              "replay": false,
+              "reason": "invalid"
+            }
+          },
+          "clean": true,
+          "inventory": [
+            [
+              1,
+              10
+            ],
+            [
+              2,
+              5
+            ],
+            [
+              3,
+              0
+            ]
+          ],
+          "requests": []
+        }
+      ],
+      "error": null,
+      "ok": true,
+      "executed": true
+    },
+    {
+      "input": {
+        "inventory": [
+          [
+            1,
+            10
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            3,
+            0
+          ]
+        ],
+        "operations": [
+          [
+            0,
+            1,
+            2,
+            1,
+            "sku"
+          ]
+        ]
+      },
+      "expected": [
+        {
+          "reply": {
+            "case": "Ok",
+            "payload": {
+              "applied": false,
+              "replay": false,
+              "reason": "invalid"
+            }
+          },
+          "clean": true,
+          "inventory": [
+            [
+              1,
+              10
+            ],
+            [
+              2,
+              5
+            ],
+            [
+              3,
+              0
+            ]
+          ],
+          "requests": []
+        }
+      ],
+      "actual": [
+        {
+          "reply": {
+            "case": "Ok",
+            "payload": {
+              "applied": false,
+              "replay": false,
+              "reason": "invalid"
+            }
+          },
+          "clean": true,
+          "inventory": [
+            [
+              1,
+              10
+            ],
+            [
+              2,
+              5
+            ],
+            [
+              3,
+              0
+            ]
+          ],
+          "requests": []
+        }
+      ],
+      "error": null,
+      "ok": true,
+      "executed": true
+    },
+    {
+      "input": {
+        "inventory": [
+          [
+            1,
+            10
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            3,
+            0
+          ]
+        ],
+        "operations": [
+          [
+            1,
+            2,
+            2,
+            1,
+            ""
+          ]
+        ]
+      },
+      "expected": [
+        {
+          "reply": {
+            "case": "Ok",
+            "payload": {
+              "applied": false,
+              "replay": false,
+              "reason": "invalid"
+            }
+          },
+          "clean": true,
+          "inventory": [
+            [
+              1,
+              10
+            ],
+            [
+              2,
+              5
+            ],
+            [
+              3,
+              0
+            ]
+          ],
+          "requests": []
+        }
+      ],
+      "actual": [
+        {
+          "reply": {
+            "case": "Ok",
+            "payload": {
+              "applied": false,
+              "replay": false,
+              "reason": "invalid"
+            }
+          },
+          "clean": true,
+          "inventory": [
+            [
+              1,
+              10
+            ],
+            [
+              2,
+              5
+            ],
+            [
+              3,
+              0
+            ]
+          ],
+          "requests": []
+        }
+      ],
+      "error": null,
+      "ok": true,
+      "executed": true
+    },
+    {
+      "input": {
+        "inventory": [
+          [
+            1,
+            10
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            3,
+            0
+          ]
+        ],
+        "operations": [
+          [
+            1,
+            2,
+            2,
+            1,
+            "\u591c\u591c\u591c\u591c\u591c\u591c\u591c\u591c\u591c\u591c\u591c\u591c\u591c\u591c\u591c\u591c\u591c\u591c\u591c\u591c\u591c\u591c\u591c\u591c"
+          ]
+        ]
+      },
+      "expected": [
+        {
+          "reply": {
+            "case": "Ok",
+            "payload": {
+              "applied": true,
+              "replay": false,
+              "reason": "reserved"
+            }
+          },
+          "clean": true,
+          "inventory": [
+            [
+              1,
+              8
+            ],
+            [
+              2,
+              4
+            ],
+            [
+              3,
+              0
+            ]
+          ],
+          "requests": [
+            [
+              "\u591c\u591c\u591c\u591c\u591c\u591c\u591c\u591c\u591c\u591c\u591c\u591c\u591c\u591c\u591c\u591c\u591c\u591c\u591c\u591c\u591c\u591c\u591c\u591c",
+              1,
+              2,
+              2,
+              1
+            ]
+          ]
+        }
+      ],
+      "actual": [
+        {
+          "reply": {
+            "case": "Ok",
+            "payload": {
+              "applied": true,
+              "replay": false,
+              "reason": "reserved"
+            }
+          },
+          "clean": true,
+          "inventory": [
+            [
+              1,
+              8
+            ],
+            [
+              2,
+              5
+            ],
+            [
+              3,
+              0
+            ]
+          ],
+          "requests": []
+        }
+      ],
+      "error": null,
+      "ok": false,
+      "executed": true
+    },
+    {
+      "input": {
+        "inventory": [
+          [
+            1,
+            10
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            3,
+            0
+          ]
+        ],
+        "operations": [
+          [
+            1,
+            2,
+            2,
+            1,
+            "\u591c\u591c\u591c\u591c\u591c\u591c\u591c\u591c\u591c\u591c\u591c\u591c\u591c\u591c\u591c\u591c\u591c\u591c\u591c\u591c\u591c\u591c\u591c\u591c\u591c"
+          ]
+        ]
+      },
+      "expected": [
+        {
+          "reply": {
+            "case": "Ok",
+            "payload": {
+              "applied": false,
+              "replay": false,
+              "reason": "invalid"
+            }
+          },
+          "clean": true,
+          "inventory": [
+            [
+              1,
+              10
+            ],
+            [
+              2,
+              5
+            ],
+            [
+              3,
+              0
+            ]
+          ],
+          "requests": []
+        }
+      ],
+      "actual": [
+        {
+          "reply": {
+            "case": "Ok",
+            "payload": {
+              "applied": false,
+              "replay": false,
+              "reason": "invalid"
+            }
+          },
+          "clean": true,
+          "inventory": [
+            [
+              1,
+              10
+            ],
+            [
+              2,
+              5
+            ],
+            [
+              3,
+              0
+            ]
+          ],
+          "requests": []
+        }
+      ],
+      "error": null,
+      "ok": true,
+      "executed": true
+    },
+    {
+      "input": {
+        "inventory": [
+          [
+            1,
+            10
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            3,
+            0
+          ]
+        ],
+        "operations": [
+          [
+            1,
+            2,
+            2,
+            1,
+            "x' OR 1=1--"
+          ],
+          [
+            2,
+            1,
+            1,
+            2,
+            "x' OR 1=1--"
+          ]
+        ]
+      },
+      "expected": [
+        {
+          "reply": {
+            "case": "Ok",
+            "payload": {
+              "applied": true,
+              "replay": false,
+              "reason": "reserved"
+            }
+          },
+          "clean": true,
+          "inventory": [
+            [
+              1,
+              8
+            ],
+            [
+              2,
+              4
+            ],
+            [
+              3,
+              0
+            ]
+          ],
+          "requests": [
+            [
+              "x' OR 1=1--",
+              1,
+              2,
+              2,
+              1
+            ]
+          ]
+        },
+        {
+          "reply": {
+            "case": "Ok",
+            "payload": {
+              "applied": false,
+              "replay": true,
+              "reason": "replay"
+            }
+          },
+          "clean": true,
+          "inventory": [
+            [
+              1,
+              8
+            ],
+            [
+              2,
+              4
+            ],
+            [
+              3,
+              0
+            ]
+          ],
+          "requests": [
+            [
+              "x' OR 1=1--",
+              1,
+              2,
+              2,
+              1
+            ]
+          ]
+        }
+      ],
+      "actual": [
+        {
+          "reply": {
+            "case": "Ok",
+            "payload": {
+              "applied": true,
+              "replay": false,
+              "reason": "reserved"
+            }
+          },
+          "clean": true,
+          "inventory": [
+            [
+              1,
+              8
+            ],
+            [
+              2,
+              5
+            ],
+            [
+              3,
+              0
+            ]
+          ],
+          "requests": []
+        },
+        {
+          "reply": {
+            "case": "Ok",
+            "payload": {
+              "applied": true,
+              "replay": false,
+              "reason": "reserved"
+            }
+          },
+          "clean": true,
+          "inventory": [
+            [
+              1,
+              6
+            ],
+            [
+              2,
+              5
+            ],
+            [
+              3,
+              0
+            ]
+          ],
+          "requests": []
+        }
+      ],
+      "error": null,
+      "ok": false,
+      "executed": true
+    },
+    {
+      "input": {
+        "inventory": [
+          [
+            1,
+            10
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            3,
+            0
+          ]
+        ],
+        "operations": [
+          [
+            1,
+            1,
+            2,
+            1,
+            "x\u0000a"
+          ],
+          [
+            1,
+            1,
+            2,
+            1,
+            "x\u0000b"
+          ]
+        ]
+      },
+      "expected": [
+        {
+          "reply": {
+            "case": "Ok",
+            "payload": {
+              "applied": true,
+              "replay": false,
+              "reason": "reserved"
+            }
+          },
+          "clean": true,
+          "inventory": [
+            [
+              1,
+              9
+            ],
+            [
+              2,
+              4
+            ],
+            [
+              3,
+              0
+            ]
+          ],
+          "requests": [
+            [
+              "x\u0000a",
+              1,
+              1,
+              2,
+              1
+            ]
+          ]
+        },
+        {
+          "reply": {
+            "case": "Ok",
+            "payload": {
+              "applied": true,
+              "replay": false,
+              "reason": "reserved"
+            }
+          },
+          "clean": true,
+          "inventory": [
+            [
+              1,
+              8
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              3,
+              0
+            ]
+          ],
+          "requests": [
+            [
+              "x\u0000a",
+              1,
+              1,
+              2,
+              1
+            ],
+            [
+              "x\u0000b",
+              1,
+              1,
+              2,
+              1
+            ]
+          ]
+        }
+      ],
+      "actual": [
+        {
+          "reply": {
+            "case": "Ok",
+            "payload": {
+              "applied": true,
+              "replay": false,
+              "reason": "reserved"
+            }
+          },
+          "clean": true,
+          "inventory": [
+            [
+              1,
+              9
+            ],
+            [
+              2,
+              5
+            ],
+            [
+              3,
+              0
+            ]
+          ],
+          "requests": []
+        },
+        {
+          "reply": {
+            "case": "Ok",
+            "payload": {
+              "applied": true,
+              "replay": false,
+              "reason": "reserved"
+            }
+          },
+          "clean": true,
+          "inventory": [
+            [
+              1,
+              8
+            ],
+            [
+              2,
+              5
+            ],
+            [
+              3,
+              0
+            ]
+          ],
+          "requests": []
+        }
+      ],
+      "error": null,
+      "ok": false,
+      "executed": true
+    },
+    {
+      "input": {
+        "inventory": [
+          [
+            1,
+            10
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            3,
+            0
+          ]
+        ],
+        "operations": [
+          [
+            1,
+            10,
+            0,
+            0,
+            "all"
+          ],
+          [
+            1,
+            10,
+            0,
+            0,
+            "all"
+          ]
+        ]
+      },
+      "expected": [
+        {
+          "reply": {
+            "case": "Ok",
+            "payload": {
+              "applied": true,
+              "replay": false,
+              "reason": "reserved"
+            }
+          },
+          "clean": true,
+          "inventory": [
+            [
+              1,
+              0
+            ],
+            [
+              2,
+              5
+            ],
+            [
+              3,
+              0
+            ]
+          ],
+          "requests": [
+            [
+              "all",
+              1,
+              10,
+              0,
+              0
+            ]
+          ]
+        },
+        {
+          "reply": {
+            "case": "Ok",
+            "payload": {
+              "applied": false,
+              "replay": true,
+              "reason": "replay"
+            }
+          },
+          "clean": true,
+          "inventory": [
+            [
+              1,
+              0
+            ],
+            [
+              2,
+              5
+            ],
+            [
+              3,
+              0
+            ]
+          ],
+          "requests": [
+            [
+              "all",
+              1,
+              10,
+              0,
+              0
+            ]
+          ]
+        }
+      ],
+      "actual": [
+        {
+          "reply": {
+            "case": "Ok",
+            "payload": {
+              "applied": true,
+              "replay": false,
+              "reason": "reserved"
+            }
+          },
+          "clean": true,
+          "inventory": [
+            [
+              1,
+              0
+            ],
+            [
+              2,
+              5
+            ],
+            [
+              3,
+              0
+            ]
+          ],
+          "requests": []
+        },
+        {
+          "reply": {
+            "case": "Ok",
+            "payload": {
+              "applied": false,
+              "replay": false,
+              "reason": "stock"
+            }
+          },
+          "clean": true,
+          "inventory": [
+            [
+              1,
+              0
+            ],
+            [
+              2,
+              5
+            ],
+            [
+              3,
+              0
+            ]
+          ],
+          "requests": []
+        }
+      ],
+      "error": null,
+      "ok": false,
+      "executed": true
+    },
+    {
+      "input": {
+        "inventory": [
+          [
+            1,
+            10
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            3,
+            0
+          ]
+        ],
+        "operations": [
+          [
+            1,
+            1,
+            2,
+            1,
+            "K"
+          ],
+          [
+            1,
+            1,
+            2,
+            1,
+            "k"
+          ]
+        ]
+      },
+      "expected": [
+        {
+          "reply": {
+            "case": "Ok",
+            "payload": {
+              "applied": true,
+              "replay": false,
+              "reason": "reserved"
+            }
+          },
+          "clean": true,
+          "inventory": [
+            [
+              1,
+              9
+            ],
+            [
+              2,
+              4
+            ],
+            [
+              3,
+              0
+            ]
+          ],
+          "requests": [
+            [
+              "K",
+              1,
+              1,
+              2,
+              1
+            ]
+          ]
+        },
+        {
+          "reply": {
+            "case": "Ok",
+            "payload": {
+              "applied": true,
+              "replay": false,
+              "reason": "reserved"
+            }
+          },
+          "clean": true,
+          "inventory": [
+            [
+              1,
+              8
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              3,
+              0
+            ]
+          ],
+          "requests": [
+            [
+              "K",
+              1,
+              1,
+              2,
+              1
+            ],
+            [
+              "k",
+              1,
+              1,
+              2,
+              1
+            ]
+          ]
+        }
+      ],
+      "actual": [
+        {
+          "reply": {
+            "case": "Ok",
+            "payload": {
+              "applied": true,
+              "replay": false,
+              "reason": "reserved"
+            }
+          },
+          "clean": true,
+          "inventory": [
+            [
+              1,
+              9
+            ],
+            [
+              2,
+              5
+            ],
+            [
+              3,
+              0
+            ]
+          ],
+          "requests": []
+        },
+        {
+          "reply": {
+            "case": "Ok",
+            "payload": {
+              "applied": true,
+              "replay": false,
+              "reason": "reserved"
+            }
+          },
+          "clean": true,
+          "inventory": [
+            [
+              1,
+              8
+            ],
+            [
+              2,
+              5
+            ],
+            [
+              3,
+              0
+            ]
+          ],
+          "requests": []
+        }
+      ],
+      "error": null,
+      "ok": false,
+      "executed": true
+    },
+    {
+      "input": {
+        "inventory": [
+          [
+            1,
+            10
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            3,
+            0
+          ]
+        ],
+        "operations": [
+          [
+            1,
+            2,
+            2,
+            1,
+            "x"
+          ],
+          [
+            1,
+            0,
+            2,
+            0,
+            "x"
+          ]
+        ]
+      },
+      "expected": [
+        {
+          "reply": {
+            "case": "Ok",
+            "payload": {
+              "applied": true,
+              "replay": false,
+              "reason": "reserved"
+            }
+          },
+          "clean": true,
+          "inventory": [
+            [
+              1,
+              8
+            ],
+            [
+              2,
+              4
+            ],
+            [
+              3,
+              0
+            ]
+          ],
+          "requests": [
+            [
+              "x",
+              1,
+              2,
+              2,
+              1
+            ]
+          ]
+        },
+        {
+          "reply": {
+            "case": "Ok",
+            "payload": {
+              "applied": false,
+              "replay": false,
+              "reason": "invalid"
+            }
+          },
+          "clean": true,
+          "inventory": [
+            [
+              1,
+              8
+            ],
+            [
+              2,
+              4
+            ],
+            [
+              3,
+              0
+            ]
+          ],
+          "requests": [
+            [
+              "x",
+              1,
+              2,
+              2,
+              1
+            ]
+          ]
+        }
+      ],
+      "actual": [
+        {
+          "reply": {
+            "case": "Ok",
+            "payload": {
+              "applied": true,
+              "replay": false,
+              "reason": "reserved"
+            }
+          },
+          "clean": true,
+          "inventory": [
+            [
+              1,
+              8
+            ],
+            [
+              2,
+              5
+            ],
+            [
+              3,
+              0
+            ]
+          ],
+          "requests": []
+        },
+        {
+          "reply": {
+            "case": "Ok",
+            "payload": {
+              "applied": false,
+              "replay": false,
+              "reason": "invalid"
+            }
+          },
+          "clean": true,
+          "inventory": [
+            [
+              1,
+              8
+            ],
+            [
+              2,
+              5
+            ],
+            [
+              3,
+              0
+            ]
+          ],
+          "requests": []
+        }
+      ],
+      "error": null,
+      "ok": false,
+      "executed": true
+    },
+    {
+      "input": {
+        "inventory": [
+          [
+            1,
+            10
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            3,
+            0
+          ]
+        ],
+        "operations": [
+          [
+            1,
+            2,
+            2,
+            1,
+            "x"
+          ],
+          [
+            2,
+            2,
+            1,
+            1,
+            "x"
+          ]
+        ]
+      },
+      "expected": [
+        {
+          "reply": {
+            "case": "Ok",
+            "payload": {
+              "applied": true,
+              "replay": false,
+              "reason": "reserved"
+            }
+          },
+          "clean": true,
+          "inventory": [
+            [
+              1,
+              8
+            ],
+            [
+              2,
+              4
+            ],
+            [
+              3,
+              0
+            ]
+          ],
+          "requests": [
+            [
+              "x",
+              1,
+              2,
+              2,
+              1
+            ]
+          ]
+        },
+        {
+          "reply": {
+            "case": "Ok",
+            "payload": {
+              "applied": false,
+              "replay": false,
+              "reason": "conflict"
+            }
+          },
+          "clean": true,
+          "inventory": [
+            [
+              1,
+              8
+            ],
+            [
+              2,
+              4
+            ],
+            [
+              3,
+              0
+            ]
+          ],
+          "requests": [
+            [
+              "x",
+              1,
+              2,
+              2,
+              1
+            ]
+          ]
+        }
+      ],
+      "actual": [
+        {
+          "reply": {
+            "case": "Ok",
+            "payload": {
+              "applied": true,
+              "replay": false,
+              "reason": "reserved"
+            }
+          },
+          "clean": true,
+          "inventory": [
+            [
+              1,
+              8
+            ],
+            [
+              2,
+              5
+            ],
+            [
+              3,
+              0
+            ]
+          ],
+          "requests": []
+        },
+        {
+          "reply": {
+            "case": "Ok",
+            "payload": {
+              "applied": true,
+              "replay": false,
+              "reason": "reserved"
+            }
+          },
+          "clean": true,
+          "inventory": [
+            [
+              1,
+              7
+            ],
+            [
+              2,
+              5
+            ],
+            [
+              3,
+              0
+            ]
+          ],
+          "requests": []
+        }
+      ],
+      "error": null,
+      "ok": false,
+      "executed": true
+    },
+    {
+      "input": {
+        "inventory": [
+          [
+            1,
+            10
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            3,
+            0
+          ]
+        ],
+        "operations": [
+          [
+            2,
+            1,
+            0,
+            0,
+            "single"
+          ],
+          [
+            0,
+            0,
+            2,
+            1,
+            "single"
+          ]
+        ]
+      },
+      "expected": [
+        {
+          "reply": {
+            "case": "Ok",
+            "payload": {
+              "applied": true,
+              "replay": false,
+              "reason": "reserved"
+            }
+          },
+          "clean": true,
+          "inventory": [
+            [
+              1,
+              10
+            ],
+            [
+              2,
+              4
+            ],
+            [
+              3,
+              0
+            ]
+          ],
+          "requests": [
+            [
+              "single",
+              2,
+              1,
+              0,
+              0
+            ]
+          ]
+        },
+        {
+          "reply": {
+            "case": "Ok",
+            "payload": {
+              "applied": false,
+              "replay": true,
+              "reason": "replay"
+            }
+          },
+          "clean": true,
+          "inventory": [
+            [
+              1,
+              10
+            ],
+            [
+              2,
+              4
+            ],
+            [
+              3,
+              0
+            ]
+          ],
+          "requests": [
+            [
+              "single",
+              2,
+              1,
+              0,
+              0
+            ]
+          ]
+        }
+      ],
+      "actual": [
+        {
+          "reply": {
+            "case": "Ok",
+            "payload": {
+              "applied": true,
+              "replay": false,
+              "reason": "reserved"
+            }
+          },
+          "clean": true,
+          "inventory": [
+            [
+              1,
+              10
+            ],
+            [
+              2,
+              4
+            ],
+            [
+              3,
+              0
+            ]
+          ],
+          "requests": []
+        },
+        {
+          "reply": {
+            "case": "Ok",
+            "payload": {
+              "applied": true,
+              "replay": false,
+              "reason": "reserved"
+            }
+          },
+          "clean": true,
+          "inventory": [
+            [
+              1,
+              10
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              3,
+              0
+            ]
+          ],
+          "requests": []
+        }
+      ],
+      "error": null,
+      "ok": false,
+      "executed": true
+    },
+    {
+      "input": {
+        "inventory": [
+          [
+            1,
+            1000000
+          ]
+        ],
+        "operations": [
+          [
+            1,
+            1000000,
+            1,
+            0,
+            "max"
+          ]
+        ]
+      },
+      "expected": [
+        {
+          "reply": {
+            "case": "Ok",
+            "payload": {
+              "applied": true,
+              "replay": false,
+              "reason": "reserved"
+            }
+          },
+          "clean": true,
+          "inventory": [
+            [
+              1,
+              0
+            ]
+          ],
+          "requests": [
+            [
+              "max",
+              1,
+              1000000,
+              0,
+              0
+            ]
+          ]
+        }
+      ],
+      "actual": [
+        {
+          "reply": {
+            "case": "Ok",
+            "payload": {
+              "applied": true,
+              "replay": false,
+              "reason": "reserved"
+            }
+          },
+          "clean": true,
+          "inventory": [
+            [
+              1,
+              0
+            ]
+          ],
+          "requests": []
+        }
+      ],
+      "error": null,
+      "ok": false,
+      "executed": true
+    },
+    {
+      "input": {
+        "inventory": [
+          [
+            1,
+            "bad"
+          ]
+        ],
+        "operations": [
+          [
+            1,
+            1,
+            2,
+            1,
+            "decode-missing"
+          ]
+        ]
+      },
+      "expected": [
+        {
+          "reply": {
+            "case": "Ok",
+            "payload": {
+              "applied": false,
+              "replay": false,
+              "reason": "missing"
+            }
+          },
+          "clean": true,
+          "inventory": [
+            [
+              1,
+              "bad"
+            ]
+          ],
+          "requests": []
+        }
+      ],
+      "actual": [
+        {
+          "reply": {
+            "case": "Err",
+            "payload": {
+              "kind": {
+                "case": "Decode",
+                "payload": null
+              },
+              "backend_code": 0
+            }
+          },
+          "clean": false,
+          "inventory": [
+            [
+              1,
+              "bad"
+            ]
+          ],
+          "requests": []
+        }
+      ],
+      "error": null,
+      "ok": false,
+      "executed": true
+    },
+    {
+      "input": {
+        "inventory": [
+          [
+            1,
+            10
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            3,
+            0
+          ]
+        ],
+        "operations": [
+          [
+            1,
+            2,
+            2,
+            1,
+            "reject"
+          ],
+          [
+            1,
+            2,
+            2,
+            1,
+            "good"
+          ]
+        ]
+      },
+      "expected": [
+        {
+          "reply": {
+            "case": "Err",
+            "payload": {
+              "kind": {
+                "case": "Constraint",
+                "payload": null
+              },
+              "backend_code": 275
+            }
+          },
+          "clean": true,
+          "inventory": [
+            [
+              1,
+              10
+            ],
+            [
+              2,
+              5
+            ],
+            [
+              3,
+              0
+            ]
+          ],
+          "requests": []
+        },
+        {
+          "reply": {
+            "case": "Ok",
+            "payload": {
+              "applied": true,
+              "replay": false,
+              "reason": "reserved"
+            }
+          },
+          "clean": true,
+          "inventory": [
+            [
+              1,
+              8
+            ],
+            [
+              2,
+              4
+            ],
+            [
+              3,
+              0
+            ]
+          ],
+          "requests": [
+            [
+              "good",
+              1,
+              2,
+              2,
+              1
+            ]
+          ]
+        }
+      ],
+      "actual": [
+        {
+          "reply": {
+            "case": "Ok",
+            "payload": {
+              "applied": true,
+              "replay": false,
+              "reason": "reserved"
+            }
+          },
+          "clean": true,
+          "inventory": [
+            [
+              1,
+              8
+            ],
+            [
+              2,
+              5
+            ],
+            [
+              3,
+              0
+            ]
+          ],
+          "requests": []
+        },
+        {
+          "reply": {
+            "case": "Ok",
+            "payload": {
+              "applied": true,
+              "replay": false,
+              "reason": "reserved"
+            }
+          },
+          "clean": true,
+          "inventory": [
+            [
+              1,
+              6
+            ],
+            [
+              2,
+              5
+            ],
+            [
+              3,
+              0
+            ]
+          ],
+          "requests": []
+        }
+      ],
+      "error": null,
+      "ok": false,
+      "executed": true
+    },
+    {
+      "input": {
+        "inventory": [
+          [
+            1,
+            10
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            3,
+            0
+          ]
+        ],
+        "operations": [
+          [
+            1,
+            2,
+            2,
+            1,
+            "a"
+          ],
+          [
+            1,
+            2,
+            2,
+            1,
+            "b"
+          ],
+          [
+            2,
+            1,
+            1,
+            2,
+            "a"
+          ]
+        ]
+      },
+      "expected": [
+        {
+          "reply": {
+            "case": "Ok",
+            "payload": {
+              "applied": true,
+              "replay": false,
+              "reason": "reserved"
+            }
+          },
+          "clean": true,
+          "inventory": [
+            [
+              1,
+              8
+            ],
+            [
+              2,
+              4
+            ],
+            [
+              3,
+              0
+            ]
+          ],
+          "requests": [
+            [
+              "a",
+              1,
+              2,
+              2,
+              1
+            ]
+          ]
+        },
+        {
+          "reply": {
+            "case": "Ok",
+            "payload": {
+              "applied": true,
+              "replay": false,
+              "reason": "reserved"
+            }
+          },
+          "clean": true,
+          "inventory": [
+            [
+              1,
+              6
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              3,
+              0
+            ]
+          ],
+          "requests": [
+            [
+              "a",
+              1,
+              2,
+              2,
+              1
+            ],
+            [
+              "b",
+              1,
+              2,
+              2,
+              1
+            ]
+          ]
+        },
+        {
+          "reply": {
+            "case": "Ok",
+            "payload": {
+              "applied": false,
+              "replay": true,
+              "reason": "replay"
+            }
+          },
+          "clean": true,
+          "inventory": [
+            [
+              1,
+              6
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              3,
+              0
+            ]
+          ],
+          "requests": [
+            [
+              "a",
+              1,
+              2,
+              2,
+              1
+            ],
+            [
+              "b",
+              1,
+              2,
+              2,
+              1
+            ]
+          ]
+        }
+      ],
+      "actual": [
+        {
+          "reply": {
+            "case": "Ok",
+            "payload": {
+              "applied": true,
+              "replay": false,
+              "reason": "reserved"
+            }
+          },
+          "clean": true,
+          "inventory": [
+            [
+              1,
+              8
+            ],
+            [
+              2,
+              5
+            ],
+            [
+              3,
+              0
+            ]
+          ],
+          "requests": []
+        },
+        {
+          "reply": {
+            "case": "Ok",
+            "payload": {
+              "applied": true,
+              "replay": false,
+              "reason": "reserved"
+            }
+          },
+          "clean": true,
+          "inventory": [
+            [
+              1,
+              6
+            ],
+            [
+              2,
+              5
+            ],
+            [
+              3,
+              0
+            ]
+          ],
+          "requests": []
+        },
+        {
+          "reply": {
+            "case": "Ok",
+            "payload": {
+              "applied": true,
+              "replay": false,
+              "reason": "reserved"
+            }
+          },
+          "clean": true,
+          "inventory": [
+            [
+              1,
+              4
+            ],
+            [
+              2,
+              5
+            ],
+            [
+              3,
+              0
+            ]
+          ],
+          "requests": []
+        }
+      ],
+      "error": null,
+      "ok": false,
+      "executed": true
+    }
+  ],
+  "accepted": false,
+  "passed": 7,
+  "total": 30
+}

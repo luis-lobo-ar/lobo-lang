@@ -1,0 +1,11 @@
+[
+  "app.lobo",
+  "logic.lobo",
+  "policy.lobo",
+  "model.lobo",
+  "lib/http.lobo",
+  "lib/io.lobo",
+  "lib/helpers.lobo",
+  "lib/json.lobo",
+  "lib/access.lobo"
+]

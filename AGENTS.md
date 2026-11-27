@@ -5,12 +5,13 @@ Use the GitHub account luis-lobo-ar for this repository. Commit author and commi
 active gh account may belong to another project. Keep user-facing examples on the lobo CLI. Cargo commands
 belong in compiler build/test instructions. Preserve frozen research documents and fixtures.
 
-Decision0073 is selected: add v3 alongside frozen v2 and isolate requirement/resource/finish additions
-on two fresh harder native apps x2 repeats x5 arms (20attempts), same Luna/high120s/16commands/6checks.
-Common experimental skill name/path/prompt holds activation equal; only selected blocks differ. Register
-and push before calls; no retries, replacements, skill tuning or extra trials. Preserve Lobo1.11.2,
-v2/old skills/cards/studies,47 prior paper entries/177pins. Reuse312-pass compiler receipt honestly.
-See decisions/0073-isolate-v3-correctness-skill-changes.md. Correctness/completion/cost stay separate.
+Decision0073 is complete2026-11-27:20 harder app-change attempts, five arms at identical Luna/high
+120s/16commands/6checks. All20 time out: every arm0/4 primary, v2/fullv3 each1/4 passing candidates,
+isolated additions0/4.12sources unchanged,3compilefailures;610/700 planned scenarios execute,256pass.
+All20 scored usages unknown; no token comparison. No demonstrated v3 gain; budget floor limits inference.
+Read research/v3-skill-study-2026-11-26.md. Keep v3 as tested alongside frozen v2, product, libraries,
+old skills/cards/studies; preserve local-048 and all earlier pins. Reused312-pass receipt is not a fresh
+full suite. Stop at20; proposals do not authorize skill edits, telemetry/caching/budget changes or trials.
 
 Decision0072 is complete:12 realistic app-change attempts, same Luna/high120s/16commands/6checks.
 Both arms complete4/6 (HTTP3/3, SQLite1/3); all12 candidates pass300 native scenarios. Four timeout

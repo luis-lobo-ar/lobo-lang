@@ -1,0 +1,40 @@
+module logic;
+use model {Line,Cart,Receipt}; use policy {Plan,plan,params};
+use sql {Cell,Row,SqlResult,SqlError,query,execute,begin,commit,rollback,params1,params2,integer_at,expect_columns};
+fn receipt(applied:Bool,replay:Bool,reason:Text)->Receipt {Receipt {applied:applied,replay:replay,reason:reason}}
+fn perform(db:Native::Database,cart:Cart,key:Text)->SqlResult<Receipt>
+actions {db.execute,db.read,db.close}
+{
+ let seen=try query(db,"SELECT sku1,qty1,sku2,qty2 FROM requests WHERE key=?1",params1(Cell::String(key)));
+ if List::length(seen)>0 {
+  let row=List::head(seen);try expect_columns(row,4);
+  let same=try integer_at(row,0)==cart.first.sku && try integer_at(row,1)==cart.first.qty && try integer_at(row,2)==cart.second.sku && try integer_at(row,3)==cart.second.qty;
+  Ok(receipt(false,same,if same {"replay"} else {"conflict"}))
+ } else {
+  let first=try query(db,"SELECT available FROM inventory WHERE sku=?1",params1(Cell::Integer(cart.first.sku)));
+  let second:SqlResult<List<Row>> =if cart.second.qty==0 {Ok(List::empty<Row>())} else {query(db,"SELECT available FROM inventory WHERE sku=?1",params1(Cell::Integer(cart.second.sku)))};
+  let others=try second;
+  if List::length(first)==0 || (cart.second.qty>0 && List::length(others)==0) {Ok(receipt(false,false,"missing"))} else {
+   let available=try integer_at(List::head(first),0);
+   let remaining:SqlResult<I64> =if cart.second.qty==0 {Ok(0)} else {integer_at(List::head(others),0)};
+   let other_available=try remaining;
+   if available<cart.first.qty || other_available<cart.second.qty {Ok(receipt(false,false,"stock"))} else {
+    try execute(db,"UPDATE inventory SET available=available-?1 WHERE sku=?2",params2(Cell::Integer(cart.first.qty),Cell::Integer(cart.first.sku)));
+    let updated=if cart.second.qty>0 {try execute(db,"UPDATE inventory SET available=available-?1 WHERE sku=?2",params2(Cell::Integer(cart.second.qty),Cell::Integer(cart.second.sku)));true} else {true};
+    try execute(db,"INSERT INTO requests(key,sku1,qty1,sku2,qty2) VALUES(?1,?2,?3,?4,?5)",params(key,cart));
+    Ok(receipt(true,false,"reserved"))
+   }
+  }
+ }
+}
+fn apply(db:Native::Database,sku1:I64,qty1:I64,sku2:I64,qty2:I64,key:Text)->SqlResult<Receipt>
+actions {db.execute,db.read,db.close,db.transaction}
+{
+ match plan(sku1,qty1,sku2,qty2,key) {
+  Invalid=>Ok(receipt(false,false,"invalid")),
+  Ready(cart)=> {
+   try begin(db);let outcome=perform(db,cart,key);
+   match outcome {Err(error)=>{let ignored=true;Err(error)},Ok(value)=>{try commit(db);Ok(value)}}
+  }
+ }
+}

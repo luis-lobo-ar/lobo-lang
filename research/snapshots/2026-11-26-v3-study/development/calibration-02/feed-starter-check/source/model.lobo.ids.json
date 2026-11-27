@@ -1,0 +1,8 @@
+{
+  "format": "lobo-identities/0.1",
+  "identities": {
+    "module": "realistic.feed.model",
+    "Event": "realistic.feed.model.Event",
+    "events": "realistic.feed.model.events"
+  }
+}

@@ -1,0 +1,110 @@
+module http_server;
+use http { Response };
+use json { Json, stringify, integer_text };
+
+record Request { method:Text, path:Text }
+variant RequestResult { Parsed(Request), Rejected(I64) }
+record Headers { cursor:I64, hosts:I64, lengths:I64, body:Bool, status:I64 }
+
+fn line_end(data:Bytes,start:I64)->I64 {
+  while(index:I64=start;index+1<Bytes::length(data) && !(Bytes::at(data,index)==13 && Bytes::at(data,index+1)==10)) {index+1}
+}
+fn header_end(data:Bytes)->I64 {
+  let size=Bytes::length(data);
+  let index=while(i:I64=0;i+3<size && !(Bytes::at(data,i)==13 && Bytes::at(data,i+1)==10 && Bytes::at(data,i+2)==13 && Bytes::at(data,i+3)==10)) {i+1};
+  if index+3<size {index+4} else {-1}
+}
+fn find_byte(data:Bytes,start:I64,end:I64,byte:I64)->I64 {
+  while(index:I64=start;index<end && Bytes::at(data,index)!=byte) {index+1}
+}
+fn token(byte:I64)->Bool {
+  byte>=48 && byte<=57 || byte>=65 && byte<=90 || byte>=97 && byte<=122 ||
+  byte==33 || byte==35 || byte==36 || byte==37 || byte==38 || byte==39 || byte==42 || byte==43 || byte==45 || byte==46 || byte==94 || byte==95 || byte==96 || byte==124 || byte==126
+}
+fn token_range(data:Bytes,start:I64,end:I64)->Bool {
+  start<end && fold(i in end-start, valid:Bool=true) {valid && token(Bytes::at(data,start+i))}
+}
+fn lower(byte:I64)->I64 {if byte>=65 && byte<=90 {byte+32} else {byte}}
+fn header_name(data:Bytes,start:I64,end:I64,name:Text)->Bool {
+  let expected=Text::bytes(name);
+  end-start==Bytes::length(expected) && fold(i in end-start,same:Bool=true) {same && lower(Bytes::at(data,start+i))==Bytes::at(expected,i)}
+}
+fn whitespace(byte:I64)->Bool {byte==32 || byte==9}
+fn trim_start(data:Bytes,start:I64,end:I64)->I64 {while(i:I64=start;i<end && whitespace(Bytes::at(data,i))) {i+1}}
+fn trim_end(data:Bytes,start:I64,end:I64)->I64 {while(i:I64=end;i>start && whitespace(Bytes::at(data,i-1))) {i-1}}
+fn visible_value(data:Bytes,start:I64,end:I64)->Bool {
+  fold(i in end-start,valid:Bool=true) {let byte=Bytes::at(data,start+i);valid && (byte==9 || byte>=32 && byte<=126)}
+}
+fn host_value(data:Bytes,start:I64,end:I64)->Bool {
+  start<end && fold(i in end-start,valid:Bool=true) {
+    let byte=Bytes::at(data,start+i);
+    valid && (byte>=48 && byte<=57 || byte>=65 && byte<=90 || byte>=97 && byte<=122 || byte==46 || byte==45 || byte==58 || byte==91 || byte==93)
+  }
+}
+fn length_value(data:Bytes,start:I64,end:I64)->I64 {
+  if start==end {-1} else {fold(i in end-start,value:I64=0) {
+      let byte=Bytes::at(data,start+i);
+      if value<0 || byte<48 || byte>57 {-1} else {if value>0 || byte!=48 {1} else {0}}
+  }}
+}
+fn next_header(data:Bytes,state:Headers)->Headers {
+  let end=line_end(data,state.cursor);
+  let colon=find_byte(data,state.cursor,end,58);
+  let start=trim_start(data,colon+1,end);
+  let stop=trim_end(data,start,end);
+  let valid=colon<end && token_range(data,state.cursor,colon) && visible_value(data,colon+1,end);
+  if !valid {Headers {cursor:end+2,hosts:state.hosts,lengths:state.lengths,body:state.body,status:400}} else {
+    if header_name(data,state.cursor,colon,"host") {
+      Headers {cursor:end+2,hosts:state.hosts+1,lengths:state.lengths,body:state.body,status:if state.hosts>0 || !host_value(data,start,stop) {400} else {0}}
+    } else {if header_name(data,state.cursor,colon,"content-length") {
+        let length=length_value(data,start,stop);
+        Headers {cursor:end+2,hosts:state.hosts,lengths:state.lengths+1,body:state.body || length>0,status:if state.lengths>0 || length<0 {400} else {0}}
+      } else {if header_name(data,state.cursor,colon,"transfer-encoding") {
+          Headers {cursor:end+2,hosts:state.hosts,lengths:state.lengths,body:state.body,status:400}
+        } else {if header_name(data,state.cursor,colon,"expect") {
+            Headers {cursor:end+2,hosts:state.hosts,lengths:state.lengths,body:state.body,status:417}
+          } else {Headers {cursor:end+2,hosts:state.hosts,lengths:state.lengths,body:state.body,status:0}}}}}
+  }
+}
+fn parse(request:Bytes)->RequestResult {
+  let end=header_end(request);
+  if end>4096 || end<0 && Bytes::length(request)>=4096 {Rejected(431)} else {if end<0 {Rejected(400)} else {
+      let first=line_end(request,0);
+      let method_end=find_byte(request,0,first,32);
+      let path_end=find_byte(request,method_end+1,first,32);
+      let target_start=method_end+1;
+      let valid_path=path_end>target_start && Bytes::at(request,target_start)==47 && fold(i in path_end-target_start,valid:Bool=true) {
+        let byte=Bytes::at(request,target_start+i);valid && byte>32 && byte<=126 && byte!=35
+      };
+      let valid=method_end<first && path_end<first && token_range(request,0,method_end) && valid_path && Bytes::slice(request,path_end+1,first-path_end-1)==Text::bytes("HTTP/1.1");
+      if !valid {Rejected(400)} else {
+        let headers=while(state:Headers=Headers {cursor:first+2,hosts:0,lengths:0,body:false,status:0};state.cursor<end-2 && state.status==0) {next_header(request,state)};
+        if headers.status!=0 {Rejected(headers.status)} else {if headers.hosts!=1 {Rejected(400)} else {if headers.body {Rejected(413)} else {
+              Parsed(Request {method:Text::from_bytes(Bytes::slice(request,0,method_end)),path:Text::from_bytes(Bytes::slice(request,target_start,path_end-target_start))})
+        }}}
+      }
+  }}
+}
+fn reason(status:I64)->Text {
+  if status==200 {"OK"} else {if status==400 {"Bad Request"} else {if status==404 {"Not Found"} else {if status==405 {"Method Not Allowed"} else {if status==408 {"Request Timeout"} else {if status==413 {"Content Too Large"} else {if status==417 {"Expectation Failed"} else {"Request Header Fields Too Large"}}}}}}}
+}
+fn json_response(status:I64,value:Json)->Response {Response {status:status,content_type:"application/json",body:stringify(value)}}
+fn error_response(status:I64)->Response {json_response(status,json {"error":reason(status)})}
+fn wire(response:Response,head:Bool)->Bytes {
+  let allow=if response.status==405 {"Allow: GET, HEAD\r\n"} else {""};
+  Text::bytes("HTTP/1.1 "+integer_text(response.status)+" "+reason(response.status)+"\r\nContent-Type: application/json\r\nContent-Length: "+integer_text(Bytes::length(Text::bytes(response.body)))+"\r\nConnection: close\r\n"+allow+"\r\n"+if head {""} else {response.body})
+}
+fn respond(request:Bytes,handle:Fn(Request)->Response)->Bytes {
+  match parse(request) {Rejected(status)=> wire(error_response(status),false),Parsed(value)=> wire(handle(value),value.method=="HEAD")}
+}
+
+// Explicit context keeps application resources outside the callback value.
+fn respond_with<C>(context: C, request: Bytes,
+  handle: Fn(C, Request) actions { db.execute, db.read, db.close } -> Response) -> Bytes
+actions { db.execute, db.read, db.close }
+{
+  match parse(request) {
+    Rejected(status) => wire(error_response(status), false),
+    Parsed(value) => wire(handle(context, value), value.method == "HEAD")
+  }
+}

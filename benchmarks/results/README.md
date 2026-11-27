@@ -133,3 +133,12 @@ and checkpoint entries remain historical. No independent agent construction/comp
   Both arms4/6 timely completions; all12 candidates pass300 repeated scenarios. Four unknown usages;
   only3 complete token pairs, all HTTP. No demonstrated v2 advantage. See
   [the report](../../research/realistic-development-study-2026-11-26.md); keep product/skills frozen.
+
+- 2026-11-27: [v3 single-factor study](2026-11-26-v3-study.json),
+  [audit](2026-11-26-v3-audit.json), [verification](2026-11-26-v3-verification.json),
+  [native calibration](2026-11-26-v3-validation.json),
+  [paper preservation](2026-11-26-v3-paper-preservation.json).
+  Study-start tag2026-11-26 retained.20fresh harder app changes, same Luna/high120s/16commands/6checks;
+  v2/requirements/resources/finish/v3 all0/4 timely acceptance. v2/fullv3 each1/4 passing candidates;
+  all20 usageunknown, no token pairs.12unchanged sources,3compilefailures;610/700 scenarios execute,256pass.
+  No demonstrated gain; budget floor limits inference. See [the report](../../research/v3-skill-study-2026-11-26.md).

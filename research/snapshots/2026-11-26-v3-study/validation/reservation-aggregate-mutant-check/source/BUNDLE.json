@@ -1,0 +1,7 @@
+[
+  "app.lobo",
+  "logic.lobo",
+  "policy.lobo",
+  "model.lobo",
+  "lib/sql.lobo"
+]

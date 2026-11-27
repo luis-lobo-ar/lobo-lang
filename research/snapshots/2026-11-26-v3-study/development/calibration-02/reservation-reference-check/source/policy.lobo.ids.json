@@ -1,0 +1,13 @@
+{
+  "format": "lobo-identities/0.1",
+  "identities": {
+    "module": "realistic.reservation.policy",
+    "Plan": "realistic.reservation.policy.Plan",
+    "plan": "realistic.reservation.policy.plan",
+    "params": "realistic.reservation.policy.params",
+    "model.Line": "realistic.reservation.model.Line",
+    "model.Cart": "realistic.reservation.model.Cart",
+    "sql.Cell": "lobo.sql.Cell",
+    "sql.params1": "lobo.sql.params1"
+  }
+}

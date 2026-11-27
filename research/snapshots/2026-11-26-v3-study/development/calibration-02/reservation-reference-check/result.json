@@ -1,0 +1,29 @@
+{
+  "issues": [],
+  "build": {
+    "command": [
+      "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/matched-study-20261123/freeze/lobo",
+      "compile",
+      "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/v3-study-20261126/development/calibration-02/reservation-reference-check/source/app.lobo",
+      "--source",
+      "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/v3-study-20261126/development/calibration-02/reservation-reference-check/source/logic.lobo",
+      "--source",
+      "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/v3-study-20261126/development/calibration-02/reservation-reference-check/source/policy.lobo",
+      "--source",
+      "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/v3-study-20261126/development/calibration-02/reservation-reference-check/source/model.lobo",
+      "--source",
+      "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/v3-study-20261126/development/calibration-02/reservation-reference-check/source/lib/sql.lobo",
+      "-o",
+      "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/v3-study-20261126/development/calibration-02/reservation-reference-check/program"
+    ],
+    "exit_code": 1,
+    "stdout": "{\"diagnostic\":{\"code\":\"compile.syntax.invalid\",\"message\":\"expected }, got Symbol(\\\";\\\")\",\"phase\":\"parse\",\"range\":{\"end\":{\"byte\":1945,\"character\":190,\"line\":22},\"start\":{\"byte\":1944,\"character\":189,\"line\":22}},\"source\":\"/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/v3-study-20261126/development/calibration-02/reservation-reference-check/source/logic.lobo\"},\"kind\":\"compile_error\",\"status\":\"error\"}\n",
+    "stderr": "",
+    "wall_s": 0.0032602548599243164,
+    "ok": false
+  },
+  "cases": [],
+  "accepted": false,
+  "passed": 0,
+  "total": 30
+}

@@ -1,0 +1,1794 @@
+{
+  "issues": [],
+  "build": {
+    "command": [
+      "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/matched-study-20261123/freeze/lobo",
+      "compile",
+      "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/v3-study-20261126/development/calibration-02/feed-starter-check/source/app.lobo",
+      "--source",
+      "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/v3-study-20261126/development/calibration-02/feed-starter-check/source/logic.lobo",
+      "--source",
+      "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/v3-study-20261126/development/calibration-02/feed-starter-check/source/policy.lobo",
+      "--source",
+      "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/v3-study-20261126/development/calibration-02/feed-starter-check/source/model.lobo",
+      "--source",
+      "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/v3-study-20261126/development/calibration-02/feed-starter-check/source/lib/http.lobo",
+      "--source",
+      "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/v3-study-20261126/development/calibration-02/feed-starter-check/source/lib/io.lobo",
+      "--source",
+      "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/v3-study-20261126/development/calibration-02/feed-starter-check/source/lib/helpers.lobo",
+      "--source",
+      "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/v3-study-20261126/development/calibration-02/feed-starter-check/source/lib/json.lobo",
+      "--source",
+      "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/v3-study-20261126/development/calibration-02/feed-starter-check/source/lib/access.lobo",
+      "-o",
+      "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/v3-study-20261126/development/calibration-02/feed-starter-check/program"
+    ],
+    "exit_code": 0,
+    "stdout": "{\"artifact\":\"/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/v3-study-20261126/development/calibration-02/feed-starter-check/program\",\"entries\":[\"lobo.http.text_response\",\"lobo.http.json_document\",\"lobo.http.not_found\",\"lobo.http.method_not_allowed\",\"lobo.http.read_method\",\"lobo.http.strip_prefix\",\"lobo.http.quote_byte\",\"lobo.http.json_string\",\"lobo.http.server.line_end\",\"lobo.http.server.header_end\",\"lobo.http.server.find_byte\",\"lobo.http.server.token\",\"lobo.http.server.token_range\",\"lobo.http.server.lower\",\"lobo.http.server.header_name\",\"lobo.http.server.whitespace\",\"lobo.http.server.trim_start\",\"lobo.http.server.trim_end\",\"lobo.http.server.visible_value\",\"lobo.http.server.host_value\",\"lobo.http.server.length_value\",\"lobo.http.server.next_header\",\"lobo.http.server.parse\",\"lobo.http.server.reason\",\"lobo.http.server.json_response\",\"lobo.http.server.error_response\",\"lobo.http.server.wire\",\"lobo.http.server.respond\",\"lobo.http.transport.receive\",\"lobo.http.transport.send_all\",\"lobo.38aa8ce7f12ae34d85c2d13f0fd2e28c\",\"lobo.66f68b42c4adeae5acf0b3216b3eb9ce\",\"lobo.bcfd9ba61989fa8f4c6d0f7b03215317\",\"lobo.f56b0cbe0a96c4c9a372ea7f199aac15\",\"lobo.902d01e286cd89f72ff730d0e625215c\",\"lobo.292bec26a2e715e93a50f16e1abdca42\",\"lobo.bcae73410f94fbd16a9d5c65c3b8f724\",\"lobo.9208dfdc80f89314742515856200df08\",\"lobo.http.transport.serve_one\",\"lobo.http.transport.serve\",\"lobo.c53cea940d336abcf43be7003bfc003b\",\"lobo.852b35fdd21c1b3ce25a6ae27fbf6148\",\"lobo.0935a528ddd246a79a5f2cd965cced31\",\"lobo.json.object\",\"lobo.json.field\",\"lobo.json.array\",\"lobo.json.append\",\"lobo.json.has_key\",\"lobo.json.unique_fields\",\"lobo.json.skip_digits\",\"lobo.json.is_number\",\"lobo.json.number_token\",\"lobo.json.integer_text\",\"lobo.json.array_tasks\",\"lobo.json.object_tasks\",\"lobo.json.flatten\",\"lobo.json.stringify\",\"lobo.json.response\",\"lobo.permissions.none\",\"lobo.permissions.one\",\"lobo.permissions.allow\",\"lobo.permissions.abi_mask\",\"lobo.permissions.restrict\",\"realistic.feed.app.main\",\"realistic.feed.logic.event_json\",\"realistic.feed.logic.insert\",\"realistic.feed.logic.ordered\",\"realistic.feed.logic.page_json\",\"realistic.feed.logic.handle\",\"realistic.feed.model.events\",\"realistic.feed.policy.natural\",\"realistic.feed.policy.field_value\",\"realistic.feed.policy.read_query\"],\"format\":\"native\",\"status\":\"ok\"}\n",
+    "stderr": "",
+    "wall_s": 2.180403346894309,
+    "ok": true
+  },
+  "cases": [
+    {
+      "input": {
+        "method": "GET",
+        "path": "/health"
+      },
+      "expected": {
+        "status": 200,
+        "body": {
+          "status": "ready"
+        },
+        "head_empty": true,
+        "length_ok": true,
+        "content_type": "application/json",
+        "allow": null
+      },
+      "actual": {
+        "status": 200,
+        "body": {
+          "status": "ready"
+        },
+        "head_empty": true,
+        "length_ok": true,
+        "content_type": "application/json",
+        "allow": null
+      },
+      "error": null,
+      "ok": true,
+      "executed": true
+    },
+    {
+      "input": {
+        "method": "GET",
+        "path": "/api/events"
+      },
+      "expected": {
+        "status": 200,
+        "body": {
+          "items": [
+            {
+              "id": 1,
+              "kind": "info",
+              "message": "start"
+            },
+            {
+              "id": 3,
+              "kind": "audit",
+              "message": "Line\nBack\\"
+            }
+          ],
+          "count": 2,
+          "next": 3
+        },
+        "head_empty": true,
+        "length_ok": true,
+        "content_type": "application/json",
+        "allow": null
+      },
+      "actual": {
+        "status": 200,
+        "body": {
+          "items": [
+            {
+              "id": 9,
+              "kind": "info",
+              "message": "Tea \"\u591c\""
+            },
+            {
+              "id": 3,
+              "kind": "audit",
+              "message": "Line\nBack\\"
+            }
+          ],
+          "count": 2,
+          "next": null
+        },
+        "head_empty": true,
+        "length_ok": true,
+        "content_type": "application/json",
+        "allow": null
+      },
+      "error": null,
+      "ok": false,
+      "executed": true
+    },
+    {
+      "input": {
+        "method": "GET",
+        "path": "/api/events?after=3&limit=2"
+      },
+      "expected": {
+        "status": 200,
+        "body": {
+          "items": [
+            {
+              "id": 9,
+              "kind": "info",
+              "message": "Tea \"\u591c\""
+            },
+            {
+              "id": 12,
+              "kind": "audit",
+              "message": ""
+            }
+          ],
+          "count": 2,
+          "next": 12
+        },
+        "head_empty": true,
+        "length_ok": true,
+        "content_type": "application/json",
+        "allow": null
+      },
+      "actual": {
+        "status": 200,
+        "body": {
+          "items": [
+            {
+              "id": 9,
+              "kind": "info",
+              "message": "Tea \"\u591c\""
+            },
+            {
+              "id": 3,
+              "kind": "audit",
+              "message": "Line\nBack\\"
+            }
+          ],
+          "count": 2,
+          "next": null
+        },
+        "head_empty": true,
+        "length_ok": true,
+        "content_type": "application/json",
+        "allow": null
+      },
+      "error": null,
+      "ok": false,
+      "executed": true
+    },
+    {
+      "input": {
+        "method": "GET",
+        "path": "/api/events?kind=audit&limit=1"
+      },
+      "expected": {
+        "status": 200,
+        "body": {
+          "items": [
+            {
+              "id": 3,
+              "kind": "audit",
+              "message": "Line\nBack\\"
+            }
+          ],
+          "count": 1,
+          "next": 3
+        },
+        "head_empty": true,
+        "length_ok": true,
+        "content_type": "application/json",
+        "allow": null
+      },
+      "actual": {
+        "status": 200,
+        "body": {
+          "items": [
+            {
+              "id": 9,
+              "kind": "info",
+              "message": "Tea \"\u591c\""
+            },
+            {
+              "id": 3,
+              "kind": "audit",
+              "message": "Line\nBack\\"
+            }
+          ],
+          "count": 2,
+          "next": null
+        },
+        "head_empty": true,
+        "length_ok": true,
+        "content_type": "application/json",
+        "allow": null
+      },
+      "error": null,
+      "ok": false,
+      "executed": true
+    },
+    {
+      "input": {
+        "method": "HEAD",
+        "path": "/api/events?after=12"
+      },
+      "expected": {
+        "status": 200,
+        "body": {
+          "items": [
+            {
+              "id": 9223372036854775807,
+              "kind": "info",
+              "message": "last"
+            }
+          ],
+          "count": 1,
+          "next": null
+        },
+        "head_empty": true,
+        "length_ok": true,
+        "content_type": "application/json",
+        "allow": null
+      },
+      "actual": {
+        "status": 200,
+        "body": {
+          "items": [
+            {
+              "id": 9,
+              "kind": "info",
+              "message": "Tea \"\u591c\""
+            },
+            {
+              "id": 3,
+              "kind": "audit",
+              "message": "Line\nBack\\"
+            }
+          ],
+          "count": 2,
+          "next": null
+        },
+        "head_empty": true,
+        "length_ok": true,
+        "content_type": "application/json",
+        "allow": null
+      },
+      "error": null,
+      "ok": false,
+      "executed": true
+    },
+    {
+      "input": {
+        "method": "GET",
+        "path": "/api/events?limit=1"
+      },
+      "expected": {
+        "status": 200,
+        "body": {
+          "items": [
+            {
+              "id": 1,
+              "kind": "info",
+              "message": "start"
+            }
+          ],
+          "count": 1,
+          "next": 1
+        },
+        "head_empty": true,
+        "length_ok": true,
+        "content_type": "application/json",
+        "allow": null
+      },
+      "actual": {
+        "status": 200,
+        "body": {
+          "items": [
+            {
+              "id": 9,
+              "kind": "info",
+              "message": "Tea \"\u591c\""
+            },
+            {
+              "id": 3,
+              "kind": "audit",
+              "message": "Line\nBack\\"
+            }
+          ],
+          "count": 2,
+          "next": null
+        },
+        "head_empty": true,
+        "length_ok": true,
+        "content_type": "application/json",
+        "allow": null
+      },
+      "error": null,
+      "ok": false,
+      "executed": true
+    },
+    {
+      "input": {
+        "method": "GET",
+        "path": "/api/events?limit=3"
+      },
+      "expected": {
+        "status": 200,
+        "body": {
+          "items": [
+            {
+              "id": 1,
+              "kind": "info",
+              "message": "start"
+            },
+            {
+              "id": 3,
+              "kind": "audit",
+              "message": "Line\nBack\\"
+            },
+            {
+              "id": 9,
+              "kind": "info",
+              "message": "Tea \"\u591c\""
+            }
+          ],
+          "count": 3,
+          "next": 9
+        },
+        "head_empty": true,
+        "length_ok": true,
+        "content_type": "application/json",
+        "allow": null
+      },
+      "actual": {
+        "status": 200,
+        "body": {
+          "items": [
+            {
+              "id": 9,
+              "kind": "info",
+              "message": "Tea \"\u591c\""
+            },
+            {
+              "id": 3,
+              "kind": "audit",
+              "message": "Line\nBack\\"
+            }
+          ],
+          "count": 2,
+          "next": null
+        },
+        "head_empty": true,
+        "length_ok": true,
+        "content_type": "application/json",
+        "allow": null
+      },
+      "error": null,
+      "ok": false,
+      "executed": true
+    },
+    {
+      "input": {
+        "method": "GET",
+        "path": "/api/events?after=0&limit=2"
+      },
+      "expected": {
+        "status": 200,
+        "body": {
+          "items": [
+            {
+              "id": 1,
+              "kind": "info",
+              "message": "start"
+            },
+            {
+              "id": 3,
+              "kind": "audit",
+              "message": "Line\nBack\\"
+            }
+          ],
+          "count": 2,
+          "next": 3
+        },
+        "head_empty": true,
+        "length_ok": true,
+        "content_type": "application/json",
+        "allow": null
+      },
+      "actual": {
+        "status": 200,
+        "body": {
+          "items": [
+            {
+              "id": 9,
+              "kind": "info",
+              "message": "Tea \"\u591c\""
+            },
+            {
+              "id": 3,
+              "kind": "audit",
+              "message": "Line\nBack\\"
+            }
+          ],
+          "count": 2,
+          "next": null
+        },
+        "head_empty": true,
+        "length_ok": true,
+        "content_type": "application/json",
+        "allow": null
+      },
+      "error": null,
+      "ok": false,
+      "executed": true
+    },
+    {
+      "input": {
+        "method": "GET",
+        "path": "/api/events?limit=2&after=0"
+      },
+      "expected": {
+        "status": 200,
+        "body": {
+          "items": [
+            {
+              "id": 1,
+              "kind": "info",
+              "message": "start"
+            },
+            {
+              "id": 3,
+              "kind": "audit",
+              "message": "Line\nBack\\"
+            }
+          ],
+          "count": 2,
+          "next": 3
+        },
+        "head_empty": true,
+        "length_ok": true,
+        "content_type": "application/json",
+        "allow": null
+      },
+      "actual": {
+        "status": 200,
+        "body": {
+          "items": [
+            {
+              "id": 9,
+              "kind": "info",
+              "message": "Tea \"\u591c\""
+            },
+            {
+              "id": 3,
+              "kind": "audit",
+              "message": "Line\nBack\\"
+            }
+          ],
+          "count": 2,
+          "next": null
+        },
+        "head_empty": true,
+        "length_ok": true,
+        "content_type": "application/json",
+        "allow": null
+      },
+      "error": null,
+      "ok": false,
+      "executed": true
+    },
+    {
+      "input": {
+        "method": "GET",
+        "path": "/api/events?after=9&kind=audit&limit=3"
+      },
+      "expected": {
+        "status": 200,
+        "body": {
+          "items": [
+            {
+              "id": 12,
+              "kind": "audit",
+              "message": ""
+            }
+          ],
+          "count": 1,
+          "next": null
+        },
+        "head_empty": true,
+        "length_ok": true,
+        "content_type": "application/json",
+        "allow": null
+      },
+      "actual": {
+        "status": 200,
+        "body": {
+          "items": [
+            {
+              "id": 9,
+              "kind": "info",
+              "message": "Tea \"\u591c\""
+            },
+            {
+              "id": 3,
+              "kind": "audit",
+              "message": "Line\nBack\\"
+            }
+          ],
+          "count": 2,
+          "next": null
+        },
+        "head_empty": true,
+        "length_ok": true,
+        "content_type": "application/json",
+        "allow": null
+      },
+      "error": null,
+      "ok": false,
+      "executed": true
+    },
+    {
+      "input": {
+        "method": "GET",
+        "path": "/api/events?kind=info&after=1&limit=1"
+      },
+      "expected": {
+        "status": 200,
+        "body": {
+          "items": [
+            {
+              "id": 9,
+              "kind": "info",
+              "message": "Tea \"\u591c\""
+            }
+          ],
+          "count": 1,
+          "next": 9
+        },
+        "head_empty": true,
+        "length_ok": true,
+        "content_type": "application/json",
+        "allow": null
+      },
+      "actual": {
+        "status": 200,
+        "body": {
+          "items": [
+            {
+              "id": 9,
+              "kind": "info",
+              "message": "Tea \"\u591c\""
+            },
+            {
+              "id": 3,
+              "kind": "audit",
+              "message": "Line\nBack\\"
+            }
+          ],
+          "count": 2,
+          "next": null
+        },
+        "head_empty": true,
+        "length_ok": true,
+        "content_type": "application/json",
+        "allow": null
+      },
+      "error": null,
+      "ok": false,
+      "executed": true
+    },
+    {
+      "input": {
+        "method": "GET",
+        "path": "/api/events?after=9223372036854775807"
+      },
+      "expected": {
+        "status": 200,
+        "body": {
+          "items": [],
+          "count": 0,
+          "next": null
+        },
+        "head_empty": true,
+        "length_ok": true,
+        "content_type": "application/json",
+        "allow": null
+      },
+      "actual": {
+        "status": 200,
+        "body": {
+          "items": [
+            {
+              "id": 9,
+              "kind": "info",
+              "message": "Tea \"\u591c\""
+            },
+            {
+              "id": 3,
+              "kind": "audit",
+              "message": "Line\nBack\\"
+            }
+          ],
+          "count": 2,
+          "next": null
+        },
+        "head_empty": true,
+        "length_ok": true,
+        "content_type": "application/json",
+        "allow": null
+      },
+      "error": null,
+      "ok": false,
+      "executed": true
+    },
+    {
+      "input": {
+        "method": "GET",
+        "path": "/api/events?after=9223372036854775806&limit=1"
+      },
+      "expected": {
+        "status": 200,
+        "body": {
+          "items": [
+            {
+              "id": 9223372036854775807,
+              "kind": "info",
+              "message": "last"
+            }
+          ],
+          "count": 1,
+          "next": null
+        },
+        "head_empty": true,
+        "length_ok": true,
+        "content_type": "application/json",
+        "allow": null
+      },
+      "actual": {
+        "status": 200,
+        "body": {
+          "items": [
+            {
+              "id": 9,
+              "kind": "info",
+              "message": "Tea \"\u591c\""
+            },
+            {
+              "id": 3,
+              "kind": "audit",
+              "message": "Line\nBack\\"
+            }
+          ],
+          "count": 2,
+          "next": null
+        },
+        "head_empty": true,
+        "length_ok": true,
+        "content_type": "application/json",
+        "allow": null
+      },
+      "error": null,
+      "ok": false,
+      "executed": true
+    },
+    {
+      "input": {
+        "method": "GET",
+        "path": "/api/events?after=01"
+      },
+      "expected": {
+        "status": 400,
+        "body": {
+          "error": "bad query"
+        },
+        "head_empty": true,
+        "length_ok": true,
+        "content_type": "application/json",
+        "allow": null
+      },
+      "actual": {
+        "status": 200,
+        "body": {
+          "items": [
+            {
+              "id": 9,
+              "kind": "info",
+              "message": "Tea \"\u591c\""
+            },
+            {
+              "id": 3,
+              "kind": "audit",
+              "message": "Line\nBack\\"
+            }
+          ],
+          "count": 2,
+          "next": null
+        },
+        "head_empty": true,
+        "length_ok": true,
+        "content_type": "application/json",
+        "allow": null
+      },
+      "error": null,
+      "ok": false,
+      "executed": true
+    },
+    {
+      "input": {
+        "method": "GET",
+        "path": "/api/events?after=00"
+      },
+      "expected": {
+        "status": 400,
+        "body": {
+          "error": "bad query"
+        },
+        "head_empty": true,
+        "length_ok": true,
+        "content_type": "application/json",
+        "allow": null
+      },
+      "actual": {
+        "status": 200,
+        "body": {
+          "items": [
+            {
+              "id": 9,
+              "kind": "info",
+              "message": "Tea \"\u591c\""
+            },
+            {
+              "id": 3,
+              "kind": "audit",
+              "message": "Line\nBack\\"
+            }
+          ],
+          "count": 2,
+          "next": null
+        },
+        "head_empty": true,
+        "length_ok": true,
+        "content_type": "application/json",
+        "allow": null
+      },
+      "error": null,
+      "ok": false,
+      "executed": true
+    },
+    {
+      "input": {
+        "method": "GET",
+        "path": "/api/events?after=-1"
+      },
+      "expected": {
+        "status": 400,
+        "body": {
+          "error": "bad query"
+        },
+        "head_empty": true,
+        "length_ok": true,
+        "content_type": "application/json",
+        "allow": null
+      },
+      "actual": {
+        "status": 200,
+        "body": {
+          "items": [
+            {
+              "id": 9,
+              "kind": "info",
+              "message": "Tea \"\u591c\""
+            },
+            {
+              "id": 3,
+              "kind": "audit",
+              "message": "Line\nBack\\"
+            }
+          ],
+          "count": 2,
+          "next": null
+        },
+        "head_empty": true,
+        "length_ok": true,
+        "content_type": "application/json",
+        "allow": null
+      },
+      "error": null,
+      "ok": false,
+      "executed": true
+    },
+    {
+      "input": {
+        "method": "GET",
+        "path": "/api/events?after=+1"
+      },
+      "expected": {
+        "status": 400,
+        "body": {
+          "error": "bad query"
+        },
+        "head_empty": true,
+        "length_ok": true,
+        "content_type": "application/json",
+        "allow": null
+      },
+      "actual": {
+        "status": 200,
+        "body": {
+          "items": [
+            {
+              "id": 9,
+              "kind": "info",
+              "message": "Tea \"\u591c\""
+            },
+            {
+              "id": 3,
+              "kind": "audit",
+              "message": "Line\nBack\\"
+            }
+          ],
+          "count": 2,
+          "next": null
+        },
+        "head_empty": true,
+        "length_ok": true,
+        "content_type": "application/json",
+        "allow": null
+      },
+      "error": null,
+      "ok": false,
+      "executed": true
+    },
+    {
+      "input": {
+        "method": "GET",
+        "path": "/api/events?after=9223372036854775808"
+      },
+      "expected": {
+        "status": 400,
+        "body": {
+          "error": "bad query"
+        },
+        "head_empty": true,
+        "length_ok": true,
+        "content_type": "application/json",
+        "allow": null
+      },
+      "actual": {
+        "status": 200,
+        "body": {
+          "items": [
+            {
+              "id": 9,
+              "kind": "info",
+              "message": "Tea \"\u591c\""
+            },
+            {
+              "id": 3,
+              "kind": "audit",
+              "message": "Line\nBack\\"
+            }
+          ],
+          "count": 2,
+          "next": null
+        },
+        "head_empty": true,
+        "length_ok": true,
+        "content_type": "application/json",
+        "allow": null
+      },
+      "error": null,
+      "ok": false,
+      "executed": true
+    },
+    {
+      "input": {
+        "method": "GET",
+        "path": "/api/events?limit=0"
+      },
+      "expected": {
+        "status": 400,
+        "body": {
+          "error": "bad query"
+        },
+        "head_empty": true,
+        "length_ok": true,
+        "content_type": "application/json",
+        "allow": null
+      },
+      "actual": {
+        "status": 200,
+        "body": {
+          "items": [
+            {
+              "id": 9,
+              "kind": "info",
+              "message": "Tea \"\u591c\""
+            },
+            {
+              "id": 3,
+              "kind": "audit",
+              "message": "Line\nBack\\"
+            }
+          ],
+          "count": 2,
+          "next": null
+        },
+        "head_empty": true,
+        "length_ok": true,
+        "content_type": "application/json",
+        "allow": null
+      },
+      "error": null,
+      "ok": false,
+      "executed": true
+    },
+    {
+      "input": {
+        "method": "GET",
+        "path": "/api/events?limit=4"
+      },
+      "expected": {
+        "status": 400,
+        "body": {
+          "error": "bad query"
+        },
+        "head_empty": true,
+        "length_ok": true,
+        "content_type": "application/json",
+        "allow": null
+      },
+      "actual": {
+        "status": 200,
+        "body": {
+          "items": [
+            {
+              "id": 9,
+              "kind": "info",
+              "message": "Tea \"\u591c\""
+            },
+            {
+              "id": 3,
+              "kind": "audit",
+              "message": "Line\nBack\\"
+            }
+          ],
+          "count": 2,
+          "next": null
+        },
+        "head_empty": true,
+        "length_ok": true,
+        "content_type": "application/json",
+        "allow": null
+      },
+      "error": null,
+      "ok": false,
+      "executed": true
+    },
+    {
+      "input": {
+        "method": "GET",
+        "path": "/api/events?limit=02"
+      },
+      "expected": {
+        "status": 400,
+        "body": {
+          "error": "bad query"
+        },
+        "head_empty": true,
+        "length_ok": true,
+        "content_type": "application/json",
+        "allow": null
+      },
+      "actual": {
+        "status": 200,
+        "body": {
+          "items": [
+            {
+              "id": 9,
+              "kind": "info",
+              "message": "Tea \"\u591c\""
+            },
+            {
+              "id": 3,
+              "kind": "audit",
+              "message": "Line\nBack\\"
+            }
+          ],
+          "count": 2,
+          "next": null
+        },
+        "head_empty": true,
+        "length_ok": true,
+        "content_type": "application/json",
+        "allow": null
+      },
+      "error": null,
+      "ok": false,
+      "executed": true
+    },
+    {
+      "input": {
+        "method": "GET",
+        "path": "/api/events?"
+      },
+      "expected": {
+        "status": 400,
+        "body": {
+          "error": "bad query"
+        },
+        "head_empty": true,
+        "length_ok": true,
+        "content_type": "application/json",
+        "allow": null
+      },
+      "actual": {
+        "status": 200,
+        "body": {
+          "items": [
+            {
+              "id": 9,
+              "kind": "info",
+              "message": "Tea \"\u591c\""
+            },
+            {
+              "id": 3,
+              "kind": "audit",
+              "message": "Line\nBack\\"
+            }
+          ],
+          "count": 2,
+          "next": null
+        },
+        "head_empty": true,
+        "length_ok": true,
+        "content_type": "application/json",
+        "allow": null
+      },
+      "error": null,
+      "ok": false,
+      "executed": true
+    },
+    {
+      "input": {
+        "method": "GET",
+        "path": "/api/events?after=1&"
+      },
+      "expected": {
+        "status": 400,
+        "body": {
+          "error": "bad query"
+        },
+        "head_empty": true,
+        "length_ok": true,
+        "content_type": "application/json",
+        "allow": null
+      },
+      "actual": {
+        "status": 200,
+        "body": {
+          "items": [
+            {
+              "id": 9,
+              "kind": "info",
+              "message": "Tea \"\u591c\""
+            },
+            {
+              "id": 3,
+              "kind": "audit",
+              "message": "Line\nBack\\"
+            }
+          ],
+          "count": 2,
+          "next": null
+        },
+        "head_empty": true,
+        "length_ok": true,
+        "content_type": "application/json",
+        "allow": null
+      },
+      "error": null,
+      "ok": false,
+      "executed": true
+    },
+    {
+      "input": {
+        "method": "GET",
+        "path": "/api/events?&limit=2"
+      },
+      "expected": {
+        "status": 400,
+        "body": {
+          "error": "bad query"
+        },
+        "head_empty": true,
+        "length_ok": true,
+        "content_type": "application/json",
+        "allow": null
+      },
+      "actual": {
+        "status": 200,
+        "body": {
+          "items": [
+            {
+              "id": 9,
+              "kind": "info",
+              "message": "Tea \"\u591c\""
+            },
+            {
+              "id": 3,
+              "kind": "audit",
+              "message": "Line\nBack\\"
+            }
+          ],
+          "count": 2,
+          "next": null
+        },
+        "head_empty": true,
+        "length_ok": true,
+        "content_type": "application/json",
+        "allow": null
+      },
+      "error": null,
+      "ok": false,
+      "executed": true
+    },
+    {
+      "input": {
+        "method": "GET",
+        "path": "/api/events?limit=2&&after=1"
+      },
+      "expected": {
+        "status": 400,
+        "body": {
+          "error": "bad query"
+        },
+        "head_empty": true,
+        "length_ok": true,
+        "content_type": "application/json",
+        "allow": null
+      },
+      "actual": {
+        "status": 200,
+        "body": {
+          "items": [
+            {
+              "id": 9,
+              "kind": "info",
+              "message": "Tea \"\u591c\""
+            },
+            {
+              "id": 3,
+              "kind": "audit",
+              "message": "Line\nBack\\"
+            }
+          ],
+          "count": 2,
+          "next": null
+        },
+        "head_empty": true,
+        "length_ok": true,
+        "content_type": "application/json",
+        "allow": null
+      },
+      "error": null,
+      "ok": false,
+      "executed": true
+    },
+    {
+      "input": {
+        "method": "GET",
+        "path": "/api/events?after=1&after=1"
+      },
+      "expected": {
+        "status": 400,
+        "body": {
+          "error": "bad query"
+        },
+        "head_empty": true,
+        "length_ok": true,
+        "content_type": "application/json",
+        "allow": null
+      },
+      "actual": {
+        "status": 200,
+        "body": {
+          "items": [
+            {
+              "id": 9,
+              "kind": "info",
+              "message": "Tea \"\u591c\""
+            },
+            {
+              "id": 3,
+              "kind": "audit",
+              "message": "Line\nBack\\"
+            }
+          ],
+          "count": 2,
+          "next": null
+        },
+        "head_empty": true,
+        "length_ok": true,
+        "content_type": "application/json",
+        "allow": null
+      },
+      "error": null,
+      "ok": false,
+      "executed": true
+    },
+    {
+      "input": {
+        "method": "GET",
+        "path": "/api/events?limit=1&limit=2"
+      },
+      "expected": {
+        "status": 400,
+        "body": {
+          "error": "bad query"
+        },
+        "head_empty": true,
+        "length_ok": true,
+        "content_type": "application/json",
+        "allow": null
+      },
+      "actual": {
+        "status": 200,
+        "body": {
+          "items": [
+            {
+              "id": 9,
+              "kind": "info",
+              "message": "Tea \"\u591c\""
+            },
+            {
+              "id": 3,
+              "kind": "audit",
+              "message": "Line\nBack\\"
+            }
+          ],
+          "count": 2,
+          "next": null
+        },
+        "head_empty": true,
+        "length_ok": true,
+        "content_type": "application/json",
+        "allow": null
+      },
+      "error": null,
+      "ok": false,
+      "executed": true
+    },
+    {
+      "input": {
+        "method": "GET",
+        "path": "/api/events?kind=info&kind=info"
+      },
+      "expected": {
+        "status": 400,
+        "body": {
+          "error": "bad query"
+        },
+        "head_empty": true,
+        "length_ok": true,
+        "content_type": "application/json",
+        "allow": null
+      },
+      "actual": {
+        "status": 200,
+        "body": {
+          "items": [
+            {
+              "id": 9,
+              "kind": "info",
+              "message": "Tea \"\u591c\""
+            },
+            {
+              "id": 3,
+              "kind": "audit",
+              "message": "Line\nBack\\"
+            }
+          ],
+          "count": 2,
+          "next": null
+        },
+        "head_empty": true,
+        "length_ok": true,
+        "content_type": "application/json",
+        "allow": null
+      },
+      "error": null,
+      "ok": false,
+      "executed": true
+    },
+    {
+      "input": {
+        "method": "GET",
+        "path": "/api/events?unknown=1"
+      },
+      "expected": {
+        "status": 400,
+        "body": {
+          "error": "bad query"
+        },
+        "head_empty": true,
+        "length_ok": true,
+        "content_type": "application/json",
+        "allow": null
+      },
+      "actual": {
+        "status": 200,
+        "body": {
+          "items": [
+            {
+              "id": 9,
+              "kind": "info",
+              "message": "Tea \"\u591c\""
+            },
+            {
+              "id": 3,
+              "kind": "audit",
+              "message": "Line\nBack\\"
+            }
+          ],
+          "count": 2,
+          "next": null
+        },
+        "head_empty": true,
+        "length_ok": true,
+        "content_type": "application/json",
+        "allow": null
+      },
+      "error": null,
+      "ok": false,
+      "executed": true
+    },
+    {
+      "input": {
+        "method": "GET",
+        "path": "/api/events?kind="
+      },
+      "expected": {
+        "status": 400,
+        "body": {
+          "error": "bad query"
+        },
+        "head_empty": true,
+        "length_ok": true,
+        "content_type": "application/json",
+        "allow": null
+      },
+      "actual": {
+        "status": 200,
+        "body": {
+          "items": [
+            {
+              "id": 9,
+              "kind": "info",
+              "message": "Tea \"\u591c\""
+            },
+            {
+              "id": 3,
+              "kind": "audit",
+              "message": "Line\nBack\\"
+            }
+          ],
+          "count": 2,
+          "next": null
+        },
+        "head_empty": true,
+        "length_ok": true,
+        "content_type": "application/json",
+        "allow": null
+      },
+      "error": null,
+      "ok": false,
+      "executed": true
+    },
+    {
+      "input": {
+        "method": "GET",
+        "path": "/api/events?kind=Info"
+      },
+      "expected": {
+        "status": 400,
+        "body": {
+          "error": "bad query"
+        },
+        "head_empty": true,
+        "length_ok": true,
+        "content_type": "application/json",
+        "allow": null
+      },
+      "actual": {
+        "status": 200,
+        "body": {
+          "items": [
+            {
+              "id": 9,
+              "kind": "info",
+              "message": "Tea \"\u591c\""
+            },
+            {
+              "id": 3,
+              "kind": "audit",
+              "message": "Line\nBack\\"
+            }
+          ],
+          "count": 2,
+          "next": null
+        },
+        "head_empty": true,
+        "length_ok": true,
+        "content_type": "application/json",
+        "allow": null
+      },
+      "error": null,
+      "ok": false,
+      "executed": true
+    },
+    {
+      "input": {
+        "method": "GET",
+        "path": "/api/events?after=%31"
+      },
+      "expected": {
+        "status": 400,
+        "body": {
+          "error": "bad query"
+        },
+        "head_empty": true,
+        "length_ok": true,
+        "content_type": "application/json",
+        "allow": null
+      },
+      "actual": {
+        "status": 200,
+        "body": {
+          "items": [
+            {
+              "id": 9,
+              "kind": "info",
+              "message": "Tea \"\u591c\""
+            },
+            {
+              "id": 3,
+              "kind": "audit",
+              "message": "Line\nBack\\"
+            }
+          ],
+          "count": 2,
+          "next": null
+        },
+        "head_empty": true,
+        "length_ok": true,
+        "content_type": "application/json",
+        "allow": null
+      },
+      "error": null,
+      "ok": false,
+      "executed": true
+    },
+    {
+      "input": {
+        "method": "GET",
+        "path": "/api/events?after=1=2"
+      },
+      "expected": {
+        "status": 400,
+        "body": {
+          "error": "bad query"
+        },
+        "head_empty": true,
+        "length_ok": true,
+        "content_type": "application/json",
+        "allow": null
+      },
+      "actual": {
+        "status": 200,
+        "body": {
+          "items": [
+            {
+              "id": 9,
+              "kind": "info",
+              "message": "Tea \"\u591c\""
+            },
+            {
+              "id": 3,
+              "kind": "audit",
+              "message": "Line\nBack\\"
+            }
+          ],
+          "count": 2,
+          "next": null
+        },
+        "head_empty": true,
+        "length_ok": true,
+        "content_type": "application/json",
+        "allow": null
+      },
+      "error": null,
+      "ok": false,
+      "executed": true
+    },
+    {
+      "input": {
+        "method": "GET",
+        "path": "/api/events/"
+      },
+      "expected": {
+        "status": 404,
+        "body": {
+          "error": "not found"
+        },
+        "head_empty": true,
+        "length_ok": true,
+        "content_type": "application/json",
+        "allow": null
+      },
+      "actual": {
+        "status": 404,
+        "body": {
+          "error": "not found"
+        },
+        "head_empty": true,
+        "length_ok": true,
+        "content_type": "application/json",
+        "allow": null
+      },
+      "error": null,
+      "ok": true,
+      "executed": true
+    },
+    {
+      "input": {
+        "method": "GET",
+        "path": "/health?x=1"
+      },
+      "expected": {
+        "status": 404,
+        "body": {
+          "error": "not found"
+        },
+        "head_empty": true,
+        "length_ok": true,
+        "content_type": "application/json",
+        "allow": null
+      },
+      "actual": {
+        "status": 404,
+        "body": {
+          "error": "not found"
+        },
+        "head_empty": true,
+        "length_ok": true,
+        "content_type": "application/json",
+        "allow": null
+      },
+      "error": null,
+      "ok": true,
+      "executed": true
+    },
+    {
+      "input": {
+        "method": "POST",
+        "path": "/api/events?limit=bad"
+      },
+      "expected": {
+        "status": 405,
+        "body": {
+          "error": "method not allowed"
+        },
+        "head_empty": true,
+        "length_ok": true,
+        "content_type": "application/json",
+        "allow": "GET, HEAD"
+      },
+      "actual": {
+        "status": 405,
+        "body": {
+          "error": "method not allowed"
+        },
+        "head_empty": true,
+        "length_ok": true,
+        "content_type": "application/json",
+        "allow": "GET, HEAD"
+      },
+      "error": null,
+      "ok": true,
+      "executed": true
+    },
+    {
+      "input": {
+        "method": "PUT",
+        "path": "/unknown"
+      },
+      "expected": {
+        "status": 405,
+        "body": {
+          "error": "method not allowed"
+        },
+        "head_empty": true,
+        "length_ok": true,
+        "content_type": "application/json",
+        "allow": "GET, HEAD"
+      },
+      "actual": {
+        "status": 405,
+        "body": {
+          "error": "method not allowed"
+        },
+        "head_empty": true,
+        "length_ok": true,
+        "content_type": "application/json",
+        "allow": "GET, HEAD"
+      },
+      "error": null,
+      "ok": true,
+      "executed": true
+    },
+    {
+      "input": {
+        "method": "HEAD",
+        "path": "/api/events?kind=info"
+      },
+      "expected": {
+        "status": 200,
+        "body": {
+          "items": [
+            {
+              "id": 1,
+              "kind": "info",
+              "message": "start"
+            },
+            {
+              "id": 9,
+              "kind": "info",
+              "message": "Tea \"\u591c\""
+            }
+          ],
+          "count": 2,
+          "next": 9
+        },
+        "head_empty": true,
+        "length_ok": true,
+        "content_type": "application/json",
+        "allow": null
+      },
+      "actual": {
+        "status": 200,
+        "body": {
+          "items": [
+            {
+              "id": 9,
+              "kind": "info",
+              "message": "Tea \"\u591c\""
+            },
+            {
+              "id": 3,
+              "kind": "audit",
+              "message": "Line\nBack\\"
+            }
+          ],
+          "count": 2,
+          "next": null
+        },
+        "head_empty": true,
+        "length_ok": true,
+        "content_type": "application/json",
+        "allow": null
+      },
+      "error": null,
+      "ok": false,
+      "executed": true
+    },
+    {
+      "input": {
+        "method": "HEAD",
+        "path": "/api/events?limit=0"
+      },
+      "expected": {
+        "status": 400,
+        "body": {
+          "error": "bad query"
+        },
+        "head_empty": true,
+        "length_ok": true,
+        "content_type": "application/json",
+        "allow": null
+      },
+      "actual": {
+        "status": 200,
+        "body": {
+          "items": [
+            {
+              "id": 9,
+              "kind": "info",
+              "message": "Tea \"\u591c\""
+            },
+            {
+              "id": 3,
+              "kind": "audit",
+              "message": "Line\nBack\\"
+            }
+          ],
+          "count": 2,
+          "next": null
+        },
+        "head_empty": true,
+        "length_ok": true,
+        "content_type": "application/json",
+        "allow": null
+      },
+      "error": null,
+      "ok": false,
+      "executed": true
+    },
+    {
+      "input": {
+        "method": "HEAD",
+        "path": "/api/events?kind=audit&after=3"
+      },
+      "expected": {
+        "status": 200,
+        "body": {
+          "items": [
+            {
+              "id": 12,
+              "kind": "audit",
+              "message": ""
+            }
+          ],
+          "count": 1,
+          "next": null
+        },
+        "head_empty": true,
+        "length_ok": true,
+        "content_type": "application/json",
+        "allow": null
+      },
+      "actual": {
+        "status": 200,
+        "body": {
+          "items": [
+            {
+              "id": 9,
+              "kind": "info",
+              "message": "Tea \"\u591c\""
+            },
+            {
+              "id": 3,
+              "kind": "audit",
+              "message": "Line\nBack\\"
+            }
+          ],
+          "count": 2,
+          "next": null
+        },
+        "head_empty": true,
+        "length_ok": true,
+        "content_type": "application/json",
+        "allow": null
+      },
+      "error": null,
+      "ok": false,
+      "executed": true
+    }
+  ],
+  "accepted": false,
+  "passed": 5,
+  "total": 40
+}

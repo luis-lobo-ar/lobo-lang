@@ -1,0 +1,16 @@
+module policy;
+use model {Line,Cart}; use sql {Cell,params1};
+variant Plan {Ready(Cart),Invalid}
+fn plan(sku1:I64,qty1:I64,sku2:I64,qty2:I64,key:Text)->Plan {
+ if Text::length(key)<1 || Text::length(key)>24 || qty1<0 || qty1>1000000 || qty2<0 || qty2>1000000 || (qty1>0 && sku1<=0) || (qty2>0 && sku2<=0) || (qty1==0 && qty2==0) {Invalid} else {
+  let a=Line {sku:sku1,qty:qty1};let b=Line {sku:sku2,qty:qty2};let empty=Line {sku:0,qty:0};
+  if qty1==0 {Ready(Cart {first:b,second:empty})} else {
+   if qty2==0 {Ready(Cart {first:a,second:empty})} else {
+    if sku1==sku2 {
+     if qty1>1000000-qty2 {Invalid} else {Ready(Cart {first:Line {sku:sku1,qty:qty1+qty2},second:empty})}
+    } else {if sku1<sku2 {Ready(Cart {first:a,second:b})} else {Ready(Cart {first:b,second:a})}}
+   }
+  }
+ }
+}
+fn params(key:Text,cart:Cart)->List<Cell> {List::prepend(Cell::String(key),List::prepend(Cell::Integer(cart.first.sku),List::prepend(Cell::Integer(cart.first.qty),List::prepend(Cell::Integer(cart.second.sku),params1(Cell::Integer(cart.second.qty))))))}
