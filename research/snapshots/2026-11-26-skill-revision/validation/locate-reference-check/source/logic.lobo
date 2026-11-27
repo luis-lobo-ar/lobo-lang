@@ -1,0 +1,18 @@
+module logic;
+use model {Hit,Search};
+use util {reverse};
+fn run(text:Text,needle:Text,start:I64)->Search<Hit> {
+ let size=Text::length(text);
+ if start<0 || start>size {Invalid(start)} else {
+  let width=Text::length(needle);
+  if width>size-start {Missing} else {
+   let found=fold(i in size-start-width+1,pick:I64 = -1) {
+    if pick>=0 {pick} else {
+     let at=start+i;
+     if Text::slice(text,at,width)==needle {at} else {-1}
+    }
+   };
+   if found<0 {Missing} else {Found(Hit {index:found,prefix:Text::slice(text,0,found),suffix:Text::slice(text,found+width,size-found-width),match_bytes:Bytes::length(Text::bytes(needle))})}
+  }
+ }
+}

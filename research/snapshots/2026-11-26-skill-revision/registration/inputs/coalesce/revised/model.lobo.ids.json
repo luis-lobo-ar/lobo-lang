@@ -1,0 +1,8 @@
+{
+  "format": "lobo-identities/0.1",
+  "identities": {
+    "module": "skilldev.coalesce.model.module",
+    "Span": "skilldev.coalesce.model.Span",
+    "Summary": "skilldev.coalesce.model.Summary"
+  }
+}

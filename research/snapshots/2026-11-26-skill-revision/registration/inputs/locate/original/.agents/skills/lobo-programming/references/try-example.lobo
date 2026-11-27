@@ -1,0 +1,10 @@
+module propagation;
+variant Outcome<T> { Ok(T), Err(Text) }
+fn positive(number:I64)->Outcome<I64> {
+  if number>0 {Ok(number)} else {Err("positive value required")}
+}
+fn increment(number:I64)->Outcome<I64> {
+  let value=try positive(number);
+  Ok(value+1)
+}
+identities {module:"skill.propagation",Outcome:"skill.propagation.outcome",positive:"skill.propagation.positive",increment:"skill.propagation.increment"}

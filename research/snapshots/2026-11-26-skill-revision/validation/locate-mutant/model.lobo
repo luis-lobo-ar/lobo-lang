@@ -1,0 +1,3 @@
+module model;
+record Hit {index:I64,prefix:Text,suffix:Text,match_bytes:I64}
+variant Search<T> {Found(T),Missing,Invalid(I64)}

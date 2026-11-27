@@ -1,0 +1,146 @@
+[
+  {
+    "probe": "else",
+    "valid": false,
+    "check": {
+      "command": [
+        "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/matched-study-20261123/freeze/lobo",
+        "check",
+        "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/skill-revision-20261126/probes/else-bad/program.lobo"
+      ],
+      "exit_code": 1,
+      "stdout": "{\"diagnostic\":{\"code\":\"compile.syntax.invalid\",\"message\":\"expected {, got Word(\\\"if\\\")\",\"phase\":\"parse\",\"range\":{\"end\":{\"byte\":54,\"character\":40,\"line\":1},\"start\":{\"byte\":52,\"character\":38,\"line\":1}},\"source\":\"/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/skill-revision-20261126/probes/else-bad/program.lobo\"},\"kind\":\"compile_error\",\"status\":\"error\"}\n",
+      "stderr": ""
+    }
+  },
+  {
+    "probe": "else",
+    "valid": true,
+    "check": {
+      "command": [
+        "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/matched-study-20261123/freeze/lobo",
+        "check",
+        "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/skill-revision-20261126/probes/else-good/program.lobo"
+      ],
+      "exit_code": 0,
+      "stdout": "{\"actions\":{\"revision.probe.check\":[]},\"entries\":[\"revision.probe.check\"],\"language\":\"core/1.11\",\"status\":\"ok\"}\n",
+      "stderr": ""
+    },
+    "build": {
+      "command": [
+        "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/matched-study-20261123/freeze/lobo",
+        "compile",
+        "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/skill-revision-20261126/probes/else-good/program.lobo",
+        "-o",
+        "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/skill-revision-20261126/probes/else-good/program"
+      ],
+      "exit_code": 0,
+      "stdout": "{\"artifact\":\"/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/skill-revision-20261126/probes/else-good/program\",\"entries\":[\"revision.probe.check\"],\"format\":\"native\",\"status\":\"ok\"}\n",
+      "stderr": ""
+    },
+    "values": [
+      {
+        "command": [
+          "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/skill-revision-20261126/probes/else-good/program",
+          "--entry",
+          "revision.probe.check",
+          "--arg",
+          "I64:-1"
+        ],
+        "exit_code": 0,
+        "stdout": "{\"status\":\"ok\",\"kind\":\"value\",\"value\":{\"type\":\"I64\",\"value\":\"1\"}}\n",
+        "stderr": ""
+      },
+      {
+        "command": [
+          "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/skill-revision-20261126/probes/else-good/program",
+          "--entry",
+          "revision.probe.check",
+          "--arg",
+          "I64:0"
+        ],
+        "exit_code": 0,
+        "stdout": "{\"status\":\"ok\",\"kind\":\"value\",\"value\":{\"type\":\"I64\",\"value\":\"2\"}}\n",
+        "stderr": ""
+      },
+      {
+        "command": [
+          "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/skill-revision-20261126/probes/else-good/program",
+          "--entry",
+          "revision.probe.check",
+          "--arg",
+          "I64:1"
+        ],
+        "exit_code": 0,
+        "stdout": "{\"status\":\"ok\",\"kind\":\"value\",\"value\":{\"type\":\"I64\",\"value\":\"3\"}}\n",
+        "stderr": ""
+      }
+    ]
+  },
+  {
+    "probe": "reserved",
+    "valid": false,
+    "check": {
+      "command": [
+        "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/matched-study-20261123/freeze/lobo",
+        "check",
+        "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/skill-revision-20261126/probes/reserved-bad/program.lobo"
+      ],
+      "exit_code": 1,
+      "stdout": "{\"diagnostic\":{\"code\":\"compile.name.reserved\",\"message\":\"reserved name: result\",\"phase\":\"resolve\",\"range\":{\"end\":{\"byte\":41,\"character\":27,\"line\":1},\"start\":{\"byte\":35,\"character\":21,\"line\":1}},\"source\":\"/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/skill-revision-20261126/probes/reserved-bad/program.lobo\"},\"kind\":\"compile_error\",\"status\":\"error\"}\n",
+      "stderr": ""
+    }
+  },
+  {
+    "probe": "reserved",
+    "valid": true,
+    "check": {
+      "command": [
+        "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/matched-study-20261123/freeze/lobo",
+        "check",
+        "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/skill-revision-20261126/probes/reserved-good/program.lobo"
+      ],
+      "exit_code": 0,
+      "stdout": "{\"actions\":{\"revision.probe.check\":[]},\"entries\":[\"revision.probe.check\"],\"language\":\"core/1.11\",\"status\":\"ok\"}\n",
+      "stderr": ""
+    },
+    "build": {
+      "command": [
+        "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/matched-study-20261123/freeze/lobo",
+        "compile",
+        "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/skill-revision-20261126/probes/reserved-good/program.lobo",
+        "-o",
+        "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/skill-revision-20261126/probes/reserved-good/program"
+      ],
+      "exit_code": 0,
+      "stdout": "{\"artifact\":\"/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/skill-revision-20261126/probes/reserved-good/program\",\"entries\":[\"revision.probe.check\"],\"format\":\"native\",\"status\":\"ok\"}\n",
+      "stderr": ""
+    },
+    "values": [
+      {
+        "command": [
+          "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/skill-revision-20261126/probes/reserved-good/program",
+          "--entry",
+          "revision.probe.check"
+        ],
+        "exit_code": 0,
+        "stdout": "{\"status\":\"ok\",\"kind\":\"value\",\"value\":{\"type\":\"I64\",\"value\":\"6\"}}\n",
+        "stderr": ""
+      }
+    ]
+  },
+  {
+    "probe": "match",
+    "valid": false,
+    "check": {
+      "command": [
+        "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/matched-study-20261123/freeze/lobo",
+        "check",
+        "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/skill-revision-20261126/probes/match-bad/program.lobo"
+      ],
+      "exit_code": 0,
+      "stdout": "{\"actions\":{\"revision.probe.check\":[],\"revision.probe.choose\":[]},\"entries\":[\"revision.probe.choose\",\"revision.probe.check\"],\"language\":\"core/1.11\",\"status\":\"ok\"}\n",
+      "stderr": ""
+    }
+  }
+]

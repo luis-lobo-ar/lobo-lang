@@ -1,0 +1,13 @@
+module logic;
+use model {Span,Summary};
+use util {reverse};
+record Cursor {pending:List<Span>,kept:List<Span>,points:I64,rejected:I64}
+fn run(spans:List<Span>)->Summary {
+ let final=fold(i in List::length(spans),cursor:Cursor=Cursor {pending:spans,kept:List::empty<Span>(),points:0,rejected:0}) {
+  let item=List::head(cursor.pending);
+  if item.end<item.start {Cursor {...cursor,pending:List::tail(cursor.pending),rejected:cursor.rejected+1}} else {
+   Cursor {...cursor,pending:List::tail(cursor.pending),kept:List::prepend(item,cursor.kept),points:cursor.points+item.end-item.start+1}
+  }
+ };
+ Summary {spans:reverse(final.kept),points:final.points,rejected:final.rejected}
+}

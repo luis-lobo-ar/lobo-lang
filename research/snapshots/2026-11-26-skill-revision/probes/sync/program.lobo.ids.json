@@ -1,0 +1,8 @@
+{
+  "format": "lobo-identities/0.1",
+  "identities": {
+    "Box": "lobo.34f9954a8dc9f26cc905af1da1395927",
+    "check": "revision.sync.check",
+    "module": "revision.sync"
+  }
+}

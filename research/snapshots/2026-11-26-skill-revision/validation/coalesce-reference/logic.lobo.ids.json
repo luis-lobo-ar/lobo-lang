@@ -1,0 +1,12 @@
+{
+  "format": "lobo-identities/0.1",
+  "identities": {
+    "module": "skilldev.coalesce.module",
+    "Cursor": "skilldev.coalesce.Cursor",
+    "Total": "skilldev.coalesce.Total",
+    "run": "skilldev.coalesce.run",
+    "model.Span": "skilldev.coalesce.model.Span",
+    "model.Summary": "skilldev.coalesce.model.Summary",
+    "util.reverse": "skilldev.util.reverse"
+  }
+}

@@ -1,0 +1,2 @@
+module probe;
+variant Choice {Keep(I64),Skip} record Envelope {choice:Choice} fn choose(n:I64)->Choice {if n==0 {Skip} else {Keep(n)}} fn check(n:I64)->I64 {let state=Envelope {choice:choose(n)};match state.choice {Keep(x)=>x,Skip=>0}}

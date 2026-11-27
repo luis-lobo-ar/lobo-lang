@@ -1,0 +1,4 @@
+interface:
+  display_name: "Lobo Development v2"
+  short_description: "Develop Lobo with grammar and diagnostic recovery"
+  default_prompt: "Use $lobo-development-v2 to implement this change using relevant Lobo rules, a failing behavior check and native verification."

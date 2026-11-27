@@ -1,0 +1,72 @@
+[
+  {
+    "input": {
+      "text": "\u00e9ababa",
+      "needle": "aba",
+      "start": 0
+    },
+    "expected": {
+      "case": "Found",
+      "payload": {
+        "index": 1,
+        "prefix": "\u00e9",
+        "suffix": "ba",
+        "match_bytes": 3
+      }
+    }
+  },
+  {
+    "input": {
+      "text": "\u00e9ababa",
+      "needle": "aba",
+      "start": 2
+    },
+    "expected": {
+      "case": "Found",
+      "payload": {
+        "index": 3,
+        "prefix": "\u00e9ab",
+        "suffix": "",
+        "match_bytes": 3
+      }
+    }
+  },
+  {
+    "input": {
+      "text": "",
+      "needle": "",
+      "start": 0
+    },
+    "expected": {
+      "case": "Found",
+      "payload": {
+        "index": 0,
+        "prefix": "",
+        "suffix": "",
+        "match_bytes": 0
+      }
+    }
+  },
+  {
+    "input": {
+      "text": "ab",
+      "needle": "z",
+      "start": -1
+    },
+    "expected": {
+      "case": "Invalid",
+      "payload": -1
+    }
+  },
+  {
+    "input": {
+      "text": "ab",
+      "needle": "z",
+      "start": 0
+    },
+    "expected": {
+      "case": "Missing",
+      "payload": null
+    }
+  }
+]

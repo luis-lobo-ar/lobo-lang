@@ -1,0 +1,7 @@
+{
+  "format": "lobo-identities/0.1",
+  "identities": {
+    "module": "revision.probe.module",
+    "check": "revision.probe.check"
+  }
+}

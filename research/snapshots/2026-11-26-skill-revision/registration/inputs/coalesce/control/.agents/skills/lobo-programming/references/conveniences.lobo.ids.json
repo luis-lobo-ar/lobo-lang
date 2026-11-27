@@ -1,0 +1,10 @@
+{
+  "format": "lobo-identities/0.1",
+  "identities": {
+    "Outcome": "lobo.bc877fffc57ad569cf853a2a4c1dabe5",
+    "Settings": "lobo.db9aa2beefcf0361800cd566013797e5",
+    "main": "lobo.89aebc66359ea9778e7685e0abe680f5",
+    "module": "lobo.37cda873bd7febad9910e0ace4e7d86a",
+    "validate": "lobo.84d39d698c3b6e5bae828f1f125c173d"
+  }
+}

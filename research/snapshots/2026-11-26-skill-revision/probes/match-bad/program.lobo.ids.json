@@ -1,0 +1,10 @@
+{
+  "format": "lobo-identities/0.1",
+  "identities": {
+    "module": "revision.probe.module",
+    "Choice": "revision.probe.Choice",
+    "Envelope": "revision.probe.Envelope",
+    "choose": "revision.probe.choose",
+    "check": "revision.probe.check"
+  }
+}

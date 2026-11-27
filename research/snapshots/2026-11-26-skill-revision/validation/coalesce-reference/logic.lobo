@@ -1,0 +1,24 @@
+module logic;
+use model {Span,Summary};
+use util {reverse};
+record Cursor {pending:List<Span>,kept:List<Span>,open:Bool,low:I64,high:I64,rejected:I64}
+record Total {pending:List<Span>,points:I64}
+fn run(spans:List<Span>)->Summary {
+ let final=fold(i in List::length(spans),cursor:Cursor=Cursor {pending:spans,kept:List::empty<Span>(),open:false,low:0,high:0,rejected:0}) {
+  let item=List::head(cursor.pending);
+  if item.end<item.start {Cursor {...cursor,pending:List::tail(cursor.pending),rejected:cursor.rejected+1}} else {
+   if !cursor.open {Cursor {...cursor,pending:List::tail(cursor.pending),open:true,low:item.start,high:item.end}} else {
+    if item.start<=cursor.high+1 {Cursor {...cursor,pending:List::tail(cursor.pending),high:if item.end>cursor.high {item.end} else {cursor.high}}} else {
+     Cursor {...cursor,pending:List::tail(cursor.pending),kept:List::prepend(Span {start:cursor.low,end:cursor.high},cursor.kept),low:item.start,high:item.end}
+    }
+   }
+  }
+ };
+ let backwards=if final.open {List::prepend(Span {start:final.low,end:final.high},final.kept)} else {final.kept};
+ let output=reverse(backwards);
+ let total=fold(j in List::length(output),state:Total=Total {pending:output,points:0}) {
+  let segment=List::head(state.pending);
+  Total {pending:List::tail(state.pending),points:state.points+segment.end-segment.start+1}
+ };
+ Summary {spans:output,points:total.points,rejected:final.rejected}
+}

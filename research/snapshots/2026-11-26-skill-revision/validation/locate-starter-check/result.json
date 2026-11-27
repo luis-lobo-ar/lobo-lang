@@ -1,0 +1,1330 @@
+{
+  "issues": [],
+  "build": {
+    "ok": true,
+    "command": [
+      "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/matched-study-20261123/freeze/lobo",
+      "compile",
+      "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/skill-revision-20261126/validation/locate-starter-check/source/logic.lobo",
+      "--source",
+      "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/skill-revision-20261126/validation/locate-starter-check/source/model.lobo",
+      "--source",
+      "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/skill-revision-20261126/validation/locate-starter-check/source/util.lobo",
+      "-o",
+      "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/skill-revision-20261126/validation/locate-starter-check/program"
+    ],
+    "exit_code": 0,
+    "stdout": "{\"artifact\":\"/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/skill-revision-20261126/validation/locate-starter-check/program\",\"entries\":[\"skilldev.locate.run\"],\"format\":\"native\",\"status\":\"ok\"}\n",
+    "stderr": ""
+  },
+  "cases": [
+    {
+      "input": {
+        "text": "\u00e9ababa",
+        "needle": "aba",
+        "start": 0
+      },
+      "expected": {
+        "case": "Found",
+        "payload": {
+          "index": 1,
+          "prefix": "\u00e9",
+          "suffix": "ba",
+          "match_bytes": 3
+        }
+      },
+      "actual": {
+        "case": "Missing",
+        "payload": null
+      },
+      "error": null,
+      "ok": false
+    },
+    {
+      "input": {
+        "text": "\u00e9ababa",
+        "needle": "aba",
+        "start": 2
+      },
+      "expected": {
+        "case": "Found",
+        "payload": {
+          "index": 3,
+          "prefix": "\u00e9ab",
+          "suffix": "",
+          "match_bytes": 3
+        }
+      },
+      "actual": {
+        "case": "Missing",
+        "payload": null
+      },
+      "error": null,
+      "ok": false
+    },
+    {
+      "input": {
+        "text": "",
+        "needle": "",
+        "start": 0
+      },
+      "expected": {
+        "case": "Found",
+        "payload": {
+          "index": 0,
+          "prefix": "",
+          "suffix": "",
+          "match_bytes": 0
+        }
+      },
+      "actual": {
+        "case": "Missing",
+        "payload": null
+      },
+      "error": null,
+      "ok": false
+    },
+    {
+      "input": {
+        "text": "ab",
+        "needle": "z",
+        "start": -1
+      },
+      "expected": {
+        "case": "Invalid",
+        "payload": -1
+      },
+      "actual": {
+        "case": "Missing",
+        "payload": null
+      },
+      "error": null,
+      "ok": false
+    },
+    {
+      "input": {
+        "text": "ab",
+        "needle": "z",
+        "start": 0
+      },
+      "expected": {
+        "case": "Missing",
+        "payload": null
+      },
+      "actual": {
+        "case": "Missing",
+        "payload": null
+      },
+      "error": null,
+      "ok": true
+    },
+    {
+      "input": {
+        "text": "aaaaaaaaaaaaaaaaaaaaaaaa",
+        "needle": "aa",
+        "start": 23
+      },
+      "expected": {
+        "case": "Missing",
+        "payload": null
+      },
+      "actual": {
+        "case": "Missing",
+        "payload": null
+      },
+      "error": null,
+      "ok": true
+    },
+    {
+      "input": {
+        "text": "x",
+        "needle": "",
+        "start": 9223372036854775807
+      },
+      "expected": {
+        "case": "Invalid",
+        "payload": 9223372036854775807
+      },
+      "actual": {
+        "case": "Missing",
+        "payload": null
+      },
+      "error": null,
+      "ok": false
+    },
+    {
+      "input": {
+        "text": "x",
+        "needle": "",
+        "start": -9223372036854775808
+      },
+      "expected": {
+        "case": "Invalid",
+        "payload": -9223372036854775808
+      },
+      "actual": {
+        "case": "Missing",
+        "payload": null
+      },
+      "error": null,
+      "ok": false
+    },
+    {
+      "input": {
+        "text": "a\u0000e\u0301",
+        "needle": "\u0000e",
+        "start": 0
+      },
+      "expected": {
+        "case": "Found",
+        "payload": {
+          "index": 1,
+          "prefix": "a",
+          "suffix": "\u0301",
+          "match_bytes": 2
+        }
+      },
+      "actual": {
+        "case": "Missing",
+        "payload": null
+      },
+      "error": null,
+      "ok": false
+    },
+    {
+      "input": {
+        "text": "aaaaaaaaaaaaaaaaaaaaaaaa",
+        "needle": "aaaaaaaaaaaaaaaaaaaaaaaa",
+        "start": 0
+      },
+      "expected": {
+        "case": "Found",
+        "payload": {
+          "index": 0,
+          "prefix": "",
+          "suffix": "",
+          "match_bytes": 24
+        }
+      },
+      "actual": {
+        "case": "Missing",
+        "payload": null
+      },
+      "error": null,
+      "ok": false
+    },
+    {
+      "input": {
+        "text": "\ud83d\udc3a\u00e9",
+        "needle": "\u00e9",
+        "start": 1
+      },
+      "expected": {
+        "case": "Found",
+        "payload": {
+          "index": 1,
+          "prefix": "\ud83d\udc3a",
+          "suffix": "",
+          "match_bytes": 2
+        }
+      },
+      "actual": {
+        "case": "Missing",
+        "payload": null
+      },
+      "error": null,
+      "ok": false
+    },
+    {
+      "input": {
+        "text": "\ud83d\udc3aa\u0000\u0301a\u00e9\u00e9\u0301b\u0301\u0301\u00e9a\ud83d\udc3a\u00e9",
+        "needle": "\ud83d\udc3aa\u0000\u0301a\u00e9\u00e9",
+        "start": 16
+      },
+      "expected": {
+        "case": "Invalid",
+        "payload": 16
+      },
+      "actual": {
+        "case": "Missing",
+        "payload": null
+      },
+      "error": null,
+      "ok": false
+    },
+    {
+      "input": {
+        "text": "\u0000\ud83d\udc3a\ud83d\udc3a\u0301\u00e9\u00e9b\ud83d\udc3aa\u0000\u0301b\u0301a\u00e9\u0000\ud83d\udc3a\u00e9\u0000\u00e9",
+        "needle": "",
+        "start": 20
+      },
+      "expected": {
+        "case": "Found",
+        "payload": {
+          "index": 20,
+          "prefix": "\u0000\ud83d\udc3a\ud83d\udc3a\u0301\u00e9\u00e9b\ud83d\udc3aa\u0000\u0301b\u0301a\u00e9\u0000\ud83d\udc3a\u00e9\u0000\u00e9",
+          "suffix": "",
+          "match_bytes": 0
+        }
+      },
+      "actual": {
+        "case": "Missing",
+        "payload": null
+      },
+      "error": null,
+      "ok": false
+    },
+    {
+      "input": {
+        "text": "",
+        "needle": "\ud83d\udc3a",
+        "start": 0
+      },
+      "expected": {
+        "case": "Missing",
+        "payload": null
+      },
+      "actual": {
+        "case": "Missing",
+        "payload": null
+      },
+      "error": null,
+      "ok": true
+    },
+    {
+      "input": {
+        "text": "bb\u0000\u00e9",
+        "needle": "bb\u0000",
+        "start": 3
+      },
+      "expected": {
+        "case": "Missing",
+        "payload": null
+      },
+      "actual": {
+        "case": "Missing",
+        "payload": null
+      },
+      "error": null,
+      "ok": true
+    },
+    {
+      "input": {
+        "text": "\u0000\ud83d\udc3a\ud83d\udc3aa\ud83d\udc3a\u0301\u0000a\ud83d\udc3ab\u0000\u0301\u0000a\u0000b\u0000\u0000a",
+        "needle": "zz",
+        "start": 8
+      },
+      "expected": {
+        "case": "Missing",
+        "payload": null
+      },
+      "actual": {
+        "case": "Missing",
+        "payload": null
+      },
+      "error": null,
+      "ok": true
+    },
+    {
+      "input": {
+        "text": "\u0301\ud83d\udc3aa\ud83d\udc3a\u0301\ud83d\udc3a\u0000\u00e9\ud83d\udc3a\u0000\u0301a\u00e9\u00e9\u00e9b\u00e9\u0301",
+        "needle": "\u0301\ud83d\udc3aa\ud83d\udc3a\u0301\ud83d\udc3a\u0000\u00e9",
+        "start": 18
+      },
+      "expected": {
+        "case": "Missing",
+        "payload": null
+      },
+      "actual": {
+        "case": "Missing",
+        "payload": null
+      },
+      "error": null,
+      "ok": true
+    },
+    {
+      "input": {
+        "text": "bb\u00e9b\u0000\u0000\u0000b\ud83d\udc3a\u00e9a\ud83d\udc3ab\ud83d\udc3a\u00e9\ud83d\udc3a\u0000\u0301\ud83d\udc3a",
+        "needle": "zz",
+        "start": -1
+      },
+      "expected": {
+        "case": "Invalid",
+        "payload": -1
+      },
+      "actual": {
+        "case": "Missing",
+        "payload": null
+      },
+      "error": null,
+      "ok": false
+    },
+    {
+      "input": {
+        "text": "\u0000\u0000a\u0301\u0000\u00e9b\ud83d\udc3a\u0301b\ud83d\udc3ab",
+        "needle": "",
+        "start": 12
+      },
+      "expected": {
+        "case": "Found",
+        "payload": {
+          "index": 12,
+          "prefix": "\u0000\u0000a\u0301\u0000\u00e9b\ud83d\udc3a\u0301b\ud83d\udc3ab",
+          "suffix": "",
+          "match_bytes": 0
+        }
+      },
+      "actual": {
+        "case": "Missing",
+        "payload": null
+      },
+      "error": null,
+      "ok": false
+    },
+    {
+      "input": {
+        "text": "aa\u0301a\u0000\ud83d\udc3a\u0301a\u0000ab\u00e9b\u0301\u0301\u0000b\u0000",
+        "needle": "",
+        "start": 17
+      },
+      "expected": {
+        "case": "Found",
+        "payload": {
+          "index": 17,
+          "prefix": "aa\u0301a\u0000\ud83d\udc3a\u0301a\u0000ab\u00e9b\u0301\u0301\u0000b",
+          "suffix": "\u0000",
+          "match_bytes": 0
+        }
+      },
+      "actual": {
+        "case": "Missing",
+        "payload": null
+      },
+      "error": null,
+      "ok": false
+    },
+    {
+      "input": {
+        "text": "\u00e9\u00e9aa\u00e9\u0000\u0000\u00e9",
+        "needle": "",
+        "start": 8
+      },
+      "expected": {
+        "case": "Found",
+        "payload": {
+          "index": 8,
+          "prefix": "\u00e9\u00e9aa\u00e9\u0000\u0000\u00e9",
+          "suffix": "",
+          "match_bytes": 0
+        }
+      },
+      "actual": {
+        "case": "Missing",
+        "payload": null
+      },
+      "error": null,
+      "ok": false
+    },
+    {
+      "input": {
+        "text": "\u00e9\u0301a\u00e9a\u00e9\u0301\ud83d\udc3a\ud83d\udc3aba\u00e9a\ud83d\udc3a\u0000\u0000b\u0301\u0000aa\u00e9\u0000a",
+        "needle": "zz",
+        "start": 5
+      },
+      "expected": {
+        "case": "Missing",
+        "payload": null
+      },
+      "actual": {
+        "case": "Missing",
+        "payload": null
+      },
+      "error": null,
+      "ok": true
+    },
+    {
+      "input": {
+        "text": "\u0301\u0000\u0000\ud83d\udc3a\u0301ab\ud83d\udc3ab\ud83d\udc3a\u00e9\u0000b\u0000\u0301b\u00e9\ud83d\udc3a\u0301\ud83d\udc3a\u00e9b\u0000\u00e9",
+        "needle": "a",
+        "start": 0
+      },
+      "expected": {
+        "case": "Found",
+        "payload": {
+          "index": 5,
+          "prefix": "\u0301\u0000\u0000\ud83d\udc3a\u0301",
+          "suffix": "b\ud83d\udc3ab\ud83d\udc3a\u00e9\u0000b\u0000\u0301b\u00e9\ud83d\udc3a\u0301\ud83d\udc3a\u00e9b\u0000\u00e9",
+          "match_bytes": 1
+        }
+      },
+      "actual": {
+        "case": "Missing",
+        "payload": null
+      },
+      "error": null,
+      "ok": false
+    },
+    {
+      "input": {
+        "text": "\u00e9bb\u0000\u00e9\ud83d\udc3a\ud83d\udc3ab\u00e9",
+        "needle": "a",
+        "start": 0
+      },
+      "expected": {
+        "case": "Missing",
+        "payload": null
+      },
+      "actual": {
+        "case": "Missing",
+        "payload": null
+      },
+      "error": null,
+      "ok": true
+    },
+    {
+      "input": {
+        "text": "a\u00e9\u00e9\ud83d\udc3a\u00e9b\ud83d\udc3a",
+        "needle": "",
+        "start": 1
+      },
+      "expected": {
+        "case": "Found",
+        "payload": {
+          "index": 1,
+          "prefix": "a",
+          "suffix": "\u00e9\u00e9\ud83d\udc3a\u00e9b\ud83d\udc3a",
+          "match_bytes": 0
+        }
+      },
+      "actual": {
+        "case": "Missing",
+        "payload": null
+      },
+      "error": null,
+      "ok": false
+    },
+    {
+      "input": {
+        "text": "\u0301a\u0301\u0301a\u0301\ud83d\udc3a\u0301b\u0301\u0301\u0000a",
+        "needle": "",
+        "start": 4
+      },
+      "expected": {
+        "case": "Found",
+        "payload": {
+          "index": 4,
+          "prefix": "\u0301a\u0301\u0301",
+          "suffix": "a\u0301\ud83d\udc3a\u0301b\u0301\u0301\u0000a",
+          "match_bytes": 0
+        }
+      },
+      "actual": {
+        "case": "Missing",
+        "payload": null
+      },
+      "error": null,
+      "ok": false
+    },
+    {
+      "input": {
+        "text": "\u0301\ud83d\udc3a\ud83d\udc3a\ud83d\udc3ab\u0301\u0301b\u0301aa\u0301b\u0301\u0000\ud83d\udc3a\u0301\u0301ba",
+        "needle": "\ud83d\udc3a",
+        "start": 20
+      },
+      "expected": {
+        "case": "Missing",
+        "payload": null
+      },
+      "actual": {
+        "case": "Missing",
+        "payload": null
+      },
+      "error": null,
+      "ok": true
+    },
+    {
+      "input": {
+        "text": "\u0000\u0301\ud83d\udc3a\u0000\u0301\u0000b\u0301\ud83d\udc3a\ud83d\udc3a\u0000\u0301\u0000\ud83d\udc3a\ud83d\udc3a\u0301\u0301\u0000",
+        "needle": "\ud83d\udc3a",
+        "start": -1
+      },
+      "expected": {
+        "case": "Invalid",
+        "payload": -1
+      },
+      "actual": {
+        "case": "Missing",
+        "payload": null
+      },
+      "error": null,
+      "ok": false
+    },
+    {
+      "input": {
+        "text": "bb\u00e9\u0301\u0301\ud83d\udc3aa\u0000aba\u00e9a\ud83d\udc3a\u0301\u00e9bb\u0301\u0301\u0000\u00e9",
+        "needle": "\u00e9",
+        "start": 13
+      },
+      "expected": {
+        "case": "Found",
+        "payload": {
+          "index": 15,
+          "prefix": "bb\u00e9\u0301\u0301\ud83d\udc3aa\u0000aba\u00e9a\ud83d\udc3a\u0301",
+          "suffix": "bb\u0301\u0301\u0000\u00e9",
+          "match_bytes": 2
+        }
+      },
+      "actual": {
+        "case": "Missing",
+        "payload": null
+      },
+      "error": null,
+      "ok": false
+    },
+    {
+      "input": {
+        "text": "\u0301\u00e9a\u00e9\ud83d\udc3a\u0000",
+        "needle": "",
+        "start": -1
+      },
+      "expected": {
+        "case": "Invalid",
+        "payload": -1
+      },
+      "actual": {
+        "case": "Missing",
+        "payload": null
+      },
+      "error": null,
+      "ok": false
+    },
+    {
+      "input": {
+        "text": "\u00e9\u0301\u0000",
+        "needle": "\ud83d\udc3a",
+        "start": 4
+      },
+      "expected": {
+        "case": "Invalid",
+        "payload": 4
+      },
+      "actual": {
+        "case": "Missing",
+        "payload": null
+      },
+      "error": null,
+      "ok": false
+    },
+    {
+      "input": {
+        "text": "\ud83d\udc3aab",
+        "needle": "",
+        "start": 1
+      },
+      "expected": {
+        "case": "Found",
+        "payload": {
+          "index": 1,
+          "prefix": "\ud83d\udc3a",
+          "suffix": "ab",
+          "match_bytes": 0
+        }
+      },
+      "actual": {
+        "case": "Missing",
+        "payload": null
+      },
+      "error": null,
+      "ok": false
+    },
+    {
+      "input": {
+        "text": "\u00e9\ud83d\udc3aba\u0000a",
+        "needle": "",
+        "start": 7
+      },
+      "expected": {
+        "case": "Invalid",
+        "payload": 7
+      },
+      "actual": {
+        "case": "Missing",
+        "payload": null
+      },
+      "error": null,
+      "ok": false
+    },
+    {
+      "input": {
+        "text": "\u0000\u0000\u0301a\u0000\u0000\u0301\u00e9\u00e9\u0000\u00e9\u00e9\u0301\ud83d\udc3ab\ud83d\udc3a\u0000\u0000\u00e9\ud83d\udc3ab\u0301\ud83d\udc3a",
+        "needle": "",
+        "start": 22
+      },
+      "expected": {
+        "case": "Found",
+        "payload": {
+          "index": 22,
+          "prefix": "\u0000\u0000\u0301a\u0000\u0000\u0301\u00e9\u00e9\u0000\u00e9\u00e9\u0301\ud83d\udc3ab\ud83d\udc3a\u0000\u0000\u00e9\ud83d\udc3ab\u0301",
+          "suffix": "\ud83d\udc3a",
+          "match_bytes": 0
+        }
+      },
+      "actual": {
+        "case": "Missing",
+        "payload": null
+      },
+      "error": null,
+      "ok": false
+    },
+    {
+      "input": {
+        "text": "\u0000a\u0301",
+        "needle": "",
+        "start": -1
+      },
+      "expected": {
+        "case": "Invalid",
+        "payload": -1
+      },
+      "actual": {
+        "case": "Missing",
+        "payload": null
+      },
+      "error": null,
+      "ok": false
+    },
+    {
+      "input": {
+        "text": "\u00e9\u0000\u00e9\u0301",
+        "needle": "\u00e9",
+        "start": 4
+      },
+      "expected": {
+        "case": "Missing",
+        "payload": null
+      },
+      "actual": {
+        "case": "Missing",
+        "payload": null
+      },
+      "error": null,
+      "ok": true
+    },
+    {
+      "input": {
+        "text": "\ud83d\udc3a\u00e9aa\u0301\u0000a\u0000",
+        "needle": "\ud83d\udc3a\u00e9aa\u0301\u0000a",
+        "start": 8
+      },
+      "expected": {
+        "case": "Missing",
+        "payload": null
+      },
+      "actual": {
+        "case": "Missing",
+        "payload": null
+      },
+      "error": null,
+      "ok": true
+    },
+    {
+      "input": {
+        "text": "\u00e9bba\u00e9\u0301\u0301\u0301\ud83d\udc3ab\ud83d\udc3a\ud83d\udc3a\ud83d\udc3aa\ud83d\udc3abaa\u00e9\ud83d\udc3a\u0301\u0301a\u00e9",
+        "needle": "\u00e9bba\u00e9\u0301\u0301\u0301\ud83d\udc3ab\ud83d\udc3a",
+        "start": -1
+      },
+      "expected": {
+        "case": "Invalid",
+        "payload": -1
+      },
+      "actual": {
+        "case": "Missing",
+        "payload": null
+      },
+      "error": null,
+      "ok": false
+    },
+    {
+      "input": {
+        "text": "\u0301bb\u00e9b\ud83d\udc3a\u0000\u0301\u0000\ud83d\udc3a\u0000\u00e9a\ud83d\udc3a",
+        "needle": "zz",
+        "start": 14
+      },
+      "expected": {
+        "case": "Missing",
+        "payload": null
+      },
+      "actual": {
+        "case": "Missing",
+        "payload": null
+      },
+      "error": null,
+      "ok": true
+    },
+    {
+      "input": {
+        "text": "\u0000ab\ud83d\udc3a\u00e9ba\ud83d\udc3abb\u0301\u0000\ud83d\udc3aa",
+        "needle": "\u0000ab\ud83d\udc3a",
+        "start": 0
+      },
+      "expected": {
+        "case": "Found",
+        "payload": {
+          "index": 0,
+          "prefix": "",
+          "suffix": "\u00e9ba\ud83d\udc3abb\u0301\u0000\ud83d\udc3aa",
+          "match_bytes": 7
+        }
+      },
+      "actual": {
+        "case": "Missing",
+        "payload": null
+      },
+      "error": null,
+      "ok": false
+    },
+    {
+      "input": {
+        "text": "\u00e9\u0301\u0000a\ud83d\udc3aa\u0000\u0000\u0000\u0000\u0000\u0000\u00e9",
+        "needle": "",
+        "start": 14
+      },
+      "expected": {
+        "case": "Invalid",
+        "payload": 14
+      },
+      "actual": {
+        "case": "Missing",
+        "payload": null
+      },
+      "error": null,
+      "ok": false
+    },
+    {
+      "input": {
+        "text": "\ud83d\udc3a\u0000\u0000\u0000aabb\u0301\u00e9\u00e9a",
+        "needle": "\u00e9",
+        "start": 12
+      },
+      "expected": {
+        "case": "Missing",
+        "payload": null
+      },
+      "actual": {
+        "case": "Missing",
+        "payload": null
+      },
+      "error": null,
+      "ok": true
+    },
+    {
+      "input": {
+        "text": "b\u00e9\u0301\u0301\u0000ab\u0000\ud83d\udc3a\u0301\u00e9\u0301a\u0000b",
+        "needle": "\ud83d\udc3a",
+        "start": 15
+      },
+      "expected": {
+        "case": "Missing",
+        "payload": null
+      },
+      "actual": {
+        "case": "Missing",
+        "payload": null
+      },
+      "error": null,
+      "ok": true
+    },
+    {
+      "input": {
+        "text": "\ud83d\udc3a",
+        "needle": "\ud83d\udc3a",
+        "start": 0
+      },
+      "expected": {
+        "case": "Found",
+        "payload": {
+          "index": 0,
+          "prefix": "",
+          "suffix": "",
+          "match_bytes": 4
+        }
+      },
+      "actual": {
+        "case": "Missing",
+        "payload": null
+      },
+      "error": null,
+      "ok": false
+    },
+    {
+      "input": {
+        "text": "\u0301\u0301\u00e9\u00e9\u00e9\u0000\u0000\u00e9a\u0301\u0301abb\u0301\u0000\u0000a",
+        "needle": "a",
+        "start": -1
+      },
+      "expected": {
+        "case": "Invalid",
+        "payload": -1
+      },
+      "actual": {
+        "case": "Missing",
+        "payload": null
+      },
+      "error": null,
+      "ok": false
+    },
+    {
+      "input": {
+        "text": "\u0301a\u0301\u0000\u00e9\u0000\u0000a\u00e9b\u0301\u0000b\u0000",
+        "needle": "\u00e9",
+        "start": 14
+      },
+      "expected": {
+        "case": "Missing",
+        "payload": null
+      },
+      "actual": {
+        "case": "Missing",
+        "payload": null
+      },
+      "error": null,
+      "ok": true
+    },
+    {
+      "input": {
+        "text": "b\u0000ba\ud83d\udc3a\u00e9\u0000\u00e9\ud83d\udc3a",
+        "needle": "zz",
+        "start": 9
+      },
+      "expected": {
+        "case": "Missing",
+        "payload": null
+      },
+      "actual": {
+        "case": "Missing",
+        "payload": null
+      },
+      "error": null,
+      "ok": true
+    },
+    {
+      "input": {
+        "text": "b\u0000b\u0301\u0301\u00e9\ud83d\udc3a\u00e9\ud83d\udc3aab\ud83d\udc3aa\u00e9\u00e9",
+        "needle": "b\u0000b\u0301\u0301\u00e9\ud83d\udc3a",
+        "start": 15
+      },
+      "expected": {
+        "case": "Missing",
+        "payload": null
+      },
+      "actual": {
+        "case": "Missing",
+        "payload": null
+      },
+      "error": null,
+      "ok": true
+    },
+    {
+      "input": {
+        "text": "\u0301\u0000",
+        "needle": "a",
+        "start": 0
+      },
+      "expected": {
+        "case": "Missing",
+        "payload": null
+      },
+      "actual": {
+        "case": "Missing",
+        "payload": null
+      },
+      "error": null,
+      "ok": true
+    },
+    {
+      "input": {
+        "text": "\u0301\u00e9a\u0301\u00e9baabaa\u0000a\ud83d\udc3a\u0000\u0000\u0000\u0301\ud83d\udc3ab\ud83d\udc3a\u00e9",
+        "needle": "a",
+        "start": -1
+      },
+      "expected": {
+        "case": "Invalid",
+        "payload": -1
+      },
+      "actual": {
+        "case": "Missing",
+        "payload": null
+      },
+      "error": null,
+      "ok": false
+    },
+    {
+      "input": {
+        "text": "\u0301\u00e9\u0000\ud83d\udc3ab\u0000\u00e9\u0000\u0000\u00e9",
+        "needle": "\ud83d\udc3a",
+        "start": 11
+      },
+      "expected": {
+        "case": "Invalid",
+        "payload": 11
+      },
+      "actual": {
+        "case": "Missing",
+        "payload": null
+      },
+      "error": null,
+      "ok": false
+    },
+    {
+      "input": {
+        "text": "\u00e9\u0301\ud83d\udc3a\u0000\u0000\u0301\u00e9\u0301\u00e9\u0301\u00e9",
+        "needle": "\u00e9\u0301",
+        "start": 0
+      },
+      "expected": {
+        "case": "Found",
+        "payload": {
+          "index": 0,
+          "prefix": "",
+          "suffix": "\ud83d\udc3a\u0000\u0000\u0301\u00e9\u0301\u00e9\u0301\u00e9",
+          "match_bytes": 4
+        }
+      },
+      "actual": {
+        "case": "Missing",
+        "payload": null
+      },
+      "error": null,
+      "ok": false
+    },
+    {
+      "input": {
+        "text": "\u00e9\ud83d\udc3abaa\u00e9\u0000a\u0000\u0301\u0301\ud83d\udc3aa\u0000\u00e9\u00e9",
+        "needle": "zz",
+        "start": 0
+      },
+      "expected": {
+        "case": "Missing",
+        "payload": null
+      },
+      "actual": {
+        "case": "Missing",
+        "payload": null
+      },
+      "error": null,
+      "ok": true
+    },
+    {
+      "input": {
+        "text": "a\u0000\u0000\u0301\u0301a\u0000\u0000\u0301a\u00e9\u0000\u00e9a",
+        "needle": "zz",
+        "start": -1
+      },
+      "expected": {
+        "case": "Invalid",
+        "payload": -1
+      },
+      "actual": {
+        "case": "Missing",
+        "payload": null
+      },
+      "error": null,
+      "ok": false
+    },
+    {
+      "input": {
+        "text": "\ud83d\udc3a\u0000\u0000\u0000\u0000\u0000a\ud83d\udc3a\ud83d\udc3a\u0301b\u00e9\u0301a\u0000a\u00e9b\u0301\u00e9b\u0000\ud83d\udc3a",
+        "needle": "zz",
+        "start": -1
+      },
+      "expected": {
+        "case": "Invalid",
+        "payload": -1
+      },
+      "actual": {
+        "case": "Missing",
+        "payload": null
+      },
+      "error": null,
+      "ok": false
+    },
+    {
+      "input": {
+        "text": "",
+        "needle": "",
+        "start": 0
+      },
+      "expected": {
+        "case": "Found",
+        "payload": {
+          "index": 0,
+          "prefix": "",
+          "suffix": "",
+          "match_bytes": 0
+        }
+      },
+      "actual": {
+        "case": "Missing",
+        "payload": null
+      },
+      "error": null,
+      "ok": false
+    },
+    {
+      "input": {
+        "text": "\u0301\u0000\u00e9\ud83d\udc3a\u00e9\u0000\u0301\ud83d\udc3a\u0000b\u0301ba\u0301",
+        "needle": "\u00e9",
+        "start": 13
+      },
+      "expected": {
+        "case": "Missing",
+        "payload": null
+      },
+      "actual": {
+        "case": "Missing",
+        "payload": null
+      },
+      "error": null,
+      "ok": true
+    },
+    {
+      "input": {
+        "text": "a\u0000\u0301bbba\u0000\u0301\u0301b",
+        "needle": "",
+        "start": 0
+      },
+      "expected": {
+        "case": "Found",
+        "payload": {
+          "index": 0,
+          "prefix": "",
+          "suffix": "a\u0000\u0301bbba\u0000\u0301\u0301b",
+          "match_bytes": 0
+        }
+      },
+      "actual": {
+        "case": "Missing",
+        "payload": null
+      },
+      "error": null,
+      "ok": false
+    },
+    {
+      "input": {
+        "text": "\u0301\u0000\u0000",
+        "needle": "zz",
+        "start": -1
+      },
+      "expected": {
+        "case": "Invalid",
+        "payload": -1
+      },
+      "actual": {
+        "case": "Missing",
+        "payload": null
+      },
+      "error": null,
+      "ok": false
+    },
+    {
+      "input": {
+        "text": "a",
+        "needle": "",
+        "start": 2
+      },
+      "expected": {
+        "case": "Invalid",
+        "payload": 2
+      },
+      "actual": {
+        "case": "Missing",
+        "payload": null
+      },
+      "error": null,
+      "ok": false
+    },
+    {
+      "input": {
+        "text": "\u0301bab\u0301ba\u0301aa\u0301\u0301\u0301\u0301\ud83d\udc3a\u00e9abb\u00e9\u0000",
+        "needle": "\u0301bab\u0301",
+        "start": 22
+      },
+      "expected": {
+        "case": "Invalid",
+        "payload": 22
+      },
+      "actual": {
+        "case": "Missing",
+        "payload": null
+      },
+      "error": null,
+      "ok": false
+    },
+    {
+      "input": {
+        "text": "\ud83d\udc3ab\ud83d\udc3a\ud83d\udc3a\u00e9",
+        "needle": "a",
+        "start": 6
+      },
+      "expected": {
+        "case": "Invalid",
+        "payload": 6
+      },
+      "actual": {
+        "case": "Missing",
+        "payload": null
+      },
+      "error": null,
+      "ok": false
+    },
+    {
+      "input": {
+        "text": "bb",
+        "needle": "\ud83d\udc3a",
+        "start": 2
+      },
+      "expected": {
+        "case": "Missing",
+        "payload": null
+      },
+      "actual": {
+        "case": "Missing",
+        "payload": null
+      },
+      "error": null,
+      "ok": true
+    },
+    {
+      "input": {
+        "text": "\u00e9\ud83d\udc3a\u0301b\ud83d\udc3aa\u0000b\u0301\u00e9b\u00e9\u0000a\u0000\u0301",
+        "needle": "a",
+        "start": 17
+      },
+      "expected": {
+        "case": "Invalid",
+        "payload": 17
+      },
+      "actual": {
+        "case": "Missing",
+        "payload": null
+      },
+      "error": null,
+      "ok": false
+    },
+    {
+      "input": {
+        "text": "\u0301\u0000\u0000\ud83d\udc3a\u0000\ud83d\udc3ab\u00e9",
+        "needle": "a",
+        "start": 0
+      },
+      "expected": {
+        "case": "Missing",
+        "payload": null
+      },
+      "actual": {
+        "case": "Missing",
+        "payload": null
+      },
+      "error": null,
+      "ok": true
+    },
+    {
+      "input": {
+        "text": "\ud83d\udc3a\ud83d\udc3a\u00e9a\u0000\u0301\ud83d\udc3aaab\u00e9\ud83d\udc3a\ud83d\udc3aa",
+        "needle": "\ud83d\udc3a\ud83d\udc3a\u00e9",
+        "start": -1
+      },
+      "expected": {
+        "case": "Invalid",
+        "payload": -1
+      },
+      "actual": {
+        "case": "Missing",
+        "payload": null
+      },
+      "error": null,
+      "ok": false
+    },
+    {
+      "input": {
+        "text": "a\u0301\u0301abbb",
+        "needle": "a\u0301\u0301abbb",
+        "start": 6
+      },
+      "expected": {
+        "case": "Missing",
+        "payload": null
+      },
+      "actual": {
+        "case": "Missing",
+        "payload": null
+      },
+      "error": null,
+      "ok": true
+    },
+    {
+      "input": {
+        "text": "\u0301",
+        "needle": "",
+        "start": 0
+      },
+      "expected": {
+        "case": "Found",
+        "payload": {
+          "index": 0,
+          "prefix": "",
+          "suffix": "\u0301",
+          "match_bytes": 0
+        }
+      },
+      "actual": {
+        "case": "Missing",
+        "payload": null
+      },
+      "error": null,
+      "ok": false
+    },
+    {
+      "input": {
+        "text": "\u0301\u0301ab\ud83d\udc3a\u00e9\u00e9\u0000\u00e9",
+        "needle": "a",
+        "start": 9
+      },
+      "expected": {
+        "case": "Missing",
+        "payload": null
+      },
+      "actual": {
+        "case": "Missing",
+        "payload": null
+      },
+      "error": null,
+      "ok": true
+    },
+    {
+      "input": {
+        "text": "bab\ud83d\udc3a\u0301a\u0301a\ud83d\udc3a\ud83d\udc3a\u0301\u0301\ud83d\udc3a\u0301\u0301\ud83d\udc3aab\ud83d\udc3a\u0000",
+        "needle": "a",
+        "start": 8
+      },
+      "expected": {
+        "case": "Found",
+        "payload": {
+          "index": 16,
+          "prefix": "bab\ud83d\udc3a\u0301a\u0301a\ud83d\udc3a\ud83d\udc3a\u0301\u0301\ud83d\udc3a\u0301\u0301\ud83d\udc3a",
+          "suffix": "b\ud83d\udc3a\u0000",
+          "match_bytes": 1
+        }
+      },
+      "actual": {
+        "case": "Missing",
+        "payload": null
+      },
+      "error": null,
+      "ok": false
+    }
+  ],
+  "accepted": false,
+  "passed": 24,
+  "total": 70
+}

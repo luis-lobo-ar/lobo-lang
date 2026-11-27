@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/matched-study/skill_revision.py", line 107, in <module>
+    if a.operation=='probes':probes(a.out.resolve())
+                             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/matched-study/skill_revision.py", line 58, in probes
+    record=dict(probe=name,valid=valid,check=command([B.COMPILER,'check',source]));rows.append(record);B.write_json(out/'results.json',rows);assert (record['check']['exit_code']==0)==valid,record
+                                                                                                                                                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: {'probe': 'match', 'valid': False, 'check': {'command': ['/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/matched-study-20261123/freeze/lobo', 'check', '/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/skill-revision-20261126/probes/match-bad/program.lobo'], 'exit_code': 0, 'stdout': '{"actions":{"revision.probe.check":[],"revision.probe.choose":[]},"entries":["revision.probe.choose","revision.probe.check"],"language":"core/1.11","status":"ok"}\n', 'stderr': ''}}

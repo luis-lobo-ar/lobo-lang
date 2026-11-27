@@ -1,0 +1,8 @@
+{
+  "format": "lobo-identities/0.1",
+  "identities": {
+    "module": "skilldev.locate.model.module",
+    "Hit": "skilldev.locate.model.Hit",
+    "Search": "skilldev.locate.model.Search"
+  }
+}

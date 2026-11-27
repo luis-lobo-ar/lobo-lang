@@ -1,0 +1,2 @@
+module probe;
+fn check()->I64 {let result=6;result}

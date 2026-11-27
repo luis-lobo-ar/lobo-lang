@@ -1,0 +1,4 @@
+module logic;
+use model {Hit,Search};
+use util {reverse};
+fn run(text:Text,needle:Text,start:I64)->Search<Hit> {Missing}

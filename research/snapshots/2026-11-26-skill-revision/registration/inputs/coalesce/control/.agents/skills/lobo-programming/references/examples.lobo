@@ -1,0 +1,77 @@
+module skill_examples;
+
+record Pair { left: I64, right: I64 }
+operator +(Pair, Pair) -> Pair = add_pair;
+
+fn add_pair(a: Pair, b: Pair) -> Pair {
+  Pair { left: a.left + b.left, right: a.right + b.right }
+}
+
+fn sum_pair() -> Pair {
+  Pair { left: 1, right: 2 } + Pair { left: 3, right: 4 }
+}
+variant Maybe { PairValue(Pair), Empty }
+record Folder { name: Text, children: List<Folder> }
+
+fn identity<T>(value: T) -> T
+{ value }
+
+fn generic_text(text: Text) -> Text {
+  identity(text)
+}
+
+fn fraction(count: I64) -> F64
+requires { count > 0 }
+{ 1.5 / F64::from_i64(count) }
+
+record Box<T> { value: T }
+variant Option<T> { None, Some(T) }
+fn apply<T,U>(callback: Fn(T) -> U, value: T) -> U { callback(value) }
+fn boxed(text: Text) -> Text {
+  let box: Box<Text> = Box { value: text };
+  let option = Option::Some(box);
+  match option { None => "", Some(present) => apply::<Text,Text>(identity, present.value) }
+}
+
+fn folder(name: Text) -> Folder {
+  Folder { name: name, children: List::empty<Folder>() }
+}
+
+fn exchange(pair: Pair) -> Pair {
+  Pair { left: pair.right, right: pair.left }
+}
+
+fn first(value: Maybe) -> I64 {
+  match value { PairValue(pair) => pair.left, Empty => 0 }
+}
+
+fn bounded_counter(limit: I64) -> I64
+requires { limit >= 0 && limit <= 100 }
+{
+  while (n: I64 = 0; n < limit) { n + 1 }
+}
+
+fn framed(text: Text) -> Text {
+  "<" + (text + ">")
+}
+
+identities {
+  module: "skill.examples",
+  Pair: "skill.examples.pair",
+  add_pair: "skill.examples.add_pair",
+  sum_pair: "skill.examples.sum_pair",
+  Maybe: "skill.examples.maybe",
+  Folder: "skill.examples.folder_type",
+  identity: "skill.examples.identity",
+  generic_text: "skill.examples.generic_text",
+  fraction: "skill.examples.fraction",
+  Box: "skill.examples.box",
+  Option: "skill.examples.option",
+  apply: "skill.examples.apply",
+  boxed: "skill.examples.boxed",
+  folder: "skill.examples.folder",
+  exchange: "skill.examples.exchange",
+  first: "skill.examples.first",
+  bounded_counter: "skill.examples.counter",
+  framed: "skill.examples.framed"
+}

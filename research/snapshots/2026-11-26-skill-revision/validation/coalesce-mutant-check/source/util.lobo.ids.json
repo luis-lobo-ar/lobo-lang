@@ -1,0 +1,8 @@
+{
+  "format": "lobo-identities/0.1",
+  "identities": {
+    "module": "skilldev.util.module",
+    "Reverse": "skilldev.util.Reverse",
+    "reverse": "skilldev.util.reverse"
+  }
+}

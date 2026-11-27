@@ -1,0 +1,3 @@
+module model;
+record Span {start:I64,end:I64}
+record Summary {spans:List<Span>,points:I64,rejected:I64}
