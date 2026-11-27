@@ -1,0 +1,15 @@
+{
+  "format": "lobo-identities/0.1",
+  "identities": {
+    "module": "realistic.transfer.app",
+    "Audit": "realistic.transfer.app.Audit",
+    "main": "realistic.transfer.app.main",
+    "sql.SqlResult": "lobo.sql.SqlResult",
+    "sql.open": "lobo.sql.open",
+    "sql.close": "lobo.sql.close",
+    "sql.begin": "lobo.sql.begin",
+    "sql.rollback": "lobo.sql.rollback",
+    "logic.apply": "realistic.transfer.logic.apply",
+    "model.Receipt": "realistic.transfer.model.Receipt"
+  }
+}

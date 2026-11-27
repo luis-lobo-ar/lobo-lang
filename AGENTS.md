@@ -5,6 +5,12 @@ Use the GitHub account luis-lobo-ar for this repository. Commit author and commi
 active gh account may belong to another project. Keep user-facing examples on the lobo CLI. Cargo commands
 belong in compiler build/test instructions. Preserve frozen research documents and fixtures.
 
+Decision0072 is selected:12 realistic application-change attempts, two tasks x3 repeats xcontrol/v2.
+Keep the existing language, libraries, skills, cards and all old evidence frozen. Register/push before
+participant calls, same Luna/high120s/16commands/6checks, no retries or replacements. Report timely
+completion separately from candidate correctness and include unknown usage. Reuse312-pass compiler
+receipt honestly; preserve46 paper entries/168 pins. See decisions/0072-realistic-development-v2-comparison.md.
+
 Decision0071 is complete:12 fresh three-arm Luna/high attempts at the same120s/16-command/6-check
 limits. Revised4/4 and control4/4 complete; original2/4, with two search timeouts whose candidates still
 pass. All12 candidates pass840 final checks (5 public+65 private per assignment). Two original usage

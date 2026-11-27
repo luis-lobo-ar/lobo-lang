@@ -1,0 +1,91 @@
+{
+  "format": "lobo-conformance/0.1",
+  "language": "core/0.1-draft",
+  "cases": [
+    {
+      "id": "arithmetic.precedence", "rule": "Grammar",
+      "source": "module demo @id(\"demo\"); function main @id(\"main\")() -> I64 { 1 + 2 * 3 }",
+      "invocation": { "entry": "main", "arguments": [] },
+      "expected": { "kind": "value", "value": { "type": "I64", "value": "7" } }
+    },
+    {
+      "id": "integer.minimum", "rule": "Integer literals and arithmetic",
+      "source": "module demo @id(\"demo\"); function main @id(\"main\")() -> I64 { -9223372036854775808 }",
+      "invocation": { "entry": "main", "arguments": [] },
+      "expected": { "kind": "value", "value": { "type": "I64", "value": "-9223372036854775808" } }
+    },
+    {
+      "id": "integer.literal_range", "rule": "Integer literals and arithmetic",
+      "source": "module demo @id(\"demo\"); function main @id(\"main\")() -> I64 { 9223372036854775808 }",
+      "expected": { "kind": "compile_error", "code": "compile.literal.range" }
+    },
+    {
+      "id": "integer.add_overflow", "rule": "Integer literals and arithmetic",
+      "source": "module demo @id(\"demo\"); function main @id(\"main\")() -> I64 { 9223372036854775807 + 1 }",
+      "invocation": { "entry": "main", "arguments": [] },
+      "expected": { "kind": "runtime_fault", "code": "runtime.integer.overflow" }
+    },
+    {
+      "id": "integer.divide_zero", "rule": "Integer literals and arithmetic",
+      "source": "module demo @id(\"demo\"); function main @id(\"main\")() -> I64 { 1 / 0 }",
+      "invocation": { "entry": "main", "arguments": [] },
+      "expected": { "kind": "runtime_fault", "code": "runtime.integer.zero_divisor" }
+    },
+    {
+      "id": "integer.negative_remainder", "rule": "Integer literals and arithmetic",
+      "source": "module demo @id(\"demo\"); function main @id(\"main\")() -> I64 { -7 % 3 }",
+      "invocation": { "entry": "main", "arguments": [] },
+      "expected": { "kind": "value", "value": { "type": "I64", "value": "-1" } }
+    },
+    {
+      "id": "boolean.short_circuit", "rule": "Evaluation",
+      "source": "module demo @id(\"demo\"); function main @id(\"main\")() -> Bool { false && (1 / 0 == 0) }",
+      "invocation": { "entry": "main", "arguments": [] },
+      "expected": { "kind": "value", "value": { "type": "Bool", "value": false } }
+    },
+    {
+      "id": "conditional.unselected_branch", "rule": "Evaluation",
+      "source": "module demo @id(\"demo\"); function main @id(\"main\")() -> I64 { if true { 42 } else { 1 / 0 } }",
+      "invocation": { "entry": "main", "arguments": [] },
+      "expected": { "kind": "value", "value": { "type": "I64", "value": "42" } }
+    },
+    {
+      "id": "types.unselected_branch_checked", "rule": "Types",
+      "source": "module demo @id(\"demo\"); function main @id(\"main\")() -> I64 { if true { 42 } else { false } }",
+      "expected": { "kind": "compile_error", "code": "compile.type.mismatch" }
+    },
+    {
+      "id": "types.no_coercion", "rule": "Types",
+      "source": "module demo @id(\"demo\"); function main @id(\"main\")() -> I64 { true + 1 }",
+      "expected": { "kind": "compile_error", "code": "compile.type.mismatch" }
+    },
+    {
+      "id": "contract.precondition", "rule": "Contracts",
+      "source": "module demo @id(\"demo\"); function positive @id(\"positive\")(x: I64) -> I64 requires { x > 0 } { x }",
+      "invocation": { "entry": "positive", "arguments": [{ "type": "I64", "value": "0" }] },
+      "expected": { "kind": "runtime_fault", "code": "runtime.contract.precondition" }
+    },
+    {
+      "id": "contract.postcondition", "rule": "Contracts",
+      "source": "module demo @id(\"demo\"); function positive @id(\"positive\")(x: I64) -> I64 ensures { result > x } { x }",
+      "invocation": { "entry": "positive", "arguments": [{ "type": "I64", "value": "5" }] },
+      "expected": { "kind": "runtime_fault", "code": "runtime.contract.postcondition" }
+    },
+    {
+      "id": "identity.duplicate", "rule": "Declarations, identity, and resolution",
+      "source": "module demo @id(\"demo\"); function main @id(\"demo\")() -> I64 { 0 }",
+      "expected": { "kind": "compile_error", "code": "compile.identity.duplicate" }
+    },
+    {
+      "id": "name.unresolved", "rule": "Declarations, identity, and resolution",
+      "source": "module demo @id(\"demo\"); function main @id(\"main\")() -> I64 { missing }",
+      "expected": { "kind": "compile_error", "code": "compile.name.unresolved" }
+    },
+    {
+      "id": "call.forward", "rule": "Declarations, identity, and resolution",
+      "source": "module demo @id(\"demo\"); function main @id(\"main\")() -> I64 { increment(41) } function increment @id(\"increment\")(x: I64) -> I64 requires { x < 9223372036854775807 } ensures { result == x + 1 } { let next: I64 = x + 1; next }",
+      "invocation": { "entry": "main", "arguments": [] },
+      "expected": { "kind": "value", "value": { "type": "I64", "value": "42" } }
+    }
+  ]
+}

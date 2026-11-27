@@ -1,0 +1,311 @@
+[
+  {
+    "input": {
+      "accounts": [
+        [
+          1,
+          10
+        ],
+        [
+          2,
+          0
+        ]
+      ],
+      "operations": [
+        [
+          1,
+          2,
+          3,
+          "a"
+        ],
+        [
+          1,
+          2,
+          3,
+          "a"
+        ],
+        [
+          1,
+          2,
+          4,
+          "a"
+        ]
+      ]
+    },
+    "expected": [
+      {
+        "reply": {
+          "case": "Ok",
+          "payload": {
+            "applied": true,
+            "replay": false,
+            "reason": "applied"
+          }
+        },
+        "clean": true,
+        "accounts": [
+          [
+            1,
+            7
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "requests": [
+          [
+            "a",
+            1,
+            2,
+            3
+          ]
+        ]
+      },
+      {
+        "reply": {
+          "case": "Ok",
+          "payload": {
+            "applied": false,
+            "replay": true,
+            "reason": "replay"
+          }
+        },
+        "clean": true,
+        "accounts": [
+          [
+            1,
+            7
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "requests": [
+          [
+            "a",
+            1,
+            2,
+            3
+          ]
+        ]
+      },
+      {
+        "reply": {
+          "case": "Ok",
+          "payload": {
+            "applied": false,
+            "replay": false,
+            "reason": "conflict"
+          }
+        },
+        "clean": true,
+        "accounts": [
+          [
+            1,
+            7
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "requests": [
+          [
+            "a",
+            1,
+            2,
+            3
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "input": {
+      "accounts": [
+        [
+          1,
+          10
+        ],
+        [
+          2,
+          0
+        ]
+      ],
+      "operations": [
+        [
+          1,
+          2,
+          11,
+          "b"
+        ]
+      ]
+    },
+    "expected": [
+      {
+        "reply": {
+          "case": "Ok",
+          "payload": {
+            "applied": false,
+            "replay": false,
+            "reason": "funds"
+          }
+        },
+        "clean": true,
+        "accounts": [
+          [
+            1,
+            10
+          ],
+          [
+            2,
+            0
+          ]
+        ],
+        "requests": []
+      }
+    ]
+  },
+  {
+    "input": {
+      "accounts": [
+        [
+          1,
+          10
+        ],
+        [
+          2,
+          0
+        ]
+      ],
+      "operations": [
+        [
+          1,
+          9,
+          1,
+          "c"
+        ]
+      ]
+    },
+    "expected": [
+      {
+        "reply": {
+          "case": "Ok",
+          "payload": {
+            "applied": false,
+            "replay": false,
+            "reason": "missing"
+          }
+        },
+        "clean": true,
+        "accounts": [
+          [
+            1,
+            10
+          ],
+          [
+            2,
+            0
+          ]
+        ],
+        "requests": []
+      }
+    ]
+  },
+  {
+    "input": {
+      "accounts": [
+        [
+          1,
+          10
+        ],
+        [
+          2,
+          0
+        ]
+      ],
+      "operations": [
+        [
+          1,
+          2,
+          1,
+          ""
+        ]
+      ]
+    },
+    "expected": [
+      {
+        "reply": {
+          "case": "Ok",
+          "payload": {
+            "applied": false,
+            "replay": false,
+            "reason": "invalid"
+          }
+        },
+        "clean": true,
+        "accounts": [
+          [
+            1,
+            10
+          ],
+          [
+            2,
+            0
+          ]
+        ],
+        "requests": []
+      }
+    ]
+  },
+  {
+    "input": {
+      "accounts": [
+        [
+          1,
+          10
+        ],
+        [
+          2,
+          999999
+        ]
+      ],
+      "operations": [
+        [
+          1,
+          2,
+          2,
+          "cap"
+        ]
+      ]
+    },
+    "expected": [
+      {
+        "reply": {
+          "case": "Err",
+          "payload": {
+            "kind": {
+              "case": "Constraint",
+              "payload": null
+            },
+            "backend_code": 275
+          }
+        },
+        "clean": true,
+        "accounts": [
+          [
+            1,
+            10
+          ],
+          [
+            2,
+            999999
+          ]
+        ],
+        "requests": []
+      }
+    ]
+  }
+]

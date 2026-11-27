@@ -1,0 +1,15 @@
+module policy;
+variant Key {Found(I64),Missing}
+record Digits {value:I64,valid:Bool}
+fn read_id(path:Text)->Key {
+ let prefix="/api/products/";
+ if Text::length(path)<=Text::length(prefix) || Text::slice(path,0,Text::length(prefix))!=prefix {Missing} else {
+  let token=Text::slice(path,Text::length(prefix),Text::length(path)-Text::length(prefix));
+  let bytes=Text::bytes(token);
+  let parsed=fold(i in Bytes::length(bytes),state:Digits=Digits {value:0,valid:true}) {
+   let digit=Bytes::at(bytes,i)-48;
+   if !state.valid || digit<0 || digit>9 || state.value>(9223372036854775807-digit)/10 {Digits {value:0,valid:false}} else {Digits {value:state.value*10+digit,valid:true}}
+  };
+  if parsed.valid && parsed.value>0 {Found(parsed.value)} else {Missing}
+ }
+}
