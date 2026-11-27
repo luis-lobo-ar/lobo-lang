@@ -1,6 +1,6 @@
 # 0071 — Grammar-first skill revision and fresh three-arm comparison
 
-Date: 2026-11-26. Status: selected; register before participant calls.
+Date: 2026-11-26. Status: complete; all12 assignments preserved.
 
 The user requested improving the development skill from observed failures and another small matched
 comparison, with the language frozen and the same model/budgets. Preserve the original skill in place.
@@ -48,3 +48,13 @@ library, extension, prior skill/card/fixture or previous score edits. Append pap
 45 existing entries and160 pins. Export raw Markdown copies as text with a verified logical path map at
 publication; preserve actual delivered bytes/names and original raw input tree. No further evolution or
 additional trials follow automatically from this scope.
+
+## Observed result
+
+Registration `de27b40` preceded calls. Revised4/4, control4/4 and original2/4 complete within budget.
+All final candidates pass; original search sessions time out with correct candidates, not incorrect
+algorithms. Two original terminal usage records are unknown. Revised/original median reported tokens
+are30.9% lower on only two complete coalescing pairs; revised/control median is essentially unchanged
+with large mixed variation. The bundled revision has a promising observed completion result relative
+to the original, not a general advantage over documentation/native feedback or an isolated grammar effect.
+Both versions remain as tested. See [the report](../research/skill-revision-study-2026-11-26.md).

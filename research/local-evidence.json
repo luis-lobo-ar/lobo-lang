@@ -1575,6 +1575,67 @@
         "Fresh full compiler/editor regression runs, production correctness or native program runtime advantages",
         "Permission for more trials, skill repair or language unfreeze"
       ]
+    },
+    {
+      "id": "local-046",
+      "date": "2026-11-26",
+      "title": "Grammar-first development skill revision and fresh three-arm pilot",
+      "evidence_kind": "Versioned skill improvement, native grammar/sync probes and preregistered matched agent comparison",
+      "status": "All12 assignments retained; revised/control4/4 budget completion, original2/4; all candidates pass",
+      "files": [
+        {
+          "path": "research/skill-revision-study-2026-11-26.md",
+          "sha256": "afbefb112266b9bd7d7867f88fff85148c7feedd2c3d42f70f96724f3e22640b"
+        },
+        {
+          "path": "benchmarks/results/2026-11-26-skill-revision-study.json",
+          "sha256": "4bcceaf9af5da4bf567f115a6b32f2b590ad10b11ad5093db46d1f41114b8fcc"
+        },
+        {
+          "path": "benchmarks/results/2026-11-26-skill-revision-audit.json",
+          "sha256": "7fadafe7b142eec1bb8c0ce59f97fa7788457dc490b9a3094ae8510f0ca60f1f"
+        },
+        {
+          "path": "benchmarks/results/2026-11-26-skill-revision-verification.json",
+          "sha256": "b4294e69d5cc19cb16a22e34fc29d1904ffedc1f19b38176a2a9b267d14ffc4f"
+        },
+        {
+          "path": "benchmarks/results/2026-11-26-skill-revision-validation.json",
+          "sha256": "33fd78fbebcad0818b9422c6f7cb914e7555bfcda22d54491dbfb58745e6b2cf"
+        },
+        {
+          "path": "benchmarks/results/2026-11-26-skill-revision-probes.json",
+          "sha256": "cdb937f84763cc39c94e0e51fccc166af59b9d9e4c7eb45f1363bd457946db67"
+        },
+        {
+          "path": "research/snapshots/2026-11-26-skill-revision/registration/manifest.json",
+          "sha256": "c3a6f84049cdf664e14b4cc8c31bc5be3be9c7c7591a518d6f3145a98a8cb39f"
+        },
+        {
+          "path": "research/snapshots/2026-11-26-skill-revision/evidence-manifest.json",
+          "sha256": "92e2866495529c242160376253e1d49b591c4b17d9fbb49f7bf718de1afc63b7"
+        }
+      ],
+      "supports": [
+        "Additive lobo-development-v2 is3138bytes versus4799original; verified grammar/identity recovery rules replace repeated workflow detail while original remains unchanged",
+        "Two fresh tasks with2 repetitions and3 arms use identical configured Luna/high,120s,16 commands and6 visible checks; same78 references and native grader",
+        "Revised/control complete4/4 each, original2/4; two original search sessions time out despite correct candidates; primary acceptance is not rescored",
+        "All12 candidates pass840 native suite observations:780 private and60 repeated public; all required source signatures match",
+        "Known revised/original token pairs are only two coalescing repetitions, medianratio0.6912; two original timeout usagesunknown",
+        "Revised/control paired token median0.9977 across4pairs is mixed with wide range; no consistent skill-over-control token or quality benefit demonstrated",
+        "Revised has0 visible compiler/authoring failures, original2visible+2authoring andcontrol3visible; combined revision does not identify individual rule causality",
+        "59harness and15research tests pass;420calibration observations catch2compiled defects; grammar/sync probes and initial incorrect function-call-match assumption retained",
+        "All45 earlier evidence entries and160 pins remain unchanged; exact raw document bytes, logical-path map and local archive retained"
+      ],
+      "does_not_establish": [
+        "General productivity, language/model superiority, population completion rates or statistical noninferiority",
+        "Higher final candidate test correctness in revised arm; all arms candidates pass",
+        "Causal attribution to grammar wording, text length, named activation, workflow or provider latency individually",
+        "Complete original-arm/participant token total, billing or parent development costs",
+        "A reliable speed/inference/native-runtime ranking; timeout windows are censored and only two task instances used",
+        "Complete transitive reference closure, fully observed host instructions or OS-level read isolation",
+        "A fresh full compiler/editor suite or permission for additional trials, version edits or language unfreeze"
+      ]
     }
   ],
   "backend_recommendation": {
@@ -1603,5 +1664,5 @@
     "Public development fixtures are excluded from claims of unseen confirmatory evaluation."
   ],
   "updated_on": "2026-11-24",
-  "last_updated_on": "2026-11-24"
+  "last_updated_on": "2026-11-26"
 }

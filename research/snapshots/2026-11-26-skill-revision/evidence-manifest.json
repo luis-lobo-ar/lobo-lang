@@ -1,0 +1,3586 @@
+{
+  "date": "2026-11-26",
+  "files": [
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/.gitattributes",
+      "sha256": "c5e7b3cd793db5280d7ebf3978b979545a03b4485df1fe57d4d8769981d2c3e5",
+      "bytes": 124
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/README.md",
+      "sha256": "23e781fd1ad0b311cc5744650aa0bbad5888d0cb7ab893ab0833994d7e1aceee",
+      "bytes": 739
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/archive-evidence.py",
+      "sha256": "ab90b6620961e86b727725da90dece507d0e3d86690d8c22e5bdb7917794bc28",
+      "bytes": 1485
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/code/.agents/skills/lobo-development/SKILL.md.txt",
+      "sha256": "804a12e43f79bef059243f88e474266890c785d02df034645cbab88da50a52b5",
+      "bytes": 4799
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/code/.agents/skills/lobo-development/agents/openai.yaml",
+      "sha256": "42d8438407a32ea294d1f3a783b3d5a72db270f56a97ef7f4e797b85701aca44",
+      "bytes": 257
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/code/.agents/skills/lobo-development-v2/SKILL.md.txt",
+      "sha256": "e7877b0ce0ab304eaf60fc9f6f9435b254519d43655a0a18c1d569d1bfc4a352",
+      "bytes": 3138
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/code/.agents/skills/lobo-development-v2/agents/openai.yaml",
+      "sha256": "0be81525cf5dbb123432f9f6f3009f770d9d6c291b767c2e7a3aa91757a9a985",
+      "bytes": 269
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/code/benchmarks/matched-study/context_report.py",
+      "sha256": "2ae4867a9db65208da8647fab5e7d235bb5f4aafb61dfd9e6032a381f16c74bb",
+      "bytes": 9181
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/code/benchmarks/matched-study/development.py",
+      "sha256": "567021ff5c5362ad899765630460388e8ff9d9b0dae72361fe47060779400225",
+      "bytes": 15438
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/code/benchmarks/matched-study/development_corpus.py",
+      "sha256": "4dac8841c205c568b07ae9725c40175f85c19fecd17948207e90f2a3bacefacc",
+      "bytes": 10291
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/code/benchmarks/matched-study/development_report.py",
+      "sha256": "9c4798ec08c270c97ff8d9940c1f0cf35472226b08887a9f178b3702a36124b3",
+      "bytes": 6403
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/code/benchmarks/matched-study/luna.py",
+      "sha256": "5c02b9846c7af3211ad70cf212e8f119b3360bce8e29b2c2032a9792b321509c",
+      "bytes": 9748
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/code/benchmarks/matched-study/skill_revision.py",
+      "sha256": "7e4bba2676953f0b12437840063a11c5395879da133fcc6183438ac28acfb4d1",
+      "bytes": 11112
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/code/benchmarks/matched-study/skill_revision_corpus.py",
+      "sha256": "988d329d6042a7dc71b2461c42606299a8a9f82669b5609dd8ae42946e4c912e",
+      "bytes": 8195
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/code/benchmarks/matched-study/skill_revision_report.py",
+      "sha256": "b70fb7f81fba3e082f61ee68fd010353eeaadae7a8ed5e4a048c9a319beac386",
+      "bytes": 6142
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/code/benchmarks/matched-study/study.py",
+      "sha256": "1c05a60a0c431a9d9336f7b28c9fcfb9f69446cb24ead52f380d1a5d4c838bf0",
+      "bytes": 69354
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/code/benchmarks/matched-study/test_development.py",
+      "sha256": "d2311224ef260794a895c89ac0a1c0fddab9eafed466e9f7c80ee01f1fd2f522",
+      "bytes": 3470
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/code/benchmarks/matched-study/test_development_report.py",
+      "sha256": "206ee64936e39562e462f6801383b3c12f9b00c13a7064bb1c0cca230da4e742",
+      "bytes": 1219
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/code/benchmarks/matched-study/test_skill_revision.py",
+      "sha256": "de892a8c374945154ff77a2b763323a3a97886bc6a46c5224cb0b163decab20e",
+      "bytes": 2412
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/code/benchmarks/matched-study/test_skill_revision_report.py",
+      "sha256": "8cd211cbdbb5cfcde8f66cac1daf04c04ad8f7008022645c6efddae9f15f74f5",
+      "bytes": 1126
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/development/all-new-tests.txt",
+      "sha256": "e7868349f80d90e9674de9c2df12e50a116d24331e4cdf921e14d11d317a3981",
+      "bytes": 107
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/development/final-harness-tests.txt",
+      "sha256": "4d2cab1f50eb0dfb5646ce7b62175059a56c83b1d50b9a4f41af809d4e57bde0",
+      "bytes": 158
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/development/final-research-tests.txt",
+      "sha256": "ed29bc9649bba701805cbbe94142681f659f8c1eaab27b0a1367fd9e61f1929e",
+      "bytes": 114
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/development/harness-first-green.txt",
+      "sha256": "38f4be995c1bb305dc5d7f1c806efbe264aa65ec6a86669aa31361674503f9a3",
+      "bytes": 104
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/development/harness-green.txt",
+      "sha256": "11ab96b1a6e045bb14cfaf0f07ebcb6385c49b10531e8d63eab13de4a5c355dd",
+      "bytes": 105
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/development/harness-red.txt",
+      "sha256": "1cf6add5bae2c7b98cbd04ce9b8f738e8ecaf14d7c2300d50eb120569289c334",
+      "bytes": 1312
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/development/initialization.txt",
+      "sha256": "3f66edfb46c31184835bef4f7458311c3f1ef523ca7da095eb7e57328b2c1f9c",
+      "bytes": 756
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/development/installed-validation.txt",
+      "sha256": "db349825903d66adffea3ecf1bd8e1803043e8a71cf1a051235dabc5371f5bb0",
+      "bytes": 16
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/development/postchecks.txt",
+      "sha256": "56cc8aefd1041e704f7db10a3da2d62529aea2ed8433c96e347f8354186698c3",
+      "bytes": 76
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/development/probes-final.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/development/probes.txt",
+      "sha256": "29646ca721321c63acb1a6778668d333d406b8c9ae84140b977ace329d58406f",
+      "bytes": 1248
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/development/publication.txt",
+      "sha256": "8ed21c5d4878e95812b58a5f26ea4d77f9ea4ef053cea138fc476dc04fe714e5",
+      "bytes": 447
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/development/registration.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/development/report-red.txt",
+      "sha256": "c919f53053d5fd1774b816cf8f9e3e40731833c07a2f42dffa77492d64e08e18",
+      "bytes": 1579
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/development/skill-green.txt",
+      "sha256": "db349825903d66adffea3ecf1bd8e1803043e8a71cf1a051235dabc5371f5bb0",
+      "bytes": 16
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/development/skill-red.txt",
+      "sha256": "d3fa877c5fac3660cb41f22ce6c1de474fe942087c8011f5e3cdc42630b49d36",
+      "bytes": 19
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/development/validation.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/document-path-map.json",
+      "sha256": "0fae3683a95477ded9fdc8f647e7cfb7c07913a2404a73c3749f1f0c72d390f3",
+      "bytes": 85185
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/environment-after.json",
+      "sha256": "1cc228c1ecb90fa1b755cda1914b50245bb9a9f4302c5785a7a11d9d5625bc56",
+      "bytes": 1402
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/environment-before.json",
+      "sha256": "67c5cd20b71aa237686ce407631b39e85e4e8b069d4ab5240f47e8877b177930",
+      "bytes": 1402
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/installation.json",
+      "sha256": "b9284385231d06edf9a183b7ada65e5d0e0e3ae7e79d0b8f28d513dc169195c5",
+      "bytes": 325
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/postchecks.json",
+      "sha256": "7fadafe7b142eec1bb8c0ce59f97fa7788457dc490b9a3094ae8510f0ca60f1f",
+      "bytes": 2905
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/postchecks.py",
+      "sha256": "568209508390c8883cfa51b4c7e639ba5d7ab596df3593d8dfc9bfa69870c57e",
+      "bytes": 2363
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/probes/else-bad/program.lobo",
+      "sha256": "afb079b3e0e786b3370b828157af821eb414baff1b32fc142de12fcb08ef766a",
+      "bytes": 73
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/probes/else-bad/program.lobo.ids.json",
+      "sha256": "ccc98403067ecbb8b6b89e5ed239b47a5d2f50a06da4eaea5fdfb7594ae1064f",
+      "bytes": 136
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/probes/else-good/program.lobo",
+      "sha256": "ff005db83464f8108f9de8f55d8763395c925c12c961b5ac3a29053e6cdc826b",
+      "bytes": 75
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/probes/else-good/program.lobo.ids.json",
+      "sha256": "ccc98403067ecbb8b6b89e5ed239b47a5d2f50a06da4eaea5fdfb7594ae1064f",
+      "bytes": 136
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/probes/match-bad/program.lobo",
+      "sha256": "f2a31ff490107ba0fe09af5905b4777795c10cbfcf8001f59a9d93e5eac26428",
+      "bytes": 235
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/probes/match-bad/program.lobo.ids.json",
+      "sha256": "29dbbac743e4ba6fb8aa2dc5f30a70062924bbfca5de0ae4489034840c3ba75f",
+      "bytes": 257
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/probes/match-good/program.lobo",
+      "sha256": "f00d45f35cb923edee5080e26e74343008c7a56166bf17eafa2db5d099a81bd5",
+      "bytes": 237
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/probes/match-good/program.lobo.ids.json",
+      "sha256": "29dbbac743e4ba6fb8aa2dc5f30a70062924bbfca5de0ae4489034840c3ba75f",
+      "bytes": 257
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/probes/reserved-bad/program.lobo",
+      "sha256": "db31147659839dbb243ebbb443df928c5d5dcda1e668f0e19fde5aa94c01f78d",
+      "bytes": 51
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/probes/reserved-bad/program.lobo.ids.json",
+      "sha256": "ccc98403067ecbb8b6b89e5ed239b47a5d2f50a06da4eaea5fdfb7594ae1064f",
+      "bytes": 136
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/probes/reserved-good/program.lobo",
+      "sha256": "2de2a632e300050de8f1707e18151815243caadf8904c796958ab2988e706c01",
+      "bytes": 51
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/probes/reserved-good/program.lobo.ids.json",
+      "sha256": "ccc98403067ecbb8b6b89e5ed239b47a5d2f50a06da4eaea5fdfb7594ae1064f",
+      "bytes": 136
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/probes/results.json",
+      "sha256": "ff2296327df217e22d1db5ba67a64c592fd9102561aafa65c9e207cda36ef84e",
+      "bytes": 8860
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/probes/sync/invalid-source.txt",
+      "sha256": "0f6a6547b8c4b8540e855a1a1047e6661dabeda2e55b3d238424603fc12bb6cd",
+      "bytes": 74
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/probes/sync/program.lobo",
+      "sha256": "e191246ab9e61e6e9a74f8efcdac0d158b029ca0597976dc7e5382582aaef21f",
+      "bytes": 74
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/probes/sync/program.lobo.ids.json",
+      "sha256": "ced2fb0b88d5b3ba63b445b3858e894c8da4c57b0877b1085cd7c4689b9f5800",
+      "bytes": 178
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/probes/sync-results.json",
+      "sha256": "b2dc57a39179495f043fa2e30c626b5043cff23b62055172460abcc070510728",
+      "bytes": 1357
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/probes-initial/else-bad/program.lobo",
+      "sha256": "afb079b3e0e786b3370b828157af821eb414baff1b32fc142de12fcb08ef766a",
+      "bytes": 73
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/probes-initial/else-bad/program.lobo.ids.json",
+      "sha256": "ccc98403067ecbb8b6b89e5ed239b47a5d2f50a06da4eaea5fdfb7594ae1064f",
+      "bytes": 136
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/probes-initial/else-good/program.lobo",
+      "sha256": "ff005db83464f8108f9de8f55d8763395c925c12c961b5ac3a29053e6cdc826b",
+      "bytes": 75
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/probes-initial/else-good/program.lobo.ids.json",
+      "sha256": "ccc98403067ecbb8b6b89e5ed239b47a5d2f50a06da4eaea5fdfb7594ae1064f",
+      "bytes": 136
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/probes-initial/match-bad/program.lobo",
+      "sha256": "7369e3ccae8a633aacefb8360308007bb93ae57a64c129d18c2c0b3147005e62",
+      "bytes": 162
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/probes-initial/match-bad/program.lobo.ids.json",
+      "sha256": "aec5e4879e7d373bd5c6e434d0559bc7db5a722f3345856d89c6ce8253597662",
+      "bytes": 214
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/probes-initial/reserved-bad/program.lobo",
+      "sha256": "db31147659839dbb243ebbb443df928c5d5dcda1e668f0e19fde5aa94c01f78d",
+      "bytes": 51
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/probes-initial/reserved-bad/program.lobo.ids.json",
+      "sha256": "ccc98403067ecbb8b6b89e5ed239b47a5d2f50a06da4eaea5fdfb7594ae1064f",
+      "bytes": 136
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/probes-initial/reserved-good/program.lobo",
+      "sha256": "2de2a632e300050de8f1707e18151815243caadf8904c796958ab2988e706c01",
+      "bytes": 51
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/probes-initial/reserved-good/program.lobo.ids.json",
+      "sha256": "ccc98403067ecbb8b6b89e5ed239b47a5d2f50a06da4eaea5fdfb7594ae1064f",
+      "bytes": 136
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/probes-initial/results.json",
+      "sha256": "5971b781ea853681b767fff17dbf7336c93e25ae7900e2f562c16dceb898ea19",
+      "bytes": 6428
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/raw-archive-manifest.json",
+      "sha256": "1bccebe484906bdaccc02e2fc8ecfdc5e79ac8d4da4566f17e4fea49a68f0272",
+      "bytes": 411728
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/coalesce/control/.agents/skills/lobo-programming/references/callbacks.lobo",
+      "sha256": "a106cf1e51354df3296e755d882d6f0fc6ce7690b761914cca0f76cc0c0bf63e",
+      "bytes": 406
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/coalesce/control/.agents/skills/lobo-programming/references/callbacks.lobo.ids.json",
+      "sha256": "7cf6c0e2a287692417905cb0fb94a3ab5f04cb517695ad597f2404e5888b11cc",
+      "bytes": 334
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/coalesce/control/.agents/skills/lobo-programming/references/compact-example.lobo",
+      "sha256": "d2376c69b774da83073a98883e91794750d59f99ed3fa380d9aaa673d1950954",
+      "bytes": 231
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/coalesce/control/.agents/skills/lobo-programming/references/compact-example.lobo.ids.json",
+      "sha256": "2dbc359fba6b65d4fa0667b91bd80e8c4f150b38ecb26c00c21e743332906d0e",
+      "bytes": 298
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/coalesce/control/.agents/skills/lobo-programming/references/conveniences.lobo",
+      "sha256": "ffb3bcfaa7fa99fca865d6498238b4c81b857a01e2744d46d5a6f0308765e9c9",
+      "bytes": 301
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/coalesce/control/.agents/skills/lobo-programming/references/conveniences.lobo.ids.json",
+      "sha256": "eb25455ebf8d705ecd0d1d2261623cb5930cd4ea9bb3bf04de2d2e7bb0921817",
+      "bytes": 337
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/coalesce/control/.agents/skills/lobo-programming/references/examples.lobo",
+      "sha256": "cf65d2cdc47a1bb15e154f94fe2e70d92e58eb15d405c8a2fb68261c294a1b3c",
+      "bytes": 2028
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/coalesce/control/.agents/skills/lobo-programming/references/json-example.lobo",
+      "sha256": "e45bbda6b893e09f021821bd500195c4e27a827e81edcc249458cef53c3cc712",
+      "bytes": 269
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/coalesce/control/.agents/skills/lobo-programming/references/language.md.txt",
+      "sha256": "f007469320ec5054db07dac9302f8b6ac9a9dc976099ffd566c1ea963ab36562",
+      "bytes": 12554
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/coalesce/control/.agents/skills/lobo-programming/references/native-example.lobo",
+      "sha256": "79c44e86db8aa77322b4d99a424a25a0b2d37ced37e3e65af344c6a02d03737c",
+      "bytes": 300
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/coalesce/control/.agents/skills/lobo-programming/references/sqlite-example.lobo",
+      "sha256": "855f210acb18bc4568aad97373a8633cd9b7053d368980172317c76fab74927a",
+      "bytes": 303
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/coalesce/control/.agents/skills/lobo-programming/references/sqlite-example.lobo.ids.json",
+      "sha256": "18ae22c6bf9c71e6b1f7633bd7fcd847883b919ab27f7b34d18feca3f455a2e6",
+      "bytes": 343
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/coalesce/control/.agents/skills/lobo-programming/references/tools.md.txt",
+      "sha256": "1913a1fceffba4c09f72625d9bc1e8d8104e35025ad674988a73405ba8eb8429",
+      "bytes": 8694
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/coalesce/control/.agents/skills/lobo-programming/references/try-example.lobo",
+      "sha256": "2f6b5750d060c929eae94cb9b001b3ea9154f9ddaa369c0934c1953cce21770a",
+      "bytes": 412
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/coalesce/control/AGENTS.md.txt",
+      "sha256": "3c8c8fce33c21a65ee4b8a44fe408af1f260accb220adba4fb6a75e331e7ea11",
+      "bytes": 153
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/coalesce/control/GUIDE.txt",
+      "sha256": "70f169bfd8ca37792732adb561994943888ccfcfb8b909375a08b36d0067b697",
+      "bytes": 3049
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/coalesce/control/TASK.txt",
+      "sha256": "328f31403d475310a96c31a84e1a071d63c067d28ee3553c33a010e9433a92ed",
+      "bytes": 1074
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/coalesce/control/VISIBLE.json",
+      "sha256": "16e8e6146ee43a85ba0acb4b2547f3b3ed9ec33f7837c0a477513a92cdb45150",
+      "bytes": 1522
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/coalesce/control/check.py",
+      "sha256": "19cfc08bd63439e1487ff9ee80fc4a013b804feb6b424788b2fc62fb63bd278f",
+      "bytes": 385
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/coalesce/control/docs/agent-reference/compact-pilot-2026-11-24/contracts.txt",
+      "sha256": "86a129a75ffba8cb447f0a97b513cc92abb806b932609fc253273909aae868aa",
+      "bytes": 796
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/coalesce/control/docs/agent-reference/compact-pilot-2026-11-24/nominal.txt",
+      "sha256": "9810070ea2f016955293106bc0f7bf2f9fbb718619ad5b8372f34fbc380a0510",
+      "bytes": 819
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/coalesce/control/docs/agent-reference/compact-pilot-2026-11-24/propagation.txt",
+      "sha256": "d204f387ce82c1a0c1106ec337db631c06ec084c51f7b583f7eb9b45fb38c43f",
+      "bytes": 744
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/coalesce/control/docs/agent-reference/compact-pilot-2026-11-24/ranges.txt",
+      "sha256": "633eac0a1b432389d842277929b485519962a646c07bbe97a69a403b5d217478",
+      "bytes": 934
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/coalesce/control/libraries/http/README.md.txt",
+      "sha256": "c4dd34349e63538c79fe003c6cff87c3e4d27a624bc2d3146ed4fe08c4626774",
+      "bytes": 4399
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/coalesce/control/libraries/http/http.lobo",
+      "sha256": "ea9b9d87e15321e06ca67932258b60451c3da04a815e97d234ef2b36a91dba9f",
+      "bytes": 2787
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/coalesce/control/libraries/http-server/README.md.txt",
+      "sha256": "7f695c6966c1a31adf74d2d620760857a07ac28c0763a65fc8a6001800b6bde2",
+      "bytes": 7886
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/coalesce/control/libraries/http-server/server.lobo",
+      "sha256": "3aeac600d4131e544a7054f0f751efb5945e1616c84b210cfdabf5d936912a1e",
+      "bytes": 6880
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/coalesce/control/libraries/http-server/server.lobo.ids.json",
+      "sha256": "27cc7a4a712b98b29bd3fbae6e38616ed1713fb9cf07cc4e6c371d0823f3e640",
+      "bytes": 1408
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/coalesce/control/libraries/http-server/transport.lobo",
+      "sha256": "ac5af9a0ceed5f7a446450c0248c7b6c284931908dc27b25ea1a69cb6517a52b",
+      "bytes": 8145
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/coalesce/control/libraries/http-server/transport.lobo.ids.json",
+      "sha256": "9163bf4fbd4215230030857e386d89b9a38843f233d4ca357e119f93779cc68d",
+      "bytes": 2021
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/coalesce/control/libraries/json/README.md.txt",
+      "sha256": "fcc2d6742f11f4a53fbe1f26ce7a390e477e0de88a983e4a348884f6983d4959",
+      "bytes": 5305
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/coalesce/control/libraries/json/json.lobo",
+      "sha256": "3ed68fee975a46affca613dd6da60fbe6ea297fc447b8c91a76fbe7b2406ac39",
+      "bytes": 8228
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/coalesce/control/libraries/native/README.md.txt",
+      "sha256": "4de8dd7276b56d529c96f909ba6e4903fda299e255394e1e8e4bef094d104eea",
+      "bytes": 3872
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/coalesce/control/libraries/native/native.lobo",
+      "sha256": "ee7ba249a414ff9421cc36d3373f412b6ce63e62d696d1bdd0f9ce111e9027d1",
+      "bytes": 4649
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/coalesce/control/libraries/native/permissions.lobo",
+      "sha256": "c3148d6d50d3d8e2f326b771b76353fed490ba06cfd8cad21deb5d7f8f070e12",
+      "bytes": 1347
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/coalesce/control/libraries/sql/README.md.txt",
+      "sha256": "85f5ec08131d902d2ed64014ebd687462def277aa5f0876599c1058cfd71fad5",
+      "bytes": 4514
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/coalesce/control/libraries/sql/sql.lobo",
+      "sha256": "5704a8abcf1e1d0ee435b09aa7219c9c809bc1aaa304f3fe61b3de41d903a133",
+      "bytes": 9348
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/coalesce/control/libraries/sql/sql.lobo.ids.json",
+      "sha256": "67fc9cd6d80fed595e0efdffeb36b7153d865236ab188d2da776ed8effd643d4",
+      "bytes": 2033
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/coalesce/control/logic.lobo",
+      "sha256": "9b2dc3ed6e7852a941202e9e4e91aa126de1f459662444d2bb50345988f40f03",
+      "bytes": 679
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/coalesce/control/logic.lobo.ids.json",
+      "sha256": "868ff772b9caac7d411c44aa876655646c345662a4113fa9ed2e9140b1493608",
+      "bytes": 331
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/coalesce/control/model.lobo",
+      "sha256": "0e60f811c822ee036f5918288ab8dec48661cb1bfad38ba3b50ac5ce7b29426d",
+      "bytes": 104
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/coalesce/control/model.lobo.ids.json",
+      "sha256": "95164699653cae396cee2e48e6f0318789ea84fcdcc042acd21b9b99c0fb6381",
+      "bytes": 202
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/coalesce/control/research/compact-pilot-2026-11-24.md.txt",
+      "sha256": "761a1fc994e8bdf6865f293fc37728aab95932c49d67a9ea23907a1de352ef25",
+      "bytes": 9416
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/coalesce/control/spec/README.md.txt",
+      "sha256": "e8b911e1997d93f0ede12e14c97851f8e08843ca19e84a1eb5a4319108e82653",
+      "bytes": 4757
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/coalesce/control/spec/agent-testing-v0.1.md.txt",
+      "sha256": "dc9c1fb4b7f3aca5cc70a2cb844139190ec16218ee3ddb7759653f2d0fc4ab0e",
+      "bytes": 11933
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/coalesce/control/spec/checked-artifact-v0.1.md.txt",
+      "sha256": "8e85e37b7a89812f135ccb796e083ea95771032d267e55bc9c0d18f53fa56cdf",
+      "bytes": 4094
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/coalesce/control/spec/checked-artifact-v0.2.md.txt",
+      "sha256": "b13203846b1eb62eeb73445ef422cb526f7ae33d1e6804ecdef20e33c6365ff7",
+      "bytes": 1413
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/coalesce/control/spec/checked-artifact-v0.3.md.txt",
+      "sha256": "4874fc7ba430389d8d3bf4df3c6fc34b2b5bb949ecfe646383e3f6fc04652b15",
+      "bytes": 1147
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/coalesce/control/spec/compact-source-v0.1.md.txt",
+      "sha256": "d7035fbf81ff5c83f84a34dd5c73a1617f1a49176019a2693ba56c501955a94f",
+      "bytes": 5994
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/coalesce/control/spec/conformance/core-cases.json",
+      "sha256": "076f50cc9a45b7588eed4d150bb289fcdf04b0dcc7435dd871e71ef388cf71df",
+      "bytes": 4968
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/coalesce/control/spec/core-v0.1.md.txt",
+      "sha256": "c3fe3c05e21bd22c9df8f9ff78c65f3c645f127b10350c93a888c5f133f16854",
+      "bytes": 13060
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/coalesce/control/spec/core-v0.10.md.txt",
+      "sha256": "2ca585067a2c5113ce335847f433489c79a71d63471c2443786157038b60953e",
+      "bytes": 3093
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/coalesce/control/spec/core-v0.11.md.txt",
+      "sha256": "275105a2b66f5f0f6ddb12828d3e30db47f8603933654ea92b6bb3d5597ba8f9",
+      "bytes": 6042
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/coalesce/control/spec/core-v0.12.md.txt",
+      "sha256": "f02ddafe0a6196c15671a51e08aa12105ce216df1edb1a8354f54cfccc9e15c4",
+      "bytes": 7895
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/coalesce/control/spec/core-v0.2.md.txt",
+      "sha256": "9cbdbe1ddd2a55ce69b3333d5984a12d437ed225d856668c69edfbfd2a4b1ad2",
+      "bytes": 6391
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/coalesce/control/spec/core-v0.3.md.txt",
+      "sha256": "96e39f958c14b082ad0f3a0c72dc0b3318a7c1c442812b35c338d35b00759543",
+      "bytes": 4396
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/coalesce/control/spec/core-v0.4.md.txt",
+      "sha256": "84828c9c83b0c0b70d278e2458d77e01231bfd75899a99193b80a762b78ede83",
+      "bytes": 5039
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/coalesce/control/spec/core-v0.5.md.txt",
+      "sha256": "02ad206aa3cf73c38a8c13d082cdd7d0ea61c45a4dd2ab304497df2cc7c326cc",
+      "bytes": 6607
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/coalesce/control/spec/core-v0.6.md.txt",
+      "sha256": "3d8737fe0d67ef67916ba63fc6d91386d9ff983c9148d2b2c671048a0cf35245",
+      "bytes": 7076
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/coalesce/control/spec/core-v0.7.md.txt",
+      "sha256": "0111fcfce8f7ba3ca9abfa027282113dcb6c31df7fb2d946847260f392efb221",
+      "bytes": 7169
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/coalesce/control/spec/core-v0.8.md.txt",
+      "sha256": "790cfe562577be3dafa5ca3d2028e34d8782cbb36731fe45c29560a4badc6887",
+      "bytes": 5329
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/coalesce/control/spec/core-v0.9.md.txt",
+      "sha256": "4bc8977f5151c72df856a06da8cc1ff136a9fb355681b47075bbd17d570d5379",
+      "bytes": 7360
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/coalesce/control/spec/core-v1.0.md.txt",
+      "sha256": "8dbc2ca888f49b84125a8faedf39160bb1eab27e0f25b336b1ef8f87f14f3b2b",
+      "bytes": 5242
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/coalesce/control/spec/core-v1.1.md.txt",
+      "sha256": "98c9b16d2bd72229464751f1d6c03790efde00a234bf7d2add2306f30b785361",
+      "bytes": 4694
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/coalesce/control/spec/core-v1.10.md.txt",
+      "sha256": "45d45f48a14fda25275c50ea02d6d65854d14e3fb6989ea56ef6d1aba62ec308",
+      "bytes": 4925
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/coalesce/control/spec/core-v1.11.md.txt",
+      "sha256": "d13c38830326c983d336c83ab4a398867bd17858ade3c5f8ecc6d088359182aa",
+      "bytes": 2968
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/coalesce/control/spec/core-v1.2.md.txt",
+      "sha256": "7d0f42dd9d1bd99b860af5045c960fa82ffc96511d8f6397fefa381964c5b363",
+      "bytes": 5534
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/coalesce/control/spec/core-v1.3.md.txt",
+      "sha256": "2ea91b7b4d4c7716a593ceafcfff42227f05f94e45d8500e9ed04e0c956a9118",
+      "bytes": 6183
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/coalesce/control/spec/core-v1.4.md.txt",
+      "sha256": "01b365a0c8874db2ad9982e1e85dc036cf22cf31521c2b28c943c08888edf9b2",
+      "bytes": 5603
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/coalesce/control/spec/core-v1.5.md.txt",
+      "sha256": "dac4877adab3d738fb05fc57c37436106a22206a3069446a00c47de65c1abdda",
+      "bytes": 4557
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/coalesce/control/spec/core-v1.6.md.txt",
+      "sha256": "71967bd60313ce04cabdf740863eb2f1c73c49ecb1f22ea58ed6e9abbcd9c886",
+      "bytes": 4447
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/coalesce/control/spec/core-v1.7.md.txt",
+      "sha256": "2123fbea05d172cf4723e683afc4216c64e9bc0a62495f25e06b7ebc83311ed3",
+      "bytes": 3510
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/coalesce/control/spec/core-v1.8.md.txt",
+      "sha256": "422e050a2b5aa621e9b236f003084fa5398995e3144b3781b998092422255eb6",
+      "bytes": 5772
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/coalesce/control/spec/core-v1.9.md.txt",
+      "sha256": "c84dc7e6b555fc92458d632c0b92fb31052abd023e58b0201c735c6019ec225b",
+      "bytes": 2560
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/coalesce/control/spec/generic-reuse-workload.md.txt",
+      "sha256": "53e5d3097494f3deb5379c77a343997dfa52f47edb6c3915006dac05082b244f",
+      "bytes": 2596
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/coalesce/control/spec/language-milestone-workloads.md.txt",
+      "sha256": "f0be02538657fc901e9241049314b75d03b0472bc776ad3748d63c5c847a2b4d",
+      "bytes": 6656
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/coalesce/control/spec/language-v1-acceptance.md.txt",
+      "sha256": "33e7c84c36db6bcf74059f57e08e3eaa550e1235955d77eae4e6ca4afbed5f33",
+      "bytes": 6645
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/coalesce/control/spec/native-interface-v0.1.md.txt",
+      "sha256": "fc98302a3a5e50c8a87079231b9311954e8351383ba872e4223385ff1770934e",
+      "bytes": 10000
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/coalesce/control/spec/native-llvm-v0.1.md.txt",
+      "sha256": "580611e7fc27523e4aed69b9064a7c688096c8254eecf9a53541f93994045b21",
+      "bytes": 5632
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/coalesce/control/spec/native-v0.1.md.txt",
+      "sha256": "befed14019840eea1988bf6ff982d531df105bb0d1b057e765e820ed72cdc0b6",
+      "bytes": 6568
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/coalesce/control/spec/recursive-ast-workload.md.txt",
+      "sha256": "3138f238b71d5d12001391dc3d2f8cf054a1a59622608699732bcc05441c7a3a",
+      "bytes": 1600
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/coalesce/control/spec/schemas/conformance-case.schema.json",
+      "sha256": "ef3a27dd2a0caa8249c1f1439eb0abf96983350456db4efaabfdd2e2cc24c443",
+      "bytes": 2269
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/coalesce/control/spec/schemas/request-envelope.schema.json",
+      "sha256": "2abad3a1e8bbbb980cfa0fbe2c9c38a789ba94215bd6481f677d15cfe7c24409",
+      "bytes": 1964
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/coalesce/control/spec/schemas/response-envelope.schema.json",
+      "sha256": "a4e7d16a8bc25e06d5a571259df750f7c024319922e419bae57a8d66c64e7ca4",
+      "bytes": 3614
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/coalesce/control/spec/schemas/tool-descriptor.schema.json",
+      "sha256": "2e375db03b357fee59094e46252dcd847a3adf3fc04fae39457bf98a62bc17ef",
+      "bytes": 1727
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/coalesce/control/spec/source-diagnostics-v0.1.md.txt",
+      "sha256": "d531df2c57fdd4ec2917fb029a8fc54f441f6632fbfb7c2b4cfe3b8168e6eb3b",
+      "bytes": 3894
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/coalesce/control/spec/sqlite-interface-v0.1.md.txt",
+      "sha256": "19de3da7153b874edc5518ded812515c2ce32dc67a4d1226307c7a0c8b612bdf",
+      "bytes": 9003
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/coalesce/control/util.lobo",
+      "sha256": "c43f8e6085a7f03acbc1dac3e872ffe5ebdf8f86133519b5ce286a08e7d2055c",
+      "bytes": 338
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/coalesce/control/util.lobo.ids.json",
+      "sha256": "e19f179ed53b0319c39febce4e46eb462845e30547177c99a14aac27ed6ad174",
+      "bytes": 178
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/coalesce/original/.agents/skills/lobo-development/SKILL.md.txt",
+      "sha256": "804a12e43f79bef059243f88e474266890c785d02df034645cbab88da50a52b5",
+      "bytes": 4799
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/coalesce/original/.agents/skills/lobo-programming/references/callbacks.lobo",
+      "sha256": "a106cf1e51354df3296e755d882d6f0fc6ce7690b761914cca0f76cc0c0bf63e",
+      "bytes": 406
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/coalesce/original/.agents/skills/lobo-programming/references/callbacks.lobo.ids.json",
+      "sha256": "7cf6c0e2a287692417905cb0fb94a3ab5f04cb517695ad597f2404e5888b11cc",
+      "bytes": 334
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/coalesce/original/.agents/skills/lobo-programming/references/compact-example.lobo",
+      "sha256": "d2376c69b774da83073a98883e91794750d59f99ed3fa380d9aaa673d1950954",
+      "bytes": 231
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/coalesce/original/.agents/skills/lobo-programming/references/compact-example.lobo.ids.json",
+      "sha256": "2dbc359fba6b65d4fa0667b91bd80e8c4f150b38ecb26c00c21e743332906d0e",
+      "bytes": 298
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/coalesce/original/.agents/skills/lobo-programming/references/conveniences.lobo",
+      "sha256": "ffb3bcfaa7fa99fca865d6498238b4c81b857a01e2744d46d5a6f0308765e9c9",
+      "bytes": 301
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/coalesce/original/.agents/skills/lobo-programming/references/conveniences.lobo.ids.json",
+      "sha256": "eb25455ebf8d705ecd0d1d2261623cb5930cd4ea9bb3bf04de2d2e7bb0921817",
+      "bytes": 337
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/coalesce/original/.agents/skills/lobo-programming/references/examples.lobo",
+      "sha256": "cf65d2cdc47a1bb15e154f94fe2e70d92e58eb15d405c8a2fb68261c294a1b3c",
+      "bytes": 2028
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/coalesce/original/.agents/skills/lobo-programming/references/json-example.lobo",
+      "sha256": "e45bbda6b893e09f021821bd500195c4e27a827e81edcc249458cef53c3cc712",
+      "bytes": 269
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/coalesce/original/.agents/skills/lobo-programming/references/language.md.txt",
+      "sha256": "f007469320ec5054db07dac9302f8b6ac9a9dc976099ffd566c1ea963ab36562",
+      "bytes": 12554
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/coalesce/original/.agents/skills/lobo-programming/references/native-example.lobo",
+      "sha256": "79c44e86db8aa77322b4d99a424a25a0b2d37ced37e3e65af344c6a02d03737c",
+      "bytes": 300
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/coalesce/original/.agents/skills/lobo-programming/references/sqlite-example.lobo",
+      "sha256": "855f210acb18bc4568aad97373a8633cd9b7053d368980172317c76fab74927a",
+      "bytes": 303
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/coalesce/original/.agents/skills/lobo-programming/references/sqlite-example.lobo.ids.json",
+      "sha256": "18ae22c6bf9c71e6b1f7633bd7fcd847883b919ab27f7b34d18feca3f455a2e6",
+      "bytes": 343
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/coalesce/original/.agents/skills/lobo-programming/references/tools.md.txt",
+      "sha256": "1913a1fceffba4c09f72625d9bc1e8d8104e35025ad674988a73405ba8eb8429",
+      "bytes": 8694
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/coalesce/original/.agents/skills/lobo-programming/references/try-example.lobo",
+      "sha256": "2f6b5750d060c929eae94cb9b001b3ea9154f9ddaa369c0934c1953cce21770a",
+      "bytes": 412
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/coalesce/original/AGENTS.md.txt",
+      "sha256": "3c8c8fce33c21a65ee4b8a44fe408af1f260accb220adba4fb6a75e331e7ea11",
+      "bytes": 153
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/coalesce/original/GUIDE.txt",
+      "sha256": "70f169bfd8ca37792732adb561994943888ccfcfb8b909375a08b36d0067b697",
+      "bytes": 3049
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/coalesce/original/TASK.txt",
+      "sha256": "328f31403d475310a96c31a84e1a071d63c067d28ee3553c33a010e9433a92ed",
+      "bytes": 1074
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/coalesce/original/VISIBLE.json",
+      "sha256": "16e8e6146ee43a85ba0acb4b2547f3b3ed9ec33f7837c0a477513a92cdb45150",
+      "bytes": 1522
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/coalesce/original/check.py",
+      "sha256": "19cfc08bd63439e1487ff9ee80fc4a013b804feb6b424788b2fc62fb63bd278f",
+      "bytes": 385
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/coalesce/original/docs/agent-reference/compact-pilot-2026-11-24/contracts.txt",
+      "sha256": "86a129a75ffba8cb447f0a97b513cc92abb806b932609fc253273909aae868aa",
+      "bytes": 796
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/coalesce/original/docs/agent-reference/compact-pilot-2026-11-24/nominal.txt",
+      "sha256": "9810070ea2f016955293106bc0f7bf2f9fbb718619ad5b8372f34fbc380a0510",
+      "bytes": 819
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/coalesce/original/docs/agent-reference/compact-pilot-2026-11-24/propagation.txt",
+      "sha256": "d204f387ce82c1a0c1106ec337db631c06ec084c51f7b583f7eb9b45fb38c43f",
+      "bytes": 744
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/coalesce/original/docs/agent-reference/compact-pilot-2026-11-24/ranges.txt",
+      "sha256": "633eac0a1b432389d842277929b485519962a646c07bbe97a69a403b5d217478",
+      "bytes": 934
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/coalesce/original/libraries/http/README.md.txt",
+      "sha256": "c4dd34349e63538c79fe003c6cff87c3e4d27a624bc2d3146ed4fe08c4626774",
+      "bytes": 4399
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/coalesce/original/libraries/http/http.lobo",
+      "sha256": "ea9b9d87e15321e06ca67932258b60451c3da04a815e97d234ef2b36a91dba9f",
+      "bytes": 2787
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/coalesce/original/libraries/http-server/README.md.txt",
+      "sha256": "7f695c6966c1a31adf74d2d620760857a07ac28c0763a65fc8a6001800b6bde2",
+      "bytes": 7886
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/coalesce/original/libraries/http-server/server.lobo",
+      "sha256": "3aeac600d4131e544a7054f0f751efb5945e1616c84b210cfdabf5d936912a1e",
+      "bytes": 6880
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/coalesce/original/libraries/http-server/server.lobo.ids.json",
+      "sha256": "27cc7a4a712b98b29bd3fbae6e38616ed1713fb9cf07cc4e6c371d0823f3e640",
+      "bytes": 1408
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/coalesce/original/libraries/http-server/transport.lobo",
+      "sha256": "ac5af9a0ceed5f7a446450c0248c7b6c284931908dc27b25ea1a69cb6517a52b",
+      "bytes": 8145
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/coalesce/original/libraries/http-server/transport.lobo.ids.json",
+      "sha256": "9163bf4fbd4215230030857e386d89b9a38843f233d4ca357e119f93779cc68d",
+      "bytes": 2021
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/coalesce/original/libraries/json/README.md.txt",
+      "sha256": "fcc2d6742f11f4a53fbe1f26ce7a390e477e0de88a983e4a348884f6983d4959",
+      "bytes": 5305
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/coalesce/original/libraries/json/json.lobo",
+      "sha256": "3ed68fee975a46affca613dd6da60fbe6ea297fc447b8c91a76fbe7b2406ac39",
+      "bytes": 8228
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/coalesce/original/libraries/native/README.md.txt",
+      "sha256": "4de8dd7276b56d529c96f909ba6e4903fda299e255394e1e8e4bef094d104eea",
+      "bytes": 3872
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/coalesce/original/libraries/native/native.lobo",
+      "sha256": "ee7ba249a414ff9421cc36d3373f412b6ce63e62d696d1bdd0f9ce111e9027d1",
+      "bytes": 4649
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/coalesce/original/libraries/native/permissions.lobo",
+      "sha256": "c3148d6d50d3d8e2f326b771b76353fed490ba06cfd8cad21deb5d7f8f070e12",
+      "bytes": 1347
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/coalesce/original/libraries/sql/README.md.txt",
+      "sha256": "85f5ec08131d902d2ed64014ebd687462def277aa5f0876599c1058cfd71fad5",
+      "bytes": 4514
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/coalesce/original/libraries/sql/sql.lobo",
+      "sha256": "5704a8abcf1e1d0ee435b09aa7219c9c809bc1aaa304f3fe61b3de41d903a133",
+      "bytes": 9348
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/coalesce/original/libraries/sql/sql.lobo.ids.json",
+      "sha256": "67fc9cd6d80fed595e0efdffeb36b7153d865236ab188d2da776ed8effd643d4",
+      "bytes": 2033
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/coalesce/original/logic.lobo",
+      "sha256": "9b2dc3ed6e7852a941202e9e4e91aa126de1f459662444d2bb50345988f40f03",
+      "bytes": 679
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/coalesce/original/logic.lobo.ids.json",
+      "sha256": "868ff772b9caac7d411c44aa876655646c345662a4113fa9ed2e9140b1493608",
+      "bytes": 331
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/coalesce/original/model.lobo",
+      "sha256": "0e60f811c822ee036f5918288ab8dec48661cb1bfad38ba3b50ac5ce7b29426d",
+      "bytes": 104
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/coalesce/original/model.lobo.ids.json",
+      "sha256": "95164699653cae396cee2e48e6f0318789ea84fcdcc042acd21b9b99c0fb6381",
+      "bytes": 202
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/coalesce/original/research/compact-pilot-2026-11-24.md.txt",
+      "sha256": "761a1fc994e8bdf6865f293fc37728aab95932c49d67a9ea23907a1de352ef25",
+      "bytes": 9416
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/coalesce/original/spec/README.md.txt",
+      "sha256": "e8b911e1997d93f0ede12e14c97851f8e08843ca19e84a1eb5a4319108e82653",
+      "bytes": 4757
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/coalesce/original/spec/agent-testing-v0.1.md.txt",
+      "sha256": "dc9c1fb4b7f3aca5cc70a2cb844139190ec16218ee3ddb7759653f2d0fc4ab0e",
+      "bytes": 11933
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/coalesce/original/spec/checked-artifact-v0.1.md.txt",
+      "sha256": "8e85e37b7a89812f135ccb796e083ea95771032d267e55bc9c0d18f53fa56cdf",
+      "bytes": 4094
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/coalesce/original/spec/checked-artifact-v0.2.md.txt",
+      "sha256": "b13203846b1eb62eeb73445ef422cb526f7ae33d1e6804ecdef20e33c6365ff7",
+      "bytes": 1413
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/coalesce/original/spec/checked-artifact-v0.3.md.txt",
+      "sha256": "4874fc7ba430389d8d3bf4df3c6fc34b2b5bb949ecfe646383e3f6fc04652b15",
+      "bytes": 1147
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/coalesce/original/spec/compact-source-v0.1.md.txt",
+      "sha256": "d7035fbf81ff5c83f84a34dd5c73a1617f1a49176019a2693ba56c501955a94f",
+      "bytes": 5994
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/coalesce/original/spec/conformance/core-cases.json",
+      "sha256": "076f50cc9a45b7588eed4d150bb289fcdf04b0dcc7435dd871e71ef388cf71df",
+      "bytes": 4968
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/coalesce/original/spec/core-v0.1.md.txt",
+      "sha256": "c3fe3c05e21bd22c9df8f9ff78c65f3c645f127b10350c93a888c5f133f16854",
+      "bytes": 13060
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/coalesce/original/spec/core-v0.10.md.txt",
+      "sha256": "2ca585067a2c5113ce335847f433489c79a71d63471c2443786157038b60953e",
+      "bytes": 3093
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/coalesce/original/spec/core-v0.11.md.txt",
+      "sha256": "275105a2b66f5f0f6ddb12828d3e30db47f8603933654ea92b6bb3d5597ba8f9",
+      "bytes": 6042
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/coalesce/original/spec/core-v0.12.md.txt",
+      "sha256": "f02ddafe0a6196c15671a51e08aa12105ce216df1edb1a8354f54cfccc9e15c4",
+      "bytes": 7895
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/coalesce/original/spec/core-v0.2.md.txt",
+      "sha256": "9cbdbe1ddd2a55ce69b3333d5984a12d437ed225d856668c69edfbfd2a4b1ad2",
+      "bytes": 6391
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/coalesce/original/spec/core-v0.3.md.txt",
+      "sha256": "96e39f958c14b082ad0f3a0c72dc0b3318a7c1c442812b35c338d35b00759543",
+      "bytes": 4396
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/coalesce/original/spec/core-v0.4.md.txt",
+      "sha256": "84828c9c83b0c0b70d278e2458d77e01231bfd75899a99193b80a762b78ede83",
+      "bytes": 5039
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/coalesce/original/spec/core-v0.5.md.txt",
+      "sha256": "02ad206aa3cf73c38a8c13d082cdd7d0ea61c45a4dd2ab304497df2cc7c326cc",
+      "bytes": 6607
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/coalesce/original/spec/core-v0.6.md.txt",
+      "sha256": "3d8737fe0d67ef67916ba63fc6d91386d9ff983c9148d2b2c671048a0cf35245",
+      "bytes": 7076
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/coalesce/original/spec/core-v0.7.md.txt",
+      "sha256": "0111fcfce8f7ba3ca9abfa027282113dcb6c31df7fb2d946847260f392efb221",
+      "bytes": 7169
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/coalesce/original/spec/core-v0.8.md.txt",
+      "sha256": "790cfe562577be3dafa5ca3d2028e34d8782cbb36731fe45c29560a4badc6887",
+      "bytes": 5329
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/coalesce/original/spec/core-v0.9.md.txt",
+      "sha256": "4bc8977f5151c72df856a06da8cc1ff136a9fb355681b47075bbd17d570d5379",
+      "bytes": 7360
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/coalesce/original/spec/core-v1.0.md.txt",
+      "sha256": "8dbc2ca888f49b84125a8faedf39160bb1eab27e0f25b336b1ef8f87f14f3b2b",
+      "bytes": 5242
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/coalesce/original/spec/core-v1.1.md.txt",
+      "sha256": "98c9b16d2bd72229464751f1d6c03790efde00a234bf7d2add2306f30b785361",
+      "bytes": 4694
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/coalesce/original/spec/core-v1.10.md.txt",
+      "sha256": "45d45f48a14fda25275c50ea02d6d65854d14e3fb6989ea56ef6d1aba62ec308",
+      "bytes": 4925
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/coalesce/original/spec/core-v1.11.md.txt",
+      "sha256": "d13c38830326c983d336c83ab4a398867bd17858ade3c5f8ecc6d088359182aa",
+      "bytes": 2968
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/coalesce/original/spec/core-v1.2.md.txt",
+      "sha256": "7d0f42dd9d1bd99b860af5045c960fa82ffc96511d8f6397fefa381964c5b363",
+      "bytes": 5534
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/coalesce/original/spec/core-v1.3.md.txt",
+      "sha256": "2ea91b7b4d4c7716a593ceafcfff42227f05f94e45d8500e9ed04e0c956a9118",
+      "bytes": 6183
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/coalesce/original/spec/core-v1.4.md.txt",
+      "sha256": "01b365a0c8874db2ad9982e1e85dc036cf22cf31521c2b28c943c08888edf9b2",
+      "bytes": 5603
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/coalesce/original/spec/core-v1.5.md.txt",
+      "sha256": "dac4877adab3d738fb05fc57c37436106a22206a3069446a00c47de65c1abdda",
+      "bytes": 4557
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/coalesce/original/spec/core-v1.6.md.txt",
+      "sha256": "71967bd60313ce04cabdf740863eb2f1c73c49ecb1f22ea58ed6e9abbcd9c886",
+      "bytes": 4447
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/coalesce/original/spec/core-v1.7.md.txt",
+      "sha256": "2123fbea05d172cf4723e683afc4216c64e9bc0a62495f25e06b7ebc83311ed3",
+      "bytes": 3510
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/coalesce/original/spec/core-v1.8.md.txt",
+      "sha256": "422e050a2b5aa621e9b236f003084fa5398995e3144b3781b998092422255eb6",
+      "bytes": 5772
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/coalesce/original/spec/core-v1.9.md.txt",
+      "sha256": "c84dc7e6b555fc92458d632c0b92fb31052abd023e58b0201c735c6019ec225b",
+      "bytes": 2560
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/coalesce/original/spec/generic-reuse-workload.md.txt",
+      "sha256": "53e5d3097494f3deb5379c77a343997dfa52f47edb6c3915006dac05082b244f",
+      "bytes": 2596
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/coalesce/original/spec/language-milestone-workloads.md.txt",
+      "sha256": "f0be02538657fc901e9241049314b75d03b0472bc776ad3748d63c5c847a2b4d",
+      "bytes": 6656
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/coalesce/original/spec/language-v1-acceptance.md.txt",
+      "sha256": "33e7c84c36db6bcf74059f57e08e3eaa550e1235955d77eae4e6ca4afbed5f33",
+      "bytes": 6645
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/coalesce/original/spec/native-interface-v0.1.md.txt",
+      "sha256": "fc98302a3a5e50c8a87079231b9311954e8351383ba872e4223385ff1770934e",
+      "bytes": 10000
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/coalesce/original/spec/native-llvm-v0.1.md.txt",
+      "sha256": "580611e7fc27523e4aed69b9064a7c688096c8254eecf9a53541f93994045b21",
+      "bytes": 5632
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/coalesce/original/spec/native-v0.1.md.txt",
+      "sha256": "befed14019840eea1988bf6ff982d531df105bb0d1b057e765e820ed72cdc0b6",
+      "bytes": 6568
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/coalesce/original/spec/recursive-ast-workload.md.txt",
+      "sha256": "3138f238b71d5d12001391dc3d2f8cf054a1a59622608699732bcc05441c7a3a",
+      "bytes": 1600
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/coalesce/original/spec/schemas/conformance-case.schema.json",
+      "sha256": "ef3a27dd2a0caa8249c1f1439eb0abf96983350456db4efaabfdd2e2cc24c443",
+      "bytes": 2269
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/coalesce/original/spec/schemas/request-envelope.schema.json",
+      "sha256": "2abad3a1e8bbbb980cfa0fbe2c9c38a789ba94215bd6481f677d15cfe7c24409",
+      "bytes": 1964
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/coalesce/original/spec/schemas/response-envelope.schema.json",
+      "sha256": "a4e7d16a8bc25e06d5a571259df750f7c024319922e419bae57a8d66c64e7ca4",
+      "bytes": 3614
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/coalesce/original/spec/schemas/tool-descriptor.schema.json",
+      "sha256": "2e375db03b357fee59094e46252dcd847a3adf3fc04fae39457bf98a62bc17ef",
+      "bytes": 1727
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/coalesce/original/spec/source-diagnostics-v0.1.md.txt",
+      "sha256": "d531df2c57fdd4ec2917fb029a8fc54f441f6632fbfb7c2b4cfe3b8168e6eb3b",
+      "bytes": 3894
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/coalesce/original/spec/sqlite-interface-v0.1.md.txt",
+      "sha256": "19de3da7153b874edc5518ded812515c2ce32dc67a4d1226307c7a0c8b612bdf",
+      "bytes": 9003
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/coalesce/original/util.lobo",
+      "sha256": "c43f8e6085a7f03acbc1dac3e872ffe5ebdf8f86133519b5ce286a08e7d2055c",
+      "bytes": 338
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/coalesce/original/util.lobo.ids.json",
+      "sha256": "e19f179ed53b0319c39febce4e46eb462845e30547177c99a14aac27ed6ad174",
+      "bytes": 178
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/coalesce/revised/.agents/skills/lobo-development-v2/SKILL.md.txt",
+      "sha256": "e7877b0ce0ab304eaf60fc9f6f9435b254519d43655a0a18c1d569d1bfc4a352",
+      "bytes": 3138
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/coalesce/revised/.agents/skills/lobo-programming/references/callbacks.lobo",
+      "sha256": "a106cf1e51354df3296e755d882d6f0fc6ce7690b761914cca0f76cc0c0bf63e",
+      "bytes": 406
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/coalesce/revised/.agents/skills/lobo-programming/references/callbacks.lobo.ids.json",
+      "sha256": "7cf6c0e2a287692417905cb0fb94a3ab5f04cb517695ad597f2404e5888b11cc",
+      "bytes": 334
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/coalesce/revised/.agents/skills/lobo-programming/references/compact-example.lobo",
+      "sha256": "d2376c69b774da83073a98883e91794750d59f99ed3fa380d9aaa673d1950954",
+      "bytes": 231
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/coalesce/revised/.agents/skills/lobo-programming/references/compact-example.lobo.ids.json",
+      "sha256": "2dbc359fba6b65d4fa0667b91bd80e8c4f150b38ecb26c00c21e743332906d0e",
+      "bytes": 298
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/coalesce/revised/.agents/skills/lobo-programming/references/conveniences.lobo",
+      "sha256": "ffb3bcfaa7fa99fca865d6498238b4c81b857a01e2744d46d5a6f0308765e9c9",
+      "bytes": 301
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/coalesce/revised/.agents/skills/lobo-programming/references/conveniences.lobo.ids.json",
+      "sha256": "eb25455ebf8d705ecd0d1d2261623cb5930cd4ea9bb3bf04de2d2e7bb0921817",
+      "bytes": 337
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/coalesce/revised/.agents/skills/lobo-programming/references/examples.lobo",
+      "sha256": "cf65d2cdc47a1bb15e154f94fe2e70d92e58eb15d405c8a2fb68261c294a1b3c",
+      "bytes": 2028
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/coalesce/revised/.agents/skills/lobo-programming/references/json-example.lobo",
+      "sha256": "e45bbda6b893e09f021821bd500195c4e27a827e81edcc249458cef53c3cc712",
+      "bytes": 269
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/coalesce/revised/.agents/skills/lobo-programming/references/language.md.txt",
+      "sha256": "f007469320ec5054db07dac9302f8b6ac9a9dc976099ffd566c1ea963ab36562",
+      "bytes": 12554
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/coalesce/revised/.agents/skills/lobo-programming/references/native-example.lobo",
+      "sha256": "79c44e86db8aa77322b4d99a424a25a0b2d37ced37e3e65af344c6a02d03737c",
+      "bytes": 300
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/coalesce/revised/.agents/skills/lobo-programming/references/sqlite-example.lobo",
+      "sha256": "855f210acb18bc4568aad97373a8633cd9b7053d368980172317c76fab74927a",
+      "bytes": 303
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/coalesce/revised/.agents/skills/lobo-programming/references/sqlite-example.lobo.ids.json",
+      "sha256": "18ae22c6bf9c71e6b1f7633bd7fcd847883b919ab27f7b34d18feca3f455a2e6",
+      "bytes": 343
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/coalesce/revised/.agents/skills/lobo-programming/references/tools.md.txt",
+      "sha256": "1913a1fceffba4c09f72625d9bc1e8d8104e35025ad674988a73405ba8eb8429",
+      "bytes": 8694
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/coalesce/revised/.agents/skills/lobo-programming/references/try-example.lobo",
+      "sha256": "2f6b5750d060c929eae94cb9b001b3ea9154f9ddaa369c0934c1953cce21770a",
+      "bytes": 412
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/coalesce/revised/AGENTS.md.txt",
+      "sha256": "3c8c8fce33c21a65ee4b8a44fe408af1f260accb220adba4fb6a75e331e7ea11",
+      "bytes": 153
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/coalesce/revised/GUIDE.txt",
+      "sha256": "70f169bfd8ca37792732adb561994943888ccfcfb8b909375a08b36d0067b697",
+      "bytes": 3049
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/coalesce/revised/TASK.txt",
+      "sha256": "328f31403d475310a96c31a84e1a071d63c067d28ee3553c33a010e9433a92ed",
+      "bytes": 1074
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/coalesce/revised/VISIBLE.json",
+      "sha256": "16e8e6146ee43a85ba0acb4b2547f3b3ed9ec33f7837c0a477513a92cdb45150",
+      "bytes": 1522
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/coalesce/revised/check.py",
+      "sha256": "19cfc08bd63439e1487ff9ee80fc4a013b804feb6b424788b2fc62fb63bd278f",
+      "bytes": 385
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/coalesce/revised/docs/agent-reference/compact-pilot-2026-11-24/contracts.txt",
+      "sha256": "86a129a75ffba8cb447f0a97b513cc92abb806b932609fc253273909aae868aa",
+      "bytes": 796
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/coalesce/revised/docs/agent-reference/compact-pilot-2026-11-24/nominal.txt",
+      "sha256": "9810070ea2f016955293106bc0f7bf2f9fbb718619ad5b8372f34fbc380a0510",
+      "bytes": 819
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/coalesce/revised/docs/agent-reference/compact-pilot-2026-11-24/propagation.txt",
+      "sha256": "d204f387ce82c1a0c1106ec337db631c06ec084c51f7b583f7eb9b45fb38c43f",
+      "bytes": 744
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/coalesce/revised/docs/agent-reference/compact-pilot-2026-11-24/ranges.txt",
+      "sha256": "633eac0a1b432389d842277929b485519962a646c07bbe97a69a403b5d217478",
+      "bytes": 934
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/coalesce/revised/libraries/http/README.md.txt",
+      "sha256": "c4dd34349e63538c79fe003c6cff87c3e4d27a624bc2d3146ed4fe08c4626774",
+      "bytes": 4399
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/coalesce/revised/libraries/http/http.lobo",
+      "sha256": "ea9b9d87e15321e06ca67932258b60451c3da04a815e97d234ef2b36a91dba9f",
+      "bytes": 2787
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/coalesce/revised/libraries/http-server/README.md.txt",
+      "sha256": "7f695c6966c1a31adf74d2d620760857a07ac28c0763a65fc8a6001800b6bde2",
+      "bytes": 7886
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/coalesce/revised/libraries/http-server/server.lobo",
+      "sha256": "3aeac600d4131e544a7054f0f751efb5945e1616c84b210cfdabf5d936912a1e",
+      "bytes": 6880
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/coalesce/revised/libraries/http-server/server.lobo.ids.json",
+      "sha256": "27cc7a4a712b98b29bd3fbae6e38616ed1713fb9cf07cc4e6c371d0823f3e640",
+      "bytes": 1408
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/coalesce/revised/libraries/http-server/transport.lobo",
+      "sha256": "ac5af9a0ceed5f7a446450c0248c7b6c284931908dc27b25ea1a69cb6517a52b",
+      "bytes": 8145
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/coalesce/revised/libraries/http-server/transport.lobo.ids.json",
+      "sha256": "9163bf4fbd4215230030857e386d89b9a38843f233d4ca357e119f93779cc68d",
+      "bytes": 2021
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/coalesce/revised/libraries/json/README.md.txt",
+      "sha256": "fcc2d6742f11f4a53fbe1f26ce7a390e477e0de88a983e4a348884f6983d4959",
+      "bytes": 5305
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/coalesce/revised/libraries/json/json.lobo",
+      "sha256": "3ed68fee975a46affca613dd6da60fbe6ea297fc447b8c91a76fbe7b2406ac39",
+      "bytes": 8228
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/coalesce/revised/libraries/native/README.md.txt",
+      "sha256": "4de8dd7276b56d529c96f909ba6e4903fda299e255394e1e8e4bef094d104eea",
+      "bytes": 3872
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/coalesce/revised/libraries/native/native.lobo",
+      "sha256": "ee7ba249a414ff9421cc36d3373f412b6ce63e62d696d1bdd0f9ce111e9027d1",
+      "bytes": 4649
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/coalesce/revised/libraries/native/permissions.lobo",
+      "sha256": "c3148d6d50d3d8e2f326b771b76353fed490ba06cfd8cad21deb5d7f8f070e12",
+      "bytes": 1347
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/coalesce/revised/libraries/sql/README.md.txt",
+      "sha256": "85f5ec08131d902d2ed64014ebd687462def277aa5f0876599c1058cfd71fad5",
+      "bytes": 4514
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/coalesce/revised/libraries/sql/sql.lobo",
+      "sha256": "5704a8abcf1e1d0ee435b09aa7219c9c809bc1aaa304f3fe61b3de41d903a133",
+      "bytes": 9348
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/coalesce/revised/libraries/sql/sql.lobo.ids.json",
+      "sha256": "67fc9cd6d80fed595e0efdffeb36b7153d865236ab188d2da776ed8effd643d4",
+      "bytes": 2033
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/coalesce/revised/logic.lobo",
+      "sha256": "9b2dc3ed6e7852a941202e9e4e91aa126de1f459662444d2bb50345988f40f03",
+      "bytes": 679
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/coalesce/revised/logic.lobo.ids.json",
+      "sha256": "868ff772b9caac7d411c44aa876655646c345662a4113fa9ed2e9140b1493608",
+      "bytes": 331
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/coalesce/revised/model.lobo",
+      "sha256": "0e60f811c822ee036f5918288ab8dec48661cb1bfad38ba3b50ac5ce7b29426d",
+      "bytes": 104
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/coalesce/revised/model.lobo.ids.json",
+      "sha256": "95164699653cae396cee2e48e6f0318789ea84fcdcc042acd21b9b99c0fb6381",
+      "bytes": 202
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/coalesce/revised/research/compact-pilot-2026-11-24.md.txt",
+      "sha256": "761a1fc994e8bdf6865f293fc37728aab95932c49d67a9ea23907a1de352ef25",
+      "bytes": 9416
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/coalesce/revised/spec/README.md.txt",
+      "sha256": "e8b911e1997d93f0ede12e14c97851f8e08843ca19e84a1eb5a4319108e82653",
+      "bytes": 4757
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/coalesce/revised/spec/agent-testing-v0.1.md.txt",
+      "sha256": "dc9c1fb4b7f3aca5cc70a2cb844139190ec16218ee3ddb7759653f2d0fc4ab0e",
+      "bytes": 11933
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/coalesce/revised/spec/checked-artifact-v0.1.md.txt",
+      "sha256": "8e85e37b7a89812f135ccb796e083ea95771032d267e55bc9c0d18f53fa56cdf",
+      "bytes": 4094
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/coalesce/revised/spec/checked-artifact-v0.2.md.txt",
+      "sha256": "b13203846b1eb62eeb73445ef422cb526f7ae33d1e6804ecdef20e33c6365ff7",
+      "bytes": 1413
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/coalesce/revised/spec/checked-artifact-v0.3.md.txt",
+      "sha256": "4874fc7ba430389d8d3bf4df3c6fc34b2b5bb949ecfe646383e3f6fc04652b15",
+      "bytes": 1147
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/coalesce/revised/spec/compact-source-v0.1.md.txt",
+      "sha256": "d7035fbf81ff5c83f84a34dd5c73a1617f1a49176019a2693ba56c501955a94f",
+      "bytes": 5994
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/coalesce/revised/spec/conformance/core-cases.json",
+      "sha256": "076f50cc9a45b7588eed4d150bb289fcdf04b0dcc7435dd871e71ef388cf71df",
+      "bytes": 4968
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/coalesce/revised/spec/core-v0.1.md.txt",
+      "sha256": "c3fe3c05e21bd22c9df8f9ff78c65f3c645f127b10350c93a888c5f133f16854",
+      "bytes": 13060
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/coalesce/revised/spec/core-v0.10.md.txt",
+      "sha256": "2ca585067a2c5113ce335847f433489c79a71d63471c2443786157038b60953e",
+      "bytes": 3093
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/coalesce/revised/spec/core-v0.11.md.txt",
+      "sha256": "275105a2b66f5f0f6ddb12828d3e30db47f8603933654ea92b6bb3d5597ba8f9",
+      "bytes": 6042
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/coalesce/revised/spec/core-v0.12.md.txt",
+      "sha256": "f02ddafe0a6196c15671a51e08aa12105ce216df1edb1a8354f54cfccc9e15c4",
+      "bytes": 7895
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/coalesce/revised/spec/core-v0.2.md.txt",
+      "sha256": "9cbdbe1ddd2a55ce69b3333d5984a12d437ed225d856668c69edfbfd2a4b1ad2",
+      "bytes": 6391
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/coalesce/revised/spec/core-v0.3.md.txt",
+      "sha256": "96e39f958c14b082ad0f3a0c72dc0b3318a7c1c442812b35c338d35b00759543",
+      "bytes": 4396
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/coalesce/revised/spec/core-v0.4.md.txt",
+      "sha256": "84828c9c83b0c0b70d278e2458d77e01231bfd75899a99193b80a762b78ede83",
+      "bytes": 5039
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/coalesce/revised/spec/core-v0.5.md.txt",
+      "sha256": "02ad206aa3cf73c38a8c13d082cdd7d0ea61c45a4dd2ab304497df2cc7c326cc",
+      "bytes": 6607
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/coalesce/revised/spec/core-v0.6.md.txt",
+      "sha256": "3d8737fe0d67ef67916ba63fc6d91386d9ff983c9148d2b2c671048a0cf35245",
+      "bytes": 7076
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/coalesce/revised/spec/core-v0.7.md.txt",
+      "sha256": "0111fcfce8f7ba3ca9abfa027282113dcb6c31df7fb2d946847260f392efb221",
+      "bytes": 7169
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/coalesce/revised/spec/core-v0.8.md.txt",
+      "sha256": "790cfe562577be3dafa5ca3d2028e34d8782cbb36731fe45c29560a4badc6887",
+      "bytes": 5329
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/coalesce/revised/spec/core-v0.9.md.txt",
+      "sha256": "4bc8977f5151c72df856a06da8cc1ff136a9fb355681b47075bbd17d570d5379",
+      "bytes": 7360
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/coalesce/revised/spec/core-v1.0.md.txt",
+      "sha256": "8dbc2ca888f49b84125a8faedf39160bb1eab27e0f25b336b1ef8f87f14f3b2b",
+      "bytes": 5242
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/coalesce/revised/spec/core-v1.1.md.txt",
+      "sha256": "98c9b16d2bd72229464751f1d6c03790efde00a234bf7d2add2306f30b785361",
+      "bytes": 4694
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/coalesce/revised/spec/core-v1.10.md.txt",
+      "sha256": "45d45f48a14fda25275c50ea02d6d65854d14e3fb6989ea56ef6d1aba62ec308",
+      "bytes": 4925
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/coalesce/revised/spec/core-v1.11.md.txt",
+      "sha256": "d13c38830326c983d336c83ab4a398867bd17858ade3c5f8ecc6d088359182aa",
+      "bytes": 2968
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/coalesce/revised/spec/core-v1.2.md.txt",
+      "sha256": "7d0f42dd9d1bd99b860af5045c960fa82ffc96511d8f6397fefa381964c5b363",
+      "bytes": 5534
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/coalesce/revised/spec/core-v1.3.md.txt",
+      "sha256": "2ea91b7b4d4c7716a593ceafcfff42227f05f94e45d8500e9ed04e0c956a9118",
+      "bytes": 6183
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/coalesce/revised/spec/core-v1.4.md.txt",
+      "sha256": "01b365a0c8874db2ad9982e1e85dc036cf22cf31521c2b28c943c08888edf9b2",
+      "bytes": 5603
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/coalesce/revised/spec/core-v1.5.md.txt",
+      "sha256": "dac4877adab3d738fb05fc57c37436106a22206a3069446a00c47de65c1abdda",
+      "bytes": 4557
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/coalesce/revised/spec/core-v1.6.md.txt",
+      "sha256": "71967bd60313ce04cabdf740863eb2f1c73c49ecb1f22ea58ed6e9abbcd9c886",
+      "bytes": 4447
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/coalesce/revised/spec/core-v1.7.md.txt",
+      "sha256": "2123fbea05d172cf4723e683afc4216c64e9bc0a62495f25e06b7ebc83311ed3",
+      "bytes": 3510
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/coalesce/revised/spec/core-v1.8.md.txt",
+      "sha256": "422e050a2b5aa621e9b236f003084fa5398995e3144b3781b998092422255eb6",
+      "bytes": 5772
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/coalesce/revised/spec/core-v1.9.md.txt",
+      "sha256": "c84dc7e6b555fc92458d632c0b92fb31052abd023e58b0201c735c6019ec225b",
+      "bytes": 2560
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/coalesce/revised/spec/generic-reuse-workload.md.txt",
+      "sha256": "53e5d3097494f3deb5379c77a343997dfa52f47edb6c3915006dac05082b244f",
+      "bytes": 2596
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/coalesce/revised/spec/language-milestone-workloads.md.txt",
+      "sha256": "f0be02538657fc901e9241049314b75d03b0472bc776ad3748d63c5c847a2b4d",
+      "bytes": 6656
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/coalesce/revised/spec/language-v1-acceptance.md.txt",
+      "sha256": "33e7c84c36db6bcf74059f57e08e3eaa550e1235955d77eae4e6ca4afbed5f33",
+      "bytes": 6645
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/coalesce/revised/spec/native-interface-v0.1.md.txt",
+      "sha256": "fc98302a3a5e50c8a87079231b9311954e8351383ba872e4223385ff1770934e",
+      "bytes": 10000
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/coalesce/revised/spec/native-llvm-v0.1.md.txt",
+      "sha256": "580611e7fc27523e4aed69b9064a7c688096c8254eecf9a53541f93994045b21",
+      "bytes": 5632
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/coalesce/revised/spec/native-v0.1.md.txt",
+      "sha256": "befed14019840eea1988bf6ff982d531df105bb0d1b057e765e820ed72cdc0b6",
+      "bytes": 6568
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/coalesce/revised/spec/recursive-ast-workload.md.txt",
+      "sha256": "3138f238b71d5d12001391dc3d2f8cf054a1a59622608699732bcc05441c7a3a",
+      "bytes": 1600
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/coalesce/revised/spec/schemas/conformance-case.schema.json",
+      "sha256": "ef3a27dd2a0caa8249c1f1439eb0abf96983350456db4efaabfdd2e2cc24c443",
+      "bytes": 2269
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/coalesce/revised/spec/schemas/request-envelope.schema.json",
+      "sha256": "2abad3a1e8bbbb980cfa0fbe2c9c38a789ba94215bd6481f677d15cfe7c24409",
+      "bytes": 1964
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/coalesce/revised/spec/schemas/response-envelope.schema.json",
+      "sha256": "a4e7d16a8bc25e06d5a571259df750f7c024319922e419bae57a8d66c64e7ca4",
+      "bytes": 3614
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/coalesce/revised/spec/schemas/tool-descriptor.schema.json",
+      "sha256": "2e375db03b357fee59094e46252dcd847a3adf3fc04fae39457bf98a62bc17ef",
+      "bytes": 1727
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/coalesce/revised/spec/source-diagnostics-v0.1.md.txt",
+      "sha256": "d531df2c57fdd4ec2917fb029a8fc54f441f6632fbfb7c2b4cfe3b8168e6eb3b",
+      "bytes": 3894
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/coalesce/revised/spec/sqlite-interface-v0.1.md.txt",
+      "sha256": "19de3da7153b874edc5518ded812515c2ce32dc67a4d1226307c7a0c8b612bdf",
+      "bytes": 9003
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/coalesce/revised/util.lobo",
+      "sha256": "c43f8e6085a7f03acbc1dac3e872ffe5ebdf8f86133519b5ce286a08e7d2055c",
+      "bytes": 338
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/coalesce/revised/util.lobo.ids.json",
+      "sha256": "e19f179ed53b0319c39febce4e46eb462845e30547177c99a14aac27ed6ad174",
+      "bytes": 178
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/locate/control/.agents/skills/lobo-programming/references/callbacks.lobo",
+      "sha256": "a106cf1e51354df3296e755d882d6f0fc6ce7690b761914cca0f76cc0c0bf63e",
+      "bytes": 406
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/locate/control/.agents/skills/lobo-programming/references/callbacks.lobo.ids.json",
+      "sha256": "7cf6c0e2a287692417905cb0fb94a3ab5f04cb517695ad597f2404e5888b11cc",
+      "bytes": 334
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/locate/control/.agents/skills/lobo-programming/references/compact-example.lobo",
+      "sha256": "d2376c69b774da83073a98883e91794750d59f99ed3fa380d9aaa673d1950954",
+      "bytes": 231
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/locate/control/.agents/skills/lobo-programming/references/compact-example.lobo.ids.json",
+      "sha256": "2dbc359fba6b65d4fa0667b91bd80e8c4f150b38ecb26c00c21e743332906d0e",
+      "bytes": 298
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/locate/control/.agents/skills/lobo-programming/references/conveniences.lobo",
+      "sha256": "ffb3bcfaa7fa99fca865d6498238b4c81b857a01e2744d46d5a6f0308765e9c9",
+      "bytes": 301
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/locate/control/.agents/skills/lobo-programming/references/conveniences.lobo.ids.json",
+      "sha256": "eb25455ebf8d705ecd0d1d2261623cb5930cd4ea9bb3bf04de2d2e7bb0921817",
+      "bytes": 337
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/locate/control/.agents/skills/lobo-programming/references/examples.lobo",
+      "sha256": "cf65d2cdc47a1bb15e154f94fe2e70d92e58eb15d405c8a2fb68261c294a1b3c",
+      "bytes": 2028
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/locate/control/.agents/skills/lobo-programming/references/json-example.lobo",
+      "sha256": "e45bbda6b893e09f021821bd500195c4e27a827e81edcc249458cef53c3cc712",
+      "bytes": 269
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/locate/control/.agents/skills/lobo-programming/references/language.md.txt",
+      "sha256": "f007469320ec5054db07dac9302f8b6ac9a9dc976099ffd566c1ea963ab36562",
+      "bytes": 12554
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/locate/control/.agents/skills/lobo-programming/references/native-example.lobo",
+      "sha256": "79c44e86db8aa77322b4d99a424a25a0b2d37ced37e3e65af344c6a02d03737c",
+      "bytes": 300
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/locate/control/.agents/skills/lobo-programming/references/sqlite-example.lobo",
+      "sha256": "855f210acb18bc4568aad97373a8633cd9b7053d368980172317c76fab74927a",
+      "bytes": 303
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/locate/control/.agents/skills/lobo-programming/references/sqlite-example.lobo.ids.json",
+      "sha256": "18ae22c6bf9c71e6b1f7633bd7fcd847883b919ab27f7b34d18feca3f455a2e6",
+      "bytes": 343
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/locate/control/.agents/skills/lobo-programming/references/tools.md.txt",
+      "sha256": "1913a1fceffba4c09f72625d9bc1e8d8104e35025ad674988a73405ba8eb8429",
+      "bytes": 8694
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/locate/control/.agents/skills/lobo-programming/references/try-example.lobo",
+      "sha256": "2f6b5750d060c929eae94cb9b001b3ea9154f9ddaa369c0934c1953cce21770a",
+      "bytes": 412
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/locate/control/AGENTS.md.txt",
+      "sha256": "3c8c8fce33c21a65ee4b8a44fe408af1f260accb220adba4fb6a75e331e7ea11",
+      "bytes": 153
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/locate/control/GUIDE.txt",
+      "sha256": "70f169bfd8ca37792732adb561994943888ccfcfb8b909375a08b36d0067b697",
+      "bytes": 3049
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/locate/control/TASK.txt",
+      "sha256": "d3b5b6740e9ed34fe092d5e90808c7d2502d0e05a71f6ee5c2a7c28ec3c9448f",
+      "bytes": 1035
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/locate/control/VISIBLE.json",
+      "sha256": "6629b66e6761ec850c23bddcdd67001675f606a6daae453def5ec3cee69a7ea5",
+      "bytes": 1113
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/locate/control/check.py",
+      "sha256": "19cfc08bd63439e1487ff9ee80fc4a013b804feb6b424788b2fc62fb63bd278f",
+      "bytes": 385
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/locate/control/docs/agent-reference/compact-pilot-2026-11-24/contracts.txt",
+      "sha256": "86a129a75ffba8cb447f0a97b513cc92abb806b932609fc253273909aae868aa",
+      "bytes": 796
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/locate/control/docs/agent-reference/compact-pilot-2026-11-24/nominal.txt",
+      "sha256": "9810070ea2f016955293106bc0f7bf2f9fbb718619ad5b8372f34fbc380a0510",
+      "bytes": 819
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/locate/control/docs/agent-reference/compact-pilot-2026-11-24/propagation.txt",
+      "sha256": "d204f387ce82c1a0c1106ec337db631c06ec084c51f7b583f7eb9b45fb38c43f",
+      "bytes": 744
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/locate/control/docs/agent-reference/compact-pilot-2026-11-24/ranges.txt",
+      "sha256": "633eac0a1b432389d842277929b485519962a646c07bbe97a69a403b5d217478",
+      "bytes": 934
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/locate/control/libraries/http/README.md.txt",
+      "sha256": "c4dd34349e63538c79fe003c6cff87c3e4d27a624bc2d3146ed4fe08c4626774",
+      "bytes": 4399
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/locate/control/libraries/http/http.lobo",
+      "sha256": "ea9b9d87e15321e06ca67932258b60451c3da04a815e97d234ef2b36a91dba9f",
+      "bytes": 2787
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/locate/control/libraries/http-server/README.md.txt",
+      "sha256": "7f695c6966c1a31adf74d2d620760857a07ac28c0763a65fc8a6001800b6bde2",
+      "bytes": 7886
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/locate/control/libraries/http-server/server.lobo",
+      "sha256": "3aeac600d4131e544a7054f0f751efb5945e1616c84b210cfdabf5d936912a1e",
+      "bytes": 6880
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/locate/control/libraries/http-server/server.lobo.ids.json",
+      "sha256": "27cc7a4a712b98b29bd3fbae6e38616ed1713fb9cf07cc4e6c371d0823f3e640",
+      "bytes": 1408
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/locate/control/libraries/http-server/transport.lobo",
+      "sha256": "ac5af9a0ceed5f7a446450c0248c7b6c284931908dc27b25ea1a69cb6517a52b",
+      "bytes": 8145
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/locate/control/libraries/http-server/transport.lobo.ids.json",
+      "sha256": "9163bf4fbd4215230030857e386d89b9a38843f233d4ca357e119f93779cc68d",
+      "bytes": 2021
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/locate/control/libraries/json/README.md.txt",
+      "sha256": "fcc2d6742f11f4a53fbe1f26ce7a390e477e0de88a983e4a348884f6983d4959",
+      "bytes": 5305
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/locate/control/libraries/json/json.lobo",
+      "sha256": "3ed68fee975a46affca613dd6da60fbe6ea297fc447b8c91a76fbe7b2406ac39",
+      "bytes": 8228
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/locate/control/libraries/native/README.md.txt",
+      "sha256": "4de8dd7276b56d529c96f909ba6e4903fda299e255394e1e8e4bef094d104eea",
+      "bytes": 3872
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/locate/control/libraries/native/native.lobo",
+      "sha256": "ee7ba249a414ff9421cc36d3373f412b6ce63e62d696d1bdd0f9ce111e9027d1",
+      "bytes": 4649
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/locate/control/libraries/native/permissions.lobo",
+      "sha256": "c3148d6d50d3d8e2f326b771b76353fed490ba06cfd8cad21deb5d7f8f070e12",
+      "bytes": 1347
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/locate/control/libraries/sql/README.md.txt",
+      "sha256": "85f5ec08131d902d2ed64014ebd687462def277aa5f0876599c1058cfd71fad5",
+      "bytes": 4514
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/locate/control/libraries/sql/sql.lobo",
+      "sha256": "5704a8abcf1e1d0ee435b09aa7219c9c809bc1aaa304f3fe61b3de41d903a133",
+      "bytes": 9348
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/locate/control/libraries/sql/sql.lobo.ids.json",
+      "sha256": "67fc9cd6d80fed595e0efdffeb36b7153d865236ab188d2da776ed8effd643d4",
+      "bytes": 2033
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/locate/control/logic.lobo",
+      "sha256": "0a27de404f9c2ae55477e817a8c9817523b9f5cc5e0c5fb7a3dc4a439de0d44d",
+      "bytes": 121
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/locate/control/logic.lobo.ids.json",
+      "sha256": "9f871af748bf4119c6d4ecb46462bfea5a98fbf3e0728c1a0349b33740275db8",
+      "bytes": 277
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/locate/control/model.lobo",
+      "sha256": "d77fbf025d243805f4cff27f7075a2e1b3dbc1cfca154df155fcbfab6b53f092",
+      "bytes": 127
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/locate/control/model.lobo.ids.json",
+      "sha256": "498b1968b9fd4fe737b5f8fe0d4fbb8b992e1439ab71378c805c670d659481f8",
+      "bytes": 192
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/locate/control/research/compact-pilot-2026-11-24.md.txt",
+      "sha256": "761a1fc994e8bdf6865f293fc37728aab95932c49d67a9ea23907a1de352ef25",
+      "bytes": 9416
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/locate/control/spec/README.md.txt",
+      "sha256": "e8b911e1997d93f0ede12e14c97851f8e08843ca19e84a1eb5a4319108e82653",
+      "bytes": 4757
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/locate/control/spec/agent-testing-v0.1.md.txt",
+      "sha256": "dc9c1fb4b7f3aca5cc70a2cb844139190ec16218ee3ddb7759653f2d0fc4ab0e",
+      "bytes": 11933
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/locate/control/spec/checked-artifact-v0.1.md.txt",
+      "sha256": "8e85e37b7a89812f135ccb796e083ea95771032d267e55bc9c0d18f53fa56cdf",
+      "bytes": 4094
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/locate/control/spec/checked-artifact-v0.2.md.txt",
+      "sha256": "b13203846b1eb62eeb73445ef422cb526f7ae33d1e6804ecdef20e33c6365ff7",
+      "bytes": 1413
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/locate/control/spec/checked-artifact-v0.3.md.txt",
+      "sha256": "4874fc7ba430389d8d3bf4df3c6fc34b2b5bb949ecfe646383e3f6fc04652b15",
+      "bytes": 1147
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/locate/control/spec/compact-source-v0.1.md.txt",
+      "sha256": "d7035fbf81ff5c83f84a34dd5c73a1617f1a49176019a2693ba56c501955a94f",
+      "bytes": 5994
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/locate/control/spec/conformance/core-cases.json",
+      "sha256": "076f50cc9a45b7588eed4d150bb289fcdf04b0dcc7435dd871e71ef388cf71df",
+      "bytes": 4968
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/locate/control/spec/core-v0.1.md.txt",
+      "sha256": "c3fe3c05e21bd22c9df8f9ff78c65f3c645f127b10350c93a888c5f133f16854",
+      "bytes": 13060
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/locate/control/spec/core-v0.10.md.txt",
+      "sha256": "2ca585067a2c5113ce335847f433489c79a71d63471c2443786157038b60953e",
+      "bytes": 3093
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/locate/control/spec/core-v0.11.md.txt",
+      "sha256": "275105a2b66f5f0f6ddb12828d3e30db47f8603933654ea92b6bb3d5597ba8f9",
+      "bytes": 6042
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/locate/control/spec/core-v0.12.md.txt",
+      "sha256": "f02ddafe0a6196c15671a51e08aa12105ce216df1edb1a8354f54cfccc9e15c4",
+      "bytes": 7895
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/locate/control/spec/core-v0.2.md.txt",
+      "sha256": "9cbdbe1ddd2a55ce69b3333d5984a12d437ed225d856668c69edfbfd2a4b1ad2",
+      "bytes": 6391
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/locate/control/spec/core-v0.3.md.txt",
+      "sha256": "96e39f958c14b082ad0f3a0c72dc0b3318a7c1c442812b35c338d35b00759543",
+      "bytes": 4396
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/locate/control/spec/core-v0.4.md.txt",
+      "sha256": "84828c9c83b0c0b70d278e2458d77e01231bfd75899a99193b80a762b78ede83",
+      "bytes": 5039
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/locate/control/spec/core-v0.5.md.txt",
+      "sha256": "02ad206aa3cf73c38a8c13d082cdd7d0ea61c45a4dd2ab304497df2cc7c326cc",
+      "bytes": 6607
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/locate/control/spec/core-v0.6.md.txt",
+      "sha256": "3d8737fe0d67ef67916ba63fc6d91386d9ff983c9148d2b2c671048a0cf35245",
+      "bytes": 7076
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/locate/control/spec/core-v0.7.md.txt",
+      "sha256": "0111fcfce8f7ba3ca9abfa027282113dcb6c31df7fb2d946847260f392efb221",
+      "bytes": 7169
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/locate/control/spec/core-v0.8.md.txt",
+      "sha256": "790cfe562577be3dafa5ca3d2028e34d8782cbb36731fe45c29560a4badc6887",
+      "bytes": 5329
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/locate/control/spec/core-v0.9.md.txt",
+      "sha256": "4bc8977f5151c72df856a06da8cc1ff136a9fb355681b47075bbd17d570d5379",
+      "bytes": 7360
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/locate/control/spec/core-v1.0.md.txt",
+      "sha256": "8dbc2ca888f49b84125a8faedf39160bb1eab27e0f25b336b1ef8f87f14f3b2b",
+      "bytes": 5242
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/locate/control/spec/core-v1.1.md.txt",
+      "sha256": "98c9b16d2bd72229464751f1d6c03790efde00a234bf7d2add2306f30b785361",
+      "bytes": 4694
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/locate/control/spec/core-v1.10.md.txt",
+      "sha256": "45d45f48a14fda25275c50ea02d6d65854d14e3fb6989ea56ef6d1aba62ec308",
+      "bytes": 4925
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/locate/control/spec/core-v1.11.md.txt",
+      "sha256": "d13c38830326c983d336c83ab4a398867bd17858ade3c5f8ecc6d088359182aa",
+      "bytes": 2968
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/locate/control/spec/core-v1.2.md.txt",
+      "sha256": "7d0f42dd9d1bd99b860af5045c960fa82ffc96511d8f6397fefa381964c5b363",
+      "bytes": 5534
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/locate/control/spec/core-v1.3.md.txt",
+      "sha256": "2ea91b7b4d4c7716a593ceafcfff42227f05f94e45d8500e9ed04e0c956a9118",
+      "bytes": 6183
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/locate/control/spec/core-v1.4.md.txt",
+      "sha256": "01b365a0c8874db2ad9982e1e85dc036cf22cf31521c2b28c943c08888edf9b2",
+      "bytes": 5603
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/locate/control/spec/core-v1.5.md.txt",
+      "sha256": "dac4877adab3d738fb05fc57c37436106a22206a3069446a00c47de65c1abdda",
+      "bytes": 4557
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/locate/control/spec/core-v1.6.md.txt",
+      "sha256": "71967bd60313ce04cabdf740863eb2f1c73c49ecb1f22ea58ed6e9abbcd9c886",
+      "bytes": 4447
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/locate/control/spec/core-v1.7.md.txt",
+      "sha256": "2123fbea05d172cf4723e683afc4216c64e9bc0a62495f25e06b7ebc83311ed3",
+      "bytes": 3510
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/locate/control/spec/core-v1.8.md.txt",
+      "sha256": "422e050a2b5aa621e9b236f003084fa5398995e3144b3781b998092422255eb6",
+      "bytes": 5772
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/locate/control/spec/core-v1.9.md.txt",
+      "sha256": "c84dc7e6b555fc92458d632c0b92fb31052abd023e58b0201c735c6019ec225b",
+      "bytes": 2560
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/locate/control/spec/generic-reuse-workload.md.txt",
+      "sha256": "53e5d3097494f3deb5379c77a343997dfa52f47edb6c3915006dac05082b244f",
+      "bytes": 2596
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/locate/control/spec/language-milestone-workloads.md.txt",
+      "sha256": "f0be02538657fc901e9241049314b75d03b0472bc776ad3748d63c5c847a2b4d",
+      "bytes": 6656
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/locate/control/spec/language-v1-acceptance.md.txt",
+      "sha256": "33e7c84c36db6bcf74059f57e08e3eaa550e1235955d77eae4e6ca4afbed5f33",
+      "bytes": 6645
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/locate/control/spec/native-interface-v0.1.md.txt",
+      "sha256": "fc98302a3a5e50c8a87079231b9311954e8351383ba872e4223385ff1770934e",
+      "bytes": 10000
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/locate/control/spec/native-llvm-v0.1.md.txt",
+      "sha256": "580611e7fc27523e4aed69b9064a7c688096c8254eecf9a53541f93994045b21",
+      "bytes": 5632
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/locate/control/spec/native-v0.1.md.txt",
+      "sha256": "befed14019840eea1988bf6ff982d531df105bb0d1b057e765e820ed72cdc0b6",
+      "bytes": 6568
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/locate/control/spec/recursive-ast-workload.md.txt",
+      "sha256": "3138f238b71d5d12001391dc3d2f8cf054a1a59622608699732bcc05441c7a3a",
+      "bytes": 1600
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/locate/control/spec/schemas/conformance-case.schema.json",
+      "sha256": "ef3a27dd2a0caa8249c1f1439eb0abf96983350456db4efaabfdd2e2cc24c443",
+      "bytes": 2269
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/locate/control/spec/schemas/request-envelope.schema.json",
+      "sha256": "2abad3a1e8bbbb980cfa0fbe2c9c38a789ba94215bd6481f677d15cfe7c24409",
+      "bytes": 1964
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/locate/control/spec/schemas/response-envelope.schema.json",
+      "sha256": "a4e7d16a8bc25e06d5a571259df750f7c024319922e419bae57a8d66c64e7ca4",
+      "bytes": 3614
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/locate/control/spec/schemas/tool-descriptor.schema.json",
+      "sha256": "2e375db03b357fee59094e46252dcd847a3adf3fc04fae39457bf98a62bc17ef",
+      "bytes": 1727
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/locate/control/spec/source-diagnostics-v0.1.md.txt",
+      "sha256": "d531df2c57fdd4ec2917fb029a8fc54f441f6632fbfb7c2b4cfe3b8168e6eb3b",
+      "bytes": 3894
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/locate/control/spec/sqlite-interface-v0.1.md.txt",
+      "sha256": "19de3da7153b874edc5518ded812515c2ce32dc67a4d1226307c7a0c8b612bdf",
+      "bytes": 9003
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/locate/control/util.lobo",
+      "sha256": "c43f8e6085a7f03acbc1dac3e872ffe5ebdf8f86133519b5ce286a08e7d2055c",
+      "bytes": 338
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/locate/control/util.lobo.ids.json",
+      "sha256": "e19f179ed53b0319c39febce4e46eb462845e30547177c99a14aac27ed6ad174",
+      "bytes": 178
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/locate/original/.agents/skills/lobo-development/SKILL.md.txt",
+      "sha256": "804a12e43f79bef059243f88e474266890c785d02df034645cbab88da50a52b5",
+      "bytes": 4799
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/locate/original/.agents/skills/lobo-programming/references/callbacks.lobo",
+      "sha256": "a106cf1e51354df3296e755d882d6f0fc6ce7690b761914cca0f76cc0c0bf63e",
+      "bytes": 406
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/locate/original/.agents/skills/lobo-programming/references/callbacks.lobo.ids.json",
+      "sha256": "7cf6c0e2a287692417905cb0fb94a3ab5f04cb517695ad597f2404e5888b11cc",
+      "bytes": 334
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/locate/original/.agents/skills/lobo-programming/references/compact-example.lobo",
+      "sha256": "d2376c69b774da83073a98883e91794750d59f99ed3fa380d9aaa673d1950954",
+      "bytes": 231
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/locate/original/.agents/skills/lobo-programming/references/compact-example.lobo.ids.json",
+      "sha256": "2dbc359fba6b65d4fa0667b91bd80e8c4f150b38ecb26c00c21e743332906d0e",
+      "bytes": 298
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/locate/original/.agents/skills/lobo-programming/references/conveniences.lobo",
+      "sha256": "ffb3bcfaa7fa99fca865d6498238b4c81b857a01e2744d46d5a6f0308765e9c9",
+      "bytes": 301
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/locate/original/.agents/skills/lobo-programming/references/conveniences.lobo.ids.json",
+      "sha256": "eb25455ebf8d705ecd0d1d2261623cb5930cd4ea9bb3bf04de2d2e7bb0921817",
+      "bytes": 337
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/locate/original/.agents/skills/lobo-programming/references/examples.lobo",
+      "sha256": "cf65d2cdc47a1bb15e154f94fe2e70d92e58eb15d405c8a2fb68261c294a1b3c",
+      "bytes": 2028
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/locate/original/.agents/skills/lobo-programming/references/json-example.lobo",
+      "sha256": "e45bbda6b893e09f021821bd500195c4e27a827e81edcc249458cef53c3cc712",
+      "bytes": 269
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/locate/original/.agents/skills/lobo-programming/references/language.md.txt",
+      "sha256": "f007469320ec5054db07dac9302f8b6ac9a9dc976099ffd566c1ea963ab36562",
+      "bytes": 12554
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/locate/original/.agents/skills/lobo-programming/references/native-example.lobo",
+      "sha256": "79c44e86db8aa77322b4d99a424a25a0b2d37ced37e3e65af344c6a02d03737c",
+      "bytes": 300
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/locate/original/.agents/skills/lobo-programming/references/sqlite-example.lobo",
+      "sha256": "855f210acb18bc4568aad97373a8633cd9b7053d368980172317c76fab74927a",
+      "bytes": 303
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/locate/original/.agents/skills/lobo-programming/references/sqlite-example.lobo.ids.json",
+      "sha256": "18ae22c6bf9c71e6b1f7633bd7fcd847883b919ab27f7b34d18feca3f455a2e6",
+      "bytes": 343
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/locate/original/.agents/skills/lobo-programming/references/tools.md.txt",
+      "sha256": "1913a1fceffba4c09f72625d9bc1e8d8104e35025ad674988a73405ba8eb8429",
+      "bytes": 8694
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/locate/original/.agents/skills/lobo-programming/references/try-example.lobo",
+      "sha256": "2f6b5750d060c929eae94cb9b001b3ea9154f9ddaa369c0934c1953cce21770a",
+      "bytes": 412
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/locate/original/AGENTS.md.txt",
+      "sha256": "3c8c8fce33c21a65ee4b8a44fe408af1f260accb220adba4fb6a75e331e7ea11",
+      "bytes": 153
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/locate/original/GUIDE.txt",
+      "sha256": "70f169bfd8ca37792732adb561994943888ccfcfb8b909375a08b36d0067b697",
+      "bytes": 3049
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/locate/original/TASK.txt",
+      "sha256": "d3b5b6740e9ed34fe092d5e90808c7d2502d0e05a71f6ee5c2a7c28ec3c9448f",
+      "bytes": 1035
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/locate/original/VISIBLE.json",
+      "sha256": "6629b66e6761ec850c23bddcdd67001675f606a6daae453def5ec3cee69a7ea5",
+      "bytes": 1113
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/locate/original/check.py",
+      "sha256": "19cfc08bd63439e1487ff9ee80fc4a013b804feb6b424788b2fc62fb63bd278f",
+      "bytes": 385
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/locate/original/docs/agent-reference/compact-pilot-2026-11-24/contracts.txt",
+      "sha256": "86a129a75ffba8cb447f0a97b513cc92abb806b932609fc253273909aae868aa",
+      "bytes": 796
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/locate/original/docs/agent-reference/compact-pilot-2026-11-24/nominal.txt",
+      "sha256": "9810070ea2f016955293106bc0f7bf2f9fbb718619ad5b8372f34fbc380a0510",
+      "bytes": 819
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/locate/original/docs/agent-reference/compact-pilot-2026-11-24/propagation.txt",
+      "sha256": "d204f387ce82c1a0c1106ec337db631c06ec084c51f7b583f7eb9b45fb38c43f",
+      "bytes": 744
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/locate/original/docs/agent-reference/compact-pilot-2026-11-24/ranges.txt",
+      "sha256": "633eac0a1b432389d842277929b485519962a646c07bbe97a69a403b5d217478",
+      "bytes": 934
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/locate/original/libraries/http/README.md.txt",
+      "sha256": "c4dd34349e63538c79fe003c6cff87c3e4d27a624bc2d3146ed4fe08c4626774",
+      "bytes": 4399
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/locate/original/libraries/http/http.lobo",
+      "sha256": "ea9b9d87e15321e06ca67932258b60451c3da04a815e97d234ef2b36a91dba9f",
+      "bytes": 2787
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/locate/original/libraries/http-server/README.md.txt",
+      "sha256": "7f695c6966c1a31adf74d2d620760857a07ac28c0763a65fc8a6001800b6bde2",
+      "bytes": 7886
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/locate/original/libraries/http-server/server.lobo",
+      "sha256": "3aeac600d4131e544a7054f0f751efb5945e1616c84b210cfdabf5d936912a1e",
+      "bytes": 6880
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/locate/original/libraries/http-server/server.lobo.ids.json",
+      "sha256": "27cc7a4a712b98b29bd3fbae6e38616ed1713fb9cf07cc4e6c371d0823f3e640",
+      "bytes": 1408
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/locate/original/libraries/http-server/transport.lobo",
+      "sha256": "ac5af9a0ceed5f7a446450c0248c7b6c284931908dc27b25ea1a69cb6517a52b",
+      "bytes": 8145
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/locate/original/libraries/http-server/transport.lobo.ids.json",
+      "sha256": "9163bf4fbd4215230030857e386d89b9a38843f233d4ca357e119f93779cc68d",
+      "bytes": 2021
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/locate/original/libraries/json/README.md.txt",
+      "sha256": "fcc2d6742f11f4a53fbe1f26ce7a390e477e0de88a983e4a348884f6983d4959",
+      "bytes": 5305
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/locate/original/libraries/json/json.lobo",
+      "sha256": "3ed68fee975a46affca613dd6da60fbe6ea297fc447b8c91a76fbe7b2406ac39",
+      "bytes": 8228
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/locate/original/libraries/native/README.md.txt",
+      "sha256": "4de8dd7276b56d529c96f909ba6e4903fda299e255394e1e8e4bef094d104eea",
+      "bytes": 3872
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/locate/original/libraries/native/native.lobo",
+      "sha256": "ee7ba249a414ff9421cc36d3373f412b6ce63e62d696d1bdd0f9ce111e9027d1",
+      "bytes": 4649
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/locate/original/libraries/native/permissions.lobo",
+      "sha256": "c3148d6d50d3d8e2f326b771b76353fed490ba06cfd8cad21deb5d7f8f070e12",
+      "bytes": 1347
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/locate/original/libraries/sql/README.md.txt",
+      "sha256": "85f5ec08131d902d2ed64014ebd687462def277aa5f0876599c1058cfd71fad5",
+      "bytes": 4514
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/locate/original/libraries/sql/sql.lobo",
+      "sha256": "5704a8abcf1e1d0ee435b09aa7219c9c809bc1aaa304f3fe61b3de41d903a133",
+      "bytes": 9348
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/locate/original/libraries/sql/sql.lobo.ids.json",
+      "sha256": "67fc9cd6d80fed595e0efdffeb36b7153d865236ab188d2da776ed8effd643d4",
+      "bytes": 2033
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/locate/original/logic.lobo",
+      "sha256": "0a27de404f9c2ae55477e817a8c9817523b9f5cc5e0c5fb7a3dc4a439de0d44d",
+      "bytes": 121
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/locate/original/logic.lobo.ids.json",
+      "sha256": "9f871af748bf4119c6d4ecb46462bfea5a98fbf3e0728c1a0349b33740275db8",
+      "bytes": 277
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/locate/original/model.lobo",
+      "sha256": "d77fbf025d243805f4cff27f7075a2e1b3dbc1cfca154df155fcbfab6b53f092",
+      "bytes": 127
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/locate/original/model.lobo.ids.json",
+      "sha256": "498b1968b9fd4fe737b5f8fe0d4fbb8b992e1439ab71378c805c670d659481f8",
+      "bytes": 192
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/locate/original/research/compact-pilot-2026-11-24.md.txt",
+      "sha256": "761a1fc994e8bdf6865f293fc37728aab95932c49d67a9ea23907a1de352ef25",
+      "bytes": 9416
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/locate/original/spec/README.md.txt",
+      "sha256": "e8b911e1997d93f0ede12e14c97851f8e08843ca19e84a1eb5a4319108e82653",
+      "bytes": 4757
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/locate/original/spec/agent-testing-v0.1.md.txt",
+      "sha256": "dc9c1fb4b7f3aca5cc70a2cb844139190ec16218ee3ddb7759653f2d0fc4ab0e",
+      "bytes": 11933
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/locate/original/spec/checked-artifact-v0.1.md.txt",
+      "sha256": "8e85e37b7a89812f135ccb796e083ea95771032d267e55bc9c0d18f53fa56cdf",
+      "bytes": 4094
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/locate/original/spec/checked-artifact-v0.2.md.txt",
+      "sha256": "b13203846b1eb62eeb73445ef422cb526f7ae33d1e6804ecdef20e33c6365ff7",
+      "bytes": 1413
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/locate/original/spec/checked-artifact-v0.3.md.txt",
+      "sha256": "4874fc7ba430389d8d3bf4df3c6fc34b2b5bb949ecfe646383e3f6fc04652b15",
+      "bytes": 1147
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/locate/original/spec/compact-source-v0.1.md.txt",
+      "sha256": "d7035fbf81ff5c83f84a34dd5c73a1617f1a49176019a2693ba56c501955a94f",
+      "bytes": 5994
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/locate/original/spec/conformance/core-cases.json",
+      "sha256": "076f50cc9a45b7588eed4d150bb289fcdf04b0dcc7435dd871e71ef388cf71df",
+      "bytes": 4968
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/locate/original/spec/core-v0.1.md.txt",
+      "sha256": "c3fe3c05e21bd22c9df8f9ff78c65f3c645f127b10350c93a888c5f133f16854",
+      "bytes": 13060
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/locate/original/spec/core-v0.10.md.txt",
+      "sha256": "2ca585067a2c5113ce335847f433489c79a71d63471c2443786157038b60953e",
+      "bytes": 3093
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/locate/original/spec/core-v0.11.md.txt",
+      "sha256": "275105a2b66f5f0f6ddb12828d3e30db47f8603933654ea92b6bb3d5597ba8f9",
+      "bytes": 6042
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/locate/original/spec/core-v0.12.md.txt",
+      "sha256": "f02ddafe0a6196c15671a51e08aa12105ce216df1edb1a8354f54cfccc9e15c4",
+      "bytes": 7895
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/locate/original/spec/core-v0.2.md.txt",
+      "sha256": "9cbdbe1ddd2a55ce69b3333d5984a12d437ed225d856668c69edfbfd2a4b1ad2",
+      "bytes": 6391
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/locate/original/spec/core-v0.3.md.txt",
+      "sha256": "96e39f958c14b082ad0f3a0c72dc0b3318a7c1c442812b35c338d35b00759543",
+      "bytes": 4396
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/locate/original/spec/core-v0.4.md.txt",
+      "sha256": "84828c9c83b0c0b70d278e2458d77e01231bfd75899a99193b80a762b78ede83",
+      "bytes": 5039
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/locate/original/spec/core-v0.5.md.txt",
+      "sha256": "02ad206aa3cf73c38a8c13d082cdd7d0ea61c45a4dd2ab304497df2cc7c326cc",
+      "bytes": 6607
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/locate/original/spec/core-v0.6.md.txt",
+      "sha256": "3d8737fe0d67ef67916ba63fc6d91386d9ff983c9148d2b2c671048a0cf35245",
+      "bytes": 7076
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/locate/original/spec/core-v0.7.md.txt",
+      "sha256": "0111fcfce8f7ba3ca9abfa027282113dcb6c31df7fb2d946847260f392efb221",
+      "bytes": 7169
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/locate/original/spec/core-v0.8.md.txt",
+      "sha256": "790cfe562577be3dafa5ca3d2028e34d8782cbb36731fe45c29560a4badc6887",
+      "bytes": 5329
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/locate/original/spec/core-v0.9.md.txt",
+      "sha256": "4bc8977f5151c72df856a06da8cc1ff136a9fb355681b47075bbd17d570d5379",
+      "bytes": 7360
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/locate/original/spec/core-v1.0.md.txt",
+      "sha256": "8dbc2ca888f49b84125a8faedf39160bb1eab27e0f25b336b1ef8f87f14f3b2b",
+      "bytes": 5242
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/locate/original/spec/core-v1.1.md.txt",
+      "sha256": "98c9b16d2bd72229464751f1d6c03790efde00a234bf7d2add2306f30b785361",
+      "bytes": 4694
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/locate/original/spec/core-v1.10.md.txt",
+      "sha256": "45d45f48a14fda25275c50ea02d6d65854d14e3fb6989ea56ef6d1aba62ec308",
+      "bytes": 4925
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/locate/original/spec/core-v1.11.md.txt",
+      "sha256": "d13c38830326c983d336c83ab4a398867bd17858ade3c5f8ecc6d088359182aa",
+      "bytes": 2968
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/locate/original/spec/core-v1.2.md.txt",
+      "sha256": "7d0f42dd9d1bd99b860af5045c960fa82ffc96511d8f6397fefa381964c5b363",
+      "bytes": 5534
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/locate/original/spec/core-v1.3.md.txt",
+      "sha256": "2ea91b7b4d4c7716a593ceafcfff42227f05f94e45d8500e9ed04e0c956a9118",
+      "bytes": 6183
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/locate/original/spec/core-v1.4.md.txt",
+      "sha256": "01b365a0c8874db2ad9982e1e85dc036cf22cf31521c2b28c943c08888edf9b2",
+      "bytes": 5603
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/locate/original/spec/core-v1.5.md.txt",
+      "sha256": "dac4877adab3d738fb05fc57c37436106a22206a3069446a00c47de65c1abdda",
+      "bytes": 4557
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/locate/original/spec/core-v1.6.md.txt",
+      "sha256": "71967bd60313ce04cabdf740863eb2f1c73c49ecb1f22ea58ed6e9abbcd9c886",
+      "bytes": 4447
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/locate/original/spec/core-v1.7.md.txt",
+      "sha256": "2123fbea05d172cf4723e683afc4216c64e9bc0a62495f25e06b7ebc83311ed3",
+      "bytes": 3510
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/locate/original/spec/core-v1.8.md.txt",
+      "sha256": "422e050a2b5aa621e9b236f003084fa5398995e3144b3781b998092422255eb6",
+      "bytes": 5772
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/locate/original/spec/core-v1.9.md.txt",
+      "sha256": "c84dc7e6b555fc92458d632c0b92fb31052abd023e58b0201c735c6019ec225b",
+      "bytes": 2560
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/locate/original/spec/generic-reuse-workload.md.txt",
+      "sha256": "53e5d3097494f3deb5379c77a343997dfa52f47edb6c3915006dac05082b244f",
+      "bytes": 2596
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/locate/original/spec/language-milestone-workloads.md.txt",
+      "sha256": "f0be02538657fc901e9241049314b75d03b0472bc776ad3748d63c5c847a2b4d",
+      "bytes": 6656
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/locate/original/spec/language-v1-acceptance.md.txt",
+      "sha256": "33e7c84c36db6bcf74059f57e08e3eaa550e1235955d77eae4e6ca4afbed5f33",
+      "bytes": 6645
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/locate/original/spec/native-interface-v0.1.md.txt",
+      "sha256": "fc98302a3a5e50c8a87079231b9311954e8351383ba872e4223385ff1770934e",
+      "bytes": 10000
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/locate/original/spec/native-llvm-v0.1.md.txt",
+      "sha256": "580611e7fc27523e4aed69b9064a7c688096c8254eecf9a53541f93994045b21",
+      "bytes": 5632
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/locate/original/spec/native-v0.1.md.txt",
+      "sha256": "befed14019840eea1988bf6ff982d531df105bb0d1b057e765e820ed72cdc0b6",
+      "bytes": 6568
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/locate/original/spec/recursive-ast-workload.md.txt",
+      "sha256": "3138f238b71d5d12001391dc3d2f8cf054a1a59622608699732bcc05441c7a3a",
+      "bytes": 1600
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/locate/original/spec/schemas/conformance-case.schema.json",
+      "sha256": "ef3a27dd2a0caa8249c1f1439eb0abf96983350456db4efaabfdd2e2cc24c443",
+      "bytes": 2269
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/locate/original/spec/schemas/request-envelope.schema.json",
+      "sha256": "2abad3a1e8bbbb980cfa0fbe2c9c38a789ba94215bd6481f677d15cfe7c24409",
+      "bytes": 1964
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/locate/original/spec/schemas/response-envelope.schema.json",
+      "sha256": "a4e7d16a8bc25e06d5a571259df750f7c024319922e419bae57a8d66c64e7ca4",
+      "bytes": 3614
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/locate/original/spec/schemas/tool-descriptor.schema.json",
+      "sha256": "2e375db03b357fee59094e46252dcd847a3adf3fc04fae39457bf98a62bc17ef",
+      "bytes": 1727
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/locate/original/spec/source-diagnostics-v0.1.md.txt",
+      "sha256": "d531df2c57fdd4ec2917fb029a8fc54f441f6632fbfb7c2b4cfe3b8168e6eb3b",
+      "bytes": 3894
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/locate/original/spec/sqlite-interface-v0.1.md.txt",
+      "sha256": "19de3da7153b874edc5518ded812515c2ce32dc67a4d1226307c7a0c8b612bdf",
+      "bytes": 9003
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/locate/original/util.lobo",
+      "sha256": "c43f8e6085a7f03acbc1dac3e872ffe5ebdf8f86133519b5ce286a08e7d2055c",
+      "bytes": 338
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/locate/original/util.lobo.ids.json",
+      "sha256": "e19f179ed53b0319c39febce4e46eb462845e30547177c99a14aac27ed6ad174",
+      "bytes": 178
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/locate/revised/.agents/skills/lobo-development-v2/SKILL.md.txt",
+      "sha256": "e7877b0ce0ab304eaf60fc9f6f9435b254519d43655a0a18c1d569d1bfc4a352",
+      "bytes": 3138
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/locate/revised/.agents/skills/lobo-programming/references/callbacks.lobo",
+      "sha256": "a106cf1e51354df3296e755d882d6f0fc6ce7690b761914cca0f76cc0c0bf63e",
+      "bytes": 406
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/locate/revised/.agents/skills/lobo-programming/references/callbacks.lobo.ids.json",
+      "sha256": "7cf6c0e2a287692417905cb0fb94a3ab5f04cb517695ad597f2404e5888b11cc",
+      "bytes": 334
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/locate/revised/.agents/skills/lobo-programming/references/compact-example.lobo",
+      "sha256": "d2376c69b774da83073a98883e91794750d59f99ed3fa380d9aaa673d1950954",
+      "bytes": 231
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/locate/revised/.agents/skills/lobo-programming/references/compact-example.lobo.ids.json",
+      "sha256": "2dbc359fba6b65d4fa0667b91bd80e8c4f150b38ecb26c00c21e743332906d0e",
+      "bytes": 298
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/locate/revised/.agents/skills/lobo-programming/references/conveniences.lobo",
+      "sha256": "ffb3bcfaa7fa99fca865d6498238b4c81b857a01e2744d46d5a6f0308765e9c9",
+      "bytes": 301
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/locate/revised/.agents/skills/lobo-programming/references/conveniences.lobo.ids.json",
+      "sha256": "eb25455ebf8d705ecd0d1d2261623cb5930cd4ea9bb3bf04de2d2e7bb0921817",
+      "bytes": 337
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/locate/revised/.agents/skills/lobo-programming/references/examples.lobo",
+      "sha256": "cf65d2cdc47a1bb15e154f94fe2e70d92e58eb15d405c8a2fb68261c294a1b3c",
+      "bytes": 2028
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/locate/revised/.agents/skills/lobo-programming/references/json-example.lobo",
+      "sha256": "e45bbda6b893e09f021821bd500195c4e27a827e81edcc249458cef53c3cc712",
+      "bytes": 269
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/locate/revised/.agents/skills/lobo-programming/references/language.md.txt",
+      "sha256": "f007469320ec5054db07dac9302f8b6ac9a9dc976099ffd566c1ea963ab36562",
+      "bytes": 12554
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/locate/revised/.agents/skills/lobo-programming/references/native-example.lobo",
+      "sha256": "79c44e86db8aa77322b4d99a424a25a0b2d37ced37e3e65af344c6a02d03737c",
+      "bytes": 300
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/locate/revised/.agents/skills/lobo-programming/references/sqlite-example.lobo",
+      "sha256": "855f210acb18bc4568aad97373a8633cd9b7053d368980172317c76fab74927a",
+      "bytes": 303
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/locate/revised/.agents/skills/lobo-programming/references/sqlite-example.lobo.ids.json",
+      "sha256": "18ae22c6bf9c71e6b1f7633bd7fcd847883b919ab27f7b34d18feca3f455a2e6",
+      "bytes": 343
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/locate/revised/.agents/skills/lobo-programming/references/tools.md.txt",
+      "sha256": "1913a1fceffba4c09f72625d9bc1e8d8104e35025ad674988a73405ba8eb8429",
+      "bytes": 8694
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/locate/revised/.agents/skills/lobo-programming/references/try-example.lobo",
+      "sha256": "2f6b5750d060c929eae94cb9b001b3ea9154f9ddaa369c0934c1953cce21770a",
+      "bytes": 412
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/locate/revised/AGENTS.md.txt",
+      "sha256": "3c8c8fce33c21a65ee4b8a44fe408af1f260accb220adba4fb6a75e331e7ea11",
+      "bytes": 153
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/locate/revised/GUIDE.txt",
+      "sha256": "70f169bfd8ca37792732adb561994943888ccfcfb8b909375a08b36d0067b697",
+      "bytes": 3049
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/locate/revised/TASK.txt",
+      "sha256": "d3b5b6740e9ed34fe092d5e90808c7d2502d0e05a71f6ee5c2a7c28ec3c9448f",
+      "bytes": 1035
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/locate/revised/VISIBLE.json",
+      "sha256": "6629b66e6761ec850c23bddcdd67001675f606a6daae453def5ec3cee69a7ea5",
+      "bytes": 1113
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/locate/revised/check.py",
+      "sha256": "19cfc08bd63439e1487ff9ee80fc4a013b804feb6b424788b2fc62fb63bd278f",
+      "bytes": 385
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/locate/revised/docs/agent-reference/compact-pilot-2026-11-24/contracts.txt",
+      "sha256": "86a129a75ffba8cb447f0a97b513cc92abb806b932609fc253273909aae868aa",
+      "bytes": 796
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/locate/revised/docs/agent-reference/compact-pilot-2026-11-24/nominal.txt",
+      "sha256": "9810070ea2f016955293106bc0f7bf2f9fbb718619ad5b8372f34fbc380a0510",
+      "bytes": 819
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/locate/revised/docs/agent-reference/compact-pilot-2026-11-24/propagation.txt",
+      "sha256": "d204f387ce82c1a0c1106ec337db631c06ec084c51f7b583f7eb9b45fb38c43f",
+      "bytes": 744
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/locate/revised/docs/agent-reference/compact-pilot-2026-11-24/ranges.txt",
+      "sha256": "633eac0a1b432389d842277929b485519962a646c07bbe97a69a403b5d217478",
+      "bytes": 934
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/locate/revised/libraries/http/README.md.txt",
+      "sha256": "c4dd34349e63538c79fe003c6cff87c3e4d27a624bc2d3146ed4fe08c4626774",
+      "bytes": 4399
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/locate/revised/libraries/http/http.lobo",
+      "sha256": "ea9b9d87e15321e06ca67932258b60451c3da04a815e97d234ef2b36a91dba9f",
+      "bytes": 2787
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/locate/revised/libraries/http-server/README.md.txt",
+      "sha256": "7f695c6966c1a31adf74d2d620760857a07ac28c0763a65fc8a6001800b6bde2",
+      "bytes": 7886
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/locate/revised/libraries/http-server/server.lobo",
+      "sha256": "3aeac600d4131e544a7054f0f751efb5945e1616c84b210cfdabf5d936912a1e",
+      "bytes": 6880
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/locate/revised/libraries/http-server/server.lobo.ids.json",
+      "sha256": "27cc7a4a712b98b29bd3fbae6e38616ed1713fb9cf07cc4e6c371d0823f3e640",
+      "bytes": 1408
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/locate/revised/libraries/http-server/transport.lobo",
+      "sha256": "ac5af9a0ceed5f7a446450c0248c7b6c284931908dc27b25ea1a69cb6517a52b",
+      "bytes": 8145
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/locate/revised/libraries/http-server/transport.lobo.ids.json",
+      "sha256": "9163bf4fbd4215230030857e386d89b9a38843f233d4ca357e119f93779cc68d",
+      "bytes": 2021
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/locate/revised/libraries/json/README.md.txt",
+      "sha256": "fcc2d6742f11f4a53fbe1f26ce7a390e477e0de88a983e4a348884f6983d4959",
+      "bytes": 5305
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/locate/revised/libraries/json/json.lobo",
+      "sha256": "3ed68fee975a46affca613dd6da60fbe6ea297fc447b8c91a76fbe7b2406ac39",
+      "bytes": 8228
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/locate/revised/libraries/native/README.md.txt",
+      "sha256": "4de8dd7276b56d529c96f909ba6e4903fda299e255394e1e8e4bef094d104eea",
+      "bytes": 3872
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/locate/revised/libraries/native/native.lobo",
+      "sha256": "ee7ba249a414ff9421cc36d3373f412b6ce63e62d696d1bdd0f9ce111e9027d1",
+      "bytes": 4649
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/locate/revised/libraries/native/permissions.lobo",
+      "sha256": "c3148d6d50d3d8e2f326b771b76353fed490ba06cfd8cad21deb5d7f8f070e12",
+      "bytes": 1347
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/locate/revised/libraries/sql/README.md.txt",
+      "sha256": "85f5ec08131d902d2ed64014ebd687462def277aa5f0876599c1058cfd71fad5",
+      "bytes": 4514
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/locate/revised/libraries/sql/sql.lobo",
+      "sha256": "5704a8abcf1e1d0ee435b09aa7219c9c809bc1aaa304f3fe61b3de41d903a133",
+      "bytes": 9348
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/locate/revised/libraries/sql/sql.lobo.ids.json",
+      "sha256": "67fc9cd6d80fed595e0efdffeb36b7153d865236ab188d2da776ed8effd643d4",
+      "bytes": 2033
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/locate/revised/logic.lobo",
+      "sha256": "0a27de404f9c2ae55477e817a8c9817523b9f5cc5e0c5fb7a3dc4a439de0d44d",
+      "bytes": 121
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/locate/revised/logic.lobo.ids.json",
+      "sha256": "9f871af748bf4119c6d4ecb46462bfea5a98fbf3e0728c1a0349b33740275db8",
+      "bytes": 277
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/locate/revised/model.lobo",
+      "sha256": "d77fbf025d243805f4cff27f7075a2e1b3dbc1cfca154df155fcbfab6b53f092",
+      "bytes": 127
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/locate/revised/model.lobo.ids.json",
+      "sha256": "498b1968b9fd4fe737b5f8fe0d4fbb8b992e1439ab71378c805c670d659481f8",
+      "bytes": 192
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/locate/revised/research/compact-pilot-2026-11-24.md.txt",
+      "sha256": "761a1fc994e8bdf6865f293fc37728aab95932c49d67a9ea23907a1de352ef25",
+      "bytes": 9416
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/locate/revised/spec/README.md.txt",
+      "sha256": "e8b911e1997d93f0ede12e14c97851f8e08843ca19e84a1eb5a4319108e82653",
+      "bytes": 4757
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/locate/revised/spec/agent-testing-v0.1.md.txt",
+      "sha256": "dc9c1fb4b7f3aca5cc70a2cb844139190ec16218ee3ddb7759653f2d0fc4ab0e",
+      "bytes": 11933
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/locate/revised/spec/checked-artifact-v0.1.md.txt",
+      "sha256": "8e85e37b7a89812f135ccb796e083ea95771032d267e55bc9c0d18f53fa56cdf",
+      "bytes": 4094
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/locate/revised/spec/checked-artifact-v0.2.md.txt",
+      "sha256": "b13203846b1eb62eeb73445ef422cb526f7ae33d1e6804ecdef20e33c6365ff7",
+      "bytes": 1413
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/locate/revised/spec/checked-artifact-v0.3.md.txt",
+      "sha256": "4874fc7ba430389d8d3bf4df3c6fc34b2b5bb949ecfe646383e3f6fc04652b15",
+      "bytes": 1147
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/locate/revised/spec/compact-source-v0.1.md.txt",
+      "sha256": "d7035fbf81ff5c83f84a34dd5c73a1617f1a49176019a2693ba56c501955a94f",
+      "bytes": 5994
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/locate/revised/spec/conformance/core-cases.json",
+      "sha256": "076f50cc9a45b7588eed4d150bb289fcdf04b0dcc7435dd871e71ef388cf71df",
+      "bytes": 4968
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/locate/revised/spec/core-v0.1.md.txt",
+      "sha256": "c3fe3c05e21bd22c9df8f9ff78c65f3c645f127b10350c93a888c5f133f16854",
+      "bytes": 13060
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/locate/revised/spec/core-v0.10.md.txt",
+      "sha256": "2ca585067a2c5113ce335847f433489c79a71d63471c2443786157038b60953e",
+      "bytes": 3093
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/locate/revised/spec/core-v0.11.md.txt",
+      "sha256": "275105a2b66f5f0f6ddb12828d3e30db47f8603933654ea92b6bb3d5597ba8f9",
+      "bytes": 6042
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/locate/revised/spec/core-v0.12.md.txt",
+      "sha256": "f02ddafe0a6196c15671a51e08aa12105ce216df1edb1a8354f54cfccc9e15c4",
+      "bytes": 7895
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/locate/revised/spec/core-v0.2.md.txt",
+      "sha256": "9cbdbe1ddd2a55ce69b3333d5984a12d437ed225d856668c69edfbfd2a4b1ad2",
+      "bytes": 6391
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/locate/revised/spec/core-v0.3.md.txt",
+      "sha256": "96e39f958c14b082ad0f3a0c72dc0b3318a7c1c442812b35c338d35b00759543",
+      "bytes": 4396
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/locate/revised/spec/core-v0.4.md.txt",
+      "sha256": "84828c9c83b0c0b70d278e2458d77e01231bfd75899a99193b80a762b78ede83",
+      "bytes": 5039
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/locate/revised/spec/core-v0.5.md.txt",
+      "sha256": "02ad206aa3cf73c38a8c13d082cdd7d0ea61c45a4dd2ab304497df2cc7c326cc",
+      "bytes": 6607
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/locate/revised/spec/core-v0.6.md.txt",
+      "sha256": "3d8737fe0d67ef67916ba63fc6d91386d9ff983c9148d2b2c671048a0cf35245",
+      "bytes": 7076
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/locate/revised/spec/core-v0.7.md.txt",
+      "sha256": "0111fcfce8f7ba3ca9abfa027282113dcb6c31df7fb2d946847260f392efb221",
+      "bytes": 7169
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/locate/revised/spec/core-v0.8.md.txt",
+      "sha256": "790cfe562577be3dafa5ca3d2028e34d8782cbb36731fe45c29560a4badc6887",
+      "bytes": 5329
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/locate/revised/spec/core-v0.9.md.txt",
+      "sha256": "4bc8977f5151c72df856a06da8cc1ff136a9fb355681b47075bbd17d570d5379",
+      "bytes": 7360
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/locate/revised/spec/core-v1.0.md.txt",
+      "sha256": "8dbc2ca888f49b84125a8faedf39160bb1eab27e0f25b336b1ef8f87f14f3b2b",
+      "bytes": 5242
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/locate/revised/spec/core-v1.1.md.txt",
+      "sha256": "98c9b16d2bd72229464751f1d6c03790efde00a234bf7d2add2306f30b785361",
+      "bytes": 4694
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/locate/revised/spec/core-v1.10.md.txt",
+      "sha256": "45d45f48a14fda25275c50ea02d6d65854d14e3fb6989ea56ef6d1aba62ec308",
+      "bytes": 4925
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/locate/revised/spec/core-v1.11.md.txt",
+      "sha256": "d13c38830326c983d336c83ab4a398867bd17858ade3c5f8ecc6d088359182aa",
+      "bytes": 2968
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/locate/revised/spec/core-v1.2.md.txt",
+      "sha256": "7d0f42dd9d1bd99b860af5045c960fa82ffc96511d8f6397fefa381964c5b363",
+      "bytes": 5534
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/locate/revised/spec/core-v1.3.md.txt",
+      "sha256": "2ea91b7b4d4c7716a593ceafcfff42227f05f94e45d8500e9ed04e0c956a9118",
+      "bytes": 6183
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/locate/revised/spec/core-v1.4.md.txt",
+      "sha256": "01b365a0c8874db2ad9982e1e85dc036cf22cf31521c2b28c943c08888edf9b2",
+      "bytes": 5603
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/locate/revised/spec/core-v1.5.md.txt",
+      "sha256": "dac4877adab3d738fb05fc57c37436106a22206a3069446a00c47de65c1abdda",
+      "bytes": 4557
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/locate/revised/spec/core-v1.6.md.txt",
+      "sha256": "71967bd60313ce04cabdf740863eb2f1c73c49ecb1f22ea58ed6e9abbcd9c886",
+      "bytes": 4447
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/locate/revised/spec/core-v1.7.md.txt",
+      "sha256": "2123fbea05d172cf4723e683afc4216c64e9bc0a62495f25e06b7ebc83311ed3",
+      "bytes": 3510
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/locate/revised/spec/core-v1.8.md.txt",
+      "sha256": "422e050a2b5aa621e9b236f003084fa5398995e3144b3781b998092422255eb6",
+      "bytes": 5772
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/locate/revised/spec/core-v1.9.md.txt",
+      "sha256": "c84dc7e6b555fc92458d632c0b92fb31052abd023e58b0201c735c6019ec225b",
+      "bytes": 2560
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/locate/revised/spec/generic-reuse-workload.md.txt",
+      "sha256": "53e5d3097494f3deb5379c77a343997dfa52f47edb6c3915006dac05082b244f",
+      "bytes": 2596
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/locate/revised/spec/language-milestone-workloads.md.txt",
+      "sha256": "f0be02538657fc901e9241049314b75d03b0472bc776ad3748d63c5c847a2b4d",
+      "bytes": 6656
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/locate/revised/spec/language-v1-acceptance.md.txt",
+      "sha256": "33e7c84c36db6bcf74059f57e08e3eaa550e1235955d77eae4e6ca4afbed5f33",
+      "bytes": 6645
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/locate/revised/spec/native-interface-v0.1.md.txt",
+      "sha256": "fc98302a3a5e50c8a87079231b9311954e8351383ba872e4223385ff1770934e",
+      "bytes": 10000
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/locate/revised/spec/native-llvm-v0.1.md.txt",
+      "sha256": "580611e7fc27523e4aed69b9064a7c688096c8254eecf9a53541f93994045b21",
+      "bytes": 5632
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/locate/revised/spec/native-v0.1.md.txt",
+      "sha256": "befed14019840eea1988bf6ff982d531df105bb0d1b057e765e820ed72cdc0b6",
+      "bytes": 6568
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/locate/revised/spec/recursive-ast-workload.md.txt",
+      "sha256": "3138f238b71d5d12001391dc3d2f8cf054a1a59622608699732bcc05441c7a3a",
+      "bytes": 1600
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/locate/revised/spec/schemas/conformance-case.schema.json",
+      "sha256": "ef3a27dd2a0caa8249c1f1439eb0abf96983350456db4efaabfdd2e2cc24c443",
+      "bytes": 2269
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/locate/revised/spec/schemas/request-envelope.schema.json",
+      "sha256": "2abad3a1e8bbbb980cfa0fbe2c9c38a789ba94215bd6481f677d15cfe7c24409",
+      "bytes": 1964
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/locate/revised/spec/schemas/response-envelope.schema.json",
+      "sha256": "a4e7d16a8bc25e06d5a571259df750f7c024319922e419bae57a8d66c64e7ca4",
+      "bytes": 3614
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/locate/revised/spec/schemas/tool-descriptor.schema.json",
+      "sha256": "2e375db03b357fee59094e46252dcd847a3adf3fc04fae39457bf98a62bc17ef",
+      "bytes": 1727
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/locate/revised/spec/source-diagnostics-v0.1.md.txt",
+      "sha256": "d531df2c57fdd4ec2917fb029a8fc54f441f6632fbfb7c2b4cfe3b8168e6eb3b",
+      "bytes": 3894
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/locate/revised/spec/sqlite-interface-v0.1.md.txt",
+      "sha256": "19de3da7153b874edc5518ded812515c2ce32dc67a4d1226307c7a0c8b612bdf",
+      "bytes": 9003
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/locate/revised/util.lobo",
+      "sha256": "c43f8e6085a7f03acbc1dac3e872ffe5ebdf8f86133519b5ce286a08e7d2055c",
+      "bytes": 338
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/inputs/locate/revised/util.lobo.ids.json",
+      "sha256": "e19f179ed53b0319c39febce4e46eb462845e30547177c99a14aac27ed6ad174",
+      "bytes": 178
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/manifest.json",
+      "sha256": "c3a6f84049cdf664e14b4cc8c31bc5be3be9c7c7591a518d6f3145a98a8cb39f",
+      "bytes": 77179
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/prompt-00.txt",
+      "sha256": "8b1c09bfc6b2642d237a8cc652ac42bf0e729c9fe0d2c22cadd3c1c91d6bdedf",
+      "bytes": 191
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/prompt-01.txt",
+      "sha256": "f450adb0abf3e7888fa9c6c60126001e7b42718422108f507537d920ab2fd9c4",
+      "bytes": 258
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/prompt-02.txt",
+      "sha256": "93ee9409b2231d113562f06c5c40fc9b211ddd5225ca53f157f547077f8a912d",
+      "bytes": 264
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/prompt-03.txt",
+      "sha256": "f450adb0abf3e7888fa9c6c60126001e7b42718422108f507537d920ab2fd9c4",
+      "bytes": 258
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/prompt-04.txt",
+      "sha256": "93ee9409b2231d113562f06c5c40fc9b211ddd5225ca53f157f547077f8a912d",
+      "bytes": 264
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/prompt-05.txt",
+      "sha256": "8b1c09bfc6b2642d237a8cc652ac42bf0e729c9fe0d2c22cadd3c1c91d6bdedf",
+      "bytes": 191
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/prompt-06.txt",
+      "sha256": "93ee9409b2231d113562f06c5c40fc9b211ddd5225ca53f157f547077f8a912d",
+      "bytes": 264
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/prompt-07.txt",
+      "sha256": "f450adb0abf3e7888fa9c6c60126001e7b42718422108f507537d920ab2fd9c4",
+      "bytes": 258
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/prompt-08.txt",
+      "sha256": "8b1c09bfc6b2642d237a8cc652ac42bf0e729c9fe0d2c22cadd3c1c91d6bdedf",
+      "bytes": 191
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/prompt-09.txt",
+      "sha256": "8b1c09bfc6b2642d237a8cc652ac42bf0e729c9fe0d2c22cadd3c1c91d6bdedf",
+      "bytes": 191
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/prompt-10.txt",
+      "sha256": "93ee9409b2231d113562f06c5c40fc9b211ddd5225ca53f157f547077f8a912d",
+      "bytes": 264
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/registration/prompt-11.txt",
+      "sha256": "f450adb0abf3e7888fa9c6c60126001e7b42718422108f507537d920ab2fd9c4",
+      "bytes": 258
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/run.log",
+      "sha256": "c02bbdedbc9e4e66e487c9635815c47061ae883b99252c4ac2e3bc260826a58d",
+      "bytes": 3370
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/validation/coalesce-mutant/logic.lobo",
+      "sha256": "7e0537508f9870a6cde0938e6c97ac91942434adb17c9bad73434b7051801058",
+      "bytes": 1422
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/validation/coalesce-mutant/logic.lobo.ids.json",
+      "sha256": "d5491b086f8db82bf2b086da380ecf519d1e86c15b0038be51d7c3b70b502fcd",
+      "bytes": 371
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/validation/coalesce-mutant/model.lobo",
+      "sha256": "0e60f811c822ee036f5918288ab8dec48661cb1bfad38ba3b50ac5ce7b29426d",
+      "bytes": 104
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/validation/coalesce-mutant/model.lobo.ids.json",
+      "sha256": "95164699653cae396cee2e48e6f0318789ea84fcdcc042acd21b9b99c0fb6381",
+      "bytes": 202
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/validation/coalesce-mutant/util.lobo",
+      "sha256": "c43f8e6085a7f03acbc1dac3e872ffe5ebdf8f86133519b5ce286a08e7d2055c",
+      "bytes": 338
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/validation/coalesce-mutant/util.lobo.ids.json",
+      "sha256": "e19f179ed53b0319c39febce4e46eb462845e30547177c99a14aac27ed6ad174",
+      "bytes": 178
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/validation/coalesce-mutant-check/result.json",
+      "sha256": "e3ec0490af9a825f8ea60c79647d03e51080c22676b70048ed8327886e4a4d28",
+      "bytes": 68292
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/validation/coalesce-mutant-check/source/logic.lobo",
+      "sha256": "7e0537508f9870a6cde0938e6c97ac91942434adb17c9bad73434b7051801058",
+      "bytes": 1422
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/validation/coalesce-mutant-check/source/logic.lobo.ids.json",
+      "sha256": "d5491b086f8db82bf2b086da380ecf519d1e86c15b0038be51d7c3b70b502fcd",
+      "bytes": 371
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/validation/coalesce-mutant-check/source/model.lobo",
+      "sha256": "0e60f811c822ee036f5918288ab8dec48661cb1bfad38ba3b50ac5ce7b29426d",
+      "bytes": 104
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/validation/coalesce-mutant-check/source/model.lobo.ids.json",
+      "sha256": "95164699653cae396cee2e48e6f0318789ea84fcdcc042acd21b9b99c0fb6381",
+      "bytes": 202
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/validation/coalesce-mutant-check/source/util.lobo",
+      "sha256": "c43f8e6085a7f03acbc1dac3e872ffe5ebdf8f86133519b5ce286a08e7d2055c",
+      "bytes": 338
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/validation/coalesce-mutant-check/source/util.lobo.ids.json",
+      "sha256": "e19f179ed53b0319c39febce4e46eb462845e30547177c99a14aac27ed6ad174",
+      "bytes": 178
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/validation/coalesce-reference/logic.lobo",
+      "sha256": "81b48464536d38b8d1aa158ff000e6f535a9c883b12b5bd08cf7e4b540054b44",
+      "bytes": 1424
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/validation/coalesce-reference/logic.lobo.ids.json",
+      "sha256": "d5491b086f8db82bf2b086da380ecf519d1e86c15b0038be51d7c3b70b502fcd",
+      "bytes": 371
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/validation/coalesce-reference/model.lobo",
+      "sha256": "0e60f811c822ee036f5918288ab8dec48661cb1bfad38ba3b50ac5ce7b29426d",
+      "bytes": 104
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/validation/coalesce-reference/model.lobo.ids.json",
+      "sha256": "95164699653cae396cee2e48e6f0318789ea84fcdcc042acd21b9b99c0fb6381",
+      "bytes": 202
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/validation/coalesce-reference/util.lobo",
+      "sha256": "c43f8e6085a7f03acbc1dac3e872ffe5ebdf8f86133519b5ce286a08e7d2055c",
+      "bytes": 338
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/validation/coalesce-reference/util.lobo.ids.json",
+      "sha256": "e19f179ed53b0319c39febce4e46eb462845e30547177c99a14aac27ed6ad174",
+      "bytes": 178
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/validation/coalesce-reference-check/result.json",
+      "sha256": "09247505729c90458f2e48506f5cd63206f17a872c6b5856cd278a42abf16462",
+      "bytes": 67029
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/validation/coalesce-reference-check/source/logic.lobo",
+      "sha256": "81b48464536d38b8d1aa158ff000e6f535a9c883b12b5bd08cf7e4b540054b44",
+      "bytes": 1424
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/validation/coalesce-reference-check/source/logic.lobo.ids.json",
+      "sha256": "d5491b086f8db82bf2b086da380ecf519d1e86c15b0038be51d7c3b70b502fcd",
+      "bytes": 371
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/validation/coalesce-reference-check/source/model.lobo",
+      "sha256": "0e60f811c822ee036f5918288ab8dec48661cb1bfad38ba3b50ac5ce7b29426d",
+      "bytes": 104
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/validation/coalesce-reference-check/source/model.lobo.ids.json",
+      "sha256": "95164699653cae396cee2e48e6f0318789ea84fcdcc042acd21b9b99c0fb6381",
+      "bytes": 202
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/validation/coalesce-reference-check/source/util.lobo",
+      "sha256": "c43f8e6085a7f03acbc1dac3e872ffe5ebdf8f86133519b5ce286a08e7d2055c",
+      "bytes": 338
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/validation/coalesce-reference-check/source/util.lobo.ids.json",
+      "sha256": "e19f179ed53b0319c39febce4e46eb462845e30547177c99a14aac27ed6ad174",
+      "bytes": 178
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/validation/coalesce-starter/logic.lobo",
+      "sha256": "9b2dc3ed6e7852a941202e9e4e91aa126de1f459662444d2bb50345988f40f03",
+      "bytes": 679
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/validation/coalesce-starter/logic.lobo.ids.json",
+      "sha256": "868ff772b9caac7d411c44aa876655646c345662a4113fa9ed2e9140b1493608",
+      "bytes": 331
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/validation/coalesce-starter/model.lobo",
+      "sha256": "0e60f811c822ee036f5918288ab8dec48661cb1bfad38ba3b50ac5ce7b29426d",
+      "bytes": 104
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/validation/coalesce-starter/model.lobo.ids.json",
+      "sha256": "95164699653cae396cee2e48e6f0318789ea84fcdcc042acd21b9b99c0fb6381",
+      "bytes": 202
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/validation/coalesce-starter/util.lobo",
+      "sha256": "c43f8e6085a7f03acbc1dac3e872ffe5ebdf8f86133519b5ce286a08e7d2055c",
+      "bytes": 338
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/validation/coalesce-starter/util.lobo.ids.json",
+      "sha256": "e19f179ed53b0319c39febce4e46eb462845e30547177c99a14aac27ed6ad174",
+      "bytes": 178
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/validation/coalesce-starter-check/result.json",
+      "sha256": "62c41bf529e7b4d946205e2c2c9339e2b778cd5e662a8c7ee9fac44b17842382",
+      "bytes": 84902
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/validation/coalesce-starter-check/source/logic.lobo",
+      "sha256": "9b2dc3ed6e7852a941202e9e4e91aa126de1f459662444d2bb50345988f40f03",
+      "bytes": 679
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/validation/coalesce-starter-check/source/logic.lobo.ids.json",
+      "sha256": "868ff772b9caac7d411c44aa876655646c345662a4113fa9ed2e9140b1493608",
+      "bytes": 331
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/validation/coalesce-starter-check/source/model.lobo",
+      "sha256": "0e60f811c822ee036f5918288ab8dec48661cb1bfad38ba3b50ac5ce7b29426d",
+      "bytes": 104
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/validation/coalesce-starter-check/source/model.lobo.ids.json",
+      "sha256": "95164699653cae396cee2e48e6f0318789ea84fcdcc042acd21b9b99c0fb6381",
+      "bytes": 202
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/validation/coalesce-starter-check/source/util.lobo",
+      "sha256": "c43f8e6085a7f03acbc1dac3e872ffe5ebdf8f86133519b5ce286a08e7d2055c",
+      "bytes": 338
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/validation/coalesce-starter-check/source/util.lobo.ids.json",
+      "sha256": "e19f179ed53b0319c39febce4e46eb462845e30547177c99a14aac27ed6ad174",
+      "bytes": 178
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/validation/locate-mutant/logic.lobo",
+      "sha256": "18b0b998768a5a33264d5befb1802c8f3393f44d12959f216f59b37b88a544e0",
+      "bytes": 644
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/validation/locate-mutant/logic.lobo.ids.json",
+      "sha256": "9f871af748bf4119c6d4ecb46462bfea5a98fbf3e0728c1a0349b33740275db8",
+      "bytes": 277
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/validation/locate-mutant/model.lobo",
+      "sha256": "d77fbf025d243805f4cff27f7075a2e1b3dbc1cfca154df155fcbfab6b53f092",
+      "bytes": 127
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/validation/locate-mutant/model.lobo.ids.json",
+      "sha256": "498b1968b9fd4fe737b5f8fe0d4fbb8b992e1439ab71378c805c670d659481f8",
+      "bytes": 192
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/validation/locate-mutant/util.lobo",
+      "sha256": "c43f8e6085a7f03acbc1dac3e872ffe5ebdf8f86133519b5ce286a08e7d2055c",
+      "bytes": 338
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/validation/locate-mutant/util.lobo.ids.json",
+      "sha256": "e19f179ed53b0319c39febce4e46eb462845e30547177c99a14aac27ed6ad174",
+      "bytes": 178
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/validation/locate-mutant-check/result.json",
+      "sha256": "066a848b2aea07d78f34092eb232d3be2b792b88a5dc1b56cd65f1b281c330ab",
+      "bytes": 33289
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/validation/locate-mutant-check/source/logic.lobo",
+      "sha256": "18b0b998768a5a33264d5befb1802c8f3393f44d12959f216f59b37b88a544e0",
+      "bytes": 644
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/validation/locate-mutant-check/source/logic.lobo.ids.json",
+      "sha256": "9f871af748bf4119c6d4ecb46462bfea5a98fbf3e0728c1a0349b33740275db8",
+      "bytes": 277
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/validation/locate-mutant-check/source/model.lobo",
+      "sha256": "d77fbf025d243805f4cff27f7075a2e1b3dbc1cfca154df155fcbfab6b53f092",
+      "bytes": 127
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/validation/locate-mutant-check/source/model.lobo.ids.json",
+      "sha256": "498b1968b9fd4fe737b5f8fe0d4fbb8b992e1439ab71378c805c670d659481f8",
+      "bytes": 192
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/validation/locate-mutant-check/source/util.lobo",
+      "sha256": "c43f8e6085a7f03acbc1dac3e872ffe5ebdf8f86133519b5ce286a08e7d2055c",
+      "bytes": 338
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/validation/locate-mutant-check/source/util.lobo.ids.json",
+      "sha256": "e19f179ed53b0319c39febce4e46eb462845e30547177c99a14aac27ed6ad174",
+      "bytes": 178
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/validation/locate-reference/logic.lobo",
+      "sha256": "a9dc8c20a416fa9b82eb3a6cce0b03b8c4109ec8515f55a307e740f76039d1cb",
+      "bytes": 644
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/validation/locate-reference/logic.lobo.ids.json",
+      "sha256": "9f871af748bf4119c6d4ecb46462bfea5a98fbf3e0728c1a0349b33740275db8",
+      "bytes": 277
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/validation/locate-reference/model.lobo",
+      "sha256": "d77fbf025d243805f4cff27f7075a2e1b3dbc1cfca154df155fcbfab6b53f092",
+      "bytes": 127
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/validation/locate-reference/model.lobo.ids.json",
+      "sha256": "498b1968b9fd4fe737b5f8fe0d4fbb8b992e1439ab71378c805c670d659481f8",
+      "bytes": 192
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/validation/locate-reference/util.lobo",
+      "sha256": "c43f8e6085a7f03acbc1dac3e872ffe5ebdf8f86133519b5ce286a08e7d2055c",
+      "bytes": 338
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/validation/locate-reference/util.lobo.ids.json",
+      "sha256": "e19f179ed53b0319c39febce4e46eb462845e30547177c99a14aac27ed6ad174",
+      "bytes": 178
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/validation/locate-reference-check/result.json",
+      "sha256": "d46a72696dbf37892511a08eb7e81f853d44a2df7498a69642cf47d532eab475",
+      "bytes": 33291
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/validation/locate-reference-check/source/logic.lobo",
+      "sha256": "a9dc8c20a416fa9b82eb3a6cce0b03b8c4109ec8515f55a307e740f76039d1cb",
+      "bytes": 644
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/validation/locate-reference-check/source/logic.lobo.ids.json",
+      "sha256": "9f871af748bf4119c6d4ecb46462bfea5a98fbf3e0728c1a0349b33740275db8",
+      "bytes": 277
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/validation/locate-reference-check/source/model.lobo",
+      "sha256": "d77fbf025d243805f4cff27f7075a2e1b3dbc1cfca154df155fcbfab6b53f092",
+      "bytes": 127
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/validation/locate-reference-check/source/model.lobo.ids.json",
+      "sha256": "498b1968b9fd4fe737b5f8fe0d4fbb8b992e1439ab71378c805c670d659481f8",
+      "bytes": 192
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/validation/locate-reference-check/source/util.lobo",
+      "sha256": "c43f8e6085a7f03acbc1dac3e872ffe5ebdf8f86133519b5ce286a08e7d2055c",
+      "bytes": 338
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/validation/locate-reference-check/source/util.lobo.ids.json",
+      "sha256": "e19f179ed53b0319c39febce4e46eb462845e30547177c99a14aac27ed6ad174",
+      "bytes": 178
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/validation/locate-starter/logic.lobo",
+      "sha256": "0a27de404f9c2ae55477e817a8c9817523b9f5cc5e0c5fb7a3dc4a439de0d44d",
+      "bytes": 121
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/validation/locate-starter/logic.lobo.ids.json",
+      "sha256": "9f871af748bf4119c6d4ecb46462bfea5a98fbf3e0728c1a0349b33740275db8",
+      "bytes": 277
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/validation/locate-starter/model.lobo",
+      "sha256": "d77fbf025d243805f4cff27f7075a2e1b3dbc1cfca154df155fcbfab6b53f092",
+      "bytes": 127
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/validation/locate-starter/model.lobo.ids.json",
+      "sha256": "498b1968b9fd4fe737b5f8fe0d4fbb8b992e1439ab71378c805c670d659481f8",
+      "bytes": 192
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/validation/locate-starter/util.lobo",
+      "sha256": "c43f8e6085a7f03acbc1dac3e872ffe5ebdf8f86133519b5ce286a08e7d2055c",
+      "bytes": 338
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/validation/locate-starter/util.lobo.ids.json",
+      "sha256": "e19f179ed53b0319c39febce4e46eb462845e30547177c99a14aac27ed6ad174",
+      "bytes": 178
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/validation/locate-starter-check/result.json",
+      "sha256": "a1c9f7f1fd41a62a97c7b29acc8f78c04cf9de76cd0335e7ac855b40bbdd76b1",
+      "bytes": 29881
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/validation/locate-starter-check/source/logic.lobo",
+      "sha256": "0a27de404f9c2ae55477e817a8c9817523b9f5cc5e0c5fb7a3dc4a439de0d44d",
+      "bytes": 121
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/validation/locate-starter-check/source/logic.lobo.ids.json",
+      "sha256": "9f871af748bf4119c6d4ecb46462bfea5a98fbf3e0728c1a0349b33740275db8",
+      "bytes": 277
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/validation/locate-starter-check/source/model.lobo",
+      "sha256": "d77fbf025d243805f4cff27f7075a2e1b3dbc1cfca154df155fcbfab6b53f092",
+      "bytes": 127
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/validation/locate-starter-check/source/model.lobo.ids.json",
+      "sha256": "498b1968b9fd4fe737b5f8fe0d4fbb8b992e1439ab71378c805c670d659481f8",
+      "bytes": 192
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/validation/locate-starter-check/source/util.lobo",
+      "sha256": "c43f8e6085a7f03acbc1dac3e872ffe5ebdf8f86133519b5ce286a08e7d2055c",
+      "bytes": 338
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/validation/locate-starter-check/source/util.lobo.ids.json",
+      "sha256": "e19f179ed53b0319c39febce4e46eb462845e30547177c99a14aac27ed6ad174",
+      "bytes": 178
+    },
+    {
+      "path": "research/snapshots/2026-11-26-skill-revision/validation/results.json",
+      "sha256": "33fd78fbebcad0818b9422c6f7cb914e7555bfcda22d54491dbfb58745e6b2cf",
+      "bytes": 391487
+    },
+    {
+      "path": "benchmarks/fixtures/skill-revision-20261126/availability.json",
+      "sha256": "39529f89499b1d414815e75430700c290745acd3da2c916df015856153987057",
+      "bytes": 1063
+    },
+    {
+      "path": "benchmarks/fixtures/skill-revision-20261126/trial-00.json",
+      "sha256": "c9b95db9d2b0f2949b07de872380ace70ef0cfeef565769171447e3a18814637",
+      "bytes": 64311
+    },
+    {
+      "path": "benchmarks/fixtures/skill-revision-20261126/trial-01.json",
+      "sha256": "30d7c4315e2128e3e7c2ce96b061fafbae2e7b2d093a7e96d63dac1c8929795f",
+      "bytes": 63061
+    },
+    {
+      "path": "benchmarks/fixtures/skill-revision-20261126/trial-02.json",
+      "sha256": "639fe0be93f982265fd3b80c972af179a09c8ee3997e2182ce8f8fa4a0c1f252",
+      "bytes": 71529
+    },
+    {
+      "path": "benchmarks/fixtures/skill-revision-20261126/trial-03.json",
+      "sha256": "1867b928adcd270de8c2ad1170007f43067e3c285a4d03f1384056aa827eceb1",
+      "bytes": 125477
+    },
+    {
+      "path": "benchmarks/fixtures/skill-revision-20261126/trial-04.json",
+      "sha256": "b98d80befb0b3b238ca86c10d4ae8e37e98c8d6aec8d5b16fbc85099f2338e6b",
+      "bytes": 118347
+    },
+    {
+      "path": "benchmarks/fixtures/skill-revision-20261126/trial-05.json",
+      "sha256": "a8f2bcd857e75af53279e2fe6bd9dd9a6cf452d3429483b2727bd7172c76730a",
+      "bytes": 109725
+    },
+    {
+      "path": "benchmarks/fixtures/skill-revision-20261126/trial-06.json",
+      "sha256": "cbde8f8d6f08f07dc5a0ee67652aa47cc11d179b65f50ce13223a8ee3f50c1d5",
+      "bytes": 70796
+    },
+    {
+      "path": "benchmarks/fixtures/skill-revision-20261126/trial-07.json",
+      "sha256": "05d47c956fc1b153603a07dab4a5808143d3c661e5db91df6886cc0e9195670e",
+      "bytes": 67927
+    },
+    {
+      "path": "benchmarks/fixtures/skill-revision-20261126/trial-08.json",
+      "sha256": "f1f9c51a4c0e49f94cca1f7f44bb3f34ca903b5fe60ba75fcdb3ad69755b36cf",
+      "bytes": 67884
+    },
+    {
+      "path": "benchmarks/fixtures/skill-revision-20261126/trial-09.json",
+      "sha256": "8a4f5a32f3ca945c1b07df3093cd1cd4d27a147619211df546f657d0e210350a",
+      "bytes": 116687
+    },
+    {
+      "path": "benchmarks/fixtures/skill-revision-20261126/trial-10.json",
+      "sha256": "be64b73584d5bed2c17e5b83fc2c2b677b1321ed0f00917ba156833b0d545fe5",
+      "bytes": 119944
+    },
+    {
+      "path": "benchmarks/fixtures/skill-revision-20261126/trial-11.json",
+      "sha256": "da99b5d14834e5cd9acea2d39664ae86e66f6ab4899023812d0f1fe3f2b3e2bd",
+      "bytes": 114886
+    }
+  ],
+  "all_hashes_verified": true
+}

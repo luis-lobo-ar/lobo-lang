@@ -1,0 +1,26 @@
+CANARY True
+START {'index': 0, 'repeat': 0, 'family': 'locate', 'arm': 'control', 'language': 'lobo', 'reasoning': 'high', 'phase': 'construction'}
+END 0 completed True 70 {'input_tokens': 157240, 'cached_input_tokens': 142976, 'cache_write_input_tokens': 0, 'output_tokens': 3294, 'reasoning_output_tokens': 2040}
+START {'index': 1, 'repeat': 0, 'family': 'locate', 'arm': 'original', 'language': 'lobo', 'reasoning': 'high', 'phase': 'construction'}
+END 1 wall_limit False 70 None
+START {'index': 2, 'repeat': 0, 'family': 'locate', 'arm': 'revised', 'language': 'lobo', 'reasoning': 'high', 'phase': 'construction'}
+END 2 completed True 70 {'input_tokens': 199747, 'cached_input_tokens': 183680, 'cache_write_input_tokens': 0, 'output_tokens': 4074, 'reasoning_output_tokens': 2281}
+START {'index': 3, 'repeat': 0, 'family': 'coalesce', 'arm': 'original', 'language': 'lobo', 'reasoning': 'high', 'phase': 'change'}
+END 3 completed True 70 {'input_tokens': 182878, 'cached_input_tokens': 169088, 'cache_write_input_tokens': 0, 'output_tokens': 4525, 'reasoning_output_tokens': 2205}
+START {'index': 4, 'repeat': 0, 'family': 'coalesce', 'arm': 'revised', 'language': 'lobo', 'reasoning': 'high', 'phase': 'change'}
+END 4 completed True 70 {'input_tokens': 156993, 'cached_input_tokens': 145280, 'cache_write_input_tokens': 0, 'output_tokens': 4276, 'reasoning_output_tokens': 2002}
+START {'index': 5, 'repeat': 0, 'family': 'coalesce', 'arm': 'control', 'language': 'lobo', 'reasoning': 'high', 'phase': 'change'}
+END 5 completed True 70 {'input_tokens': 69026, 'cached_input_tokens': 63232, 'cache_write_input_tokens': 0, 'output_tokens': 2081, 'reasoning_output_tokens': 1033}
+START {'index': 6, 'repeat': 1, 'family': 'locate', 'arm': 'revised', 'language': 'lobo', 'reasoning': 'high', 'phase': 'construction'}
+END 6 completed True 70 {'input_tokens': 184628, 'cached_input_tokens': 167680, 'cache_write_input_tokens': 0, 'output_tokens': 3785, 'reasoning_output_tokens': 2264}
+START {'index': 7, 'repeat': 1, 'family': 'locate', 'arm': 'original', 'language': 'lobo', 'reasoning': 'high', 'phase': 'construction'}
+END 7 wall_limit False 70 None
+START {'index': 8, 'repeat': 1, 'family': 'locate', 'arm': 'control', 'language': 'lobo', 'reasoning': 'high', 'phase': 'construction'}
+END 8 completed True 70 {'input_tokens': 254780, 'cached_input_tokens': 238080, 'cache_write_input_tokens': 0, 'output_tokens': 4813, 'reasoning_output_tokens': 3006}
+START {'index': 9, 'repeat': 1, 'family': 'coalesce', 'arm': 'control', 'language': 'lobo', 'reasoning': 'high', 'phase': 'change'}
+END 9 completed True 70 {'input_tokens': 268498, 'cached_input_tokens': 253952, 'cache_write_input_tokens': 0, 'output_tokens': 4471, 'reasoning_output_tokens': 2056}
+START {'index': 10, 'repeat': 1, 'family': 'coalesce', 'arm': 'revised', 'language': 'lobo', 'reasoning': 'high', 'phase': 'change'}
+END 10 completed True 70 {'input_tokens': 147975, 'cached_input_tokens': 134144, 'cache_write_input_tokens': 0, 'output_tokens': 2818, 'reasoning_output_tokens': 1251}
+START {'index': 11, 'repeat': 1, 'family': 'coalesce', 'arm': 'original', 'language': 'lobo', 'reasoning': 'high', 'phase': 'change'}
+END 11 completed True 70 {'input_tokens': 283718, 'cached_input_tokens': 265216, 'cache_write_input_tokens': 0, 'output_tokens': 5185, 'reasoning_output_tokens': 2674}
+FINISHED 12

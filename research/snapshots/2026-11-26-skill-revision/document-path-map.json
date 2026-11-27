@@ -1460,6 +1460,16 @@
       "original_snapshot_path": "registration/inputs/locate/control/libraries/http-server/README.md",
       "stored_snapshot_path": "registration/inputs/locate/control/libraries/http-server/README.md.txt",
       "sha256": "7f695c6966c1a31adf74d2d620760857a07ac28c0763a65fc8a6001800b6bde2"
+    },
+    {
+      "original_snapshot_path": "code/.agents/skills/lobo-development/SKILL.md",
+      "stored_snapshot_path": "code/.agents/skills/lobo-development/SKILL.md.txt",
+      "sha256": "804a12e43f79bef059243f88e474266890c785d02df034645cbab88da50a52b5"
+    },
+    {
+      "original_snapshot_path": "code/.agents/skills/lobo-development-v2/SKILL.md",
+      "stored_snapshot_path": "code/.agents/skills/lobo-development-v2/SKILL.md.txt",
+      "sha256": "e7877b0ce0ab304eaf60fc9f6f9435b254519d43655a0a18c1d569d1bfc4a352"
     }
   ],
   "limits": "Presentation only: exact registered document bytes with original logical filenames recoverable by this map. Original input trees remain in raw evidence."

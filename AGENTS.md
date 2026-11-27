@@ -5,11 +5,14 @@ Use the GitHub account luis-lobo-ar for this repository. Commit author and commi
 active gh account may belong to another project. Keep user-facing examples on the lobo CLI. Cargo commands
 belong in compiler build/test instructions. Preserve frozen research documents and fixtures.
 
-The user selected decision0071: additive grammar-first lobo-development-v2 and12 fresh three-arm
-attempts (control/original/revised), all Luna/high with identical120s/16-command/6-check limits. Preserve
-original skill/product/cards/old studies, register before calls, isolate discovery, retain every outcome
-and unknown, append evidence without changing45 prior entries160 pins, and stop at12. Full compiler
-receipt is reused, not rerun. New skill freezes at registration; no outcome-driven edits or retries.
+Decision0071 is complete:12 fresh three-arm Luna/high attempts at the same120s/16-command/6-check
+limits. Revised4/4 and control4/4 complete; original2/4, with two search timeouts whose candidates still
+pass. All12 candidates pass840 final checks (5 public+65 private per assignment). Two original usage
+records are unknown. Revised/original median token ratio0.6912 on only2 complete coalescing pairs;
+revised/control0.9977 on4 pairs, mixed. No general advantage over control is demonstrated. Read
+research/skill-revision-study-2026-11-26.md. Keep both skills, product1.11.2, cards and all prior evidence
+frozen, preserve local-046 and prior pins, and stop at12. Reused312-pass compiler receipt is not a fresh
+suite. v2 is available explicitly as lobo-development-v2; no outcome-driven edits or extra trials.
 
 Decision0070 is complete:12 matched fresh development attempts, all GPT-5.6-Luna/high under equal
 120s/16-command/6-visible-check limits. Control passes6/6; skill5/6 with one timeout/unknown usage.

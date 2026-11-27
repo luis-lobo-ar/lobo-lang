@@ -28,3 +28,15 @@ The creation-time checks above did not measure development benefit. The later
 control passes 6/6 tasks, skill 5/6 with one timeout. Five known token pairs use a median 41.2% more
 with the skill; the timeout's usage is unknown. No development advantage is demonstrated. The tested
 skill text remains unchanged; proposed revisions require a new selected scope and comparison.
+
+## Version 2, 2026-11-26
+
+Use `$lobo-development-v2` for the [grammar-first revision](../.agents/skills/lobo-development-v2/SKILL.md).
+It preserves the original, cuts entry text from4,799 to3,138 bytes, and puts braced else syntax, reserved
+result, complex match subjects and first-diagnostic identity recovery before optional references.
+Its local symlink is `/home/luis/.codex/skills/lobo-development-v2` and depends on this checkout.
+
+[The fresh three-arm pilot](../research/skill-revision-study-2026-11-26.md) gives revised/control4/4
+completion and original2/4; all candidates pass tests. The original search sessions time out, with unknown
+usage. Cost results do not show a consistent improvement over control. Keep versions as tested; there
+is no blanket recommendation to add a skill to every task or authorization for more model trials.

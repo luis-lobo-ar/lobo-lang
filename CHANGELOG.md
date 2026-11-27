@@ -1,5 +1,17 @@
 # Lobo change ledger
 
+## 2026-11-26 — Grammar-first skill revision and matched comparison
+
+Added [lobo-development-v2](.agents/skills/lobo-development-v2/SKILL.md), 34.6% shorter, with verified
+grammar reminders and identity-sync recovery. Preserved the original and tested both against control on
+12 fresh assignments under identical Luna/high and 120s/16-command/6-check limits. Revised/control finish
+4/4 each; original 2/4 with correct but timed-out search candidates. All candidate suites pass. Two unknown
+usage records limit costs: revised/original median tokens lower30.9% on two known coalescing pairs;
+revised/control approximately unchanged at the paired median. All traces, initial match-probe correction,
+checks and previous paper evidence remain preserved. No language/compiler/editor change. See
+[the report](research/skill-revision-study-2026-11-26.md), decision0071 and paper local-046.
+
+
 ## 2026-11-24 — Matched development skill comparison
 
 Completed 12 preregistered fresh Lobo attempts with identical Luna/high and 120s/16-command/6-check

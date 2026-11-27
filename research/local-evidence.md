@@ -1,5 +1,15 @@
 # Local evidence for the Lobo paper
 
+## Grammar-first development skill revision
+
+Paper local-046 adds [the revised skill comparison](skill-revision-study-2026-11-26.md),
+[all twelve results](../benchmarks/results/2026-11-26-skill-revision-study.json) and
+[verification](../benchmarks/results/2026-11-26-skill-revision-verification.json). Revised/control complete
+4/4 each; original2/4 with two timeouts and unknown usage. All candidate code passes. Two known
+coalescing cost pairs favor revised, while control comparison is mixed with essentially equal median
+tokens. This does not establish a general skill/language advantage. Prior45 entries160 pins stay intact.
+
+
 ## Matched development skill pilot
 
 Paper local-045 adds [the 12-attempt comparison](development-skill-study-2026-11-24.md),

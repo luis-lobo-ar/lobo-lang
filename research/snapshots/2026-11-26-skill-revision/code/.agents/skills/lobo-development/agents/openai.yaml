@@ -1,0 +1,4 @@
+interface:
+  display_name: "Lobo Development"
+  short_description: "Develop Lobo with focused references and native tests"
+  default_prompt: "Use $lobo-development to implement this change with relevant checked language rules, TDD and native verification."

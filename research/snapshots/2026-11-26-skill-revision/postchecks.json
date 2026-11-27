@@ -1,0 +1,109 @@
+{
+  "date": "2026-11-26",
+  "prior_entries": 45,
+  "prior_pins": 160,
+  "all_prior_entries_pins_unchanged": true,
+  "registered_code_pins": 17,
+  "all_registered_code_materials_match": true,
+  "compiler_sha256": "8d9f84530b8d34a6a72597d25befc249a604430a6569656b4184721e1e444d9d",
+  "checks": [
+    {
+      "index": 0,
+      "required_source_signature_matches": true,
+      "native_observations": 70,
+      "accepted": true,
+      "candidate_native_passes": true,
+      "status": "completed"
+    },
+    {
+      "index": 1,
+      "required_source_signature_matches": true,
+      "native_observations": 70,
+      "accepted": false,
+      "candidate_native_passes": true,
+      "status": "wall_limit"
+    },
+    {
+      "index": 2,
+      "required_source_signature_matches": true,
+      "native_observations": 70,
+      "accepted": true,
+      "candidate_native_passes": true,
+      "status": "completed"
+    },
+    {
+      "index": 3,
+      "required_source_signature_matches": true,
+      "native_observations": 70,
+      "accepted": true,
+      "candidate_native_passes": true,
+      "status": "completed"
+    },
+    {
+      "index": 4,
+      "required_source_signature_matches": true,
+      "native_observations": 70,
+      "accepted": true,
+      "candidate_native_passes": true,
+      "status": "completed"
+    },
+    {
+      "index": 5,
+      "required_source_signature_matches": true,
+      "native_observations": 70,
+      "accepted": true,
+      "candidate_native_passes": true,
+      "status": "completed"
+    },
+    {
+      "index": 6,
+      "required_source_signature_matches": true,
+      "native_observations": 70,
+      "accepted": true,
+      "candidate_native_passes": true,
+      "status": "completed"
+    },
+    {
+      "index": 7,
+      "required_source_signature_matches": true,
+      "native_observations": 70,
+      "accepted": false,
+      "candidate_native_passes": true,
+      "status": "wall_limit"
+    },
+    {
+      "index": 8,
+      "required_source_signature_matches": true,
+      "native_observations": 70,
+      "accepted": true,
+      "candidate_native_passes": true,
+      "status": "completed"
+    },
+    {
+      "index": 9,
+      "required_source_signature_matches": true,
+      "native_observations": 70,
+      "accepted": true,
+      "candidate_native_passes": true,
+      "status": "completed"
+    },
+    {
+      "index": 10,
+      "required_source_signature_matches": true,
+      "native_observations": 70,
+      "accepted": true,
+      "candidate_native_passes": true,
+      "status": "completed"
+    },
+    {
+      "index": 11,
+      "required_source_signature_matches": true,
+      "native_observations": 70,
+      "accepted": true,
+      "candidate_native_passes": true,
+      "status": "completed"
+    }
+  ],
+  "credential_files_in_evidence": false,
+  "limits": "Read-only native-label and source-signature audit; original grades and unknown usage unchanged."
+}

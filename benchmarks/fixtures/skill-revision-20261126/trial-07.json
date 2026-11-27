@@ -1,0 +1,2140 @@
+{
+  "result": {
+    "assignment": {
+      "index": 7,
+      "repeat": 1,
+      "family": "locate",
+      "arm": "original",
+      "language": "lobo",
+      "reasoning": "high",
+      "phase": "construction"
+    },
+    "command": [
+      "codex",
+      "exec",
+      "--ignore-user-config",
+      "--ephemeral",
+      "--json",
+      "--sandbox",
+      "workspace-write",
+      "--skip-git-repo-check",
+      "--disable",
+      "multi_agent",
+      "--disable",
+      "multi_agent_v2",
+      "--disable",
+      "apps",
+      "--disable",
+      "plugins",
+      "--disable",
+      "memories",
+      "-C",
+      "/tmp/lobo-matched-t47ykest",
+      "-m",
+      "gpt-5.6-luna",
+      "-c",
+      "model_reasoning_effort=\"high\"",
+      "-c",
+      "approval_policy=\"never\"",
+      "--output-last-message",
+      "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/skill-revision-20261126/run/trial-07/last-message.txt",
+      "-"
+    ],
+    "deadline_s": 120,
+    "tool_limit": 16,
+    "check_limit": 6,
+    "started_unix": 1795751909.8875053,
+    "load_before": [
+      6.970703125,
+      6.0849609375,
+      4.55029296875
+    ],
+    "status": "wall_limit",
+    "exit_code": -15,
+    "agent_wall_s": 120.09722846699879,
+    "usage": null,
+    "command_tool_items": 13,
+    "check_requests": 1,
+    "checks": [
+      {
+        "index": 0,
+        "start_s": 101.85298118088394,
+        "end_s": 102.16064467490651,
+        "feedback": {
+          "status": "pass",
+          "passed": 5,
+          "total": 5,
+          "failures": []
+        }
+      }
+    ],
+    "item_types": [
+      "agent_message",
+      "command_execution",
+      "agent_message",
+      "command_execution",
+      "command_execution",
+      "command_execution",
+      "command_execution",
+      "command_execution",
+      "agent_message",
+      "file_change",
+      "command_execution",
+      "command_execution",
+      "file_change",
+      "command_execution",
+      "file_change",
+      "command_execution",
+      "agent_message",
+      "command_execution",
+      "command_execution",
+      "command_execution"
+    ],
+    "load_after": [
+      4.79443359375,
+      5.52734375,
+      4.52783203125
+    ],
+    "grading": {
+      "issues": [],
+      "build": {
+        "ok": true,
+        "command": [
+          "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/matched-study-20261123/freeze/lobo",
+          "compile",
+          "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/skill-revision-20261126/run/trial-07/heldout/source/logic.lobo",
+          "--source",
+          "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/skill-revision-20261126/run/trial-07/heldout/source/model.lobo",
+          "--source",
+          "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/skill-revision-20261126/run/trial-07/heldout/source/util.lobo",
+          "-o",
+          "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/skill-revision-20261126/run/trial-07/heldout/program"
+        ],
+        "exit_code": 0,
+        "stdout": "{\"artifact\":\"/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/skill-revision-20261126/run/trial-07/heldout/program\",\"entries\":[\"lobo.cbbc9f2ac032617e6d66675bb249e451\",\"skilldev.locate.run\"],\"format\":\"native\",\"status\":\"ok\"}\n",
+        "stderr": ""
+      },
+      "cases": [
+        {
+          "input": {
+            "text": "\u00e9ababa",
+            "needle": "aba",
+            "start": 0
+          },
+          "expected": {
+            "case": "Found",
+            "payload": {
+              "index": 1,
+              "prefix": "\u00e9",
+              "suffix": "ba",
+              "match_bytes": 3
+            }
+          },
+          "actual": {
+            "case": "Found",
+            "payload": {
+              "index": 1,
+              "prefix": "\u00e9",
+              "suffix": "ba",
+              "match_bytes": 3
+            }
+          },
+          "error": null,
+          "ok": true
+        },
+        {
+          "input": {
+            "text": "\u00e9ababa",
+            "needle": "aba",
+            "start": 2
+          },
+          "expected": {
+            "case": "Found",
+            "payload": {
+              "index": 3,
+              "prefix": "\u00e9ab",
+              "suffix": "",
+              "match_bytes": 3
+            }
+          },
+          "actual": {
+            "case": "Found",
+            "payload": {
+              "index": 3,
+              "prefix": "\u00e9ab",
+              "suffix": "",
+              "match_bytes": 3
+            }
+          },
+          "error": null,
+          "ok": true
+        },
+        {
+          "input": {
+            "text": "",
+            "needle": "",
+            "start": 0
+          },
+          "expected": {
+            "case": "Found",
+            "payload": {
+              "index": 0,
+              "prefix": "",
+              "suffix": "",
+              "match_bytes": 0
+            }
+          },
+          "actual": {
+            "case": "Found",
+            "payload": {
+              "index": 0,
+              "prefix": "",
+              "suffix": "",
+              "match_bytes": 0
+            }
+          },
+          "error": null,
+          "ok": true
+        },
+        {
+          "input": {
+            "text": "ab",
+            "needle": "z",
+            "start": -1
+          },
+          "expected": {
+            "case": "Invalid",
+            "payload": -1
+          },
+          "actual": {
+            "case": "Invalid",
+            "payload": -1
+          },
+          "error": null,
+          "ok": true
+        },
+        {
+          "input": {
+            "text": "ab",
+            "needle": "z",
+            "start": 0
+          },
+          "expected": {
+            "case": "Missing",
+            "payload": null
+          },
+          "actual": {
+            "case": "Missing",
+            "payload": null
+          },
+          "error": null,
+          "ok": true
+        },
+        {
+          "input": {
+            "text": "aaaaaaaaaaaaaaaaaaaaaaaa",
+            "needle": "aa",
+            "start": 23
+          },
+          "expected": {
+            "case": "Missing",
+            "payload": null
+          },
+          "actual": {
+            "case": "Missing",
+            "payload": null
+          },
+          "error": null,
+          "ok": true
+        },
+        {
+          "input": {
+            "text": "x",
+            "needle": "",
+            "start": 9223372036854775807
+          },
+          "expected": {
+            "case": "Invalid",
+            "payload": 9223372036854775807
+          },
+          "actual": {
+            "case": "Invalid",
+            "payload": 9223372036854775807
+          },
+          "error": null,
+          "ok": true
+        },
+        {
+          "input": {
+            "text": "x",
+            "needle": "",
+            "start": -9223372036854775808
+          },
+          "expected": {
+            "case": "Invalid",
+            "payload": -9223372036854775808
+          },
+          "actual": {
+            "case": "Invalid",
+            "payload": -9223372036854775808
+          },
+          "error": null,
+          "ok": true
+        },
+        {
+          "input": {
+            "text": "a\u0000e\u0301",
+            "needle": "\u0000e",
+            "start": 0
+          },
+          "expected": {
+            "case": "Found",
+            "payload": {
+              "index": 1,
+              "prefix": "a",
+              "suffix": "\u0301",
+              "match_bytes": 2
+            }
+          },
+          "actual": {
+            "case": "Found",
+            "payload": {
+              "index": 1,
+              "prefix": "a",
+              "suffix": "\u0301",
+              "match_bytes": 2
+            }
+          },
+          "error": null,
+          "ok": true
+        },
+        {
+          "input": {
+            "text": "aaaaaaaaaaaaaaaaaaaaaaaa",
+            "needle": "aaaaaaaaaaaaaaaaaaaaaaaa",
+            "start": 0
+          },
+          "expected": {
+            "case": "Found",
+            "payload": {
+              "index": 0,
+              "prefix": "",
+              "suffix": "",
+              "match_bytes": 24
+            }
+          },
+          "actual": {
+            "case": "Found",
+            "payload": {
+              "index": 0,
+              "prefix": "",
+              "suffix": "",
+              "match_bytes": 24
+            }
+          },
+          "error": null,
+          "ok": true
+        },
+        {
+          "input": {
+            "text": "\ud83d\udc3a\u00e9",
+            "needle": "\u00e9",
+            "start": 1
+          },
+          "expected": {
+            "case": "Found",
+            "payload": {
+              "index": 1,
+              "prefix": "\ud83d\udc3a",
+              "suffix": "",
+              "match_bytes": 2
+            }
+          },
+          "actual": {
+            "case": "Found",
+            "payload": {
+              "index": 1,
+              "prefix": "\ud83d\udc3a",
+              "suffix": "",
+              "match_bytes": 2
+            }
+          },
+          "error": null,
+          "ok": true
+        },
+        {
+          "input": {
+            "text": "\ud83d\udc3aa\u0000\u0301a\u00e9\u00e9\u0301b\u0301\u0301\u00e9a\ud83d\udc3a\u00e9",
+            "needle": "\ud83d\udc3aa\u0000\u0301a\u00e9\u00e9",
+            "start": 16
+          },
+          "expected": {
+            "case": "Invalid",
+            "payload": 16
+          },
+          "actual": {
+            "case": "Invalid",
+            "payload": 16
+          },
+          "error": null,
+          "ok": true
+        },
+        {
+          "input": {
+            "text": "\u0000\ud83d\udc3a\ud83d\udc3a\u0301\u00e9\u00e9b\ud83d\udc3aa\u0000\u0301b\u0301a\u00e9\u0000\ud83d\udc3a\u00e9\u0000\u00e9",
+            "needle": "",
+            "start": 20
+          },
+          "expected": {
+            "case": "Found",
+            "payload": {
+              "index": 20,
+              "prefix": "\u0000\ud83d\udc3a\ud83d\udc3a\u0301\u00e9\u00e9b\ud83d\udc3aa\u0000\u0301b\u0301a\u00e9\u0000\ud83d\udc3a\u00e9\u0000\u00e9",
+              "suffix": "",
+              "match_bytes": 0
+            }
+          },
+          "actual": {
+            "case": "Found",
+            "payload": {
+              "index": 20,
+              "prefix": "\u0000\ud83d\udc3a\ud83d\udc3a\u0301\u00e9\u00e9b\ud83d\udc3aa\u0000\u0301b\u0301a\u00e9\u0000\ud83d\udc3a\u00e9\u0000\u00e9",
+              "suffix": "",
+              "match_bytes": 0
+            }
+          },
+          "error": null,
+          "ok": true
+        },
+        {
+          "input": {
+            "text": "",
+            "needle": "\ud83d\udc3a",
+            "start": 0
+          },
+          "expected": {
+            "case": "Missing",
+            "payload": null
+          },
+          "actual": {
+            "case": "Missing",
+            "payload": null
+          },
+          "error": null,
+          "ok": true
+        },
+        {
+          "input": {
+            "text": "bb\u0000\u00e9",
+            "needle": "bb\u0000",
+            "start": 3
+          },
+          "expected": {
+            "case": "Missing",
+            "payload": null
+          },
+          "actual": {
+            "case": "Missing",
+            "payload": null
+          },
+          "error": null,
+          "ok": true
+        },
+        {
+          "input": {
+            "text": "\u0000\ud83d\udc3a\ud83d\udc3aa\ud83d\udc3a\u0301\u0000a\ud83d\udc3ab\u0000\u0301\u0000a\u0000b\u0000\u0000a",
+            "needle": "zz",
+            "start": 8
+          },
+          "expected": {
+            "case": "Missing",
+            "payload": null
+          },
+          "actual": {
+            "case": "Missing",
+            "payload": null
+          },
+          "error": null,
+          "ok": true
+        },
+        {
+          "input": {
+            "text": "\u0301\ud83d\udc3aa\ud83d\udc3a\u0301\ud83d\udc3a\u0000\u00e9\ud83d\udc3a\u0000\u0301a\u00e9\u00e9\u00e9b\u00e9\u0301",
+            "needle": "\u0301\ud83d\udc3aa\ud83d\udc3a\u0301\ud83d\udc3a\u0000\u00e9",
+            "start": 18
+          },
+          "expected": {
+            "case": "Missing",
+            "payload": null
+          },
+          "actual": {
+            "case": "Missing",
+            "payload": null
+          },
+          "error": null,
+          "ok": true
+        },
+        {
+          "input": {
+            "text": "bb\u00e9b\u0000\u0000\u0000b\ud83d\udc3a\u00e9a\ud83d\udc3ab\ud83d\udc3a\u00e9\ud83d\udc3a\u0000\u0301\ud83d\udc3a",
+            "needle": "zz",
+            "start": -1
+          },
+          "expected": {
+            "case": "Invalid",
+            "payload": -1
+          },
+          "actual": {
+            "case": "Invalid",
+            "payload": -1
+          },
+          "error": null,
+          "ok": true
+        },
+        {
+          "input": {
+            "text": "\u0000\u0000a\u0301\u0000\u00e9b\ud83d\udc3a\u0301b\ud83d\udc3ab",
+            "needle": "",
+            "start": 12
+          },
+          "expected": {
+            "case": "Found",
+            "payload": {
+              "index": 12,
+              "prefix": "\u0000\u0000a\u0301\u0000\u00e9b\ud83d\udc3a\u0301b\ud83d\udc3ab",
+              "suffix": "",
+              "match_bytes": 0
+            }
+          },
+          "actual": {
+            "case": "Found",
+            "payload": {
+              "index": 12,
+              "prefix": "\u0000\u0000a\u0301\u0000\u00e9b\ud83d\udc3a\u0301b\ud83d\udc3ab",
+              "suffix": "",
+              "match_bytes": 0
+            }
+          },
+          "error": null,
+          "ok": true
+        },
+        {
+          "input": {
+            "text": "aa\u0301a\u0000\ud83d\udc3a\u0301a\u0000ab\u00e9b\u0301\u0301\u0000b\u0000",
+            "needle": "",
+            "start": 17
+          },
+          "expected": {
+            "case": "Found",
+            "payload": {
+              "index": 17,
+              "prefix": "aa\u0301a\u0000\ud83d\udc3a\u0301a\u0000ab\u00e9b\u0301\u0301\u0000b",
+              "suffix": "\u0000",
+              "match_bytes": 0
+            }
+          },
+          "actual": {
+            "case": "Found",
+            "payload": {
+              "index": 17,
+              "prefix": "aa\u0301a\u0000\ud83d\udc3a\u0301a\u0000ab\u00e9b\u0301\u0301\u0000b",
+              "suffix": "\u0000",
+              "match_bytes": 0
+            }
+          },
+          "error": null,
+          "ok": true
+        },
+        {
+          "input": {
+            "text": "\u00e9\u00e9aa\u00e9\u0000\u0000\u00e9",
+            "needle": "",
+            "start": 8
+          },
+          "expected": {
+            "case": "Found",
+            "payload": {
+              "index": 8,
+              "prefix": "\u00e9\u00e9aa\u00e9\u0000\u0000\u00e9",
+              "suffix": "",
+              "match_bytes": 0
+            }
+          },
+          "actual": {
+            "case": "Found",
+            "payload": {
+              "index": 8,
+              "prefix": "\u00e9\u00e9aa\u00e9\u0000\u0000\u00e9",
+              "suffix": "",
+              "match_bytes": 0
+            }
+          },
+          "error": null,
+          "ok": true
+        },
+        {
+          "input": {
+            "text": "\u00e9\u0301a\u00e9a\u00e9\u0301\ud83d\udc3a\ud83d\udc3aba\u00e9a\ud83d\udc3a\u0000\u0000b\u0301\u0000aa\u00e9\u0000a",
+            "needle": "zz",
+            "start": 5
+          },
+          "expected": {
+            "case": "Missing",
+            "payload": null
+          },
+          "actual": {
+            "case": "Missing",
+            "payload": null
+          },
+          "error": null,
+          "ok": true
+        },
+        {
+          "input": {
+            "text": "\u0301\u0000\u0000\ud83d\udc3a\u0301ab\ud83d\udc3ab\ud83d\udc3a\u00e9\u0000b\u0000\u0301b\u00e9\ud83d\udc3a\u0301\ud83d\udc3a\u00e9b\u0000\u00e9",
+            "needle": "a",
+            "start": 0
+          },
+          "expected": {
+            "case": "Found",
+            "payload": {
+              "index": 5,
+              "prefix": "\u0301\u0000\u0000\ud83d\udc3a\u0301",
+              "suffix": "b\ud83d\udc3ab\ud83d\udc3a\u00e9\u0000b\u0000\u0301b\u00e9\ud83d\udc3a\u0301\ud83d\udc3a\u00e9b\u0000\u00e9",
+              "match_bytes": 1
+            }
+          },
+          "actual": {
+            "case": "Found",
+            "payload": {
+              "index": 5,
+              "prefix": "\u0301\u0000\u0000\ud83d\udc3a\u0301",
+              "suffix": "b\ud83d\udc3ab\ud83d\udc3a\u00e9\u0000b\u0000\u0301b\u00e9\ud83d\udc3a\u0301\ud83d\udc3a\u00e9b\u0000\u00e9",
+              "match_bytes": 1
+            }
+          },
+          "error": null,
+          "ok": true
+        },
+        {
+          "input": {
+            "text": "\u00e9bb\u0000\u00e9\ud83d\udc3a\ud83d\udc3ab\u00e9",
+            "needle": "a",
+            "start": 0
+          },
+          "expected": {
+            "case": "Missing",
+            "payload": null
+          },
+          "actual": {
+            "case": "Missing",
+            "payload": null
+          },
+          "error": null,
+          "ok": true
+        },
+        {
+          "input": {
+            "text": "a\u00e9\u00e9\ud83d\udc3a\u00e9b\ud83d\udc3a",
+            "needle": "",
+            "start": 1
+          },
+          "expected": {
+            "case": "Found",
+            "payload": {
+              "index": 1,
+              "prefix": "a",
+              "suffix": "\u00e9\u00e9\ud83d\udc3a\u00e9b\ud83d\udc3a",
+              "match_bytes": 0
+            }
+          },
+          "actual": {
+            "case": "Found",
+            "payload": {
+              "index": 1,
+              "prefix": "a",
+              "suffix": "\u00e9\u00e9\ud83d\udc3a\u00e9b\ud83d\udc3a",
+              "match_bytes": 0
+            }
+          },
+          "error": null,
+          "ok": true
+        },
+        {
+          "input": {
+            "text": "\u0301a\u0301\u0301a\u0301\ud83d\udc3a\u0301b\u0301\u0301\u0000a",
+            "needle": "",
+            "start": 4
+          },
+          "expected": {
+            "case": "Found",
+            "payload": {
+              "index": 4,
+              "prefix": "\u0301a\u0301\u0301",
+              "suffix": "a\u0301\ud83d\udc3a\u0301b\u0301\u0301\u0000a",
+              "match_bytes": 0
+            }
+          },
+          "actual": {
+            "case": "Found",
+            "payload": {
+              "index": 4,
+              "prefix": "\u0301a\u0301\u0301",
+              "suffix": "a\u0301\ud83d\udc3a\u0301b\u0301\u0301\u0000a",
+              "match_bytes": 0
+            }
+          },
+          "error": null,
+          "ok": true
+        },
+        {
+          "input": {
+            "text": "\u0301\ud83d\udc3a\ud83d\udc3a\ud83d\udc3ab\u0301\u0301b\u0301aa\u0301b\u0301\u0000\ud83d\udc3a\u0301\u0301ba",
+            "needle": "\ud83d\udc3a",
+            "start": 20
+          },
+          "expected": {
+            "case": "Missing",
+            "payload": null
+          },
+          "actual": {
+            "case": "Missing",
+            "payload": null
+          },
+          "error": null,
+          "ok": true
+        },
+        {
+          "input": {
+            "text": "\u0000\u0301\ud83d\udc3a\u0000\u0301\u0000b\u0301\ud83d\udc3a\ud83d\udc3a\u0000\u0301\u0000\ud83d\udc3a\ud83d\udc3a\u0301\u0301\u0000",
+            "needle": "\ud83d\udc3a",
+            "start": -1
+          },
+          "expected": {
+            "case": "Invalid",
+            "payload": -1
+          },
+          "actual": {
+            "case": "Invalid",
+            "payload": -1
+          },
+          "error": null,
+          "ok": true
+        },
+        {
+          "input": {
+            "text": "bb\u00e9\u0301\u0301\ud83d\udc3aa\u0000aba\u00e9a\ud83d\udc3a\u0301\u00e9bb\u0301\u0301\u0000\u00e9",
+            "needle": "\u00e9",
+            "start": 13
+          },
+          "expected": {
+            "case": "Found",
+            "payload": {
+              "index": 15,
+              "prefix": "bb\u00e9\u0301\u0301\ud83d\udc3aa\u0000aba\u00e9a\ud83d\udc3a\u0301",
+              "suffix": "bb\u0301\u0301\u0000\u00e9",
+              "match_bytes": 2
+            }
+          },
+          "actual": {
+            "case": "Found",
+            "payload": {
+              "index": 15,
+              "prefix": "bb\u00e9\u0301\u0301\ud83d\udc3aa\u0000aba\u00e9a\ud83d\udc3a\u0301",
+              "suffix": "bb\u0301\u0301\u0000\u00e9",
+              "match_bytes": 2
+            }
+          },
+          "error": null,
+          "ok": true
+        },
+        {
+          "input": {
+            "text": "\u0301\u00e9a\u00e9\ud83d\udc3a\u0000",
+            "needle": "",
+            "start": -1
+          },
+          "expected": {
+            "case": "Invalid",
+            "payload": -1
+          },
+          "actual": {
+            "case": "Invalid",
+            "payload": -1
+          },
+          "error": null,
+          "ok": true
+        },
+        {
+          "input": {
+            "text": "\u00e9\u0301\u0000",
+            "needle": "\ud83d\udc3a",
+            "start": 4
+          },
+          "expected": {
+            "case": "Invalid",
+            "payload": 4
+          },
+          "actual": {
+            "case": "Invalid",
+            "payload": 4
+          },
+          "error": null,
+          "ok": true
+        },
+        {
+          "input": {
+            "text": "\ud83d\udc3aab",
+            "needle": "",
+            "start": 1
+          },
+          "expected": {
+            "case": "Found",
+            "payload": {
+              "index": 1,
+              "prefix": "\ud83d\udc3a",
+              "suffix": "ab",
+              "match_bytes": 0
+            }
+          },
+          "actual": {
+            "case": "Found",
+            "payload": {
+              "index": 1,
+              "prefix": "\ud83d\udc3a",
+              "suffix": "ab",
+              "match_bytes": 0
+            }
+          },
+          "error": null,
+          "ok": true
+        },
+        {
+          "input": {
+            "text": "\u00e9\ud83d\udc3aba\u0000a",
+            "needle": "",
+            "start": 7
+          },
+          "expected": {
+            "case": "Invalid",
+            "payload": 7
+          },
+          "actual": {
+            "case": "Invalid",
+            "payload": 7
+          },
+          "error": null,
+          "ok": true
+        },
+        {
+          "input": {
+            "text": "\u0000\u0000\u0301a\u0000\u0000\u0301\u00e9\u00e9\u0000\u00e9\u00e9\u0301\ud83d\udc3ab\ud83d\udc3a\u0000\u0000\u00e9\ud83d\udc3ab\u0301\ud83d\udc3a",
+            "needle": "",
+            "start": 22
+          },
+          "expected": {
+            "case": "Found",
+            "payload": {
+              "index": 22,
+              "prefix": "\u0000\u0000\u0301a\u0000\u0000\u0301\u00e9\u00e9\u0000\u00e9\u00e9\u0301\ud83d\udc3ab\ud83d\udc3a\u0000\u0000\u00e9\ud83d\udc3ab\u0301",
+              "suffix": "\ud83d\udc3a",
+              "match_bytes": 0
+            }
+          },
+          "actual": {
+            "case": "Found",
+            "payload": {
+              "index": 22,
+              "prefix": "\u0000\u0000\u0301a\u0000\u0000\u0301\u00e9\u00e9\u0000\u00e9\u00e9\u0301\ud83d\udc3ab\ud83d\udc3a\u0000\u0000\u00e9\ud83d\udc3ab\u0301",
+              "suffix": "\ud83d\udc3a",
+              "match_bytes": 0
+            }
+          },
+          "error": null,
+          "ok": true
+        },
+        {
+          "input": {
+            "text": "\u0000a\u0301",
+            "needle": "",
+            "start": -1
+          },
+          "expected": {
+            "case": "Invalid",
+            "payload": -1
+          },
+          "actual": {
+            "case": "Invalid",
+            "payload": -1
+          },
+          "error": null,
+          "ok": true
+        },
+        {
+          "input": {
+            "text": "\u00e9\u0000\u00e9\u0301",
+            "needle": "\u00e9",
+            "start": 4
+          },
+          "expected": {
+            "case": "Missing",
+            "payload": null
+          },
+          "actual": {
+            "case": "Missing",
+            "payload": null
+          },
+          "error": null,
+          "ok": true
+        },
+        {
+          "input": {
+            "text": "\ud83d\udc3a\u00e9aa\u0301\u0000a\u0000",
+            "needle": "\ud83d\udc3a\u00e9aa\u0301\u0000a",
+            "start": 8
+          },
+          "expected": {
+            "case": "Missing",
+            "payload": null
+          },
+          "actual": {
+            "case": "Missing",
+            "payload": null
+          },
+          "error": null,
+          "ok": true
+        },
+        {
+          "input": {
+            "text": "\u00e9bba\u00e9\u0301\u0301\u0301\ud83d\udc3ab\ud83d\udc3a\ud83d\udc3a\ud83d\udc3aa\ud83d\udc3abaa\u00e9\ud83d\udc3a\u0301\u0301a\u00e9",
+            "needle": "\u00e9bba\u00e9\u0301\u0301\u0301\ud83d\udc3ab\ud83d\udc3a",
+            "start": -1
+          },
+          "expected": {
+            "case": "Invalid",
+            "payload": -1
+          },
+          "actual": {
+            "case": "Invalid",
+            "payload": -1
+          },
+          "error": null,
+          "ok": true
+        },
+        {
+          "input": {
+            "text": "\u0301bb\u00e9b\ud83d\udc3a\u0000\u0301\u0000\ud83d\udc3a\u0000\u00e9a\ud83d\udc3a",
+            "needle": "zz",
+            "start": 14
+          },
+          "expected": {
+            "case": "Missing",
+            "payload": null
+          },
+          "actual": {
+            "case": "Missing",
+            "payload": null
+          },
+          "error": null,
+          "ok": true
+        },
+        {
+          "input": {
+            "text": "\u0000ab\ud83d\udc3a\u00e9ba\ud83d\udc3abb\u0301\u0000\ud83d\udc3aa",
+            "needle": "\u0000ab\ud83d\udc3a",
+            "start": 0
+          },
+          "expected": {
+            "case": "Found",
+            "payload": {
+              "index": 0,
+              "prefix": "",
+              "suffix": "\u00e9ba\ud83d\udc3abb\u0301\u0000\ud83d\udc3aa",
+              "match_bytes": 7
+            }
+          },
+          "actual": {
+            "case": "Found",
+            "payload": {
+              "index": 0,
+              "prefix": "",
+              "suffix": "\u00e9ba\ud83d\udc3abb\u0301\u0000\ud83d\udc3aa",
+              "match_bytes": 7
+            }
+          },
+          "error": null,
+          "ok": true
+        },
+        {
+          "input": {
+            "text": "\u00e9\u0301\u0000a\ud83d\udc3aa\u0000\u0000\u0000\u0000\u0000\u0000\u00e9",
+            "needle": "",
+            "start": 14
+          },
+          "expected": {
+            "case": "Invalid",
+            "payload": 14
+          },
+          "actual": {
+            "case": "Invalid",
+            "payload": 14
+          },
+          "error": null,
+          "ok": true
+        },
+        {
+          "input": {
+            "text": "\ud83d\udc3a\u0000\u0000\u0000aabb\u0301\u00e9\u00e9a",
+            "needle": "\u00e9",
+            "start": 12
+          },
+          "expected": {
+            "case": "Missing",
+            "payload": null
+          },
+          "actual": {
+            "case": "Missing",
+            "payload": null
+          },
+          "error": null,
+          "ok": true
+        },
+        {
+          "input": {
+            "text": "b\u00e9\u0301\u0301\u0000ab\u0000\ud83d\udc3a\u0301\u00e9\u0301a\u0000b",
+            "needle": "\ud83d\udc3a",
+            "start": 15
+          },
+          "expected": {
+            "case": "Missing",
+            "payload": null
+          },
+          "actual": {
+            "case": "Missing",
+            "payload": null
+          },
+          "error": null,
+          "ok": true
+        },
+        {
+          "input": {
+            "text": "\ud83d\udc3a",
+            "needle": "\ud83d\udc3a",
+            "start": 0
+          },
+          "expected": {
+            "case": "Found",
+            "payload": {
+              "index": 0,
+              "prefix": "",
+              "suffix": "",
+              "match_bytes": 4
+            }
+          },
+          "actual": {
+            "case": "Found",
+            "payload": {
+              "index": 0,
+              "prefix": "",
+              "suffix": "",
+              "match_bytes": 4
+            }
+          },
+          "error": null,
+          "ok": true
+        },
+        {
+          "input": {
+            "text": "\u0301\u0301\u00e9\u00e9\u00e9\u0000\u0000\u00e9a\u0301\u0301abb\u0301\u0000\u0000a",
+            "needle": "a",
+            "start": -1
+          },
+          "expected": {
+            "case": "Invalid",
+            "payload": -1
+          },
+          "actual": {
+            "case": "Invalid",
+            "payload": -1
+          },
+          "error": null,
+          "ok": true
+        },
+        {
+          "input": {
+            "text": "\u0301a\u0301\u0000\u00e9\u0000\u0000a\u00e9b\u0301\u0000b\u0000",
+            "needle": "\u00e9",
+            "start": 14
+          },
+          "expected": {
+            "case": "Missing",
+            "payload": null
+          },
+          "actual": {
+            "case": "Missing",
+            "payload": null
+          },
+          "error": null,
+          "ok": true
+        },
+        {
+          "input": {
+            "text": "b\u0000ba\ud83d\udc3a\u00e9\u0000\u00e9\ud83d\udc3a",
+            "needle": "zz",
+            "start": 9
+          },
+          "expected": {
+            "case": "Missing",
+            "payload": null
+          },
+          "actual": {
+            "case": "Missing",
+            "payload": null
+          },
+          "error": null,
+          "ok": true
+        },
+        {
+          "input": {
+            "text": "b\u0000b\u0301\u0301\u00e9\ud83d\udc3a\u00e9\ud83d\udc3aab\ud83d\udc3aa\u00e9\u00e9",
+            "needle": "b\u0000b\u0301\u0301\u00e9\ud83d\udc3a",
+            "start": 15
+          },
+          "expected": {
+            "case": "Missing",
+            "payload": null
+          },
+          "actual": {
+            "case": "Missing",
+            "payload": null
+          },
+          "error": null,
+          "ok": true
+        },
+        {
+          "input": {
+            "text": "\u0301\u0000",
+            "needle": "a",
+            "start": 0
+          },
+          "expected": {
+            "case": "Missing",
+            "payload": null
+          },
+          "actual": {
+            "case": "Missing",
+            "payload": null
+          },
+          "error": null,
+          "ok": true
+        },
+        {
+          "input": {
+            "text": "\u0301\u00e9a\u0301\u00e9baabaa\u0000a\ud83d\udc3a\u0000\u0000\u0000\u0301\ud83d\udc3ab\ud83d\udc3a\u00e9",
+            "needle": "a",
+            "start": -1
+          },
+          "expected": {
+            "case": "Invalid",
+            "payload": -1
+          },
+          "actual": {
+            "case": "Invalid",
+            "payload": -1
+          },
+          "error": null,
+          "ok": true
+        },
+        {
+          "input": {
+            "text": "\u0301\u00e9\u0000\ud83d\udc3ab\u0000\u00e9\u0000\u0000\u00e9",
+            "needle": "\ud83d\udc3a",
+            "start": 11
+          },
+          "expected": {
+            "case": "Invalid",
+            "payload": 11
+          },
+          "actual": {
+            "case": "Invalid",
+            "payload": 11
+          },
+          "error": null,
+          "ok": true
+        },
+        {
+          "input": {
+            "text": "\u00e9\u0301\ud83d\udc3a\u0000\u0000\u0301\u00e9\u0301\u00e9\u0301\u00e9",
+            "needle": "\u00e9\u0301",
+            "start": 0
+          },
+          "expected": {
+            "case": "Found",
+            "payload": {
+              "index": 0,
+              "prefix": "",
+              "suffix": "\ud83d\udc3a\u0000\u0000\u0301\u00e9\u0301\u00e9\u0301\u00e9",
+              "match_bytes": 4
+            }
+          },
+          "actual": {
+            "case": "Found",
+            "payload": {
+              "index": 0,
+              "prefix": "",
+              "suffix": "\ud83d\udc3a\u0000\u0000\u0301\u00e9\u0301\u00e9\u0301\u00e9",
+              "match_bytes": 4
+            }
+          },
+          "error": null,
+          "ok": true
+        },
+        {
+          "input": {
+            "text": "\u00e9\ud83d\udc3abaa\u00e9\u0000a\u0000\u0301\u0301\ud83d\udc3aa\u0000\u00e9\u00e9",
+            "needle": "zz",
+            "start": 0
+          },
+          "expected": {
+            "case": "Missing",
+            "payload": null
+          },
+          "actual": {
+            "case": "Missing",
+            "payload": null
+          },
+          "error": null,
+          "ok": true
+        },
+        {
+          "input": {
+            "text": "a\u0000\u0000\u0301\u0301a\u0000\u0000\u0301a\u00e9\u0000\u00e9a",
+            "needle": "zz",
+            "start": -1
+          },
+          "expected": {
+            "case": "Invalid",
+            "payload": -1
+          },
+          "actual": {
+            "case": "Invalid",
+            "payload": -1
+          },
+          "error": null,
+          "ok": true
+        },
+        {
+          "input": {
+            "text": "\ud83d\udc3a\u0000\u0000\u0000\u0000\u0000a\ud83d\udc3a\ud83d\udc3a\u0301b\u00e9\u0301a\u0000a\u00e9b\u0301\u00e9b\u0000\ud83d\udc3a",
+            "needle": "zz",
+            "start": -1
+          },
+          "expected": {
+            "case": "Invalid",
+            "payload": -1
+          },
+          "actual": {
+            "case": "Invalid",
+            "payload": -1
+          },
+          "error": null,
+          "ok": true
+        },
+        {
+          "input": {
+            "text": "",
+            "needle": "",
+            "start": 0
+          },
+          "expected": {
+            "case": "Found",
+            "payload": {
+              "index": 0,
+              "prefix": "",
+              "suffix": "",
+              "match_bytes": 0
+            }
+          },
+          "actual": {
+            "case": "Found",
+            "payload": {
+              "index": 0,
+              "prefix": "",
+              "suffix": "",
+              "match_bytes": 0
+            }
+          },
+          "error": null,
+          "ok": true
+        },
+        {
+          "input": {
+            "text": "\u0301\u0000\u00e9\ud83d\udc3a\u00e9\u0000\u0301\ud83d\udc3a\u0000b\u0301ba\u0301",
+            "needle": "\u00e9",
+            "start": 13
+          },
+          "expected": {
+            "case": "Missing",
+            "payload": null
+          },
+          "actual": {
+            "case": "Missing",
+            "payload": null
+          },
+          "error": null,
+          "ok": true
+        },
+        {
+          "input": {
+            "text": "a\u0000\u0301bbba\u0000\u0301\u0301b",
+            "needle": "",
+            "start": 0
+          },
+          "expected": {
+            "case": "Found",
+            "payload": {
+              "index": 0,
+              "prefix": "",
+              "suffix": "a\u0000\u0301bbba\u0000\u0301\u0301b",
+              "match_bytes": 0
+            }
+          },
+          "actual": {
+            "case": "Found",
+            "payload": {
+              "index": 0,
+              "prefix": "",
+              "suffix": "a\u0000\u0301bbba\u0000\u0301\u0301b",
+              "match_bytes": 0
+            }
+          },
+          "error": null,
+          "ok": true
+        },
+        {
+          "input": {
+            "text": "\u0301\u0000\u0000",
+            "needle": "zz",
+            "start": -1
+          },
+          "expected": {
+            "case": "Invalid",
+            "payload": -1
+          },
+          "actual": {
+            "case": "Invalid",
+            "payload": -1
+          },
+          "error": null,
+          "ok": true
+        },
+        {
+          "input": {
+            "text": "a",
+            "needle": "",
+            "start": 2
+          },
+          "expected": {
+            "case": "Invalid",
+            "payload": 2
+          },
+          "actual": {
+            "case": "Invalid",
+            "payload": 2
+          },
+          "error": null,
+          "ok": true
+        },
+        {
+          "input": {
+            "text": "\u0301bab\u0301ba\u0301aa\u0301\u0301\u0301\u0301\ud83d\udc3a\u00e9abb\u00e9\u0000",
+            "needle": "\u0301bab\u0301",
+            "start": 22
+          },
+          "expected": {
+            "case": "Invalid",
+            "payload": 22
+          },
+          "actual": {
+            "case": "Invalid",
+            "payload": 22
+          },
+          "error": null,
+          "ok": true
+        },
+        {
+          "input": {
+            "text": "\ud83d\udc3ab\ud83d\udc3a\ud83d\udc3a\u00e9",
+            "needle": "a",
+            "start": 6
+          },
+          "expected": {
+            "case": "Invalid",
+            "payload": 6
+          },
+          "actual": {
+            "case": "Invalid",
+            "payload": 6
+          },
+          "error": null,
+          "ok": true
+        },
+        {
+          "input": {
+            "text": "bb",
+            "needle": "\ud83d\udc3a",
+            "start": 2
+          },
+          "expected": {
+            "case": "Missing",
+            "payload": null
+          },
+          "actual": {
+            "case": "Missing",
+            "payload": null
+          },
+          "error": null,
+          "ok": true
+        },
+        {
+          "input": {
+            "text": "\u00e9\ud83d\udc3a\u0301b\ud83d\udc3aa\u0000b\u0301\u00e9b\u00e9\u0000a\u0000\u0301",
+            "needle": "a",
+            "start": 17
+          },
+          "expected": {
+            "case": "Invalid",
+            "payload": 17
+          },
+          "actual": {
+            "case": "Invalid",
+            "payload": 17
+          },
+          "error": null,
+          "ok": true
+        },
+        {
+          "input": {
+            "text": "\u0301\u0000\u0000\ud83d\udc3a\u0000\ud83d\udc3ab\u00e9",
+            "needle": "a",
+            "start": 0
+          },
+          "expected": {
+            "case": "Missing",
+            "payload": null
+          },
+          "actual": {
+            "case": "Missing",
+            "payload": null
+          },
+          "error": null,
+          "ok": true
+        },
+        {
+          "input": {
+            "text": "\ud83d\udc3a\ud83d\udc3a\u00e9a\u0000\u0301\ud83d\udc3aaab\u00e9\ud83d\udc3a\ud83d\udc3aa",
+            "needle": "\ud83d\udc3a\ud83d\udc3a\u00e9",
+            "start": -1
+          },
+          "expected": {
+            "case": "Invalid",
+            "payload": -1
+          },
+          "actual": {
+            "case": "Invalid",
+            "payload": -1
+          },
+          "error": null,
+          "ok": true
+        },
+        {
+          "input": {
+            "text": "a\u0301\u0301abbb",
+            "needle": "a\u0301\u0301abbb",
+            "start": 6
+          },
+          "expected": {
+            "case": "Missing",
+            "payload": null
+          },
+          "actual": {
+            "case": "Missing",
+            "payload": null
+          },
+          "error": null,
+          "ok": true
+        },
+        {
+          "input": {
+            "text": "\u0301",
+            "needle": "",
+            "start": 0
+          },
+          "expected": {
+            "case": "Found",
+            "payload": {
+              "index": 0,
+              "prefix": "",
+              "suffix": "\u0301",
+              "match_bytes": 0
+            }
+          },
+          "actual": {
+            "case": "Found",
+            "payload": {
+              "index": 0,
+              "prefix": "",
+              "suffix": "\u0301",
+              "match_bytes": 0
+            }
+          },
+          "error": null,
+          "ok": true
+        },
+        {
+          "input": {
+            "text": "\u0301\u0301ab\ud83d\udc3a\u00e9\u00e9\u0000\u00e9",
+            "needle": "a",
+            "start": 9
+          },
+          "expected": {
+            "case": "Missing",
+            "payload": null
+          },
+          "actual": {
+            "case": "Missing",
+            "payload": null
+          },
+          "error": null,
+          "ok": true
+        },
+        {
+          "input": {
+            "text": "bab\ud83d\udc3a\u0301a\u0301a\ud83d\udc3a\ud83d\udc3a\u0301\u0301\ud83d\udc3a\u0301\u0301\ud83d\udc3aab\ud83d\udc3a\u0000",
+            "needle": "a",
+            "start": 8
+          },
+          "expected": {
+            "case": "Found",
+            "payload": {
+              "index": 16,
+              "prefix": "bab\ud83d\udc3a\u0301a\u0301a\ud83d\udc3a\ud83d\udc3a\u0301\u0301\ud83d\udc3a\u0301\u0301\ud83d\udc3a",
+              "suffix": "b\ud83d\udc3a\u0000",
+              "match_bytes": 1
+            }
+          },
+          "actual": {
+            "case": "Found",
+            "payload": {
+              "index": 16,
+              "prefix": "bab\ud83d\udc3a\u0301a\u0301a\ud83d\udc3a\ud83d\udc3a\u0301\u0301\ud83d\udc3a\u0301\u0301\ud83d\udc3a",
+              "suffix": "b\ud83d\udc3a\u0000",
+              "match_bytes": 1
+            }
+          },
+          "error": null,
+          "ok": true
+        }
+      ],
+      "accepted": true,
+      "passed": 70,
+      "total": 70
+    },
+    "accepted": false,
+    "workspace": "/tmp/lobo-matched-t47ykest"
+  },
+  "detail": {
+    "assignment": {
+      "index": 7,
+      "repeat": 1,
+      "family": "locate",
+      "arm": "original",
+      "language": "lobo",
+      "reasoning": "high",
+      "phase": "construction"
+    },
+    "skill_paths_in_commands": {
+      "original": true,
+      "revised": false
+    },
+    "external_skill_home_commands": [],
+    "first_visible_edited_pass_s": 102.16064467490651,
+    "visible": [
+      {
+        "index": 0,
+        "edited": true,
+        "feedback": {
+          "status": "pass",
+          "passed": 5,
+          "total": 5,
+          "failures": []
+        }
+      }
+    ],
+    "authoring_errors": [
+      {
+        "command": "/usr/bin/zsh -lc \"/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/matched-study-20261123/freeze/lobo identities sync logic.lobo --source model.lobo --source util.lobo && sed -n '1,260p' logic.lobo.ids.json\"",
+        "diagnostic": {
+          "code": "compile.syntax.invalid",
+          "message": "expected {, got Word(\"if\")",
+          "phase": "parse",
+          "range": {
+            "end": {
+              "byte": 441,
+              "character": 10,
+              "line": 14
+            },
+            "start": {
+              "byte": 439,
+              "character": 8,
+              "line": 14
+            }
+          },
+          "source": "logic.lobo"
+        },
+        "exit_code": 1
+      },
+      {
+        "command": "/usr/bin/zsh -lc \"/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/matched-study-20261123/freeze/lobo identities sync logic.lobo --source model.lobo --source util.lobo && sed -n '1,260p' logic.lobo.ids.json\"",
+        "diagnostic": {
+          "code": "compile.name.reserved",
+          "message": "reserved name: result",
+          "phase": "resolve",
+          "range": {
+            "end": {
+              "byte": 607,
+              "character": 13,
+              "line": 18
+            },
+            "start": {
+              "byte": 601,
+              "character": 7,
+              "line": 18
+            }
+          },
+          "source": "logic.lobo"
+        },
+        "exit_code": 1
+      }
+    ],
+    "visible_compile_errors": 0,
+    "visible_behavior_failures": 0,
+    "commands": [
+      "/usr/bin/zsh -lc \"sed -n '1,240p' .agents/skills/lobo-development/SKILL.md && printf '\\\\n--- TASK ---\\\\n' && sed -n '1,240p' TASK.txt && printf '\\\\n--- GUIDE ---\\\\n' && sed -n '1,280p' GUIDE.txt && printf '\\\\n--- FILES ---\\\\n' && rg --files -g '\"'!*'\"' | sed -n '1,160p'\"",
+      "/usr/bin/zsh -lc \"find . -maxdepth 2 -type f -print | sort && printf '\\\\n--- logic ---\\\\n' && sed -n '1,260p' logic.lobo && printf '\\\\n--- ids ---\\\\n' && sed -n '1,260p' logic.lobo.ids.json && printf '\\\\n--- model ---\\\\n' && sed -n '1,260p' model.lobo && printf '\\\\n--- util ---\\\\n' && sed -n '1,320p' util.lobo && printf '\\\\n--- visible ---\\\\n' && sed -n '1,300p' VISIBLE.json && printf '\\\\n--- checker ---\\\\n' && sed -n '1,360p' check.py\"",
+      "/usr/bin/zsh -lc \"rg -n \\\"Text::|Bytes::|scalar|UTF|text\\\" spec/core-v1.11.md spec/language-v1-acceptance.md spec/agent-testing-v0.1.md | sed -n '1,260p'\"",
+      "/usr/bin/zsh -lc \"find .agents/skills -maxdepth 3 -type f -print | sort | sed -n '1,160p'\"",
+      "/usr/bin/zsh -lc \"rg -n -C 5 \\\"Text|Bytes|scalar|slice|encode|utf\\\" .agents/skills/lobo-programming/references/language.md .agents/skills/lobo-programming/references/tools.md | sed -n '1,340p'\"",
+      "/usr/bin/zsh -lc \"sed -n '80,132p' .agents/skills/lobo-programming/references/language.md && sed -n '1,120p' .agents/skills/lobo-programming/references/tools.md\"",
+      "/usr/bin/zsh -lc \"/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/matched-study-20261123/freeze/lobo identities sync logic.lobo --source model.lobo --source util.lobo && sed -n '1,260p' logic.lobo.ids.json\"",
+      "/usr/bin/zsh -lc \"nl -ba logic.lobo | sed -n '1,100p'\"",
+      "/usr/bin/zsh -lc \"/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/matched-study-20261123/freeze/lobo identities sync logic.lobo --source model.lobo --source util.lobo && sed -n '1,260p' logic.lobo.ids.json\"",
+      "/usr/bin/zsh -lc \"/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/matched-study-20261123/freeze/lobo identities sync logic.lobo --source model.lobo --source util.lobo && sed -n '1,260p' logic.lobo.ids.json\"",
+      "/usr/bin/zsh -lc '/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/matched-study-20261123/freeze/lobo check logic.lobo --source model.lobo --source util.lobo'",
+      "/usr/bin/zsh -lc 'python3 check.py'",
+      "/usr/bin/zsh -lc 'git diff --check && git diff -- logic.lobo logic.lobo.ids.json'"
+    ]
+  },
+  "prompt": "Complete TASK.txt following GUIDE.txt. The limits are 120 seconds, 16 command-execution tool items and 6 visible check submissions. All build/check work counts in wall time. Do not delegate.\nUse $lobo-development at .agents/skills/lobo-development/SKILL.md.\n",
+  "last_message": "",
+  "final_sources": {
+    "util.lobo": "module util;\nrecord Reverse<T> {pending:List<T>,output:List<T>}\nfn reverse<T>(items:List<T>)->List<T> {\n let final=fold(i in List::length(items),state:Reverse<T>=Reverse {pending:items,output:List::empty<T>()}) {\n  Reverse {pending:List::tail(state.pending),output:List::prepend(List::head(state.pending),state.output)}\n };final.output\n}\n",
+    "logic.lobo.ids.json": "{\n  \"format\": \"lobo-identities/0.1\",\n  \"identities\": {\n    \"equal_at\": \"lobo.cbbc9f2ac032617e6d66675bb249e451\",\n    \"model.Hit\": \"skilldev.locate.model.Hit\",\n    \"model.Search\": \"skilldev.locate.model.Search\",\n    \"module\": \"skilldev.locate.module\",\n    \"run\": \"skilldev.locate.run\",\n    \"util.reverse\": \"skilldev.util.reverse\"\n  }\n}",
+    "util.lobo.ids.json": "{\n  \"format\": \"lobo-identities/0.1\",\n  \"identities\": {\n    \"module\": \"skilldev.util.module\",\n    \"Reverse\": \"skilldev.util.Reverse\",\n    \"reverse\": \"skilldev.util.reverse\"\n  }\n}\n",
+    "logic.lobo": "module logic;\nuse model {Hit,Search};\nuse util {reverse};\nfn equal_at(text:Text,needle:Text,start:I64)->Bool {\n let count=Text::length(needle);\n let final=fold(i in count,state:Bool=true) {\n  state && Text::at(text,start+i)==Text::at(needle,i)\n };final\n}\nfn run(text:Text,needle:Text,start:I64)->Search<Hit> {\n let text_len=Text::length(text);\n let needle_len=Text::length(needle);\n if start<0 || start>text_len {\n  Invalid(start)\n } else {\n  if needle_len==0 {\n   Found(Hit {index:start,prefix:Text::slice(text,0,start),suffix:Text::slice(text,start,text_len-start),match_bytes:0})\n  } else {\n   let answer=fold(i in text_len,state:Search<Hit>=Missing) {\n    match state {\n     Found(hit)=>Found(hit),\n     Missing=>if i>=start && needle_len<=text_len-i && equal_at(text,needle,i) {\n      let end=i+needle_len;\n      Found(Hit {index:i,prefix:Text::slice(text,0,i),suffix:Text::slice(text,end,text_len-end),match_bytes:Bytes::length(Text::bytes(needle))})\n     } else {Missing},\n     Invalid(bad)=>Invalid(bad)\n    }\n   };answer\n  }\n }\n}\n",
+    "model.lobo": "module model;\nrecord Hit {index:I64,prefix:Text,suffix:Text,match_bytes:I64}\nvariant Search<T> {Found(T),Missing,Invalid(I64)}\n",
+    "model.lobo.ids.json": "{\n  \"format\": \"lobo-identities/0.1\",\n  \"identities\": {\n    \"module\": \"skilldev.locate.model.module\",\n    \"Hit\": \"skilldev.locate.model.Hit\",\n    \"Search\": \"skilldev.locate.model.Search\"\n  }\n}\n"
+  },
+  "candidate_changes": [
+    {
+      "path": "logic.lobo.ids.json",
+      "sha256": "0fee80a111ea2233560241e8f1a1b74c69dcc50759039ce669a4e8baf4536da9",
+      "bytes": 333
+    },
+    {
+      "path": "logic.lobo",
+      "sha256": "6ca55cb3aa6d8f596f78c9bcf81819a9783bed7dda8c296fa07da04e2d155eeb",
+      "bytes": 1039
+    },
+    {
+      "path": ".check-io/aa353fb4a5d04fcab93f4f2ec5a11297.response.json",
+      "sha256": "60a602d00feeb3d46f3379852326cb88933d020ac5f380409c02c66ffa68f323",
+      "bytes": 70
+    },
+    {
+      "path": ".check-io/aa353fb4a5d04fcab93f4f2ec5a11297.request.json",
+      "sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+      "bytes": 2
+    }
+  ],
+  "raw_file_hashes": {
+    "assignment.json": {
+      "sha256": "9327e831cb6d42661d3505d4ea3711e487105dab6b698e4b38947febe0e8bb7c",
+      "bytes": 147
+    },
+    "stderr.txt": {
+      "sha256": "e6488e98338687e7a9ced6643f16567eca55e63cd13a21e3af7bd5acd4f5e497",
+      "bytes": 206
+    },
+    "command.json": {
+      "sha256": "64a2992e0e9de7f79bc4fa621d54c4f3b39e731174b0200684b11e6203fb96cd",
+      "bytes": 595
+    },
+    "prompt.txt": {
+      "sha256": "f450adb0abf3e7888fa9c6c60126001e7b42718422108f507537d920ab2fd9c4",
+      "bytes": 258
+    },
+    "events.jsonl": {
+      "sha256": "37cb686acc7861861f4f116de902fef75f5dcdf432529d8364ae83becabe5e36",
+      "bytes": 62715
+    },
+    "result.json": {
+      "sha256": "b99a031e0258bb9ae079f7e41f47a38b98f077b8ce6fb914c66011174b5ca98c",
+      "bytes": 38219
+    },
+    "last-message.txt": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "heldout/program": {
+      "sha256": "d43f648232af41a8564879cd10665db56064e2f6ca09082446ac23b8ba3cb007",
+      "bytes": 26992
+    },
+    "heldout/result.json": {
+      "sha256": "d9d8eca0ae47762dc521dce7fe64b751fa96b3a720783e9c1522044f057ffb50",
+      "bytes": 33268
+    },
+    "initial/util.lobo": {
+      "sha256": "c43f8e6085a7f03acbc1dac3e872ffe5ebdf8f86133519b5ce286a08e7d2055c",
+      "bytes": 338
+    },
+    "initial/logic.lobo.ids.json": {
+      "sha256": "9f871af748bf4119c6d4ecb46462bfea5a98fbf3e0728c1a0349b33740275db8",
+      "bytes": 277
+    },
+    "initial/check.py": {
+      "sha256": "19cfc08bd63439e1487ff9ee80fc4a013b804feb6b424788b2fc62fb63bd278f",
+      "bytes": 385
+    },
+    "initial/AGENTS.md": {
+      "sha256": "3c8c8fce33c21a65ee4b8a44fe408af1f260accb220adba4fb6a75e331e7ea11",
+      "bytes": 153
+    },
+    "initial/util.lobo.ids.json": {
+      "sha256": "e19f179ed53b0319c39febce4e46eb462845e30547177c99a14aac27ed6ad174",
+      "bytes": 178
+    },
+    "initial/logic.lobo": {
+      "sha256": "0a27de404f9c2ae55477e817a8c9817523b9f5cc5e0c5fb7a3dc4a439de0d44d",
+      "bytes": 121
+    },
+    "initial/VISIBLE.json": {
+      "sha256": "6629b66e6761ec850c23bddcdd67001675f606a6daae453def5ec3cee69a7ea5",
+      "bytes": 1113
+    },
+    "initial/GUIDE.txt": {
+      "sha256": "70f169bfd8ca37792732adb561994943888ccfcfb8b909375a08b36d0067b697",
+      "bytes": 3049
+    },
+    "initial/model.lobo": {
+      "sha256": "d77fbf025d243805f4cff27f7075a2e1b3dbc1cfca154df155fcbfab6b53f092",
+      "bytes": 127
+    },
+    "initial/model.lobo.ids.json": {
+      "sha256": "498b1968b9fd4fe737b5f8fe0d4fbb8b992e1439ab71378c805c670d659481f8",
+      "bytes": 192
+    },
+    "initial/TASK.txt": {
+      "sha256": "d3b5b6740e9ed34fe092d5e90808c7d2502d0e05a71f6ee5c2a7c28ec3c9448f",
+      "bytes": 1035
+    },
+    "candidate-final/logic.lobo.ids.json": {
+      "sha256": "0fee80a111ea2233560241e8f1a1b74c69dcc50759039ce669a4e8baf4536da9",
+      "bytes": 333
+    },
+    "candidate-final/logic.lobo": {
+      "sha256": "6ca55cb3aa6d8f596f78c9bcf81819a9783bed7dda8c296fa07da04e2d155eeb",
+      "bytes": 1039
+    },
+    "check-00/program": {
+      "sha256": "d43f648232af41a8564879cd10665db56064e2f6ca09082446ac23b8ba3cb007",
+      "bytes": 26992
+    },
+    "check-00/result.json": {
+      "sha256": "d64e6bf9972e0d66632668c959f33c7efa956cb565dfc8a0be3068de68c99774",
+      "bytes": 3302
+    },
+    "heldout/source/util.lobo": {
+      "sha256": "c43f8e6085a7f03acbc1dac3e872ffe5ebdf8f86133519b5ce286a08e7d2055c",
+      "bytes": 338
+    },
+    "heldout/source/logic.lobo.ids.json": {
+      "sha256": "0fee80a111ea2233560241e8f1a1b74c69dcc50759039ce669a4e8baf4536da9",
+      "bytes": 333
+    },
+    "heldout/source/util.lobo.ids.json": {
+      "sha256": "e19f179ed53b0319c39febce4e46eb462845e30547177c99a14aac27ed6ad174",
+      "bytes": 178
+    },
+    "heldout/source/logic.lobo": {
+      "sha256": "6ca55cb3aa6d8f596f78c9bcf81819a9783bed7dda8c296fa07da04e2d155eeb",
+      "bytes": 1039
+    },
+    "heldout/source/model.lobo": {
+      "sha256": "d77fbf025d243805f4cff27f7075a2e1b3dbc1cfca154df155fcbfab6b53f092",
+      "bytes": 127
+    },
+    "heldout/source/model.lobo.ids.json": {
+      "sha256": "498b1968b9fd4fe737b5f8fe0d4fbb8b992e1439ab71378c805c670d659481f8",
+      "bytes": 192
+    },
+    "initial/spec/core-v1.1.md": {
+      "sha256": "98c9b16d2bd72229464751f1d6c03790efde00a234bf7d2add2306f30b785361",
+      "bytes": 4694
+    },
+    "initial/spec/language-milestone-workloads.md": {
+      "sha256": "f0be02538657fc901e9241049314b75d03b0472bc776ad3748d63c5c847a2b4d",
+      "bytes": 6656
+    },
+    "initial/spec/core-v1.4.md": {
+      "sha256": "01b365a0c8874db2ad9982e1e85dc036cf22cf31521c2b28c943c08888edf9b2",
+      "bytes": 5603
+    },
+    "initial/spec/core-v0.7.md": {
+      "sha256": "0111fcfce8f7ba3ca9abfa027282113dcb6c31df7fb2d946847260f392efb221",
+      "bytes": 7169
+    },
+    "initial/spec/checked-artifact-v0.2.md": {
+      "sha256": "b13203846b1eb62eeb73445ef422cb526f7ae33d1e6804ecdef20e33c6365ff7",
+      "bytes": 1413
+    },
+    "initial/spec/core-v0.10.md": {
+      "sha256": "2ca585067a2c5113ce335847f433489c79a71d63471c2443786157038b60953e",
+      "bytes": 3093
+    },
+    "initial/spec/native-v0.1.md": {
+      "sha256": "befed14019840eea1988bf6ff982d531df105bb0d1b057e765e820ed72cdc0b6",
+      "bytes": 6568
+    },
+    "initial/spec/core-v0.8.md": {
+      "sha256": "790cfe562577be3dafa5ca3d2028e34d8782cbb36731fe45c29560a4badc6887",
+      "bytes": 5329
+    },
+    "initial/spec/core-v1.0.md": {
+      "sha256": "8dbc2ca888f49b84125a8faedf39160bb1eab27e0f25b336b1ef8f87f14f3b2b",
+      "bytes": 5242
+    },
+    "initial/spec/core-v1.11.md": {
+      "sha256": "d13c38830326c983d336c83ab4a398867bd17858ade3c5f8ecc6d088359182aa",
+      "bytes": 2968
+    },
+    "initial/spec/agent-testing-v0.1.md": {
+      "sha256": "dc9c1fb4b7f3aca5cc70a2cb844139190ec16218ee3ddb7759653f2d0fc4ab0e",
+      "bytes": 11933
+    },
+    "initial/spec/compact-source-v0.1.md": {
+      "sha256": "d7035fbf81ff5c83f84a34dd5c73a1617f1a49176019a2693ba56c501955a94f",
+      "bytes": 5994
+    },
+    "initial/spec/core-v1.8.md": {
+      "sha256": "422e050a2b5aa621e9b236f003084fa5398995e3144b3781b998092422255eb6",
+      "bytes": 5772
+    },
+    "initial/spec/core-v1.2.md": {
+      "sha256": "7d0f42dd9d1bd99b860af5045c960fa82ffc96511d8f6397fefa381964c5b363",
+      "bytes": 5534
+    },
+    "initial/spec/core-v1.7.md": {
+      "sha256": "2123fbea05d172cf4723e683afc4216c64e9bc0a62495f25e06b7ebc83311ed3",
+      "bytes": 3510
+    },
+    "initial/spec/generic-reuse-workload.md": {
+      "sha256": "53e5d3097494f3deb5379c77a343997dfa52f47edb6c3915006dac05082b244f",
+      "bytes": 2596
+    },
+    "initial/spec/core-v0.6.md": {
+      "sha256": "3d8737fe0d67ef67916ba63fc6d91386d9ff983c9148d2b2c671048a0cf35245",
+      "bytes": 7076
+    },
+    "initial/spec/core-v1.6.md": {
+      "sha256": "71967bd60313ce04cabdf740863eb2f1c73c49ecb1f22ea58ed6e9abbcd9c886",
+      "bytes": 4447
+    },
+    "initial/spec/core-v0.12.md": {
+      "sha256": "f02ddafe0a6196c15671a51e08aa12105ce216df1edb1a8354f54cfccc9e15c4",
+      "bytes": 7895
+    },
+    "initial/spec/recursive-ast-workload.md": {
+      "sha256": "3138f238b71d5d12001391dc3d2f8cf054a1a59622608699732bcc05441c7a3a",
+      "bytes": 1600
+    },
+    "initial/spec/README.md": {
+      "sha256": "e8b911e1997d93f0ede12e14c97851f8e08843ca19e84a1eb5a4319108e82653",
+      "bytes": 4757
+    },
+    "initial/spec/language-v1-acceptance.md": {
+      "sha256": "33e7c84c36db6bcf74059f57e08e3eaa550e1235955d77eae4e6ca4afbed5f33",
+      "bytes": 6645
+    },
+    "initial/spec/core-v0.2.md": {
+      "sha256": "9cbdbe1ddd2a55ce69b3333d5984a12d437ed225d856668c69edfbfd2a4b1ad2",
+      "bytes": 6391
+    },
+    "initial/spec/core-v1.5.md": {
+      "sha256": "dac4877adab3d738fb05fc57c37436106a22206a3069446a00c47de65c1abdda",
+      "bytes": 4557
+    },
+    "initial/spec/core-v0.11.md": {
+      "sha256": "275105a2b66f5f0f6ddb12828d3e30db47f8603933654ea92b6bb3d5597ba8f9",
+      "bytes": 6042
+    },
+    "initial/spec/core-v0.4.md": {
+      "sha256": "84828c9c83b0c0b70d278e2458d77e01231bfd75899a99193b80a762b78ede83",
+      "bytes": 5039
+    },
+    "initial/spec/native-llvm-v0.1.md": {
+      "sha256": "580611e7fc27523e4aed69b9064a7c688096c8254eecf9a53541f93994045b21",
+      "bytes": 5632
+    },
+    "initial/spec/native-interface-v0.1.md": {
+      "sha256": "fc98302a3a5e50c8a87079231b9311954e8351383ba872e4223385ff1770934e",
+      "bytes": 10000
+    },
+    "initial/spec/checked-artifact-v0.3.md": {
+      "sha256": "4874fc7ba430389d8d3bf4df3c6fc34b2b5bb949ecfe646383e3f6fc04652b15",
+      "bytes": 1147
+    },
+    "initial/spec/core-v0.3.md": {
+      "sha256": "96e39f958c14b082ad0f3a0c72dc0b3318a7c1c442812b35c338d35b00759543",
+      "bytes": 4396
+    },
+    "initial/spec/core-v1.9.md": {
+      "sha256": "c84dc7e6b555fc92458d632c0b92fb31052abd023e58b0201c735c6019ec225b",
+      "bytes": 2560
+    },
+    "initial/spec/checked-artifact-v0.1.md": {
+      "sha256": "8e85e37b7a89812f135ccb796e083ea95771032d267e55bc9c0d18f53fa56cdf",
+      "bytes": 4094
+    },
+    "initial/spec/core-v1.10.md": {
+      "sha256": "45d45f48a14fda25275c50ea02d6d65854d14e3fb6989ea56ef6d1aba62ec308",
+      "bytes": 4925
+    },
+    "initial/spec/source-diagnostics-v0.1.md": {
+      "sha256": "d531df2c57fdd4ec2917fb029a8fc54f441f6632fbfb7c2b4cfe3b8168e6eb3b",
+      "bytes": 3894
+    },
+    "initial/spec/core-v0.9.md": {
+      "sha256": "4bc8977f5151c72df856a06da8cc1ff136a9fb355681b47075bbd17d570d5379",
+      "bytes": 7360
+    },
+    "initial/spec/core-v0.1.md": {
+      "sha256": "c3fe3c05e21bd22c9df8f9ff78c65f3c645f127b10350c93a888c5f133f16854",
+      "bytes": 13060
+    },
+    "initial/spec/core-v1.3.md": {
+      "sha256": "2ea91b7b4d4c7716a593ceafcfff42227f05f94e45d8500e9ed04e0c956a9118",
+      "bytes": 6183
+    },
+    "initial/spec/core-v0.5.md": {
+      "sha256": "02ad206aa3cf73c38a8c13d082cdd7d0ea61c45a4dd2ab304497df2cc7c326cc",
+      "bytes": 6607
+    },
+    "initial/spec/sqlite-interface-v0.1.md": {
+      "sha256": "19de3da7153b874edc5518ded812515c2ce32dc67a4d1226307c7a0c8b612bdf",
+      "bytes": 9003
+    },
+    "initial/research/compact-pilot-2026-11-24.md": {
+      "sha256": "761a1fc994e8bdf6865f293fc37728aab95932c49d67a9ea23907a1de352ef25",
+      "bytes": 9416
+    },
+    "initial/spec/schemas/request-envelope.schema.json": {
+      "sha256": "2abad3a1e8bbbb980cfa0fbe2c9c38a789ba94215bd6481f677d15cfe7c24409",
+      "bytes": 1964
+    },
+    "initial/spec/schemas/tool-descriptor.schema.json": {
+      "sha256": "2e375db03b357fee59094e46252dcd847a3adf3fc04fae39457bf98a62bc17ef",
+      "bytes": 1727
+    },
+    "initial/spec/schemas/response-envelope.schema.json": {
+      "sha256": "a4e7d16a8bc25e06d5a571259df750f7c024319922e419bae57a8d66c64e7ca4",
+      "bytes": 3614
+    },
+    "initial/spec/schemas/conformance-case.schema.json": {
+      "sha256": "ef3a27dd2a0caa8249c1f1439eb0abf96983350456db4efaabfdd2e2cc24c443",
+      "bytes": 2269
+    },
+    "initial/spec/conformance/core-cases.json": {
+      "sha256": "076f50cc9a45b7588eed4d150bb289fcdf04b0dcc7435dd871e71ef388cf71df",
+      "bytes": 4968
+    },
+    "initial/docs/agent-reference/compact-pilot-2026-11-24/nominal.txt": {
+      "sha256": "9810070ea2f016955293106bc0f7bf2f9fbb718619ad5b8372f34fbc380a0510",
+      "bytes": 819
+    },
+    "initial/docs/agent-reference/compact-pilot-2026-11-24/contracts.txt": {
+      "sha256": "86a129a75ffba8cb447f0a97b513cc92abb806b932609fc253273909aae868aa",
+      "bytes": 796
+    },
+    "initial/docs/agent-reference/compact-pilot-2026-11-24/ranges.txt": {
+      "sha256": "633eac0a1b432389d842277929b485519962a646c07bbe97a69a403b5d217478",
+      "bytes": 934
+    },
+    "initial/docs/agent-reference/compact-pilot-2026-11-24/propagation.txt": {
+      "sha256": "d204f387ce82c1a0c1106ec337db631c06ec084c51f7b583f7eb9b45fb38c43f",
+      "bytes": 744
+    },
+    "initial/.agents/skills/lobo-development/SKILL.md": {
+      "sha256": "804a12e43f79bef059243f88e474266890c785d02df034645cbab88da50a52b5",
+      "bytes": 4799
+    },
+    "initial/.agents/skills/lobo-programming/references/conveniences.lobo": {
+      "sha256": "ffb3bcfaa7fa99fca865d6498238b4c81b857a01e2744d46d5a6f0308765e9c9",
+      "bytes": 301
+    },
+    "initial/.agents/skills/lobo-programming/references/compact-example.lobo": {
+      "sha256": "d2376c69b774da83073a98883e91794750d59f99ed3fa380d9aaa673d1950954",
+      "bytes": 231
+    },
+    "initial/.agents/skills/lobo-programming/references/try-example.lobo": {
+      "sha256": "2f6b5750d060c929eae94cb9b001b3ea9154f9ddaa369c0934c1953cce21770a",
+      "bytes": 412
+    },
+    "initial/.agents/skills/lobo-programming/references/sqlite-example.lobo": {
+      "sha256": "855f210acb18bc4568aad97373a8633cd9b7053d368980172317c76fab74927a",
+      "bytes": 303
+    },
+    "initial/.agents/skills/lobo-programming/references/compact-example.lobo.ids.json": {
+      "sha256": "2dbc359fba6b65d4fa0667b91bd80e8c4f150b38ecb26c00c21e743332906d0e",
+      "bytes": 298
+    },
+    "initial/.agents/skills/lobo-programming/references/json-example.lobo": {
+      "sha256": "e45bbda6b893e09f021821bd500195c4e27a827e81edcc249458cef53c3cc712",
+      "bytes": 269
+    },
+    "initial/.agents/skills/lobo-programming/references/tools.md": {
+      "sha256": "1913a1fceffba4c09f72625d9bc1e8d8104e35025ad674988a73405ba8eb8429",
+      "bytes": 8694
+    },
+    "initial/.agents/skills/lobo-programming/references/callbacks.lobo": {
+      "sha256": "a106cf1e51354df3296e755d882d6f0fc6ce7690b761914cca0f76cc0c0bf63e",
+      "bytes": 406
+    },
+    "initial/.agents/skills/lobo-programming/references/sqlite-example.lobo.ids.json": {
+      "sha256": "18ae22c6bf9c71e6b1f7633bd7fcd847883b919ab27f7b34d18feca3f455a2e6",
+      "bytes": 343
+    },
+    "initial/.agents/skills/lobo-programming/references/conveniences.lobo.ids.json": {
+      "sha256": "eb25455ebf8d705ecd0d1d2261623cb5930cd4ea9bb3bf04de2d2e7bb0921817",
+      "bytes": 337
+    },
+    "initial/.agents/skills/lobo-programming/references/language.md": {
+      "sha256": "f007469320ec5054db07dac9302f8b6ac9a9dc976099ffd566c1ea963ab36562",
+      "bytes": 12554
+    },
+    "initial/.agents/skills/lobo-programming/references/examples.lobo": {
+      "sha256": "cf65d2cdc47a1bb15e154f94fe2e70d92e58eb15d405c8a2fb68261c294a1b3c",
+      "bytes": 2028
+    },
+    "initial/.agents/skills/lobo-programming/references/native-example.lobo": {
+      "sha256": "79c44e86db8aa77322b4d99a424a25a0b2d37ced37e3e65af344c6a02d03737c",
+      "bytes": 300
+    },
+    "initial/.agents/skills/lobo-programming/references/callbacks.lobo.ids.json": {
+      "sha256": "7cf6c0e2a287692417905cb0fb94a3ab5f04cb517695ad597f2404e5888b11cc",
+      "bytes": 334
+    },
+    "initial/libraries/json/README.md": {
+      "sha256": "fcc2d6742f11f4a53fbe1f26ce7a390e477e0de88a983e4a348884f6983d4959",
+      "bytes": 5305
+    },
+    "initial/libraries/json/json.lobo": {
+      "sha256": "3ed68fee975a46affca613dd6da60fbe6ea297fc447b8c91a76fbe7b2406ac39",
+      "bytes": 8228
+    },
+    "initial/libraries/native/README.md": {
+      "sha256": "4de8dd7276b56d529c96f909ba6e4903fda299e255394e1e8e4bef094d104eea",
+      "bytes": 3872
+    },
+    "initial/libraries/native/native.lobo": {
+      "sha256": "ee7ba249a414ff9421cc36d3373f412b6ce63e62d696d1bdd0f9ce111e9027d1",
+      "bytes": 4649
+    },
+    "initial/libraries/native/permissions.lobo": {
+      "sha256": "c3148d6d50d3d8e2f326b771b76353fed490ba06cfd8cad21deb5d7f8f070e12",
+      "bytes": 1347
+    },
+    "initial/libraries/sql/sql.lobo.ids.json": {
+      "sha256": "67fc9cd6d80fed595e0efdffeb36b7153d865236ab188d2da776ed8effd643d4",
+      "bytes": 2033
+    },
+    "initial/libraries/sql/sql.lobo": {
+      "sha256": "5704a8abcf1e1d0ee435b09aa7219c9c809bc1aaa304f3fe61b3de41d903a133",
+      "bytes": 9348
+    },
+    "initial/libraries/sql/README.md": {
+      "sha256": "85f5ec08131d902d2ed64014ebd687462def277aa5f0876599c1058cfd71fad5",
+      "bytes": 4514
+    },
+    "initial/libraries/http/http.lobo": {
+      "sha256": "ea9b9d87e15321e06ca67932258b60451c3da04a815e97d234ef2b36a91dba9f",
+      "bytes": 2787
+    },
+    "initial/libraries/http/README.md": {
+      "sha256": "c4dd34349e63538c79fe003c6cff87c3e4d27a624bc2d3146ed4fe08c4626774",
+      "bytes": 4399
+    },
+    "initial/libraries/http-server/server.lobo": {
+      "sha256": "3aeac600d4131e544a7054f0f751efb5945e1616c84b210cfdabf5d936912a1e",
+      "bytes": 6880
+    },
+    "initial/libraries/http-server/transport.lobo.ids.json": {
+      "sha256": "9163bf4fbd4215230030857e386d89b9a38843f233d4ca357e119f93779cc68d",
+      "bytes": 2021
+    },
+    "initial/libraries/http-server/README.md": {
+      "sha256": "7f695c6966c1a31adf74d2d620760857a07ac28c0763a65fc8a6001800b6bde2",
+      "bytes": 7886
+    },
+    "initial/libraries/http-server/server.lobo.ids.json": {
+      "sha256": "27cc7a4a712b98b29bd3fbae6e38616ed1713fb9cf07cc4e6c371d0823f3e640",
+      "bytes": 1408
+    },
+    "initial/libraries/http-server/transport.lobo": {
+      "sha256": "ac5af9a0ceed5f7a446450c0248c7b6c284931908dc27b25ea1a69cb6517a52b",
+      "bytes": 8145
+    },
+    "candidate-final/.check-io/aa353fb4a5d04fcab93f4f2ec5a11297.response.json": {
+      "sha256": "60a602d00feeb3d46f3379852326cb88933d020ac5f380409c02c66ffa68f323",
+      "bytes": 70
+    },
+    "candidate-final/.check-io/aa353fb4a5d04fcab93f4f2ec5a11297.request.json": {
+      "sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+      "bytes": 2
+    },
+    "check-00/source/util.lobo": {
+      "sha256": "c43f8e6085a7f03acbc1dac3e872ffe5ebdf8f86133519b5ce286a08e7d2055c",
+      "bytes": 338
+    },
+    "check-00/source/logic.lobo.ids.json": {
+      "sha256": "0fee80a111ea2233560241e8f1a1b74c69dcc50759039ce669a4e8baf4536da9",
+      "bytes": 333
+    },
+    "check-00/source/util.lobo.ids.json": {
+      "sha256": "e19f179ed53b0319c39febce4e46eb462845e30547177c99a14aac27ed6ad174",
+      "bytes": 178
+    },
+    "check-00/source/logic.lobo": {
+      "sha256": "6ca55cb3aa6d8f596f78c9bcf81819a9783bed7dda8c296fa07da04e2d155eeb",
+      "bytes": 1039
+    },
+    "check-00/source/model.lobo": {
+      "sha256": "d77fbf025d243805f4cff27f7075a2e1b3dbc1cfca154df155fcbfab6b53f092",
+      "bytes": 127
+    },
+    "check-00/source/model.lobo.ids.json": {
+      "sha256": "498b1968b9fd4fe737b5f8fe0d4fbb8b992e1439ab71378c805c670d659481f8",
+      "bytes": 192
+    }
+  }
+}

@@ -1,0 +1,5422 @@
+{
+  "result": {
+    "assignment": {
+      "index": 10,
+      "repeat": 1,
+      "family": "coalesce",
+      "arm": "revised",
+      "language": "lobo",
+      "reasoning": "high",
+      "phase": "change"
+    },
+    "command": [
+      "codex",
+      "exec",
+      "--ignore-user-config",
+      "--ephemeral",
+      "--json",
+      "--sandbox",
+      "workspace-write",
+      "--skip-git-repo-check",
+      "--disable",
+      "multi_agent",
+      "--disable",
+      "multi_agent_v2",
+      "--disable",
+      "apps",
+      "--disable",
+      "plugins",
+      "--disable",
+      "memories",
+      "-C",
+      "/tmp/lobo-matched-brt14qiw",
+      "-m",
+      "gpt-5.6-luna",
+      "-c",
+      "model_reasoning_effort=\"high\"",
+      "-c",
+      "approval_policy=\"never\"",
+      "--output-last-message",
+      "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/skill-revision-20261126/run/trial-10/last-message.txt",
+      "-"
+    ],
+    "deadline_s": 120,
+    "tool_limit": 16,
+    "check_limit": 6,
+    "started_unix": 1795752236.1595912,
+    "load_before": [
+      4.75048828125,
+      4.95849609375,
+      4.49169921875
+    ],
+    "status": "completed",
+    "exit_code": 0,
+    "agent_wall_s": 61.19507429609075,
+    "usage": {
+      "input_tokens": 147975,
+      "cached_input_tokens": 134144,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 2818,
+      "reasoning_output_tokens": 1251
+    },
+    "command_tool_items": 6,
+    "check_requests": 2,
+    "checks": [
+      {
+        "index": 0,
+        "start_s": 22.902440275996923,
+        "end_s": 23.16145113413222,
+        "feedback": {
+          "status": "fail",
+          "passed": 2,
+          "total": 5,
+          "failures": [
+            {
+              "input": {
+                "spans": [
+                  [
+                    0,
+                    2
+                  ],
+                  [
+                    3,
+                    3
+                  ],
+                  [
+                    7,
+                    8
+                  ]
+                ]
+              },
+              "expected": {
+                "spans": [
+                  {
+                    "start": 0,
+                    "end": 3
+                  },
+                  {
+                    "start": 7,
+                    "end": 8
+                  }
+                ],
+                "points": 6,
+                "rejected": 0
+              },
+              "actual": {
+                "spans": [
+                  {
+                    "start": 0,
+                    "end": 2
+                  },
+                  {
+                    "start": 3,
+                    "end": 3
+                  },
+                  {
+                    "start": 7,
+                    "end": 8
+                  }
+                ],
+                "points": 6,
+                "rejected": 0
+              },
+              "error": null,
+              "ok": false
+            },
+            {
+              "input": {
+                "spans": [
+                  [
+                    0,
+                    8
+                  ],
+                  [
+                    1,
+                    3
+                  ],
+                  [
+                    2,
+                    1
+                  ]
+                ]
+              },
+              "expected": {
+                "spans": [
+                  {
+                    "start": 0,
+                    "end": 8
+                  }
+                ],
+                "points": 9,
+                "rejected": 1
+              },
+              "actual": {
+                "spans": [
+                  {
+                    "start": 0,
+                    "end": 8
+                  },
+                  {
+                    "start": 1,
+                    "end": 3
+                  }
+                ],
+                "points": 12,
+                "rejected": 1
+              },
+              "error": null,
+              "ok": false
+            },
+            {
+              "input": {
+                "spans": [
+                  [
+                    0,
+                    2
+                  ],
+                  [
+                    1,
+                    0
+                  ],
+                  [
+                    2,
+                    4
+                  ]
+                ]
+              },
+              "expected": {
+                "spans": [
+                  {
+                    "start": 0,
+                    "end": 4
+                  }
+                ],
+                "points": 5,
+                "rejected": 1
+              },
+              "actual": {
+                "spans": [
+                  {
+                    "start": 0,
+                    "end": 2
+                  },
+                  {
+                    "start": 2,
+                    "end": 4
+                  }
+                ],
+                "points": 6,
+                "rejected": 1
+              },
+              "error": null,
+              "ok": false
+            }
+          ]
+        }
+      },
+      {
+        "index": 1,
+        "start_s": 43.66624463512562,
+        "end_s": 43.99696831195615,
+        "feedback": {
+          "status": "pass",
+          "passed": 5,
+          "total": 5,
+          "failures": []
+        }
+      }
+    ],
+    "item_types": [
+      "agent_message",
+      "command_execution",
+      "command_execution",
+      "agent_message",
+      "command_execution",
+      "command_execution",
+      "file_change",
+      "agent_message",
+      "command_execution",
+      "command_execution",
+      "agent_message"
+    ],
+    "load_after": [
+      5.2119140625,
+      5.09326171875,
+      4.5693359375
+    ],
+    "grading": {
+      "issues": [],
+      "build": {
+        "ok": true,
+        "command": [
+          "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/matched-study-20261123/freeze/lobo",
+          "compile",
+          "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/skill-revision-20261126/run/trial-10/heldout/source/logic.lobo",
+          "--source",
+          "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/skill-revision-20261126/run/trial-10/heldout/source/model.lobo",
+          "--source",
+          "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/skill-revision-20261126/run/trial-10/heldout/source/util.lobo",
+          "-o",
+          "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/skill-revision-20261126/run/trial-10/heldout/program"
+        ],
+        "exit_code": 0,
+        "stdout": "{\"artifact\":\"/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/skill-revision-20261126/run/trial-10/heldout/program\",\"entries\":[\"skilldev.coalesce.run\",\"lobo.generic.82b7979ade037957241197c9a4c41a56\"],\"format\":\"native\",\"status\":\"ok\"}\n",
+        "stderr": ""
+      },
+      "cases": [
+        {
+          "input": {
+            "spans": []
+          },
+          "expected": {
+            "spans": [],
+            "points": 0,
+            "rejected": 0
+          },
+          "actual": {
+            "spans": [],
+            "points": 0,
+            "rejected": 0
+          },
+          "error": null,
+          "ok": true
+        },
+        {
+          "input": {
+            "spans": [
+              [
+                0,
+                2
+              ],
+              [
+                3,
+                3
+              ],
+              [
+                7,
+                8
+              ]
+            ]
+          },
+          "expected": {
+            "spans": [
+              {
+                "start": 0,
+                "end": 3
+              },
+              {
+                "start": 7,
+                "end": 8
+              }
+            ],
+            "points": 6,
+            "rejected": 0
+          },
+          "actual": {
+            "spans": [
+              {
+                "start": 0,
+                "end": 3
+              },
+              {
+                "start": 7,
+                "end": 8
+              }
+            ],
+            "points": 6,
+            "rejected": 0
+          },
+          "error": null,
+          "ok": true
+        },
+        {
+          "input": {
+            "spans": [
+              [
+                0,
+                8
+              ],
+              [
+                1,
+                3
+              ],
+              [
+                2,
+                1
+              ]
+            ]
+          },
+          "expected": {
+            "spans": [
+              {
+                "start": 0,
+                "end": 8
+              }
+            ],
+            "points": 9,
+            "rejected": 1
+          },
+          "actual": {
+            "spans": [
+              {
+                "start": 0,
+                "end": 8
+              }
+            ],
+            "points": 9,
+            "rejected": 1
+          },
+          "error": null,
+          "ok": true
+        },
+        {
+          "input": {
+            "spans": [
+              [
+                1,
+                0
+              ],
+              [
+                3,
+                3
+              ]
+            ]
+          },
+          "expected": {
+            "spans": [
+              {
+                "start": 3,
+                "end": 3
+              }
+            ],
+            "points": 1,
+            "rejected": 1
+          },
+          "actual": {
+            "spans": [
+              {
+                "start": 3,
+                "end": 3
+              }
+            ],
+            "points": 1,
+            "rejected": 1
+          },
+          "error": null,
+          "ok": true
+        },
+        {
+          "input": {
+            "spans": [
+              [
+                0,
+                2
+              ],
+              [
+                1,
+                0
+              ],
+              [
+                2,
+                4
+              ]
+            ]
+          },
+          "expected": {
+            "spans": [
+              {
+                "start": 0,
+                "end": 4
+              }
+            ],
+            "points": 5,
+            "rejected": 1
+          },
+          "actual": {
+            "spans": [
+              {
+                "start": 0,
+                "end": 4
+              }
+            ],
+            "points": 5,
+            "rejected": 1
+          },
+          "error": null,
+          "ok": true
+        },
+        {
+          "input": {
+            "spans": [
+              [
+                0,
+                0
+              ],
+              [
+                1,
+                1
+              ],
+              [
+                50,
+                50
+              ]
+            ]
+          },
+          "expected": {
+            "spans": [
+              {
+                "start": 0,
+                "end": 1
+              },
+              {
+                "start": 50,
+                "end": 50
+              }
+            ],
+            "points": 3,
+            "rejected": 0
+          },
+          "actual": {
+            "spans": [
+              {
+                "start": 0,
+                "end": 1
+              },
+              {
+                "start": 50,
+                "end": 50
+              }
+            ],
+            "points": 3,
+            "rejected": 0
+          },
+          "error": null,
+          "ok": true
+        },
+        {
+          "input": {
+            "spans": [
+              [
+                0,
+                50
+              ]
+            ]
+          },
+          "expected": {
+            "spans": [
+              {
+                "start": 0,
+                "end": 50
+              }
+            ],
+            "points": 51,
+            "rejected": 0
+          },
+          "actual": {
+            "spans": [
+              {
+                "start": 0,
+                "end": 50
+              }
+            ],
+            "points": 51,
+            "rejected": 0
+          },
+          "error": null,
+          "ok": true
+        },
+        {
+          "input": {
+            "spans": [
+              [
+                0,
+                0
+              ],
+              [
+                1,
+                1
+              ],
+              [
+                2,
+                2
+              ],
+              [
+                3,
+                3
+              ],
+              [
+                4,
+                4
+              ],
+              [
+                5,
+                5
+              ],
+              [
+                6,
+                6
+              ],
+              [
+                7,
+                7
+              ],
+              [
+                8,
+                8
+              ],
+              [
+                9,
+                9
+              ],
+              [
+                10,
+                10
+              ],
+              [
+                11,
+                11
+              ],
+              [
+                12,
+                12
+              ],
+              [
+                13,
+                13
+              ],
+              [
+                14,
+                14
+              ],
+              [
+                15,
+                15
+              ]
+            ]
+          },
+          "expected": {
+            "spans": [
+              {
+                "start": 0,
+                "end": 15
+              }
+            ],
+            "points": 16,
+            "rejected": 0
+          },
+          "actual": {
+            "spans": [
+              {
+                "start": 0,
+                "end": 15
+              }
+            ],
+            "points": 16,
+            "rejected": 0
+          },
+          "error": null,
+          "ok": true
+        },
+        {
+          "input": {
+            "spans": [
+              [
+                0,
+                50
+              ],
+              [
+                0,
+                50
+              ],
+              [
+                0,
+                50
+              ],
+              [
+                0,
+                50
+              ],
+              [
+                0,
+                50
+              ],
+              [
+                0,
+                50
+              ],
+              [
+                0,
+                50
+              ],
+              [
+                0,
+                50
+              ],
+              [
+                0,
+                50
+              ],
+              [
+                0,
+                50
+              ],
+              [
+                0,
+                50
+              ],
+              [
+                0,
+                50
+              ],
+              [
+                0,
+                50
+              ],
+              [
+                0,
+                50
+              ],
+              [
+                0,
+                50
+              ],
+              [
+                0,
+                50
+              ]
+            ]
+          },
+          "expected": {
+            "spans": [
+              {
+                "start": 0,
+                "end": 50
+              }
+            ],
+            "points": 51,
+            "rejected": 0
+          },
+          "actual": {
+            "spans": [
+              {
+                "start": 0,
+                "end": 50
+              }
+            ],
+            "points": 51,
+            "rejected": 0
+          },
+          "error": null,
+          "ok": true
+        },
+        {
+          "input": {
+            "spans": [
+              [
+                1,
+                0
+              ],
+              [
+                2,
+                0
+              ],
+              [
+                3,
+                0
+              ],
+              [
+                4,
+                0
+              ],
+              [
+                5,
+                0
+              ],
+              [
+                6,
+                0
+              ],
+              [
+                7,
+                0
+              ],
+              [
+                8,
+                0
+              ],
+              [
+                9,
+                0
+              ],
+              [
+                10,
+                0
+              ],
+              [
+                11,
+                0
+              ],
+              [
+                12,
+                0
+              ],
+              [
+                13,
+                0
+              ],
+              [
+                14,
+                0
+              ],
+              [
+                15,
+                0
+              ],
+              [
+                16,
+                0
+              ]
+            ]
+          },
+          "expected": {
+            "spans": [],
+            "points": 0,
+            "rejected": 16
+          },
+          "actual": {
+            "spans": [],
+            "points": 0,
+            "rejected": 16
+          },
+          "error": null,
+          "ok": true
+        },
+        {
+          "input": {
+            "spans": [
+              [
+                37,
+                16
+              ]
+            ]
+          },
+          "expected": {
+            "spans": [],
+            "points": 0,
+            "rejected": 1
+          },
+          "actual": {
+            "spans": [],
+            "points": 0,
+            "rejected": 1
+          },
+          "error": null,
+          "ok": true
+        },
+        {
+          "input": {
+            "spans": [
+              [
+                10,
+                18
+              ],
+              [
+                10,
+                47
+              ],
+              [
+                13,
+                2
+              ],
+              [
+                17,
+                5
+              ],
+              [
+                25,
+                15
+              ],
+              [
+                29,
+                2
+              ],
+              [
+                34,
+                9
+              ],
+              [
+                37,
+                47
+              ],
+              [
+                50,
+                10
+              ]
+            ]
+          },
+          "expected": {
+            "spans": [
+              {
+                "start": 10,
+                "end": 47
+              }
+            ],
+            "points": 38,
+            "rejected": 6
+          },
+          "actual": {
+            "spans": [
+              {
+                "start": 10,
+                "end": 47
+              }
+            ],
+            "points": 38,
+            "rejected": 6
+          },
+          "error": null,
+          "ok": true
+        },
+        {
+          "input": {
+            "spans": [
+              [
+                2,
+                30
+              ],
+              [
+                2,
+                33
+              ],
+              [
+                3,
+                28
+              ],
+              [
+                9,
+                45
+              ],
+              [
+                10,
+                24
+              ],
+              [
+                16,
+                9
+              ],
+              [
+                17,
+                45
+              ],
+              [
+                30,
+                44
+              ],
+              [
+                33,
+                36
+              ],
+              [
+                43,
+                34
+              ],
+              [
+                45,
+                1
+              ],
+              [
+                47,
+                17
+              ],
+              [
+                47,
+                41
+              ],
+              [
+                50,
+                15
+              ],
+              [
+                50,
+                32
+              ]
+            ]
+          },
+          "expected": {
+            "spans": [
+              {
+                "start": 2,
+                "end": 45
+              }
+            ],
+            "points": 44,
+            "rejected": 7
+          },
+          "actual": {
+            "spans": [
+              {
+                "start": 2,
+                "end": 45
+              }
+            ],
+            "points": 44,
+            "rejected": 7
+          },
+          "error": null,
+          "ok": true
+        },
+        {
+          "input": {
+            "spans": [
+              [
+                1,
+                42
+              ],
+              [
+                5,
+                4
+              ],
+              [
+                5,
+                31
+              ],
+              [
+                6,
+                8
+              ],
+              [
+                10,
+                36
+              ],
+              [
+                15,
+                18
+              ],
+              [
+                20,
+                43
+              ],
+              [
+                29,
+                40
+              ],
+              [
+                32,
+                8
+              ],
+              [
+                33,
+                6
+              ],
+              [
+                42,
+                45
+              ],
+              [
+                43,
+                17
+              ],
+              [
+                49,
+                32
+              ]
+            ]
+          },
+          "expected": {
+            "spans": [
+              {
+                "start": 1,
+                "end": 45
+              }
+            ],
+            "points": 45,
+            "rejected": 5
+          },
+          "actual": {
+            "spans": [
+              {
+                "start": 1,
+                "end": 45
+              }
+            ],
+            "points": 45,
+            "rejected": 5
+          },
+          "error": null,
+          "ok": true
+        },
+        {
+          "input": {
+            "spans": [
+              [
+                18,
+                14
+              ]
+            ]
+          },
+          "expected": {
+            "spans": [],
+            "points": 0,
+            "rejected": 1
+          },
+          "actual": {
+            "spans": [],
+            "points": 0,
+            "rejected": 1
+          },
+          "error": null,
+          "ok": true
+        },
+        {
+          "input": {
+            "spans": [
+              [
+                5,
+                38
+              ],
+              [
+                15,
+                0
+              ],
+              [
+                20,
+                7
+              ],
+              [
+                21,
+                28
+              ],
+              [
+                31,
+                48
+              ],
+              [
+                39,
+                16
+              ],
+              [
+                49,
+                34
+              ],
+              [
+                49,
+                49
+              ]
+            ]
+          },
+          "expected": {
+            "spans": [
+              {
+                "start": 5,
+                "end": 49
+              }
+            ],
+            "points": 45,
+            "rejected": 4
+          },
+          "actual": {
+            "spans": [
+              {
+                "start": 5,
+                "end": 49
+              }
+            ],
+            "points": 45,
+            "rejected": 4
+          },
+          "error": null,
+          "ok": true
+        },
+        {
+          "input": {
+            "spans": [
+              [
+                2,
+                37
+              ],
+              [
+                3,
+                30
+              ],
+              [
+                4,
+                11
+              ],
+              [
+                4,
+                17
+              ],
+              [
+                6,
+                6
+              ],
+              [
+                11,
+                27
+              ],
+              [
+                14,
+                16
+              ],
+              [
+                14,
+                36
+              ],
+              [
+                20,
+                2
+              ],
+              [
+                25,
+                18
+              ],
+              [
+                30,
+                50
+              ],
+              [
+                39,
+                18
+              ],
+              [
+                42,
+                3
+              ],
+              [
+                44,
+                18
+              ],
+              [
+                44,
+                45
+              ],
+              [
+                47,
+                35
+              ]
+            ]
+          },
+          "expected": {
+            "spans": [
+              {
+                "start": 2,
+                "end": 50
+              }
+            ],
+            "points": 49,
+            "rejected": 6
+          },
+          "actual": {
+            "spans": [
+              {
+                "start": 2,
+                "end": 50
+              }
+            ],
+            "points": 49,
+            "rejected": 6
+          },
+          "error": null,
+          "ok": true
+        },
+        {
+          "input": {
+            "spans": [
+              [
+                17,
+                44
+              ]
+            ]
+          },
+          "expected": {
+            "spans": [
+              {
+                "start": 17,
+                "end": 44
+              }
+            ],
+            "points": 28,
+            "rejected": 0
+          },
+          "actual": {
+            "spans": [
+              {
+                "start": 17,
+                "end": 44
+              }
+            ],
+            "points": 28,
+            "rejected": 0
+          },
+          "error": null,
+          "ok": true
+        },
+        {
+          "input": {
+            "spans": [
+              [
+                10,
+                20
+              ],
+              [
+                19,
+                4
+              ],
+              [
+                24,
+                25
+              ],
+              [
+                26,
+                6
+              ],
+              [
+                29,
+                36
+              ],
+              [
+                34,
+                19
+              ],
+              [
+                37,
+                9
+              ],
+              [
+                41,
+                2
+              ]
+            ]
+          },
+          "expected": {
+            "spans": [
+              {
+                "start": 10,
+                "end": 20
+              },
+              {
+                "start": 24,
+                "end": 25
+              },
+              {
+                "start": 29,
+                "end": 36
+              }
+            ],
+            "points": 21,
+            "rejected": 5
+          },
+          "actual": {
+            "spans": [
+              {
+                "start": 10,
+                "end": 20
+              },
+              {
+                "start": 24,
+                "end": 25
+              },
+              {
+                "start": 29,
+                "end": 36
+              }
+            ],
+            "points": 21,
+            "rejected": 5
+          },
+          "error": null,
+          "ok": true
+        },
+        {
+          "input": {
+            "spans": [
+              [
+                23,
+                9
+              ],
+              [
+                28,
+                30
+              ],
+              [
+                46,
+                36
+              ],
+              [
+                48,
+                29
+              ],
+              [
+                50,
+                43
+              ]
+            ]
+          },
+          "expected": {
+            "spans": [
+              {
+                "start": 28,
+                "end": 30
+              }
+            ],
+            "points": 3,
+            "rejected": 4
+          },
+          "actual": {
+            "spans": [
+              {
+                "start": 28,
+                "end": 30
+              }
+            ],
+            "points": 3,
+            "rejected": 4
+          },
+          "error": null,
+          "ok": true
+        },
+        {
+          "input": {
+            "spans": [
+              [
+                1,
+                48
+              ],
+              [
+                4,
+                30
+              ],
+              [
+                5,
+                5
+              ],
+              [
+                9,
+                33
+              ],
+              [
+                9,
+                37
+              ],
+              [
+                15,
+                14
+              ],
+              [
+                19,
+                45
+              ],
+              [
+                24,
+                8
+              ],
+              [
+                31,
+                11
+              ],
+              [
+                32,
+                29
+              ],
+              [
+                33,
+                18
+              ],
+              [
+                34,
+                49
+              ],
+              [
+                35,
+                48
+              ],
+              [
+                43,
+                28
+              ]
+            ]
+          },
+          "expected": {
+            "spans": [
+              {
+                "start": 1,
+                "end": 49
+              }
+            ],
+            "points": 49,
+            "rejected": 6
+          },
+          "actual": {
+            "spans": [
+              {
+                "start": 1,
+                "end": 49
+              }
+            ],
+            "points": 49,
+            "rejected": 6
+          },
+          "error": null,
+          "ok": true
+        },
+        {
+          "input": {
+            "spans": [
+              [
+                6,
+                14
+              ],
+              [
+                19,
+                40
+              ],
+              [
+                20,
+                35
+              ],
+              [
+                23,
+                28
+              ],
+              [
+                34,
+                35
+              ],
+              [
+                37,
+                46
+              ],
+              [
+                37,
+                49
+              ],
+              [
+                50,
+                17
+              ]
+            ]
+          },
+          "expected": {
+            "spans": [
+              {
+                "start": 6,
+                "end": 14
+              },
+              {
+                "start": 19,
+                "end": 49
+              }
+            ],
+            "points": 40,
+            "rejected": 1
+          },
+          "actual": {
+            "spans": [
+              {
+                "start": 6,
+                "end": 14
+              },
+              {
+                "start": 19,
+                "end": 49
+              }
+            ],
+            "points": 40,
+            "rejected": 1
+          },
+          "error": null,
+          "ok": true
+        },
+        {
+          "input": {
+            "spans": [
+              [
+                1,
+                11
+              ],
+              [
+                2,
+                9
+              ],
+              [
+                5,
+                35
+              ],
+              [
+                8,
+                9
+              ],
+              [
+                10,
+                21
+              ],
+              [
+                13,
+                40
+              ],
+              [
+                14,
+                8
+              ],
+              [
+                29,
+                29
+              ],
+              [
+                33,
+                6
+              ],
+              [
+                36,
+                38
+              ],
+              [
+                42,
+                18
+              ],
+              [
+                45,
+                22
+              ],
+              [
+                47,
+                47
+              ],
+              [
+                48,
+                27
+              ],
+              [
+                48,
+                32
+              ],
+              [
+                50,
+                4
+              ]
+            ]
+          },
+          "expected": {
+            "spans": [
+              {
+                "start": 1,
+                "end": 40
+              },
+              {
+                "start": 47,
+                "end": 47
+              }
+            ],
+            "points": 41,
+            "rejected": 7
+          },
+          "actual": {
+            "spans": [
+              {
+                "start": 1,
+                "end": 40
+              },
+              {
+                "start": 47,
+                "end": 47
+              }
+            ],
+            "points": 41,
+            "rejected": 7
+          },
+          "error": null,
+          "ok": true
+        },
+        {
+          "input": {
+            "spans": [
+              [
+                0,
+                45
+              ],
+              [
+                1,
+                27
+              ],
+              [
+                2,
+                28
+              ],
+              [
+                9,
+                3
+              ],
+              [
+                17,
+                27
+              ]
+            ]
+          },
+          "expected": {
+            "spans": [
+              {
+                "start": 0,
+                "end": 45
+              }
+            ],
+            "points": 46,
+            "rejected": 1
+          },
+          "actual": {
+            "spans": [
+              {
+                "start": 0,
+                "end": 45
+              }
+            ],
+            "points": 46,
+            "rejected": 1
+          },
+          "error": null,
+          "ok": true
+        },
+        {
+          "input": {
+            "spans": [
+              [
+                0,
+                42
+              ],
+              [
+                1,
+                32
+              ],
+              [
+                4,
+                49
+              ],
+              [
+                13,
+                15
+              ],
+              [
+                14,
+                34
+              ],
+              [
+                23,
+                45
+              ],
+              [
+                25,
+                42
+              ],
+              [
+                29,
+                42
+              ],
+              [
+                30,
+                2
+              ],
+              [
+                30,
+                50
+              ],
+              [
+                34,
+                19
+              ],
+              [
+                40,
+                25
+              ],
+              [
+                48,
+                17
+              ]
+            ]
+          },
+          "expected": {
+            "spans": [
+              {
+                "start": 0,
+                "end": 50
+              }
+            ],
+            "points": 51,
+            "rejected": 4
+          },
+          "actual": {
+            "spans": [
+              {
+                "start": 0,
+                "end": 50
+              }
+            ],
+            "points": 51,
+            "rejected": 4
+          },
+          "error": null,
+          "ok": true
+        },
+        {
+          "input": {
+            "spans": [
+              [
+                3,
+                5
+              ],
+              [
+                28,
+                24
+              ],
+              [
+                50,
+                30
+              ]
+            ]
+          },
+          "expected": {
+            "spans": [
+              {
+                "start": 3,
+                "end": 5
+              }
+            ],
+            "points": 3,
+            "rejected": 2
+          },
+          "actual": {
+            "spans": [
+              {
+                "start": 3,
+                "end": 5
+              }
+            ],
+            "points": 3,
+            "rejected": 2
+          },
+          "error": null,
+          "ok": true
+        },
+        {
+          "input": {
+            "spans": [
+              [
+                0,
+                6
+              ],
+              [
+                5,
+                7
+              ],
+              [
+                7,
+                43
+              ],
+              [
+                10,
+                24
+              ],
+              [
+                34,
+                3
+              ],
+              [
+                37,
+                9
+              ]
+            ]
+          },
+          "expected": {
+            "spans": [
+              {
+                "start": 0,
+                "end": 43
+              }
+            ],
+            "points": 44,
+            "rejected": 2
+          },
+          "actual": {
+            "spans": [
+              {
+                "start": 0,
+                "end": 43
+              }
+            ],
+            "points": 44,
+            "rejected": 2
+          },
+          "error": null,
+          "ok": true
+        },
+        {
+          "input": {
+            "spans": [
+              [
+                4,
+                39
+              ],
+              [
+                5,
+                12
+              ],
+              [
+                11,
+                45
+              ],
+              [
+                12,
+                2
+              ],
+              [
+                15,
+                24
+              ],
+              [
+                15,
+                35
+              ],
+              [
+                16,
+                39
+              ],
+              [
+                25,
+                16
+              ],
+              [
+                27,
+                39
+              ],
+              [
+                30,
+                8
+              ],
+              [
+                31,
+                0
+              ],
+              [
+                39,
+                11
+              ],
+              [
+                40,
+                38
+              ],
+              [
+                41,
+                17
+              ],
+              [
+                45,
+                14
+              ]
+            ]
+          },
+          "expected": {
+            "spans": [
+              {
+                "start": 4,
+                "end": 45
+              }
+            ],
+            "points": 42,
+            "rejected": 8
+          },
+          "actual": {
+            "spans": [
+              {
+                "start": 4,
+                "end": 45
+              }
+            ],
+            "points": 42,
+            "rejected": 8
+          },
+          "error": null,
+          "ok": true
+        },
+        {
+          "input": {
+            "spans": [
+              [
+                4,
+                30
+              ],
+              [
+                11,
+                39
+              ],
+              [
+                12,
+                44
+              ],
+              [
+                17,
+                7
+              ],
+              [
+                22,
+                38
+              ],
+              [
+                25,
+                9
+              ],
+              [
+                25,
+                12
+              ],
+              [
+                29,
+                31
+              ],
+              [
+                30,
+                6
+              ],
+              [
+                30,
+                41
+              ],
+              [
+                35,
+                15
+              ],
+              [
+                38,
+                15
+              ],
+              [
+                38,
+                40
+              ],
+              [
+                39,
+                27
+              ],
+              [
+                44,
+                46
+              ],
+              [
+                47,
+                25
+              ]
+            ]
+          },
+          "expected": {
+            "spans": [
+              {
+                "start": 4,
+                "end": 46
+              }
+            ],
+            "points": 43,
+            "rejected": 8
+          },
+          "actual": {
+            "spans": [
+              {
+                "start": 4,
+                "end": 46
+              }
+            ],
+            "points": 43,
+            "rejected": 8
+          },
+          "error": null,
+          "ok": true
+        },
+        {
+          "input": {
+            "spans": []
+          },
+          "expected": {
+            "spans": [],
+            "points": 0,
+            "rejected": 0
+          },
+          "actual": {
+            "spans": [],
+            "points": 0,
+            "rejected": 0
+          },
+          "error": null,
+          "ok": true
+        },
+        {
+          "input": {
+            "spans": [
+              [
+                1,
+                47
+              ],
+              [
+                4,
+                37
+              ],
+              [
+                5,
+                42
+              ],
+              [
+                6,
+                38
+              ],
+              [
+                15,
+                24
+              ],
+              [
+                36,
+                25
+              ],
+              [
+                36,
+                40
+              ],
+              [
+                46,
+                33
+              ]
+            ]
+          },
+          "expected": {
+            "spans": [
+              {
+                "start": 1,
+                "end": 47
+              }
+            ],
+            "points": 47,
+            "rejected": 2
+          },
+          "actual": {
+            "spans": [
+              {
+                "start": 1,
+                "end": 47
+              }
+            ],
+            "points": 47,
+            "rejected": 2
+          },
+          "error": null,
+          "ok": true
+        },
+        {
+          "input": {
+            "spans": [
+              [
+                27,
+                3
+              ],
+              [
+                28,
+                2
+              ]
+            ]
+          },
+          "expected": {
+            "spans": [],
+            "points": 0,
+            "rejected": 2
+          },
+          "actual": {
+            "spans": [],
+            "points": 0,
+            "rejected": 2
+          },
+          "error": null,
+          "ok": true
+        },
+        {
+          "input": {
+            "spans": [
+              [
+                6,
+                17
+              ],
+              [
+                15,
+                8
+              ],
+              [
+                21,
+                2
+              ],
+              [
+                27,
+                10
+              ],
+              [
+                28,
+                26
+              ],
+              [
+                36,
+                12
+              ],
+              [
+                41,
+                20
+              ],
+              [
+                42,
+                35
+              ],
+              [
+                49,
+                7
+              ]
+            ]
+          },
+          "expected": {
+            "spans": [
+              {
+                "start": 6,
+                "end": 17
+              }
+            ],
+            "points": 12,
+            "rejected": 8
+          },
+          "actual": {
+            "spans": [
+              {
+                "start": 6,
+                "end": 17
+              }
+            ],
+            "points": 12,
+            "rejected": 8
+          },
+          "error": null,
+          "ok": true
+        },
+        {
+          "input": {
+            "spans": [
+              [
+                2,
+                31
+              ],
+              [
+                10,
+                44
+              ],
+              [
+                11,
+                48
+              ],
+              [
+                21,
+                18
+              ],
+              [
+                26,
+                19
+              ],
+              [
+                36,
+                14
+              ],
+              [
+                38,
+                10
+              ]
+            ]
+          },
+          "expected": {
+            "spans": [
+              {
+                "start": 2,
+                "end": 48
+              }
+            ],
+            "points": 47,
+            "rejected": 4
+          },
+          "actual": {
+            "spans": [
+              {
+                "start": 2,
+                "end": 48
+              }
+            ],
+            "points": 47,
+            "rejected": 4
+          },
+          "error": null,
+          "ok": true
+        },
+        {
+          "input": {
+            "spans": [
+              [
+                4,
+                39
+              ],
+              [
+                6,
+                20
+              ],
+              [
+                7,
+                12
+              ],
+              [
+                8,
+                32
+              ],
+              [
+                11,
+                7
+              ],
+              [
+                11,
+                9
+              ],
+              [
+                18,
+                20
+              ],
+              [
+                19,
+                4
+              ],
+              [
+                22,
+                3
+              ]
+            ]
+          },
+          "expected": {
+            "spans": [
+              {
+                "start": 4,
+                "end": 39
+              }
+            ],
+            "points": 36,
+            "rejected": 4
+          },
+          "actual": {
+            "spans": [
+              {
+                "start": 4,
+                "end": 39
+              }
+            ],
+            "points": 36,
+            "rejected": 4
+          },
+          "error": null,
+          "ok": true
+        },
+        {
+          "input": {
+            "spans": [
+              [
+                6,
+                7
+              ],
+              [
+                12,
+                21
+              ],
+              [
+                17,
+                26
+              ],
+              [
+                18,
+                0
+              ],
+              [
+                18,
+                12
+              ],
+              [
+                27,
+                8
+              ],
+              [
+                30,
+                34
+              ],
+              [
+                30,
+                44
+              ],
+              [
+                34,
+                14
+              ],
+              [
+                37,
+                21
+              ],
+              [
+                37,
+                43
+              ],
+              [
+                44,
+                4
+              ],
+              [
+                45,
+                8
+              ],
+              [
+                46,
+                46
+              ]
+            ]
+          },
+          "expected": {
+            "spans": [
+              {
+                "start": 6,
+                "end": 7
+              },
+              {
+                "start": 12,
+                "end": 26
+              },
+              {
+                "start": 30,
+                "end": 44
+              },
+              {
+                "start": 46,
+                "end": 46
+              }
+            ],
+            "points": 33,
+            "rejected": 7
+          },
+          "actual": {
+            "spans": [
+              {
+                "start": 6,
+                "end": 7
+              },
+              {
+                "start": 12,
+                "end": 26
+              },
+              {
+                "start": 30,
+                "end": 44
+              },
+              {
+                "start": 46,
+                "end": 46
+              }
+            ],
+            "points": 33,
+            "rejected": 7
+          },
+          "error": null,
+          "ok": true
+        },
+        {
+          "input": {
+            "spans": [
+              [
+                1,
+                37
+              ],
+              [
+                11,
+                13
+              ],
+              [
+                13,
+                4
+              ],
+              [
+                15,
+                4
+              ],
+              [
+                15,
+                35
+              ],
+              [
+                17,
+                22
+              ],
+              [
+                20,
+                49
+              ],
+              [
+                21,
+                10
+              ],
+              [
+                23,
+                30
+              ],
+              [
+                24,
+                48
+              ],
+              [
+                36,
+                33
+              ],
+              [
+                38,
+                6
+              ],
+              [
+                38,
+                38
+              ],
+              [
+                42,
+                14
+              ],
+              [
+                43,
+                0
+              ],
+              [
+                46,
+                27
+              ]
+            ]
+          },
+          "expected": {
+            "spans": [
+              {
+                "start": 1,
+                "end": 49
+              }
+            ],
+            "points": 49,
+            "rejected": 8
+          },
+          "actual": {
+            "spans": [
+              {
+                "start": 1,
+                "end": 49
+              }
+            ],
+            "points": 49,
+            "rejected": 8
+          },
+          "error": null,
+          "ok": true
+        },
+        {
+          "input": {
+            "spans": [
+              [
+                4,
+                5
+              ],
+              [
+                4,
+                32
+              ],
+              [
+                6,
+                7
+              ],
+              [
+                8,
+                36
+              ],
+              [
+                9,
+                27
+              ],
+              [
+                9,
+                48
+              ],
+              [
+                11,
+                9
+              ],
+              [
+                14,
+                16
+              ],
+              [
+                23,
+                32
+              ],
+              [
+                29,
+                38
+              ],
+              [
+                33,
+                21
+              ],
+              [
+                34,
+                37
+              ],
+              [
+                39,
+                0
+              ],
+              [
+                39,
+                9
+              ],
+              [
+                39,
+                33
+              ],
+              [
+                40,
+                4
+              ]
+            ]
+          },
+          "expected": {
+            "spans": [
+              {
+                "start": 4,
+                "end": 48
+              }
+            ],
+            "points": 45,
+            "rejected": 6
+          },
+          "actual": {
+            "spans": [
+              {
+                "start": 4,
+                "end": 48
+              }
+            ],
+            "points": 45,
+            "rejected": 6
+          },
+          "error": null,
+          "ok": true
+        },
+        {
+          "input": {
+            "spans": [
+              [
+                2,
+                37
+              ],
+              [
+                6,
+                38
+              ],
+              [
+                7,
+                0
+              ],
+              [
+                15,
+                8
+              ],
+              [
+                24,
+                11
+              ],
+              [
+                24,
+                23
+              ],
+              [
+                25,
+                32
+              ],
+              [
+                27,
+                42
+              ],
+              [
+                28,
+                49
+              ],
+              [
+                31,
+                18
+              ],
+              [
+                44,
+                50
+              ],
+              [
+                46,
+                29
+              ]
+            ]
+          },
+          "expected": {
+            "spans": [
+              {
+                "start": 2,
+                "end": 50
+              }
+            ],
+            "points": 49,
+            "rejected": 6
+          },
+          "actual": {
+            "spans": [
+              {
+                "start": 2,
+                "end": 50
+              }
+            ],
+            "points": 49,
+            "rejected": 6
+          },
+          "error": null,
+          "ok": true
+        },
+        {
+          "input": {
+            "spans": [
+              [
+                37,
+                9
+              ]
+            ]
+          },
+          "expected": {
+            "spans": [],
+            "points": 0,
+            "rejected": 1
+          },
+          "actual": {
+            "spans": [],
+            "points": 0,
+            "rejected": 1
+          },
+          "error": null,
+          "ok": true
+        },
+        {
+          "input": {
+            "spans": [
+              [
+                3,
+                31
+              ],
+              [
+                6,
+                8
+              ],
+              [
+                29,
+                23
+              ],
+              [
+                31,
+                17
+              ],
+              [
+                44,
+                30
+              ]
+            ]
+          },
+          "expected": {
+            "spans": [
+              {
+                "start": 3,
+                "end": 31
+              }
+            ],
+            "points": 29,
+            "rejected": 3
+          },
+          "actual": {
+            "spans": [
+              {
+                "start": 3,
+                "end": 31
+              }
+            ],
+            "points": 29,
+            "rejected": 3
+          },
+          "error": null,
+          "ok": true
+        },
+        {
+          "input": {
+            "spans": [
+              [
+                5,
+                40
+              ],
+              [
+                8,
+                32
+              ],
+              [
+                12,
+                2
+              ],
+              [
+                23,
+                43
+              ],
+              [
+                33,
+                3
+              ],
+              [
+                40,
+                50
+              ],
+              [
+                43,
+                6
+              ]
+            ]
+          },
+          "expected": {
+            "spans": [
+              {
+                "start": 5,
+                "end": 50
+              }
+            ],
+            "points": 46,
+            "rejected": 3
+          },
+          "actual": {
+            "spans": [
+              {
+                "start": 5,
+                "end": 50
+              }
+            ],
+            "points": 46,
+            "rejected": 3
+          },
+          "error": null,
+          "ok": true
+        },
+        {
+          "input": {
+            "spans": [
+              [
+                1,
+                49
+              ],
+              [
+                2,
+                29
+              ],
+              [
+                3,
+                20
+              ],
+              [
+                5,
+                24
+              ],
+              [
+                8,
+                8
+              ],
+              [
+                9,
+                49
+              ],
+              [
+                10,
+                18
+              ],
+              [
+                22,
+                11
+              ],
+              [
+                23,
+                28
+              ],
+              [
+                31,
+                30
+              ],
+              [
+                39,
+                21
+              ],
+              [
+                39,
+                29
+              ],
+              [
+                41,
+                4
+              ],
+              [
+                43,
+                22
+              ],
+              [
+                49,
+                29
+              ]
+            ]
+          },
+          "expected": {
+            "spans": [
+              {
+                "start": 1,
+                "end": 49
+              }
+            ],
+            "points": 49,
+            "rejected": 7
+          },
+          "actual": {
+            "spans": [
+              {
+                "start": 1,
+                "end": 49
+              }
+            ],
+            "points": 49,
+            "rejected": 7
+          },
+          "error": null,
+          "ok": true
+        },
+        {
+          "input": {
+            "spans": [
+              [
+                39,
+                23
+              ]
+            ]
+          },
+          "expected": {
+            "spans": [],
+            "points": 0,
+            "rejected": 1
+          },
+          "actual": {
+            "spans": [],
+            "points": 0,
+            "rejected": 1
+          },
+          "error": null,
+          "ok": true
+        },
+        {
+          "input": {
+            "spans": [
+              [
+                0,
+                27
+              ],
+              [
+                5,
+                24
+              ],
+              [
+                12,
+                11
+              ],
+              [
+                13,
+                4
+              ],
+              [
+                17,
+                11
+              ],
+              [
+                33,
+                15
+              ],
+              [
+                35,
+                34
+              ],
+              [
+                37,
+                37
+              ],
+              [
+                47,
+                4
+              ]
+            ]
+          },
+          "expected": {
+            "spans": [
+              {
+                "start": 0,
+                "end": 27
+              },
+              {
+                "start": 37,
+                "end": 37
+              }
+            ],
+            "points": 29,
+            "rejected": 6
+          },
+          "actual": {
+            "spans": [
+              {
+                "start": 0,
+                "end": 27
+              },
+              {
+                "start": 37,
+                "end": 37
+              }
+            ],
+            "points": 29,
+            "rejected": 6
+          },
+          "error": null,
+          "ok": true
+        },
+        {
+          "input": {
+            "spans": [
+              [
+                2,
+                27
+              ],
+              [
+                2,
+                43
+              ],
+              [
+                9,
+                0
+              ],
+              [
+                14,
+                47
+              ],
+              [
+                15,
+                31
+              ],
+              [
+                16,
+                42
+              ],
+              [
+                30,
+                45
+              ],
+              [
+                37,
+                13
+              ],
+              [
+                40,
+                45
+              ],
+              [
+                41,
+                19
+              ],
+              [
+                41,
+                37
+              ],
+              [
+                44,
+                24
+              ],
+              [
+                45,
+                20
+              ],
+              [
+                48,
+                40
+              ]
+            ]
+          },
+          "expected": {
+            "spans": [
+              {
+                "start": 2,
+                "end": 47
+              }
+            ],
+            "points": 46,
+            "rejected": 7
+          },
+          "actual": {
+            "spans": [
+              {
+                "start": 2,
+                "end": 47
+              }
+            ],
+            "points": 46,
+            "rejected": 7
+          },
+          "error": null,
+          "ok": true
+        },
+        {
+          "input": {
+            "spans": [
+              [
+                5,
+                19
+              ],
+              [
+                8,
+                7
+              ],
+              [
+                9,
+                14
+              ],
+              [
+                26,
+                40
+              ],
+              [
+                32,
+                34
+              ],
+              [
+                39,
+                32
+              ]
+            ]
+          },
+          "expected": {
+            "spans": [
+              {
+                "start": 5,
+                "end": 19
+              },
+              {
+                "start": 26,
+                "end": 40
+              }
+            ],
+            "points": 30,
+            "rejected": 2
+          },
+          "actual": {
+            "spans": [
+              {
+                "start": 5,
+                "end": 19
+              },
+              {
+                "start": 26,
+                "end": 40
+              }
+            ],
+            "points": 30,
+            "rejected": 2
+          },
+          "error": null,
+          "ok": true
+        },
+        {
+          "input": {
+            "spans": [
+              [
+                3,
+                36
+              ],
+              [
+                5,
+                8
+              ],
+              [
+                7,
+                16
+              ],
+              [
+                9,
+                36
+              ],
+              [
+                12,
+                28
+              ],
+              [
+                13,
+                50
+              ],
+              [
+                15,
+                38
+              ],
+              [
+                20,
+                3
+              ],
+              [
+                36,
+                42
+              ],
+              [
+                37,
+                48
+              ],
+              [
+                38,
+                18
+              ],
+              [
+                42,
+                3
+              ],
+              [
+                45,
+                20
+              ],
+              [
+                45,
+                39
+              ],
+              [
+                49,
+                14
+              ]
+            ]
+          },
+          "expected": {
+            "spans": [
+              {
+                "start": 3,
+                "end": 50
+              }
+            ],
+            "points": 48,
+            "rejected": 6
+          },
+          "actual": {
+            "spans": [
+              {
+                "start": 3,
+                "end": 50
+              }
+            ],
+            "points": 48,
+            "rejected": 6
+          },
+          "error": null,
+          "ok": true
+        },
+        {
+          "input": {
+            "spans": [
+              [
+                2,
+                6
+              ],
+              [
+                3,
+                29
+              ],
+              [
+                14,
+                40
+              ],
+              [
+                15,
+                32
+              ],
+              [
+                18,
+                21
+              ],
+              [
+                19,
+                18
+              ],
+              [
+                19,
+                35
+              ],
+              [
+                22,
+                24
+              ],
+              [
+                27,
+                10
+              ],
+              [
+                28,
+                11
+              ],
+              [
+                32,
+                3
+              ],
+              [
+                39,
+                16
+              ],
+              [
+                41,
+                4
+              ],
+              [
+                43,
+                46
+              ],
+              [
+                45,
+                0
+              ]
+            ]
+          },
+          "expected": {
+            "spans": [
+              {
+                "start": 2,
+                "end": 40
+              },
+              {
+                "start": 43,
+                "end": 46
+              }
+            ],
+            "points": 43,
+            "rejected": 7
+          },
+          "actual": {
+            "spans": [
+              {
+                "start": 2,
+                "end": 40
+              },
+              {
+                "start": 43,
+                "end": 46
+              }
+            ],
+            "points": 43,
+            "rejected": 7
+          },
+          "error": null,
+          "ok": true
+        },
+        {
+          "input": {
+            "spans": [
+              [
+                4,
+                43
+              ],
+              [
+                9,
+                43
+              ],
+              [
+                14,
+                13
+              ],
+              [
+                27,
+                5
+              ],
+              [
+                27,
+                25
+              ],
+              [
+                36,
+                49
+              ],
+              [
+                38,
+                30
+              ],
+              [
+                48,
+                13
+              ]
+            ]
+          },
+          "expected": {
+            "spans": [
+              {
+                "start": 4,
+                "end": 49
+              }
+            ],
+            "points": 46,
+            "rejected": 5
+          },
+          "actual": {
+            "spans": [
+              {
+                "start": 4,
+                "end": 49
+              }
+            ],
+            "points": 46,
+            "rejected": 5
+          },
+          "error": null,
+          "ok": true
+        },
+        {
+          "input": {
+            "spans": [
+              [
+                16,
+                17
+              ],
+              [
+                17,
+                44
+              ],
+              [
+                21,
+                30
+              ],
+              [
+                24,
+                32
+              ],
+              [
+                34,
+                0
+              ],
+              [
+                39,
+                14
+              ],
+              [
+                41,
+                11
+              ],
+              [
+                42,
+                1
+              ],
+              [
+                46,
+                8
+              ],
+              [
+                48,
+                47
+              ]
+            ]
+          },
+          "expected": {
+            "spans": [
+              {
+                "start": 16,
+                "end": 44
+              }
+            ],
+            "points": 29,
+            "rejected": 6
+          },
+          "actual": {
+            "spans": [
+              {
+                "start": 16,
+                "end": 44
+              }
+            ],
+            "points": 29,
+            "rejected": 6
+          },
+          "error": null,
+          "ok": true
+        },
+        {
+          "input": {
+            "spans": []
+          },
+          "expected": {
+            "spans": [],
+            "points": 0,
+            "rejected": 0
+          },
+          "actual": {
+            "spans": [],
+            "points": 0,
+            "rejected": 0
+          },
+          "error": null,
+          "ok": true
+        },
+        {
+          "input": {
+            "spans": [
+              [
+                12,
+                44
+              ],
+              [
+                13,
+                37
+              ],
+              [
+                18,
+                41
+              ],
+              [
+                20,
+                22
+              ],
+              [
+                21,
+                7
+              ],
+              [
+                26,
+                3
+              ],
+              [
+                26,
+                13
+              ],
+              [
+                38,
+                15
+              ],
+              [
+                39,
+                33
+              ],
+              [
+                47,
+                47
+              ],
+              [
+                49,
+                22
+              ],
+              [
+                50,
+                36
+              ]
+            ]
+          },
+          "expected": {
+            "spans": [
+              {
+                "start": 12,
+                "end": 44
+              },
+              {
+                "start": 47,
+                "end": 47
+              }
+            ],
+            "points": 34,
+            "rejected": 7
+          },
+          "actual": {
+            "spans": [
+              {
+                "start": 12,
+                "end": 44
+              },
+              {
+                "start": 47,
+                "end": 47
+              }
+            ],
+            "points": 34,
+            "rejected": 7
+          },
+          "error": null,
+          "ok": true
+        },
+        {
+          "input": {
+            "spans": [
+              [
+                1,
+                50
+              ],
+              [
+                5,
+                9
+              ],
+              [
+                7,
+                3
+              ],
+              [
+                28,
+                32
+              ],
+              [
+                28,
+                43
+              ],
+              [
+                36,
+                14
+              ]
+            ]
+          },
+          "expected": {
+            "spans": [
+              {
+                "start": 1,
+                "end": 50
+              }
+            ],
+            "points": 50,
+            "rejected": 2
+          },
+          "actual": {
+            "spans": [
+              {
+                "start": 1,
+                "end": 50
+              }
+            ],
+            "points": 50,
+            "rejected": 2
+          },
+          "error": null,
+          "ok": true
+        },
+        {
+          "input": {
+            "spans": [
+              [
+                5,
+                20
+              ],
+              [
+                16,
+                0
+              ],
+              [
+                16,
+                24
+              ],
+              [
+                18,
+                6
+              ],
+              [
+                20,
+                42
+              ],
+              [
+                21,
+                41
+              ],
+              [
+                26,
+                34
+              ],
+              [
+                28,
+                19
+              ],
+              [
+                30,
+                43
+              ],
+              [
+                34,
+                42
+              ],
+              [
+                41,
+                13
+              ],
+              [
+                42,
+                2
+              ],
+              [
+                42,
+                36
+              ],
+              [
+                50,
+                35
+              ],
+              [
+                50,
+                46
+              ]
+            ]
+          },
+          "expected": {
+            "spans": [
+              {
+                "start": 5,
+                "end": 43
+              }
+            ],
+            "points": 39,
+            "rejected": 8
+          },
+          "actual": {
+            "spans": [
+              {
+                "start": 5,
+                "end": 43
+              }
+            ],
+            "points": 39,
+            "rejected": 8
+          },
+          "error": null,
+          "ok": true
+        },
+        {
+          "input": {
+            "spans": [
+              [
+                1,
+                7
+              ],
+              [
+                2,
+                44
+              ],
+              [
+                6,
+                32
+              ],
+              [
+                10,
+                22
+              ],
+              [
+                12,
+                40
+              ],
+              [
+                15,
+                8
+              ],
+              [
+                20,
+                6
+              ],
+              [
+                26,
+                45
+              ],
+              [
+                35,
+                37
+              ],
+              [
+                37,
+                4
+              ],
+              [
+                38,
+                13
+              ],
+              [
+                39,
+                21
+              ],
+              [
+                45,
+                36
+              ],
+              [
+                48,
+                0
+              ]
+            ]
+          },
+          "expected": {
+            "spans": [
+              {
+                "start": 1,
+                "end": 45
+              }
+            ],
+            "points": 45,
+            "rejected": 7
+          },
+          "actual": {
+            "spans": [
+              {
+                "start": 1,
+                "end": 45
+              }
+            ],
+            "points": 45,
+            "rejected": 7
+          },
+          "error": null,
+          "ok": true
+        },
+        {
+          "input": {
+            "spans": [
+              [
+                0,
+                26
+              ],
+              [
+                2,
+                42
+              ],
+              [
+                9,
+                40
+              ],
+              [
+                12,
+                41
+              ],
+              [
+                17,
+                30
+              ],
+              [
+                17,
+                46
+              ],
+              [
+                19,
+                6
+              ],
+              [
+                22,
+                45
+              ],
+              [
+                27,
+                18
+              ],
+              [
+                45,
+                44
+              ],
+              [
+                47,
+                40
+              ]
+            ]
+          },
+          "expected": {
+            "spans": [
+              {
+                "start": 0,
+                "end": 46
+              }
+            ],
+            "points": 47,
+            "rejected": 4
+          },
+          "actual": {
+            "spans": [
+              {
+                "start": 0,
+                "end": 46
+              }
+            ],
+            "points": 47,
+            "rejected": 4
+          },
+          "error": null,
+          "ok": true
+        },
+        {
+          "input": {
+            "spans": [
+              [
+                0,
+                36
+              ],
+              [
+                7,
+                42
+              ],
+              [
+                15,
+                11
+              ],
+              [
+                16,
+                48
+              ],
+              [
+                17,
+                21
+              ],
+              [
+                19,
+                18
+              ],
+              [
+                19,
+                38
+              ],
+              [
+                22,
+                3
+              ],
+              [
+                25,
+                41
+              ],
+              [
+                35,
+                32
+              ],
+              [
+                35,
+                37
+              ],
+              [
+                42,
+                22
+              ],
+              [
+                49,
+                32
+              ],
+              [
+                50,
+                48
+              ]
+            ]
+          },
+          "expected": {
+            "spans": [
+              {
+                "start": 0,
+                "end": 48
+              }
+            ],
+            "points": 49,
+            "rejected": 7
+          },
+          "actual": {
+            "spans": [
+              {
+                "start": 0,
+                "end": 48
+              }
+            ],
+            "points": 49,
+            "rejected": 7
+          },
+          "error": null,
+          "ok": true
+        },
+        {
+          "input": {
+            "spans": [
+              [
+                7,
+                45
+              ],
+              [
+                15,
+                32
+              ],
+              [
+                18,
+                14
+              ],
+              [
+                22,
+                45
+              ],
+              [
+                27,
+                29
+              ],
+              [
+                30,
+                45
+              ],
+              [
+                48,
+                19
+              ],
+              [
+                50,
+                7
+              ],
+              [
+                50,
+                12
+              ]
+            ]
+          },
+          "expected": {
+            "spans": [
+              {
+                "start": 7,
+                "end": 45
+              }
+            ],
+            "points": 39,
+            "rejected": 4
+          },
+          "actual": {
+            "spans": [
+              {
+                "start": 7,
+                "end": 45
+              }
+            ],
+            "points": 39,
+            "rejected": 4
+          },
+          "error": null,
+          "ok": true
+        },
+        {
+          "input": {
+            "spans": [
+              [
+                9,
+                1
+              ],
+              [
+                19,
+                9
+              ],
+              [
+                22,
+                28
+              ],
+              [
+                34,
+                16
+              ],
+              [
+                34,
+                44
+              ],
+              [
+                40,
+                13
+              ],
+              [
+                41,
+                7
+              ],
+              [
+                45,
+                43
+              ],
+              [
+                46,
+                27
+              ],
+              [
+                49,
+                36
+              ]
+            ]
+          },
+          "expected": {
+            "spans": [
+              {
+                "start": 22,
+                "end": 28
+              },
+              {
+                "start": 34,
+                "end": 44
+              }
+            ],
+            "points": 18,
+            "rejected": 8
+          },
+          "actual": {
+            "spans": [
+              {
+                "start": 22,
+                "end": 28
+              },
+              {
+                "start": 34,
+                "end": 44
+              }
+            ],
+            "points": 18,
+            "rejected": 8
+          },
+          "error": null,
+          "ok": true
+        },
+        {
+          "input": {
+            "spans": [
+              [
+                2,
+                38
+              ],
+              [
+                3,
+                12
+              ],
+              [
+                3,
+                26
+              ],
+              [
+                3,
+                31
+              ],
+              [
+                8,
+                6
+              ],
+              [
+                11,
+                2
+              ],
+              [
+                18,
+                34
+              ],
+              [
+                19,
+                12
+              ],
+              [
+                24,
+                6
+              ],
+              [
+                27,
+                5
+              ],
+              [
+                28,
+                27
+              ],
+              [
+                31,
+                11
+              ],
+              [
+                34,
+                37
+              ],
+              [
+                40,
+                27
+              ],
+              [
+                40,
+                50
+              ],
+              [
+                47,
+                6
+              ]
+            ]
+          },
+          "expected": {
+            "spans": [
+              {
+                "start": 2,
+                "end": 38
+              },
+              {
+                "start": 40,
+                "end": 50
+              }
+            ],
+            "points": 48,
+            "rejected": 9
+          },
+          "actual": {
+            "spans": [
+              {
+                "start": 2,
+                "end": 38
+              },
+              {
+                "start": 40,
+                "end": 50
+              }
+            ],
+            "points": 48,
+            "rejected": 9
+          },
+          "error": null,
+          "ok": true
+        },
+        {
+          "input": {
+            "spans": [
+              [
+                12,
+                5
+              ],
+              [
+                28,
+                7
+              ],
+              [
+                42,
+                5
+              ],
+              [
+                42,
+                47
+              ]
+            ]
+          },
+          "expected": {
+            "spans": [
+              {
+                "start": 42,
+                "end": 47
+              }
+            ],
+            "points": 6,
+            "rejected": 3
+          },
+          "actual": {
+            "spans": [
+              {
+                "start": 42,
+                "end": 47
+              }
+            ],
+            "points": 6,
+            "rejected": 3
+          },
+          "error": null,
+          "ok": true
+        },
+        {
+          "input": {
+            "spans": [
+              [
+                10,
+                44
+              ],
+              [
+                12,
+                17
+              ],
+              [
+                46,
+                44
+              ],
+              [
+                49,
+                49
+              ]
+            ]
+          },
+          "expected": {
+            "spans": [
+              {
+                "start": 10,
+                "end": 44
+              },
+              {
+                "start": 49,
+                "end": 49
+              }
+            ],
+            "points": 36,
+            "rejected": 1
+          },
+          "actual": {
+            "spans": [
+              {
+                "start": 10,
+                "end": 44
+              },
+              {
+                "start": 49,
+                "end": 49
+              }
+            ],
+            "points": 36,
+            "rejected": 1
+          },
+          "error": null,
+          "ok": true
+        },
+        {
+          "input": {
+            "spans": [
+              [
+                11,
+                17
+              ],
+              [
+                15,
+                35
+              ],
+              [
+                17,
+                21
+              ],
+              [
+                18,
+                9
+              ],
+              [
+                34,
+                3
+              ],
+              [
+                40,
+                33
+              ],
+              [
+                44,
+                18
+              ]
+            ]
+          },
+          "expected": {
+            "spans": [
+              {
+                "start": 11,
+                "end": 35
+              }
+            ],
+            "points": 25,
+            "rejected": 4
+          },
+          "actual": {
+            "spans": [
+              {
+                "start": 11,
+                "end": 35
+              }
+            ],
+            "points": 25,
+            "rejected": 4
+          },
+          "error": null,
+          "ok": true
+        },
+        {
+          "input": {
+            "spans": [
+              [
+                8,
+                1
+              ],
+              [
+                10,
+                35
+              ],
+              [
+                10,
+                47
+              ],
+              [
+                22,
+                17
+              ],
+              [
+                26,
+                36
+              ],
+              [
+                28,
+                33
+              ],
+              [
+                33,
+                20
+              ],
+              [
+                33,
+                34
+              ],
+              [
+                35,
+                33
+              ],
+              [
+                39,
+                2
+              ],
+              [
+                41,
+                45
+              ],
+              [
+                46,
+                50
+              ],
+              [
+                49,
+                14
+              ],
+              [
+                50,
+                20
+              ]
+            ]
+          },
+          "expected": {
+            "spans": [
+              {
+                "start": 10,
+                "end": 50
+              }
+            ],
+            "points": 41,
+            "rejected": 7
+          },
+          "actual": {
+            "spans": [
+              {
+                "start": 10,
+                "end": 50
+              }
+            ],
+            "points": 41,
+            "rejected": 7
+          },
+          "error": null,
+          "ok": true
+        },
+        {
+          "input": {
+            "spans": [
+              [
+                14,
+                42
+              ],
+              [
+                24,
+                3
+              ]
+            ]
+          },
+          "expected": {
+            "spans": [
+              {
+                "start": 14,
+                "end": 42
+              }
+            ],
+            "points": 29,
+            "rejected": 1
+          },
+          "actual": {
+            "spans": [
+              {
+                "start": 14,
+                "end": 42
+              }
+            ],
+            "points": 29,
+            "rejected": 1
+          },
+          "error": null,
+          "ok": true
+        },
+        {
+          "input": {
+            "spans": [
+              [
+                9,
+                23
+              ],
+              [
+                28,
+                49
+              ],
+              [
+                39,
+                26
+              ],
+              [
+                50,
+                35
+              ]
+            ]
+          },
+          "expected": {
+            "spans": [
+              {
+                "start": 9,
+                "end": 23
+              },
+              {
+                "start": 28,
+                "end": 49
+              }
+            ],
+            "points": 37,
+            "rejected": 2
+          },
+          "actual": {
+            "spans": [
+              {
+                "start": 9,
+                "end": 23
+              },
+              {
+                "start": 28,
+                "end": 49
+              }
+            ],
+            "points": 37,
+            "rejected": 2
+          },
+          "error": null,
+          "ok": true
+        },
+        {
+          "input": {
+            "spans": [
+              [
+                5,
+                6
+              ],
+              [
+                6,
+                15
+              ],
+              [
+                6,
+                43
+              ],
+              [
+                7,
+                2
+              ],
+              [
+                9,
+                22
+              ],
+              [
+                10,
+                48
+              ],
+              [
+                11,
+                17
+              ],
+              [
+                14,
+                7
+              ],
+              [
+                17,
+                23
+              ],
+              [
+                19,
+                43
+              ],
+              [
+                22,
+                31
+              ],
+              [
+                32,
+                26
+              ],
+              [
+                33,
+                37
+              ],
+              [
+                36,
+                46
+              ],
+              [
+                44,
+                46
+              ],
+              [
+                47,
+                1
+              ]
+            ]
+          },
+          "expected": {
+            "spans": [
+              {
+                "start": 5,
+                "end": 48
+              }
+            ],
+            "points": 44,
+            "rejected": 4
+          },
+          "actual": {
+            "spans": [
+              {
+                "start": 5,
+                "end": 48
+              }
+            ],
+            "points": 44,
+            "rejected": 4
+          },
+          "error": null,
+          "ok": true
+        },
+        {
+          "input": {
+            "spans": [
+              [
+                21,
+                3
+              ],
+              [
+                38,
+                10
+              ]
+            ]
+          },
+          "expected": {
+            "spans": [],
+            "points": 0,
+            "rejected": 2
+          },
+          "actual": {
+            "spans": [],
+            "points": 0,
+            "rejected": 2
+          },
+          "error": null,
+          "ok": true
+        },
+        {
+          "input": {
+            "spans": [
+              [
+                2,
+                48
+              ],
+              [
+                3,
+                34
+              ],
+              [
+                5,
+                42
+              ],
+              [
+                10,
+                16
+              ],
+              [
+                17,
+                19
+              ],
+              [
+                23,
+                40
+              ],
+              [
+                24,
+                38
+              ],
+              [
+                27,
+                36
+              ],
+              [
+                34,
+                47
+              ],
+              [
+                42,
+                36
+              ]
+            ]
+          },
+          "expected": {
+            "spans": [
+              {
+                "start": 2,
+                "end": 48
+              }
+            ],
+            "points": 47,
+            "rejected": 1
+          },
+          "actual": {
+            "spans": [
+              {
+                "start": 2,
+                "end": 48
+              }
+            ],
+            "points": 47,
+            "rejected": 1
+          },
+          "error": null,
+          "ok": true
+        }
+      ],
+      "accepted": true,
+      "passed": 70,
+      "total": 70
+    },
+    "accepted": true,
+    "workspace": "/tmp/lobo-matched-brt14qiw"
+  },
+  "detail": {
+    "assignment": {
+      "index": 10,
+      "repeat": 1,
+      "family": "coalesce",
+      "arm": "revised",
+      "language": "lobo",
+      "reasoning": "high",
+      "phase": "change"
+    },
+    "skill_paths_in_commands": {
+      "original": false,
+      "revised": true
+    },
+    "external_skill_home_commands": [],
+    "first_visible_edited_pass_s": 43.99696831195615,
+    "visible": [
+      {
+        "index": 0,
+        "edited": false,
+        "feedback": {
+          "status": "fail",
+          "passed": 2,
+          "total": 5,
+          "failures": [
+            {
+              "input": {
+                "spans": [
+                  [
+                    0,
+                    2
+                  ],
+                  [
+                    3,
+                    3
+                  ],
+                  [
+                    7,
+                    8
+                  ]
+                ]
+              },
+              "expected": {
+                "spans": [
+                  {
+                    "start": 0,
+                    "end": 3
+                  },
+                  {
+                    "start": 7,
+                    "end": 8
+                  }
+                ],
+                "points": 6,
+                "rejected": 0
+              },
+              "actual": {
+                "spans": [
+                  {
+                    "start": 0,
+                    "end": 2
+                  },
+                  {
+                    "start": 3,
+                    "end": 3
+                  },
+                  {
+                    "start": 7,
+                    "end": 8
+                  }
+                ],
+                "points": 6,
+                "rejected": 0
+              },
+              "error": null,
+              "ok": false
+            },
+            {
+              "input": {
+                "spans": [
+                  [
+                    0,
+                    8
+                  ],
+                  [
+                    1,
+                    3
+                  ],
+                  [
+                    2,
+                    1
+                  ]
+                ]
+              },
+              "expected": {
+                "spans": [
+                  {
+                    "start": 0,
+                    "end": 8
+                  }
+                ],
+                "points": 9,
+                "rejected": 1
+              },
+              "actual": {
+                "spans": [
+                  {
+                    "start": 0,
+                    "end": 8
+                  },
+                  {
+                    "start": 1,
+                    "end": 3
+                  }
+                ],
+                "points": 12,
+                "rejected": 1
+              },
+              "error": null,
+              "ok": false
+            },
+            {
+              "input": {
+                "spans": [
+                  [
+                    0,
+                    2
+                  ],
+                  [
+                    1,
+                    0
+                  ],
+                  [
+                    2,
+                    4
+                  ]
+                ]
+              },
+              "expected": {
+                "spans": [
+                  {
+                    "start": 0,
+                    "end": 4
+                  }
+                ],
+                "points": 5,
+                "rejected": 1
+              },
+              "actual": {
+                "spans": [
+                  {
+                    "start": 0,
+                    "end": 2
+                  },
+                  {
+                    "start": 2,
+                    "end": 4
+                  }
+                ],
+                "points": 6,
+                "rejected": 1
+              },
+              "error": null,
+              "ok": false
+            }
+          ]
+        }
+      },
+      {
+        "index": 1,
+        "edited": true,
+        "feedback": {
+          "status": "pass",
+          "passed": 5,
+          "total": 5,
+          "failures": []
+        }
+      }
+    ],
+    "authoring_errors": [],
+    "visible_compile_errors": 0,
+    "visible_behavior_failures": 1,
+    "commands": [
+      "/usr/bin/zsh -lc \"sed -n '1,240p' TASK.txt; printf '\\\\n--- GUIDE ---\\\\n'; sed -n '1,260p' GUIDE.txt; printf '\\\\n--- SKILL ---\\\\n'; sed -n '1,280p' .agents/skills/lobo-development-v2/SKILL.md; printf '\\\\n--- TOP LEVEL ---\\\\n'; rg --files -g 'TASK.txt' -g 'GUIDE.txt' -g '\"'!other/**'\"' -g '\"'!*/other/**'\"' | sort\"",
+      "/usr/bin/zsh -lc \"printf '%s\\\\n' '--- logic.lobo ---'; sed -n '1,260p' logic.lobo; printf '%s\\\\n' '--- logic.lobo.ids.json ---'; sed -n '1,260p' logic.lobo.ids.json; printf '%s\\\\n' '--- VISIBLE.json ---'; sed -n '1,260p' VISIBLE.json; printf '%s\\\\n' '--- files ---'; rg --files -g '\"'!other/**'\"' -g '\"'!*/other/**'\"' | sort\"",
+      "/usr/bin/zsh -lc 'python3 check.py'",
+      "/usr/bin/zsh -lc \"sed -n '1,180p' model.lobo; printf '\\\\n--- util ---\\\\n'; sed -n '1,180p' util.lobo; printf '\\\\n--- iteration reference ---\\\\n'; sed -n '1,220p' .agents/skills/lobo-programming/references/language.md\"",
+      "/usr/bin/zsh -lc 'python3 check.py'",
+      "/usr/bin/zsh -lc \"git diff -- logic.lobo logic.lobo.ids.json; printf '\\\\n--- status ---\\\\n'; git status --short -- logic.lobo logic.lobo.ids.json\""
+    ]
+  },
+  "prompt": "Complete TASK.txt following GUIDE.txt. The limits are 120 seconds, 16 command-execution tool items and 6 visible check submissions. All build/check work counts in wall time. Do not delegate.\nUse $lobo-development-v2 at .agents/skills/lobo-development-v2/SKILL.md.\n",
+  "last_message": "Implemented `run` coalescing for overlapping or adjacent valid spans while preserving invalid-span handling and existing IDs.\n\nVerification: `python3 check.py` passed all 5 visible checks.",
+  "final_sources": {
+    "util.lobo": "module util;\nrecord Reverse<T> {pending:List<T>,output:List<T>}\nfn reverse<T>(items:List<T>)->List<T> {\n let final=fold(i in List::length(items),state:Reverse<T>=Reverse {pending:items,output:List::empty<T>()}) {\n  Reverse {pending:List::tail(state.pending),output:List::prepend(List::head(state.pending),state.output)}\n };final.output\n}\n",
+    "logic.lobo.ids.json": "{\n  \"format\": \"lobo-identities/0.1\",\n  \"identities\": {\n    \"module\": \"skilldev.coalesce.module\",\n    \"Cursor\": \"skilldev.coalesce.Cursor\",\n    \"run\": \"skilldev.coalesce.run\",\n    \"model.Span\": \"skilldev.coalesce.model.Span\",\n    \"model.Summary\": \"skilldev.coalesce.model.Summary\",\n    \"util.reverse\": \"skilldev.util.reverse\"\n  }\n}\n",
+    "util.lobo.ids.json": "{\n  \"format\": \"lobo-identities/0.1\",\n  \"identities\": {\n    \"module\": \"skilldev.util.module\",\n    \"Reverse\": \"skilldev.util.Reverse\",\n    \"reverse\": \"skilldev.util.reverse\"\n  }\n}\n",
+    "logic.lobo": "module logic;\nuse model {Span,Summary};\nuse util {reverse};\nrecord Cursor {pending:List<Span>,kept:List<Span>,current:Span,hasCurrent:Bool,points:I64,rejected:I64}\nfn run(spans:List<Span>)->Summary {\n let final=fold(i in List::length(spans),cursor:Cursor=Cursor {pending:spans,kept:List::empty<Span>(),current:Span {start:0,end:0},hasCurrent:false,points:0,rejected:0}) {\n  let item=List::head(cursor.pending);\n  if item.end<item.start {\n   Cursor {...cursor,pending:List::tail(cursor.pending),rejected:cursor.rejected+1}\n  } else {\n   if !cursor.hasCurrent {\n    Cursor {...cursor,pending:List::tail(cursor.pending),current:item,hasCurrent:true}\n   } else {\n    if item.start<=cursor.current.end+1 {\n     if item.end>cursor.current.end {\n      Cursor {...cursor,pending:List::tail(cursor.pending),current:Span {start:cursor.current.start,end:item.end}}\n     } else {\n      Cursor {...cursor,pending:List::tail(cursor.pending)}\n     }\n    } else {\n     Cursor {...cursor,pending:List::tail(cursor.pending),kept:List::prepend(cursor.current,cursor.kept),current:item,points:cursor.points+cursor.current.end-cursor.current.start+1}\n    }\n   }\n  }\n };\n let completed=if final.hasCurrent {\n  Cursor {...final,kept:List::prepend(final.current,final.kept),points:final.points+final.current.end-final.current.start+1}\n } else { final };\n Summary {spans:reverse(completed.kept),points:completed.points,rejected:completed.rejected}\n}\n",
+    "model.lobo": "module model;\nrecord Span {start:I64,end:I64}\nrecord Summary {spans:List<Span>,points:I64,rejected:I64}\n",
+    "model.lobo.ids.json": "{\n  \"format\": \"lobo-identities/0.1\",\n  \"identities\": {\n    \"module\": \"skilldev.coalesce.model.module\",\n    \"Span\": \"skilldev.coalesce.model.Span\",\n    \"Summary\": \"skilldev.coalesce.model.Summary\"\n  }\n}\n"
+  },
+  "candidate_changes": [
+    {
+      "path": "logic.lobo",
+      "sha256": "26383cafaf35bfba6e062a7b9968603e3c61f775d288ceec0d93214353f46551",
+      "bytes": 1425
+    },
+    {
+      "path": ".check-io/04ce01d8d54f4eb6a029175a7050d444.request.json",
+      "sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+      "bytes": 2
+    },
+    {
+      "path": ".check-io/da5d15997f9344398995121c6751aec7.request.json",
+      "sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+      "bytes": 2
+    },
+    {
+      "path": ".check-io/da5d15997f9344398995121c6751aec7.response.json",
+      "sha256": "e814f7c247cacc737a659a785c5b960a3e5decc209aa28046e35ff08ecf6e5d5",
+      "bytes": 2247
+    },
+    {
+      "path": ".check-io/04ce01d8d54f4eb6a029175a7050d444.response.json",
+      "sha256": "60a602d00feeb3d46f3379852326cb88933d020ac5f380409c02c66ffa68f323",
+      "bytes": 70
+    }
+  ],
+  "raw_file_hashes": {
+    "assignment.json": {
+      "sha256": "b65402bb64b26c7435dd34ad87590a706c7a05222470a9119a40a4461f5452d1",
+      "bytes": 143
+    },
+    "stderr.txt": {
+      "sha256": "e6488e98338687e7a9ced6643f16567eca55e63cd13a21e3af7bd5acd4f5e497",
+      "bytes": 206
+    },
+    "command.json": {
+      "sha256": "f5a1f0c9060cc0e625d9902d66a05a5934cbb254fc8f2c726d1b1be4131073c4",
+      "bytes": 595
+    },
+    "prompt.txt": {
+      "sha256": "93ee9409b2231d113562f06c5c40fc9b211ddd5225ca53f157f547077f8a912d",
+      "bytes": 264
+    },
+    "events.jsonl": {
+      "sha256": "8fd131d6c0593897938d77b118a0aa32fd09e873d43aaa58a69ef72a5588c5d1",
+      "bytes": 36350
+    },
+    "result.json": {
+      "sha256": "a3435b3cc818986592fd40b0644a17925e3448689348a52ce4f6521efaeca47a",
+      "bytes": 81075
+    },
+    "last-message.txt": {
+      "sha256": "1110f16c713ba9e6be4b3b7381c901598af1459ca9190782784e8eaaba9d3468",
+      "bytes": 188
+    },
+    "heldout/program": {
+      "sha256": "7fc7b48c2344678d3b73614071aff150265633744388b3f38aa9515819a96770",
+      "bytes": 22880
+    },
+    "heldout/result.json": {
+      "sha256": "321341a0b4c9c29c79fec174cf6e00a39f909c7da7d94b0440baddaee1820e49",
+      "bytes": 66954
+    },
+    "check-01/program": {
+      "sha256": "7fc7b48c2344678d3b73614071aff150265633744388b3f38aa9515819a96770",
+      "bytes": 22880
+    },
+    "check-01/result.json": {
+      "sha256": "d28342cf4465c590c6ea3f3270fdc5bf95dce084d9c75a0fd0b453e6cc31cce7",
+      "bytes": 3952
+    },
+    "initial/util.lobo": {
+      "sha256": "c43f8e6085a7f03acbc1dac3e872ffe5ebdf8f86133519b5ce286a08e7d2055c",
+      "bytes": 338
+    },
+    "initial/logic.lobo.ids.json": {
+      "sha256": "868ff772b9caac7d411c44aa876655646c345662a4113fa9ed2e9140b1493608",
+      "bytes": 331
+    },
+    "initial/check.py": {
+      "sha256": "19cfc08bd63439e1487ff9ee80fc4a013b804feb6b424788b2fc62fb63bd278f",
+      "bytes": 385
+    },
+    "initial/AGENTS.md": {
+      "sha256": "3c8c8fce33c21a65ee4b8a44fe408af1f260accb220adba4fb6a75e331e7ea11",
+      "bytes": 153
+    },
+    "initial/util.lobo.ids.json": {
+      "sha256": "e19f179ed53b0319c39febce4e46eb462845e30547177c99a14aac27ed6ad174",
+      "bytes": 178
+    },
+    "initial/logic.lobo": {
+      "sha256": "9b2dc3ed6e7852a941202e9e4e91aa126de1f459662444d2bb50345988f40f03",
+      "bytes": 679
+    },
+    "initial/VISIBLE.json": {
+      "sha256": "16e8e6146ee43a85ba0acb4b2547f3b3ed9ec33f7837c0a477513a92cdb45150",
+      "bytes": 1522
+    },
+    "initial/GUIDE.txt": {
+      "sha256": "70f169bfd8ca37792732adb561994943888ccfcfb8b909375a08b36d0067b697",
+      "bytes": 3049
+    },
+    "initial/model.lobo": {
+      "sha256": "0e60f811c822ee036f5918288ab8dec48661cb1bfad38ba3b50ac5ce7b29426d",
+      "bytes": 104
+    },
+    "initial/model.lobo.ids.json": {
+      "sha256": "95164699653cae396cee2e48e6f0318789ea84fcdcc042acd21b9b99c0fb6381",
+      "bytes": 202
+    },
+    "initial/TASK.txt": {
+      "sha256": "328f31403d475310a96c31a84e1a071d63c067d28ee3553c33a010e9433a92ed",
+      "bytes": 1074
+    },
+    "candidate-final/logic.lobo": {
+      "sha256": "26383cafaf35bfba6e062a7b9968603e3c61f775d288ceec0d93214353f46551",
+      "bytes": 1425
+    },
+    "check-00/program": {
+      "sha256": "1e0c06e617ecf9c56659d00141ee66d47546a214cb539b00dd8148af64f3a206",
+      "bytes": 18784
+    },
+    "check-00/result.json": {
+      "sha256": "0e1210ec3367deaa3e8baa0b413a6541b97eae1ec7761ea204666b16b9b868d6",
+      "bytes": 4167
+    },
+    "heldout/source/util.lobo": {
+      "sha256": "c43f8e6085a7f03acbc1dac3e872ffe5ebdf8f86133519b5ce286a08e7d2055c",
+      "bytes": 338
+    },
+    "heldout/source/logic.lobo.ids.json": {
+      "sha256": "868ff772b9caac7d411c44aa876655646c345662a4113fa9ed2e9140b1493608",
+      "bytes": 331
+    },
+    "heldout/source/util.lobo.ids.json": {
+      "sha256": "e19f179ed53b0319c39febce4e46eb462845e30547177c99a14aac27ed6ad174",
+      "bytes": 178
+    },
+    "heldout/source/logic.lobo": {
+      "sha256": "26383cafaf35bfba6e062a7b9968603e3c61f775d288ceec0d93214353f46551",
+      "bytes": 1425
+    },
+    "heldout/source/model.lobo": {
+      "sha256": "0e60f811c822ee036f5918288ab8dec48661cb1bfad38ba3b50ac5ce7b29426d",
+      "bytes": 104
+    },
+    "heldout/source/model.lobo.ids.json": {
+      "sha256": "95164699653cae396cee2e48e6f0318789ea84fcdcc042acd21b9b99c0fb6381",
+      "bytes": 202
+    },
+    "check-01/source/util.lobo": {
+      "sha256": "c43f8e6085a7f03acbc1dac3e872ffe5ebdf8f86133519b5ce286a08e7d2055c",
+      "bytes": 338
+    },
+    "check-01/source/logic.lobo.ids.json": {
+      "sha256": "868ff772b9caac7d411c44aa876655646c345662a4113fa9ed2e9140b1493608",
+      "bytes": 331
+    },
+    "check-01/source/util.lobo.ids.json": {
+      "sha256": "e19f179ed53b0319c39febce4e46eb462845e30547177c99a14aac27ed6ad174",
+      "bytes": 178
+    },
+    "check-01/source/logic.lobo": {
+      "sha256": "26383cafaf35bfba6e062a7b9968603e3c61f775d288ceec0d93214353f46551",
+      "bytes": 1425
+    },
+    "check-01/source/model.lobo": {
+      "sha256": "0e60f811c822ee036f5918288ab8dec48661cb1bfad38ba3b50ac5ce7b29426d",
+      "bytes": 104
+    },
+    "check-01/source/model.lobo.ids.json": {
+      "sha256": "95164699653cae396cee2e48e6f0318789ea84fcdcc042acd21b9b99c0fb6381",
+      "bytes": 202
+    },
+    "initial/spec/core-v1.1.md": {
+      "sha256": "98c9b16d2bd72229464751f1d6c03790efde00a234bf7d2add2306f30b785361",
+      "bytes": 4694
+    },
+    "initial/spec/language-milestone-workloads.md": {
+      "sha256": "f0be02538657fc901e9241049314b75d03b0472bc776ad3748d63c5c847a2b4d",
+      "bytes": 6656
+    },
+    "initial/spec/core-v1.4.md": {
+      "sha256": "01b365a0c8874db2ad9982e1e85dc036cf22cf31521c2b28c943c08888edf9b2",
+      "bytes": 5603
+    },
+    "initial/spec/core-v0.7.md": {
+      "sha256": "0111fcfce8f7ba3ca9abfa027282113dcb6c31df7fb2d946847260f392efb221",
+      "bytes": 7169
+    },
+    "initial/spec/checked-artifact-v0.2.md": {
+      "sha256": "b13203846b1eb62eeb73445ef422cb526f7ae33d1e6804ecdef20e33c6365ff7",
+      "bytes": 1413
+    },
+    "initial/spec/core-v0.10.md": {
+      "sha256": "2ca585067a2c5113ce335847f433489c79a71d63471c2443786157038b60953e",
+      "bytes": 3093
+    },
+    "initial/spec/native-v0.1.md": {
+      "sha256": "befed14019840eea1988bf6ff982d531df105bb0d1b057e765e820ed72cdc0b6",
+      "bytes": 6568
+    },
+    "initial/spec/core-v0.8.md": {
+      "sha256": "790cfe562577be3dafa5ca3d2028e34d8782cbb36731fe45c29560a4badc6887",
+      "bytes": 5329
+    },
+    "initial/spec/core-v1.0.md": {
+      "sha256": "8dbc2ca888f49b84125a8faedf39160bb1eab27e0f25b336b1ef8f87f14f3b2b",
+      "bytes": 5242
+    },
+    "initial/spec/core-v1.11.md": {
+      "sha256": "d13c38830326c983d336c83ab4a398867bd17858ade3c5f8ecc6d088359182aa",
+      "bytes": 2968
+    },
+    "initial/spec/agent-testing-v0.1.md": {
+      "sha256": "dc9c1fb4b7f3aca5cc70a2cb844139190ec16218ee3ddb7759653f2d0fc4ab0e",
+      "bytes": 11933
+    },
+    "initial/spec/compact-source-v0.1.md": {
+      "sha256": "d7035fbf81ff5c83f84a34dd5c73a1617f1a49176019a2693ba56c501955a94f",
+      "bytes": 5994
+    },
+    "initial/spec/core-v1.8.md": {
+      "sha256": "422e050a2b5aa621e9b236f003084fa5398995e3144b3781b998092422255eb6",
+      "bytes": 5772
+    },
+    "initial/spec/core-v1.2.md": {
+      "sha256": "7d0f42dd9d1bd99b860af5045c960fa82ffc96511d8f6397fefa381964c5b363",
+      "bytes": 5534
+    },
+    "initial/spec/core-v1.7.md": {
+      "sha256": "2123fbea05d172cf4723e683afc4216c64e9bc0a62495f25e06b7ebc83311ed3",
+      "bytes": 3510
+    },
+    "initial/spec/generic-reuse-workload.md": {
+      "sha256": "53e5d3097494f3deb5379c77a343997dfa52f47edb6c3915006dac05082b244f",
+      "bytes": 2596
+    },
+    "initial/spec/core-v0.6.md": {
+      "sha256": "3d8737fe0d67ef67916ba63fc6d91386d9ff983c9148d2b2c671048a0cf35245",
+      "bytes": 7076
+    },
+    "initial/spec/core-v1.6.md": {
+      "sha256": "71967bd60313ce04cabdf740863eb2f1c73c49ecb1f22ea58ed6e9abbcd9c886",
+      "bytes": 4447
+    },
+    "initial/spec/core-v0.12.md": {
+      "sha256": "f02ddafe0a6196c15671a51e08aa12105ce216df1edb1a8354f54cfccc9e15c4",
+      "bytes": 7895
+    },
+    "initial/spec/recursive-ast-workload.md": {
+      "sha256": "3138f238b71d5d12001391dc3d2f8cf054a1a59622608699732bcc05441c7a3a",
+      "bytes": 1600
+    },
+    "initial/spec/README.md": {
+      "sha256": "e8b911e1997d93f0ede12e14c97851f8e08843ca19e84a1eb5a4319108e82653",
+      "bytes": 4757
+    },
+    "initial/spec/language-v1-acceptance.md": {
+      "sha256": "33e7c84c36db6bcf74059f57e08e3eaa550e1235955d77eae4e6ca4afbed5f33",
+      "bytes": 6645
+    },
+    "initial/spec/core-v0.2.md": {
+      "sha256": "9cbdbe1ddd2a55ce69b3333d5984a12d437ed225d856668c69edfbfd2a4b1ad2",
+      "bytes": 6391
+    },
+    "initial/spec/core-v1.5.md": {
+      "sha256": "dac4877adab3d738fb05fc57c37436106a22206a3069446a00c47de65c1abdda",
+      "bytes": 4557
+    },
+    "initial/spec/core-v0.11.md": {
+      "sha256": "275105a2b66f5f0f6ddb12828d3e30db47f8603933654ea92b6bb3d5597ba8f9",
+      "bytes": 6042
+    },
+    "initial/spec/core-v0.4.md": {
+      "sha256": "84828c9c83b0c0b70d278e2458d77e01231bfd75899a99193b80a762b78ede83",
+      "bytes": 5039
+    },
+    "initial/spec/native-llvm-v0.1.md": {
+      "sha256": "580611e7fc27523e4aed69b9064a7c688096c8254eecf9a53541f93994045b21",
+      "bytes": 5632
+    },
+    "initial/spec/native-interface-v0.1.md": {
+      "sha256": "fc98302a3a5e50c8a87079231b9311954e8351383ba872e4223385ff1770934e",
+      "bytes": 10000
+    },
+    "initial/spec/checked-artifact-v0.3.md": {
+      "sha256": "4874fc7ba430389d8d3bf4df3c6fc34b2b5bb949ecfe646383e3f6fc04652b15",
+      "bytes": 1147
+    },
+    "initial/spec/core-v0.3.md": {
+      "sha256": "96e39f958c14b082ad0f3a0c72dc0b3318a7c1c442812b35c338d35b00759543",
+      "bytes": 4396
+    },
+    "initial/spec/core-v1.9.md": {
+      "sha256": "c84dc7e6b555fc92458d632c0b92fb31052abd023e58b0201c735c6019ec225b",
+      "bytes": 2560
+    },
+    "initial/spec/checked-artifact-v0.1.md": {
+      "sha256": "8e85e37b7a89812f135ccb796e083ea95771032d267e55bc9c0d18f53fa56cdf",
+      "bytes": 4094
+    },
+    "initial/spec/core-v1.10.md": {
+      "sha256": "45d45f48a14fda25275c50ea02d6d65854d14e3fb6989ea56ef6d1aba62ec308",
+      "bytes": 4925
+    },
+    "initial/spec/source-diagnostics-v0.1.md": {
+      "sha256": "d531df2c57fdd4ec2917fb029a8fc54f441f6632fbfb7c2b4cfe3b8168e6eb3b",
+      "bytes": 3894
+    },
+    "initial/spec/core-v0.9.md": {
+      "sha256": "4bc8977f5151c72df856a06da8cc1ff136a9fb355681b47075bbd17d570d5379",
+      "bytes": 7360
+    },
+    "initial/spec/core-v0.1.md": {
+      "sha256": "c3fe3c05e21bd22c9df8f9ff78c65f3c645f127b10350c93a888c5f133f16854",
+      "bytes": 13060
+    },
+    "initial/spec/core-v1.3.md": {
+      "sha256": "2ea91b7b4d4c7716a593ceafcfff42227f05f94e45d8500e9ed04e0c956a9118",
+      "bytes": 6183
+    },
+    "initial/spec/core-v0.5.md": {
+      "sha256": "02ad206aa3cf73c38a8c13d082cdd7d0ea61c45a4dd2ab304497df2cc7c326cc",
+      "bytes": 6607
+    },
+    "initial/spec/sqlite-interface-v0.1.md": {
+      "sha256": "19de3da7153b874edc5518ded812515c2ce32dc67a4d1226307c7a0c8b612bdf",
+      "bytes": 9003
+    },
+    "initial/research/compact-pilot-2026-11-24.md": {
+      "sha256": "761a1fc994e8bdf6865f293fc37728aab95932c49d67a9ea23907a1de352ef25",
+      "bytes": 9416
+    },
+    "initial/spec/schemas/request-envelope.schema.json": {
+      "sha256": "2abad3a1e8bbbb980cfa0fbe2c9c38a789ba94215bd6481f677d15cfe7c24409",
+      "bytes": 1964
+    },
+    "initial/spec/schemas/tool-descriptor.schema.json": {
+      "sha256": "2e375db03b357fee59094e46252dcd847a3adf3fc04fae39457bf98a62bc17ef",
+      "bytes": 1727
+    },
+    "initial/spec/schemas/response-envelope.schema.json": {
+      "sha256": "a4e7d16a8bc25e06d5a571259df750f7c024319922e419bae57a8d66c64e7ca4",
+      "bytes": 3614
+    },
+    "initial/spec/schemas/conformance-case.schema.json": {
+      "sha256": "ef3a27dd2a0caa8249c1f1439eb0abf96983350456db4efaabfdd2e2cc24c443",
+      "bytes": 2269
+    },
+    "initial/spec/conformance/core-cases.json": {
+      "sha256": "076f50cc9a45b7588eed4d150bb289fcdf04b0dcc7435dd871e71ef388cf71df",
+      "bytes": 4968
+    },
+    "initial/docs/agent-reference/compact-pilot-2026-11-24/nominal.txt": {
+      "sha256": "9810070ea2f016955293106bc0f7bf2f9fbb718619ad5b8372f34fbc380a0510",
+      "bytes": 819
+    },
+    "initial/docs/agent-reference/compact-pilot-2026-11-24/contracts.txt": {
+      "sha256": "86a129a75ffba8cb447f0a97b513cc92abb806b932609fc253273909aae868aa",
+      "bytes": 796
+    },
+    "initial/docs/agent-reference/compact-pilot-2026-11-24/ranges.txt": {
+      "sha256": "633eac0a1b432389d842277929b485519962a646c07bbe97a69a403b5d217478",
+      "bytes": 934
+    },
+    "initial/docs/agent-reference/compact-pilot-2026-11-24/propagation.txt": {
+      "sha256": "d204f387ce82c1a0c1106ec337db631c06ec084c51f7b583f7eb9b45fb38c43f",
+      "bytes": 744
+    },
+    "initial/.agents/skills/lobo-development-v2/SKILL.md": {
+      "sha256": "e7877b0ce0ab304eaf60fc9f6f9435b254519d43655a0a18c1d569d1bfc4a352",
+      "bytes": 3138
+    },
+    "initial/.agents/skills/lobo-programming/references/conveniences.lobo": {
+      "sha256": "ffb3bcfaa7fa99fca865d6498238b4c81b857a01e2744d46d5a6f0308765e9c9",
+      "bytes": 301
+    },
+    "initial/.agents/skills/lobo-programming/references/compact-example.lobo": {
+      "sha256": "d2376c69b774da83073a98883e91794750d59f99ed3fa380d9aaa673d1950954",
+      "bytes": 231
+    },
+    "initial/.agents/skills/lobo-programming/references/try-example.lobo": {
+      "sha256": "2f6b5750d060c929eae94cb9b001b3ea9154f9ddaa369c0934c1953cce21770a",
+      "bytes": 412
+    },
+    "initial/.agents/skills/lobo-programming/references/sqlite-example.lobo": {
+      "sha256": "855f210acb18bc4568aad97373a8633cd9b7053d368980172317c76fab74927a",
+      "bytes": 303
+    },
+    "initial/.agents/skills/lobo-programming/references/compact-example.lobo.ids.json": {
+      "sha256": "2dbc359fba6b65d4fa0667b91bd80e8c4f150b38ecb26c00c21e743332906d0e",
+      "bytes": 298
+    },
+    "initial/.agents/skills/lobo-programming/references/json-example.lobo": {
+      "sha256": "e45bbda6b893e09f021821bd500195c4e27a827e81edcc249458cef53c3cc712",
+      "bytes": 269
+    },
+    "initial/.agents/skills/lobo-programming/references/tools.md": {
+      "sha256": "1913a1fceffba4c09f72625d9bc1e8d8104e35025ad674988a73405ba8eb8429",
+      "bytes": 8694
+    },
+    "initial/.agents/skills/lobo-programming/references/callbacks.lobo": {
+      "sha256": "a106cf1e51354df3296e755d882d6f0fc6ce7690b761914cca0f76cc0c0bf63e",
+      "bytes": 406
+    },
+    "initial/.agents/skills/lobo-programming/references/sqlite-example.lobo.ids.json": {
+      "sha256": "18ae22c6bf9c71e6b1f7633bd7fcd847883b919ab27f7b34d18feca3f455a2e6",
+      "bytes": 343
+    },
+    "initial/.agents/skills/lobo-programming/references/conveniences.lobo.ids.json": {
+      "sha256": "eb25455ebf8d705ecd0d1d2261623cb5930cd4ea9bb3bf04de2d2e7bb0921817",
+      "bytes": 337
+    },
+    "initial/.agents/skills/lobo-programming/references/language.md": {
+      "sha256": "f007469320ec5054db07dac9302f8b6ac9a9dc976099ffd566c1ea963ab36562",
+      "bytes": 12554
+    },
+    "initial/.agents/skills/lobo-programming/references/examples.lobo": {
+      "sha256": "cf65d2cdc47a1bb15e154f94fe2e70d92e58eb15d405c8a2fb68261c294a1b3c",
+      "bytes": 2028
+    },
+    "initial/.agents/skills/lobo-programming/references/native-example.lobo": {
+      "sha256": "79c44e86db8aa77322b4d99a424a25a0b2d37ced37e3e65af344c6a02d03737c",
+      "bytes": 300
+    },
+    "initial/.agents/skills/lobo-programming/references/callbacks.lobo.ids.json": {
+      "sha256": "7cf6c0e2a287692417905cb0fb94a3ab5f04cb517695ad597f2404e5888b11cc",
+      "bytes": 334
+    },
+    "initial/libraries/json/README.md": {
+      "sha256": "fcc2d6742f11f4a53fbe1f26ce7a390e477e0de88a983e4a348884f6983d4959",
+      "bytes": 5305
+    },
+    "initial/libraries/json/json.lobo": {
+      "sha256": "3ed68fee975a46affca613dd6da60fbe6ea297fc447b8c91a76fbe7b2406ac39",
+      "bytes": 8228
+    },
+    "initial/libraries/native/README.md": {
+      "sha256": "4de8dd7276b56d529c96f909ba6e4903fda299e255394e1e8e4bef094d104eea",
+      "bytes": 3872
+    },
+    "initial/libraries/native/native.lobo": {
+      "sha256": "ee7ba249a414ff9421cc36d3373f412b6ce63e62d696d1bdd0f9ce111e9027d1",
+      "bytes": 4649
+    },
+    "initial/libraries/native/permissions.lobo": {
+      "sha256": "c3148d6d50d3d8e2f326b771b76353fed490ba06cfd8cad21deb5d7f8f070e12",
+      "bytes": 1347
+    },
+    "initial/libraries/sql/sql.lobo.ids.json": {
+      "sha256": "67fc9cd6d80fed595e0efdffeb36b7153d865236ab188d2da776ed8effd643d4",
+      "bytes": 2033
+    },
+    "initial/libraries/sql/sql.lobo": {
+      "sha256": "5704a8abcf1e1d0ee435b09aa7219c9c809bc1aaa304f3fe61b3de41d903a133",
+      "bytes": 9348
+    },
+    "initial/libraries/sql/README.md": {
+      "sha256": "85f5ec08131d902d2ed64014ebd687462def277aa5f0876599c1058cfd71fad5",
+      "bytes": 4514
+    },
+    "initial/libraries/http/http.lobo": {
+      "sha256": "ea9b9d87e15321e06ca67932258b60451c3da04a815e97d234ef2b36a91dba9f",
+      "bytes": 2787
+    },
+    "initial/libraries/http/README.md": {
+      "sha256": "c4dd34349e63538c79fe003c6cff87c3e4d27a624bc2d3146ed4fe08c4626774",
+      "bytes": 4399
+    },
+    "initial/libraries/http-server/server.lobo": {
+      "sha256": "3aeac600d4131e544a7054f0f751efb5945e1616c84b210cfdabf5d936912a1e",
+      "bytes": 6880
+    },
+    "initial/libraries/http-server/transport.lobo.ids.json": {
+      "sha256": "9163bf4fbd4215230030857e386d89b9a38843f233d4ca357e119f93779cc68d",
+      "bytes": 2021
+    },
+    "initial/libraries/http-server/README.md": {
+      "sha256": "7f695c6966c1a31adf74d2d620760857a07ac28c0763a65fc8a6001800b6bde2",
+      "bytes": 7886
+    },
+    "initial/libraries/http-server/server.lobo.ids.json": {
+      "sha256": "27cc7a4a712b98b29bd3fbae6e38616ed1713fb9cf07cc4e6c371d0823f3e640",
+      "bytes": 1408
+    },
+    "initial/libraries/http-server/transport.lobo": {
+      "sha256": "ac5af9a0ceed5f7a446450c0248c7b6c284931908dc27b25ea1a69cb6517a52b",
+      "bytes": 8145
+    },
+    "candidate-final/.check-io/04ce01d8d54f4eb6a029175a7050d444.request.json": {
+      "sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+      "bytes": 2
+    },
+    "candidate-final/.check-io/da5d15997f9344398995121c6751aec7.request.json": {
+      "sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+      "bytes": 2
+    },
+    "candidate-final/.check-io/da5d15997f9344398995121c6751aec7.response.json": {
+      "sha256": "e814f7c247cacc737a659a785c5b960a3e5decc209aa28046e35ff08ecf6e5d5",
+      "bytes": 2247
+    },
+    "candidate-final/.check-io/04ce01d8d54f4eb6a029175a7050d444.response.json": {
+      "sha256": "60a602d00feeb3d46f3379852326cb88933d020ac5f380409c02c66ffa68f323",
+      "bytes": 70
+    },
+    "check-00/source/util.lobo": {
+      "sha256": "c43f8e6085a7f03acbc1dac3e872ffe5ebdf8f86133519b5ce286a08e7d2055c",
+      "bytes": 338
+    },
+    "check-00/source/logic.lobo.ids.json": {
+      "sha256": "868ff772b9caac7d411c44aa876655646c345662a4113fa9ed2e9140b1493608",
+      "bytes": 331
+    },
+    "check-00/source/util.lobo.ids.json": {
+      "sha256": "e19f179ed53b0319c39febce4e46eb462845e30547177c99a14aac27ed6ad174",
+      "bytes": 178
+    },
+    "check-00/source/logic.lobo": {
+      "sha256": "9b2dc3ed6e7852a941202e9e4e91aa126de1f459662444d2bb50345988f40f03",
+      "bytes": 679
+    },
+    "check-00/source/model.lobo": {
+      "sha256": "0e60f811c822ee036f5918288ab8dec48661cb1bfad38ba3b50ac5ce7b29426d",
+      "bytes": 104
+    },
+    "check-00/source/model.lobo.ids.json": {
+      "sha256": "95164699653cae396cee2e48e6f0318789ea84fcdcc042acd21b9b99c0fb6381",
+      "bytes": 202
+    }
+  }
+}

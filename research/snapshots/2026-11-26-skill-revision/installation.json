@@ -1,0 +1,8 @@
+{
+  "path": "/home/luis/.codex/skills/lobo-development-v2",
+  "target": "/home/luis/dev/lobo-ar/lobo-lang/.agents/skills/lobo-development-v2",
+  "method": "symlink",
+  "physical_references_verified": 11,
+  "old_installation_unchanged": true,
+  "limits": "Filesystem and references checked; no separate UI-discovery trial."
+}

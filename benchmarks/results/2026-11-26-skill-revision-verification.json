@@ -1,0 +1,114 @@
+{
+  "format": "lobo-skill-revision-verification/1",
+  "date": "2026-11-26",
+  "registration_commit": "de27b40b0f0631005c9bfcf2773bbc08d5a4118a",
+  "compiler_version": "1.11.2",
+  "core": "1.11",
+  "compiler_sha256": "8d9f84530b8d34a6a72597d25befc249a604430a6569656b4184721e1e444d9d",
+  "product_old_skills_cards_studies_changed": false,
+  "new_skill": ".agents/skills/lobo-development-v2",
+  "skill_bytes": {
+    "original": 4799,
+    "revised": 3138
+  },
+  "registered_code_pins": 17,
+  "common_reference_files": 78,
+  "all_registered_hashes_match": true,
+  "scheduled": 12,
+  "attempted": 12,
+  "completed": 10,
+  "wall_limit": 2,
+  "unattempted": 0,
+  "checks": {
+    "harness_tests": 59,
+    "new_harness_tests": 9,
+    "research_tests": 15,
+    "reference_native_values": 140,
+    "starter_native_values": 140,
+    "mutant_native_values": 140,
+    "killed_compiled_mutants": 2,
+    "grammar_check_cases": 6,
+    "corrected_grammar_native_values": 6,
+    "sync_failed_then_repaired": true,
+    "initial_incorrect_match_probe_preserved": true,
+    "final_native_observations": 840,
+    "final_private_case_observations": 780,
+    "final_public_case_repetitions": 60,
+    "per_candidate_suite": {
+      "public": 5,
+      "private": 65,
+      "total": 70
+    },
+    "all_required_source_signatures_match": true,
+    "all_input_prompt_usage_grade_label_audits_match": true,
+    "compiler_regression": {
+      "status": "previous receipt reused; full suite not rerun",
+      "path": "benchmarks/results/2026-11-24-learning-verification.json",
+      "sha256": "1634de4dc7092742c16ebdc06a11a6d59e3542461482802197f41ea0893100b4",
+      "passed": 312,
+      "failed": 0
+    },
+    "repository_checks": {
+      "command": "./scripts/check.sh",
+      "status": "passed",
+      "log": "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/skill-revision-publication-links.txt",
+      "sha256": "1f11bb3bb382f1877ffa8eec4eb376db85d0ecfa2e1301289bb91fbd2cc966ae",
+      "scope": "Canonical navigable documentation; raw input Markdown exported as exact .md.txt with path map. Transitive packet links remain incomplete."
+    },
+    "git_diff_check": "passed",
+    "all_direct_skill_links_in_delivered_packets": true
+  },
+  "installation": {
+    "path": "/home/luis/.codex/skills/lobo-development-v2",
+    "target": "/home/luis/dev/lobo-ar/lobo-lang/.agents/skills/lobo-development-v2",
+    "method": "symlink",
+    "physical_references_verified": 11,
+    "old_installation_unchanged": true,
+    "limits": "Filesystem and references checked; no separate UI-discovery trial."
+  },
+  "usage": {
+    "known": 11,
+    "unknown": 2,
+    "known_reported_token_subtotal": 1955995,
+    "full_total": null,
+    "billing": null,
+    "parent_development_usage": null
+  },
+  "raw_archive": {
+    "format": "lobo-skill-revision-raw/1",
+    "archive": "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/skill-revision-20261126-raw.tar.gz",
+    "sha256": "f4f81855354f7a1b642afafed58aa8ec65074eb89796bd432b240a75c47d008d",
+    "bytes": 2971907,
+    "members": 2195,
+    "all_member_hashes_verified": true,
+    "limits": "Local ignored archive, not an off-device backup. Authentication home was outside evidence and removed. Frozen compiler is separately retained by its registered path/hash. Final link/index checks are retained outside the closed raw directory."
+  },
+  "raw_archive_manifest": {
+    "path": "/home/luis/dev/lobo-ar/lobo-lang/benchmarks/private-evidence/skill-revision-20261126-raw-manifest.json",
+    "sha256": "1bccebe484906bdaccc02e2fc8ecfdc5e79ac8d4da4566f17e4fea49a68f0272"
+  },
+  "snapshot_manifest": {
+    "path": "research/snapshots/2026-11-26-skill-revision/evidence-manifest.json",
+    "sha256": "92e2866495529c242160376253e1d49b591c4b17d9fbb49f7bf718de1afc63b7",
+    "files": 716
+  },
+  "raw_document_exports": {
+    "path": "research/snapshots/2026-11-26-skill-revision/document-path-map.json",
+    "sha256": "0fae3683a95477ded9fdc8f647e7cfb7c07913a2404a73c3749f1f0c72d390f3",
+    "files": 294
+  },
+  "prior_paper": {
+    "entries": 45,
+    "pins": 160,
+    "all_unchanged": true
+  },
+  "limitations": [
+    "Exploratory2 development-targeted task instances x2 repeats;4 matched assignments per arm, not powered or blinded",
+    "Fresh tasks selected after failure review; no absolute score comparison with prior tasks/dates",
+    "Configured model/reasoning/budgets held equal; weights, provider requests and hidden host instructions unknown",
+    "Provider caching and host load confound latency; no reliable speed ranking or billing/parent-token estimate",
+    "Same selected78-file packet in all arms; transitive links remain incomplete although direct skill links exist",
+    "Nullable payload normalization supports new payload-free variant; old driver and scores unchanged",
+    "No retry/replacement or fallback; original/revised skills freeze for all attempts"
+  ]
+}

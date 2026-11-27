@@ -1,5 +1,14 @@
 # Lobo research record
 
+## Grammar-first skill revision on fresh development work
+
+The [three-arm revision pilot](skill-revision-study-2026-11-26.md) preserves the original skill and adds
+a smaller v2. Revised and control finish4/4 assignments; original2/4. All candidates pass their suites,
+including the two timeout candidates. Known revised/original token pairs improve on coalescing only;
+revised/control median is essentially unchanged. This is a small bundled-revision result, without a
+general skill advantage. Paper local-046 preserves all45 previous entries and160 pins.
+
+
 ## New skill versus control on fresh development tasks
 
 The [completed 12-attempt comparison](development-skill-study-2026-11-24.md) gives control 6/6 tasks
